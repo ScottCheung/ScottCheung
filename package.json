@@ -17,7 +17,6 @@
     "react-spring": "^9.7.3",
     "serve": "^14.2.1",
     "web-vitals": "^2.1.4",
-    "private": true,
     "homepage": "https://xianzhezhang97.github.io/"
   },
   "scripts": {
