@@ -15,6 +15,7 @@
     "react-router-dom": "^6.20.1",
     "react-scripts": "^5.0.1",
     "react-spring": "^9.7.3",
+    "serve": "^14.2.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -23,7 +24,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "browserslist": {
     "production": [
