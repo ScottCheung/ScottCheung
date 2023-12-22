@@ -16,7 +16,9 @@
     "react-scripts": "^5.0.1",
     "react-spring": "^9.7.3",
     "serve": "^14.2.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "private": true,
+    "homepage": "https://xianzhezhang97.github.io/"
   },
   "scripts": {
     "start": "react-scripts start",
