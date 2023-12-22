@@ -1,0 +1,335 @@
+{
+    "Navbar":{
+        "navbarItem":[
+            {"name":"Home",
+             "href":"/",
+            "icon":"fi-rr-home-heart",
+            "des":"Know me better, my information here ",
+            "expression":"❤٩(◕‿◕｡)۶"},
+            {"name":"Milestone",
+            "href":"/milestone",
+            "icon":"fi-rr-trophy-star",
+            "des":"It shows all of my shinning time ",
+            "expression":"ʕ•ᴥ•ʔ"},
+            {"name":"Life",
+            "href":"/life",
+            "icon":"fi-rr-picture",
+            "des":"It records every apspect of my daily life ",
+            "expression":"(＾◡＾)"},
+            {"name":"Contact",
+            "href":"/#ContactMe",
+            "icon":"fi-rr-following",
+            "des":"You can contact me by these ways. You also can find them in the end of every page",
+            "expression":"(｡♥‿♥｡)"}
+        ],
+        "Location":[
+            {
+              "id": "#StudyExperience",
+              "label": "Study",
+              "logo": "fi-rr-book"
+            },
+            {
+              "id": "#Capability",
+              "label": "Capability",
+              "logo": "fi-rr-tools"
+            },
+            {
+              "id": "#SelfDescribing",
+              "label": "Self-Describe",
+              "logo": "fi-rr-chart-user"
+            },
+            {
+              "id": "#WorkExperience",
+              "label": "Work",
+              "logo": "fi-rr-tool-box"
+            },
+            {
+              "id": "#WhyMe",
+              "label": "Why me",
+              "logo": "fi-rr-lightbulb-on"
+            }
+          ]
+    },
+    "PersonalInfo": {
+        "StudyExperience":[
+            {
+                "major": ["Functional", "Material"],
+                "href":"/Bacholor-FunctionalMaterial",
+                "type":"Bacholor",
+                "logo":"./swust.png",
+                "university":"SWUST",
+                "tag":["Key university", ""],
+                "web":"http://www.english.swust.edu.cn/main.htm",
+                "time": "Sep 4, 2017 - Sep 6, 2021",
+                "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
+            },
+            { 
+                "major": ["Business", "Administration"],
+                "href":"/Bacholor-BusinessAdministration",
+                "type":"Bacholor",
+                "logo":"./swust.png",
+                "university":"SWUST",
+                "tag":["Key university", ""],
+                "web":"http://www.english.swust.edu.cn/main.htm",
+                "time": "Sep 4, 2019 - Sep 6, 2021",
+                "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
+            },
+            { 
+                "major": ["Artifical", "Inteliigence"],
+                "href":"/Master-ArtificalInteliigence",
+                "type":"Master",
+                "logo":"./unsw.png",
+                "university":"UNSW",
+                "tag":["Top 19", "G8"],
+                "web":"https://www.unsw.edu.au/",
+                "time": "Sep 13, 2022 - Sep 6, 2024",
+                "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
+            },
+            {
+                "major": ["Data", "Science"],
+                "href":"/Master-DataScience",
+                "type":"Master",
+                "logo":"./unsw.png",
+                "university":"UNSW",
+                "web":"https://www.unsw.edu.au/",
+                "tag":["Top 19", "G8"],
+                "time": "Sep 13, 2022 - Sep 6, 2024",
+                "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
+            }
+        ],
+        "WhyMe":[ 
+            {
+            "advantage": ["Learning ability"],
+            "href": "/LearningAbility",
+            "pic": "/Graphs/whyme/LearningAbility.png",
+            "icon":"fi-rr-graduation-cap",
+            "description": "Demonstrated exceptional learning agility by independently mastering piano and guitar skills. Maintained a stellar GPA while initiating the completion of 90% of a second degree by the junior year, achieving a three-year curriculum in just one. Simultaneously, holding three degrees across four majors serves as compelling evidence."
+        },
+        {
+            "advantage": ["Leadership"],
+            "href": "/Leadership",
+            "pic": "/Graphs/whyme/Leadership.png",
+            "icon":"fi-rr-users-alt",
+            "description": "Held pivotal roles in the university's study department, technology and entrepreneurship guidance station, debate team, and served as class president, study committee leader, and life committee leader. Led the class to secure victories in city, school, and university competitions, garnering numerous provincial awards."
+        },
+        {
+            "advantage": ["Communication"],
+            "href": "/Communication",
+            "pic": "/Graphs/whyme/Communication.png",
+            "icon":"fi-rr-comments",
+            "description": "Adept presenter with a track record of participating in over 100 competitions and delivering more than 50 public speeches. Star lecturer at NUSTP, hosted a 400-person party, and excelled in the champion debating team. Negotiated a 50% discount on supplies for a startup and secured sponsorships for club activities."
+        },
+        {
+            "advantage": ["Problem-Solving"],
+            "href": "/ProblemSolving",
+            "pic": "/Graphs/whyme/ProblemSolving.png",
+            "icon":"fi-rr-lightbulb-question",
+            "description": "Exhibits clear logical and divergent thinking, employing effective frameworks to dissect and solve complex problems. Demonstrates resilience, tenacity, and a passion for conquering challenges. Proficiently utilizes familiar tools and processes to automate repetitive tasks. Notable achievements include technical breakthroughs in the Chemical Design Competition and Concrete Design Competition."
+        },
+        {
+            "advantage": ["Aesthetic attitude"],
+            "href": "/AestheticAttitude",
+            "pic": "/Graphs/whyme/AestheticAttitude.png",
+            "icon":"fi-rr-sparkles",
+            "description": "Autonomously designs and crafts launch-level slides, advanced posters, brochures, logos, and interior layouts for various companies. Recognized with 2 first prizes, 2 second prizes, and 2 third prizes in diverse design competitions. Official poster designer for the publicity department of the National University Science and Technology Park."
+        },
+        {
+            "advantage": ["Emotional Stable"],
+            "href": "/EmotionalStable",
+            "pic": "/Graphs/whyme/EmotionalStable.png",
+            "icon":"fi-rr-smile",
+            "description": "As an INFP with a heightened emotional perception, adept micro-expression observer, and strong empathic abilities. Thrives in resolving customer complaints and unforeseen situations. Optimistic and stress-resistant, capable of swiftly managing negative emotions at work. Always be positive and energetic."
+        }],
+        "SelfDescribing":
+        {
+        "pic": "Excellent",
+        "description": "Demonstrated exceptional learning agility by independently mastering piano and guitar skills. Maintained a stellar GPA while initiating the completion of 90% of a second degree by the junior year, achieving a three-year curriculum in just one. Simultaneously, holding three degrees across four majors serves as compelling evidence."
+        },
+        "KeyFeature":[
+            {
+                "keyfeature": ["3 Degrees"],
+                "href": ["Degrees"],
+                "icon":"fi-rr-graduation-cap",
+                "description": "Multiple knowledge background, compound elite."
+            },
+            {
+                "keyfeature": ["10 scholarships"],
+                "href": ["scholarships"],
+                "icon":"fi-rr-trophy-star",
+                "description": "Comprehensive development, won 10 scholarships."
+            },
+            {
+                "keyfeature": ["60+ Certificates"],
+                "href": ["Certificates"],
+                "icon":"fi-rr-diploma",
+                "description": "Actively join and obtained over 60 certificates."
+            }
+
+
+        ],
+        "Contacts": [
+            {
+            "type": "Linkedin",
+            "icon": "fi-brands-linkedin",
+            "link": "https://www.linkedin.com/in/zhang-xianzhe-03133a259/",
+            "name": "Xianzhe Zhang"
+            },
+            {
+            "type": "E-mail",
+            "icon": "fi-rr-envelope",
+            "link": "https://outlook.office365.com/mail/",
+            "name": "z5443003@ad.unsw.edu.au"
+            },
+            {
+            "type": "Facebook",
+            "icon": "fi-brands-facebook",
+            "link": "https://www.facebook.com/profile.php?id=100085874466260",
+            "name": "Xianzhe Zhang"
+            },
+            {
+            "type": "Phone",
+            "icon": "fi-sr-circle-phone-flip",
+            "link": "17381484512",
+            "name": "+86 17381484512"
+            },
+            {
+            "type": "Instagram",
+            "icon": "fi-brands-instagram",
+            "link": "https://www.instagram.com/invites/contact/?i=er73s6a2y80u&utm_content=pblnb0t",
+            "name": "scottzhang9779"
+            },
+            {
+            "type": "Little Red Book",
+            "icon": "fi-sr-book-alt",
+            "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579",
+            "name": "贤哲scott"
+            },
+            {
+            "type": "Wechat",
+            "icon": "fi-sr-comments",
+            "link": "https://www.wechat.com/",
+            "name": "Scottt1110"
+            }
+        ],
+        "ContactsScanCode":[
+            {
+            "lable": "Resume",
+            "codepic": "/Graphs/contact/wechat.jpg",
+            "des":"Scan me to download his RESUME.",
+            "expression":"(｡♥‿♥｡)"
+            },
+            {
+            "lable": "Personal Info",
+            "codepic": "/Graphs/contact/wechat.jpg",
+            "des":"Scan me to download his PERSONAL INFO.",
+            "expression":"ʕ•ᴥ•ʔ"
+            },
+            {
+            "lable": "Wechat",
+            "codepic": "/Graphs/contact/wechat.jpg",
+            "des":"Scan me to add his WECHAT.",
+            "expression":"(＾◡＾)"
+            }
+        ],
+        "Capability":{
+            "personality":[
+                {
+                    "name": "Introverted",
+                    "label": "56%",
+                    "colum": "56%",
+                    "color1": "from-red-500",
+                    "color2": "to-red-700"
+                },
+                {
+                    "name": "Intuitive",
+                    "label": "55%",
+                    "colum": "55%",
+                    "color1": "from-orange-500",
+                    "color2": "to-amber-500"
+                },
+                {
+                    "name": "Feeling",
+                    "label": "68%",
+                    "colum": "68%",
+                    "color1": "from-amber-400",
+                    "color2": "to-yellow-400"
+                },
+                {
+                    "name": "Prospecting",
+                    "label": "63%",
+                    "colum": "63%",
+                    "color1": "from-sky-500",
+                    "color2": "to-emerald-500"
+                }
+            ],
+            "language": [
+                {
+                    "name": "English (PTE)",
+                    "label": "64",
+                    "colum": "70%",
+                    "color1": "from-cyan-500",
+                    "color2": "to-blue-500"
+                },
+                {
+                    "name": "Chinese (Mandarin)",
+                    "label": "A-II",
+                    "colum": "90%",
+                    "color1": "from-indigo-500",
+                    "color2": "to-pink-500"
+                }
+            ]
+        }
+    },
+    "Animation":{
+        "Variant":{
+            "WelcomeContainer":{
+                "hidden": { "opacity": 0 },
+                "visible": {
+                  "opacity": 1,
+                  "y": 0,
+                  "transition": {
+                    "delayChildren": 0.15,
+                    "staggerChildren": 0.12
+                  }
+                }
+              },
+            "WelcomeItem":{
+            "hidden": { "opacity": 0, "y": "60px" },
+            "visible": {
+                "opacity": 1, "y": "0", "borderRadius": 28
+            }
+            },
+            "ProgressBarContainer":{
+                "hidden": { "opacity": 0 },
+                "visible": {
+                  "opacity": 1,
+                  "y": 0,
+                  "transition": {
+                    "delayChildren": 0.17,
+                    "staggerChildren": 0.15
+                  }
+                }
+            },
+            "ProgressBarItem":{
+                "hidden": { "width": "0%"},
+                "visible": {
+                  "width": "100%"
+                }
+              }
+
+        },
+        "Transition":{
+            "StagerFadeInUp":{
+                "ease": [0.455, 0.030, 0.515, 0.955],
+                "duration": 0.7
+            },
+            "ProgressBar":{
+                "ease": [0.645,0.045,0.355,1],
+                "duration": 0.5
+            }
+        }
+    }
+
+
+      
+}
