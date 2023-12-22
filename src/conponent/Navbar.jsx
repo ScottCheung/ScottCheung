@@ -70,7 +70,7 @@ function Navbar() {
         className={` justify-between flex flex-col w-full 
         ${windowWidth < 768
             ? `p-3  ${isTop ? `h-auto`:`h-auto`}`
-            : `${isTop ? `${isHomeOrRoot ? 'px-[5%] pt-[6%] ' : 'pt-3'} h-[16em]` : ''}  md:px-10`
+            : `${isTop ? `${isHomeOrRoot ? 'px-[5%] pt-[6%] ' : 'pt-3'} h-auto` : ''}  md:px-10`
           }
         ${isScrolling
             ? `${isTop ? '' : 'backdrop-blur-md bg-white/50 shadow-xl'}`
