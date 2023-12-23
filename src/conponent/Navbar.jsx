@@ -58,9 +58,9 @@ function Navbar( {topTextColor} ) {
   }, []);
 
   const navbar = (
-    <div className='smoothchange'>
+    <div className='smoothchange z-50 top-0 sticky '>
       <motion.nav
-        className={`transition-all fixed z-50 top-0 sticky w-full flex flex-col`}
+        className={`transition-all fixed w-full flex flex-col`}
         >
 
         <motion.div 

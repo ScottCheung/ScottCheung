@@ -15,9 +15,11 @@ function Home () {
 
   return (
     <div>
-        <body className='bg-fixed bg-center left-0 top-0 bottle-0 right-0' style={{backgroundImage: 'url(/Graphs/home/welcomebg.jpg)'}}>
         <Navbar topTextColor={true} />
+        <body className='bg-fixed bg-center left-0 top-0 bottle-0 right-0' style={{backgroundImage: 'url(/Graphs/home/welcomebg.jpg)'}}>
+        
         <div className='bg-black/40'>
+        
         <Welcome />
         <div  className="main  main-raised rounded-[35px] ">
             <div className="bg-[#fafafa] dark:bg-gray-950 rounded-[35px]" id="subscribe">
