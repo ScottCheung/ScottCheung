@@ -6,7 +6,8 @@ const navbarItem = data.Navbar.navbarItem;
 const navLocation = data.Navbar.Location;
 
 
-function Navbar() {
+function Navbar( {topTextColor} ) {
+  const isTopTextColorWhite = topTextColor; //True of false
   const navigate = useNavigate();
   const [isExpanded, setIsExpanded] = useState(true);
   const [isTop, setIsTop] = useState(true);
@@ -91,8 +92,8 @@ function Navbar() {
                           src="./avatar.jpg"
                           alt="Xianzhe's Page" width="100" height="100"></img>
                       <div className="flex-inline mt-2 ml-3">
-                        <div style={{ animationDelay: `${0.3}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse  font-semibold ${isTop? `${isHomeOrRoot?"text-white":""}  text-3xl` : 'text-xl'}`}>Xianzhe's Page</div>
-                        <div href='/' style={{ animationDelay: `${0.4}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse mt-2 ${isTop? `${isHomeOrRoot?"text-white":""}  text-lg` : 'text-base'}`}>Welcome to my Page</div>
+                        <div style={{ animationDelay: `${0.3}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse  font-semibold ${isTop? `${isTopTextColorWhite? "text-white":""}  text-3xl` : 'text-xl'}`}>Xianzhe's Page</div>
+                        <div href='/' style={{ animationDelay: `${0.4}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse mt-2 ${isTop? `${isTopTextColorWhite? "text-white":""}  text-lg` : 'text-base'}`}>Welcome to my Page</div>
                       </div>
                     </div>
                   </Link>
@@ -124,7 +125,7 @@ function Navbar() {
                     onClick={(e) =>
                       e.preventDefault() & setIsOpened(!isOpened)}
                   >
-                    <i className={`smoothchange  mt-1 ${windowWidth < 768? 'text-[20px] ':'text-3xl p-5'} ${isTop&isHomeOrRoot ? 'text-white text-bold' : ''} ${!isOpened ? 'fi fi-rr-menu-burger ' : 'fi fi-rr-circle-xmark'}`} />
+                    <i className={`smoothchange  mt-1 ${windowWidth < 768? 'text-[20px] ':'text-3xl p-5'} ${isTopTextColorWhite&isTop ? 'text-white text-bold' : ''} ${!isOpened ? 'fi fi-rr-menu-burger ' : 'fi fi-rr-circle-xmark'}`} />
                   </button>}
                   
 
@@ -144,10 +145,10 @@ function Navbar() {
                           style={{ animationDelay: `${index * 0.2}s` }}
                           data-popover-target={`nav-des-${index}`}
                           type="button"
-                          className={`smoothchange items-center  ${isTop ? `${index === (navbarItem.length - 1)? `ml-10`:`mx-10`}` : ` ${index === (navbarItem.length - 1)? `ml-3`:`mx-3`}`} animate__animated animate__fadeInUp relative inline-flex items-center  px-6 py-3 text-[20px] font-medium text-center ${isTop&isHomeOrRoot? "text-white":""} rounded-lg hover:bg-gray-900/20  `}>
+                          className={`smoothchange items-center  ${isTop ? `${index === (navbarItem.length - 1)? `ml-10`:`mx-10`}` : ` ${index === (navbarItem.length - 1)? `ml-3`:`mx-3`}`} animate__animated animate__fadeInUp relative inline-flex items-center  px-6 py-3 text-[20px] font-medium text-center ${isTopTextColorWhite&isTop? "text-white":""} rounded-lg hover:bg-gray-900/20  `}>
                           <div class="rounded-full w-11 h-11 mr-3 items-center">
-                            <i className={`${isTop&isHomeOrRoot ? 'text-white text-[20px]' : 'text-gray-900 text-[17px]'}  fi ${item.icon}`}></i></div>
-                          <div className={`${isTop&isHomeOrRoot ? 'text-white text-[20px]' : 'text-gray-900 text-[15px]'}`}>{item.name}</div>
+                            <i className={`${isTopTextColorWhite&isTop ? 'text-white text-[20px]' : 'text-gray-900 text-[17px]'}  fi ${item.icon}`}></i></div>
+                          <div className={`${isTopTextColorWhite&isTop ? 'text-white text-[20px]' : 'text-gray-900 text-[15px]'}`}>{item.name}</div>
                         </a>
 
                     </motion.button>
@@ -185,11 +186,11 @@ function Navbar() {
                   <a style={{ animationDelay: `${index * 0.2}s` }} key={index} href={item.name} class={`py-5 animate__animated animate__zoomIn flex place-items-center items-center px-4 ${isTop ? 'hover:bg-gray-900/50 rounded-2xl' : 'hover:bg-gray-300/50 '}`}>
                     <div class="flex-shrink-0">
                       <div class="rounded-full w-24 h-24 items-center flex justify-center">
-                        <i className={`${isTop&isHomeOrRoot ? 'text-white' : 'text-gray-900'} text-5xl fi ${item.icon}`}></i></div>
+                        <i className={`${isTopTextColorWhite&isTop ? 'text-white' : 'text-gray-900'} text-5xl fi ${item.icon}`}></i></div>
                     </div>
                     <div class="w-full ps-2">
-                      <div class={`${isTop&isHomeOrRoot ? 'text-white' : 'text-gray-900'} font-bold text-4xl`}>{item.name}</div>
-                      <div class={`${isTop&isHomeOrRoot ? 'text-white' : 'text-gray-900'} text-xs text-blue-500 `}>{item.des}</div>
+                      <div class={`${isTopTextColorWhite&isTop ? 'text-white' : 'text-gray-900'} font-bold text-4xl`}>{item.name}</div>
+                      <div class={`${isTopTextColorWhite&isTop ? 'text-white' : 'text-gray-900'} text-xs text-blue-500 `}>{item.des}</div>
                     </div>
                   </a></motion.div>))}
               </div>

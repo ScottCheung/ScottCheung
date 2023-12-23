@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 export default function Errorpage () {
   return (
     <div >
-      <Navbar />
+      <Navbar topTextColor={true}/>
       <main className="h-[100vh] place-items-center flex justify-center  px-6 py-24 sm:py-32 lg:px-8">
         <div className="text-center ">
           <p className="animate__animated animate__fadeInUp text-9xl font-semibold text-white">404</p>

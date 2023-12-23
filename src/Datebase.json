@@ -17,7 +17,7 @@
             "des":"It records every apspect of my daily life ",
             "expression":"(＾◡＾)"},
             {"name":"Contact",
-            "href":"/#ContactMe",
+            "href":"/ContactMe",
             "icon":"fi-rr-following",
             "des":"You can contact me by these ways. You also can find them in the end of every page",
             "expression":"(｡♥‿♥｡)"}

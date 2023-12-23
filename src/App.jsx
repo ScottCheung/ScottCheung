@@ -8,6 +8,7 @@ import Errorpage from './pages/Errorpage.jsx';
 import Material from './pages/Material.jsx';
 import Gallery from './pages/Gallery.jsx';
 import AI from './pages/AI.jsx';
+import Contact from './pages/ContactPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
   {
     path: '/Gallery',
     element: <Gallery />,
+  },
+  {
+    path: '/ContactMe',
+    element: <Contact />,
   }
 ]);
 

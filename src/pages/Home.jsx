@@ -16,7 +16,7 @@ function Home () {
   return (
     <div>
 
-        <Navbar />
+        <Navbar topTextColor={true} />
         
         
         <body className='bg-fixed bg-center left-0 top-0 bottle-0 right-0' style={{backgroundImage: 'url(./bg.jpg)'}}>

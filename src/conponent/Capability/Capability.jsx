@@ -30,15 +30,15 @@ function Capability () {
   
   const Capability = (
       <>
-  <div className="section-intro section-sapphire" >
+  <div id='Capability' className="section-intro section-sapphire" >
     <h2 className="typography-section-intro-headline section-intro-headline">
       Capability
     </h2>
   </div>
-  <div className="grid container section-sapphire">
+  <div className="grid container section-sapphire pb-24">
     {/* stack */}
   <div
-      className="grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers"
+      className="grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers "
       data-analytics-section-engagement="name:all your stickers in one place"
       data-tile-name="stickers"
     >
@@ -153,7 +153,7 @@ function Capability () {
             <h3 className="tile-headline typography-subsection-headline">
             Other
             </h3>
-            <div className='grid grid-cols-5'>
+            <div className='grid grid-cols-5 pb-24'>
                 <div className='flex justify-center items-center flex-col w-24'>
                   <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="" />
                   <p className='text-2xl text-black'>Github</p>
@@ -306,9 +306,6 @@ function Capability () {
               aria-expanded="false"
               aria-controls="content-toggle-check-in"
             >
-              <span className="visuallyhidden">
-                進一步了解讓親友知道你已平安抵達。
-              </span>
             </span>
           </label>
           <div
@@ -443,7 +440,7 @@ function Capability () {
             <h3 className="tile-headline typography-subsection-headline">
             Other
             </h3>
-            <div className='grid grid-cols-5'>
+            <div className='grid grid-cols-5 pb-24'>
                 <div className='flex justify-center items-center flex-col w-24'>
                   <img src="https://www.svgrepo.com/show/512317/github-142.svg" alt="" />
                   <p className='text-2xl text-black'>Github</p>
@@ -557,7 +554,7 @@ function Capability () {
         </div>
       </div>
     </div>
-    <div
+    {/* <div
       className="grid-item large-span-6 small-span-12 grid-item-location"
       data-analytics-section-engagement="name:a new way to share and view locations"
       data-tile-name="location"
@@ -612,7 +609,7 @@ function Capability () {
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
 
     
 
@@ -621,7 +618,7 @@ function Capability () {
   );
 
   return (
-    <div>
+    <div className=''>
       {Capability}
     </div>
   );

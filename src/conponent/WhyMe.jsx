@@ -39,12 +39,12 @@ function WhyMe() {
         className=''>
       </motion.div>
       {/* 一级标题 */}
-      <div className='flex justify-center pt-36'>
+      <div id='WhyMe' className='flex justify-center pt-36'>
         <div className='animate__animated animate__fadeInUp items-center flex justify-center'>
           <div className='animate__animated animate__zoomIn'>
             <i class=" fi text-5xl lg:text-8xl  fi-rr-lightbulb-on mr-3 pt-3 "></i>
           </div>
-          <h2 className="animate__animated animate__zoomIn text-5xl lg:text-8xl font-bold font-mono">Why me?</h2>
+          <h2  className="animate__animated animate__zoomIn text-5xl lg:text-8xl font-bold font-mono">Why me?</h2>
         </div>
       </div>
       {/* Item 容器 */}
