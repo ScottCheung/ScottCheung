@@ -56,7 +56,7 @@
                 "major": ["Functional", "Material"],
                 "href":"/Bacholor-FunctionalMaterial",
                 "type":"Bacholor",
-                "logo":"./swust.png",
+                "logo":"/Graphs/study/swust.png",
                 "university":"SWUST",
                 "tag":["Key university", ""],
                 "web":"http://www.english.swust.edu.cn/main.htm",
@@ -67,7 +67,7 @@
                 "major": ["Business", "Administration"],
                 "href":"/Bacholor-BusinessAdministration",
                 "type":"Bacholor",
-                "logo":"./swust.png",
+                "logo":"/Graphs/study/swust.png",
                 "university":"SWUST",
                 "tag":["Key university", ""],
                 "web":"http://www.english.swust.edu.cn/main.htm",
@@ -78,7 +78,7 @@
                 "major": ["Artifical", "Inteliigence"],
                 "href":"/Master-ArtificalInteliigence",
                 "type":"Master",
-                "logo":"./UNSW.png",
+                "logo":"/Graphs/study/unsw.png",
                 "university":"UNSW",
                 "tag":["Top 19", "G8"],
                 "web":"https://www.unsw.edu.au/",
@@ -89,7 +89,7 @@
                 "major": ["Data", "Science"],
                 "href":"/Master-DataScience",
                 "type":"Master",
-                "logo":"./UNSW.png",
+                "logo":"/Graphs/study/unsw.png",
                 "university":"UNSW",
                 "web":"https://www.unsw.edu.au/",
                 "tag":["Top 19", "G8"],
@@ -328,8 +328,5 @@
                 "duration": 0.5
             }
         }
-    }
-
-
-      
+    }  
 }

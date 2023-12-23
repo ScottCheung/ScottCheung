@@ -25,7 +25,7 @@ function KeyFeature () {
   const KeyFeature = (
     <div class=" smoothchange">
       <section class={`smoothchange -ribbon section section-image  `} id="ribbon" 
-            style={{backgroundImage: 'url(./graduation.jpg)'}}>
+            style={{backgroundImage: 'url(/Graphs/home/keyfeaturebg.jpg)'}}>
             <div class="smoothchange appear place-items-center">
                     <div class="mx-auto max-w ">
                       <div class="  ">

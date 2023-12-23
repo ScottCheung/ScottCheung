@@ -89,7 +89,7 @@ function Navbar( {topTextColor} ) {
                   <Link to='/' classname="animate__animated animate__zoomIn " style={{ animationDelay: `${0.2}s` }} >
                     <div className="flex item-center">
                         <img style={{ animationDelay: `${0.2}s` }} className={`smoothchange animate__animated animate__zoomIn  ${isTop ? 'w-20' : 'w-16'}  rounded-md shadow-lg`}
-                          src="./avatar.jpg"
+                          src="/Graphs/home/avatar.jpg"
                           alt="Xianzhe's Page" width="100" height="100"></img>
                       <div className="flex-inline mt-2 ml-3">
                         <div style={{ animationDelay: `${0.3}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse  font-semibold ${isTop? `${isTopTextColorWhite? "text-white":""}  text-3xl` : 'text-xl'}`}>Xianzhe's Page</div>

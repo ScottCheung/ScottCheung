@@ -27,7 +27,7 @@ function SelfDescribing () {
     <div id="SelfDescribing" class="">
       
           <section class=" -about section-image " 
-              style={{backgroundImage: 'url(./contact.jpg)'}}>
+              style={{backgroundImage: 'url(/Graphs/home/selfdesbg.jpg)'}}>
               <div class="container block">
               <h2 class="  animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono"><i class="fi fi-rr-chart-user mr-3 pt-3"></i>Self Describing</h2>
                   <div class="-about-content pb-48">
@@ -37,7 +37,7 @@ function SelfDescribing () {
                               <div class=" rounded-full animate__animated animate__slideInUp alignright  ">
                                   <img width="200"
                                       className='rounded-full bg-gray-400'
-                                      srcset="./avatar.jpg 1290w, ./avatar.jpg 160w, ./avatar.jpg 600w, ./avatar.jpg 300w, ./avatar.jpg 1024w, ./avatar.jpg 150w, ./avatar.jpg 768w"
+                                      src="/Graphs/home/avatar.jpg"
                                       sizes="(max-width: 1290px) 100vw, 1290px"></img>
                               </div>
                           </div>

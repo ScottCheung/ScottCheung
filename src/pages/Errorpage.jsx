@@ -35,7 +35,7 @@ export default function Errorpage () {
           </div>
         </div>
       </main>
-      <div className="header-filter" style={{backgroundImage: 'url(./bg.jpg)'}}>
+      <div className="header-filter" style={{backgroundImage: 'url(/Graphs/home/welcomebg.jpg)'}}>
                                         <div className="background-overlay lg:h-[13%] h-[12%] sm:h-[10%] text-white"></div>
                                         </div>
     </div>

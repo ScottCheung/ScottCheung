@@ -14,7 +14,7 @@ function Contact() {
   const Contact = (
     <>
       <div className="rounded-3xl h-[100vh]  section-image"
-        style={{ backgroundImage: 'url(./contact1.jpeg)' }}>
+        style={{ backgroundImage: 'url(/Graphs/home/contactbg.jpeg)' }}>
         <div className=" rounded-3xl pt-[150px]">
           <AnimatePresence>
             <section
