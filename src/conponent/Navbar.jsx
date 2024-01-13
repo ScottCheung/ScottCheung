@@ -120,7 +120,7 @@ function Navbar({ topTextColor }) {
                         <div className="flex item-center">
                           <div className='flex justify-center items-center'> 
                             <img  className={`smoothchange animate__animated animate__zoomIn  ${isTop ? 'w-20' : 'w-16'}  rounded-md shadow-lg`}
-                              src="/Graphs/home/avatar.jpg"
+                              src={"https://3o.hk/images/2024/01/14/avatar.jpg" ? "https://3o.hk/images/2024/01/14/avatar.jpg" : "/Graphs/home/avatar.jpg"}
                               alt="Xianzhe's Page" width="100" height="100"></img>
                           </div>
                           <div className="flex-col flex  ml-3">
@@ -134,7 +134,7 @@ function Navbar({ topTextColor }) {
                     <div data-popover id="popover-user-profile" role="tooltip" class="m-3 rounded-[20px] absolute z-10 invisible flex w-[300px] text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 shadow-sm opacity-0 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
                       <div class="p-6 flex space-x-4">
                         <div class="flex items-center justify-between">
-                          <img class="w-24 h-24 rounded-full" src="/Graphs/home/avatar.jpg" />
+                          <img class="w-24 h-24 rounded-full" src={"https://3o.hk/images/2024/01/14/avatar.jpg" ? "https://3o.hk/images/2024/01/14/avatar.jpg" : "/Graphs/home/avatar.jpg"} />
                           <div>
                           </div>
                         </div>

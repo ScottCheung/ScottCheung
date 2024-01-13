@@ -118,6 +118,11 @@
     }
   },
   "PersonalInfo": {
+    "Welcomebg":["/Graphs/home/Welcomebg.jpg", "https://3o.hk/images/2024/01/14/Welcomebg.jpg"],
+    "KeyFeaturebg": ["/Graphs/home/keyfeaturebg.jpg", "https://3o.hk/images/2024/01/14/keyfeaturebg.jpg"],
+    "selfdesbg": ["/Graphs/home/keyfeaturebg.jpg", "https://3o.hk/images/2024/01/14/selfdesbg.jpg"],
+    "welcomebg": ["/Graphs/home/welcomebg.jpg", "https://3o.hk/images/2024/01/14/welcomebg.jpg"],
+    "contactbg":["/Graphs/home/contactbg.jpeg", "https://3o.hk/images/2024/01/14/contactbg.jpg"],
     "StudyExperience": [
       {
         "id": "FunctionalMaterial",

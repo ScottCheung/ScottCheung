@@ -10,16 +10,16 @@ import Welcome from '../conponent/Welocome';
 import Contact from '../conponent/Contact';
 import SubNav from '../conponent/subNav';
 // import { IntlProvider, FormattedMessage } from 'react-intl';
+import Database from '../Datebase.json';
+const bg = Database.PersonalInfo.Welcomebg
+
 
 function Home() {
-
-
-
     return (
         <div>
             <Navbar topTextColor={true} />
             <body className='bg-fixed bg-center bg-cover left-0 top-0 bottle-0 right-0 overflow-hidden bg-sky-600/40' 
-            style={{ backgroundImage: 'url(/Graphs/home/welcomebg.jpg)' }}
+            style={{ backgroundImage: `url(${bg[0] || bg[1]})`}}
             >
                 <div className='bg-black/50 '>
                     <Welcome />

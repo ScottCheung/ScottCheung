@@ -85,3 +85,27 @@ export function scrollToHash() {
   }, [hash]);
 }
 
+
+// import React, { useState, useEffect } from 'react';
+
+export function DynamicBackground ({ children, initialPaths }) {
+  const [loadedImage, setLoadedImage] = useState(null);
+  const [bgPaths, setBgPaths] = useState(initialPaths);
+
+  useEffect(() => {
+    const loadImage = new Image();
+    loadImage.src = bgPaths[0];
+    loadImage.onload = () => {
+      setLoadedImage(bgPaths[0]);
+    };
+    loadImage.onerror = () => {
+      setLoadedImage(bgPaths[1]);
+    };
+  }, [bgPaths]);
+
+  return (
+    <div style={{ backgroundImage: `url(${loadedImage})` }}>
+      {children}
+    </div>
+  );
+};

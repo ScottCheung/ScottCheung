@@ -6,6 +6,7 @@ import N from './Num';
 import { hideRow,useLanguage } from '../help/helpFunction';
 
 const KeyFeatures = Database.PersonalInfo.KeyFeature
+const bg = Database.PersonalInfo.KeyFeaturebg
 const Welcomevisblecontainer = Database.Animation.Variant.Welcomevisblecontainer
 const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp
 const WelcomeItem = Database.Animation.Variant.WelcomeItem
@@ -23,8 +24,8 @@ function KeyFeature() {
     };
   }, []);
 
-  const KeyFeature = (
-      <section class={`smoothchange items-center bg-fixed bg-cover bg-center relative `} style={{ backgroundImage: 'url(/Graphs/home/keyfeaturebg.jpg)' }}>
+  const KeyFeature = ( 
+      <section class={`smoothchange items-center bg-fixed bg-cover bg-center relative `} style={{ backgroundImage: `url(${bg[1]})`}}>
         <span className="w-full h-full absolute opacity-70 bg-black "></span>
         <div className="items-center min-h-[100vh]  flex justify-center py-[20vh]">
             <div class=" items-center ">

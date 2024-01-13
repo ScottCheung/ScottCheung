@@ -18,9 +18,10 @@ function Contact({isTopOut}) {
     <>
       <div className={` ${isOut? "min-h-[70vh] max-h-[70vh]":"min-h-[100vh]"}  relative`}>
         <div className="absolute top-0 bottle-0 w-full h-full  bg-center bg-cover pb-[100px]"
-            style={{
+            style={{ 
               backgroundImage: `url(${data.bg})`
-            }}>
+            }}
+            >
             <span  className={`w-full h-full absolute bg-black  ${isOut? "opacity-50":"opacity-60"}  `}></span>
             <div className="pt-[150px]">
           <AnimatePresence>
