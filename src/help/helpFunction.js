@@ -109,3 +109,15 @@ export function DynamicBackground ({ children, initialPaths }) {
     </div>
   );
 };
+
+
+// ScrollToTop.js
+// import React, { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+export function ScrollToTop() {
+  window.scrollTo(0, 0);
+
+  return null;
+}
+

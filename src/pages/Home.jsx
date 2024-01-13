@@ -19,7 +19,7 @@ function Home() {
         <div>
             <Navbar topTextColor={true} />
             <body className='bg-fixed bg-center bg-cover left-0 top-0 bottle-0 right-0 overflow-hidden bg-sky-600/40' 
-            style={{ backgroundImage: `url(${bg[0] || bg[1]})`}}
+            style={{ backgroundImage: `url(${bg[1]})`}}
             >
                 <div className='bg-black/50 '>
                     <Welcome />

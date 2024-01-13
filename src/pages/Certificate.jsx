@@ -3,7 +3,7 @@ import database from '../Datebase.json'
 import KeyFeature from '../conponent/KeyFeature';
 import { motion, AnimatePresence } from "framer-motion"
 import Contact from '../conponent/Contact';
-import { hideRow,useLanguage } from '../help/helpFunction';
+import { hideRow,useLanguage,ScrollToTop } from '../help/helpFunction';
 
 const Certificates = database.PersonalInfo.Certificates;
 const visblecontainer = database.Animation.Variant.fastWelcomevisblecontainer
@@ -19,6 +19,7 @@ export default function material() {
         data-anim-scroll-group="body"
       >
         <Navbar />
+        <ScrollToTop />
       
         <main id="main" className="main" role="main">
           <section

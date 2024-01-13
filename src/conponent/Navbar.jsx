@@ -26,10 +26,15 @@ function Navbar({ topTextColor }) {
   const isHomeOrRoot = (currentPage === ('/') || currentPage === ('/home'))
   const [currentTime, setCurrentTime] = useState(new Date());
 
+
+
+  
   const handleLangToggle = () => {
+
     const newLang = lang === 0 ? 1 : 0;
     setLang(newLang);
     localStorage.setItem('lang', newLang);
+    
   };
 
   useEffect(() => {
@@ -215,11 +220,13 @@ function Navbar({ topTextColor }) {
                       type='button'
                       layout
                       data-popover-target="lang"
-                      onClick={(e) =>{
+                      onClick={(e) => {
                         e.preventDefault();
                         handleLangToggle();
-                        window.location.reload();
-                        }}>
+                          // navigate("/");
+                          window.location.reload();
+                      }}
+                      >
                       <span class={`${windowWidth < 768 ? '' : ''} ExpandButton`}>
                         <i 
                         style={{ animationDelay: `${4* 0.2}s` }}

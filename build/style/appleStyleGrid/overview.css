@@ -1,0 +1,26 @@
+/******** Local fixes start ********/
+
+/* Incentive section card links - START */
+
+#icon-card-apple-card .card-cta-modal-button-icon svg {
+	fill: #d6d6d7;
+}
+
+#icon-card-apple-card .anz-card-modal-link:hover {
+	.card-cta-modal-button-icon svg {
+		fill: rgb(255,255,255);
+	}
+}
+
+#icon-card-delivery .card-cta-modal-button-icon svg {
+	fill: #d6d6d7;
+}
+
+#icon-card-delivery .anz-card-modal-link:hover {
+	.card-cta-modal-button-icon svg {
+		fill: rgb(255,255,255);
+	}
+}
+/* Incentive section card links - END */
+
+/******** Local fixes end ********/
