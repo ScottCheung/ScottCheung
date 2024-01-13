@@ -42,8 +42,7 @@ function SelfDescribing () {
                     0.515,
                     0.955
                   ],
-                  "duration": 2,
-                  "delayChildren": 1,
+                  "duration": 1,
                   }}  class="text-white z-10 animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono">
                 <i class="fi fi-rr-comment-heart text-5xl lg:text-8xl mr-[20px] pt-3 "></i>{lang==0&&"Self Describing"}{lang==1&&"自述" }</motion.div>
                   <div class=" pb-48">

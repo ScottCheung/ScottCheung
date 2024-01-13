@@ -68,3 +68,20 @@ export function SelectText(text,color,space) {
     }
   });
 }
+
+// import { useEffect } from 'react';
+// import { useLocation } from 'react-router-dom';
+
+export function scrollToHash() {
+  const { hash } = window.location;
+
+  useEffect(() => {
+    if (hash) {
+      const targetElement = document.getElementById(hash.substring(1));
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
+}
+

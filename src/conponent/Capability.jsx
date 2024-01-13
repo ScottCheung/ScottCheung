@@ -199,7 +199,16 @@ function Capability() {
                           {frontEnd.map((app, index) => (
                             <motion.div
                               key={index}
-                              variants={WelcomeItem}
+                              variants={{hidden: {
+                                opacity: 0,
+                                y: "30px",
+                                scale: 0.9,
+                            },
+                            visible: {
+                                opacity: 1,
+                                y: "0px",
+                                scale: 1,
+                            }}}
                               transition={StagerFadeInUp}
                               whileHover={{ scale: 1.2 }}
                               whileTap={{ scale: 0.9, duration: 0.7 }}
@@ -520,7 +529,17 @@ function Capability() {
                   {apps.map((app, index) => (
                     <motion.div
                       key={index}
-                      variants={WelcomeItem}
+                      variants={{
+                    hidden: {
+                        opacity: 0,
+                        y: "30px",
+                        scale: 0.95,
+                    },
+                    visible: {
+                        opacity: 1,
+                        y: "0px",
+                        scale: 1,
+                    }}}
                       transition={{StagerFadeInUp}}
                       whileHover={{ scale: 1.2 }}
                       whileTap={{ scale: 0.9 }}
@@ -851,15 +870,15 @@ function Capability() {
                   <h3 className="tile-headline typography-subsection-headline py-4 text-gray-600">
                     {lang == 0 && "Personality"}{lang == 1 && "人格类型"}
                   </h3>
-                  <a data-popover-target={`infp`}
-                    href="https://www.16personalities.com/infp-personality" className='flex jusitify-between items-center '>
+                  <Link data-popover-target={`infp`}
+                    to="https://www.16personalities.com/infp-personality" className='flex jusitify-between items-center '>
                     <p className="tile-headline text-xl typography-subsection-headline text-gray-600 ">
                       {lang == 0 && "INFP"}{lang == 1 && "小蝴蝶"}
                     </p>
 
                     <i class="ml-2 fi fi-rr-interrogation flex justify-end items-center my-0"></i>
 
-                  </a>
+                  </Link>
                 </motion.div>
 
                 <motion.div
@@ -918,10 +937,10 @@ function Capability() {
                   <h3 className="tile-headline typography-subsection-headline py-4 text-gray-600">
                     {lang == 0 && "Language"}{lang == 1 && "语言能力"}
                   </h3>
-                  <a href="https://en.wikipedia.org/wiki/Multilingualism" className=" tile-headline text-xl typography-subsection-headline py-4 text-gray-600">
+                  <Link to="https://en.wikipedia.org/wiki/Multilingualism" className=" tile-headline text-xl typography-subsection-headline py-4 text-gray-600">
 
                     {lang == 0 && "Multi-language"}{lang == 1 && "多语言"}
-                  </a>
+                  </Link>
                 </motion.div>
                 <motion.div className='space-y-8'>
                   {language[lang].map((personality, index) => (<motion.div>

@@ -5,20 +5,25 @@ import { motion, AnimatePresence } from "framer-motion"
 import React, { useState, useEffect } from 'react';
 const pathname = window.location.pathname;
 const course = database.PersonalInfo.StudyExperience;
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../help/helpFunction';
-let data = [];
+import { useParams } from 'react-router';
 
-if (pathname === '/major/major=ArtificalInteliigence') {
-  data = course.filter((item) => item.id === "AI");
-} else if (pathname === '/major/major=DataScience') {
-  data = course.filter((item) => item.id === "DS");
-} else if (pathname === '/major/major=BusinessAdministration') {
-  data = course.filter((item) => item.id === "BA");
-} else if (pathname === '/major/major=FunctionalMaterial') {
-  data = course.filter((item) => item.id === "FM");
-} else {
-  data = [];
-}
+
+
+
+// if (pathname === '/major/ArtificalInteliigence') {
+//   data = course.filter((item) => item.id === "AI");
+// } else if (pathname === '/major/DataScience') {
+//   data = course.filter((item) => item.id === "DS");
+// } else if (pathname === '/major/BusinessAdministration') {
+//   data = course.filter((item) => item.id === "BA");
+// } else if (pathname === '/major/FunctionalMaterial') {
+//   data = course.filter((item) => item.id === "FM");
+// } else {
+//   data = [];
+// }
+// console.log(data);
 
 
 const visblecontainer = database.Animation.Variant.fastWelcomevisblecontainer
@@ -26,6 +31,11 @@ const LeftappearBar = database.Animation.Transition.LeftappearBar
 const item = database.Animation.Variant.LeftWelcomeItem
 
 export default function Example() {
+  const { major } = useParams();
+  console.log(major);
+  const data = course.filter(item => item.id == major);
+
+// let data = [];
   const lang = useLanguage();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -46,13 +56,13 @@ export default function Example() {
   data-anim-scroll-group="body"
 >
   <Navbar />
-	{/* <link rel="stylesheet" href="../appleStyleGrid/fonts"/> */}
-	<link rel="stylesheet" href="../appleStyleGrid/overview.built.css" type="text/css"/>
-	{/* <link rel="stylesheet" href="../appleStyleGrid/overview.css"/> */}
-	<link rel="stylesheet" href="../work/main.built.css" type="text/css" />
-	{/* <link rel="stylesheet" href="../work/overview.built.css" type="text/css" /> */}
-	{/* <link rel="stylesheet" href="../work/main.built2.css" type="text/css" /> */}
-	{/* <link rel="stylesheet" href="../work/overview.built2.css" type="text/css" /> */}
+	{/* <link rel="stylesheet" to="../appleStyleGrid/fonts"/> */}
+	<link rel="stylesheet" to="../appleStyleGrid/overview.built.css" type="text/css"/>
+	{/* <link rel="stylesheet" to="../appleStyleGrid/overview.css"/> */}
+	<link rel="stylesheet" to="../work/main.built.css" type="text/css" />
+	{/* <link rel="stylesheet" to="../work/overview.built.css" type="text/css" /> */}
+	{/* <link rel="stylesheet" to="../work/main.built2.css" type="text/css" /> */}
+	{/* <link rel="stylesheet" to="../work/overview.built2.css" type="text/css" /> */}
   <main id="main" className="main" role="main">
     <section
       className="section section-welcome no-pad-bottom"
@@ -98,7 +108,7 @@ export default function Example() {
           </p>
           <p className=' text-justify'>
           {data[0].unides[lang][1]}
-          <a className='text-sky-500' href={data[0].web}> [ {lang==0&&"Offical Website"}{lang==1&&"官网" } ]</a>
+          <Link className='text-sky-500' to={data[0].web}> [ {lang==0&&"Offical Website"}{lang==1&&"官网" } ]</Link>
           </p>
           <div className=" text-gray-500 pt-24 pb-4" >
             <h2 className="typography-section-intro-headline section-intro-headline">
@@ -110,7 +120,7 @@ export default function Example() {
           </p>
           <p className=' text-justify'>
           {data[0].majordes[lang][1]}
-          <a className='text-sky-500' href={data[0].majorweb}> [ {lang==0&&"weki"}{lang==1&&"维基百科"} ]</a>
+          <Link className='text-sky-500' to={data[0].majorweb}> [ {lang==0&&"weki"}{lang==1&&"维基百科"} ]</Link>
           </p>
       </div>
 

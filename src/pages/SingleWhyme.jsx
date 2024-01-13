@@ -7,9 +7,6 @@ import WhyMe from '../conponent/WhyMe';
 import { hideRow, bgPic,useLanguage } from '../help/helpFunction';
 import { useParams } from 'react-router';
 
-let data = [];
-const pathname = window.location.pathname;
-
 
 
 const infos = database.PersonalInfo.Infos
@@ -20,9 +17,7 @@ const item = database.Animation.Variant.LeftWelcomeItem
 export default function WhyM() {
   const lang = useLanguage();
   const { whyme } = useParams();
-  const extractedValue = whyme.split('=')[1];
-  const whyMeData = database.PersonalInfo.WhyMe;
-  const selectedWhyMeItem = database.PersonalInfo.WhyMe[lang].find(item => item.id === extractedValue);
+  const selectedWhyMeItem = database.PersonalInfo.WhyMe[lang].find(item => item.id === whyme);
 
 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -181,7 +176,7 @@ export default function WhyM() {
 
         <WhyMe hideTittle={true} />
       </main>
-      <link rel="stylesheet" href="../appleStyleGrid/overview.built.css" type="text/css" />
+      <link rel="stylesheet" to="../appleStyleGrid/overview.built.css" type="text/css" />
 
       <Contact />
     </>

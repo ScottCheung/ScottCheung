@@ -43,8 +43,7 @@ function WorkExperience() {
                     0.515,
                     0.955
                   ],
-                  "duration": 2,
-                  "delayChildren": 1,
+                  "duration": 1,
                   }} className='animate__animated animate__fadeInUp items-center flex justify-center'>
               <div className='animate__animated animate__zoomIn'>
                 <i class=" fi fi-rr-tool-box text-5xl lg:text-8xl mr-[20px] pt-3 "></i>
@@ -68,7 +67,7 @@ function WorkExperience() {
                       className="card-set p-[20px] overflow-hidden" role="list">
                       {WorkExperiences[0].map((Experience, index) => (
                         <motion.div
-                          href={Experience.href}
+                          to={Experience.href}
                           key={index}
                           variants={item}
                           transition={StagerFadeInUp}
@@ -141,8 +140,8 @@ function WorkExperience() {
                             </div>
 
                           </div>
-                          <a class="anz-card-modal-link"
-                            href={Experience.href} aria-label="">
+                          <Link class="anz-card-modal-link"
+                            to={Experience.href} aria-label="">
                             <button
                               class="card-modal-trigger modal-trigger card-cta-modal-button"
                               type="link">
@@ -157,7 +156,7 @@ function WorkExperience() {
                                 </span>
                               </div>
                             </button>
-                          </a>
+                          </Link>
                         </motion.div>
                       ))}
 

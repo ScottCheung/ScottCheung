@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import database from "../Datebase.json";
 import Contact from "../conponent/Contact";
 import { useLanguage } from '../help/helpFunction';
+import { Link } from 'react-router-dom';
 
 
 
@@ -95,13 +96,13 @@ export default function Profile() {
                   <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2 animate__animated animate__zoomIn">
                     张贤哲 | Scott Zhang
                   </h3>
-                  <a
-                    href="https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7"
+                  <Link
+                    to="https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7"
                     className="text-xl leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
                     <i className="fi fi-rr-marker mr-2  text-gray-500"></i>
                     
                     {lang==0&&"Sydney, Australia" }{lang==1&&"澳大利亚，悉尼" }
-                  </a>
+                  </Link>
                   <div className="mb-2 text-gray-700 mt-10">
 
                   </div>
@@ -158,7 +159,7 @@ export default function Profile() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         className='tile-headline py-16  animate__animated animate__zoomIn'>
-                        <a href="/">{lang==0&&"more >" }{lang==1&&"更多  >>" }</a>
+                        <Link to="/">{lang==0&&"more >" }{lang==1&&"更多  >>" }</Link>
                       </motion.div>
                     </div>
                   </div>

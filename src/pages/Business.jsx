@@ -2,6 +2,7 @@ import Navbar from '../conponent/Navbar'
 import database from '../Datebase.json'
 import { motion, AnimatePresence } from "framer-motion"
 import StudyExperience from '../conponent/StudyExperience';
+import { Link } from 'react-router-dom';
 const course = database.PersonalInfo.StudyExperience;
 const BS = course.filter((item) =>item.major.includes("Business"));
 const visblecontainer = database.Animation.Variant.fastWelcomevisblecontainer
@@ -54,7 +55,7 @@ export default function material() {
           </p>
           <p className=' text-justify'>
           The school currently has more than 39,000 students. It has 16 colleges including the National Defense Science and Technology Institute, with 85 undergraduate majors in 9 major disciplines including engineering, agriculture, science, economics, law, literature, management, education, and art; it has first-level doctorate degrees There are 5 authorization points, 18 doctoral degree authorization points in second-level disciplines; 24 master's degree authorization points in first-level disciplines, 88 master's degree authorization points in second-level disciplines; and 15 professional master's degree categories. There are 3 postdoctoral research stations, and doctoral students are jointly trained in 4 disciplines with the China Academy of Engineering Physics. There are 2 "double first-class" construction disciplines (groups) in Sichuan Province, 4 provincial-level advantageous disciplines, 11 provincial-level key disciplines, 1 basic national defense discipline approved by the Bureau of National Defense Science and Industry, and 5 national defense specialty disciplines. Four disciplines, materials science, engineering science, chemistry, and environment/ecology, have entered the top 1% of ESI rankings, among which three disciplines of materials science, engineering science, and chemistry have entered the top 5‰ of ESI rankings. 
-          <a className='text-sky-500' href={BS[0].web}> [ Offical Website ]</a>
+          <Link className='text-sky-500' to={BS[0].web}> [ Offical Website ]</Link>
           </p>
           <div className=" text-gray-500 pt-24 pb-4" >
             <h2 className="typography-section-intro-headline section-intro-headline">
@@ -66,7 +67,7 @@ export default function material() {
           </p>
           <p className=' text-justify'>
           
-          <a className='text-sky-500' href="https://en.wikipedia.org/wiki/Business_administration"> [ weki ]</a>
+          <Link className='text-sky-500' to="https://en.wikipedia.org/wiki/Business_administration"> [ weki ]</Link>
           </p>
       </div>
 

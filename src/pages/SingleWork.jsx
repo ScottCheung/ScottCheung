@@ -181,7 +181,7 @@ export default function singleWork() {
 
         <WhyMe hideTittle={true} />
       </main>
-      <link rel="stylesheet" href="../appleStyleGrid/overview.built.css" type="text/css" />
+      <link rel="stylesheet" to="../appleStyleGrid/overview.built.css" type="text/css" />
 
       <Contact isTopOut={true} />
     </>

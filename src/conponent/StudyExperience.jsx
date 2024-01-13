@@ -42,13 +42,13 @@ function StudyExperience({ hideTittle, simpleVer }) {
           className=''>
           <div className='animate__animated animate__rotateIn'>
             <div className=' py-24 justify-center flex '>
-              <a
-                href='#StudyExperience'
+              <Link
+                to='#StudyExperience'
                 id='StudyExperience'
                 style={{ animationDelay: `${0.4}s` }}
                 className='flex  w-24 h-24 rounded-full items-center justify-center bg-gray-200  text-center hover:text-white shadow-none hover:bg-sky-900'>
                 <i class="fi fi-br-angle-up text-3xl "></i>
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>
@@ -65,7 +65,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                 0.515,
                 0.955
               ],
-              "duration": 1}} 
+              "duration": 1}}
               className='animate__animated animate__fadeInUp items-center flex justify-center  '>
             <div className='animate__animated animate__zoomIn'>
               <i class=" fi text-5xl lg:text-8xl fi-rr-circle-book-open mr-[20px] pt-3 "></i>
@@ -89,7 +89,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                   variants={visblecontainer}
                   initial="hidden"
                   whileInView="visible"
-                  // viewport={{ once: true }}
+                  viewport={{ once: true }}
                   className="card-set p-[20px] overflow-hidden" role="list">
                   {data.map((Experience, index) => (
 
@@ -134,8 +134,8 @@ function StudyExperience({ hideTittle, simpleVer }) {
                             </div>
                           </div>
                         </motion.div>
-                        <a class="anz-card-modal-link"
-                          href={Experience.href} aria-label="">
+                        <Link class="anz-card-modal-link"
+                          to={Experience.href} aria-label="">
                           <button
                             class="card-modal-trigger modal-trigger card-cta-modal-button"
                             type="link">
@@ -150,7 +150,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                               </span>
                             </div>
                           </button>
-                        </a>
+                        </Link>
                       </div>
                     </motion.div>
                   ))}

@@ -120,7 +120,7 @@
   "PersonalInfo": {
     "StudyExperience": [
       {
-        "id": "FM",
+        "id": "FunctionalMaterial",
         "major": [
           [
             "Functional",
@@ -131,7 +131,7 @@
             "材料"
           ]
         ],
-        "href": "/major/major=FunctionalMaterial",
+        "href": "/major/FunctionalMaterial",
         "type": [
           "Bacholor degree",
           "学士学位"
@@ -459,7 +459,7 @@
         ]
       },
       {
-        "id": "BA",
+        "id": "BusinessAdministration",
         "major": [
           [
             "Business",
@@ -470,7 +470,7 @@
             "管理"
           ]
         ],
-        "href": "/major/major=BusinessAdministration",
+        "href": "/major/BusinessAdministration",
         "type": [
           "Bacholor degree",
           "学士学位"
@@ -694,7 +694,7 @@
         ]
       },
       {
-        "id": "AI",
+        "id": "ArtificalInteliigence",
         "major": [
           [
             "Artifical",
@@ -705,7 +705,7 @@
             "智能"
           ]
         ],
-        "href": "/major/major=ArtificalInteliigence",
+        "href": "/major/ArtificalInteliigence",
         "type": [
           "Master degree",
           "硕士学位"
@@ -910,7 +910,7 @@
         ]
       },
       {
-        "id": "DS",
+        "id": "DataScience",
         "major": [
           [
             "Data",
@@ -921,7 +921,7 @@
             "科学"
           ]
         ],
-        "href": "/major/major=DataScience",
+        "href": "/major/DataScience",
         "type": [
           "Master degree",
           "硕士学位"
@@ -1133,7 +1133,7 @@
           "advantage": [
             "Learning ability"
           ],
-          "href": "/whyme/whyme=LearningAbility",
+          "href": "/whyme/LearningAbility",
           "pic": "/Graphs/whyme/LearningAbility.png",
           "pic2": "/Graphs/whyme/LearningAbility2.jpg",
           "icon": "fi-rr-graduation-cap",
@@ -1146,7 +1146,7 @@
           "advantage": [
             "Leadership"
           ],
-          "href": "/whyme/whyme=Leadership",
+          "href": "/whyme/Leadership",
           "pic": "/Graphs/whyme/Leadership.png",
           "pic2": "/Graphs/whyme/Leadership2.jpg",
           "icon": "fi-rr-users-alt",
@@ -1159,7 +1159,7 @@
           "advantage": [
             "Communication"
           ],
-          "href": "/whyme/whyme=Communication",
+          "href": "/whyme/Communication",
           "pic": "/Graphs/whyme/Communication.png",
           "pic2": "/Graphs/whyme/Communication2.jpg",
           "icon": "fi-rr-comments",
@@ -1172,7 +1172,7 @@
           "advantage": [
             "Problem-Solving"
           ],
-          "href": "/whyme/whyme=ProblemSolving",
+          "href": "/whyme/ProblemSolving",
           "pic": "/Graphs/whyme/ProblemSolving.png",
           "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
           "icon": "fi-rr-lightbulb-question",
@@ -1185,7 +1185,7 @@
           "advantage": [
             "Aesthetic attitude"
           ],
-          "href": "/whyme/whyme=AestheticAttitude",
+          "href": "/whyme/AestheticAttitude",
           "pic": "/Graphs/whyme/AestheticAttitude.png",
           "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
           "icon": "fi-rr-sparkles",
@@ -1198,7 +1198,7 @@
           "advantage": [
             "Emotional Stable"
           ],
-          "href": "/whyme/whyme=EmotionalStable",
+          "href": "/whyme/EmotionalStable",
           "pic": "/Graphs/whyme/EmotionalStable.png",
           "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
           "icon": "fi-rr-smile",
@@ -1213,7 +1213,7 @@
           "advantage": [
             "学习能力"
           ],
-          "href": "/whyme/whyme=LearningAbility",
+          "href": "/whyme/LearningAbility",
           "pic": "/Graphs/whyme/LearningAbility.png",
           "pic2": "/Graphs/whyme/LearningAbility2.jpg",
           "icon": "fi-rr-graduation-cap",
@@ -1226,7 +1226,7 @@
           "advantage": [
             "领导力"
           ],
-          "href": "/whyme/whyme=Leadership",
+          "href": "/whyme/Leadership",
           "pic": "/Graphs/whyme/Leadership.png",
           "pic2": "/Graphs/whyme/Leadership2.jpg",
           "icon": "fi-rr-users-alt",
@@ -1239,7 +1239,7 @@
           "advantage": [
             "沟通能力"
           ],
-          "href": "/whyme/whyme=Communication",
+          "href": "/whyme/Communication",
           "pic": "/Graphs/whyme/Communication.png",
           "pic2": "/Graphs/whyme/Communication2.jpg",
           "icon": "fi-rr-comments",
@@ -1252,7 +1252,7 @@
           "advantage": [
             "解题能力"
           ],
-          "href": "/whyme/whyme=ProblemSolving",
+          "href": "/whyme/ProblemSolving",
           "pic": "/Graphs/whyme/ProblemSolving.png",
           "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
           "icon": "fi-rr-lightbulb-question",
@@ -1265,7 +1265,7 @@
           "advantage": [
             "审美态度"
           ],
-          "href": "/whyme/whyme=AestheticAttitude",
+          "href": "/whyme/AestheticAttitude",
           "pic": "/Graphs/whyme/AestheticAttitude.png",
           "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
           "icon": "fi-rr-sparkles",
@@ -1278,7 +1278,7 @@
           "advantage": [
             "情绪稳定"
           ],
-          "href": "/whyme/whyme=EmotionalStable",
+          "href": "/whyme/EmotionalStable",
           "pic": "/Graphs/whyme/EmotionalStable.png",
           "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
           "icon": "fi-rr-smile",
@@ -2454,15 +2454,15 @@
         "hidden": {},
         "visible": {
           "transition": {
-            "delayChildren": 0.3,
-            "staggerChildren": 0.17
+            "delayChildren": 0.2,
+            "staggerChildren": 0.175
           }
         }
       },
       "WelcomeItem": {
         "hidden": {
           "opacity": 0,
-          "y": "120px",
+          "y": "45px",
           "scale":0.95,
           "pointerEvents": "none"
         },
@@ -2522,15 +2522,15 @@
       "StagerFadeInUp": {
         "opacity": {
           "ease": [0.455, 0.030, 0.515, 0.955],
-          "duration": 1.2
+          "duration": 0.9
         },
         "y": {
           "ease": [0.455, 0.030, 0.515, 0.955],
-          "duration": 1
+          "duration": 1.2
         },
         "scale": {
           "ease": [0.455, 0.030, 0.515, 0.955],
-          "duration": 1
+          "duration": 1.2
         }
       },
       "ProgressBar": {

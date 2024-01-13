@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
 import Database from '../Datebase.json';
 import { useLanguage } from '../help/helpFunction';
+import { Link } from 'react-router-dom';
 
 const data = Database.PersonalInfo.Contacts
 const codes = Database.PersonalInfo.ContactsScanCode
@@ -39,7 +40,7 @@ function Contact({isTopOut}) {
                         {data.items.map((type, index) => (
 
                           <motion.li
-                            href={type.link}
+                            to={type.link}
                             key={index}
                             variants={WelcomeItem}
                             transition={StagerFadeInUp}
@@ -67,8 +68,8 @@ function Contact({isTopOut}) {
                                   </div>
                                 </div>
                               </div>
-                              <a class="anz-card-modal-link"
-                                  href={type.link}>
+                              <Link class="anz-card-modal-link"
+                                  to={type.link}>
                                   <button
                                     class="card-modal-trigger modal-trigger card-cta-modal-button"
                                     type="link">
@@ -81,7 +82,7 @@ function Contact({isTopOut}) {
                                       </span>
                                     </div>
                                   </button>
-                                </a>
+                                </Link>
                             </div>
                           </motion.li>
                         ))}
@@ -119,8 +120,8 @@ function Contact({isTopOut}) {
                             whileTap={{ scale: 0.99 }}
                             data-popover-target={`way-${index}`}
                             layout>
-                            <a class="flex-shrink-0"
-                              href={type.link} >
+                            <Link class="flex-shrink-0"
+                              to={type.link} >
                               <div class="items-center flex justify-center">
                                 <i style={{ animationDelay: `${index * 0.3}s` }} className={`${type.icon} text-white text-5xl animate__animated  animate__zoomIn animate__fast `}></i></div>
                               {/* {<p className='lg:text-[15px] text-white text-center'>{type.type[lang]}</p>} */}
@@ -130,7 +131,7 @@ function Contact({isTopOut}) {
                               </p>
                               <div data-popper-arrow></div>
                             </div>
-                            </a>
+                            </Link>
                           </motion.li>
                         ))}
                       </motion.ul>

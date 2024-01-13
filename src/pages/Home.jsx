@@ -19,7 +19,7 @@ function Home() {
         <div>
             <Navbar topTextColor={true} />
             <body className='bg-fixed bg-center bg-cover left-0 top-0 bottle-0 right-0 overflow-hidden' style={{ backgroundImage: 'url(/Graphs/home/welcomebg.jpg)' }}>
-                <div className='bg-black/50 animate__animated animate__fadeIn'>
+                <div className='bg-black/50 '>
                     <Welcome />
                     
 

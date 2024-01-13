@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Database from '../Datebase.json';
 import { hideRow,bgPic,useLanguage } from '../help/helpFunction';
 import More from './More';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Welcomevisblecontainer = Database.Animation.Variant.Welcomevisblecontainer
@@ -53,8 +54,7 @@ function WhyMe({hideTittle}) {
                     0.515,
                     0.955
                   ],
-                  "duration": 2,
-                  "delayChildren": 1,
+                  "duration": 1,
                   }} className='animate__animated animate__fadeInUp items-center flex justify-center'>
           <div className='animate__animated animate__zoomIn'>
             <i class=" fi text-5xl lg:text-8xl  fi-rr-lightbulb-on mr-3 pt-3 "></i>
@@ -77,7 +77,7 @@ function WhyMe({hideTittle}) {
                   className="card-set p-[20px] overflow-hidden" role="list">
                   {keyfeature.map((feature, index) => (
                     <motion.div
-                      href={feature.href}
+                      to={feature.href}
                       key={index}
                       variants={WelcomeItem}
                       transition={StagerFadeInUp}
@@ -110,8 +110,8 @@ function WhyMe({hideTittle}) {
                             </div>
                           </div>
                         </div>
-                        <a class="anz-card-modal-link"
-                          href={feature.href}>
+                        <Link class="anz-card-modal-link"
+                          to={feature.href}>
                           <button
                             class="card-modal-trigger modal-trigger card-cta-modal-button"
                             type="link">
@@ -126,7 +126,7 @@ function WhyMe({hideTittle}) {
                               </span>
                             </div>
                           </button>
-                        </a>
+                        </Link>
                       </div>
                     </motion.div>
                   ))}

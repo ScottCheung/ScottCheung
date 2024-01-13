@@ -46,7 +46,7 @@ function KeyFeature() {
                       layout
                       className='flex flex-col w-[33%]  p-[20px] m-5 rounded-[28px] min-w-[350px]  hover:bg-gray-950/20 hover:backdrop-blur-md  hover:shadow-2xl focus:shadow-2xl  items-center'>
                       <div className='items-start flex'>
-                        <a data-popover-target={`keyFeatureDes-${index}`} href={`/${KeyFeature.href}`}  >
+                        <Link data-popover-target={`keyFeatureDes-${index}`} to={`/${KeyFeature.href}`}  >
                           <div style={{ animationDelay: `${index * 0.2}s` }} class="ml-[-5px] text-center animate__animated animate__zoomIn text-[150px] font-semibold  text-white ">
                             <N n={KeyFeature.no} d={1.5} />
                           </div>
@@ -56,7 +56,7 @@ function KeyFeature() {
                             </div>
                             <div className='animate__animated animate__zoomIn text-[30px]  text-lime-500  items-center'>{KeyFeature.keyfeature[lang]}</div>
                           </div>
-                        </a>
+                        </Link>
                       </div>
                       <div data-popover id={`keyFeatureDes-${index}`} role="tooltip" class="absolute z-10 invisible  inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
                         <div class="px-6 py-4">
