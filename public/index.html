@@ -24,6 +24,16 @@
 	<link rel="stylesheet" id="_style-css"
 	href="./style/Xianzhe&#39;s Personal Page – Welcome to my Page_files/style.min(1).css" type="text/css" media="all">
 </head>
+<script>
+	(function () {
+	  const redir = sessionStorage.redirect;
+	  delete sessionStorage.redirect;
+	  if (redir && redir !== location.href) {
+		history.replaceState(null, null, redir);
+	  }
+	})();
+</script>
+  
 
 <body id="root" data-anim-scroll-group="body"></body>
 </html>
