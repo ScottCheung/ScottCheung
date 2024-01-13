@@ -7,6 +7,16 @@
 @import "~@flaticon/flaticon-uicons/css/all/all";
 @import url('https://rsms.me/inter/inter.css');
 
+.underL {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #986bff;
+  }
+
+
 .blackoverlay{
     position: absolute;
     top: 0;
@@ -17,7 +27,6 @@
     z-index: 1;
 
 }
-
 
 .menuButton{
     button {
@@ -606,14 +615,14 @@ img.emoji {
     inset: 0 auto auto -1.7em !important;
 }
 
-.maincontainerWithExpandNavbar {
+.mainvisblecontainerWithExpandNavbar {
     margin-top: 10em;
     height: 100vh;
     padding-left: 5%;
     padding-right: 5%;
 }
 
-.wholemaincontainer {
+.wholemainvisblecontainer {
     flex-direction: column;
     height: 100vh;
     padding-left: 5%;
@@ -640,7 +649,7 @@ img.emoji {
     backdrop-filter: blur(10px);
 }
 
-.center-container {
+.center-visblecontainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -652,7 +661,7 @@ img.emoji {
     padding-right: 1rem;
 }
 
-.maincontainerWithDefaultNavba {
+.mainvisblecontainerWithDefaultNavba {
     padding-left: 4%;
     padding-right: 4%;
 }
@@ -667,7 +676,7 @@ img.emoji {
         padding-right: 0.75rem;
     }
 
-    .maincontainerWithDefaultNavba {
+    .mainvisblecontainerWithDefaultNavba {
         padding-left: 4%;
         padding-right: 4%;
     }
@@ -679,7 +688,7 @@ img.emoji {
         grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     }
 
-    .maincontainerWithDefaultNavba {
+    .mainvisblecontainerWithDefaultNavba {
         padding-left: 4%;
         padding-right: 4%;
     }
@@ -693,7 +702,7 @@ img.emoji {
         grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
     }
 
-    .maincontainerWithDefaultNavba {
+    .mainvisblecontainerWithDefaultNavba {
         padding-left: 4%;
         padding-right: 4%;
     }
@@ -705,7 +714,7 @@ img.emoji {
         display: none;
     }
 
-    .maincontainerWithDefaultNavba {
+    .mainvisblecontainerWithDefaultNavba {
         padding-left: 4%;
         padding-right: 4%;
     }
@@ -718,12 +727,12 @@ img.emoji {
         grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
     }
 
-    .maincontainerWithDefaultNavba {
+    .mainvisblecontainerWithDefaultNavba {
         padding-left: 4%;
         padding-right: 4%;
     }
 
-    .maincontainerWithExpandNavbar {
+    .mainvisblecontainerWithExpandNavbar {
         padding-left: 4%;
         padding-right: 4%;
     }
@@ -735,12 +744,12 @@ img.emoji {
         grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
     }
 
-    .maincontainerWithDefaultNavba {
+    .mainvisblecontainerWithDefaultNavba {
         padding-left: 2.5%;
         padding-right: 2.5%;
     }
 
-    .maincontainerWithExpandNavbar {
+    .mainvisblecontainerWithExpandNavbar {
         padding-left: 2.5%;
         padding-right: 2.5%;
     }
@@ -1312,7 +1321,7 @@ img.emoji {
     font-size: 2em
 }
 
-.swal2-popup.swal2-toast .swal2-html-container {
+.swal2-popup.swal2-toast .swal2-html-visblecontainer {
     margin: .5em 1em;
     padding: 0;
     overflow: initial;
@@ -1320,7 +1329,7 @@ img.emoji {
     text-align: initial
 }
 
-.swal2-popup.swal2-toast .swal2-html-container:empty {
+.swal2-popup.swal2-toast .swal2-html-visblecontainer:empty {
     padding: 0
 }
 
@@ -1453,7 +1462,7 @@ img.emoji {
     animation: swal2-toast-hide .1s forwards
 }
 
-.swal2-container {
+.swal2-visblecontainer {
     display: grid;
     position: fixed;
     z-index: 1060;
@@ -1471,106 +1480,106 @@ img.emoji {
     -webkit-overflow-scrolling: touch
 }
 
-.swal2-container.swal2-backdrop-show,
-.swal2-container.swal2-noanimation {
+.swal2-visblecontainer.swal2-backdrop-show,
+.swal2-visblecontainer.swal2-noanimation {
     background: rgba(0, 0, 0, .4)
 }
 
-.swal2-container.swal2-backdrop-hide {
+.swal2-visblecontainer.swal2-backdrop-hide {
     background: rgba(0, 0, 0, 0) !important
 }
 
-.swal2-container.swal2-top-start,
-.swal2-container.swal2-center-start,
-.swal2-container.swal2-bottom-start {
+.swal2-visblecontainer.swal2-top-start,
+.swal2-visblecontainer.swal2-center-start,
+.swal2-visblecontainer.swal2-bottom-start {
     grid-template-columns: minmax(0, 1fr) auto auto
 }
 
-.swal2-container.swal2-top,
-.swal2-container.swal2-center,
-.swal2-container.swal2-bottom {
+.swal2-visblecontainer.swal2-top,
+.swal2-visblecontainer.swal2-center,
+.swal2-visblecontainer.swal2-bottom {
     grid-template-columns: auto minmax(0, 1fr) auto
 }
 
-.swal2-container.swal2-top-end,
-.swal2-container.swal2-center-end,
-.swal2-container.swal2-bottom-end {
+.swal2-visblecontainer.swal2-top-end,
+.swal2-visblecontainer.swal2-center-end,
+.swal2-visblecontainer.swal2-bottom-end {
     grid-template-columns: auto auto minmax(0, 1fr)
 }
 
-.swal2-container.swal2-top-start>.swal2-popup {
+.swal2-visblecontainer.swal2-top-start>.swal2-popup {
     align-self: start
 }
 
-.swal2-container.swal2-top>.swal2-popup {
+.swal2-visblecontainer.swal2-top>.swal2-popup {
     grid-column: 2;
     align-self: start;
     justify-self: center
 }
 
-.swal2-container.swal2-top-end>.swal2-popup,
-.swal2-container.swal2-top-right>.swal2-popup {
+.swal2-visblecontainer.swal2-top-end>.swal2-popup,
+.swal2-visblecontainer.swal2-top-right>.swal2-popup {
     grid-column: 3;
     align-self: start;
     justify-self: end
 }
 
-.swal2-container.swal2-center-start>.swal2-popup,
-.swal2-container.swal2-center-left>.swal2-popup {
+.swal2-visblecontainer.swal2-center-start>.swal2-popup,
+.swal2-visblecontainer.swal2-center-left>.swal2-popup {
     grid-row: 2;
     align-self: center
 }
 
-.swal2-container.swal2-center>.swal2-popup {
+.swal2-visblecontainer.swal2-center>.swal2-popup {
     grid-column: 2;
     grid-row: 2;
     align-self: center;
     justify-self: center
 }
 
-.swal2-container.swal2-center-end>.swal2-popup,
-.swal2-container.swal2-center-right>.swal2-popup {
+.swal2-visblecontainer.swal2-center-end>.swal2-popup,
+.swal2-visblecontainer.swal2-center-right>.swal2-popup {
     grid-column: 3;
     grid-row: 2;
     align-self: center;
     justify-self: end
 }
 
-.swal2-container.swal2-bottom-start>.swal2-popup,
-.swal2-container.swal2-bottom-left>.swal2-popup {
+.swal2-visblecontainer.swal2-bottom-start>.swal2-popup,
+.swal2-visblecontainer.swal2-bottom-left>.swal2-popup {
     grid-column: 1;
     grid-row: 3;
     align-self: end
 }
 
-.swal2-container.swal2-bottom>.swal2-popup {
+.swal2-visblecontainer.swal2-bottom>.swal2-popup {
     grid-column: 2;
     grid-row: 3;
     justify-self: center;
     align-self: end
 }
 
-.swal2-container.swal2-bottom-end>.swal2-popup,
-.swal2-container.swal2-bottom-right>.swal2-popup {
+.swal2-visblecontainer.swal2-bottom-end>.swal2-popup,
+.swal2-visblecontainer.swal2-bottom-right>.swal2-popup {
     grid-column: 3;
     grid-row: 3;
     align-self: end;
     justify-self: end
 }
 
-.swal2-container.swal2-grow-row>.swal2-popup,
-.swal2-container.swal2-grow-fullscreen>.swal2-popup {
+.swal2-visblecontainer.swal2-grow-row>.swal2-popup,
+.swal2-visblecontainer.swal2-grow-fullscreen>.swal2-popup {
     grid-column: 1/4;
     width: 100%
 }
 
-.swal2-container.swal2-grow-column>.swal2-popup,
-.swal2-container.swal2-grow-fullscreen>.swal2-popup {
+.swal2-visblecontainer.swal2-grow-column>.swal2-popup,
+.swal2-visblecontainer.swal2-grow-fullscreen>.swal2-popup {
     grid-row: 1/4;
     align-self: stretch
 }
 
-.swal2-container.swal2-no-transition {
+.swal2-visblecontainer.swal2-no-transition {
     transition: none !important
 }
 
@@ -1721,7 +1730,7 @@ img.emoji {
     font-size: 1em
 }
 
-.swal2-timer-progress-bar-container {
+.swal2-timer-progress-bar-visblecontainer {
     position: absolute;
     right: 0;
     bottom: 0;
@@ -1781,7 +1790,7 @@ img.emoji {
     border: 0
 }
 
-.swal2-html-container {
+.swal2-html-visblecontainer {
     z-index: 1;
     justify-content: center;
     margin: 1em 1.6em .3em;
@@ -2493,16 +2502,16 @@ body.swal2-height-auto {
     height: auto !important
 }
 
-body.swal2-no-backdrop .swal2-container {
+body.swal2-no-backdrop .swal2-visblecontainer {
     background-color: rgba(0, 0, 0, 0) !important;
     pointer-events: none
 }
 
-body.swal2-no-backdrop .swal2-container .swal2-popup {
+body.swal2-no-backdrop .swal2-visblecontainer .swal2-popup {
     pointer-events: all
 }
 
-body.swal2-no-backdrop .swal2-container .swal2-modal {
+body.swal2-no-backdrop .swal2-visblecontainer .swal2-modal {
     box-shadow: 0 0 10px rgba(0, 0, 0, .4)
 }
 
@@ -2515,12 +2524,12 @@ body.swal2-no-backdrop .swal2-container .swal2-modal {
         display: none
     }
 
-    body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container {
+    body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-visblecontainer {
         position: static !important
     }
 }
 
-body.swal2-toast-shown .swal2-container {
+body.swal2-toast-shown .swal2-visblecontainer {
     box-sizing: border-box;
     width: 360px;
     max-width: 100%;
@@ -2528,7 +2537,7 @@ body.swal2-toast-shown .swal2-container {
     pointer-events: none
 }
 
-body.swal2-toast-shown .swal2-container.swal2-top {
+body.swal2-toast-shown .swal2-visblecontainer.swal2-top {
     top: 0;
     right: auto;
     bottom: auto;
@@ -2536,24 +2545,24 @@ body.swal2-toast-shown .swal2-container.swal2-top {
     transform: translateX(-50%)
 }
 
-body.swal2-toast-shown .swal2-container.swal2-top-end,
-body.swal2-toast-shown .swal2-container.swal2-top-right {
+body.swal2-toast-shown .swal2-visblecontainer.swal2-top-end,
+body.swal2-toast-shown .swal2-visblecontainer.swal2-top-right {
     top: 0;
     right: 0;
     bottom: auto;
     left: auto
 }
 
-body.swal2-toast-shown .swal2-container.swal2-top-start,
-body.swal2-toast-shown .swal2-container.swal2-top-left {
+body.swal2-toast-shown .swal2-visblecontainer.swal2-top-start,
+body.swal2-toast-shown .swal2-visblecontainer.swal2-top-left {
     top: 0;
     right: auto;
     bottom: auto;
     left: 0
 }
 
-body.swal2-toast-shown .swal2-container.swal2-center-start,
-body.swal2-toast-shown .swal2-container.swal2-center-left {
+body.swal2-toast-shown .swal2-visblecontainer.swal2-center-start,
+body.swal2-toast-shown .swal2-visblecontainer.swal2-center-left {
     top: 50%;
     right: auto;
     bottom: auto;
@@ -2561,7 +2570,7 @@ body.swal2-toast-shown .swal2-container.swal2-center-left {
     transform: translateY(-50%)
 }
 
-body.swal2-toast-shown .swal2-container.swal2-center {
+body.swal2-toast-shown .swal2-visblecontainer.swal2-center {
     top: 50%;
     right: auto;
     bottom: auto;
@@ -2569,8 +2578,8 @@ body.swal2-toast-shown .swal2-container.swal2-center {
     transform: translate(-50%, -50%)
 }
 
-body.swal2-toast-shown .swal2-container.swal2-center-end,
-body.swal2-toast-shown .swal2-container.swal2-center-right {
+body.swal2-toast-shown .swal2-visblecontainer.swal2-center-end,
+body.swal2-toast-shown .swal2-visblecontainer.swal2-center-right {
     top: 50%;
     right: 0;
     bottom: auto;
@@ -2578,15 +2587,15 @@ body.swal2-toast-shown .swal2-container.swal2-center-right {
     transform: translateY(-50%)
 }
 
-body.swal2-toast-shown .swal2-container.swal2-bottom-start,
-body.swal2-toast-shown .swal2-container.swal2-bottom-left {
+body.swal2-toast-shown .swal2-visblecontainer.swal2-bottom-start,
+body.swal2-toast-shown .swal2-visblecontainer.swal2-bottom-left {
     top: auto;
     right: auto;
     bottom: 0;
     left: 0
 }
 
-body.swal2-toast-shown .swal2-container.swal2-bottom {
+body.swal2-toast-shown .swal2-visblecontainer.swal2-bottom {
     top: auto;
     right: auto;
     bottom: 0;
@@ -2594,55 +2603,55 @@ body.swal2-toast-shown .swal2-container.swal2-bottom {
     transform: translateX(-50%)
 }
 
-body.swal2-toast-shown .swal2-container.swal2-bottom-end,
-body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+body.swal2-toast-shown .swal2-visblecontainer.swal2-bottom-end,
+body.swal2-toast-shown .swal2-visblecontainer.swal2-bottom-right {
     top: auto;
     right: 0;
     bottom: 0;
     left: auto
 }
 
-div.wpforms-container-full .wpforms-form div.wpforms-field input.wpforms-error {
+div.wpforms-visblecontainer-full .wpforms-form div.wpforms-field input.wpforms-error {
     border: none
 }
 
-div.wpforms-container .wpforms-form input[type=date],
-div.wpforms-container .wpforms-form input[type=datetime],
-div.wpforms-container .wpforms-form input[type=datetime-local],
-div.wpforms-container .wpforms-form input[type=email],
-div.wpforms-container .wpforms-form input[type=month],
-div.wpforms-container .wpforms-form input[type=number],
-div.wpforms-container .wpforms-form input[type=password],
-div.wpforms-container .wpforms-form input[type=range],
-div.wpforms-container .wpforms-form input[type=search],
-div.wpforms-container .wpforms-form input[type=tel],
-div.wpforms-container .wpforms-form input[type=text],
-div.wpforms-container .wpforms-form input[type=time],
-div.wpforms-container .wpforms-form input[type=url],
-div.wpforms-container .wpforms-form input[type=week],
-div.wpforms-container .wpforms-form select,
-div.wpforms-container .wpforms-form textarea,
+div.wpforms-visblecontainer .wpforms-form input[type=date],
+div.wpforms-visblecontainer .wpforms-form input[type=datetime],
+div.wpforms-visblecontainer .wpforms-form input[type=datetime-local],
+div.wpforms-visblecontainer .wpforms-form input[type=email],
+div.wpforms-visblecontainer .wpforms-form input[type=month],
+div.wpforms-visblecontainer .wpforms-form input[type=number],
+div.wpforms-visblecontainer .wpforms-form input[type=password],
+div.wpforms-visblecontainer .wpforms-form input[type=range],
+div.wpforms-visblecontainer .wpforms-form input[type=search],
+div.wpforms-visblecontainer .wpforms-form input[type=tel],
+div.wpforms-visblecontainer .wpforms-form input[type=text],
+div.wpforms-visblecontainer .wpforms-form input[type=time],
+div.wpforms-visblecontainer .wpforms-form input[type=url],
+div.wpforms-visblecontainer .wpforms-form input[type=week],
+div.wpforms-visblecontainer .wpforms-form select,
+div.wpforms-visblecontainer .wpforms-form textarea,
 .nf-form-cont input:not([type=button]),
-div.wpforms-container .wpforms-form .form-group.is-focused .form-control {
+div.wpforms-visblecontainer .wpforms-form .form-group.is-focused .form-control {
     box-shadow: none
 }
 
-div.wpforms-container .wpforms-form input[type=date],
-div.wpforms-container .wpforms-form input[type=datetime],
-div.wpforms-container .wpforms-form input[type=datetime-local],
-div.wpforms-container .wpforms-form input[type=email],
-div.wpforms-container .wpforms-form input[type=month],
-div.wpforms-container .wpforms-form input[type=number],
-div.wpforms-container .wpforms-form input[type=password],
-div.wpforms-container .wpforms-form input[type=range],
-div.wpforms-container .wpforms-form input[type=search],
-div.wpforms-container .wpforms-form input[type=tel],
-div.wpforms-container .wpforms-form input[type=text],
-div.wpforms-container .wpforms-form input[type=time],
-div.wpforms-container .wpforms-form input[type=url],
-div.wpforms-container .wpforms-form input[type=week],
-div.wpforms-container .wpforms-form select,
-div.wpforms-container .wpforms-form textarea,
+div.wpforms-visblecontainer .wpforms-form input[type=date],
+div.wpforms-visblecontainer .wpforms-form input[type=datetime],
+div.wpforms-visblecontainer .wpforms-form input[type=datetime-local],
+div.wpforms-visblecontainer .wpforms-form input[type=email],
+div.wpforms-visblecontainer .wpforms-form input[type=month],
+div.wpforms-visblecontainer .wpforms-form input[type=number],
+div.wpforms-visblecontainer .wpforms-form input[type=password],
+div.wpforms-visblecontainer .wpforms-form input[type=range],
+div.wpforms-visblecontainer .wpforms-form input[type=search],
+div.wpforms-visblecontainer .wpforms-form input[type=tel],
+div.wpforms-visblecontainer .wpforms-form input[type=text],
+div.wpforms-visblecontainer .wpforms-form input[type=time],
+div.wpforms-visblecontainer .wpforms-form input[type=url],
+div.wpforms-visblecontainer .wpforms-form input[type=week],
+div.wpforms-visblecontainer .wpforms-form select,
+div.wpforms-visblecontainer .wpforms-form textarea,
 .nf-form-cont input:not([type=button]) {
     background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#d2d2d2, #d2d2d2);
     float: none;
@@ -2656,74 +2665,74 @@ div.wpforms-container .wpforms-form textarea,
     transition: background 0s ease-out
 }
 
-div.wpforms-container .wpforms-form .form-group.is-focused .form-control {
+div.wpforms-visblecontainer .wpforms-form .form-group.is-focused .form-control {
     outline: none;
     background-size: 100% 2px, 100% 1px;
     transition-duration: 0.3s
 }
 
-div.wpforms-container .wpforms-form input[type=date].form-control,
-div.wpforms-container .wpforms-form input[type=datetime].form-control,
-div.wpforms-container .wpforms-form input[type=datetime-local].form-control,
-div.wpforms-container .wpforms-form input[type=email].form-control,
-div.wpforms-container .wpforms-form input[type=month].form-control,
-div.wpforms-container .wpforms-form input[type=number].form-control,
-div.wpforms-container .wpforms-form input[type=password].form-control,
-div.wpforms-container .wpforms-form input[type=range].form-control,
-div.wpforms-container .wpforms-form input[type=search].form-control,
-div.wpforms-container .wpforms-form input[type=tel].form-control,
-div.wpforms-container .wpforms-form input[type=text].form-control,
-div.wpforms-container .wpforms-form input[type=time].form-control,
-div.wpforms-container .wpforms-form input[type=url].form-control,
-div.wpforms-container .wpforms-form input[type=week].form-control,
-div.wpforms-container .wpforms-form select.form-control,
-div.wpforms-container .wpforms-form textarea.form-control {
+div.wpforms-visblecontainer .wpforms-form input[type=date].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=datetime].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=datetime-local].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=email].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=month].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=number].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=password].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=range].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=search].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=tel].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=text].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=time].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=url].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type=week].form-control,
+div.wpforms-visblecontainer .wpforms-form select.form-control,
+div.wpforms-visblecontainer .wpforms-form textarea.form-control {
     border: none;
     padding: 7px 0;
     font-size: 14px
 }
 
-div.wpforms-container .wpforms-form .wpforms-field-select select {
+div.wpforms-visblecontainer .wpforms-form .wpforms-field-select select {
     border-radius: 3px
 }
 
-div.wpforms-container .wpforms-form .wpforms-field-number input[type=number] {
+div.wpforms-visblecontainer .wpforms-form .wpforms-field-number input[type=number] {
     background-image: none;
     border-radius: 3px
 }
 
-div.wpforms-container .wpforms-form button[type=submit].wpforms-submit,
-div.wpforms-container .wpforms-form button[type=submit].wpforms-submit:hover {
+div.wpforms-visblecontainer .wpforms-form button[type=submit].wpforms-submit,
+div.wpforms-visblecontainer .wpforms-form button[type=submit].wpforms-submit:hover {
     color: #fff;
     border: none
 }
 
-.home div.wpforms-container-full .wpforms-form {
+.home div.wpforms-visblecontainer-full .wpforms-form {
     margin-left: 15px;
     margin-right: 15px
 }
 
-div.wpforms-container-full .wpforms-form .wpforms-field {
+div.wpforms-visblecontainer-full .wpforms-form .wpforms-field {
     padding: 0 0 24px 0 !important
 }
 
-div.wpforms-container-full .wpforms-form .wpforms-submit-container {
+div.wpforms-visblecontainer-full .wpforms-form .wpforms-submit-visblecontainer {
     text-align: right
 }
 
-div.wpforms-container-full .wpforms-form .wpforms-submit-container button {
+div.wpforms-visblecontainer-full .wpforms-form .wpforms-submit-visblecontainer button {
     text-transform: uppercase
 }
 
-div.wpforms-container-full .wpforms-form textarea {
+div.wpforms-visblecontainer-full .wpforms-form textarea {
     border: none !important
 }
 
-div.wpforms-container-full .wpforms-form textarea:focus {
+div.wpforms-visblecontainer-full .wpforms-form textarea:focus {
     border-width: 0 !important
 }
 
-.home div.wpforms-container .wpforms-form textarea {
+.home div.wpforms-visblecontainer .wpforms-form textarea {
     background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#d2d2d2, #d2d2d2);
     background-color: transparent;
     background-repeat: no-repeat;
@@ -2733,19 +2742,19 @@ div.wpforms-container-full .wpforms-form textarea:focus {
 
 @media only screen and(max-width:768px) {
 
-    .wpforms-container-full .wpforms-form .wpforms-one-half,
-    .wpforms-container-full .wpforms-form button {
+    .wpforms-visblecontainer-full .wpforms-form .wpforms-one-half,
+    .wpforms-visblecontainer-full .wpforms-form button {
         width: 100% !important;
         margin-left: 0 !important
     }
 
-    .wpforms-container-full .wpforms-form .wpforms-submit-container {
+    .wpforms-visblecontainer-full .wpforms-form .wpforms-submit-visblecontainer {
         text-align: center
     }
 }
 
-div.wpforms-container .wpforms-form input:focus,
-div.wpforms-container .wpforms-form select:focus {
+div.wpforms-visblecontainer .wpforms-form input:focus,
+div.wpforms-visblecontainer .wpforms-form select:focus {
     border: none
 }
 

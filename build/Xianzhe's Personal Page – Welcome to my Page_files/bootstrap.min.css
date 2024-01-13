@@ -814,7 +814,7 @@ pre code {
     overflow-y: scroll
 }
 
-.container {
+.visblecontainer {
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -822,24 +822,24 @@ pre code {
 }
 
 @media (min-width:768px) {
-    .container {
+    .visblecontainer {
         width: 750px
     }
 }
 
 @media (min-width:992px) {
-    .container {
+    .visblecontainer {
         width: 970px
     }
 }
 
 @media (min-width:1200px) {
-    .container {
+    .visblecontainer {
         width: 1170px
     }
 }
 
-.container-fluid {
+.visblecontainer-fluid {
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -3082,7 +3082,7 @@ fieldset[disabled] .btn-link {
 .btn-link:hover,
 .btn-link:focus {
     color: #23527c;
-    text-decoration: underline;
+
     background-color: transparent
 }
 
@@ -3639,20 +3639,20 @@ tbody.collapse.in {
     }
 }
 
-.container>.navbar-header,
-.container-fluid>.navbar-header,
-.container>.navbar-collapse,
-.container-fluid>.navbar-collapse {
+.visblecontainer>.navbar-header,
+.visblecontainer-fluid>.navbar-header,
+.visblecontainer>.navbar-collapse,
+.visblecontainer-fluid>.navbar-collapse {
     margin-right: -15px;
     margin-left: -15px;
 }
 
 @media (min-width:769px) {
 
-    .container>.navbar-header,
-    .container-fluid>.navbar-header,
-    .container>.navbar-collapse,
-    .container-fluid>.navbar-collapse {
+    .visblecontainer>.navbar-header,
+    .visblecontainer-fluid>.navbar-header,
+    .visblecontainer>.navbar-collapse,
+    .visblecontainer-fluid>.navbar-collapse {
         margin-right: 0;
         margin-left: 0
     }
@@ -3715,8 +3715,8 @@ tbody.collapse.in {
 
 @media (min-width:769px) {
 
-    .navbar>.container .navbar-brand,
-    .navbar>.container-fluid .navbar-brand {
+    .navbar>.visblecontainer .navbar-brand,
+    .navbar>.visblecontainer-fluid .navbar-brand {
         margin-left: -15px
     }
 }
@@ -4946,8 +4946,8 @@ a.label:focus {
 
 .clearfix:after,
 .dl-horizontal dd:after,
-.container:after,
-.container-fluid:after,
+.visblecontainer:after,
+.visblecontainer-fluid:after,
 .row:after,
 .form-horizontal .form-group:after,
 .nav:after,

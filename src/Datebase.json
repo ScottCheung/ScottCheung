@@ -1,332 +1,2556 @@
 {
-    "Navbar":{
-        "navbarItem":[
-            {"name":"Home",
-             "href":"/",
-            "icon":"fi-rr-home-heart",
-            "des":"Know me better, my information here ",
-            "expression":"❤٩(◕‿◕｡)۶"},
-            {"name":"Milestone",
-            "href":"/milestone",
-            "icon":"fi-rr-trophy-star",
-            "des":"It shows all of my shinning time ",
-            "expression":"ʕ•ᴥ•ʔ"},
-            {"name":"Life",
-            "href":"/life",
-            "icon":"fi-rr-picture",
-            "des":"It records every apspect of my daily life ",
-            "expression":"(＾◡＾)"},
-            {"name":"Contact",
-            "href":"/ContactMe",
-            "icon":"fi-rr-following",
-            "des":"You can contact me by these ways. You also can find them in the end of every page",
-            "expression":"(｡♥‿♥｡)"}
+  "Navbar": {
+    "navbarItem": [
+      {
+        "name": [
+          "Home",
+          "主页"
         ],
-        "Location":[
+        "href": "/",
+        "icon": "fi-rr-home-heart",
+        "des": [
+          "Key information here ~",
+          "主要信息都在这里 ~"
+        ],
+        "expression": "❤٩(◕‿◕｡)۶"
+      },
+      {
+        "name": [
+          "Project",
+          "项目"
+        ],
+        "href": "/project",
+        "icon": "fi-rr-trophy-star",
+        "des": [
+          "All projects I contributed ~",
+          "我参与的项目 ~"
+        ],
+        "expression": "ʕ•ᴥ•ʔ"
+      },
+      {
+        "name": [
+          "Life",
+          "生活"
+        ],
+        "href": "/life",
+        "icon": "fi-rr-mountains",
+        "des": [
+          "It records my wonderful life ~",
+          "我的精彩生活 ~"
+        ],
+        "expression": "(＾◡＾)"
+      },
+      {
+        "name": [
+          "Contact",
+          "联络"
+        ],
+        "href": "/ContactMe",
+        "icon": "fi-rr-following",
+        "des": [
+          "You can contact me by these ways ~",
+          "您可以这样找到我 ~"
+        ],
+        "expression": "(｡♥‿♥｡)"
+      }
+    ],
+    "Location": [
+      {
+        "id": "#StudyExperience",
+        "label": [
+          "Study",
+          "学习"
+        ],
+        "logo": "fi-rr-book"
+      },
+      {
+        "id": "#Capability",
+        "label": [
+          "Capability",
+          "能力"
+        ],
+        "logo": "fi-rr-user"
+      },
+      {
+        "id": "#SelfDescribing",
+        "label": [
+          "Self-Describe",
+          "自述"
+        ],
+        "logo": "fi-rr-comment-heart"
+      },
+      {
+        "id": "#WorkExperience",
+        "label": [
+          "Work",
+          "工作"
+        ],
+        "logo": "fi-rr-tool-box"
+      },
+      {
+        "id": "#WhyMe",
+        "label": [
+          "Why me",
+          "优势"
+        ],
+        "logo": "fi-rr-lightbulb-on"
+      }
+    ],
+    "Avatar": {
+      "Webname": [
+        "Scott's Profile",
+        "贤哲的个人资料"
+      ],
+      "helloword": [
+        "I love you ❤",
+        "要爱自己 ❤"
+      ]
+    },
+    "Hero": {
+      "hello": [
+        "Welcome! I'm Scott.",
+        "好久不见，我是贤哲"
+      ],
+      "word": [
+        "Sidere mens eadem mutato",
+        "繁星纵变，智慧永存"
+      ]
+    }
+  },
+  "PersonalInfo": {
+    "StudyExperience": [
+      {
+        "id": "FM",
+        "major": [
+          [
+            "Functional",
+            "Material"
+          ],
+          [
+            "功能",
+            "材料"
+          ]
+        ],
+        "href": "/major/major=FunctionalMaterial",
+        "type": [
+          "Bacholor degree",
+          "学士学位"
+        ],
+        "logo": "/Graphs/study/swust.png",
+        "unides": [
+          [
+            "Southwest University of Science and Technology is located in Mianyang City, Sichuan Province, a science and technology city in China. The school is a university jointly built by the People's Government of Sichuan Province and the Ministry of Education. It is a university jointly built by the People's Government of Sichuan Province and the State Administration of Science, Technology and Industry for National Defense. It has been identified by the Ministry of Education as one of the 14 universities in the western region that are under national key construction. Comrade Li Lanqing, former member of the Standing Committee of the Political Bureau of the CPC Central Committee and Vice Premier of the State Council, praised the school's 'co-construction and regional industry-university-research joint education' for having developed a school-running path with its own characteristics. The current party secretary of the school is Dong Faqin and the principal Huang Qi.",
+            "The school currently has more than 39,000 students. It has 16 colleges including the National Defense Science and Technology Institute, with 85 undergraduate majors in 9 major disciplines including engineering, agriculture, science, economics, law, literature, management, education, and art; it has first-level doctorate degrees There are 5 authorization points, 18 doctoral degree authorization points in second-level disciplines; 24 master's degree authorization points in first-level disciplines, 88 master's degree authorization points in second-level disciplines; and 15 professional master's degree categories. There are 3 postdoctoral research stations, and doctoral students are jointly trained in 4 disciplines with the China Academy of Engineering Physics. There are 2 'double first-class' construction disciplines (groups) in Sichuan Province, 4 provincial-level advantageous disciplines, 11 provincial-level key disciplines, 1 basic national defense discipline approved by the Bureau of National Defense Science and Industry, and 5 national defense specialty disciplines. Four disciplines, materials science, engineering science, chemistry, and environment/ecology, have entered the top 1% of ESI rankings, among which three disciplines of materials science, engineering science, and chemistry have entered the top 5‰ of ESI rankings. "
+          ],
+          [
+            "西南科技大学位于中国四川省绵阳市，这是中国的一个科技城市。该校是由四川省人民政府和教育部共建的大学，也是由四川省人民政府和国防科技工业局共建的大学。教育部已将其确定为西部地区14所国家重点建设的大学之一。中共中央政治局常委、国务院副总理李岚清同志对学校的'共建和区域产学研联合育人'赞誉有加，认为学校发展出了一条具有自身特色的办学道路。学校现任党委书记是董发勤，校长是黄琦。",
+            "学校目前有超过3.9万名学生。学校设有16个学院，包括国防科技学院，在工程、农业、科学、经济、法学、文学、管理、教育和艺术等9个主要学科领域设有85个本科专业；设有5个一级博士学位授予权点，在二级学科中设有18个博士学位授权点；在一级学科中设有24个硕士学位授权点，在二级学科中设有88个硕士学位授权点；设有15个专业硕士类别。学校设有3个博士后科研流动站，与中国工程物理研究院共同培养博士生的学科有4个。学校在四川省拥有2个'双一流'建设学科（群），拥有4个省级优势特色学科，拥有11个省级重点学科，拥有国防科技工业局批准的1个基础国防学科，拥有5个国防专业学科。材料科学、工程科学、化学和环境/生态学等四个学科进入了ESI排名的前1%，其中材料科学、工程科学和化学等三个学科进入了ESI排名的前5‰。"
+          ]
+        ],
+        "majordes": [
+          [
+            "Functional materials are generally characterised as those materials which possess particular native properties and functions of their own. For example, ferroelectricity, piezoelectricity, magnetism or energy storage functions.",
+            "Functional materials are found in all classes of materials: ceramics, metals, polymers and organic molecules. Functional materials are often used in electromagnetic applications from KHz to THz and at optical frequencies where the plasmonic properties of metals assume particular importance. Functional materials are also of critical importance in materials for energy such as electro- and magnetocaloric materials, for energy storage and for solar harvesting functions."
+          ],
+          [
+            "功能材料通常被定义为那些具有特定固有属性和功能的材料。例如，铁电性、压电性、磁性或能量存储功能。",
+            "功能材料存在于所有类别的材料中：陶瓷、金属、聚合物和有机分子。功能材料通常用于电磁应用，从千赫兹到太赫兹，以及在光学频率，金属的等离子体性质尤为重要。功能材料在能源材料中也至关重要，如电磁和磁热材料，能量存储和太阳能收集功能。"
+          ]
+        ],
+        "tag": [
+          [
+            "Bachelor",
+            "Key university"
+          ],
+          [
+            "学士",
+            "重点大学"
+          ]
+        ],
+        "web": "http://www.english.swust.edu.cn/main.htm",
+        "majorweb": "https://en.wikipedia.org/wiki/Functional_materials",
+        "time": [
+          "Sep 4, 2017 - Sep 6, 2021",
+          "2017.09.04 - 2021.09.04"
+        ],
+        "description": [
+          [
+            "This experience encompasses a broad spectrum of chemistry, including inorganic chemistry, organic chemistry, and physical chemistry, along with the fundamentals of material science. Additionally, it covers mechanical design, electronic technology, and engineering mechanics, providing candidates with a comprehensive and rich engineering background."
+          ],
+          [
+            "该经历涵盖了广泛的化学范围，包括无机化学、有机化学和物理化学，以及材料科学的基础知识。此外，它涵盖了机械设计、电子技术和工程力学，为候选人提供了全面而丰富的工程背景。"
+          ]
+        ],
+        "courses": [
+          [
             {
-              "id": "#StudyExperience",
-              "label": "Study",
-              "logo": "fi-rr-book"
+              "CourseName": "Inorganic and Analytical Chemistry",
+              "Type": "Compulsory",
+              "Description": "-"
             },
             {
-              "id": "#Capability",
-              "label": "Capability",
-              "logo": "fi-rr-tools"
+              "CourseName": "Organic Chemistry",
+              "Type": "Compulsory",
+              "Description": "-"
             },
             {
-              "id": "#SelfDescribing",
-              "label": "Self-Describe",
-              "logo": "fi-rr-chart-user"
+              "CourseName": "Fundamentals of Mechanical Design",
+              "Type": "Compulsory",
+              "Description": "-"
             },
             {
-              "id": "#WorkExperience",
-              "label": "Work",
-              "logo": "fi-rr-tool-box"
+              "CourseName": "Course Design of Fundamentals of Mechanical Design",
+              "Type": "Compulsory",
+              "Description": "-"
             },
             {
-              "id": "#WhyMe",
-              "label": "Why me",
-              "logo": "fi-rr-lightbulb-on"
+              "CourseName": "Physical Chemistry",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Fundamentals of Material Science",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Solid State Physics",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Semiconductor Physics Experiment",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Modern Analysis and Testing Technology",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "New Building Materials",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Poly Flame Retardant Material",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Special Cement",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Compound Material",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Electrical and Electronic Technology",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Fundamentals of Circuit Analysis",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Engineering Mechanics",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Semiconductor Physics",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Physical Technology and Thin Film",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Dielectric Physics",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Electrical Ceramic Technology",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Magnetic Physics",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Special Ceramics",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Nanomaterials and Nanotechnology",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Modern Analysis and Testing Technology Experiment",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Comprehensive Experiment of Functional Materials",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Surface Engineering Technology",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Graduation Project of Functional Material (Thesis)",
+              "Type": "Compulsory",
+              "Description": "Graduation Thesis"
+            }
+          ],
+          [
+            {
+              "CourseName": "无机与分析化学",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "有机化学",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "机械设计基础",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "机械设计基础课程设计",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "物理化学",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "材料科学基础",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "固体物理学",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "半导体物理实验",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "现代分析与测试技术",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "新型建筑材料",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "聚合物阻燃材料",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "特种水泥",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "复合材料",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "电气与电子技术",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "电路分析基础",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "工程力学",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "半导体物理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "物理技术与薄膜",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "介电物理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "电气陶瓷技术",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "磁性物理",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "特种陶瓷",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "纳米材料与纳米技术",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "现代分析与测试技术实验",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "功能材料综合实验",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "表面工程技术",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "功能材料毕业设计（论文）",
+              "Type": "必修",
+              "Description": "毕业论文"
             }
           ]
-    },
-    "PersonalInfo": {
-        "StudyExperience":[
-            {
-                "major": ["Functional", "Material"],
-                "href":"/Bacholor-FunctionalMaterial",
-                "type":"Bacholor",
-                "logo":"/Graphs/study/swust.png",
-                "university":"SWUST",
-                "tag":["Key university", ""],
-                "web":"http://www.english.swust.edu.cn/main.htm",
-                "time": "Sep 4, 2017 - Sep 6, 2021",
-                "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
-            },
-            { 
-                "major": ["Business", "Administration"],
-                "href":"/Bacholor-BusinessAdministration",
-                "type":"Bacholor",
-                "logo":"/Graphs/study/swust.png",
-                "university":"SWUST",
-                "tag":["Key university", ""],
-                "web":"http://www.english.swust.edu.cn/main.htm",
-                "time": "Sep 4, 2019 - Sep 6, 2021",
-                "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
-            },
-            { 
-                "major": ["Artifical", "Inteliigence"],
-                "href":"/Master-ArtificalInteliigence",
-                "type":"Master",
-                "logo":"/Graphs/study/unsw.png",
-                "university":"UNSW",
-                "tag":["Top 19", "G8"],
-                "web":"https://www.unsw.edu.au/",
-                "time": "Sep 13, 2022 - Sep 6, 2024",
-                "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
-            },
-            {
-                "major": ["Data", "Science"],
-                "href":"/Master-DataScience",
-                "type":"Master",
-                "logo":"/Graphs/study/unsw.png",
-                "university":"UNSW",
-                "web":"https://www.unsw.edu.au/",
-                "tag":["Top 19", "G8"],
-                "time": "Sep 13, 2022 - Sep 6, 2024",
-                "description": "Illo sint voluptas. Error voluptates culpa eligendi. Hic vel totam vitae illo. Non aliquid explicabo necessitatibus unde. Sed exercitationem placeat consectetur nulla deserunt vel. Iusto corrupti dicta."
-            }
+        ]
+      },
+      {
+        "id": "BA",
+        "major": [
+          [
+            "Business",
+            "Administration"
+          ],
+          [
+            "工商",
+            "管理"
+          ]
         ],
-        "WhyMe":[ 
-            {
-            "advantage": ["Learning ability"],
-            "href": "/LearningAbility",
-            "pic": "/Graphs/whyme/LearningAbility.png",
-            "icon":"fi-rr-graduation-cap",
-            "description": "Demonstrated exceptional learning agility by independently mastering piano and guitar skills. Maintained a stellar GPA while initiating the completion of 90% of a second degree by the junior year, achieving a three-year curriculum in just one. Simultaneously, holding three degrees across four majors serves as compelling evidence."
-        },
-        {
-            "advantage": ["Leadership"],
-            "href": "/Leadership",
-            "pic": "/Graphs/whyme/Leadership.png",
-            "icon":"fi-rr-users-alt",
-            "description": "Held pivotal roles in the university's study department, technology and entrepreneurship guidance station, debate team, and served as class president, study committee leader, and life committee leader. Led the class to secure victories in city, school, and university competitions, garnering numerous provincial awards."
-        },
-        {
-            "advantage": ["Communication"],
-            "href": "/Communication",
-            "pic": "/Graphs/whyme/Communication.png",
-            "icon":"fi-rr-comments",
-            "description": "Adept presenter with a track record of participating in over 100 competitions and delivering more than 50 public speeches. Star lecturer at NUSTP, hosted a 400-person party, and excelled in the champion debating team. Negotiated a 50% discount on supplies for a startup and secured sponsorships for club activities."
-        },
-        {
-            "advantage": ["Problem-Solving"],
-            "href": "/ProblemSolving",
-            "pic": "/Graphs/whyme/ProblemSolving.png",
-            "icon":"fi-rr-lightbulb-question",
-            "description": "Exhibits clear logical and divergent thinking, employing effective frameworks to dissect and solve complex problems. Demonstrates resilience, tenacity, and a passion for conquering challenges. Proficiently utilizes familiar tools and processes to automate repetitive tasks. Notable achievements include technical breakthroughs in the Chemical Design Competition and Concrete Design Competition."
-        },
-        {
-            "advantage": ["Aesthetic attitude"],
-            "href": "/AestheticAttitude",
-            "pic": "/Graphs/whyme/AestheticAttitude.png",
-            "icon":"fi-rr-sparkles",
-            "description": "Autonomously designs and crafts launch-level slides, advanced posters, brochures, logos, and interior layouts for various companies. Recognized with 2 first prizes, 2 second prizes, and 2 third prizes in diverse design competitions. Official poster designer for the publicity department of the National University Science and Technology Park."
-        },
-        {
-            "advantage": ["Emotional Stable"],
-            "href": "/EmotionalStable",
-            "pic": "/Graphs/whyme/EmotionalStable.png",
-            "icon":"fi-rr-smile",
-            "description": "As an INFP with a heightened emotional perception, adept micro-expression observer, and strong empathic abilities. Thrives in resolving customer complaints and unforeseen situations. Optimistic and stress-resistant, capable of swiftly managing negative emotions at work. Always be positive and energetic."
-        }],
-        "SelfDescribing":
-        {
-        "pic": "Excellent",
-        "description": "Demonstrated exceptional learning agility by independently mastering piano and guitar skills. Maintained a stellar GPA while initiating the completion of 90% of a second degree by the junior year, achieving a three-year curriculum in just one. Simultaneously, holding three degrees across four majors serves as compelling evidence."
-        },
-        "KeyFeature":[
-            {
-                "keyfeature": ["3 Degrees"],
-                "href": ["Degrees"],
-                "icon":"fi-rr-graduation-cap",
-                "description": "Multiple knowledge background, compound elite."
-            },
-            {
-                "keyfeature": ["10 scholarships"],
-                "href": ["scholarships"],
-                "icon":"fi-rr-trophy-star",
-                "description": "Comprehensive development, won 10 scholarships."
-            },
-            {
-                "keyfeature": ["60+ Certificates"],
-                "href": ["Certificates"],
-                "icon":"fi-rr-diploma",
-                "description": "Actively join and obtained over 60 certificates."
-            }
-
-
+        "href": "/major/major=BusinessAdministration",
+        "type": [
+          "Bacholor degree",
+          "学士学位"
         ],
-        "Contacts": [
-            {
-            "type": "Linkedin",
-            "icon": "fi-brands-linkedin",
-            "link": "https://www.linkedin.com/in/zhang-xianzhe-03133a259/",
-            "name": "Xianzhe Zhang"
-            },
-            {
-            "type": "E-mail",
-            "icon": "fi-rr-envelope",
-            "link": "https://outlook.office365.com/mail/",
-            "name": "z5443003@ad.unsw.edu.au"
-            },
-            {
-            "type": "Facebook",
-            "icon": "fi-brands-facebook",
-            "link": "https://www.facebook.com/profile.php?id=100085874466260",
-            "name": "Xianzhe Zhang"
-            },
-            {
-            "type": "Phone",
-            "icon": "fi-sr-circle-phone-flip",
-            "link": "17381484512",
-            "name": "+86 17381484512"
-            },
-            {
-            "type": "Instagram",
-            "icon": "fi-brands-instagram",
-            "link": "https://www.instagram.com/invites/contact/?i=er73s6a2y80u&utm_content=pblnb0t",
-            "name": "scottzhang9779"
-            },
-            {
-            "type": "Little Red Book",
-            "icon": "fi-sr-book-alt",
-            "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579",
-            "name": "贤哲scott"
-            },
-            {
-            "type": "Wechat",
-            "icon": "fi-sr-comments",
-            "link": "https://www.wechat.com/",
-            "name": "Scottt1110"
-            }
+        "logo": "/Graphs/study/swust.png",
+        "unides": [
+          [
+            "Southwest University of Science and Technology is located in Mianyang City, Sichuan Province, a science and technology city in China. The school is a university jointly built by the People's Government of Sichuan Province and the Ministry of Education. It is a university jointly built by the People's Government of Sichuan Province and the State Administration of Science, Technology and Industry for National Defense. It has been identified by the Ministry of Education as one of the 14 universities in the western region that are under national key construction. Comrade Li Lanqing, former member of the Standing Committee of the Political Bureau of the CPC Central Committee and Vice Premier of the State Council, praised the school's 'co-construction and regional industry-university-research joint education' for having developed a school-running path with its own characteristics. The current party secretary of the school is Dong Faqin and the principal Huang Qi.",
+            "The school currently has more than 39,000 students. It has 16 colleges including the National Defense Science and Technology Institute, with 85 undergraduate majors in 9 major disciplines including engineering, agriculture, science, economics, law, literature, management, education, and art; it has first-level doctorate degrees There are 5 authorization points, 18 doctoral degree authorization points in second-level disciplines; 24 master's degree authorization points in first-level disciplines, 88 master's degree authorization points in second-level disciplines; and 15 professional master's degree categories. There are 3 postdoctoral research stations, and doctoral students are jointly trained in 4 disciplines with the China Academy of Engineering Physics. There are 2 'double first-class' construction disciplines (groups) in Sichuan Province, 4 provincial-level advantageous disciplines, 11 provincial-level key disciplines, 1 basic national defense discipline approved by the Bureau of National Defense Science and Industry, and 5 national defense specialty disciplines. Four disciplines, materials science, engineering science, chemistry, and environment/ecology, have entered the top 1% of ESI rankings, among which three disciplines of materials science, engineering science, and chemistry have entered the top 5‰ of ESI rankings. "
+          ],
+          [
+            "西南科技大学位于中国四川省绵阳市，这是中国的一个科技城市。该校是由四川省人民政府和教育部共建的大学，也是由四川省人民政府和国防科技工业局共建的大学。教育部已将其确定为西部地区14所国家重点建设的大学之一。中共中央政治局常委、国务院副总理李岚清同志对学校的'共建和区域产学研联合育人'赞誉有加，认为学校发展出了一条具有自身特色的办学道路。学校现任党委书记是董发勤，校长是黄琦。",
+            "学校目前有超过3.9万名学生。学校设有16个学院，包括国防科技学院，在工程、农业、科学、经济、法学、文学、管理、教育和艺术等9个主要学科领域设有85个本科专业；设有5个一级博士学位授予权点，在二级学科中设有18个博士学位授权点；在一级学科中设有24个硕士学位授权点，在二级学科中设有88个硕士学位授权点；设有15个专业硕士类别。学校设有3个博士后科研流动站，与中国工程物理研究院共同培养博士生的学科有4个。学校在四川省拥有2个'双一流'建设学科（群），拥有4个省级优势特色学科，拥有11个省级重点学科，拥有国防科技工业局批准的1个基础国防学科，拥有5个国防专业学科。材料科学、工程科学、化学和环境/生态学等四个学科进入了ESI排名的前1%，其中材料科学、工程科学和化学等三个学科进入了ESI排名的前5‰。"
+          ]
         ],
-        "ContactsScanCode":[
-            {
-            "lable": "Resume",
-            "codepic": "/Graphs/contact/wechat.jpg",
-            "des":"Scan me to download his RESUME.",
-            "expression":"(｡♥‿♥｡)"
-            },
-            {
-            "lable": "Personal Info",
-            "codepic": "/Graphs/contact/wechat.jpg",
-            "des":"Scan me to download his PERSONAL INFO.",
-            "expression":"ʕ•ᴥ•ʔ"
-            },
-            {
-            "lable": "Wechat",
-            "codepic": "/Graphs/contact/wechat.jpg",
-            "des":"Scan me to add his WECHAT.",
-            "expression":"(＾◡＾)"
-            }
+        "majordes": [
+          [
+            "Business administration, also known as business management, is the administration of a commercial enterprise.",
+            "It includes all aspects of overseeing and supervising the business operations of an organization. From the point of view of management and leadership, it also covers fields that include office building administration, accounting, finance, designing, development, quality assurance, data analysis, sales, project management, information-technology management, research and development, marketing and communication studies.The administration of a business includes the performance or management of business operations and decision-making, as well as the efficient organization of people and other resources to direct activities towards common goals and objectives. In general, administration refers to the broader management function, including the associated finance, personnel and MIS services."
+          ],
+          [
+            "工商管理，也称为企业管理，是对商业企业的管理。它涵盖了监督和管理组织商业运营的所有方面。",
+            "从管理和领导的角度来看，它还涵盖了包括办公楼管理、会计、财务、设计、开发、质量保证、数据分析、销售、项目管理、信息技术管理、研究与开发、市场营销和传播研究等领域。工商管理包括业务运营和决策的执行，以及有效组织人力和其他资源，引导活动朝着共同的目标和目标方向发展。总的来说，管理涵盖了更广泛的管理职能，包括相关的财务、人事和管理信息服务。"
+          ]
         ],
-        "Capability":{
-            "personality":[
-                {
-                    "name": "Introverted",
-                    "label": "56%",
-                    "colum": "56%",
-                    "color1": "from-red-500",
-                    "color2": "to-red-700"
-                },
-                {
-                    "name": "Intuitive",
-                    "label": "55%",
-                    "colum": "55%",
-                    "color1": "from-orange-500",
-                    "color2": "to-amber-500"
-                },
-                {
-                    "name": "Feeling",
-                    "label": "68%",
-                    "colum": "68%",
-                    "color1": "from-amber-400",
-                    "color2": "to-yellow-400"
-                },
-                {
-                    "name": "Prospecting",
-                    "label": "63%",
-                    "colum": "63%",
-                    "color1": "from-sky-500",
-                    "color2": "to-emerald-500"
-                }
-            ],
-            "language": [
-                {
-                    "name": "English (PTE)",
-                    "label": "64",
-                    "colum": "70%",
-                    "color1": "from-cyan-500",
-                    "color2": "to-blue-500"
-                },
-                {
-                    "name": "Chinese (Mandarin)",
-                    "label": "A-II",
-                    "colum": "90%",
-                    "color1": "from-indigo-500",
-                    "color2": "to-pink-500"
-                }
-            ]
+        "tag": [
+          [
+            "Bachelor",
+            "Key university"
+          ],
+          [
+            "学士",
+            "重点大学"
+          ]
+        ],
+        "web": "http://www.english.swust.edu.cn/main.htm",
+        "majorweb": "https://en.wikipedia.org/wiki/Business_administration",
+        "time": [
+          "Sep 4, 2019 - Sep 6, 2021",
+          "2019.09.04 - 2021.09.06"
+        ],
+        "description": [
+          "This experience encompasses fields such as economics, management, and accounting, including core courses in marketing, project management, human resource management, and financial management. Through the pursuit of this degree, candidates acquire a keen business mindset and systematic enterprise management capabilities.",
+          "该经历涵盖了经济学、管理学和会计学等领域，包括营销、项目管理、人力资源管理和财务管理等核心课程。通过攻读这个学位，学生将获得敏锐的商业思维和系统的企业管理能力。"
+        ],
+        "courses": [
+          [
+            {
+              "CourseName": "Statistic",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Western Economics (1)",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Human Resource Management",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Advanced Office Automation",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Principles of Management",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Principles of Accounting",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Production and Operation Management",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Financial Management",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Management Operational Research",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Organizational Behavior",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Management Information System",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Marketing",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Western Economics (2)",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Project Management",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Strategic Management",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Cleaner Production and Circular Economy",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Graduation Project of Business Administration (Thesis)",
+              "Type": "Compulsory",
+              "Description": "Graduation Thesis"
+            }
+          ],
+          [
+            {
+              "CourseName": "统计学",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "西方经济学（1）",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "人力资源管理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "高级办公自动化",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "管理原理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "会计学原理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "生产与运营管理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "财务管理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "管理运营研究",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "组织行为学",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "管理信息系统",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "市场营销",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "西方经济学（2）",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "项目管理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "战略管理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "清洁生产与循环经济",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "工商管理专业毕业设计（论文）",
+              "Type": "必修",
+              "Description": "毕业论文"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "AI",
+        "major": [
+          [
+            "Artifical",
+            "Inteliigence"
+          ],
+          [
+            "人工",
+            "智能"
+          ]
+        ],
+        "href": "/major/major=ArtificalInteliigence",
+        "type": [
+          "Master degree",
+          "硕士学位"
+        ],
+        "logo": "/Graphs/study/unsw.png",
+        "banner": "https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png",
+        "unides": [
+          [
+            "UNSW Sydney is Australia’s best university for career outcomes and second overall according to a new ranking published by The Australian Financial Review (AFR) today. UNSW ranked first for ‘career outcomes’, second for ‘research’ and for ‘global reputation’ and second university overall in Australia.",
+            "UNSW Sydney has moved up 26 spots in the 2024 QS World University Rankings to equal 19th alongside its crosstown counterpart the University of Sydney. The two universities are now ranked equal second in Australia. The city of Sydney now boasts 10 per cent of the top 20 universities in the world, affirming the city’s reputation as a great global city for higher education. Of 38 Australian universities ranked, three (15 per cent) are in the global top 20, an extraordinary achievement for a nation of only 0.3 per cent of the world’s population."
+          ],
+          [
+            "新南威尔士大学（ UNSW Sydney ）被认为是澳大利亚就业前景最好的大学，根据今天《澳大利亚金融评论》（AFR）发布的新排名，它在整体排名中位居第二。UNSW在‘职业前景’方面排名第一，研究和‘全球声誉’方面排名第二，也是澳大利亚整体排名第二的大学。",
+            "新南威尔士大学（ UNSW Sydney ）在2024年QS世界大学排名中上升了26位，与悉尼大学并列第19位。这两所大学现在在澳大利亚排名第二。悉尼市现在拥有全球前20所大学中的10%，证实了该城市作为高等教育的卓越全球城市的声誉。在排名的38所澳大利亚大学中，有三所（15%）进入了全球前20名，对于一个仅占世界人口0.3%的国家来说，这是一项非凡的成就。"
+          ]
+        ],
+        "majordes": [
+          [
+            "Artificial intelligence (AI) is the intelligence of machines or software, as opposed to the intelligence of humans or animals. It is a field of study in computer science that develops and studies intelligent machines. Such machines may be called AIs.",
+            "AI technology is widely used throughout industry, government, and science. Some high-profile applications are: advanced web search engines (e.g., Google Search), recommendation systems (used by YouTube, Amazon, and Netflix), understanding human speech (such as Google Assistant, Siri, and Alexa), self-driving cars (e.g., Waymo), generative and creative tools (ChatGPT and AI art), and superhuman play and analysis in strategy games (such as chess and Go)."
+          ],
+          [
+            "人工智能（AI）是指机器或软件的智能，与人类或动物的智能相对。它是计算机科学中研发和研究智能机器的研究领域。这样的机器可以被称为人工智能。",
+            "人工智能技术在工业、政府和科学中被广泛应用。一些知名的应用包括：先进的网络搜索引擎（例如Google搜索）、推荐系统（用于YouTube、Amazon和Netflix）、理解人类语音（如Google助手、Siri和Alexa）、自动驾驶汽车（例如Waymo）、生成和创造性工具（ChatGPT和AI艺术）以及在战略游戏中进行超人类游戏和分析（例如国际象棋和围棋）。"
+          ]
+        ],
+        "tag": [
+          [
+            "Master",
+            "QS 19"
+          ],
+          [
+            "硕士",
+            "全球排名 19"
+          ]
+        ],
+        "web": "https://www.unsw.edu.au/",
+        "majorweb": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+        "time": [
+          "Sep 13, 2022 - Sep 6, 2024",
+          "2022.09.13 - 2021.09.06"
+        ],
+        "description": [
+          "This experience encompasses a broad spectrum of the AI field, covers advanced topics such as Machine Learning & Data Mining, Neural Networks, Deep Learning, Recommender Systems, and Natural Language Processing. This comprehensive curriculum provides candidates with a rich and thorough understanding of AI, strengthening his professional depth.",
+          "该经历涵盖了人工智能领域的内容，包括机器学习与数据挖掘、神经网络、深度学习、推荐系统以及自然语言处理等先进主题。这个全面的课程设置为学生提供了对人工智能的深入而全面的理解，增强了他们在专业领域的深度。"
+        ],
+        "courses": [
+          [
+            {
+              "CourseName": "Principles of Programming",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Database Systems",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Foundations of Computer Science",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Data Structures & Algorithms",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Computer Networks & Applications",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Design & Analysis of Algorithms",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Artificial Intelligence",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Machine Learning & Data Mining",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Web Front-End Programming",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Neural Networks, Deep Learning",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Recommender Systems",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Natural Language Processing",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Database Systems Implementation",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Solving Modern Programming Problems with Rust",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Info Tech Project",
+              "Type": "Compulsory",
+              "Description": "Graduation Project"
+            }
+          ],
+          [
+            {
+              "CourseName": "程序设计原理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "数据库系统",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "计算机科学基础",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "数据结构与算法",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "计算机网络与应用",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "算法设计与分析",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "人工智能",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "机器学习与数据挖掘",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Web前端编程",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "神经网络、深度学习",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "推荐系统",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "自然语言处理",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "数据库系统实现",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "用Rust解决现代编程问题",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "信息技术项目",
+              "Type": "必修",
+              "Description": "毕业项目"
+            }
+          ]
+        ]
+      },
+      {
+        "id": "DS",
+        "major": [
+          [
+            "Data",
+            "Science"
+          ],
+          [
+            "数据",
+            "科学"
+          ]
+        ],
+        "href": "/major/major=DataScience",
+        "type": [
+          "Master degree",
+          "硕士学位"
+        ],
+        "logo": "/Graphs/study/unsw.png",
+        "banner": "https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png",
+        "unides": [
+          [
+            "UNSW Sydney is Australia’s best university for career outcomes and second overall according to a new ranking published by The Australian Financial Review (AFR) today. UNSW ranked first for ‘career outcomes’, second for ‘research’ and for ‘global reputation’ and second university overall in Australia.",
+            "UNSW Sydney has moved up 26 spots in the 2024 QS World University Rankings to equal 19th alongside its crosstown counterpart the University of Sydney. The two universities are now ranked equal second in Australia. The city of Sydney now boasts 10 per cent of the top 20 universities in the world, affirming the city’s reputation as a great global city for higher education. Of 38 Australian universities ranked, three (15 per cent) are in the global top 20, an extraordinary achievement for a nation of only 0.3 per cent of the world’s population."
+          ],
+          [
+            "新南威尔士大学（ UNSW Sydney ）被认为是澳大利亚就业前景最好的大学，根据今天《澳大利亚金融评论》（AFR）发布的新排名，它在整体排名中位居第二。UNSW在‘职业前景’方面排名第一，研究和‘全球声誉’方面排名第二，也是澳大利亚整体排名第二的大学。",
+            "新南威尔士大学（ UNSW Sydney ）在2024年QS世界大学排名中上升了26位，与悉尼大学并列第19位。这两所大学现在在澳大利亚排名第二。悉尼市现在拥有全球前20所大学中的10%，证实了该城市作为高等教育的卓越全球城市的声誉。在排名的38所澳大利亚大学中，有三所（15%）进入了全球前20名，对于一个仅占世界人口0.3%的国家来说，这是一项非凡的成就。"
+          ]
+        ],
+        "majordes": [
+          [
+            "Data science is an interdisciplinary academic field that uses statistics, scientific computing, scientific methods, processes, algorithms and systems to extract or extrapolate knowledge and insights from potentially noisy, structured, or unstructured data.",
+            "Data science also integrates domain knowledge from the underlying application domain (e.g., natural sciences, information technology, and medicine). Data science is multifaceted and can be described as a science, a research paradigm, a research method, a discipline, a workflow, and a profession."
+          ],
+          [
+            "数据科学是一个跨学科的学术领域，利用统计学、科学计算、科学方法、过程、算法和系统，从可能带有噪声、结构化或非结构化数据中提取或推演知识和见解。",
+            "数据科学还整合了来自基础应用领域的领域知识（例如自然科学、信息技术和医学）。数据科学是多层面的，可以描述为一门科学、一个研究范式、一种研究方法、一门学科、一个工作流程和一个职业。"
+          ]
+        ],
+        "tag": [
+          [
+            "Master",
+            "QS 19"
+          ],
+          [
+            "硕士",
+            "全球排名 19"
+          ]
+        ],
+        "web": "https://www.unsw.edu.au/",
+        "majorweb": "https://en.wikipedia.org/wiki/data_science",
+        "time": [
+          "Sep 13, 2022 - Sep 6, 2024",
+          "2022.09.13 - 2021.09.06"
+        ],
+        "description": [
+          "This degree covers a wide range of data-related fields, covers Machine Learning & Data Mining, Database Systems Implementation, Recommender Systems, and Design & Analysis of Algorithms. This comprehensive curriculum provides candidates with a rich and thorough understanding of data, strengthening his professional depth.",
+          "该经历涵盖了广泛的与数据相关的内容，包括机器学习与数据挖掘、数据库系统实现、推荐系统以及算法的设计与分析。这个全面的课程体系为学生提供了对数据的丰富和深入的理解，增强了他们的专业深度。"
+        ],
+        "courses": [
+          [
+            {
+              "CourseName": "Principles of Programming",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Database Systems",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Foundations of Computer Science",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Data Structures & Algorithms",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Computer Networks & Applications",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Design & Analysis of Algorithms",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Artificial Intelligence",
+              "Type": "Compulsory",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Machine Learning & Data Mining",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Web Front-End Programming",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Neural Networks, Deep Learning",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Recommender Systems",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Natural Language Processing",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Database Systems Implementation",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Solving Modern Programming Problems with Rust",
+              "Type": "Election",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Info Tech Project",
+              "Type": "Compulsory",
+              "Description": "Graduation Project"
+            }
+          ],
+          [
+            {
+              "CourseName": "程序设计原理",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "数据库系统",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "计算机科学基础",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "数据结构与算法",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "计算机网络与应用",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "算法设计与分析",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "人工智能",
+              "Type": "必修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "机器学习与数据挖掘",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "Web前端编程",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "神经网络、深度学习",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "推荐系统",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "自然语言处理",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "数据库系统实现",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "用Rust解决现代编程问题",
+              "Type": "选修",
+              "Description": "-"
+            },
+            {
+              "CourseName": "信息技术项目",
+              "Type": "必修",
+              "Description": "毕业项目"
+            }
+          ]
+        ]
+      }
+    ],
+    "WhyMe": [
+      [
+        {
+          "id": "LearningAbility",
+          "advantage": [
+            "Learning ability"
+          ],
+          "href": "/whyme/whyme=LearningAbility",
+          "pic": "/Graphs/whyme/LearningAbility.png",
+          "pic2": "/Graphs/whyme/LearningAbility2.jpg",
+          "icon": "fi-rr-graduation-cap",
+          "description": "Demonstrated exceptional learning agility by independently mastering piano and guitar skills. Maintained a stellar GPA while initiating the completion of 90% of a second degree by the junior year, achieving a three-year curriculum in just one. Simultaneously, holding three degrees across four majors serves as compelling evidence.",
+          "color1": "from-red-500",
+          "color2": "to-red-700"
+        },
+        {
+          "id": "Leadership",
+          "advantage": [
+            "Leadership"
+          ],
+          "href": "/whyme/whyme=Leadership",
+          "pic": "/Graphs/whyme/Leadership.png",
+          "pic2": "/Graphs/whyme/Leadership2.jpg",
+          "icon": "fi-rr-users-alt",
+          "description": "Held pivotal roles in the university's study department, technology and entrepreneurship guidance station, debate team, and served as class president, study committee leader, and life committee leader. Led the class to secure victories in city, school, and university competitions, garnering numerous provincial awards.",
+          "color1": "from-orange-500",
+          "color2": "to-amber-500"
+        },
+        {
+          "id": "Communication",
+          "advantage": [
+            "Communication"
+          ],
+          "href": "/whyme/whyme=Communication",
+          "pic": "/Graphs/whyme/Communication.png",
+          "pic2": "/Graphs/whyme/Communication2.jpg",
+          "icon": "fi-rr-comments",
+          "description": "Adept presenter with a track record of participating in over 100 competitions and delivering more than 50 public speeches. Star lecturer at NUSTP, hosted a 400-person party, and excelled in the champion debating team. Negotiated a 50% discount on supplies for a startup and secured sponsorships for club activities.",
+          "color1": "from-amber-400",
+          "color2": "to-yellow-400"
+        },
+        {
+          "id": "ProblemSolving",
+          "advantage": [
+            "Problem-Solving"
+          ],
+          "href": "/whyme/whyme=ProblemSolving",
+          "pic": "/Graphs/whyme/ProblemSolving.png",
+          "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
+          "icon": "fi-rr-lightbulb-question",
+          "description": "Exhibits clear logical and divergent thinking, employing effective frameworks to dissect and solve complex problems. Demonstrates resilience, tenacity, and a passion for conquering challenges. Proficiently utilizes familiar tools and processes to automate repetitive tasks. Notable achievements include technical breakthroughs in the Chemical Design Competition and Concrete Design Competition.",
+          "color1": "from-sky-500",
+          "color2": "to-emerald-500"
+        },
+        {
+          "id": "AestheticAttitude",
+          "advantage": [
+            "Aesthetic attitude"
+          ],
+          "href": "/whyme/whyme=AestheticAttitude",
+          "pic": "/Graphs/whyme/AestheticAttitude.png",
+          "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
+          "icon": "fi-rr-sparkles",
+          "description": "Autonomously designs and crafts launch-level slides, advanced posters, brochures, logos, and interior layouts for various companies. Recognized with 2 first prizes, 2 second prizes, and 2 third prizes in diverse design competitions. Official poster designer for the publicity department of the National University Science and Technology Park.",
+          "color1": "from-cyan-500",
+          "color2": "to-blue-500"
+        },
+        {
+          "id": "EmotionalStable",
+          "advantage": [
+            "Emotional Stable"
+          ],
+          "href": "/whyme/whyme=EmotionalStable",
+          "pic": "/Graphs/whyme/EmotionalStable.png",
+          "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
+          "icon": "fi-rr-smile",
+          "description": "As an INFP with a heightened emotional perception, adept micro-expression observer, and strong empathic abilities. Thrives in resolving customer complaints and unforeseen situations. Optimistic and stress-resistant, capable of swiftly managing negative emotions at work. Always be positive and energetic.",
+          "color1": "from-indigo-500",
+          "color2": "to-pink-500"
         }
-    },
-    "Animation":{
-        "Variant":{
-            "WelcomeContainer":{
-                "hidden": { "opacity": 0 },
-                "visible": {
-                  "opacity": 1,
-                  "y": 0,
-                  "transition": {
-                    "delayChildren": 0.15,
-                    "staggerChildren": 0.12
-                  }
-                }
-              },
-            "WelcomeItem":{
-            "hidden": { "opacity": 0, "y": "60px" },
-            "visible": {
-                "opacity": 1, "y": "0", "borderRadius": 28
-            }
-            },
-            "ProgressBarContainer":{
-                "hidden": { "opacity": 0 },
-                "visible": {
-                  "opacity": 1,
-                  "y": 0,
-                  "transition": {
-                    "delayChildren": 0.17,
-                    "staggerChildren": 0.15
-                  }
-                }
-            },
-            "ProgressBarItem":{
-                "hidden": { "width": "0%"},
-                "visible": {
-                  "width": "100%"
-                }
-              }
-
+      ],
+      [
+        {
+          "id": "LearningAbility",
+          "advantage": [
+            "学习能力"
+          ],
+          "href": "/whyme/whyme=LearningAbility",
+          "pic": "/Graphs/whyme/LearningAbility.png",
+          "pic2": "/Graphs/whyme/LearningAbility2.jpg",
+          "icon": "fi-rr-graduation-cap",
+          "description": "候选人自学了钢琴和吉他技能，展示出色的学习敏捷性。在大三完成了第二学位90%的课程，取得了三年课程的成绩。同时，持有四个专业的三个学位，均是有力的证据。",
+          "color1": "from-red-500",
+          "color2": "to-red-700"
         },
-        "Transition":{
-            "StagerFadeInUp":{
-                "ease": [0.455, 0.030, 0.515, 0.955],
-                "duration": 0.7
-            },
-            "ProgressBar":{
-                "ease": [0.645,0.045,0.355,1],
-                "duration": 0.5
-            }
+        {
+          "id": "Leadership",
+          "advantage": [
+            "领导力"
+          ],
+          "href": "/whyme/whyme=Leadership",
+          "pic": "/Graphs/whyme/Leadership.png",
+          "pic2": "/Graphs/whyme/Leadership2.jpg",
+          "icon": "fi-rr-users-alt",
+          "description": "候选人具有在大学学习部门、科技和创业指导站、辩论队担任关键角色，并担任班长、学习委员会负责人和生活委员会负责人。带领班级在城市、学校和大学比赛中获胜，赢得了众多省级奖项。",
+          "color1": "from-orange-500",
+          "color2": "to-amber-500"
+        },
+        {
+          "id": "Communication",
+          "advantage": [
+            "沟通能力"
+          ],
+          "href": "/whyme/whyme=Communication",
+          "pic": "/Graphs/whyme/Communication.png",
+          "pic2": "/Graphs/whyme/Communication2.jpg",
+          "icon": "fi-rr-comments",
+          "description": "候选人是一位熟练的演讲者，他参与了100多场比赛并发表了50多次公开演讲。是NUSTP的明星讲解员，主持了一场400人的派对，并在冠军辩论队表现出色。为初创公司谈判获得50%的物资折扣，并为俱乐部活动争取了获得广告赞助。",
+          "color1": "from-amber-400",
+          "color2": "to-yellow-400"
+        },
+        {
+          "id": "ProblemSolving",
+          "advantage": [
+            "解题能力"
+          ],
+          "href": "/whyme/whyme=ProblemSolving",
+          "pic": "/Graphs/whyme/ProblemSolving.png",
+          "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
+          "icon": "fi-rr-lightbulb-question",
+          "description": "候选人具有清晰的逻辑和发散性思维，运用有效的框架来分析和解决复杂问题。表现出对克服挑战的韧性、坚韧和激情。熟练使用熟悉的工具和流程自动化重复性任务。在化学设计竞赛和混凝土设计竞赛中取得了技术突破。",
+          "color1": "from-sky-500",
+          "color2": "to-emerald-500"
+        },
+        {
+          "id": "AestheticAttitude",
+          "advantage": [
+            "审美态度"
+          ],
+          "href": "/whyme/whyme=AestheticAttitude",
+          "pic": "/Graphs/whyme/AestheticAttitude.png",
+          "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
+          "icon": "fi-rr-sparkles",
+          "description": "候选人具有具有自主设计和制作专业级幻灯片、高级海报、宣传册、标志和各种公司的内部布局。在多个设计竞赛中获得2个一等奖、2个二等奖和2个三等奖。是国家大学科技园宣传部的官方海报设计师。",
+          "color1": "from-cyan-500",
+          "color2": "to-blue-500"
+        },
+        {
+          "id": "EmotionalStable",
+          "advantage": [
+            "情绪稳定"
+          ],
+          "href": "/whyme/whyme=EmotionalStable",
+          "pic": "/Graphs/whyme/EmotionalStable.png",
+          "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
+          "icon": "fi-rr-smile",
+          "description": "候选人作为一个具有高度情绪感知、熟练观察微表情和强大共情能力的INFP。在解决客户投诉和突发情况方面表现出色。乐观且抗压，能够迅速处理工作中的负面情绪。始终保持积极和充满活力。",
+          "color1": "from-indigo-500",
+          "color2": "to-pink-500"
         }
-    }  
+      ]
+    ],
+    "SelfDescribing": {
+      "pic": "https://cdn.pixabay.com/photo/2014/05/26/09/58/sydney-opera-house-354375_1280.jpg",
+      "description": [
+        "Demonstrated exceptional learning agility by independently mastering piano and guitar skills. Maintained a stellar GPA while initiating the completion of 90% of a second degree by the junior year, achieving a three-year curriculum in just one. Simultaneously, holding three degrees across four visblecontainers serves as compelling evidence.",
+        "zwb"
+      ]
+    },
+    "KeyFeature": [
+      {
+        "no": 4,
+        "keyfeature": [
+          "Majors",
+          "专业"
+        ],
+        "href": [
+          "Degrees"
+        ],
+        "icon": "fi-rr-graduation-cap",
+        "description": [
+          "Smart and Hardworking, diverse academic background.",
+          "聪慧好学，拥有复合学术背景。"
+        ]
+      },
+      {
+        "no": 17,
+        "keyfeature": [
+          "scholarships",
+          "奖学金"
+        ],
+        "href": [
+          "scholarships"
+        ],
+        "icon": "fi-rr-trophy-star",
+        "description": [
+          "Demonstrating excellence, won 17 scholarships.",
+          "卓越出彩，赢得过17项奖学金。"
+        ]
+      },
+      {
+        "no": 60,
+        "keyfeature": [
+          " Certificates",
+          "荣誉"
+        ],
+        "href": [
+          "Certificates"
+        ],
+        "icon": "fi-rr-diploma",
+        "description": [
+          "Actively advancing, achieved over 60 honors.",
+          "积极奋进，获得过60多项荣誉。"
+        ]
+      }
+    ],
+    "Contacts": {
+      "bg": "https://cdn.pixabay.com/photo/2018/05/07/22/08/opera-house-3381786_1280.jpg",
+      "items": [
+        {
+          "type": [
+            "Linkedin",
+            "领英"
+          ],
+          "icon": "fi-brands-linkedin",
+          "link": "https://www.linkedin.com/in/zhang-xianzhe-03133a259/",
+          "name": "Xianzhe Zhang"
+        },
+        {
+          "type": [
+            "E-mail",
+            "邮件"
+          ],
+          "icon": "fi-rr-envelope",
+          "link": "https://outlook.office365.com/mail/",
+          "name": "z5443003@ad.unsw.edu.au"
+        },
+        {
+          "type": [
+            "Facebook",
+            " Facebook"
+          ],
+          "icon": "fi-brands-facebook",
+          "link": "https://www.facebook.com/profile.php?id=100085874466260",
+          "name": "Xianzhe Zhang"
+        },
+        {
+          "type": [
+            "Phone",
+            "电话"
+          ],
+          "icon": "fi-sr-circle-phone-flip",
+          "link": "17381484512",
+          "name": "+86 17381484512"
+        },
+        {
+          "type": [
+            "Instagram",
+            "Instagram"
+          ],
+          "icon": "fi-brands-instagram",
+          "link": "https://www.instagram.com/invites/contact/?i=er73s6a2y80u&utm_content=pblnb0t",
+          "name": "scottzhang9779"
+        },
+        {
+          "type": [
+            "Little Red Book",
+            "小红书"
+          ],
+          "icon": "fi-sr-book-alt",
+          "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579",
+          "name": "贤哲scott"
+        },
+        {
+          "type": [
+            "Wechat",
+            "微信"
+          ],
+          "icon": "fi-sr-comments",
+          "link": "https://www.wechat.com/",
+          "name": "Scottt1110"
+        }
+      ]
+    },
+    "ContactsScanCode": [
+      {
+        "lable": [
+          "Resume",
+          "简历"
+        ],
+        "codepic": "/Graphs/contact/wechat.jpg",
+        "des": [
+          "Scan me to download his RESUME.",
+          "扫我下载简历"
+        ],
+        "expression": "(｡♥‿♥｡)"
+      },
+      {
+        "lable": [
+          "Personal Info",
+          "个人信息"
+        ],
+        "codepic": "/Graphs/contact/wechat.jpg",
+        "des": [
+          "Scan me to obtain Personal Info.",
+          "扫我获取个人信息"
+        ],
+        "expression": "ʕ•ᴥ•ʔ"
+      },
+      {
+        "lable": [
+          "Wechat",
+          "微信"
+        ],
+        "codepic": "/Graphs/contact/wechat.jpg",
+        "des": [
+          "Scan me to add his WECHAT.",
+          "扫我添加微信"
+        ],
+        "expression": "(＾◡＾)"
+      }
+    ],
+    "Capability": {
+      "personality": {
+        "Mbti": [
+          "[The first letter: E (Extraversion) or I (Introversion)]  E, Extraversion, indicates an outgoing nature. Extraverts are skilled at interacting with others, and their energy comes from social interactions. I, Introversion, indicates an introverted nature. Introverts excel in independent thinking, and their energy comes from self-reflection. \n[The second letter: S (Sensing) or N (Intuition)] S, Sensing, represents sensing. Sensing individuals tend to focus on the specific details of the real world. N, Intuition, represents intuition. Intuitive individuals tend to focus on abstract concepts and future possibilities.\n[The third letter: T (Thinking) or F (Feeling)] T, Thinking, represents logic. Thinking individuals make decisions primarily based on logic and analysis. F, Feeling, represents feeling. Feeling individuals make decisions primarily based on emotions and values. \n[The fourth letter: J (Judging) or P (Perceiving)] J, Judging, represents judging. Judging individuals prefer planning and organization, seeking clear goals and order. P, Perceiving, represents perceiving. Perceiving individuals prefer flexibility and openness, seeking possibilities and change.",
+          "[第一个字母：E（外倾）或I（内倾）] E，即Extraversion，表示外向。外向的人善于与他人互动，精力来自于与他人的交往。I，即Introversion，表示内向。内向的人善于独立思考，精力来自于自我反省。\n[第二个字母：S（实感）或N（直觉）] S，即Sensing，表示实感。实感型人倾向于关注现实世界的具体细节。N，即iNtuition，表示直觉。直觉型人倾向于关注抽象概念和未来可能性。\n[第三个字母：T（逻辑）或F（情感）] T，即Thinking，表示逻辑。逻辑型人在做决策时主要依据逻辑和分析。F，即Feeling，表示情感。情感型人在做决策时主要依据情感和价值观。\n[第四个字母：J（判断）或P（知觉）] J，即Judging，表示判断。判断型人喜欢有计划和组织，追求目标明确和条理。P，即Perceiving，表示知觉。知觉型人喜欢灵活和开放，追求可能性和变化。"
+        ],
+        "feature": [
+          [
+            {
+              "name": "Introverted",
+              "label": 56,
+              "column": "56%",
+              "color1": "from-red-500",
+              "color2": "to-red-700"
+            },
+            {
+              "name": "Intuitive",
+              "label": 55,
+              "column": "55%",
+              "color1": "from-orange-500",
+              "color2": "to-amber-500"
+            },
+            {
+              "name": "Feeling",
+              "label": 68,
+              "column": "68%",
+              "color1": "from-amber-400",
+              "color2": "to-yellow-400"
+            },
+            {
+              "name": "Prospecting",
+              "label": 63,
+              "column": "63%",
+              "color1": "from-sky-500",
+              "color2": "to-emerald-500"
+            }
+          ],
+          [
+            {
+              "name": "内向（I）",
+              "label": 56,
+              "column": "56%",
+              "color1": "from-red-500",
+              "color2": "to-red-700"
+            },
+            {
+              "name": "直觉（N）",
+              "label": 55,
+              "column": "55%",
+              "color1": "from-orange-500",
+              "color2": "to-amber-500"
+            },
+            {
+              "name": "情感（F）",
+              "label": 68,
+              "column": "68%",
+              "color1": "from-amber-400",
+              "color2": "to-yellow-400"
+            },
+            {
+              "name": "知觉（P）",
+              "label": 63,
+              "column": "63%",
+              "color1": "from-sky-500",
+              "color2": "to-emerald-500"
+            }
+          ]
+        ]
+      },
+      "language": [
+      [
+        {
+          "name": "English (PTE)",
+          "label": "64",
+          "column": "70%",
+          "color1": "from-cyan-500",
+          "color2": "to-blue-500"
+        },
+        {
+          "name": "Chinese (Mandarin)",
+          "label": "A-II 88",
+          "column": "90%",
+          "color1": "from-indigo-500",
+          "color2": "to-pink-500"
+        }
+      ],[
+        {
+          "name": "英语（PTE）",
+          "label": "64",
+          "column": "70%",
+          "color1": "from-cyan-500",
+          "color2": "to-blue-500"
+        },
+        {
+          "name": "中文（普通话）",
+          "label": "A-II 88",
+          "column": "90%",
+          "color1": "from-indigo-500",
+          "color2": "to-pink-500"
+        }
+      ]],
+      "Apps": [
+        {
+          "alt": "Word",
+          "src": "https://cdn.worldvectorlogo.com/logos/word-1.svg"
+        },
+        {
+          "alt": "Excel",
+          "src": "https://cdn.worldvectorlogo.com/logos/excel-4.svg"
+        },
+        {
+          "alt": "PPT",
+          "src": "https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg"
+        },
+        {
+          "alt": "PS",
+          "src": "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg"
+        },
+        {
+          "alt": "AE",
+          "src": "https://cdn.worldvectorlogo.com/logos/after-effects-1.svg"
+        },
+        {
+          "alt": "AI",
+          "src": "https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc-icon.svg"
+        },
+        {
+          "alt": "LR",
+          "src": "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-lightroom-cc-icon.svg"
+        },
+        {
+          "alt": "ID",
+          "src": "https://cdn.worldvectorlogo.com/logos/adobe-indesign-cc-icon.svg"
+        },
+        {
+          "alt": "PR",
+          "src": "https://cdn.worldvectorlogo.com/logos/premiere-pro-cc.svg"
+        },
+        {
+          "alt": "AU",
+          "src": "https://cdn.worldvectorlogo.com/logos/adobe-audition-cc-icon-2020-.svg"
+        },
+        {
+          "alt": "VS code",
+          "src": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg"
+        },
+        {
+          "alt": "Pycharm",
+          "src": "https://cdn.worldvectorlogo.com/logos/pycharmedu-icon.svg"
+        },
+        {
+          "alt": "Clion",
+          "src": "https://cdn.worldvectorlogo.com/logos/clion-1.svg"
+        },
+        {
+          "alt": "Webstorm",
+          "src": "https://cdn.worldvectorlogo.com/logos/webstorm-icon.svg"
+        },
+        {
+          "alt": "Github",
+          "src": "https://cdn.worldvectorlogo.com/logos/github-icon-1.svg"
+        },
+        {
+          "alt": "Keynote",
+          "src": "https://www.icloud.com/system/icloud.com/2404Project58/43f50d5d6df53dc6bddf56d7ceb257d0.png"
+        },
+        {
+          "alt": "Pages",
+          "src": "https://www.icloud.com/system/icloud.com/2404Project58/3c581ce16ec89eedc1d6862e31ccd8b3.png"
+        },
+        {
+          "alt": "Numbers",
+          "src": "https://www.icloud.com/system/icloud.com/2404Project58/f5b837094af69a157a6fc7f413e04fb7.png"
+        },
+        {
+          "alt": "Tailwind",
+          "src": "https://cdn.worldvectorlogo.com/logos/tailwind-css-1.svg"
+        },
+        {
+          "alt": "Bootstrap",
+          "src": "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg"
+        },
+        {
+          "alt": "MUI",
+          "src": "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg"
+        },
+        {
+          "alt": "EUI",
+          "src": "https://cdn.worldvectorlogo.com/logos/element-ui-1.svg"
+        },
+        {
+          "alt": "Framer",
+          "src": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg"
+        }
+      ],
+      "front-end": [
+        {
+          "name": "HTML",
+          "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg"
+        },
+        {
+          "name": "CSS",
+          "image": "https://www.svgrepo.com/show/521591/css.svg"
+        },
+        {
+          "name": "JavaScript",
+          "image": "https://www.svgrepo.com/show/510028/javascript-file.svg"
+        },
+        {
+          "name": "React",
+          "image": "https://www.svgrepo.com/show/473768/react.svg"
+        },
+        {
+          "name": "Tailwind",
+          "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg"
+        },
+        {
+          "name": "Framer",
+          "image": "https://www.svgrepo.com/show/371686/animation.svg"
+        },
+        {
+          "name": "Main UI",
+          "image": "https://www.svgrepo.com/show/38133/ui8.svg"
+        },
+        {
+          "name": "Animation libs",
+          "image": "https://www.svgrepo.com/show/488047/animation.svg"
+        }
+      ],
+      "backend-end": [
+        {
+          "name": "MySQL",
+          "image": "https://www.svgrepo.com/show/394296/mysql.svg"
+        },
+        {
+          "name": "PostgreSQL",
+          "image": "https://www.svgrepo.com/show/473760/postgresql.svg"
+        },
+        {
+          "name": "NodeJS",
+          "image": "https://www.svgrepo.com/show/473736/nodejs.svg"
+        },
+        {
+          "name": "Json",
+          "image": "https://www.svgrepo.com/show/74933/json-file.svg"
+        },
+        {
+          "name": "TablePlus",
+          "image": "https://www.svgrepo.com/show/532228/table-list.svg"
+        }
+      ],
+      "database": [
+        {
+          "name": "MySQL",
+          "image": "https://www.svgrepo.com/show/394296/mysql.svg"
+        },
+        {
+          "name": "PostgreSQL",
+          "image": "https://www.svgrepo.com/show/473760/postgresql.svg"
+        },
+        {
+          "name": "Tableau",
+          "image": "https://www.svgrepo.com/show/342280/tableau.svg"
+        },
+        {
+          "name": "Python",
+          "image": "https://www.svgrepo.com/show/510150/python-file.svg"
+        }
+      ],
+      "Algorithm": [
+        {
+          "name": "Machine Learning",
+          "image": "https://www.svgrepo.com/show/445872/machine-learning.svg"
+        },
+        {
+          "name": "Deep Learning",
+          "image": "https://www.svgrepo.com/show/473805/tensorflow.svg"
+        },
+        {
+          "name": "Natural Language",
+          "image": "https://www.svgrepo.com/show/64578/nlp-neurolinguistic-programation.svg"
+        },
+        {
+          "name": "Recommender System",
+          "image": "https://www.svgrepo.com/show/324465/neuron-connections-neural-network.svg"
+        }
+      ],
+      "other": [
+        {
+          "name": "Github",
+          "image": "https://www.svgrepo.com/show/512317/github-142.svg"
+        },
+        {
+          "name": "SSH",
+          "image": "https://www.svgrepo.com/show/501028/terminal.svg"
+        },
+        {
+          "name": "Docker",
+          "image": "https://www.svgrepo.com/show/521276/docker-16.svg"
+        }
+      ]
+    },
+    "Certificates": [
+      [
+        {
+          "CourseName": "11",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Organic Chemistry",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Fundamentals of Mechanical Design",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Course design of Fundamentals of Mechanical Design",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Physical Chemistry",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Fundamentals of Material Science",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Solid State Physics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Semiconductor Physics Experiment",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Model Analysis and Testing Technology",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "New Building Materials",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Poly Flame Retardant Material",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Special Cement",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Compound Material",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Electrical and Electronic Technology",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Fundamentals of Circuit Analysis",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Engineering Mechanics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Semiconductor Physics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Physical Technology and Thin Film",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Dielectric Physics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Electrical Ceramic Technology",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Magnetic Physics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Special Ceramics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Nanomaterials and Nanotechnology",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Model Analysis and Testing Technology Experiment",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Comprehensive Experiment of Functional Materials",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Surface Engineering Technology",
+          "Type": "Compulsory",
+          "Description": "-"
+        }
+      ],
+      [
+        {
+          "CourseName": "中文",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Organic Chemistry",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Fundamentals of Mechanical Design",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Course design of Fundamentals of Mechanical Design",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Physical Chemistry",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Fundamentals of Material Science",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Solid State Physics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Semiconductor Physics Experiment",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Model Analysis and Testing Technology",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "New Building Materials",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Poly Flame Retardant Material",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Special Cement",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Compound Material",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Electrical and Electronic Technology",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Fundamentals of Circuit Analysis",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Engineering Mechanics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Semiconductor Physics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Physical Technology and Thin Film",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Dielectric Physics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Electrical Ceramic Technology",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Magnetic Physics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Special Ceramics",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Nanomaterials and Nanotechnology",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Model Analysis and Testing Technology Experiment",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Comprehensive Experiment of Functional Materials",
+          "Type": "Compulsory",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Surface Engineering Technology",
+          "Type": "Compulsory",
+          "Description": "-"
+        }
+      ]
+    ],
+    "Scholarships": [
+      [
+        {
+          "CourseName": "Internet+ Huawei social scholarships",
+          "Type": "Social Scholorship",
+          "Description": "This scholarship is awarded to teams that achieve outstanding results in the Internet + Entrepreneurship Competition. The prize is sponsored and established by Huawei."
+        },
+        {
+          "CourseName": "Jinneng Technical scholarships",
+          "Type": "Social Scholorship",
+          "Description": "This scholarship is awarded to the team that achieves outstanding results in the Jinneng Group Photovoltaic Design Competition."
+        },
+        {
+          "CourseName": "Business Practice Scholarship ",
+          "Type": "University Scholorship",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Business Practice Scholarship ",
+          "Type": "University Scholorship",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Science and Technology Innovation Scholarship",
+          "Type": "University Scholorship",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Art Specialty Scholarship",
+          "Type": "University Scholorship",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Out standing student cadres Scholarship",
+          "Type": "University Scholorship",
+          "Description": "-"
+        },
+        {
+          "CourseName": "The Second Class Scholarship (4 times ) ",
+          "Type": "University Scholorship",
+          "Description": "-"
+        },
+        {
+          "CourseName": "Undergraduate Science and Technology activities Scholarship (6 times)",
+          "Type": "University Scholorship",
+          "Description": "-"
+        }
+      ],
+      [
+        {
+          "CourseName": "互联网+ 华为社会奖学金",
+          "Type": "社会奖学金",
+          "Description": "该奖学金授予在互联网+创业大赛中取得优异成绩的团队，由华为赞助设立。"
+        },
+        {
+          "CourseName": "金能技术奖学金",
+          "Type": "社会奖学金",
+          "Description": "该奖学金授予在金能集团光伏设计大赛中取得优异成绩的团队。"
+        },
+        {
+          "CourseName": "商业实践奖学金",
+          "Type": "大学奖学金",
+          "Description": "-"
+        },
+        {
+          "CourseName": "商业实践奖学金",
+          "Type": "大学奖学金",
+          "Description": "-"
+        },
+        {
+          "CourseName": "科技创新奖学金",
+          "Type": "大学奖学金",
+          "Description": "-"
+        },
+        {
+          "CourseName": "艺术专项奖学金",
+          "Type": "大学奖学金",
+          "Description": "-"
+        },
+        {
+          "CourseName": "优秀学生干部奖学金",
+          "Type": "大学奖学金",
+          "Description": "-"
+        },
+        {
+          "CourseName": "二等奖学金（4次）",
+          "Type": "大学奖学金",
+          "Description": "-"
+        },
+        {
+          "CourseName": "本科科技活动奖学金（6次）",
+          "Type": "大学奖学金",
+          "Description": "-"
+        }
+      ]
+      
+    ],
+    "Infos": [
+      [
+        {
+          "label": "fi-sr-id-card-clip-alt",
+          "icon": "Xianzhe Zhang",
+          "cont": "Official Name"
+        },
+        {
+          "label": "fi-sr-id-card-clip-alt",
+          "icon": "Scott Zhang",
+          "cont": "Preferred Name"
+        },
+        {
+          "label": "fi-sr-cake-birthday",
+          "icon": "1997-11-10",
+          "cont": "Birth"
+        },
+        {
+          "label": "fi-sr-street-view",
+          "icon": "11-10-1997",
+          "cont": "Age"
+        },
+        {
+          "label": "fi-br-ruler-vertical",
+          "icon": "173 cm | 5.8 inch",
+          "cont": "Height"
+        },
+        {
+          "label": "fi-sr-bottle",
+          "icon": "B+",
+          "cont": "Blood"
+        },
+        {
+          "label": "fi-sr-scale",
+          "icon": "74 KG",
+          "cont": "Weight"
+        },
+        {
+          "label": "fi-sr-person-circle-question",
+          "icon": "INFP",
+          "cont": "MBTI"
+        },
+        {
+          "label": "fi-sr-star-shooting",
+          "icon": "Scorpio",
+          "cont": "Constellation"
+        },
+        {
+          "label": "fi-sr-palette",
+          "icon": "Sky blue | Line green | Gray",
+          "cont": "Favorite color"
+        },
+        {
+          "label": "fi-sr-cursor-finger",
+          "icon": "Ring finger [22]   |   Index finger [23]",
+          "cont": "Fingers size"
+        },
+        {
+          "label": "fi-sr-shoe-prints",
+          "icon": "43 EU | 9 UK",
+          "cont": "Shoe size"
+        },
+        {
+          "label": "fi-br-biking-mountain",
+          "icon": "Swim | Gym",
+          "cont": "Exercise habits"
+        },
+        {
+          "label": "fi-sr-hamburger-soda",
+          "icon": "Spicy | Low fat",
+          "cont": "Eating habits"
+        },
+        {
+          "label": "fi-sr-puzzle-alt",
+          "icon": "Piano | Song | Sleep",
+          "cont": "Habit"
+        },
+        {
+          "label": "fi-sr-dog",
+          "icon": "None but wish to have",
+          "cont": "Pet"
+        },
+        {
+          "label": "fi-br-male-couple",
+          "icon": "Single",
+          "cont": "Relationship"
+        }
+      ],
+      [
+        {
+          "label": "fi-sr-id-card-clip-alt",
+          "icon": "张贤哲",
+          "cont": "官方姓名"
+        },
+        {
+          "label": "fi-sr-id-card-clip-alt",
+          "icon": "Scott Zhang",
+          "cont": "常用名"
+        },
+        {
+          "label": "fi-sr-cake-birthday",
+          "icon": "1997-11-10",
+          "cont": "出生日期"
+        },
+        {
+          "label": "fi-sr-street-view",
+          "icon": "11-10-1997",
+          "cont": "年龄"
+        },
+        {
+          "label": "fi-br-ruler-vertical",
+          "icon": "173 cm | 5.8 inch",
+          "cont": "身高"
+        },
+        {
+          "label": "fi-sr-bottle",
+          "icon": "B+",
+          "cont": "血型"
+        },
+        {
+          "label": "fi-sr-scale",
+          "icon": "74 KG",
+          "cont": "体重"
+        },
+        {
+          "label": "fi-sr-person-circle-question",
+          "icon": "INFP",
+          "cont": "MBTI（人格类型）"
+        },
+        {
+          "label": "fi-sr-star-shooting",
+          "icon": "天蝎座",
+          "cont": "星座"
+        },
+        {
+          "label": "fi-sr-palette",
+          "icon": "天空蓝 | 柠檬绿 | 莫奈灰",
+          "cont": "喜爱的颜色"
+        },
+        {
+          "label": "fi-sr-cursor-finger",
+          "icon": "无名指 [22]   |   食指 [23]",
+          "cont": "手指"
+        },
+        {
+          "label": "fi-sr-shoe-prints",
+          "icon": "43 EU | 9 UK",
+          "cont": "鞋码"
+        },
+        {
+          "label": "fi-br-biking-mountain",
+          "icon": "游泳 | 健身",
+          "cont": "锻炼习惯"
+        },
+        {
+          "label": "fi-sr-hamburger-soda",
+          "icon": "川菜 | 低油低脂",
+          "cont": "饮食习惯"
+        },
+        {
+          "label": "fi-sr-puzzle-alt",
+          "icon": "钢琴 | 唱歌 | 睡觉",
+          "cont": "爱好"
+        },
+        {
+          "label": "fi-sr-dog",
+          "icon": "暂无",
+          "cont": "宠物"
+        },
+        {
+          "label": "fi-br-male-couple",
+          "icon": "单身",
+          "cont": "感情状态"
+        }
+      ]
+    ],
+    "Lifes": [
+      {
+        "icon": "music-alt",
+        "label": "Music",
+        "pic": "/Graphs/whyme/EmotionalStable.png",
+        "des": "It collect musics I recommend ~"
+      },
+      {
+        "icon": "user-music",
+        "label": "Perform",
+        "pic": "/Graphs/whyme/EmotionalStable.png",
+        "des": "It collect musics I perform ~"
+      },
+      {
+        "icon": "picture",
+        "label": "Picture",
+        "pic": "/Graphs/whyme/AestheticAttitude.png",
+        "des": "It collect picture I take ~"
+      },
+      {
+        "icon": "followcollection",
+        "label": "Story",
+        "pic": "/Graphs/whyme/Leadership.png",
+        "des": "It collect stories I undergo ~"
+      }
+    ],
+    "WorkExperience": [
+      [
+        {
+          "id": "FA-swust",
+          "tittle": [
+            "Financial",
+            "Assistant"
+          ],
+          "href": "/work/work=FA-swust",
+          "type": "Part-time",
+          "logoRound": "rounded",
+          "logo": "/Graphs/study/swust.png",
+          "tag": [
+            null,
+            "Part-time"
+          ],
+          "web": "http://www.english.swust.edu.cn/main.htm",
+          "time": "Mar 1, 2021 - Feb 1, 2022",
+          "company": "Southwest University of Science and Technology Analytical Testing Centre",
+          "description": [
+            "Responsible for auditing the invoices of the business office up to RMB1,000,000, drawing up contracts up to RMB100,000, compliance review and signing. The business is responsible for the assessment and audit of the business system and occasional audits of the accounts flow according to the monthly and annual reports of the business. During the course of the work, it was found that the business progress audit was a single simple and time-consuming task, and with the help of office automation software, the business audit workload of this position for a year was completed in half a day, receiving high praise and commendation from the Business Office Director."
+          ]
+        },
+        {
+          "id": "FA-swust2",
+          "tittle": [
+            "Product",
+            "Operation"
+          ],
+          "href": "/work/work=FA-swust2",
+          "type": "Part-time",
+          "logoRound": "rounded",
+          "logo": "/Graphs/study/swust.png",
+          "tag": [
+            null,
+            "Part-time"
+          ],
+          "web": "http://www.english.swust.edu.cn/main.htm",
+          "time": "Aug 1, 2018 - Feb 1, 2019",
+          "company": "Domi Group Buying",
+          "description": [
+            "Responsible for the backend "
+          ]
+        },
+        {
+          "id": "PL-swust3",
+          "tittle": [
+            "Project",
+            "Launcher"
+          ],
+          "href": "/work/work=PL-swust3",
+          "type": "Part-time",
+          "logoRound": "nonrounded",
+          "logo": "/Graphs/study/unsw.png",
+          "tag": [
+            "Full-time",
+            null
+          ],
+          "web": "http://www.english.swust.edu.cn/main.htm",
+          "time": "Aug 1, 2018 - Feb 1, 2019",
+          "company": "Domi Group Buying",
+          "description": [
+            "Responsible "
+          ]
+        }
+      ],
+      [
+        {
+          "id": "FA-swust",
+          "title": [
+            "财务",
+            "助理"
+          ],
+          "href": "/work/work=FA-swust",
+          "type": "兼职",
+          "logoRound": "rounded",
+          "logo": "/Graphs/study/swust.png",
+          "tag": [
+            null,
+            "兼职"
+          ],
+          "web": "http://www.english.swust.edu.cn/main.htm",
+          "time": "2021年3月1日 - 2022年2月1日",
+          "company": "西南科技大学分析测试中心",
+          "description": [
+            "负责审计业务办公室发票高达人民币1,000,000，起草合同高达人民币100,000，合规审查和签署。该业务负责根据业务的月度和年度报告对业务系统进行评估和审计，并偶尔对账户流动进行审计。在工作过程中，发现业务进展审计是一项单一、简单且耗时的任务，借助办公自动化软件，该职位一年的业务审计工作在半天内完成，得到了业务办公室主任的高度赞扬和表扬。"
+          ]
+        },
+        {
+          "id": "FA-swust2",
+          "title": [
+            "产品",
+            "运营"
+          ],
+          "href": "/work/work=FA-swust2",
+          "type": "兼职",
+          "logoRound": "rounded",
+          "logo": "/Graphs/study/swust.png",
+          "tag": [
+            null,
+            "兼职"
+          ],
+          "web": "http://www.english.swust.edu.cn/main.htm",
+          "time": "2018年8月1日 - 2019年2月1日",
+          "company": "多米团购",
+          "description": [
+            "负责后台"
+          ]
+        },
+        {
+          "id": "PL-swust3",
+          "title": [
+            "项目",
+            "发起人"
+          ],
+          "href": "/work/work=PL-swust3",
+          "type": "兼职",
+          "logoRound": "nonrounded",
+          "logo": "/Graphs/study/unsw.png",
+          "tag": [
+            "全职",
+            null
+          ],
+          "web": "http://www.english.swust.edu.cn/main.htm",
+          "time": "2018年8月1日 - 2019年2月1日",
+          "company": "多米团购",
+          "description": [
+            "负责"
+          ]
+        }
+      ]
+    ]
+  },
+  "Animation": {
+    "Variant": {
+      "Welcomevisblecontainer": {
+        "hidden": {},
+        "visible": {
+          "transition": {
+            "delayChildren": 0.3,
+            "staggerChildren": 0.17
+          }
+        }
+      },
+      "WelcomeItem": {
+        "hidden": {
+          "opacity": 0,
+          "y": "120px",
+          "scale":0.95,
+          "pointerEvents": "none"
+        },
+        "visible": {
+          "opacity": 1,
+          "y": "0px",
+          "scale":1,
+          "pointerEvents": "auto"
+        }
+      },
+      "fastWelcomevisblecontainer": {
+        "hidden": {
+          "opacity": 0
+        },
+        "visible": {
+          "opacity": 1,
+          "y": 0,
+          "transition": {
+            "delayChildren": 0.06,
+            "staggerChildren": 0.06
+          }
+        }
+      },
+      "LeftWelcomeItem": {
+        "hidden": {
+          "opacity": 0,
+          "x": "30px"
+        },
+        "visible": {
+          "opacity": 1,
+          "x": "0"
+        }
+      },
+      "ProgressBarvisblecontainer": {
+        "hidden": {
+          "opacity": 0
+        },
+        "visible": {
+          "opacity": 1,
+          "y": 0,
+          "transition": {
+            "delayChildren": 0.4,
+            "staggerChildren": 0.15
+          }
+        }
+      },
+      "ProgressBarItem": {
+        "hidden": {
+          "width": "0%"
+        },
+        "visible": {
+          "width": "100%"
+        }
+      }
+    },
+    "Transition": {
+      "StagerFadeInUp": {
+        "opacity": {
+          "ease": [0.455, 0.030, 0.515, 0.955],
+          "duration": 1.2
+        },
+        "y": {
+          "ease": [0.455, 0.030, 0.515, 0.955],
+          "duration": 1
+        },
+        "scale": {
+          "ease": [0.455, 0.030, 0.515, 0.955],
+          "duration": 1
+        }
+      },
+      "ProgressBar": {
+        "ease": [
+          0.645,
+          0.045,
+          0.355,
+          1
+        ],
+        "duration": 0.4
+      },
+      "LeftappearBar": {
+        "ease": [
+          0.645,
+          0.045,
+          0.355,
+          1
+        ],
+        "duration": 0.5
+      }
+    }
+  }
 }

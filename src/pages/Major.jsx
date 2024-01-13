@@ -5,7 +5,7 @@ import StudyExperience from '../conponent/StudyExperience';
 import WhyMe from '../conponent/WhyMe';
 import SelfDescribing from '../conponent/SelfDescribing'
 import WorkExperience from '../conponent/WorkExperience';
-import Capability from '../conponent/Capability/Capability';
+import Capability from '../conponent/Capability';
 import KeyFeature from '../conponent/KeyFeature';
 import Welcome from '../conponent/Welocome';
 
@@ -104,7 +104,7 @@ function Home () {
 
 
                         <section className="hestia-testimonials " id="testimonials" data-sorder="hestia_testimonials">
-                            <div className="container">
+                            <div className="visblecontainer">
                                 <div className="col-md-8 col-md-offset-2 text-center hestia-shop-title-area">
                                     <h2 className="hestia-title">Other reviews</h2>
                                 </div>
@@ -258,7 +258,7 @@ function Home () {
 
                 <div  className="rounded-3xl h-[80vh] hestia-contact contactus section-image" data-sorder="hestia_contact"
                 style={{backgroundImage: 'url(./contact1.jpg)'}}>
-                <div className="container rounded-3xl">
+                <div className="visblecontainer rounded-3xl">
                     <div className="text-center hestia-shop-title-area">
                         <h2 id="ContactMe" className="hestia-title">Contact information</h2>
                     </div>

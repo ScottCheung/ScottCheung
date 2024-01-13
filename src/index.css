@@ -9,7 +9,7 @@
 @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-straight/css/uicons-solid-straight.css');
 
 
-.container {
+.visblecontainer {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -17,24 +17,24 @@
 }
 
 @media (min-width:768px) {
-  .container {
+  .visblecontainer {
       width: 750px
   }
 }
 
 @media (min-width:992px) {
-  .container {
+  .visblecontainer {
       width: 970px
   }
 }
 
 @media (min-width:1200px) {
-  .container {
+  .visblecontainer {
       width: 1170px
   }
 }
 
-.container-fluid {
+.visblecontainer-fluid {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;

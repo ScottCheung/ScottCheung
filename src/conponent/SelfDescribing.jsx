@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Database from '../Datebase.json';
 import { Link } from 'react-router-dom';  
-
+import { motion, AnimatePresence } from "framer-motion";
+import { hideRow,bgPic,useLanguage } from '../help/helpFunction';
 const data = Database.PersonalInfo.SelfDescribing
 const floateMenu = {
   start: { opacity: 0, scale: 0 },
@@ -12,6 +13,7 @@ const floateMenu = {
 };
 
 function SelfDescribing () {
+  const lang = useLanguage();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
@@ -26,34 +28,52 @@ function SelfDescribing () {
   const SelfDescribing = (
     <div id="SelfDescribing" class="">
       
-          <section class=" -about section-image " 
-              style={{backgroundImage: 'url(/Graphs/home/selfdesbg.jpg)'}}>
-              <div class="container block">
-              <h2 class="  animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono"><i class="fi fi-rr-chart-user mr-3 pt-3"></i>Self Describing</h2>
-                  <div class="-about-content pb-48">
+          <section class="min-h-[100vh] smoothchange items-center bg-fixed bg-cover bg-center relative" 
+              style={{backgroundImage: `url(${data.pic})`}}>
+                <span className="w-full h-full absolute opacity-70 bg-black "></span>
+              <div class="visblecontainer pt-[30vh]">
+              <motion.div
+                  initial={{  opacity: 0}}
+                  whileInView={{ opacity: 1}}
+                  transition={{
+                    "ease": [
+                    0.455,
+                    0.030,
+                    0.515,
+                    0.955
+                  ],
+                  "duration": 2,
+                  "delayChildren": 1,
+                  }}  class="text-white z-10 animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono">
+                <i class="fi fi-rr-comment-heart text-5xl lg:text-8xl mr-[20px] pt-3 "></i>{lang==0&&"Self Describing"}{lang==1&&"自述" }</motion.div>
+                  <div class=" pb-48">
 
-                      <blockquote class="">
-                          <div class="  animate__animated animate__zoomIn rounded-full">
-                              <div class=" rounded-full animate__animated animate__slideInUp alignright  ">
-                                  <img width="200"
+                      <motion.blockquote 
+                                         initial={{y:150,opacity:0}}
+                                         whileInView={{y:0,opacity:1}}
+                                         transition={{duration:1}}
+                                         viewport={{ once: true }}
+                      class="">
+                      <motion.div
+                              class=" animate__animated animate__zoomIn">
+                              <motion.div
+                              class=" animate__animated animate__slideInUp alignright  ">
+                                  <motion.img width="200"
+                                      initial={{"scale":0,opacity:0}}
+                                      whileInView={{"scale":1,opacity:1}}
+                                      transition={{duration:0.7}}
+                                      viewport={{ once: true }}
                                       className='rounded-full bg-gray-400'
                                       src="/Graphs/home/avatar.jpg"
-                                      sizes="(max-width: 1290px) 100vw, 1290px"></img>
-                              </div>
-                          </div>
-                          <p class=" block  animate__animated animate__slideInUp text-white">“I am a person who is positive about every aspect of life. There are many things I like
-                              to do, to see, and to experience. I like to read, I like to write; I like to think, I
-                              like to dream; I like to talk, I like to listen. I like to see the sunrise in the
-                              morning, I like to see the moonlight at night; I like to feel the music flowing on my
-                              face, I like to smell the wind coming from the ocean. I like to look at the clouds in
-                              the sky with a blank mind, I like to do thought experiment when I cannot sleep in the
-                              middle of the night. I like flowers in spring, rain in summer, leaves in autumn, and
-                              snow in winter. I like to sleep early, I like to get up late; I like to be alone, I
-                              like to be surrounded by people. I like country’s peace, I like metropolis’ noise; I
-                              like the beautiful west lake in Hangzhou, I like the flat cornfield in Champaign. I
-                              like delicious food and comfortable shoes; I like good books and romantic movies. I
-                              like the land and the nature, I like people. And, I like to laugh.”</p>
-                      </blockquote>
+                                      sizes="(max-width: 1290px) 100vw, 1290px"></motion.img>
+                              </motion.div>
+                          </motion.div>
+                          <motion.p 
+                          initial={{y:50,opacity:0}}
+                          whileInView={{y:0,opacity:1}}
+                          viewport={{ once: true }}
+                          class=" block  animate__animated animate__slideInUp text-white">{data.description[lang]}</motion.p>
+                      </motion.blockquote>
 
                   </div>
               </div>

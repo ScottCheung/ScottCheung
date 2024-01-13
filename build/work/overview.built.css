@@ -544,16 +544,16 @@ html.reduced-motion .tile-overlay-copy {
     margin-bottom: var(--cta-descender-offset)
 }
 
-.inline-video-container {
+.inline-video-visblecontainer {
     position: relative
 }
 
-.inline-video-container.loading-disabled .static-frame,
-.inline-video-container.loading-error .static-frame {
+.inline-video-visblecontainer.loading-disabled .static-frame,
+.inline-video-visblecontainer.loading-error .static-frame {
     opacity: 1
 }
 
-.inline-video-container .static-frame {
+.inline-video-visblecontainer .static-frame {
     opacity: 0;
     pointer-events: all;
     position: absolute;
@@ -565,12 +565,12 @@ html.reduced-motion .tile-overlay-copy {
     pointer-events: none
 }
 
-.inline-video-container:not(.loaded):not(.loading-error):not(.loading-disabled) .start-frame {
+.inline-video-visblecontainer:not(.loaded):not(.loading-error):not(.loading-disabled) .start-frame {
     opacity: 1;
     pointer-events: all
 }
 
-.inline-video-container .start-frame {
+.inline-video-visblecontainer .start-frame {
     opacity: 0;
     pointer-events: all;
     position: absolute;
@@ -582,12 +582,12 @@ html.reduced-motion .tile-overlay-copy {
     pointer-events: none
 }
 
-.inline-video-container.ended .end-frame {
+.inline-video-visblecontainer.ended .end-frame {
     opacity: 1;
     pointer-events: all
 }
 
-.inline-video-container .end-frame {
+.inline-video-visblecontainer .end-frame {
     opacity: 0;
     pointer-events: all;
     position: absolute;
@@ -599,21 +599,21 @@ html.reduced-motion .tile-overlay-copy {
     pointer-events: none
 }
 
-.inline-video-container video {
+.inline-video-visblecontainer video {
     position: absolute;
     display: block;
     width: 100%;
     height: 100%
 }
 
-html.no-enhanced .inline-video-container .static-frame,
-html.no-js .inline-video-container .static-frame {
+html.no-enhanced .inline-video-visblecontainer .static-frame,
+html.no-js .inline-video-visblecontainer .static-frame {
     opacity: 1
 }
 
-.inline-video-container~.inline-video-ui,
-html.no-enhanced .inline-video-container~.inline-video-ui,
-html.no-js .inline-video-container~.inline-video-ui {
+.inline-video-visblecontainer~.inline-video-ui,
+html.no-enhanced .inline-video-visblecontainer~.inline-video-ui,
+html.no-js .inline-video-visblecontainer~.inline-video-ui {
     display: none
 }
 
@@ -646,8 +646,8 @@ html.no-js .inline-video-container~.inline-video-ui {
 }
 
 .ended~.with-replay .inline-video-icon-replay,
-.inline-video-container~.inline-video-ui.with-replay-disabled,
-.inline-video-container~.with-replay-disabled .inline-video-icon-replay {
+.inline-video-visblecontainer~.inline-video-ui.with-replay-disabled,
+.inline-video-visblecontainer~.with-replay-disabled .inline-video-icon-replay {
     display: block
 }
 
@@ -676,7 +676,7 @@ html.no-js .inline-video-container~.inline-video-ui {
 .section-hero .glass-hardware--hero-horizontal,
 .section-hero .glass-hardware--hero-vertical,
 .section-safari-passwords .grid-item-search .overview-safari-passwords-search,
-glass-container {
+glass-visblecontainer {
     display: block;
     position: relative;
     z-index: 1
@@ -690,8 +690,8 @@ glass-container {
 .section-hero .glass-hardware--hero-vertical:before,
 .section-safari-passwords .grid-item-search .overview-safari-passwords-search:after,
 .section-safari-passwords .grid-item-search .overview-safari-passwords-search:before,
-glass-container:after,
-glass-container:before {
+glass-visblecontainer:after,
+glass-visblecontainer:before {
     content: "";
     display: block;
     position: absolute;
@@ -708,8 +708,8 @@ glass-container:before {
 .section-hero .glass-hardware--hero-vertical glass-screen,
 .section-safari-passwords .grid-item-search .overview-safari-passwords-search glass-hardware,
 .section-safari-passwords .grid-item-search .overview-safari-passwords-search glass-screen,
-glass-container glass-hardware,
-glass-container glass-screen {
+glass-visblecontainer glass-hardware,
+glass-visblecontainer glass-screen {
     display: block;
     position: absolute;
     top: 0;
@@ -720,7 +720,7 @@ glass-container glass-screen {
 .section-hero .glass-hardware--hero-horizontal glass-hardware,
 .section-hero .glass-hardware--hero-vertical glass-hardware,
 .section-safari-passwords .grid-item-search .overview-safari-passwords-search glass-hardware,
-glass-container glass-hardware {
+glass-visblecontainer glass-hardware {
     pointer-events: none;
     z-index: 3
 }
@@ -729,7 +729,7 @@ glass-container glass-hardware {
 .section-hero .glass-hardware--hero-horizontal glass-screen,
 .section-hero .glass-hardware--hero-vertical glass-screen,
 .section-safari-passwords .grid-item-search .overview-safari-passwords-search glass-screen,
-glass-container glass-screen {
+glass-visblecontainer glass-screen {
     z-index: 4
 }
 
@@ -1125,7 +1125,7 @@ html.text-zoom .grid-item .tile-overlay-toggle:checked~.tile-overlay .tile-overl
 .section-hero .portrait-hardware1.glass-hardware--hero-horizontal,
 .section-hero .portrait-hardware1.glass-hardware--hero-vertical,
 .section-safari-passwords .grid-item-search .portrait-hardware1.overview-safari-passwords-search,
-glass-container.portrait-hardware1 {
+glass-visblecontainer.portrait-hardware1 {
     margin-top: -3px
 }
 
@@ -1135,7 +1135,7 @@ glass-container.portrait-hardware1 {
     .section-hero .portrait-hardware1.glass-hardware--hero-horizontal,
     .section-hero .portrait-hardware1.glass-hardware--hero-vertical,
     .section-safari-passwords .grid-item-search .portrait-hardware1.overview-safari-passwords-search,
-    glass-container.portrait-hardware1 {
+    glass-visblecontainer.portrait-hardware1 {
         margin-top: -1px
     }
 }
@@ -1146,7 +1146,7 @@ glass-container.portrait-hardware1 {
     .section-hero .portrait-hardware1.glass-hardware--hero-horizontal,
     .section-hero .portrait-hardware1.glass-hardware--hero-vertical,
     .section-safari-passwords .grid-item-search .portrait-hardware1.overview-safari-passwords-search,
-    glass-container.portrait-hardware1 {
+    glass-visblecontainer.portrait-hardware1 {
         margin-top: -2px
     }
 }
@@ -1155,7 +1155,7 @@ glass-container.portrait-hardware1 {
 .section-hero .portrait-hardware2.glass-hardware--hero-horizontal,
 .section-hero .portrait-hardware2.glass-hardware--hero-vertical,
 .section-safari-passwords .grid-item-search .portrait-hardware2.overview-safari-passwords-search,
-glass-container.portrait-hardware2 {
+glass-visblecontainer.portrait-hardware2 {
     margin-top: -3px
 }
 
@@ -1165,7 +1165,7 @@ glass-container.portrait-hardware2 {
     .section-hero .portrait-hardware2.glass-hardware--hero-horizontal,
     .section-hero .portrait-hardware2.glass-hardware--hero-vertical,
     .section-safari-passwords .grid-item-search .portrait-hardware2.overview-safari-passwords-search,
-    glass-container.portrait-hardware2 {
+    glass-visblecontainer.portrait-hardware2 {
         margin-top: 1px
     }
 }
@@ -1176,7 +1176,7 @@ glass-container.portrait-hardware2 {
     .section-hero .portrait-hardware2.glass-hardware--hero-horizontal,
     .section-hero .portrait-hardware2.glass-hardware--hero-vertical,
     .section-safari-passwords .grid-item-search .portrait-hardware2.overview-safari-passwords-search,
-    glass-container.portrait-hardware2 {
+    glass-visblecontainer.portrait-hardware2 {
         margin-top: -2px
     }
 }
@@ -1185,7 +1185,7 @@ glass-container.portrait-hardware2 {
 .section-hero .portrait-hardware3.glass-hardware--hero-horizontal,
 .section-hero .portrait-hardware3.glass-hardware--hero-vertical,
 .section-safari-passwords .grid-item-search .portrait-hardware3.overview-safari-passwords-search,
-glass-container.portrait-hardware3 {
+glass-visblecontainer.portrait-hardware3 {
     margin-top: -3px
 }
 
@@ -5372,7 +5372,7 @@ only screen and (max-width:734px)and (min-resolution:144dpi) {
     }
 }
 
-.section-messages .grid-item-check-in .overview-messages-image-container {
+.section-messages .grid-item-check-in .overview-messages-image-visblecontainer {
     position: relative;
     max-width: 499px;
     max-height: 394px;
@@ -5381,7 +5381,7 @@ only screen and (max-width:734px)and (min-resolution:144dpi) {
 }
 
 @media only screen and (max-width:1068px) {
-    .section-messages .grid-item-check-in .overview-messages-image-container {
+    .section-messages .grid-item-check-in .overview-messages-image-visblecontainer {
         max-width: 341px;
         max-height: 270px;
         margin-top: -26px
@@ -5389,7 +5389,7 @@ only screen and (max-width:734px)and (min-resolution:144dpi) {
 }
 
 @media only screen and (max-width:734px) {
-    .section-messages .grid-item-check-in .overview-messages-image-container {
+    .section-messages .grid-item-check-in .overview-messages-image-visblecontainer {
         max-width: 264px;
         max-height: 209px;
         margin-top: -20px
@@ -6078,7 +6078,7 @@ html.enhanced .section-messages .grid-item-swipe-reply .inline-video-swipe-reply
     position: relative
 }
 
-.section-messages .grid-item-swipe-reply .inline-video-container {
+.section-messages .grid-item-swipe-reply .inline-video-visblecontainer {
     clip-path: inset(1px 1px 1px 1px)
 }
 
@@ -8702,7 +8702,7 @@ only screen and (max-width:734px)and (min-resolution:144dpi) {
     z-index: 2
 }
 
-.section-safari-passwords .grid-item-autofill .lottie-container {
+.section-safari-passwords .grid-item-autofill .lottie-visblecontainer {
     position: absolute;
     top: 0;
     width: 735px;
@@ -8710,13 +8710,13 @@ only screen and (max-width:734px)and (min-resolution:144dpi) {
 }
 
 @media only screen and (max-width:1068px) {
-    .section-safari-passwords .grid-item-autofill .lottie-container {
+    .section-safari-passwords .grid-item-autofill .lottie-visblecontainer {
         width: 620px
     }
 }
 
 @media only screen and (max-width:734px) {
-    .section-safari-passwords .grid-item-autofill .lottie-container {
+    .section-safari-passwords .grid-item-autofill .lottie-visblecontainer {
         width: 583px
     }
 }
@@ -11311,11 +11311,11 @@ only screen and (max-width:734px)and (min-resolution:144dpi) {
 
 .section-even-more {
     --section-padding-top: 187px;
-    --grid-container-padding: 90px;
+    --grid-visblecontainer-padding: 90px;
     --figure-margin-top: 125px;
     --figure-shadow-top: 346px;
     --figure-shadow-bottom: -242px;
-    --full-list-container-padding-top: 193px;
+    --full-list-visblecontainer-padding-top: 193px;
     position: relative;
     padding-top: var(--section-padding-top);
     margin-top: 0;
@@ -11745,22 +11745,22 @@ only screen and (max-width:1068px)and (min-resolution:144dpi) {
 @media only screen and (max-width:1068px) {
     .section-even-more {
         --section-padding-top: 148px;
-        --grid-container-padding: 69px;
+        --grid-visblecontainer-padding: 69px;
         --figure-margin-top: 107px;
         --figure-shadow-top: 251px;
         --figure-shadow-bottom: -175px;
-        --full-list-container-padding-top: 88px
+        --full-list-visblecontainer-padding-top: 88px
     }
 }
 
 @media only screen and (max-width:734px) {
     .section-even-more {
         --section-padding-top: 132px;
-        --grid-container-padding: 76px;
+        --grid-visblecontainer-padding: 76px;
         --figure-margin-top: 57px;
         --figure-shadow-top: 135px;
         --figure-shadow-bottom: -94px;
-        --full-list-container-padding-top: 86px
+        --full-list-visblecontainer-padding-top: 86px
     }
 }
 
@@ -11795,65 +11795,65 @@ only screen and (max-width:1068px)and (min-resolution:144dpi) {
 }
 
 .section-even-more .section-content .even-more-section-header,
-.section-even-more .section-content .full-list-container {
+.section-even-more .section-content .full-list-visblecontainer {
     text-align: center
 }
 
 @media only screen and (max-width:734px) {
 
     .section-even-more .section-content .even-more-section-header,
-    .section-even-more .section-content .full-list-container {
+    .section-even-more .section-content .full-list-visblecontainer {
         text-align: left
     }
 }
 
-.section-even-more .section-content .even-more-grid-container {
+.section-even-more .section-content .even-more-grid-visblecontainer {
     display: flex;
     flex-wrap: wrap;
-    padding-top: var(--grid-container-padding)
+    padding-top: var(--grid-visblecontainer-padding)
 }
 
-.section-even-more .section-content .full-list-container {
+.section-even-more .section-content .full-list-visblecontainer {
     margin-top: 150px
 }
 
 @media only screen and (max-width:1068px) {
-    .section-even-more .section-content .full-list-container {
+    .section-even-more .section-content .full-list-visblecontainer {
         margin-top: 135px
     }
 }
 
 @media only screen and (max-width:734px) {
-    .section-even-more .section-content .full-list-container {
+    .section-even-more .section-content .full-list-visblecontainer {
         margin-top: 75px
     }
 }
 
-.section-even-more .section-content .full-list-container .full-list-headline {
+.section-even-more .section-content .full-list-visblecontainer .full-list-headline {
     margin-bottom: 20px;
     max-width: 480px
 }
 
 @media only screen and (max-width:1068px) {
-    .section-even-more .section-content .full-list-container .full-list-headline {
+    .section-even-more .section-content .full-list-visblecontainer .full-list-headline {
         margin-bottom: 15px;
         max-width: 400px
     }
 }
 
 @media only screen and (max-width:734px) {
-    .section-even-more .section-content .full-list-container .full-list-headline {
+    .section-even-more .section-content .full-list-visblecontainer .full-list-headline {
         margin-left: 0;
         margin-bottom: 11px;
         max-width: 320px
     }
 }
 
-.section-even-more .section-content .full-list-container .cta-container {
+.section-even-more .section-content .full-list-visblecontainer .cta-visblecontainer {
     margin-top: 0
 }
 
-.section-even-more .section-content .full-list-container .cta-container .icon-wrapper {
+.section-even-more .section-content .full-list-visblecontainer .cta-visblecontainer .icon-wrapper {
     display: inline-block;
     margin-bottom: 2.5px
 }

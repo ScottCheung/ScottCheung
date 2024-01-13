@@ -251,7 +251,6 @@ button {
 
 html {
     font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 106.25%;
     quotes: "“" "”";
     --sk-link-disabled-opacity: 0.42
 }
@@ -3388,7 +3387,7 @@ abbr {
     font-weight: inherit;
     font-size: inherit;
     line-height: 1;
-    text-decoration: underline;
+
     position: relative;
     z-index: 1;
     alt: "";

@@ -21,7 +21,7 @@ function SelfDescribing () {
       
           <section class="hestia-about section-image " id="about" data-sorder="hestia_about"
               style={{backgroundImage: 'url(./contact.jpg)'}}>
-              <div class="container">
+              <div class="visblecontainer">
               <h2 class="animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono">Self Describing</h2>
                   <div class="row hestia-about-content">
 

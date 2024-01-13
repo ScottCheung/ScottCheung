@@ -3350,7 +3350,7 @@
             Document: {
                 ClassNames: ["has-modal"]
             },
-            Container: {
+            visblecontainer: {
                 ClassNames: ["modal-open"]
             }
         },
@@ -3358,14 +3358,14 @@
             Selector: "[data-modal-close]"
         },
         Elements: {
-            container: {
+            visblecontainer: {
                 Attributes: {
                     class: "modal"
                 },
                 Template: r.default
             },
-            contentContainer: {
-                Selector: "[data-modal-element-content-container]"
+            contentvisblecontainer: {
+                Selector: "[data-modal-element-content-visblecontainer]"
             },
             closeButton: {
                 Attributes: {
@@ -4245,7 +4245,7 @@
     class m extends o.default {
         constructor(e) {
             super(e),
-            this._container = e.container || this.media.el.parentElement,
+            this._visblecontainer = e.visblecontainer || this.media.el.parentElement,
             this._button = this._findButton(),
             this._onClick = this._onClick.bind(this),
             this._onPlaybackStateChange = this._onPlaybackStateChange.bind(this);
@@ -4262,7 +4262,7 @@
         _findButton() {
             if (this.options.playPauseButton)
                 return this.options.playPauseButton;
-            let e = this._container.querySelector(`${a}`);
+            let e = this._visblecontainer.querySelector(`${a}`);
             if (!e) {
                 const t = document.querySelectorAll(l.replace("{id}", this.media.id));
                 for (const i of t)
@@ -6941,7 +6941,7 @@
         value: !0
     }),
     t.default = void 0;
-    t.default = '<div class="modal" data-modal-element-container data-modal-close>\n\t<div class="modal-overlay-container" data-modal-element-overlay-container data-modal-close>\n\t\t<div class="modal-overlay" data-modal-element-overlay data-modal-close-button-parent>\n\t\t\t<div class="modal-content-container" data-modal-element-content-container></div>\n\t\t</div>\n\t</div>\n</div>'
+    t.default = '<div class="modal" data-modal-element-visblecontainer data-modal-close>\n\t<div class="modal-overlay-visblecontainer" data-modal-element-overlay-visblecontainer data-modal-close>\n\t\t<div class="modal-overlay" data-modal-element-overlay data-modal-close-button-parent>\n\t\t\t<div class="modal-content-visblecontainer" data-modal-element-content-visblecontainer></div>\n\t\t</div>\n\t</div>\n</div>'
 }
 , function(e, t, i) {
     "use strict";
@@ -7348,7 +7348,7 @@
                         accordionItems: this.el.querySelectorAll("[data-accordion-item]"),
                         accordionTitles: this.el.querySelectorAll(".accordion-title"),
                         accordionContent: Array.from(this.el.querySelectorAll(".accordion-content")),
-                        accordionImages: Array.from(this.el.querySelectorAll(".image-container picture img")),
+                        accordionImages: Array.from(this.el.querySelectorAll(".image-visblecontainer picture img")),
                         accordionContentEl: this.el.querySelector(".accordion-content")
                     },
                     this._cacheSizeInfo = this._cacheSizeInfo.bind(this),
@@ -7530,7 +7530,7 @@
 , function(e, t, i) {
     "use strict";
     e.exports = {
-        Container: {
+        visblecontainer: {
             Selector: "[data-accordion]"
         },
         Item: {
@@ -8483,17 +8483,17 @@
         appendContent(e, t) {
             (0,
             r.default)(e) && (t = t && (0,
-            r.default)(t) ? t : this.elements.contentContainer).appendChild(e)
+            r.default)(t) ? t : this.elements.contentvisblecontainer).appendChild(e)
         }
         removeContent(e) {
-            e ? (this.elements.container.contains(e) && e.remove(),
+            e ? (this.elements.visblecontainer.contains(e) && e.remove(),
             this.trigger(this.model.Events.CONTENT_REMOVED)) : this._emptyContent()
         }
         scrollToModalTop() {
-            this.elements.container.scrollTop = 0
+            this.elements.visblecontainer.scrollTop = 0
         }
         _emptyContent() {
-            this.elements.contentContainer.innerHTML = ""
+            this.elements.contentvisblecontainer.innerHTML = ""
         }
         _bindEvents() {
             this.on(this.model.Events.WILLOPEN, this.onWillOpen),
@@ -8589,7 +8589,7 @@
             this.appendModalElements()
         },
         destroy() {
-            document.body.removeChild(this.elements.container),
+            document.body.removeChild(this.elements.visblecontainer),
             this._releaseEvents();
             for (let e in this)
                 Object.prototype.hasOwnProperty.call(this, e) && (this[e] = null)
@@ -8604,11 +8604,11 @@
             return t
         },
         appendContentElement() {
-            this.appendContent(this.elements.content, this.elements.contentContainer),
+            this.appendContent(this.elements.content, this.elements.contentvisblecontainer),
             this.trigger(this.model.Events.CONTENT_APPENDED)
         },
         appendModalElements() {
-            document.body.appendChild(this.elements.container),
+            document.body.appendChild(this.elements.visblecontainer),
             this.trigger(this.model.Events.RENDERED)
         },
         _createModalElements() {
@@ -8638,7 +8638,7 @@
             ))
         },
         _setDialogRoleElement() {
-            this.dialogRoleElement || (this.dialogRoleElement = this.elements.container.querySelector(this.model.DialogRole.Selector) || this.elements.container);
+            this.dialogRoleElement || (this.dialogRoleElement = this.elements.visblecontainer.querySelector(this.model.DialogRole.Selector) || this.elements.visblecontainer);
             for (const e in this.model.DialogRole.Attributes)
                 this.dialogRoleElement.setAttribute(e, this.model.DialogRole.Attributes[e])
         },
@@ -8716,7 +8716,7 @@
         onClose() {
             this._removeCloseEvents(),
             document.documentElement.classList.remove(...this.model.Open.Document.ClassNames),
-            this.elements.container.classList.remove(...this.model.Open.Container.ClassNames)
+            this.elements.visblecontainer.classList.remove(...this.model.Open.visblecontainer.ClassNames)
         },
         mounted() {
             this.close.elements = Array.from(document.querySelectorAll(this.model.Close.Selector))
@@ -8729,10 +8729,10 @@
             this.trigger(this.model.Events.CLOSE)))
         },
         _removeCloseEvents() {
-            this.elements.container && this.elements.container.removeEventListener("click", this.close)
+            this.elements.visblecontainer && this.elements.visblecontainer.removeEventListener("click", this.close)
         },
         _attachCloseEvents() {
-            this.elements.container && this.elements.container.addEventListener("click", this.close)
+            this.elements.visblecontainer && this.elements.visblecontainer.addEventListener("click", this.close)
         }
     }
 }
@@ -8757,7 +8757,7 @@
             this.elements.closeButton.removeEventListener("click", this.onCloseButtonClick)
         },
         appendCloseButton() {
-            (this.elements.container.querySelector(this.model.Elements.closeButton.ParentSelector) || this.elements.container).appendChild(this.elements.closeButton)
+            (this.elements.visblecontainer.querySelector(this.model.Elements.closeButton.ParentSelector) || this.elements.visblecontainer).appendChild(this.elements.closeButton)
         },
         onCloseButtonClick(e) {
             this.close(e)
@@ -8799,17 +8799,17 @@
         },
         _giveModalFocus() {
             this.dialogRoleElement.removeAttribute("aria-hidden"),
-            this.elements.container.classList.add("modal-touch-lock"),
+            this.elements.visblecontainer.classList.add("modal-touch-lock"),
             this._activeElement = document.activeElement,
             this._circularTab && this._circularTab.start(!0),
-            this.elements.container.addEventListener("scroll", this.scrollToModalTop),
+            this.elements.visblecontainer.addEventListener("scroll", this.scrollToModalTop),
             this._focusTimeout = setTimeout((()=>{
                 this.dialogRoleElement.focus({
                     preventScroll: !0
                 }),
                 requestAnimationFrame((()=>{
-                    this.elements.container.removeEventListener("scroll", this.scrollToModalTop),
-                    this.elements.container.classList.remove("modal-touch-lock")
+                    this.elements.visblecontainer.removeEventListener("scroll", this.scrollToModalTop),
+                    this.elements.visblecontainer.classList.remove("modal-touch-lock")
                 }
                 ))
             }
@@ -8818,7 +8818,7 @@
         _removeModalFocus() {
             this._circularTab && this._circularTab.stop(),
             this.dialogRoleElement.setAttribute("aria-hidden", "true"),
-            this.elements.container.removeEventListener("scroll", this.scrollToModalTop),
+            this.elements.visblecontainer.removeEventListener("scroll", this.scrollToModalTop),
             this._activeElement && (this._activeElement.focus(),
             this._activeElement = null)
         }
@@ -8835,10 +8835,10 @@
             this.model.Open.Document.ClassNames.push("has-modal-full-bleed")
         },
         beforeMount() {
-            this.elements.container.classList.add(...this.model.FullBleed.ClassNames)
+            this.elements.visblecontainer.classList.add(...this.model.FullBleed.ClassNames)
         },
         destroy() {
-            this.elements.container.classList.remove(...this.model.FullBleed.ClassNames)
+            this.elements.visblecontainer.classList.remove(...this.model.FullBleed.ClassNames)
         }
     }
 }
@@ -9115,7 +9115,7 @@
         },
         onWillOpen() {
             document.documentElement.classList.add(...this.model.Open.Document.ClassNames),
-            this.elements.container.classList.add(...this.model.Open.Container.ClassNames),
+            this.elements.visblecontainer.classList.add(...this.model.Open.visblecontainer.ClassNames),
             this.scrollToModalTop()
         },
         open() {
@@ -9136,7 +9136,7 @@
             this._scrollBarWidth = 0
         },
         beforeMount() {
-            this.elements.container.classList.add(...this.model.PageOverlay.ClassNames)
+            this.elements.visblecontainer.classList.add(...this.model.PageOverlay.ClassNames)
         },
         mounted() {
             this._saveScrollBarWidth()
@@ -9151,7 +9151,7 @@
             document.documentElement.style.removeProperty("--modal-scrollbar-buffer")
         },
         destroy() {
-            this.elements.container.classList.remove(...this.model.PageOverlay.ClassNames)
+            this.elements.visblecontainer.classList.remove(...this.model.PageOverlay.ClassNames)
         },
         _saveScrollBarWidth() {
             this._scrollBarWidth = window.innerWidth - document.body.clientWidth + "px"
@@ -9355,12 +9355,12 @@
     t.default = {
         mounted() {},
         onResizeDebounced() {
-            r(this.elements.container),
-            n(this.elements.container)
+            r(this.elements.visblecontainer),
+            n(this.elements.visblecontainer)
         },
         onOpen() {
-            r(this.elements.container),
-            n(this.elements.container)
+            r(this.elements.visblecontainer),
+            n(this.elements.visblecontainer)
         }
     }
 }
@@ -9412,7 +9412,7 @@
         },
         mounted() {
             const {scrollGroup: e, removeScrollGroupEvents: t} = (0,
-            r.createCustomAnimScrollGroup)(this.anim, this.elements.container, `${this.friendlyName} : Analytics : ScrollDepth`);
+            r.createCustomAnimScrollGroup)(this.anim, this.elements.visblecontainer, `${this.friendlyName} : Analytics : ScrollDepth`);
             this._scrollDepthAnalytics.scrollGroup = e,
             this._scrollDepthAnalytics.removeScrollGroupEvents = t
         },
@@ -9550,7 +9550,7 @@
         },
         beforeMount() {
             const {scrollGroup: e} = (0,
-            s.createCustomAnimScrollGroup)(this.anim, this.elements.container, this.friendlyName);
+            s.createCustomAnimScrollGroup)(this.anim, this.elements.visblecontainer, this.friendlyName);
             this.animScrollGroup = e
         },
         onOpen() {
@@ -9601,9 +9601,9 @@
             this._appendCloseButton()
         },
         mounted() {
-            const e = this.elements.container.querySelectorAll(this.model.Close.Selector);
+            const e = this.elements.visblecontainer.querySelectorAll(this.model.Close.Selector);
             this.elements.close = Array.from(e);
-            if (this.elements.container.hasAttribute(s.BTN_CLOSE_ATTRIB) && this.elements.close.push(this.elements.container),
+            if (this.elements.visblecontainer.hasAttribute(s.BTN_CLOSE_ATTRIB) && this.elements.close.push(this.elements.visblecontainer),
             this.elements.close.length > 1)
                 for (const e of this.elements.close)
                     e.addEventListener("click", this.close)
@@ -9615,7 +9615,7 @@
         },
         _appendCloseButton() {
             const e = this.model.Elements.closeButton.ParentSelector
-              , t = this.elements.container.querySelector(e);
+              , t = this.elements.visblecontainer.querySelector(e);
             this.elements.closeBtnWrapper.appendChild(this.elements.closeButton),
             t.appendChild(this.elements.closeButton)
         },
@@ -9639,7 +9639,7 @@
             return n.default
         }
     }),
-    Object.defineProperty(t, "ModalContainer", {
+    Object.defineProperty(t, "Modalvisblecontainer", {
         enumerable: !0,
         get: function() {
             return r.default
@@ -9662,7 +9662,7 @@
         value: !0
     }),
     t.default = void 0;
-    t.default = "<div data-modal-element-container>\n\t<div data-modal-element-content-container></div>\n</div>"
+    t.default = "<div data-modal-element-visblecontainer>\n\t<div data-modal-element-content-visblecontainer></div>\n</div>"
 }
 , function(e, t, i) {
     "use strict";
@@ -9675,10 +9675,10 @@
     t.default = Object.assign({}, s.Close, {
         onClose() {
             this._removeCloseEvents(),
-            this.elements.container.classList.remove(n.VISUALLY_VISIABLE_CLASSNAME),
-            this.elements.container.addEventListener("transitionend", (e=>{
+            this.elements.visblecontainer.classList.remove(n.VISUALLY_VISIABLE_CLASSNAME),
+            this.elements.visblecontainer.addEventListener("transitionend", (e=>{
                 document.documentElement.classList.remove(...this.model.Open.Document.ClassNames),
-                this.elements.container.classList.remove(...this.model.Open.Container.ClassNames),
+                this.elements.visblecontainer.classList.remove(...this.model.Open.visblecontainer.ClassNames),
                 document.documentElement.style.removeProperty("--modal-scrollbar-buffer")
             }
             ), {
@@ -9707,10 +9707,10 @@
     t.default = Object.assign({}, s.Open, {
         onWillOpen() {
             document.documentElement.classList.add(...this.model.Open.Document.ClassNames),
-            this.elements.container.classList.add(...this.model.Open.Container.ClassNames),
+            this.elements.visblecontainer.classList.add(...this.model.Open.visblecontainer.ClassNames),
             setTimeout((()=>{
                 this.scrollToModalTop(),
-                this.elements.container.classList.add(n.VISUALLY_VISIABLE_CLASSNAME)
+                this.elements.visblecontainer.classList.add(n.VISUALLY_VISIABLE_CLASSNAME)
             }
             ), 50)
         },
@@ -9743,7 +9743,7 @@
             this.refId = function() {
                 return `${arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : `${s.FAMILY_MODAL_CLASSNAME}`}-${parseInt(1e3 * Math.random())}`
             }(),
-            this.model.Elements.container.Attributes[s.MODAL_COMPONENT_REF_ATTRIB] = this.refId
+            this.model.Elements.visblecontainer.Attributes[s.MODAL_COMPONENT_REF_ATTRIB] = this.refId
         }
     }
 }
@@ -9781,7 +9781,7 @@
                     }
                     ))
                 }
-                )(this.elements.container, this.animScrollGroup),
+                )(this.elements.visblecontainer, this.animScrollGroup),
                 this._hasOpened = !0
             }
         }
@@ -9805,12 +9805,12 @@
             i && (r = `${r} ${o = i,
             o.split(/\s+|,+/).join(" ")}`),
             "true" === n && (r = `${r} ${s.SCRIM.NO_BLUR_CLASSNAME}`),
-            this.model.Elements.container.Attributes.class = r
+            this.model.Elements.visblecontainer.Attributes.class = r
         },
         mounted() {
             const e = this.elements.content.getAttribute(s.MODAL_CUSTOM_CLASSNAME_ATTRIB)
               , t = e ? e.split(/\s+|,+/) : [];
-            this.elements.container.classList.add(...t)
+            this.elements.visblecontainer.classList.add(...t)
         }
     }
 }
@@ -9824,7 +9824,7 @@
     t.default = {
         beforeCreate() {
             const e = this.elements.content.getAttribute(s.MODAL_ID_ATTRIB);
-            e && (this.model.Elements.container.Attributes.id = e,
+            e && (this.model.Elements.visblecontainer.Attributes.id = e,
             this.id = e)
         }
     }
@@ -9839,7 +9839,7 @@
         beforeMount() {
             const e = this.options.btnOpen;
             if (!this.options.btnOpen || 1 !== e.nodeType)
-                throw new TypeError(`option.btnOpen is required at modal instantiation; modal affected ${this.elements.container}`);
+                throw new TypeError(`option.btnOpen is required at modal instantiation; modal affected ${this.elements.visblecontainer}`);
             e.addEventListener("click", this.open)
         },
         destroy() {
@@ -9912,7 +9912,7 @@
             this._footnoteLinks = Array.from(this.elements.content.querySelectorAll(`${n.SOSUMI_FOOTNOTE_LINK_SELECTOR}`))
         },
         mounted() {
-            this.options.btnOpen && 1 === this.options.btnOpen.nodeType || s.DevLogger.error(`option.btnOpen is required at modal instantiation; modal affected ${this.elements.container}`);
+            this.options.btnOpen && 1 === this.options.btnOpen.nodeType || s.DevLogger.error(`option.btnOpen is required at modal instantiation; modal affected ${this.elements.visblecontainer}`);
             for (const e of this._footnoteLinks)
                 e.ariaLabel = `${e.ariaLabel}, ${this.elements.closeButton.ariaLabel}`,
                 e.addEventListener("click", this._onSosumiFootnoteLinkClick)
@@ -9987,13 +9987,13 @@
                     this.anim.forceUpdate()
                 },
                 _onClickScrollToFirst() {
-                    this.scrollContainer.scrollTo({
+                    this.scrollvisblecontainer.scrollTo({
                         left: this.itemOffsets[0],
                         behavior: "smooth"
                     })
                 },
                 _addScrollToFirst() {
-                    const e = Math.round(this.scrollContainerWidth / this.contentWidth * 100) > this.widthsThresholdPercentage
+                    const e = Math.round(this.scrollvisblecontainerWidth / this.contentWidth * 100) > this.widthsThresholdPercentage
                       , t = this.paddleNav.previousEl.disabled && this.paddleNav.nextEl.disabled
                       , i = !this.isPrevEventAdded && e && !t
                       , s = this.isPrevEventAdded && (t || !e);
@@ -10106,14 +10106,14 @@
         IsRTL: !1,
         IsTouch: !1,
         Slide: {
-            Selector: ".item-container",
+            Selector: ".item-visblecontainer",
             duration: 1
         },
         Fade: {
             duration: .5
         },
         Item: {
-            Selector: ".item-container .gallery-item",
+            Selector: ".item-visblecontainer .gallery-item",
             ConstructorFunction: i(218)
         },
         DotNav: {
@@ -10457,16 +10457,16 @@
       , n = s.browser.safari && s.browser.version.major <= 14;
     e.exports = {
         mounted() {
-            this.scrollContainer = this.el.querySelector(".scroll-container"),
-            this.itemContainer = this.el.querySelector(".item-container"),
+            this.scrollvisblecontainer = this.el.querySelector(".scroll-visblecontainer"),
+            this.itemvisblecontainer = this.el.querySelector(".item-visblecontainer"),
             this.onScroll = this.onScroll.bind(this),
             this.setCurrentIndex = this.setCurrentIndex.bind(this),
             this.cacheSizeInfo = this.cacheSizeInfo.bind(this),
             this.dir = this.model.IsRTL ? -1 : 1,
             this.cacheSizeInfo(),
-            this.model.startIndex && (this.scrollContainer.scrollLeft = this.itemOffsets[this.model.startIndex]),
+            this.model.startIndex && (this.scrollvisblecontainer.scrollLeft = this.itemOffsets[this.model.startIndex]),
             this.setCurrentIndex(),
-            this.scrollContainer.addEventListener("scroll", this.onScroll)
+            this.scrollvisblecontainer.addEventListener("scroll", this.onScroll)
         },
         debounceScroll() {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 200;
@@ -10488,7 +10488,7 @@
         }
         )),
         setCurrentIndex() {
-            const e = this.closest(this.scrollContainer.scrollLeft, this.itemOffsets)
+            const e = this.closest(this.scrollvisblecontainer.scrollLeft, this.itemOffsets)
               , t = this.itemOffsets.findIndex((t=>t === e));
             if (t === this.currentIndex)
                 return;
@@ -10506,25 +10506,25 @@
         animateToItem(e) {
             if (this.galleryTl)
                 return;
-            if (this.scrollContainer.scrollLeft === this.scrollWidth && e > this.currentIndex)
+            if (this.scrollvisblecontainer.scrollLeft === this.scrollWidth && e > this.currentIndex)
                 return;
             const t = this._items[e];
-            this.scrollContainer.removeEventListener("scroll", this.onScroll),
+            this.scrollvisblecontainer.removeEventListener("scroll", this.onScroll),
             this.trigger(this.model.Events.ITEM_CHANGE_INITIATED, {
                 gallery: this,
                 next: t
             });
-            const i = this.scrollContainer.scrollLeft
+            const i = this.scrollvisblecontainer.scrollLeft
               , s = this.itemOffsets[e];
             if (void 0 === s)
                 return;
             const r = ()=>{
-                n || (this.scrollContainer.style["scroll-snap-type"] = "none")
+                n || (this.scrollvisblecontainer.style["scroll-snap-type"] = "none")
             }
               , o = ()=>{
                 this.currentIndex = e,
-                n || (this.scrollContainer.style["scroll-snap-type"] = "x mandatory"),
-                this.scrollContainer.addEventListener("scroll", this.onScroll),
+                n || (this.scrollvisblecontainer.style["scroll-snap-type"] = "x mandatory"),
+                this.scrollvisblecontainer.addEventListener("scroll", this.onScroll),
                 this.galleryTl && (this.galleryTl.remove().catch((e=>{}
                 )),
                 this.galleryTl = null),
@@ -10536,22 +10536,22 @@
             ;
             if (this.model.PrefersReducedMotion)
                 return r(),
-                this.scrollContainer.scrollLeft = s,
+                this.scrollvisblecontainer.scrollLeft = s,
                 void o();
-            this.galleryTl = this.anim.createTimeGroup(this.itemContainer),
-            this.kf = this.galleryTl.addKeyframe(this.scrollContainer, {
+            this.galleryTl = this.anim.createTimeGroup(this.itemvisblecontainer),
+            this.kf = this.galleryTl.addKeyframe(this.scrollvisblecontainer, {
                 start: 0,
                 end: this.model.duration,
                 scrollLeft: [i, s],
                 easeFunction: "easeInOutQuad"
             }),
-            this.galleryTl.addEvent(this.scrollContainer, {
+            this.galleryTl.addEvent(this.scrollvisblecontainer, {
                 start: 0,
                 onEvent: ()=>{
                     r()
                 }
             }),
-            this.galleryTl.addEvent(this.scrollContainer, {
+            this.galleryTl.addEvent(this.scrollvisblecontainer, {
                 start: this.galleryTl.duration,
                 onEvent: ()=>{
                     o()
@@ -10560,11 +10560,11 @@
             this.galleryTl.play()
         },
         cacheSizeInfo() {
-            const e = getComputedStyle(this.itemContainer);
+            const e = getComputedStyle(this.itemvisblecontainer);
             this.contentWidth = parseFloat(e.width),
             this.contentPadding = parseFloat(e.paddingInlineStart),
-            this.scrollWidth = this.scrollContainer.scrollWidth - this.scrollContainer.clientWidth,
-            this.scrollContainerWidth = this.scrollContainer.offsetWidth,
+            this.scrollWidth = this.scrollvisblecontainer.scrollWidth - this.scrollvisblecontainer.clientWidth,
+            this.scrollvisblecontainerWidth = this.scrollvisblecontainer.offsetWidth,
             this.itemOffsets = [];
             let t = 0;
             this._items.forEach(((e,i)=>{
@@ -10572,7 +10572,7 @@
                 0 === i && (t = e.el.offsetLeft);
                 if ("center" === getComputedStyle(e.el).scrollSnapAlign) {
                     const t = e.el.offsetWidth / 2;
-                    s = Math.floor(e.el.offsetLeft - this.scrollContainerWidth / 2 + t)
+                    s = Math.floor(e.el.offsetLeft - this.scrollvisblecontainerWidth / 2 + t)
                 } else
                     s = Math.floor(e.el.offsetLeft - t);
                 e._offset = s * this.dir,
@@ -10581,15 +10581,15 @@
             ))
         },
         onResizeImmediate() {
-            this.scrollContainer.removeEventListener("scroll", this.onScroll)
+            this.scrollvisblecontainer.removeEventListener("scroll", this.onScroll)
         },
         onResizeDebounced() {
-            this.scrollContainer.addEventListener("scroll", this.onScroll)
+            this.scrollvisblecontainer.addEventListener("scroll", this.onScroll)
         },
         onBreakpointChange() {
             requestAnimationFrame((()=>{
                 this.cacheSizeInfo(),
-                this.scrollContainer.scrollLeft = this.itemOffsets[this.currentIndex]
+                this.scrollvisblecontainer.scrollLeft = this.itemOffsets[this.currentIndex]
             }
             ))
         }
@@ -10694,11 +10694,11 @@
     e.exports = {
         mounted() {
             const e = this.el.querySelector(this.model.PaddleNav.Selector)
-              , t = this.el.querySelector(".scroll-container");
+              , t = this.el.querySelector(".scroll-visblecontainer");
             this.paddleNav = {
                 previousEl: e.querySelector(".paddlenav-arrow-previous"),
                 nextEl: e.querySelector(".paddlenav-arrow-next"),
-                scrollContainer: t
+                scrollvisblecontainer: t
             },
             this.onPaddleNavSelected = this.onPaddleNavSelected.bind(this),
             [this.paddleNav.previousEl, this.paddleNav.nextEl].forEach((e=>{
@@ -10707,23 +10707,23 @@
             )),
             this.onPaddleNavScroll = this.onPaddleNavScroll.bind(this),
             this.checkScrollPosition = this.checkScrollPosition.bind(this),
-            this.paddleNav.scrollContainer.addEventListener("scroll", this.onPaddleNavScroll)
+            this.paddleNav.scrollvisblecontainer.addEventListener("scroll", this.onPaddleNavScroll)
         },
         destroy() {
             [this.paddleNav.previousEl, this.paddleNav.nextEl].forEach((e=>{
                 e.removeEventListener("click", this.onPaddleNavSelected)
             }
             )),
-            this.paddleNav.scrollContainer.removeEventListener("scroll", this.onPaddleNavScroll),
+            this.paddleNav.scrollvisblecontainer.removeEventListener("scroll", this.onPaddleNavScroll),
             this.paddleNav = null
         },
         checkScrollPosition() {
             let e = this.model.IsRTL ? -1 : 1
-              , t = (this.paddleNav.scrollContainer.scrollWidth - this.paddleNav.scrollContainer.clientWidth) * e;
+              , t = (this.paddleNav.scrollvisblecontainer.scrollWidth - this.paddleNav.scrollvisblecontainer.clientWidth) * e;
             const i = this.wrappedIndex(this.currentIndex + 1)
               , n = this.wrappedIndex(this.currentIndex - 1);
-            let r = i !== this.currentIndex && Math.abs(t - this.paddleNav.scrollContainer.scrollLeft) > 1
-              , o = n !== this.currentIndex && Math.abs(this.paddleNav.scrollContainer.scrollLeft) >= 1;
+            let r = i !== this.currentIndex && Math.abs(t - this.paddleNav.scrollvisblecontainer.scrollLeft) > 1
+              , o = n !== this.currentIndex && Math.abs(this.paddleNav.scrollvisblecontainer.scrollLeft) >= 1;
             s(this.paddleNav.nextEl, r),
             s(this.paddleNav.previousEl, o)
         },
@@ -10747,10 +10747,10 @@
             ))
         },
         onResizeImmediate() {
-            this.paddleNav.scrollContainer.removeEventListener("scroll", this.onPaddleNavScroll)
+            this.paddleNav.scrollvisblecontainer.removeEventListener("scroll", this.onPaddleNavScroll)
         },
         onResizeDebounced() {
-            this.paddleNav.scrollContainer.addEventListener("scroll", this.onPaddleNavScroll),
+            this.paddleNav.scrollvisblecontainer.addEventListener("scroll", this.onPaddleNavScroll),
             this.delayedCheckScrollPosition()
         }
     }
@@ -10836,12 +10836,12 @@
             super(e),
             this.kf = null,
             this.galleries = this.el.querySelectorAll("[data-scroll-gallery]"),
-            this.selectToggleNav = this.el.querySelector("[data-toggle-gallery-container]"),
+            this.selectToggleNav = this.el.querySelector("[data-toggle-gallery-visblecontainer]"),
             this.selectButtons = this.el.querySelectorAll("[data-select-gallery-id]"),
             this.tabnav = null,
             this.tabnavEl = document.querySelector(".tabnav"),
             this.tabnavItems = this.tabnavEl.querySelector(".tabnav-items"),
-            this.galleriesContainer = this.el.querySelector("[data-select-gallery-container]"),
+            this.galleriesvisblecontainer = this.el.querySelector("[data-select-gallery-visblecontainer]"),
             this.activeGallery = null,
             this.currentHeight = 0,
             this.eventSwitchGallery = null
@@ -10898,7 +10898,7 @@
             ))
         }
         setupStickyOffset() {
-            const e = Array.from(this.currentGallery.querySelectorAll('.item-container .grid-item [class^="product-tile-"]')).slice(0, 2).reduce(((e,t)=>{
+            const e = Array.from(this.currentGallery.querySelectorAll('.item-visblecontainer .grid-item [class^="product-tile-"]')).slice(0, 2).reduce(((e,t)=>{
                 const i = getComputedStyle(t)
                   , s = parseFloat(i.marginBottom);
                 return e + t.clientHeight + s
@@ -10912,7 +10912,7 @@
             const i = getComputedStyle(this.currentGallery);
             this.currentGallery.classList.contains("no-paddlenav") ? e = parseFloat(i.paddingBottom) : t = .5 * parseFloat(i.getPropertyValue("--sticky-item-bottom-offset")),
             this.currentHeight = this.currentGallery.offsetHeight - e - t,
-            this.galleriesContainer.style.setProperty("--select-gallery-height", `${this.currentHeight}px`),
+            this.galleriesvisblecontainer.style.setProperty("--select-gallery-height", `${this.currentHeight}px`),
             this.anim.forceUpdate()
         }
         onResizeDebounced(e) {
@@ -11179,7 +11179,7 @@
             this.staggeredRestart = this.staggeredAnchor.hasAttribute("data-staggered-restart"),
             this.timeGroup = this.anim.createTimeGroup(),
             this.timeGroup.name = "Staggered Animations",
-            this.selectGallery = this.el.querySelector("[data-select-gallery-container]"),
+            this.selectGallery = this.el.querySelector("[data-select-gallery-visblecontainer]"),
             this.firstGallery = this.selectGallery && this.selectGallery.querySelector(".gallery"),
             this.firstGalleryItems = this.firstGallery && this.firstGallery.querySelectorAll("[data-staggered-item]"),
             this.itemChildren = null,
@@ -11415,14 +11415,14 @@
             this.enhancedScrollGroup = this.anim.createScrollGroup(this.el),
             this.enhancedScrollGroup.name = "Welcome Crop",
             this.animationConfig = {},
-            this.controlsContainer = null,
-            this.videoContentContainer = null,
-            this.videoWallContainer = null
+            this.controlsvisblecontainer = null,
+            this.videoContentvisblecontainer = null,
+            this.videoWallvisblecontainer = null
         }
         getEls() {
-            this.videoWallContainer = this.el.querySelector(".welcome-video-wall-container"),
-            this.videoContentContainer = this.el.querySelector(".welcome-video-content-container"),
-            this.controlsContainer = this.el.querySelector(".welcome-video-controls-container")
+            this.videoWallvisblecontainer = this.el.querySelector(".welcome-video-wall-visblecontainer"),
+            this.videoContentvisblecontainer = this.el.querySelector(".welcome-video-content-visblecontainer"),
+            this.controlsvisblecontainer = this.el.querySelector(".welcome-video-controls-visblecontainer")
         }
         mounted() {
             this.getEls(),
@@ -11446,10 +11446,10 @@
                 start: this.animationConfig.sharedScrollStart,
                 end: this.animationConfig.sharedScrollEnd,
                 ease: this.animationConfig.sharedScrollEase,
-                anchors: this.videoWallContainer
+                anchors: this.videoWallvisblecontainer
             }
-              , t = getComputedStyle(this.videoWallContainer).getPropertyValue("--corner-radius");
-            this.enhancedScrollGroup.addKeyframe(this.videoWallContainer, {
+              , t = getComputedStyle(this.videoWallvisblecontainer).getPropertyValue("--corner-radius");
+            this.enhancedScrollGroup.addKeyframe(this.videoWallvisblecontainer, {
                 ...e,
                 _topBottom: [0, this.animationConfig.topBottomMovement],
                 _leftRight: [0, this.animationConfig.leftRightMovement],
@@ -11458,14 +11458,14 @@
                 const t = e.tweenProps._topBottom.current
                   , i = e.tweenProps._leftRight.current
                   , s = e.tweenProps._radius.current;
-                null !== this.videoWallContainer && (this.videoWallContainer.style.clipPath = `inset(${t}% ${i}% round ${s}px )`)
+                null !== this.videoWallvisblecontainer && (this.videoWallvisblecontainer.style.clipPath = `inset(${t}% ${i}% round ${s}px )`)
             }
             ));
-            this.enhancedScrollGroup.addKeyframe(this.videoContentContainer, {
+            this.enhancedScrollGroup.addKeyframe(this.videoContentvisblecontainer, {
                 ...e,
                 scale: [1, .95]
             }),
-            this.enhancedScrollGroup.addKeyframe(this.controlsContainer, {
+            this.enhancedScrollGroup.addKeyframe(this.controlsvisblecontainer, {
                 ...e,
                 y: [0, `-${this.animationConfig.leftRightMovement}%`],
                 x: [0, `-${this.animationConfig.leftRightMovement}vw`]
@@ -11652,8 +11652,8 @@
         constructor(e) {
             super(e),
             this._anim = e.anim,
-            this._container = e.container || this.media.el.parentElement,
-            this._scrollGroup = this.options.scrollGroup || this._anim.getGroupForTarget(this._container || this.media.el),
+            this._visblecontainer = e.visblecontainer || this.media.el.parentElement,
+            this._scrollGroup = this.options.scrollGroup || this._anim.getGroupForTarget(this._visblecontainer || this.media.el),
             this._initialize()
         }
         _initialize() {
@@ -11705,8 +11705,8 @@
         constructor(e) {
             super(e),
             this._anim = e.anim,
-            this._container = e.container || this.media.el.parentElement,
-            this._scrollGroup = this.options.scrollGroup || this._anim.getGroupForTarget(this._container || this.media.el),
+            this._visblecontainer = e.visblecontainer || this.media.el.parentElement,
+            this._scrollGroup = this.options.scrollGroup || this._anim.getGroupForTarget(this._visblecontainer || this.media.el),
             this._initialize()
         }
         _initialize() {
@@ -12075,11 +12075,11 @@
     class d extends l.default {
         constructor(e) {
             super(e),
-            this._container = e.container || this.media.el.parentElement,
+            this._visblecontainer = e.visblecontainer || this.media.el.parentElement,
             this._playbackState = a.default.IDLE,
             this._loadingState = n.default.EMPTY,
             this._elementsToDecorate = [],
-            this._container && this._elementsToDecorate.push(this._container),
+            this._visblecontainer && this._elementsToDecorate.push(this._visblecontainer),
             this.media.id && this._elementsToDecorate.push(...Array.from(document.querySelectorAll(c.replace("{id}", this.media.id))));
             for (const e of this._elementsToDecorate)
                 e.classList.add(this._playbackState),
@@ -12483,15 +12483,15 @@
             this.enhancedScrollGroup = this.anim.createScrollGroup(this.el),
             this.enhancedScrollGroup.name = "Welcome Media",
             this.mediaInstance = null,
-            this.videoWallContainer = null,
-            this.videoContentContainer = null,
+            this.videoWallvisblecontainer = null,
+            this.videoContentvisblecontainer = null,
             this.video = null,
             this.button = null,
             this.userPaused = !1
         }
         getEls() {
-            this.videoWallContainer = this.el.querySelector(".welcome-video-wall-container"),
-            this.videoContentContainer = this.el.querySelector(".welcome-video-content-container"),
+            this.videoWallvisblecontainer = this.el.querySelector(".welcome-video-wall-visblecontainer"),
+            this.videoContentvisblecontainer = this.el.querySelector(".welcome-video-content-visblecontainer"),
             this.video = this.el.querySelector(".welcome-video-video"),
             this.button = this.el.querySelector('[data-inline-media-control="PlayPause"]')
         }
@@ -12500,7 +12500,7 @@
             this.configureKeyframes(),
             this.addListeners(),
             this.mediaInstance = new c.Media({
-                container: this.videoWallContainer,
+                visblecontainer: this.videoWallvisblecontainer,
                 el: this.video,
                 breakpoints: {
                     small: 0,
@@ -12518,7 +12518,7 @@
             ))
         }
         addListeners() {
-            this.videoContentContainer.addEventListener("click", (()=>{
+            this.videoContentvisblecontainer.addEventListener("click", (()=>{
                 "playing" === this.mediaInstance.playbackState ? (this.mediaInstance.el.pause(),
                 this.userPaused = !0) : "paused" === this.mediaInstance.playbackState && (this.mediaInstance.play(),
                 this.userPaused = !1)
@@ -12538,7 +12538,7 @@
             this.enhancedScrollGroup.addEvent(this.video, {
                 event: "pause-video",
                 start: "a0b",
-                anchors: [this.videoWallContainer],
+                anchors: [this.videoWallvisblecontainer],
                 onEvent: ()=>{
                     "paused" !== this.mediaInstance.playbackState && this.mediaInstance.el.pause()
                 }
