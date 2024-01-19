@@ -77,7 +77,7 @@ function WhyMe({hideTittle}) {
                   className="card-set p-[20px] overflow-hidden" role="list">
                   {keyfeature.map((feature, index) => (
                     <motion.div
-                      to={feature.href}
+                      href={feature.href}
                       key={index}
                       variants={WelcomeItem}
                       transition={StagerFadeInUp}
@@ -86,9 +86,11 @@ function WhyMe({hideTittle}) {
                       className="gallery-item grid-item current">
                       <div className="icon-card card-visblecontainer">
                         <div className="card" >
-                          <div className={`${hideTittle? `${windowWidth>768? "bg-gray-100":"bg-gray-900/80"}  `:"bg-white"}  card-modifier card-padding has-trigger-button fixed-width bg-button`}
-                            style={!hideTittle? ({ ...bgPic(feature.pic, "100% auto", "center bottom") }) : null}>
-                            <div className="card-viewport-content">
+                          <div className={`${hideTittle? `${windowWidth>768? "bg-gray-100":"bg-gray-900/80"}  `:"bg-white"}  card-modifier  fixed-width bg-button`}
+                            style={!hideTittle? ({ ...bgPic(feature.pic[1], "100% auto", "center bottom") }) : null}>
+                              <div className={` card-modifier card-padding has-trigger-button fixed-width bg-button`}
+                            style={!hideTittle? ({ ...bgPic(feature.pic[0], "100% auto", "center bottom") }) : null}>
+                                                              <div className="card-viewport-content">
                               <div className="icon-card-content">
                                 <div className="">
                                   <div class={``}>
@@ -105,13 +107,15 @@ function WhyMe({hideTittle}) {
                                   <More color={`  ${feature.color1+" "+feature.color2} bg-gradient-to-r text-transparent bg-clip-text `}/>
                                 </div>
                               </div>
-                            </div>
-                            <div>
-                            </div>
+                                              </div>
+                                              <div>
+                                              </div>
+
+                              </div>
                           </div>
                         </div>
-                        <Link class="anz-card-modal-link"
-                          to={feature.href}>
+                        <a class="anz-card-modal-link"
+                          href={feature.href}>
                           <button
                             class="card-modal-trigger modal-trigger card-cta-modal-button"
                             type="link">
@@ -126,7 +130,7 @@ function WhyMe({hideTittle}) {
                               </span>
                             </div>
                           </button>
-                        </Link>
+                        </a>
                       </div>
                     </motion.div>
                   ))}

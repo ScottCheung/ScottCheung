@@ -131,27 +131,27 @@ function Home () {
                                                 </div>
                                             </div>
                                             <div className="footer">
-                                                <Link to="http://facebook.com/" className="btn btn-just-icon btn-simple"
+                                                <a href="http://facebook.com/" className="btn btn-just-icon btn-simple"
                                                     aria-label="View the facebook profile of Desmond Purpleson">
                                                     <i className="fi fi-brands-facebook"></i>
-                                                    </Link>
-                                                <Link to="http://plus.google.com/" className="btn btn-just-icon btn-simple"
+                                                    </a>
+                                                <a href="http://plus.google.com/" className="btn btn-just-icon btn-simple"
                                                     aria-label="View the plus profile of Desmond Purpleson">
                                                     <i className="fi fi-sr-envelope"></i>
-                                                    </Link>
-                                                <Link to="http://twitter.com/" className="btn btn-just-icon btn-simple"
+                                                    </a>
+                                                <a href="http://twitter.com/" className="btn btn-just-icon btn-simple"
                                                     aria-label="View the twitter profile of Desmond Purpleson">
-                                                    <i className="fi fi-brands-twitter-alt-circle"></i></Link>
-                                                <Link to="http://linkedin.com/"
+                                                    <i className="fi fi-brands-twitter-alt-circle"></i></a>
+                                                <a href="http://linkedin.com/"
                                                     className="btn btn-just-icon btn-simple"
                                                     aria-label="View the linkedin profile of Desmond Purpleson">
                                                     <i className="fi fi-brands-linkedin"></i>
-                                                </Link>
-                                                <Link to="http://linkedin.com/"
+                                                </a>
+                                                <a href="http://linkedin.com/"
                                                 className="btn btn-just-icon btn-simple"
                                                 aria-label="View the linkedin profile of Desmond Purpleson">
                                                 <i className="fi fi-brands-instagram"></i>
-                                                </Link>
+                                                </a>
 
                                             </div>
                                         </div>
@@ -171,27 +171,27 @@ function Home () {
                                                 </div>
                                             </div>
                                             <div className="footer">
-                                                <Link to="http://facebook.com/" className="btn btn-just-icon btn-simple"
+                                                <a href="http://facebook.com/" className="btn btn-just-icon btn-simple"
                                                     aria-label="View the facebook profile of Desmond Purpleson">
                                                     <i className="fi fi-brands-facebook"></i>
-                                                    </Link>
-                                                <Link to="http://plus.google.com/" className="btn btn-just-icon btn-simple"
+                                                    </a>
+                                                <a href="http://plus.google.com/" className="btn btn-just-icon btn-simple"
                                                     aria-label="View the plus profile of Desmond Purpleson">
                                                     <i className="fi fi-sr-envelope"></i>
-                                                    </Link>
-                                                <Link to="http://twitter.com/" className="btn btn-just-icon btn-simple"
+                                                    </a>
+                                                <a href="http://twitter.com/" className="btn btn-just-icon btn-simple"
                                                     aria-label="View the twitter profile of Desmond Purpleson">
-                                                    <i className="fi fi-brands-twitter-alt-circle"></i></Link>
-                                                <Link to="http://linkedin.com/"
+                                                    <i className="fi fi-brands-twitter-alt-circle"></i></a>
+                                                <a href="http://linkedin.com/"
                                                     className="btn btn-just-icon btn-simple"
                                                     aria-label="View the linkedin profile of Desmond Purpleson">
                                                     <i className="fi fi-brands-linkedin"></i>
-                                                </Link>
-                                                <Link to="http://linkedin.com/"
+                                                </a>
+                                                <a href="http://linkedin.com/"
                                                 className="btn btn-just-icon btn-simple"
                                                 aria-label="View the linkedin profile of Desmond Purpleson">
                                                 <i className="fi fi-brands-instagram"></i>
-                                                </Link>
+                                                </a>
 
                                             </div>
                                         </div>
@@ -211,27 +211,27 @@ function Home () {
                                                 </div>
                                             </div>
                                             <div className="footer">
-                                                <Link to="http://facebook.com/" className="btn btn-just-icon btn-simple"
+                                                <a href="http://facebook.com/" className="btn btn-just-icon btn-simple"
                                                     aria-label="View the facebook profile of Desmond Purpleson">
                                                     <i className="fi fi-brands-facebook"></i>
-                                                    </Link>
-                                                <Link to="http://plus.google.com/" className="btn btn-just-icon btn-simple"
+                                                    </a>
+                                                <a href="http://plus.google.com/" className="btn btn-just-icon btn-simple"
                                                     aria-label="View the plus profile of Desmond Purpleson">
                                                     <i className="fi fi-sr-envelope"></i>
-                                                    </Link>
-                                                <Link to="http://twitter.com/" className="btn btn-just-icon btn-simple"
+                                                    </a>
+                                                <a href="http://twitter.com/" className="btn btn-just-icon btn-simple"
                                                     aria-label="View the twitter profile of Desmond Purpleson">
-                                                    <i className="fi fi-brands-twitter-alt-circle"></i></Link>
-                                                <Link to="http://linkedin.com/"
+                                                    <i className="fi fi-brands-twitter-alt-circle"></i></a>
+                                                <a href="http://linkedin.com/"
                                                     className="btn btn-just-icon btn-simple"
                                                     aria-label="View the linkedin profile of Desmond Purpleson">
                                                     <i className="fi fi-brands-linkedin"></i>
-                                                </Link>
-                                                <Link to="http://linkedin.com/"
+                                                </a>
+                                                <a href="http://linkedin.com/"
                                                 className="btn btn-just-icon btn-simple"
                                                 aria-label="View the linkedin profile of Desmond Purpleson">
                                                 <i className="fi fi-brands-instagram"></i>
-                                                </Link>
+                                                </a>
 
                                             </div>
                                         </div>
@@ -266,36 +266,36 @@ function Home () {
                     <div className="grid grid-cols-2 grid-cols gap-6 h-72 text-white">
 
                         <div className="">
-                            <Link className="hover:no-underline" to="https://www.linkedin.com/in/zhang-xianzhe-03133a259/"><h4 className="info-title items-center text-white"><i className="fi fi-brands-linkedin mr-3"></i> Linkedin</h4>
-                                <p>Xianzhe Zhang</p></Link>
+                            <a className="hover:no-underline" href="https://www.linkedin.com/in/zhang-xianzhe-03133a259/"><h4 className="info-title items-center text-white"><i className="fi fi-brands-linkedin mr-3"></i> Linkedin</h4>
+                                <p>Xianzhe Zhang</p></a>
 
                         </div>
                         <div className="description">
-                            <Link className="hover:no-underline" to="https://outlook.office365.com/mail/">
+                            <a className="hover:no-underline" href="https://outlook.office365.com/mail/">
                                 <h4 className="info-title items-center text-white"><i className="fi fi-sr-envelope mr-6"></i>E-mail</h4>
                                 <p>z5443003@ad.unsw.edu.au</p>
-                            </Link>
+                            </a>
                         </div>
                         <div className="description">
-                            <Link className="hover:no-underline" to="https://www.facebook.com/profile.php?id=100085874466260">
-                            <h4 className="info-title items-center text-white"><i className="fi fi-brands-facebook mr-6"></i>Facebook</h4></Link>
+                            <a className="hover:no-underline" href="https://www.facebook.com/profile.php?id=100085874466260">
+                            <h4 className="info-title items-center text-white"><i className="fi fi-brands-facebook mr-6"></i>Facebook</h4></a>
                             <p>Xianzhe Zhang</p>
                         </div>
                         <div className="description">
-                            <Link className="hover:no-underline" to="0434344292"><h4 className="info-title items-center text-white"><i className="fi fi-sr-circle-phone-flip mr-6"></i>Phone</h4>
-                            <p>0434344292</p></Link>
+                            <a className="hover:no-underline" href="0434344292"><h4 className="info-title items-center text-white"><i className="fi fi-sr-circle-phone-flip mr-6"></i>Phone</h4>
+                            <p>0434344292</p></a>
                         </div>
                         <div className="description">
-                            <Link className="hover:no-underline" to="https://www.instagram.com/invites/contact/?i=er73s6a2y80u&utm_content=pblnb0t"><h4 className="info-title items-center text-white"><i className="fi fi-brands-instagram mr-6"></i>Instagram</h4>
-                            <p>scottzhang9779</p></Link>
+                            <a className="hover:no-underline" href="https://www.instagram.com/invites/contact/?i=er73s6a2y80u&utm_content=pblnb0t"><h4 className="info-title items-center text-white"><i className="fi fi-brands-instagram mr-6"></i>Instagram</h4>
+                            <p>scottzhang9779</p></a>
                         </div>
                         <div className="description">
-                            <Link className="hover:no-underline" to="https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579"><h4 className="info-title items-center text-white"><i className="fi fi-sr-book-alt mr-6"></i>Little Red Book</h4>
-                            <p>贤哲scott</p></Link>
+                            <a className="hover:no-underline" href="https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579"><h4 className="info-title items-center text-white"><i className="fi fi-sr-book-alt mr-6"></i>Little Red Book</h4>
+                            <p>贤哲scott</p></a>
                         </div>
                         <div className="description">
-                            <Link className="hover:no-underline" to="https://www.wechat.com/"><h4 className="info-title items-center text-white"><i className="fi fi-sr-comments mr-6"></i>Wechat</h4>
-                            <p>Scottt1110</p></Link>
+                            <a className="hover:no-underline" href="https://www.wechat.com/"><h4 className="info-title items-center text-white"><i className="fi fi-sr-comments mr-6"></i>Wechat</h4>
+                            <p>Scottt1110</p></a>
                         </div>
                     </div>
                     <footer className="text-white p-4 text-base-content flex justify-center">

@@ -4,10 +4,13 @@
   "private": true,
   "homepage": "https://xianzhezhang97.github.io/",
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
+    "@heroicons/react": "^2.1.1",
     "framer-motion": "^10.18.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.5.3",
+    "react-modal": "^3.16.1",
     "react-router-dom": "^6.20.1",
     "react-scripts": "^5.0.1"
   },
@@ -16,7 +19,7 @@
     "build": "react-scripts build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "TW": "tailwindcss build \"../style/styles.css\" -o output.css"
+    "TW": "tailwindcss build public/style/style.css -o output.css"
   },
   "browserslist": {
     "production": [

@@ -112,7 +112,6 @@ export function DynamicBackground ({ children, initialPaths }) {
 
 
 // ScrollToTop.js
-// import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 export function ScrollToTop() {
@@ -121,3 +120,32 @@ export function ScrollToTop() {
   return null;
 }
 
+// preloadImages.js
+export function preloadImages(imageUrls, onSuccess, onError) {
+  // 创建 Promise 对象数组
+  const imagePromises = imageUrls.map((imageUrl) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.src = imageUrl;
+      img.onload = resolve;
+      img.onerror = reject;
+    });
+  });
+
+  // 等待所有图片加载完成
+  Promise.all(imagePromises)
+    .then(() => {
+      console.log('所有图片已预加载');
+      // 执行成功回调函数
+      if (onSuccess) {
+        onSuccess();
+      }
+    })
+    .catch((error) => {
+      console.error('图片预加载失败:', error);
+      // 执行失败回调函数
+      if (onError) {
+        onError(error);
+      }
+    });
+}

@@ -1,3 +1,7 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 .typography-hero-headline {
     margin-top: .25em
 }
@@ -4088,7 +4092,6 @@ br.small {
     height: 100%;
     position: relative;
     overflow: hidden;
-    background-color: #fff
 }
 
 .tile-content {

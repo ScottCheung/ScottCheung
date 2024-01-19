@@ -59,7 +59,7 @@ export default function singleWork() {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')"
+                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=2710&q=80')"
             }}
           >
             <span
@@ -181,7 +181,7 @@ export default function singleWork() {
 
         <WhyMe hideTittle={true} />
       </main>
-      <link rel="stylesheet" to="../appleStyleGrid/overview.built.css" type="text/css" />
+      <a rel="stylesheet" href="../appleStyleGrid/overview.built.css" type="text/css" />
 
       <Contact isTopOut={true} />
     </>

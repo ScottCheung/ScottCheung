@@ -42,13 +42,13 @@ function StudyExperience({ hideTittle, simpleVer }) {
           className=''>
           <div className='animate__animated animate__rotateIn'>
             <div className=' py-24 justify-center flex '>
-              <Link
-                to='#StudyExperience'
+              <a
+                href='#StudyExperience'
                 id='StudyExperience'
                 style={{ animationDelay: `${0.4}s` }}
                 className='flex  w-24 h-24 rounded-full items-center justify-center bg-gray-200  text-center hover:text-white shadow-none hover:bg-sky-900'>
                 <i class="fi fi-br-angle-up text-3xl "></i>
-              </Link>
+              </a>
             </div>
           </div>
         </motion.div>
@@ -134,8 +134,8 @@ function StudyExperience({ hideTittle, simpleVer }) {
                             </div>
                           </div>
                         </motion.div>
-                        <Link class="anz-card-modal-link"
-                          to={Experience.href} aria-label="">
+                        <a class="anz-card-modal-link"
+                          href={Experience.href} aria-label="">
                           <button
                             class="card-modal-trigger modal-trigger card-cta-modal-button"
                             type="link">
@@ -150,7 +150,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                               </span>
                             </div>
                           </button>
-                        </Link>
+                        </a>
                       </div>
                     </motion.div>
                   ))}

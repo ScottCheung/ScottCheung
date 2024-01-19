@@ -72,13 +72,21 @@ function Capability() {
             transition={{ transition: { duration: 1 } }}
             className="tile-content bg-gray-950/90 smoothchange h-auto min-h-[100vh]"
               style={{
-                backgroundImage: `url(https://cdn.pixabay.com/photo/2019/08/19/11/59/milky-way-4416194_1280.jpg)`,
+                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.gallerybg[1]})`,
                 backgroundSize: `100% auto`,
                 backgroundRepeat: 'repeat',
                 backgroundPosition: "center bottle"
               }}
             >
-              <motion.span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black smoothchange"></motion.span>
+
+              <div className="tile-content bg-gray-950/90 smoothchange h-auto min-h-[100vh]"
+              style={{
+                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.gallerybg[0]})`,
+                backgroundSize: `100% auto`,
+                backgroundRepeat: 'repeat',
+                backgroundPosition: "center bottle"
+              }}>
+                                <motion.span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black smoothchange"></motion.span>
               <motion.div
               layout
               initial={{  opacity: 0}}
@@ -487,6 +495,9 @@ function Capability() {
                   </motion.div>
                 </AnimatePresence>
               </motion.div>
+
+              </div>
+
             </motion.div>
           </motion.div>
         </motion.div>
@@ -620,59 +631,67 @@ function Capability() {
         <motion.div
           className="grid-item large-span-6 small-span-12 grid-item-check-in will-change carnival-item-in-view min-h-[650px]"
         >
-          <motion.div className="tile tile-rounded tile-with-overlay">
+          <motion.div className="tile tile-rounded tile-with-overlay bg-white">
             <motion.div className="tile-content"
               style={{
-                backgroundImage: `url(/Graphs/capability/code.jpg)`,
+                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.code[1]})`,
                 backgroundSize: '100% auto',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center bottom'
               }}>
-              <motion.div
-                  initial={{  opacity: 0,y:60,scale:0.95}}
-                  whileInView={{ opacity: 1,y:0,scale:1}}
-                  transition={{
-                    "ease": [
-                    0.455,
-                    0.030,
-                    0.515,
-                    0.955
-                  ],
-                  "duration": 1.3,
-                  "delay": 0.4,
-                  }}  
-                   className="tile-header">
-                <h3 className="tile-headline typography-subsection-headline">
-                  {lang == 0 && "High Quality? Not just for code"}{lang == 1 && "完美？不止是代码"}
-                </h3>
-                {/* 完美主义 内容 */}
-                <p className="tile-copy typography-subsection-copy">
-                  {lang == 0 && SelectText("As a perfectionist, I approach every project I handle with a commitment to high quality, ensuring that every aspect is flawless. I meticulously consider details such as [code quality], [user usability], [aesthetics], and more. Perfection, for me, extends across all facets of the project and life.", "blue-700", "\t ")}
-                  {lang == 1 && SelectText("作为追求卓越之人，我在交付每个项目时都致力于确保各个方面都无可挑剔。这包括[代码质量]、[用户可用性]、[美感]等各个方面。对我而言，追求完美不仅体现在项目中，也延伸至生活的方方面面。这种执着于高质量的态度通常能够带来更好的结果和用户体验。在工作中，不断追求卓越有助于提高产品的竞争力，并确保用户对我的工作产生积极的体验和印象。", "blue-700")}
-                </p>
-              </motion.div>
-              <motion.div className="tile-body">
-                <motion.div className="overview-messages-image-visblecontainer large-centered">
-                  <figure
-                    role="img"
-                    className="overview-messages-check-in"
-                  />
-                  <span aria-hidden="true">
-                    <motion.div className="inline-video-visblecontainer inline-video-check-in inline-video-is-webm loaded ended">
-                      <figure
-                        className="start-frame"
-                        aria-hidden="true"
-                        data-anim-lazy-image-download-complete=""
-                      />
-                      <figure
-                        className="static-frame end-frame"
-                        aria-hidden="true"
-                        data-anim-lazy-image-download-complete=""
-                      />
+                <div className="tile-content"
+                style={{
+                  backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.code[0]})`,
+                  backgroundSize: '100% auto',
+                  backgroundRepeat: 'no-repeat',
+                  backgroundPosition: 'center bottom'
+                }}>
+                                      <motion.div
+                        initial={{  opacity: 0,y:60,scale:0.95}}
+                        whileInView={{ opacity: 1,y:0,scale:1}}
+                        transition={{
+                          "ease": [
+                          0.455,
+                          0.030,
+                          0.515,
+                          0.955
+                        ],
+                        "duration": 1.3,
+                        "delay": 0.4,
+                        }}  
+                        className="tile-header">
+                      <h3 className="tile-headline typography-subsection-headline">
+                        {lang == 0 && "High Quality? Not just for code"}{lang == 1 && "完美？不止是代码"}
+                      </h3>
+                      {/* 完美主义 内容 */}
+                      <p className="tile-copy typography-subsection-copy">
+                        {lang == 0 && SelectText("As a perfectionist, I approach every project I handle with a commitment to high quality, ensuring that every aspect is flawless. I meticulously consider details such as [code quality], [user usability], [aesthetics], and more. Perfection, for me, extends across all facets of the project and life.", "blue-700", "\t ")}
+                        {lang == 1 && SelectText("作为追求卓越之人，我在交付每个项目时都致力于确保各个方面都无可挑剔。这包括[代码质量]、[用户可用性]、[美感]等各个方面。对我而言，追求完美不仅体现在项目中，也延伸至生活的方方面面。这种执着于高质量的态度通常能够带来更好的结果和用户体验。在工作中，不断追求卓越有助于提高产品的竞争力，并确保用户对我的工作产生积极的体验和印象。", "blue-700")}
+                      </p>
                     </motion.div>
-                  </span>
-                </motion.div>
-              </motion.div>
+                    <motion.div className="tile-body">
+                      <motion.div className="overview-messages-image-visblecontainer large-centered">
+                        <figure
+                          role="img"
+                          className="overview-messages-check-in"
+                        />
+                        <span aria-hidden="true">
+                          <motion.div className="inline-video-visblecontainer inline-video-check-in inline-video-is-webm loaded ended">
+                            <figure
+                              className="start-frame"
+                              aria-hidden="true"
+                              data-anim-lazy-image-download-complete=""
+                            />
+                            <figure
+                              className="static-frame end-frame"
+                              aria-hidden="true"
+                              data-anim-lazy-image-download-complete=""
+                            />
+                          </motion.div>
+                        </span>
+                      </motion.div>
+                    </motion.div>
+                </div>
             </motion.div>
           </motion.div>
         </motion.div>
@@ -847,12 +866,21 @@ function Capability() {
           <motion.div className="tile tile-rounded" >
             <motion.div className="tile-content bg-[#fed9d3]"
               style={{
-                backgroundImage: `url(/Graphs/capability/infp.jpg)`,
+                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infp[1]})`,
                 backgroundSize: '100% auto',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center bottom'
               }}>
-              <motion.div className="tile-header">
+                <div className="tile-content bg-[#fed9d3]"
+              style={{
+                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infp[0]})`,
+                backgroundSize: '100% auto',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'center bottom'
+              }}>
+
+
+<motion.div className="tile-header">
               <motion.div
                   initial={{  opacity: 0}}
                   whileInView={{ opacity: 1}}
@@ -870,15 +898,15 @@ function Capability() {
                   <h3 className="tile-headline typography-subsection-headline py-4 text-gray-600">
                     {lang == 0 && "Personality"}{lang == 1 && "人格类型"}
                   </h3>
-                  <Link data-popover-target={`infp`}
-                    to="https://www.16personalities.com/infp-personality" className='flex jusitify-between items-center '>
+                  <a data-popover-target={`infp`}
+                    href="https://www.16personalities.com/infp-personality" className='flex jusitify-between items-center '>
                     <p className="tile-headline text-xl typography-subsection-headline text-gray-600 ">
                       {lang == 0 && "INFP"}{lang == 1 && "小蝴蝶"}
                     </p>
 
                     <i class="ml-2 fi fi-rr-interrogation flex justify-end items-center my-0"></i>
 
-                  </Link>
+                  </a>
                 </motion.div>
 
                 <motion.div
@@ -937,10 +965,10 @@ function Capability() {
                   <h3 className="tile-headline typography-subsection-headline py-4 text-gray-600">
                     {lang == 0 && "Language"}{lang == 1 && "语言能力"}
                   </h3>
-                  <Link to="https://en.wikipedia.org/wiki/Multilingualism" className=" tile-headline text-xl typography-subsection-headline py-4 text-gray-600">
+                  <a href="https://en.wikipedia.org/wiki/Multilingualism" className=" tile-headline text-xl typography-subsection-headline py-4 text-gray-600">
 
                     {lang == 0 && "Multi-language"}{lang == 1 && "多语言"}
-                  </Link>
+                  </a>
                 </motion.div>
                 <motion.div className='space-y-8'>
                   {language[lang].map((personality, index) => (<motion.div>
@@ -967,6 +995,9 @@ function Capability() {
                   </motion.div>))}
                 </motion.div>
               </motion.div>
+
+                </div>
+
 
             </motion.div>
           </motion.div>

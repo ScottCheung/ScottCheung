@@ -123,6 +123,7 @@
     "selfdesbg": ["/Graphs/home/keyfeaturebg.jpg", "https://3o.hk/images/2024/01/14/selfdesbg.jpg"],
     "welcomebg": ["/Graphs/home/welcomebg.jpg", "https://3o.hk/images/2024/01/14/welcomebg.jpg"],
     "contactbg":["/Graphs/home/contactbg.jpeg", "https://3o.hk/images/2024/01/14/contactbg.jpg"],
+    "Avatar":["/Graphs/home/avatar.jpg", "https://3o.hk/images/2024/01/14/avatar.jpg"],
     "StudyExperience": [
       {
         "id": "FunctionalMaterial",
@@ -1139,7 +1140,7 @@
             "Learning ability"
           ],
           "href": "/whyme/LearningAbility",
-          "pic": "/Graphs/whyme/LearningAbility.png",
+          "pic": ["https://3o.hk/images/2024/01/19/LearningAbility.png","/Graphs/whyme/LearningAbility.png"],
           "pic2": "/Graphs/whyme/LearningAbility2.jpg",
           "icon": "fi-rr-graduation-cap",
           "description": "Demonstrated exceptional learning agility by independently mastering piano and guitar skills. Maintained a stellar GPA while initiating the completion of 90% of a second degree by the junior year, achieving a three-year curriculum in just one. Simultaneously, holding three degrees across four majors serves as compelling evidence.",
@@ -1152,7 +1153,7 @@
             "Leadership"
           ],
           "href": "/whyme/Leadership",
-          "pic": "/Graphs/whyme/Leadership.png",
+          "pic": ["https://3o.hk/images/2024/01/19/Leadership.png","/Graphs/whyme/Leadership.png"],
           "pic2": "/Graphs/whyme/Leadership2.jpg",
           "icon": "fi-rr-users-alt",
           "description": "Held pivotal roles in the university's study department, technology and entrepreneurship guidance station, debate team, and served as class president, study committee leader, and life committee leader. Led the class to secure victories in city, school, and university competitions, garnering numerous provincial awards.",
@@ -1165,7 +1166,7 @@
             "Communication"
           ],
           "href": "/whyme/Communication",
-          "pic": "/Graphs/whyme/Communication.png",
+          "pic": ["https://3o.hk/images/2024/01/19/Communication.png","/Graphs/whyme/Communication.png"],
           "pic2": "/Graphs/whyme/Communication2.jpg",
           "icon": "fi-rr-comments",
           "description": "Adept presenter with a track record of participating in over 100 competitions and delivering more than 50 public speeches. Star lecturer at NUSTP, hosted a 400-person party, and excelled in the champion debating team. Negotiated a 50% discount on supplies for a startup and secured sponsorships for club activities.",
@@ -1178,7 +1179,7 @@
             "Problem-Solving"
           ],
           "href": "/whyme/ProblemSolving",
-          "pic": "/Graphs/whyme/ProblemSolving.png",
+          "pic": ["https://3o.hk/images/2024/01/19/ProblemSolving.png","/Graphs/whyme/ProblemSolving.png"],
           "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
           "icon": "fi-rr-lightbulb-question",
           "description": "Exhibits clear logical and divergent thinking, employing effective frameworks to dissect and solve complex problems. Demonstrates resilience, tenacity, and a passion for conquering challenges. Proficiently utilizes familiar tools and processes to automate repetitive tasks. Notable achievements include technical breakthroughs in the Chemical Design Competition and Concrete Design Competition.",
@@ -1191,7 +1192,7 @@
             "Aesthetic attitude"
           ],
           "href": "/whyme/AestheticAttitude",
-          "pic": "/Graphs/whyme/AestheticAttitude.png",
+          "pic": ["https://3o.hk/images/2024/01/19/AestheticAttitude.png","/Graphs/whyme/AestheticAttitude.png"],
           "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
           "icon": "fi-rr-sparkles",
           "description": "Autonomously designs and crafts launch-level slides, advanced posters, brochures, logos, and interior layouts for various companies. Recognized with 2 first prizes, 2 second prizes, and 2 third prizes in diverse design competitions. Official poster designer for the publicity department of the National University Science and Technology Park.",
@@ -1204,7 +1205,7 @@
             "Emotional Stable"
           ],
           "href": "/whyme/EmotionalStable",
-          "pic": "/Graphs/whyme/EmotionalStable.png",
+          "pic": ["https://3o.hk/images/2024/01/19/EmotionalStable.png","/Graphs/whyme/EmotionalStable.png"],
           "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
           "icon": "fi-rr-smile",
           "description": "As an INFP with a heightened emotional perception, adept micro-expression observer, and strong empathic abilities. Thrives in resolving customer complaints and unforeseen situations. Optimistic and stress-resistant, capable of swiftly managing negative emotions at work. Always be positive and energetic.",
@@ -1219,7 +1220,7 @@
             "学习能力"
           ],
           "href": "/whyme/LearningAbility",
-          "pic": "/Graphs/whyme/LearningAbility.png",
+          "pic": ["https://3o.hk/images/2024/01/19/LearningAbility.png","/Graphs/whyme/LearningAbility.png"],
           "pic2": "/Graphs/whyme/LearningAbility2.jpg",
           "icon": "fi-rr-graduation-cap",
           "description": "候选人自学了钢琴和吉他技能，展示出色的学习敏捷性。在大三完成了第二学位90%的课程，取得了三年课程的成绩。同时，持有四个专业的三个学位，均是有力的证据。",
@@ -1232,7 +1233,7 @@
             "领导力"
           ],
           "href": "/whyme/Leadership",
-          "pic": "/Graphs/whyme/Leadership.png",
+          "pic": ["https://3o.hk/images/2024/01/19/Leadership.png","/Graphs/whyme/Leadership.png"],
           "pic2": "/Graphs/whyme/Leadership2.jpg",
           "icon": "fi-rr-users-alt",
           "description": "候选人具有在大学学习部门、科技和创业指导站、辩论队担任关键角色，并担任班长、学习委员会负责人和生活委员会负责人。带领班级在城市、学校和大学比赛中获胜，赢得了众多省级奖项。",
@@ -1245,7 +1246,7 @@
             "沟通能力"
           ],
           "href": "/whyme/Communication",
-          "pic": "/Graphs/whyme/Communication.png",
+          "pic": ["https://3o.hk/images/2024/01/19/Communication.png","/Graphs/whyme/Communication.png"],
           "pic2": "/Graphs/whyme/Communication2.jpg",
           "icon": "fi-rr-comments",
           "description": "候选人是一位熟练的演讲者，他参与了100多场比赛并发表了50多次公开演讲。是NUSTP的明星讲解员，主持了一场400人的派对，并在冠军辩论队表现出色。为初创公司谈判获得50%的物资折扣，并为俱乐部活动争取了获得广告赞助。",
@@ -1258,7 +1259,7 @@
             "解题能力"
           ],
           "href": "/whyme/ProblemSolving",
-          "pic": "/Graphs/whyme/ProblemSolving.png",
+          "pic": ["https://3o.hk/images/2024/01/19/ProblemSolving.png","/Graphs/whyme/ProblemSolving.png"],
           "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
           "icon": "fi-rr-lightbulb-question",
           "description": "候选人具有清晰的逻辑和发散性思维，运用有效的框架来分析和解决复杂问题。表现出对克服挑战的韧性、坚韧和激情。熟练使用熟悉的工具和流程自动化重复性任务。在化学设计竞赛和混凝土设计竞赛中取得了技术突破。",
@@ -1271,7 +1272,7 @@
             "审美态度"
           ],
           "href": "/whyme/AestheticAttitude",
-          "pic": "/Graphs/whyme/AestheticAttitude.png",
+          "pic": ["https://3o.hk/images/2024/01/19/AestheticAttitude.png","/Graphs/whyme/AestheticAttitude.png"],
           "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
           "icon": "fi-rr-sparkles",
           "description": "候选人具有具有自主设计和制作专业级幻灯片、高级海报、宣传册、标志和各种公司的内部布局。在多个设计竞赛中获得2个一等奖、2个二等奖和2个三等奖。是国家大学科技园宣传部的官方海报设计师。",
@@ -1284,7 +1285,7 @@
             "情绪稳定"
           ],
           "href": "/whyme/EmotionalStable",
-          "pic": "/Graphs/whyme/EmotionalStable.png",
+          "pic": ["https://3o.hk/images/2024/01/19/EmotionalStable.png","/Graphs/whyme/EmotionalStable.png"],
           "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
           "icon": "fi-rr-smile",
           "description": "候选人作为一个具有高度情绪感知、熟练观察微表情和强大共情能力的INFP。在解决客户投诉和突发情况方面表现出色。乐观且抗压，能够迅速处理工作中的负面情绪。始终保持积极和充满活力。",
@@ -1753,7 +1754,12 @@
           "name": "Docker",
           "image": "https://www.svgrepo.com/show/521276/docker-16.svg"
         }
-      ]
+      ],
+      "graphs":{
+        "gallerybg":["/Graphs/capability/gallerybg.jpg","https://cdn.pixabay.com/photo/2019/08/19/11/59/milky-way-4416194_1280.jpg"],
+       "code":["/Graphs/capability/code.jpg","https://3o.hk/images/2024/01/19/code.jpg"],
+        "infp":["/Graphs/capability/infp.jpg","https://3o.hk/images/2024/01/19/infp.jpg"]
+      }
     },
     "Certificates": [
       [
@@ -2467,7 +2473,7 @@
       "WelcomeItem": {
         "hidden": {
           "opacity": 0,
-          "y": "45px",
+          "y": "60px",
           "scale":0.95,
           "pointerEvents": "none"
         },
@@ -2527,15 +2533,15 @@
       "StagerFadeInUp": {
         "opacity": {
           "ease": [0.455, 0.030, 0.515, 0.955],
-          "duration": 0.9
+          "duration": 1.2
         },
         "y": {
           "ease": [0.455, 0.030, 0.515, 0.955],
-          "duration": 1.2
+          "duration": 0.9
         },
         "scale": {
           "ease": [0.455, 0.030, 0.515, 0.955],
-          "duration": 1.2
+          "duration": 0.9
         }
       },
       "ProgressBar": {
@@ -2557,5 +2563,44 @@
         "duration": 0.5
       }
     }
-  }
+  },
+  "preloadImages":[
+    "public/Graphs/home/welcomebg.JPG",
+    "public/Graphs/home/avatar.jpg",
+    "public/Graphs/home/keyfeaturebg.JPG",
+    "public/Graphs/home/selfdesbg.JPG",
+    "public/Graphs/home/contactbg.jpeg",
+    "https://3o.hk/images/2024/01/14/welcomebg.jpg",
+    "https://3o.hk/images/2024/01/14/keyfeaturebg.jpg",
+    "https://3o.hk/images/2024/01/14/selfdesbg.jpg",
+    "https://3o.hk/images/2024/01/14/welcomebg.jpg",
+    "https://3o.hk/images/2024/01/14/contactbg.jpg",
+    
+    
+    
+    "https://cdn.pixabay.com/photo/2023/12/16/00/06/mountain-8451604_1280.jpg",
+    
+
+    "/Graphs/whyme/Communication.png",
+    "/Graphs/whyme/ProblemSolving.png",
+    "/Graphs/whyme/TimeManagement.png",
+    "/Graphs/whyme/Adaptability.png",
+    "/Graphs/whyme/WorkEthic.png",
+    "/Graphs/whyme/Integrity.png",
+    "/Graphs/whyme/Responsibility.png",
+    "/Graphs/whyme/PositiveAttitude.png",
+    "/Graphs/whyme/InterpersonalSkills.png",
+    "/Graphs/whyme/TechnicalSkills.png",
+    "/Graphs/whyme/ComputerSkills.png",
+    "/Graphs/whyme/AnalyticalSkills.png",
+    "/Graphs/whyme/LeadershipSkills.png",
+    "/Graphs/whyme/DetailOriented.png",
+    "/Graphs/whyme/ResearchSkills.png",
+    "/Graphs/whyme/ProblemSolvingSkills.png",
+    "/Graphs/whyme/CommunicationSkills.png",
+    "/Graphs/whyme/TeamworkSkills.png",
+    "/Graphs/whyme/TimeManagementSkills.png",
+    "/Graphs/whyme/AdaptabilitySkills.png",
+    "/Graphs/whyme/WorkEthicSkills.png"
+  ]
 }

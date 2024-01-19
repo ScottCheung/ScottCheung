@@ -1,3 +1,6 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 .authors-on-blog .footer a,
 .btn.btn-border,
 .form-group.label-floating label.control-label,

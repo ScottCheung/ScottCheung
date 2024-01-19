@@ -50,13 +50,13 @@ export default function Errorpage () {
                   animate={{scale:1,opacity:1}}
                   transition={{duration:0.7}}
                   className="animate__animated animate__zoomIn animate__slow">
-            <Link
-            style={{ animationDelay: `0.4s` }} to="/" className="animate__animated animate__fadeInUp rounded-lg text-3xl  bg-sky-900 px-10 py-6 font-semibold text-white shadow-sm hover:bg-sky-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:scale-[1.05]">
+            <a
+            style={{ animationDelay: `0.4s` }} href="/" className="animate__animated animate__fadeInUp rounded-lg text-3xl  bg-sky-900 px-10 py-6 font-semibold text-white shadow-sm hover:bg-sky-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:scale-[1.05]">
                       <i className={ `fi  mr-6 mt-3 ${Message.btn1Icon} `}></i>{Message.btn1[lang]}
-              </Link>
+              </a>
               </motion.div>
-            <Link
-            to={Message.btn2web} style={{ animationDelay: `0.6s` }} className="animate__animated animate__fadeInUp text-3xl  font-semibold text-gray-200 hover:text-white hover:scale-[1.05]">
+            <a
+            href={Message.btn2web} style={{ animationDelay: `0.6s` }} className="animate__animated animate__fadeInUp text-3xl  font-semibold text-gray-200 hover:text-white hover:scale-[1.05]">
                   <motion.div 
                   whileHover={{ scale: 1.05}}
                   whileTap={{ scale: 0.95 }}
@@ -67,7 +67,7 @@ export default function Errorpage () {
                   >
                     <i className={ `fi  mr-6 mt-3 ${Message.btn2Icon} `}></i>{Message.btn2[lang]} →
                   </motion.div>
-            </Link>
+            </a>
           </div>
         </div>
       </main>

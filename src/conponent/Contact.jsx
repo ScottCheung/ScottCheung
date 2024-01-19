@@ -41,7 +41,7 @@ function Contact({isTopOut}) {
                         {data.items.map((type, index) => (
 
                           <motion.li
-                            to={type.link}
+                            href={type.link}
                             key={index}
                             variants={WelcomeItem}
                             transition={StagerFadeInUp}
@@ -69,8 +69,8 @@ function Contact({isTopOut}) {
                                   </div>
                                 </div>
                               </div>
-                              <Link class="anz-card-modal-link"
-                                  to={type.link}>
+                              <a class="anz-card-modal-link"
+                                  href={type.link}>
                                   <button
                                     class="card-modal-trigger modal-trigger card-cta-modal-button"
                                     type="link">
@@ -83,7 +83,7 @@ function Contact({isTopOut}) {
                                       </span>
                                     </div>
                                   </button>
-                                </Link>
+                                </a>
                             </div>
                           </motion.li>
                         ))}
@@ -121,8 +121,8 @@ function Contact({isTopOut}) {
                             whileTap={{ scale: 0.99 }}
                             data-popover-target={`way-${index}`}
                             layout>
-                            <Link class="flex-shrink-0"
-                              to={type.link} >
+                            <a class="flex-shrink-0"
+                              href={type.link} >
                               <div class="items-center flex justify-center">
                                 <i style={{ animationDelay: `${index * 0.3}s` }} className={`${type.icon} text-white text-5xl animate__animated  animate__zoomIn animate__fast `}></i></div>
                               {/* {<p className='lg:text-[15px] text-white text-center'>{type.type[lang]}</p>} */}
@@ -132,7 +132,7 @@ function Contact({isTopOut}) {
                               </p>
                               <div data-popper-arrow></div>
                             </div>
-                            </Link>
+                            </a>
                           </motion.li>
                         ))}
                       </motion.ul>

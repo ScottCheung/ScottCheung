@@ -48,7 +48,7 @@ export default function Profile() {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')"
+                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=2710&q=80')"
             }}
           >
             <span
@@ -96,13 +96,13 @@ export default function Profile() {
                   <h3 className="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2 animate__animated animate__zoomIn">
                     张贤哲 | Scott Zhang
                   </h3>
-                  <Link
-                    to="https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7"
+                  <a
+                    href="https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7"
                     className="text-xl leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase">
                     <i className="fi fi-rr-marker mr-2  text-gray-500"></i>
                     
                     {lang==0&&"Sydney, Australia" }{lang==1&&"澳大利亚，悉尼" }
-                  </Link>
+                  </a>
                   <div className="mb-2 text-gray-700 mt-10">
 
                   </div>
@@ -159,7 +159,7 @@ export default function Profile() {
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         className='tile-headline py-16  animate__animated animate__zoomIn'>
-                        <Link to="/">{lang==0&&"more >" }{lang==1&&"更多  >>" }</Link>
+                        <a href="/">{lang==0&&"more >" }{lang==1&&"更多  >>" }</a>
                       </motion.div>
                     </div>
                   </div>

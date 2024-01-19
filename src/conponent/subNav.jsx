@@ -12,7 +12,7 @@ const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
 useEffect(() => {
   function handleScroll() {
-    if (window.scrollY < 5) {
+    if (window.scrollY < 1) {
       setIsTop(true);
     } else {
       setIsTop(false);
@@ -49,7 +49,7 @@ useEffect(() => {
       class={`w-full animate__animated flex justify-between rounded-full items-center  shadow-xl animate__slideInUp bg-white`} >
       {navLocation.map((item, index) => (
 
-        <Link key={index} to={item.id} style={{ animationDelay: `${index * 0.17}s` }} className={`bg-white flex  w-full h-full  justify-center animate__zoomIn ${isTop ? 'text-black  ' : 'text-gray-900  '} ${index === 0 ? 'rounded-s-full' : ''} ${index === (navLocation.length - 1) ? 'rounded-e-full' : ''} animate__animated  hover:opacity-100 font-medium hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}>
+        <a key={index} href={item.id} style={{ animationDelay: `${index * 0.17}s` }} className={`bg-white flex  w-full h-full  justify-center animate__zoomIn ${isTop ? 'text-black  ' : 'text-gray-900  '} ${index === 0 ? 'rounded-s-full' : ''} ${index === (navLocation.length - 1) ? 'rounded-e-full' : ''} animate__animated  hover:opacity-100 font-medium hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}>
           <motion.div
             layout
             key="modal"
@@ -63,7 +63,7 @@ useEffect(() => {
               <div className='w-full h-full flex text-center justify-center lg:text-full text-[15px]'>{!isTop ? (windowWidth > 784 && <i className={` flex fi justify-center mt-1 text-[10px] sm:text-[10px] md:text-[15px] lg:text-[18px] mr-2 ${item.logo}`}></i>) : (<></>)} {item.label[lang]}</div>
             </div>
           </motion.div>
-        </Link>
+        </a>
 
       ))}
     </motion.div>

@@ -63,8 +63,8 @@ function SelfDescribing () {
                                       transition={{duration:0.7}}
                                       viewport={{ once: true }}
                                       className='rounded-full bg-gray-400'
-                                      src="/Graphs/home/avatar.jpg"
-                                      sizes="(max-width: 1290px) 100vw, 1290px"></motion.img>
+                                      src={Database.PersonalInfo.Avatar[0]}
+                                      ></motion.img>
                               </motion.div>
                           </motion.div>
                           <motion.p 

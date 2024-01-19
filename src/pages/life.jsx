@@ -52,7 +52,7 @@ export default function Life() {
             whileInView={{opacity:1,y:"0px",scale:1}}  
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80')"
+              backgroundImage: "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=1267&q=80')"
             }}>
             <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
           </motion.div>
@@ -136,19 +136,19 @@ export default function Life() {
                   you're good to go. Just make sure you enable them first via
                   JavaScript.
                 </p>
-                <Link
-                  to="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
+                <a
+                  href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
                   className="font-bold text-gray-800 mt-8"
                 >
                   Check Tailwind Starter Kit!
-                </Link>
+                </a>
               </div>
 
               <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
                 <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
                   <img
                     alt="..."
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=1051&q=80"
                     className="w-full align-middle rounded-t-lg"
                   />
                   <blockquote className="relative p-8 mb-4">

@@ -67,7 +67,7 @@ function WorkExperience() {
                       className="card-set p-[20px] overflow-hidden" role="list">
                       {WorkExperiences[0].map((Experience, index) => (
                         <motion.div
-                          to={Experience.href}
+                          href={Experience.href}
                           key={index}
                           variants={item}
                           transition={StagerFadeInUp}
@@ -79,7 +79,7 @@ function WorkExperience() {
                             <div className='card '>
                               <div className='bg-white card-modifier card-padding has-trigger-button fixed-width bg-button'>
                                 {(windowWidth > 1024)
-                                  ? (<Link to={`${Experience.web}`} className='flex-none'>
+                                  ? (<a href={`${Experience.web}`} className='flex-none'>
                                     <div class="flex-shrink-0">
                                       <div class="rounded-[10px] max-w-[120px] h-auto items-center flex justify-center">
                                         <img style={{ animationDelay: `${index * 0.3}s` }} src={Experience.logo} alt={Experience.university} className={`rounded-[10px] animate__animated  animate__zoomIn animate__fast `}></img></div>
@@ -93,7 +93,7 @@ function WorkExperience() {
                                       </div>
 
                                     </div>
-                                  </Link>) : (<></>)}
+                                  </a>) : (<></>)}
                                 <div className='flex flex-col'>
                                   {(windowWidth > 1024)
                                     ? (
@@ -107,7 +107,7 @@ function WorkExperience() {
                                           <div class="ml-2 animate__animated  animate__zoomIn animate__slow text-left text-[12px]">{Experience.tittle[0]}-{Experience.tittle[1]}</div>
                                         </div>
 
-                                        <Link to={`${Experience.web}`}>
+                                        <a href={`${Experience.web}`}>
                                           <div class="flex-shrink-0">
                                             <div class="rounded-[10px] max-w-[70px] h-auto items-center flex justify-end">
 
@@ -121,7 +121,7 @@ function WorkExperience() {
                                               </div>
 
                                           </div>
-                                        </Link>
+                                        </a>
                                       </div>
 
                                     )}
@@ -140,8 +140,8 @@ function WorkExperience() {
                             </div>
 
                           </div>
-                          <Link class="anz-card-modal-link"
-                            to={Experience.href} aria-label="">
+                          <a class="anz-card-modal-link"
+                            href={Experience.href} aria-label="">
                             <button
                               class="card-modal-trigger modal-trigger card-cta-modal-button"
                               type="link">
@@ -156,7 +156,7 @@ function WorkExperience() {
                                 </span>
                               </div>
                             </button>
-                          </Link>
+                          </a>
                         </motion.div>
                       ))}
 

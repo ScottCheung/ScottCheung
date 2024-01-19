@@ -54,7 +54,7 @@ export default function WhyM() {
             className="absolute top-0 w-full h-full bg-center bg-cover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2710&q=80')"
+                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=2710&q=80')"
             }}
           >
             <span
@@ -91,8 +91,8 @@ export default function WhyM() {
             }}
             whileInView={{ opacity: 1, y: "0px", scale: 1 }}
             viewport={{ once: true }}
-            className={`min-h-[800px] lg:min-h-[900px] relative flex flex-col min-w-0 break-words ${windowWidth > 768 ? "bg-white":"bg-gradient-to-b from-white via-white to-white/80 backdrop-blur-md"}  w-full mb-6 shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp`}
-            style={(windowWidth > 768) && { ...bgPic(selectedWhyMeItem.pic, "40% auto", "bottom center") } || null}>
+            className={`pb-[30px] relative flex flex-col min-w-0 break-words ${windowWidth > 768 ? "bg-white":"bg-gradient-to-b from-white via-white to-white/80 backdrop-blur-md"}  w-full mb-6 shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp`}
+            style={(windowWidth > 768) && { ...bgPic(selectedWhyMeItem.pic[1], "40% auto", "bottom center") } || null}>
             <div className="px-6" >
 
               <div className="flex  justify-center mb-15 -mt-[50px]">
@@ -138,7 +138,7 @@ export default function WhyM() {
               <div className="mt-10 py-10  text-center">
                 <div className="flex flex-wrap justify-center">
                   <div
-                    class={`grid mb-[228px]`}>
+                    class={`grid `}>
                     {/* row1-right-with-button */}
                     <div
                       className="grid-item large-span-12 small-span-12 rounded-[14px] p-[28px] ">
@@ -176,7 +176,9 @@ export default function WhyM() {
 
         <WhyMe hideTittle={true} />
       </main>
-      <link rel="stylesheet" to="../appleStyleGrid/overview.built.css" type="text/css" />
+      <a rel="stylesheet" href="./appleStyleGrid/overview.built.css" type="text/css" />
+      <a rel="stylesheet" href="../appleStyleGrid/overview.built.css" type="text/css" />
+      <a rel="stylesheet" href=".../appleStyleGrid/overview.built.css" type="text/css" />
 
       <Contact />
     </>

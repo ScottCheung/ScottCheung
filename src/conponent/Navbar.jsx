@@ -50,7 +50,7 @@ function Navbar({ topTextColor }) {
       }
     }
     function handleScroll2() {
-      if (window.scrollY < 5) {
+      if (window.scrollY < 1) {
         setIsTop(true);
       } else {
         setIsTop(false);
@@ -121,7 +121,7 @@ function Navbar({ topTextColor }) {
                       data-popover-target="popover-user-profile" type="button"
                       className='flex'
                     >
-                      <Link to='/info' style={{ animationDelay: `${0.5}s` }}  classname="animate__animated animate__fadeInRight animate_slow"  >
+                      <a href='/info' style={{ animationDelay: `${0.5}s` }}  classname="animate__animated animate__fadeInRight animate_slow"  >
                         <div className="flex item-center">
                           <div className='flex justify-center items-center'> 
                             <img  className={`smoothchange animate__animated animate__zoomIn  ${isTop ? 'w-20' : 'w-16'}  rounded-md shadow-lg`}
@@ -130,10 +130,10 @@ function Navbar({ topTextColor }) {
                           </div>
                           <div className="flex-col flex  ml-3">
                             <div style={{ animationDelay: `${0.3}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse  font-semibold ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} mb-[10px] text-[15px]  md:mb-[8px] md:text-[17px] lg:mb-0 lg:text-[25px]` : 'text-xl py-2'}`}>{data.Navbar.Avatar.Webname[lang]}</div>
-                            <div to='/info' style={{ animationDelay: `${0.5}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse text-left ${isTop ? `${isTopTextColorWhite ? "text-white" : ""}  text-lg` : 'text-base'}`}> {data.Navbar.Avatar.helloword[lang]} | {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+                            <div href='/info' style={{ animationDelay: `${0.5}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse text-left ${isTop ? `${isTopTextColorWhite ? "text-white" : ""}  text-lg` : 'text-base'}`}> {data.Navbar.Avatar.helloword[lang]} | {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
                           </div>
                         </div>
-                      </Link>
+                      </a>
                     </motion.button>
      
                     <div data-popover id="popover-user-profile" role="tooltip" class="m-3 rounded-[20px] absolute z-10 invisible flex w-[300px] text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 shadow-sm opacity-0 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
@@ -148,7 +148,7 @@ function Navbar({ topTextColor }) {
                             <div className='text-3xl'>Click to know me better</div>
                           </p>
                           <p class="mb-3 text-sm font-normal">
-                            <Link to="#" class="hover:underline text-2xl">@Scottt1110</Link>
+                            <a href="#" class="hover:underline text-2xl">@Scottt1110</a>
                           </p>
                         </div>
                       </div>
@@ -179,8 +179,8 @@ function Navbar({ topTextColor }) {
                             whileTap={{ scale: 0.95 }}
                             layout
                           >
-                            <Link
-                              to={item.href}
+                            <a
+                              href={item.href}
                               key={index}
                               style={{ animationDelay: `${index * 0.2}s` }}
                               data-popover-target={`nav-des-${index}`}
@@ -191,7 +191,7 @@ function Navbar({ topTextColor }) {
                                   <i className={`${isTopTextColorWhite & isTop ? 'text-white text-[20px]' : 'text-gray-900 text-[17px]'}  fi ${item.icon}`}></i></div>
                               </div>
                               <div className={`${isTopTextColorWhite & isTop ? 'text-white text-[20px]' : 'text-gray-900 text-[15px]'} md:hidden lg:flex `}>{item.name[lang]}</div>
-                            </Link>
+                            </a>
 
                           </motion.button>
 
@@ -291,7 +291,7 @@ function Navbar({ topTextColor }) {
                       whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.9 }}
                     >
-                      <Link style={{ animationDelay: `${index * 0.2}s` }} key={index} to={item.href} class={`py-5 animate__animated animate__zoomIn flex place-items-center items-center px-4 ${isTop ? 'hover:bg-gray-900/50 rounded-2xl' : 'hover:bg-gray-300/50 '}`}>
+                      <a style={{ animationDelay: `${index * 0.2}s` }} key={index} href={item.href} class={`py-5 animate__animated animate__zoomIn flex place-items-center items-center px-4 ${isTop ? 'hover:bg-gray-900/50 rounded-2xl' : 'hover:bg-gray-300/50 '}`}>
                         <div class="flex-shrink-0">
                           <div class="rounded-full w-24 h-24 items-center flex justify-center">
                             <i className={`${isTopTextColorWhite & isTop ? 'text-white' : 'text-gray-900'} text-5xl fi ${item.icon}`}></i></div>
@@ -300,7 +300,7 @@ function Navbar({ topTextColor }) {
                           <div class={`${isTopTextColorWhite & isTop ? 'text-white' : 'text-gray-900'} font-bold text-4xl`}>{item.name}</div>
                           <div class={`${isTopTextColorWhite & isTop ? 'text-white' : 'text-gray-900'} text-xs text-blue-500 `}>{item.des}</div>
                         </div>
-                      </Link></motion.div>))}
+                      </a></motion.div>))}
                 </div>
               </div>
               }
@@ -322,7 +322,7 @@ function Navbar({ topTextColor }) {
                   class={`w-full animate__animated   justify-between flex rounded-full items-center ${isExpanded ? ('my-8') : (``)}  ${isTop ? ('backdrop-blur-md bg-white/50 shadow-xl animate__slideInUp') : (`border divide-x  border-gray-900  divide-gray-900 animate__zoomIn`)}`} >
                   {navLocation.map((item, index) => (
 
-                    <Link key={index} to={item.id} style={{ animationDelay: `${index * 0.17}s` }} className={`flex  w-full h-full  justify-center animate__zoomIn ${isTop ? 'text-black  ' : 'text-gray-900  '} ${index === 0 ? 'rounded-s-full' : ''} ${index === (navLocation.length - 1) ? 'rounded-e-full' : ''} animate__animated  opacity-80 hover:opacity-100 font-medium hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}>
+                    <a key={index} href={item.id} style={{ animationDelay: `${index * 0.17}s` }} className={`flex  w-full h-full  justify-center animate__zoomIn ${isTop ? 'text-black  ' : 'text-gray-900  '} ${index === 0 ? 'rounded-s-full' : ''} ${index === (navLocation.length - 1) ? 'rounded-e-full' : ''} animate__animated  opacity-80 hover:opacity-100 font-medium hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}>
                       <motion.div
                         layout
                         style={{ borderRadius: 20 }}
@@ -336,7 +336,7 @@ function Navbar({ topTextColor }) {
                           <div className='w-full h-full flex text-center justify-center lg:text-full text-[15px]'>{!isTop ? (windowWidth > 784 && <i className={` flex fi justify-center mt-1 text-[10px] sm:text-[10px] md:text-[15px] lg:text-[18px] mr-2 ${item.logo}`}></i>) : (<></>)} {item.label[lang]}</div>
                         </div>
                       </motion.div>
-                    </Link>
+                    </a>
 
                   ))}
                 </motion.div>

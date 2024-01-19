@@ -56,13 +56,13 @@ export default function Example() {
   data-anim-scroll-group="body"
 >
   <Navbar />
-	{/* <link rel="stylesheet" to="../appleStyleGrid/fonts"/> */}
-	<link rel="stylesheet" to="../appleStyleGrid/overview.built.css" type="text/css"/>
-	{/* <link rel="stylesheet" to="../appleStyleGrid/overview.css"/> */}
-	<link rel="stylesheet" to="../work/main.built.css" type="text/css" />
-	{/* <link rel="stylesheet" to="../work/overview.built.css" type="text/css" /> */}
-	{/* <link rel="stylesheet" to="../work/main.built2.css" type="text/css" /> */}
-	{/* <link rel="stylesheet" to="../work/overview.built2.css" type="text/css" /> */}
+	{/* <a rel="stylesheet" href="../appleStyleGrid/fonts"/> */}
+	<a rel="stylesheet" href="../appleStyleGrid/overview.built.css" type="text/css"/>
+	{/* <a rel="stylesheet" href="../appleStyleGrid/overview.css"/> */}
+	<a rel="stylesheet" href="../work/main.built.css" type="text/css" />
+	{/* <a rel="stylesheet" href="../work/overview.built.css" type="text/css" /> */}
+	{/* <a rel="stylesheet" href="../work/main.built2.css" type="text/css" /> */}
+	{/* <a rel="stylesheet" href="../work/overview.built2.css" type="text/css" /> */}
   <main id="main" className="main" role="main">
     <section
       className="section section-welcome no-pad-bottom"
@@ -108,7 +108,7 @@ export default function Example() {
           </p>
           <p className=' text-justify'>
           {data[0].unides[lang][1]}
-          <Link className='text-sky-500' to={data[0].web}> [ {lang==0&&"Offical Website"}{lang==1&&"官网" } ]</Link>
+          <a className='text-sky-500' href={data[0].web}> [ {lang==0&&"Offical Website"}{lang==1&&"官网" } ]</a>
           </p>
           <div className=" text-gray-500 pt-24 pb-4" >
             <h2 className="typography-section-intro-headline section-intro-headline">
@@ -120,7 +120,7 @@ export default function Example() {
           </p>
           <p className=' text-justify'>
           {data[0].majordes[lang][1]}
-          <Link className='text-sky-500' to={data[0].majorweb}> [ {lang==0&&"weki"}{lang==1&&"维基百科"} ]</Link>
+          <a className='text-sky-500' href={data[0].majorweb}> [ {lang==0&&"weki"}{lang==1&&"维基百科"} ]</a>
           </p>
       </div>
 
@@ -211,7 +211,7 @@ export default function Example() {
                                             whileTap={{ scale: 0.99 }}
                                             layout
                                             >
-                                            <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                                            <tr className="max-w-full text-center bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                                             <th
                                                 scope="row"
                                                 className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center"
