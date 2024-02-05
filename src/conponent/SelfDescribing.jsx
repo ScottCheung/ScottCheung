@@ -28,8 +28,7 @@ function SelfDescribing () {
   const SelfDescribing = (
     <div id="SelfDescribing" className="">
       
-          <section className="min-h-[100vh] smoothchange items-center bg-fixed bgrid-colsover bgrid-colsenter relative" 
-              style={{backgroundImage: `url(${data.pic})`}}>
+          <section className={`smoothchange items-center bg-fixed bg-center relative flex justify-center`} style={{ backgroundImage: `url(${data.pic})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center' }}>
                 <span className="w-full h-full absolute opacity-70 bg-black "></span>
               <div className="visblecontainer pt-[30vh]">
               <motion.div
