@@ -25,7 +25,7 @@ function KeyFeature() {
   }, []);
 
   const KeyFeature = ( 
-    <section className={`smoothchange items-center bg-fixed bg-center relative flex justify-center`} style={{ backgroundImage: `url(${bg[0]})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center' }}>
+    <section className={`smoothchange items-center bg-fixed bg-center relative flex justify-center`} style={{ backgroundImage: `url(${bg[1]})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center' }}>
         <span className="w-full h-full absolute opacity-70 bg-black "></span>
         <div className="items-center min-h-[100vh]  flex justify-center py-[20vh]">
             <div className=" items-center ">
