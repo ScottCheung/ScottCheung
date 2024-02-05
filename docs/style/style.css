@@ -9,17 +9,97 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-.from-amber-400 {
-    --tw-gradient-from: #f97316 var(--tw-gradient-from-position);
-    --tw-gradient-to: rgb(249 115 22 / 0) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  
-  } 
-  .to-yellow-400{
-    --tw-gradient-from: #f97316 var(--tw-gradient-from-position);
-    --tw-gradient-to: rgb(249 115 22 / 0) var(--tw-gradient-to-position);
-    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  }
+:root {
+    --global-staggered-delay: 0.15;
+    --global-staggered-opacity-duration: 0.9;
+    --global-staggered-translate-y: 30px;
+    --global-staggered-translate-y-duration: 0.7;
+    --global-staggered-translate-scale:0.95;
+    --global-staggered-translate-scale-duration:0.7;
+    --global-viewport-content-responsive: 87.5vw;
+    --global-animation-easing-function: cubic-bezier(0.455, 0.030, 0.515, 0.955)
+}
+
+
+
+@keyframes welcomeFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes welcomeMoveIn {
+    0% {
+        transform: translateY(var(--global-staggered-translate-y))
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes welcomeScaleUp {
+    0% {
+        transform: scale(var(--global-staggered-translate-scale));
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes welcomeFadeIno {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes welcomeMoveIno {
+    0% {
+        transform: translateY(0)
+    }
+
+    to {
+        transform: translateY(var(- --global-staggered-translate-y))
+    }
+}
+
+@keyframes welcomeScaleUpo {
+    0% {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(var(--global-staggered-translate-scale));
+    }
+}
+
+.welcomeanimation{
+    animation: welcomeFadeIn, welcomeMoveIn, welcomeScaleUp;
+    animation-duration: calc(var(--global-staggered-opacity-duration)*1s), 
+                        calc(var(--global-staggered-translate-y-duration)*1s),
+                        calc(var(--global-staggered-translate-scale-duration) * 1s);;
+    animation-timing-function: var(--global-animation-easing-function);
+    animation-fill-mode: both;
+}
+
+.Exitanimation{
+    animation: welcomeFadeIno, welcomeMoveIno, welcomeScaleUpo;
+    animation-duration: calc(var(--global-staggered-opacity-duration)*1s), 
+                        calc(var(--global-staggered-translate-y-duration)*1s),
+                        calc(var(--global-staggered-translate-scale-duration) * 1s);;
+    animation-timing-function: var(--global-animation-easing-function);
+    animation-fill-mode: both;
+}
+
 
 .underL {
     position: absolute;

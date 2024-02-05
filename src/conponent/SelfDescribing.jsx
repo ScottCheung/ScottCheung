@@ -26,12 +26,12 @@ function SelfDescribing () {
   }, []);
   
   const SelfDescribing = (
-    <div id="SelfDescribing" class="">
+    <div id="SelfDescribing" className="">
       
-          <section class="min-h-[100vh] smoothchange items-center bg-fixed bg-cover bg-center relative" 
+          <section className="min-h-[100vh] smoothchange items-center bg-fixed bgrid-colsover bgrid-colsenter relative" 
               style={{backgroundImage: `url(${data.pic})`}}>
                 <span className="w-full h-full absolute opacity-70 bg-black "></span>
-              <div class="visblecontainer pt-[30vh]">
+              <div className="visblecontainer pt-[30vh]">
               <motion.div
                   initial={{  opacity: 0}}
                   whileInView={{ opacity: 1}}
@@ -43,20 +43,20 @@ function SelfDescribing () {
                     0.955
                   ],
                   "duration": 1,
-                  }}  class="text-white z-10 animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono">
-                <i class="fi fi-rr-comment-heart text-5xl lg:text-8xl mr-[20px] pt-3 "></i>{lang==0&&"Self Describing"}{lang==1&&"自述" }</motion.div>
-                  <div class=" pb-48">
+                  }}  className="text-white z-10 animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono">
+                <i className="fi fi-rr-comment-heart text-5xl lg:text-8xl mr-[20px] pt-3 "></i>{lang==0&&"Self Describing"}{lang==1&&"自述" }</motion.div>
+                  <div className=" pb-48">
 
                       <motion.blockquote 
                                          initial={{y:150,opacity:0}}
                                          whileInView={{y:0,opacity:1}}
                                          transition={{duration:1}}
                                          viewport={{ once: true }}
-                      class="">
+                      className="">
                       <motion.div
-                              class=" animate__animated animate__zoomIn">
+                              className=" animate__animated animate__zoomIn">
                               <motion.div
-                              class=" animate__animated animate__slideInUp alignright  ">
+                              className=" animate__animated animate__slideInUp alignright  ">
                                   <motion.img width="200"
                                       initial={{"scale":0,opacity:0}}
                                       whileInView={{"scale":1,opacity:1}}
@@ -71,7 +71,7 @@ function SelfDescribing () {
                           initial={{y:50,opacity:0}}
                           whileInView={{y:0,opacity:1}}
                           viewport={{ once: true }}
-                          class=" block  animate__animated animate__slideInUp text-white">{data.description[lang]}</motion.p>
+                          className=" block  animate__animated animate__slideInUp text-white">{data.description[lang]}</motion.p>
                       </motion.blockquote>
 
                   </div>

@@ -44,7 +44,6 @@ export function useLanguage() {
   }, []);
 
   useEffect(() => {
-    console.log("jilu" + lang);
   }, [lang]);
 
   return lang;
@@ -135,14 +134,14 @@ export function preloadImages(imageUrls, onSuccess, onError) {
   // 等待所有图片加载完成
   Promise.all(imagePromises)
     .then(() => {
-      console.log('所有图片已预加载');
+      // console.log('所有图片已预加载');
       // 执行成功回调函数
       if (onSuccess) {
         onSuccess();
       }
     })
     .catch((error) => {
-      console.error('图片预加载失败:', error);
+      // console.error('图片预加载失败:', error);
       // 执行失败回调函数
       if (onError) {
         onError(error);

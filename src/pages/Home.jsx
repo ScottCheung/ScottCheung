@@ -12,19 +12,26 @@ import SubNav from '../conponent/subNav';
 import Hero from '../pages/Hero';
 import Database from '../Datebase.json';
 import { preloadImages } from '../help/helpFunction';
+import { motion, useTime, AnimatePresence } from "framer-motion";
 const bg = Database.PersonalInfo.Welcomebg
 
 
 function Home() {
     const bgImages = Database.preloadImages;
     preloadImages(bgImages);
+    
     return (
         <div>
             <Navbar topTextColor={true} />
             {/* <Hero /> */}
-            <body className='bg-fixed bg-center bg-cover left-0 top-0 bottle-0 right-0 overflow-hidden bg-sky-600/40' style={{ backgroundImage: `url(${bg[0]})`}}>
-                   <div className='bg-fixed bg-center bg-cover left-0 top-0 bottle-0 right-0 overflow-hidden' style={{ backgroundImage: `url(${bg[1]})`}}>
-                    <div className='bg-black/50 '>
+            <body className='bg-fixed bgrid-colsenter bgrid-colsover left-0 top-0 bottle-0 right-0 overflow-hidden bg-sky-600/40' style={{ backgroundImage: `url(${bg[0]})`}}>
+                   <div className='bg-fixed bgrid-colsenter bgrid-colsover left-0 top-0 bottle-0 right-0 overflow-hidden' style={{ backgroundImage: `url(${bg[1]})`}}>
+                    <motion.div 
+                    initial={{ opacity: 0, y: -30}}
+                    animate={{ opacity: 1, y:0, transition: { duration: 1,ease: "easeInOut"}}}
+                    exit={{ opacity: 0}}
+                    // transition={{ duration: 1 }}
+                    className='bg-black/50  '>
                             <Welcome />
                             
 
@@ -41,9 +48,10 @@ function Home() {
                                     {/* <div className='py-[400px]'>111</div> */}
                                 </div>
                             </div>
-                        </div>
+                        </motion.div>
 
                    </div>
+
             </body>
         </div>
     );

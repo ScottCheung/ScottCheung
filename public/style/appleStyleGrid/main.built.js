@@ -3874,7 +3874,7 @@
         halfway: "15.85 4.42 8.5 4.42 1.15 4.42",
         expanded: "15 7.72 8.5 1.13 2 7.72"
     }
-      , n = `<svg class="accordion-icon-svg" viewBox="0 0 17 8.85">\n\t<polyline data-accordion-icon-shape stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" fill-rule="evenodd" points="${s.collapsed}">\n\t\t<animate\n\t\t\tdata-accordion-animate="expand"\n\t\t\tattributeName="points"\n\t\t\tvalues="${s.collapsed};\n\t\t\t\t\t${s.halfway};\n\t\t\t\t\t${s.expanded}"\n\t\t\tdur="320ms"\n\t\t\tbegin="indefinite"\n\t\t\tfill="freeze"\n\t\t\tkeyTimes="0;\n\t\t\t\t\t0.5;\n\t\t\t\t\t1"\n\t\t\tcalcMode="spline"\n\t\t\tkeySplines="0.12, 0, 0.38, 0;\n\t\t\t\t\t\t0.2, 1, 0.68, 1"\n\t\t/>\n\t\t<animate\n\t\t\tdata-accordion-animate="collapse"\n\t\t\tattributeName="points"\n\t\t\tvalues="${s.expanded};\n\t\t\t\t\t${s.halfway};\n\t\t\t\t\t${s.collapsed}"\n\t\t\tdur="320ms"\n\t\t\tbegin="indefinite"\n\t\t\tfill="freeze"\n\t\t\tkeyTimes="0;\n\t\t\t\t\t0.5;\n\t\t\t\t\t1"\n\t\t\tcalcMode="spline"\n\t\t\tkeySplines="0.2, 0, 0.68, 0;\n\t\t\t\t\t\t0.2, 1, 0.68, 1"\n\t\t/>\n\t</polyline>\n</svg>`;
+      , n = `<svg className="accordion-icon-svg" viewBox="0 0 17 8.85">\n\t<polyline data-accordion-icon-shape stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" fill="none" fill-rule="evenodd" points="${s.collapsed}">\n\t\t<animate\n\t\t\tdata-accordion-animate="expand"\n\t\t\tattributeName="points"\n\t\t\tvalues="${s.collapsed};\n\t\t\t\t\t${s.halfway};\n\t\t\t\t\t${s.expanded}"\n\t\t\tdur="320ms"\n\t\t\tbegin="indefinite"\n\t\t\tfill="freeze"\n\t\t\tkeyTimes="0;\n\t\t\t\t\t0.5;\n\t\t\t\t\t1"\n\t\t\tcalcMode="spline"\n\t\t\tkeySplines="0.12, 0, 0.38, 0;\n\t\t\t\t\t\t0.2, 1, 0.68, 1"\n\t\t/>\n\t\t<animate\n\t\t\tdata-accordion-animate="collapse"\n\t\t\tattributeName="points"\n\t\t\tvalues="${s.expanded};\n\t\t\t\t\t${s.halfway};\n\t\t\t\t\t${s.collapsed}"\n\t\t\tdur="320ms"\n\t\t\tbegin="indefinite"\n\t\t\tfill="freeze"\n\t\t\tkeyTimes="0;\n\t\t\t\t\t0.5;\n\t\t\t\t\t1"\n\t\t\tcalcMode="spline"\n\t\t\tkeySplines="0.2, 0, 0.68, 0;\n\t\t\t\t\t\t0.2, 1, 0.68, 1"\n\t\t/>\n\t</polyline>\n</svg>`;
     e.exports = {
         points: s,
         template: n
@@ -6846,7 +6846,7 @@
     a.DATA_DOWNLOAD_COMPLETE_ATTRIBUTE = "data-anim-lazy-image-download-complete",
     a.DATA_DOWNLOADING_ATTRIBUTE = "data-anim-lazy-image-downloading",
     a.EVENTS = {},
-    a.EVENTS.DOWNLOAD_COMPLETE = "video-loading-complete",
+    a.EVENTS.DOWNLOAD_COMPLETE = "video-loadingrid-colsomplete",
     e.exports = a
 }
 , function(e, t, i) {
@@ -6941,7 +6941,7 @@
         value: !0
     }),
     t.default = void 0;
-    t.default = '<div class="modal" data-modal-element-visblecontainer data-modal-close>\n\t<div class="modal-overlay-visblecontainer" data-modal-element-overlay-visblecontainer data-modal-close>\n\t\t<div class="modal-overlay" data-modal-element-overlay data-modal-close-button-parent>\n\t\t\t<div class="modal-content-visblecontainer" data-modal-element-content-visblecontainer></div>\n\t\t</div>\n\t</div>\n</div>'
+    t.default = '<div className="modal" data-modal-element-visblecontainer data-modal-close>\n\t<div className="modal-overlay-visblecontainer" data-modal-element-overlay-visblecontainer data-modal-close>\n\t\t<div className="modal-overlay" data-modal-element-overlay data-modal-close-button-parent>\n\t\t\t<div className="modal-content-visblecontainer" data-modal-element-content-visblecontainer></div>\n\t\t</div>\n\t</div>\n</div>'
 }
 , function(e, t, i) {
     "use strict";
@@ -12635,8 +12635,8 @@
             const e = this.el.querySelector(`.${this._options.leftPaddleClassname}`)
               , t = this.el.querySelector(`.${this._options.rightPaddleClassname}`);
             this.el.classList.add("with-paddles"),
-            t.innerHTML = `\n\t\t\t<span class="${this._options.rightPaddleClassname}-icon">${s.right}</span>\n\t\t`,
-            e.innerHTML = `\n\t\t\t<span class="${this._options.leftPaddleClassname}-icon">${s.left}</span>\n\t\t`,
+            t.innerHTML = `\n\t\t\t<span className="${this._options.rightPaddleClassname}-icon">${s.right}</span>\n\t\t`,
+            e.innerHTML = `\n\t\t\t<span className="${this._options.leftPaddleClassname}-icon">${s.left}</span>\n\t\t`,
             this._paddles = {
                 start: this._isRightToLeft ? t : e,
                 end: this._isRightToLeft ? e : t

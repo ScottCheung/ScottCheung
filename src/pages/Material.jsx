@@ -35,7 +35,7 @@ export default function material() {
           </div>
         </header>
             </div>
-            <div className="welcome-video-wall-visblecontainer w-full flex justify-center py-16 flex-col z-50 bg-sky-100 bg-cover bg-center sticky top-0 shadow-2xl" >
+            <div className="welcome-video-wall-visblecontainer w-full flex justify-center py-16 flex-col z-50 bg-sky-100 bgrid-colsover bgrid-colsenter sticky top-0 shadow-2xl" >
                 <div className='flex flex-row justify-center items-center'>
                     <img className='w-[130px] ' src="https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/817d5684-7ac9-491b-8752-60cfa0809adc.png" alt="" />
                     <img className='w-[400px] h-[130px] py-12 px-7' src="https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/ea60b2ce-3079-4e5f-ad4d-440410ae50af.png" alt="" />

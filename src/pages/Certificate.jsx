@@ -44,12 +44,11 @@ export default function material() {
             className="section section-welcome no-pad-bottom"
           >
             <div className='welcome-video-wall-visblecontainer visblecontainer space-y-6 h-auto '>
-                <div className=" text-gray-500  pb-4 sticky top-0 z-50 bg-white" >
+                <div className=" text-gray-500  pb-4 sticky   top-0 z-50 bg-gradient-to-b from-white from-10% via-white via-90% to-white/10  " >
                   <h2 className="sticky top-0 z-50 typography-section-intro-headline section-intro-headline pt-[100px]">
                   {lang==1&&"荣誉"}{lang==0&&"Certificates"}
-                  
                   </h2>
-                  <p className=' text-justify'>
+                  <p className=' text-justify pb-[30px]'>
                   {lang==1&&"所有荣誉真实有效。"}{lang==0&&"All Certificates are real."}
                 </p>
                 </div>

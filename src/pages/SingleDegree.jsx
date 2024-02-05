@@ -1,13 +1,13 @@
 import Navbar from '../conponent/Navbar'
 import StudyExperience from '../conponent/StudyExperience';
 import database from '../Datebase.json'
-import { motion, AnimatePresence } from "framer-motion"
 import React, { useState, useEffect } from 'react';
 const pathname = window.location.pathname;
 const course = database.PersonalInfo.StudyExperience;
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../help/helpFunction';
 import { useParams } from 'react-router';
+import { motion, AnimatePresence } from "framer-motion"
 
 
 
@@ -49,20 +49,24 @@ export default function Example() {
   }, []);
   return (
  
-  <div>
-<div
+  <div className='bg-white'>
+    <AnimatePresence>
+<motion.div
+  layout
+  layoutId={localStorage.getItem("currenStu")}
   className="page-overview "
   data-component-list="PageXpController"
   data-anim-scroll-group="body"
 >
   <Navbar />
-	{/* <a rel="stylesheet" href="../appleStyleGrid/fonts"/> */}
-	<a rel="stylesheet" href="../appleStyleGrid/overview.built.css" type="text/css"/>
-	{/* <a rel="stylesheet" href="../appleStyleGrid/overview.css"/> */}
-	<a rel="stylesheet" href="../work/main.built.css" type="text/css" />
-	{/* <a rel="stylesheet" href="../work/overview.built.css" type="text/css" /> */}
-	{/* <a rel="stylesheet" href="../work/main.built2.css" type="text/css" /> */}
-	{/* <a rel="stylesheet" href="../work/overview.built2.css" type="text/css" /> */}
+      <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href="../style/output.css" type="text/css"/>
+      <link rel="stylesheet" href="../style/style.css" type="text/css"/>
+      <link rel="stylesheet" href="../style/appleStyleGrid/overview.built.css" type="text/css"/>
+      <link rel="stylesheet" href="../style/work/main.built.css" type="text/css" />
+      <link rel="stylesheet" href="../style/work/overview.built.css" type="text/css" />
+      <link rel="stylesheet" href="../style/work/main.built2.css" type="text/css" />
+      <link rel="stylesheet" href="../style/work/overview.built2.css" type="text/css" />
   <main id="main" className="main" role="main">
     <section
       className="section section-welcome no-pad-bottom"
@@ -81,7 +85,7 @@ export default function Example() {
       </div>
           {data[0].type[0]=="Bacholor degree"&&
           <div
-          className="welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky top-0 z-50 shadow-2xl" 
+          className="welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bgrid-colsover bgrid-colsenter sticky top-0 z-50 shadow-2xl" 
           >
             <div className='flex flex-row justify-center items-center'>
                 <img className='w-[130px] px-7' src="https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/817d5684-7ac9-491b-8752-60cfa0809adc.png" alt="" />
@@ -90,7 +94,7 @@ export default function Example() {
         </div>}
 
           {data[0].type[0]=="Master degree"&&<div
-            className="welcome-video-wall-visblecontainer w-full flex justify-center py-9 flex-col z-50 bg-yellow-100 bg-cover bg-center sticky top-0 z-50 shadow-2xl" 
+            className="welcome-video-wall-visblecontainer w-full flex justify-center py-9 flex-col z-50 bg-yellow-100 bgrid-colsover bgrid-colsenter sticky top-0 z-50 shadow-2xl" 
             style={{backgroundImage:"url(https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png)"}}
             >
               <div className='flex flex-row justify-center items-center'>
@@ -129,12 +133,12 @@ export default function Example() {
             className="section section-welcome no-pad-bottom visblecontainer"
           >
             <div className='welcome-video-wall-visblecontainer  space-y-6 h-auto w-[100%]'>
-                <div className="w-[100%] text-gray-500 pt-24 pb-4  bg-white sticky top-[25px] z-50" >
+                <div className="w-[100%] text-gray-500 pt-24 pb-4  bg-gradient-to-b from-white from-10% via-white via-90% to-white/0  sticky top-[25px] z-50" >
                   <h2 className="typography-section-intro-headline section-intro-headline ">
                   {lang==1&&"主要课程"}
                   {lang==0&&"Main Course"}
                   </h2>
-                 {lang==0&& <thead className={`${windowWidth>786?"":"hidden"} w-[100%] flex justify-between text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400`}>
+                 {lang==0&& <thead className={`${windowWidth>786?"":"hidden"} pb-[15px] w-[100%] flex justify-between text-gray-700 uppercase  dark:bg-gray-700 dark:text-gray-400`}>
                     <th className="pl-[2%] py-3 text-center w-[5%]">
                         Serial
                       </th>
@@ -148,7 +152,7 @@ export default function Example() {
                         descrition
                       </th>
                   </thead>}
-                  {lang==1&&<thead className={`${windowWidth>786?"":"hidden"} w-[100%] flex justify-between text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400`}>
+                  {lang==1&&<thead className={`${windowWidth>786?"":"hidden"} pb-[15px] w-[100%] flex justify-between text-gray-700 uppercase  dark:bg-gray-700 dark:text-gray-400`}>
                     <th className="pl-[2%] py-3 text-center w-[10%]">
                         序号
                       </th>
@@ -236,7 +240,8 @@ export default function Example() {
           </section>
     <StudyExperience hideTittle={true} simpleVer={true}/>
   </main>
-</div>
+</motion.div>
+</AnimatePresence>
 </div>
   )
 }

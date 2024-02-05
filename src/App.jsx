@@ -5,7 +5,6 @@ import {
 import Home from './pages/Home.jsx';
 import Certificate from './pages/Certificate.jsx';
 import Errorpage from './pages/Errorpage.jsx';
-import Gallery from './pages/Project.jsx';
 import SingleDegree from './pages/SingleDegree.jsx';
 import Contact from './pages/ContactPage.jsx';
 import Degrees from './pages/Degree.jsx';
@@ -14,7 +13,8 @@ import Scholarship from './pages/Scholarship.jsx';
 import Life from './pages/life.jsx';
 import SingleWhyme from './pages/SingleWhyme.jsx';
 import SingleWork from './pages/SingleWork.jsx';
-import Project from './pages/Project.jsx';
+import Gallery from './conponent/Gallery.jsx';
+import SinglePicture from './conponent/SinglePicture.jsx';
 
 
 const router = createBrowserRouter([
@@ -30,14 +30,19 @@ const router = createBrowserRouter([
     path: '/Home',
     element: <Home />,
   },
-  // {
-  //   path: '/project',
-  //   element: <Project />,
-  // },
   {
     path: '/life',
     element: <Life />,
   },
+    {
+    path: '/life/gallery',
+    element: <Gallery />,
+  },
+  {
+    path: '/life/gallery/:gallery',
+    element: <Gallery />,
+  },
+  
   {
     path: '*',
     element: <Errorpage />,

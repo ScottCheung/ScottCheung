@@ -39,11 +39,11 @@ export default function Scholarship() {
             className="section section-welcome no-pad-bottom"
           >
             <div className='welcome-video-wall-visblecontainer visblecontainer space-y-6 h-auto '>
-                <div className=" text-gray-500  pb-4 sticky top-0 z-50 bg-white" >
+                <div className=" text-gray-500  pb-4 sticky top-0 z-50 bg-gradient-to-b from-white from-10% via-white via-90% to-white/0 " >
                   <h2 className="typography-section-intro-headline section-intro-headline pt-[100px]">
                   {lang==1&&"奖学金"}{lang==0&&"Scholorship"}
                   </h2>
-                  <p className=' text-justify'>
+                  <p className=' text-justify pb-[30px]'>
                   {lang==1&&"所有的奖学金都真实。"}{lang==0&&"All scholorships are real."}
                 </p>
                 </div>

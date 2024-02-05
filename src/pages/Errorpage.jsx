@@ -20,10 +20,11 @@ const Message ={
 
 export default function Errorpage () {
   const lang = useLanguage();
+  document.body.style.overflow = 'hidden';
   return (
-    <div >
+    <div className="min-h-screen ">
       <Navbar topTextColor={true}/>
-      <main className="h-[100vh] bg-gray-900/40 animate__animated animate__fadeIn  place-items-center flex justify-center  px-6 py-24 sm:py-32 lg:px-8">
+      <main className="h-[100vh] bg-gray-900/40 animate__animated animate__fadeIn  place-items-center flex justify-center  px-6 py-24 sm:py-32 lg:px-8 ">
         <div className="text-center ">
           <motion.p 
                             initial={{scale:0,y:"-90px",opacity:0}}

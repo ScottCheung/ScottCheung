@@ -25,11 +25,10 @@ function KeyFeature() {
   }, []);
 
   const KeyFeature = ( 
-      <section class={`smoothchange items-center bg-fixed bg-cover bg-center relative `} style={{ backgroundImage: `url(${bg[0]})`}}>
-        <div class={`smoothchange items-center bg-fixed bg-cover bg-center relative `} style={{ backgroundImage: `url(${bg[1]})`}}>
+    <section className={`smoothchange items-center bg-fixed bg-center relative flex justify-center`} style={{ backgroundImage: `url(${bg[0]})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center' }}>
         <span className="w-full h-full absolute opacity-70 bg-black "></span>
         <div className="items-center min-h-[100vh]  flex justify-center py-[20vh]">
-            <div class=" items-center ">
+            <div className=" items-center ">
               <AnimatePresence>
                 <motion.dl
                   variants={Welcomevisblecontainer}
@@ -37,7 +36,7 @@ function KeyFeature() {
                   whileInView="visible"
                   transition={StagerFadeInUp}
                   viewport={{ once: true }}
-                  class="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 animate__animated animate__fadeInUp place-items-center">
+                  className="grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 animate__animated animate__fadeInUp place-items-center">
                   {KeyFeatures.map((KeyFeature, index) => (
                     <motion.div
                       key={index}
@@ -48,34 +47,28 @@ function KeyFeature() {
                       layout
                       className='flex flex-col w-[33%]  p-[20px] m-5 rounded-[28px] min-w-[350px]  hover:bg-gray-950/20 hover:backdrop-blur-md  hover:shadow-2xl focus:shadow-2xl  items-center'>
                       <div className='items-start flex'>
-                        <a data-popover-target={`keyFeatureDes-${index}`} href={`/${KeyFeature.href}`}  >
-                          <div style={{ animationDelay: `${index * 0.2}s` }} class="ml-[-5px] text-center animate__animated animate__zoomIn text-[150px] font-semibold  text-white ">
+                        <a data-popover-target={`keyFeatureDes-${index}`} href={`${KeyFeature.href}`}  >
+                          <div style={{ animationDelay: `${index * 0.2}s` }} className="ml-[-5px] text-center animate__animated animate__zoomIn text-[150px] font-semibold  text-white ">
                             <N n={KeyFeature.no} d={1.5} />
                           </div>
                           <div className='flex items-center justify-center mt-[-10px]'>
-                            <div style={{ animationDelay: `${index * 0.2}s` }} class="flex-shrink-0 mr-[20px]">
-                              <div class="rounded-full w-[30px] h-[30px] items-center flex justify-center bg-lime-500"><i className={`pt-3 text-[20px] fi text-gray-50  ${KeyFeature.icon}`}></i></div>
+                            <div style={{ animationDelay: `${index * 0.2}s` }} className="flex-shrink-0 mr-[20px]">
+                              <div className="rounded-full w-[30px] h-[30px] items-center flex justify-center bg-lime-500"><i className={`pt-3 text-[20px] fi text-gray-50  ${KeyFeature.icon}`}></i></div>
                             </div>
                             <div className='animate__animated animate__zoomIn text-[30px]  text-lime-500  items-center'>{KeyFeature.keyfeature[lang]}</div>
                           </div>
                         </a>
                       </div>
-                      <div data-popover id={`keyFeatureDes-${index}`} role="tooltip" class="absolute z-10 invisible  inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-                        <div class="px-6 py-4">
+                      <div data-popover id={`keyFeatureDes-${index}`} role="tooltip" className="absolute z-10 invisible  inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                        <div className="px-6 py-4">
                           <p className='text-[13px] text-left font-mono'>{KeyFeature.description[lang]}</p>
                         </div>
                         <div data-popper-arrow></div>
                       </div>
-
                     </motion.div>))}
                 </motion.dl>
               </AnimatePresence>
-
             </div>
-
-
-          </div>
-
         </div>
       </section>
   );

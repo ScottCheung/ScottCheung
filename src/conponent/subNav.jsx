@@ -38,25 +38,25 @@ useEffect(() => {
   return (
     <AnimatePresence>
     {isTop && <motion.div
-    initial={{opacity: 0,scale:0}}
-    animate={{opacity:1,scale:1}}
+    initial={{opacity: 0,scale:0,y:600 }}
+    animate={{opacity:1,scale:1,y:0}}
     exit={{ opacity: 0,scale:0 }}
-    transition={{ type: "spring", duration: 1 }}
-    className={`items-center justify-center  mb-[-30px] z-50 flex px-[10%]  container flex`}>
+    transition={{ type: "spring", duration: 1}}
+    className={`items-center justify-center  mb-[-30px] z-30 flex px-[10%]  container flex`}>
     <motion.div
       layout
       transition={{ type: "spring", duration: 0.3 }}
-      class={`w-full animate__animated flex justify-between rounded-full items-center  shadow-xl animate__slideInUp bg-white`} >
+      className={`w-full animate__animated flex justify-between rounded-full items-center  shadow-xl animate__slideInUp animate_delay_1000 bg-white`} >
       {navLocation.map((item, index) => (
-
         <a key={index} href={item.id} style={{ animationDelay: `${index * 0.17}s` }} className={`bg-white flex  w-full h-full  justify-center animate__zoomIn ${isTop ? 'text-black  ' : 'text-gray-900  '} ${index === 0 ? 'rounded-s-full' : ''} ${index === (navLocation.length - 1) ? 'rounded-e-full' : ''} animate__animated  hover:opacity-100 font-medium hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}>
           <motion.div
             layout
             key="modal"
             // style={{ borderRadius: 20 }}
-            whileHover={{ scale: 1.05 }}
+            whileHover={{ scale: 1.1,transition: { duration: 0.7 } }}
             whileTap={{ scale: 0.95 }}
             whileFocus={{ scale: 1 }}
+            transition={{ duration: 0.3 }}
             className='w-full'>
             <div className='icon  text-center  content-center  py-2 my-3'>
               {isTop ? (<i className={` flex fi justify-center  py-1 text-[15px]  ${item.logo}`}></i>) : (<></>)}

@@ -56,7 +56,7 @@ export default function singleWork() {
             }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: "0px", scale: 1 }}
-            className="absolute top-0 w-full h-full bg-center bg-cover"
+            className="absolute top-0 w-full h-full bgrid-colsenter bgrid-colsover"
             style={{
               backgroundImage:
                 "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=2710&q=80')"
@@ -143,7 +143,7 @@ export default function singleWork() {
               <div className="mt-10 py-10  text-center">
                 <div className="flex flex-wrap justify-center">
                   <div
-                    class={`grid mb-[228px]`}>
+                    className={`grid mb-[228px]`}>
                     {/* row1-right-with-button */}
                     <div
                       className="grid-item large-span-12 small-span-12 rounded-[14px] p-[28px] ">

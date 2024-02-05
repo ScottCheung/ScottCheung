@@ -54,23 +54,20 @@ function Capability() {
 
   const Capability = (
     <>
-
       <motion.div
         className=" grid visblecontainer section-sapphire py-48 ">
         {/* stack */}
         <motion.div
         layout
-          className="smoothchange grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers  mt-[-25vh]"
-          data-analytics-section-engagement="name:all your stickers in one place"
-          data-tile-name="stickers"
+          className="transition-all duration-500 grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers  mt-[-25vh]"
         >
           <motion.div
           layout
-          id='Capability' className="tile smoothchange tile-rounded shadow-[40px] h-auto ">
+          id='Capability' className="tile transition-all duration-500 tile-rounded shadow-[40px] h-auto ">
             <motion.div
             layout 
             transition={{ transition: { duration: 1 } }}
-            className="tile-content bg-gray-950/90 smoothchange h-auto min-h-[100vh]"
+            className="tile-content bg-gray-950/90 transition-all duration-500 h-auto min-h-[100vh]"
               style={{
                 backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.gallerybg[1]})`,
                 backgroundSize: `100% auto`,
@@ -79,14 +76,14 @@ function Capability() {
               }}
             >
 
-              <div className="tile-content bg-gray-950/90 smoothchange h-auto min-h-[100vh]"
+              <div className="tile-content bg-gray-950/90 transition-all duration-500 h-auto min-h-[100vh] transition-all duration-500"
               style={{
                 backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.gallerybg[0]})`,
                 backgroundSize: `100% auto`,
                 backgroundRepeat: 'repeat',
                 backgroundPosition: "center bottle"
               }}>
-                                <motion.span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black smoothchange"></motion.span>
+                                <motion.span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black transition-all duration-500 transition-all duration-500"></motion.span>
               <motion.div
               layout
               initial={{  opacity: 0}}
@@ -99,20 +96,20 @@ function Capability() {
                 0.955
               ],
               "duration": 2}}
-              className={`pb-24 tile-header z-40 typography-section-intro-headline section-intro-headline from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-r text-transparent bg-clip-text text-center pt-[70px] `}>
+              className={`transition-all duration-500 pb-24 tile-header z-40 typography-section-intro-headline section-intro-headline from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-r text-transparent bg-clip-text text-center pt-[70px] `}>
                 <i className=' fi text-5xl lg:text-8xl fi-rr-circle-user mr-[20px] pt-3 '></i>
                 {lang == 0 && "Capability"}{lang == 1 && "能力"}
               </motion.div>
               <motion.div 
               layout
-              className="z-30  smoothchange">
+              className="z-30  ">
                 <motion.ul 
                   variants={Welcomevisblecontainer}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
                   layout
-                  class="flex tile-header  justify-between min-h-[70px]  text-center  w-full pt-[15px]">
+                  className="flex tile-header  justify-between min-h-[70px]  text-center  w-full pt-[15px]">
                   {tabs.map((tab) => (
                     <motion.li
                         key={tab.label}
@@ -132,7 +129,7 @@ function Capability() {
                         transition={StagerFadeInUp}
                         whileHover={{ scale: 1.01,opacity:1 }}
                         whileTap={{ scale: 0.99 }}
-                        className={`smoothchange w-full tile-headline typography-subsection-headline ${tab === selectedTab ? " text-[14px] md:text-[20px] lg:text-[26px]" : "hover:opacity-100 transition-opacity duration-500  text-[12px] md:text-[15px] lg:text-[20px]"} tile-headline typography-subsection-headline`}
+                        className={`transition-all duration-500 w-full tile-headline typography-subsection-headline ${tab === selectedTab ? " text-[14px] md:text-[20px] lg:text-[26px]" : "hover:opacity-100 transition-opacity duration-500  text-[12px] md:text-[15px] lg:text-[20px]"} tile-headline typography-subsection-headline`}
                         onClick={() => setSelectedTab(tab)}>
                       <motion.button
                       layout
@@ -161,7 +158,7 @@ function Capability() {
                     animate={{ x: 0, opacity: 1, scale: 1 }}
                     exit={{ x: -30, opacity: 0, scale: 0.97 }}
                     transition={{ duration: 0.35 }}
-                    className='tile-header'
+                    className='tile-header transition-all duration-500'
                   >
                     {/* {selectedTab.content} */}
                     {(selectedTab.label[lang] == "Frontend"||selectedTab.label[lang] == "前端") && <motion.div className='flex w-full flex-col'>{/* Front-end */}
@@ -203,7 +200,7 @@ function Capability() {
                           initial="hidden"
                           whileInView="visible"
                           viewport={{ once: true }}
-                          class="flex justify-center items-center w-full h-full grid grid-cols-5 " >
+                          className="flex justify-center items-center w-full h-full grid grid-cols-5 " >
                           {frontEnd.map((app, index) => (
                             <motion.div
                               key={index}
@@ -235,7 +232,7 @@ function Capability() {
                     </motion.div>}
                     {(selectedTab.label[lang] == "Backend"||selectedTab.label[lang] == "后端") && <motion.div className='flex w-full flex-col'> {/* Back-end */}
                       <motion.div className=" mt-[20px] ">
-                        <h3 className="tile-headline typography-subsection-headline from-orange-500 to-amber-500 bg-gradient-to-r text-transparent bg-clip-text">
+                        <h3 className="tile-headline typography-subsection-headline from-orange-500 to-amber-500 bg-gradient-to-r text-transparent bg-clip-text transition-all duration-500">
                           {lang == 0 && "Backend"}{lang == 1 && "后端"}
                         </h3>
                         <p className="tile-copy  from-orange-500 to-amber-500  bg-gradient-to-r text-transparent bg-clip-text">
@@ -274,7 +271,7 @@ function Capability() {
                           initial="hidden"
                           whileInView="visible"
                           viewport={{ once: true }}
-                          class="flex justify-center items-center w-full h-full grid grid-cols-5 content-center" >
+                          className="flex justify-center items-center w-full h-full grid grid-cols-5 content-center" >
                           {BackendEnd.map((app, index) => (
                             <motion.div
                               key={index}
@@ -286,7 +283,7 @@ function Capability() {
                               <motion.div className='flex-shrink-0 flex justify-center'>
                                 <img key={index} className='w-[35px] h-[35px] md:w-18 md:w-18 lg:w-24 lg:h-24 from-orange-500 to-amber-500  bg-gradient-to-br p-2 rounded-[9px]' src={app.image} alt={app.name} />
                               </motion.div>
-                              <motion.div className='text-[7px] md:text-[12px] font-semibold lg:text-[15px] text-center pt-[20px] from-orange-500 to-amber-500  bg-gradient-to-br text-transparent bg-clip-text'>
+                              <motion.div className='text-[7px] md:text-[12px] font-semibold lg:text-[15px] text-center pt-[20px] from-orange-500 to-amber-500  bg-gradient-to-br text-transparent bgrid-colslip-text'>
                                 {app.name}
                               </motion.div>
 
@@ -340,7 +337,7 @@ function Capability() {
                           initial="hidden"
                           whileInView="visible"
                           viewport={{ once: true }}
-                          class="flex justify-center items-center w-full h-full grid grid-cols-5 content-center" >
+                          className="flex justify-center items-center w-full h-full grid grid-cols-5 content-center" >
                           {database.map((app, index) => (
                             <motion.div
                               key={index}
@@ -370,7 +367,7 @@ function Capability() {
                         <h3 className="tile-headline typography-subsection-headline from-cyan-500 to-blue-500 bg-gradient-to-r text-transparent bg-clip-text">
                           {lang == 0 && "Algorithm"}{lang == 1 && "算法"}
                         </h3>
-                        <p className="tile-copy  from-cyan-500 bg-gradient-to-r to-blue-500 text-transparent bg-clip-text">
+                        <p className="tile-copy  from-cyan-500 bg-gradient-to-r to-blue-500 text-transparent bgrid-colslip-text">
                           {lang == 0 &&
                             <motion.div>
                               <p className='py-10 text-[17px] font-[700]'>
@@ -406,7 +403,7 @@ function Capability() {
                           initial="hidden"
                           whileInView="visible"
                           viewport={{ once: true }}
-                          class="flex justify-center items-center w-full h-full grid grid-cols-5 content-center" >
+                          className="flex justify-center items-center w-full h-full grid grid-cols-5 content-center" >
                           {algorithm.map((app, index) => (
                             <motion.div
                               key={index}
@@ -418,7 +415,7 @@ function Capability() {
                               <motion.div className='flex-shrink-0 flex justify-center'>
                                 <img key={index} className='w-[35px] h-[35px] md:w-18 md:w-18 lg:w-24 lg:h-24 from-cyan-500 bg-gradient-to-br to-blue-500  p-2 rounded-[9px]' src={app.image} alt={app.name} />
                               </motion.div>
-                              <motion.div className='text-[7px] md:text-[12px] font-semibold lg:text-[15px] text-center pt-[20px] from-cyan-500 bg-gradient-to-r to-blue-500 text-transparent bg-clip-text'>
+                              <motion.div className='text-[7px] md:text-[12px] font-semibold lg:text-[15px] text-center pt-[20px] from-cyan-500 bg-gradient-to-r to-blue-500 text-transparent bgrid-colslip-text'>
                                 {app.name}
                               </motion.div>
 
@@ -470,7 +467,7 @@ function Capability() {
                           initial="hidden"
                           whileInView="visible"
                           viewport={{ once: true }}
-                          class="flex justify-between items-center w-full h-full grid grid-cols-5 content-center mb-24 " >
+                          className="flex justify-between items-center w-full h-full grid grid-cols-5 content-center mb-24 " >
                           {other.map((app, index) => (
                             <motion.div
                               key={index}
@@ -536,7 +533,7 @@ function Capability() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  class="flex justify-center items-center w-full h-full grid grid-cols-4 content-center mb-24 bg-white/30 p-20 rounded-[18px]" >
+                  className="flex justify-center items-center w-full h-full grid grid-cols-4 content-center mb-24 bg-white/30 p-20 rounded-[18px]" >
                   {apps.map((app, index) => (
                     <motion.div
                       key={index}
@@ -871,7 +868,7 @@ function Capability() {
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center bottom'
               }}>
-                <div className="tile-content bg-[#fed9d3]"
+                <div className="tile-content"
               style={{
                 backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infp[0]})`,
                 backgroundSize: '100% auto',
@@ -904,7 +901,7 @@ function Capability() {
                       {lang == 0 && "INFP"}{lang == 1 && "小蝴蝶"}
                     </p>
 
-                    <i class="ml-2 fi fi-rr-interrogation flex justify-end items-center my-0"></i>
+                    <i className="ml-2 fi fi-rr-interrogation flex justify-end items-center my-0"></i>
 
                   </a>
                 </motion.div>

@@ -35,8 +35,16 @@ export default function WhyM() {
   return (
     <>
       <Navbar topTextColor={true} />
+      {/* <link rel="stylesheet" href="../style/output.css" type="text/css"/> */}
+	{/* <link rel="stylesheet" href="../style/style.css" type="text/css"/> */}
+	<link rel="stylesheet" href="../style/appleStyleGrid/overview.built.css" type="text/css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+	{/* <link rel="stylesheet" href="../style/work/main.built.css" type="text/css"/>
+	<link rel="stylesheet" href="../style/work/overview.built.css" type="text/css"/>
+	<link rel="stylesheet" href="../style/work/main.built2.css" type="text/css"/>
+	<link rel="stylesheet" href="../style/work/overview.built2.css" type="text/css"/> */}
       <main className=""
-  style={(windowWidth < 768) && { ...bgPic(selectedWhyMeItem.pic, "600px auto", "bottom center") } || null}>
+  style={(windowWidth < 768) && { ...bgPic(selectedWhyMeItem.pic[0], "600px auto", "bottom center") } || null}>
         <section className="relative" style={{ height: "400px" }}>
           <motion.div
             initial={{ opacity: 0, y: "60px", scale: 0.95 }}
@@ -51,10 +59,10 @@ export default function WhyM() {
             }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: "0px", scale: 1 }}
-            className="absolute top-0 w-full h-full bg-center bg-cover"
+            className="absolute top-0 w-full h-full bgrid-colsenter bgrid-colsover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=2710&q=80')"
+                "url('https://3o.hk/images/2024/01/22/profilebg.jpg')"
             }}
           >
             <span
@@ -131,14 +139,14 @@ export default function WhyM() {
                 whileInView={{ opacity: 1, y: "0px" }}
                 viewport={{ once: true }}
                 className="text-center mt-12">
-                <h3 className={`text-[32px] font-semibold leading-normal mb-2 ${selectedWhyMeItem.color1+" "+selectedWhyMeItem.color2} bg-gradient-to-br text-transparent bg-clip-text mb-2 animate__animated animate__zoomIn`}>
+                <h3 className={`text-[32px] font-semibold leading-normal mb-2 ${selectedWhyMeItem.color1+" "+selectedWhyMeItem.color2} bg-clip-text text-transparent bg-gradient-to-r mb-2 animate__animated animate__zoomIn`}>
                   {selectedWhyMeItem.advantage}
                 </h3>
               </motion.div>
               <div className="mt-10 py-10  text-center">
                 <div className="flex flex-wrap justify-center">
                   <div
-                    class={`grid `}>
+                    className={`grid `}>
                     {/* row1-right-with-button */}
                     <div
                       className="grid-item large-span-12 small-span-12 rounded-[14px] p-[28px] ">
@@ -159,7 +167,7 @@ export default function WhyM() {
                                 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className={`tile-headline typography-subsection-headline ${selectedWhyMeItem.color1+" "+selectedWhyMeItem.color2} bg-gradient-to-r text-transparent bg-clip-text text-[28px] animate__animated animate__zoomIn`}>
+                                className={`tile-headline typography-subsection-headline ${selectedWhyMeItem.color1+" "+selectedWhyMeItem.color2} bg-clip-text text-transparent bg-gradient-to-r text-[28px] animate__animated animate__zoomIn min-h-[600px]`}>
                                 {selectedWhyMeItem.description}
                               </motion.div>
                             </div>
@@ -176,9 +184,6 @@ export default function WhyM() {
 
         <WhyMe hideTittle={true} />
       </main>
-      <a rel="stylesheet" href="./appleStyleGrid/overview.built.css" type="text/css" />
-      <a rel="stylesheet" href="../appleStyleGrid/overview.built.css" type="text/css" />
-      <a rel="stylesheet" href=".../appleStyleGrid/overview.built.css" type="text/css" />
 
       <Contact />
     </>

@@ -1,10 +1,11 @@
 import { useLayoutEffect, useState } from 'react';
 import Navbar from "../conponent/Navbar";
 import Contact from "../conponent/Contact";
-import database from "../Datebase.json";
+import database from "../Datebase.json"
 import { motion, AnimatePresence } from "framer-motion"
 import { useLanguage } from '../help/helpFunction';
 import { Link } from 'react-router-dom';
+import LifeCategory from '../conponent/lifeCategory';
 
 const Lifes = database.PersonalInfo.Lifes
 const introText = [
@@ -50,24 +51,27 @@ export default function Life() {
             ],
             "duration": 0.7}}
             whileInView={{opacity:1,y:"0px",scale:1}}  
-            className="absolute top-0 w-full h-full bg-center bg-cover"
+            className="absolute top-0 w-full h-full bgrid-colsenter bgrid-colsover"
             style={{
-              backgroundImage: "url('https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=1267&q=80')"
+              backgroundImage: "url('https://3o.hk/images/2024/01/20/IMG_0742.png')",
+              backgroundPosition: "top",
+              backgroundSize: "cover",
             }}>
-            <span id="blackOverlay" className="w-full h-full absolute opacity-75 bg-black"></span>
+            <span id="blackOverlay" className="w-full h-full absolute opacity-60 bg-black"></span>
           </motion.div>
           <div className=" relative mx-auto">
             <div className="items-center flex justify-between">
-              <div className="w-full px-4 ml-auto mr-auto text-center">
+              <div className="w-full px-4 ml-auto mr-auto text-right">
                 <div className="container">
-                  <h1 className="animate__animated animate__zoomIn text-white font-semibold sm:text-[70px] text-[35px]">
-                    {text.title}
-                  </h1>
-                  <div className="lg:w-12/4 md:w-12/6 mt-[100px]" >
+
+                  <div className="lg:w-12/4 md:w-12/6 flex justify-end lg:mt-[500px] mt-[-40px]" >
                     <p className="lg:w-6/12 animate__animated animate__fadeInUp mt-4 sm:text-[20px] text-[15px] text-gray-300 text-justify">
                     {text.content}
                     </p>
                   </div>
+                  <h1 className="animate__animated animate__zoomIn text-white font-semibold lg:text-[70px] text-[35px]">
+                    {text.title}
+                  </h1>
                 </div>
               </div>
             </div>
@@ -76,45 +80,7 @@ export default function Life() {
 
         <section className="pt-20 bg-gray-300 ">
           <div className="visblecontainer">
-          <div className={` grid ${windowWidth<786? "grid-cols-2" : `${windowWidth<1024? "grid-cols-3":"grid-cols-4"}`}  justify-center py-[100px]`}>
-              {Lifes.map((life, index) => (
-                <motion.div 
-                whileHover={{scale:1.05}}
-                whileTap={{scale:0.95}}
-                transition={{duration:0.5}}
-                className="w-full  pt-[150px] text-center rounded-[12px] overflow-visible"
-                style={{
-                  backgroundImage: `url(${life.pic})`,
-                  backgroundSize: '70% auto',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'left bottom'
-                }}
-                >
-                  <div className="relative flex flex-col min-w-0 break-words  bg-white/50  w-full shadow-lg  rounded-[12px] overflow-visible"
-                  style={{
-                    backgroundImage: `url(${life.pic})`,
-                    backgroundSize: '70% auto',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'left bottom'
-                  }}
-                  >
-                    <div className="px-6 py-6 flex-auto">
-                      <div className='flex justify-end'>
-                        <div className='flex flex-col'>
-                            <div class="flex-shrink-0">
-                                <div className={`flex justify-end w-18 h-18 rounded-full items-center `}>
-                                  <i className={` fi text-[25px]  fi-sr-${life.icon} `}></i>
-                                </div>
-                              </div>
-                              <h6 className="text-3xl font-semibold text-right">
-                              {life.label}
-                              </h6>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </motion.div>))}
-            </div>
+            <LifeCategory />
             <div className='text-center text-[30px]'> PAGE is developing...Looking forward to seeing you with more Content! </div>
             <div className='text-center text-[30px] pb-[200px]'> 网页正在开发中...期待更多内容与您见面! </div>
             <div className="flex hidden justify-between items-center mt-32">

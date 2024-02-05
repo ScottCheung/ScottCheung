@@ -3,6 +3,8 @@ import { Link, useNavigate } from 'react-router-dom';
 import { motion, useTime, AnimatePresence } from "framer-motion";
 import data from '../Datebase.json';
 import { hideRow, bgPic, useLanguage, SelectText,scrollToHash } from '../help/helpFunction';
+import LifeCate from './lifeCategory';
+
 // import { Trans } from "@lingui/macro";
 
 
@@ -12,21 +14,51 @@ const navLocation = data.Navbar.Location;
 
 
 
-function Navbar({ topTextColor }) {
+function Navbar({ topTextColor,BG,ExpandElement }) {
   const [lang, setLang] = useState(parseInt(localStorage.getItem('lang')) || 0);
   const isTopTextColorWhite = topTextColor;
   const scrollTo = scrollToHash();
   const navigate = useNavigate();
   const [isExpanded, setIsExpanded] = useState(true);
   const [isTop, setIsTop] = useState(true);
+  const [isShowVersion, setIsShowVersion] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpened, setIsOpened] = useState(false);
   const currentPage = window.location.pathname;
   const isHomeOrRoot = (currentPage === ('/') || currentPage === ('/home'))
   const [currentTime, setCurrentTime] = useState(new Date());
-
-
+  const [selectedTab, setSelectedTab] = useState(null);
+  const hideExpandElement= ExpandElement ||false ;
+  const buttonStyles = {
+    '--scrim-background-color': 'rgb(66, 66, 66)',
+    '--scrim-hover-background-color': '#37373a',
+    '--scrim-active-background-color': '#2f2f32',
+    '--icon-color': '#f7f7f7',
+    '--icon-interaction-color': 'rgb(255, 255, 255)',
+    'borderRadius': '50%',
+    'display': 'flex',
+    'alignItems': 'center',
+    'height': '36px',
+    'width': '36px',
+    'outline': 'none',
+    'position': 'absolute',
+    'zIndex': 1,
+    'right': '20px',
+    'bottom': '20px',
+    'margin': 0,
+    'padding': 0,
+    'border': 0,
+    'justifyContent': 'center',
+    'cursor': 'pointer',
+    'transition': 'background-color 100ms linear, color 100ms linear',
+    'backgroundColor': 'var(--scrim-background-color)',
+    'color': 'var(--icon-color)',
+  };
+  const iconStyles = {
+    'fill': 'currentColor',
+    'pointerEvents': 'none',
+  };
 
   
   const handleLangToggle = () => {
@@ -34,6 +66,7 @@ function Navbar({ topTextColor }) {
     const newLang = lang === 0 ? 1 : 0;
     setLang(newLang);
     localStorage.setItem('lang', newLang);
+    window.location.reload();
     
   };
 
@@ -42,26 +75,29 @@ function Navbar({ topTextColor }) {
       setCurrentTime(new Date());
     }, 60000);
 
+    // if (isExpanded === false) {
+    //   setSelectedTab(null);
+    // }
+    // if (selectedTab === "Home"||"Life") {
+    //   setIsExpanded(true);
+    // }
+
     function handleScroll1() {
       if (window.scrollY < 1) {
         setIsExpanded(true);
-      } else {
-        setIsExpanded(false);
-      }
-    }
-    function handleScroll2() {
-      if (window.scrollY < 1) {
         setIsTop(true);
       } else {
+        setIsExpanded(false);
         setIsTop(false);
+        setSelectedTab(null);
       }
     }
+
     function handleResize() {
       setWindowWidth(window.innerWidth);
     };
 
     let scrollTimer;
-
     function handleScrollStatus(event) {
       clearTimeout(scrollTimer);
       scrollTimer = setTimeout(() => {
@@ -75,26 +111,25 @@ function Navbar({ topTextColor }) {
 
 
     window.addEventListener('scroll', handleScroll1);
-    window.addEventListener('scroll', handleScroll2);
     window.addEventListener('wheel', handleScrollStatus);
     window.addEventListener('resize', handleResize);
 
     return () => {
       window.removeEventListener('scroll', handleScroll1);
-      window.removeEventListener('scroll', handleScroll2);
       window.removeEventListener('wheel', handleScrollStatus);
       window.removeEventListener('resize', handleResize);
       clearInterval(intervalId);
     };
-  }, []);
+  }, [isExpanded,selectedTab]);
 
   const navbar = (
-    <AnimatePresence> 
+  <AnimatePresence> 
     <motion.div 
+    onMouseLeave={() => setSelectedTab(null)}
     layout
-    className='smoothchange z-50 top-0 sticky '>
+    className=' z-50 top-0 sticky '>
       <nav
-        className={`transition-all fixed w-full flex flex-col`}
+        className={` fixed w-full flex flex-col`}
       >
 
         <motion.div
@@ -102,7 +137,7 @@ function Navbar({ topTextColor }) {
           animate={{ opacity: 1,y:0 }}
           layout
           transition={{ transition: { duration: 1 } }}
-          className={`flex flex-col w-full 
+          className={`flex flex-col w-full ${BG}
         ${windowWidth < 768
               ? `p-3  ${isTop ? `h-auto` : `h-auto`}`
               : `${isTop ? `${isHomeOrRoot ? 'px-[5%] pt-[12vh] ' : 'pt-3'} h-auto` : ''}  md:px-10`
@@ -113,56 +148,138 @@ function Navbar({ topTextColor }) {
             }`}>
           <div className='w-full flex justify-center items-center'>
             <div className='container lg:px-[10%]'>
-              <div className='smoothchange w-full flex justify-between place-items-center'>
+              <div className='smoothchange w-full flex justify-between place-items-center '>
                     <motion.button
-                      whileHover={{ scale: 1.01 }}
-                      whileTap={{ scale: 0.9 }}
+                      whileHover={{ scale: 1.03 ,transition: { duration: 1 }}}
+                      whileTap={{ scale: 0.99 }}
+                      transition={{ duration: 0.3 }}
                       layout
                       data-popover-target="popover-user-profile" type="button"
-                      className='flex'
+                      className='flex z-50'
                     >
                       <a href='/info' style={{ animationDelay: `${0.5}s` }}  classname="animate__animated animate__fadeInRight animate_slow"  >
-                        <div className="flex item-center">
-                          <div className='flex justify-center items-center'> 
+                        <div className="flex item-center ">
+                          <div className='flex justify-center items-center relative'> 
                             <img  className={`smoothchange animate__animated animate__zoomIn  ${isTop ? 'w-20' : 'w-16'}  rounded-md shadow-lg`}
-                              src={"https://3o.hk/images/2024/01/14/avatar.jpg" ? "https://3o.hk/images/2024/01/14/avatar.jpg" : "/Graphs/home/avatar.jpg"}
+                              src={"https://3o.hk/images/2024/01/14/avatar.jpg"}
                               alt="Xianzhe's Page" width="100" height="100"></img>
+                              <motion.span 
+                              initial={{ scale: 0,opacity:0 }}
+                              animate={{ scale: 1,opacity:1 }}
+                              transition={{ delay:1,duration: 0.5 }}
+                              exit={{ scale: 0,opacity:0 }}
+                              class={`${isTop? "-top-3 -right-4 w-10 h-10":"-top-3 -right-3 w-7 h-7 text-[10px]"}  absolute   bg-sky-400 border-2 border-white dark:border-gray-800 rounded-full flex justify-center items-center text-white font-black p-2`}>3</motion.span>
                           </div>
-                          <div className="flex-col flex  ml-3">
-                            <div style={{ animationDelay: `${0.3}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse  font-semibold ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} mb-[10px] text-[15px]  md:mb-[8px] md:text-[17px] lg:mb-0 lg:text-[25px]` : 'text-xl py-2'}`}>{data.Navbar.Avatar.Webname[lang]}</div>
-                            <div href='/info' style={{ animationDelay: `${0.5}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse text-left ${isTop ? `${isTopTextColorWhite ? "text-white" : ""}  text-lg` : 'text-base'}`}> {data.Navbar.Avatar.helloword[lang]} | {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</div>
+                          {/* <span className="relative flex h-7 w-7">
+                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                                <span className="relative inline-flex rounded-full h-7 w-7 bg-sky-500"></span>
+                              </span> */}
+                          <div className="flex-col flex  ml-6">
+                            <motion.div transition={{duration: 0.7 }} style={{ animationDelay: `${0.3}s` }} className={`text-left smoothchange animate__animated animate__zoomIn  hover:animate__pulse  font-semibold ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} mb-[10px] text-[15px]  md:mb-[8px] md:text-[17px] lg:mb-0 lg:text-[25px]` : 'text-xl py-2'}`}>{data.Navbar.Avatar.Webname[lang]}</motion.div>
+                            <motion.div transition={{duration: 0.7 }}  href='/info' style={{ animationDelay: `${0.5}s` }} className={`smoothchange animate__animated animate__zoomIn hover:animate__pulse text-left ${isTop ? `${isTopTextColorWhite ? "text-white" : ""}  text-lg` : 'text-base'}`}> {data.Navbar.Avatar.helloword[lang]} | {currentTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })} </motion.div>
                           </div>
+                          
+               
                         </div>
                       </a>
                     </motion.button>
-     
-                    <div data-popover id="popover-user-profile" role="tooltip" class="m-3 rounded-[20px] absolute z-10 invisible flex w-[300px] text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 shadow-sm opacity-0 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600">
-                      <div class="p-6 flex space-x-4">
-                        <div class="flex items-center justify-between">
-                          <img class="w-24 h-24 rounded-full" src={"https://3o.hk/images/2024/01/14/avatar.jpg" ? "https://3o.hk/images/2024/01/14/avatar.jpg" : "/Graphs/home/avatar.jpg"} />
+                  <AnimatePresence>
+                  <motion.div 
+                    layout
+                    layoutId='version'
+                    initial={{ opacity: 0,scale:0 }}
+                    animate={{ opacity: 1,scale:1 }}
+                    exit={{ opacity: 0,scale:0 }}
+                    transition={{ duration: 0.3 }}
+                    data-popover id="popover-user-profile" className={`${isShowVersion? " w-[96%] p-[28px] " : "w-[400px] p-[14px]"} transition-all duration-1000  rounded-[20px] absolute z-50 invisible flex flex-col   m-[20px]  text-gray-500 bg-white border border-gray-200 shadow-sm opacity-0 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600`}>
+                      <motion.div 
+                      layoutId='version2'
+                      className={`flex space-x-4 ${isShowVersion? "pb-[28px]" : " pb-[14px]"}`}>
+                        <a href='/info'className="flex items-center justify-between">
+                          <img className="w-24 h-24 rounded-full" src={"https://3o.hk/images/2024/01/14/avatar.jpg"} />
                           <div>
                           </div>
-                        </div>
+                        </a>
                         <div>
-                          <p class="text-base  font-semibold leading-none text-gray-900 dark:text-white">
-                            <div className='text-3xl'>Click to know me better</div>
-                          </p>
-                          <p class="mb-3 text-sm font-normal">
-                            <a href="#" class="hover:underline text-2xl">@Scottt1110</a>
+                        <a href='/info' className="text-base  font-semibold leading-none text-gray-900 dark:text-white">
+                            <div className='text-3xl'>
+                            {lang == "0" && "Click Avatar to know me better"}
+                            {lang == "1" && "点击头像了解更多资料"}
+                            </div>
+                          </a>
+                          <p className="mb-3 text-sm font-normal">
+                            <a href='/info' className="hover:underline text-2xl duration-300">@Scottt1110
+                            <span class="inline-flex items-center justify-center w-7 h-7 ml-2 text-sm font-semibold text-blue-800 bg-sky-100 rounded-full dark:bg-sky-700 dark:text-sky-400">
+                              <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                              <path fill="currentColor" d="m18.774 8.245-.892-.893a1.5 1.5 0 0 1-.437-1.052V5.036a2.484 2.484 0 0 0-2.48-2.48H13.7a1.5 1.5 0 0 1-1.052-.438l-.893-.892a2.484 2.484 0 0 0-3.51 0l-.893.892a1.5 1.5 0 0 1-1.052.437H5.036a2.484 2.484 0 0 0-2.48 2.481V6.3a1.5 1.5 0 0 1-.438 1.052l-.892.893a2.484 2.484 0 0 0 0 3.51l.892.893a1.5 1.5 0 0 1 .437 1.052v1.264a2.484 2.484 0 0 0 2.481 2.481H6.3a1.5 1.5 0 0 1 1.052.437l.893.892a2.484 2.484 0 0 0 3.51 0l.893-.892a1.5 1.5 0 0 1 1.052-.437h1.264a2.484 2.484 0 0 0 2.481-2.48V13.7a1.5 1.5 0 0 1 .437-1.052l.892-.893a2.484 2.484 0 0 0 0-3.51Z"/>
+                              <path fill="#fff" d="M8 13a1 1 0 0 1-.707-.293l-2-2a1 1 0 1 1 1.414-1.414l1.42 1.42 5.318-3.545a1 1 0 0 1 1.11 1.664l-6 4A1 1 0 0 1 8 13Z"/>
+                              </svg>
+                              <span class="sr-only">Icon description</span>
+                              </span>
+                            </a>
+                            
                           </p>
                         </div>
-                      </div>
-                      <div data-popper-arrow></div>
-                    </div>
+  
+                      </motion.div>
+                      <div  class="p-4 text-sky-800 border border-sky-300 rounded-[14px] bg-sky-50 dark:bg-gray-800 dark:text-sky-400 dark:border-sky-800" role="alert">
+                        <div className='flex justify-between '>
+                            <div class="flex items-center">
+                                <svg class="flex-shrink-0 w-8 h-8 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                                </svg>
+                                      <h3 class="text-[15px] font-medium text-sky-800">Version 7.1.2</h3>
+                              </div>
+                              <div class="bg-gray-100 text-gray-800 text-[10px] font-medium inline-flex items-center ml-4 px-3 justify-center py-[4px] rounded-[14px] dark:bg-gray-700 dark:text-blue-400 border border-gray-400">
+                                          <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z"/>
+                                            </svg>
+                                            3 days ago
+                                        </div>
 
+                        </div>
+
+                          
+                          <div class="mt-2 mb-4 text-[12px]">
+                          More info about this info success goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.                            More info about this info success goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.                            More info about this info success goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.                            More info about this info success goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.                            More info about this info success goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+                          </div>
+                          <ul role="list" class="marker:text-sky-700 list-disc pl-5 space-y-3 text-sky-700 text-[12px]">
+                            <li>5 cups chopped Porcini mushrooms</li>
+                            <li>1/2 cup of olive oil</li>
+                            <li>3lb of celery</li>
+                          </ul>
+
+
+                        </div>
+
+                        <div class="flex text-[15px] pt-[28px] space-x-4">
+                            <button 
+                                  onClick={() => {setIsShowVersion(!isShowVersion);
+                                    }}
+                                  type="button" class="text-white bg-sky-800 hover:bg-sky-900 focus:ring-2 focus:outline-none focus:ring-sky-300 font-medium rounded-[12px] px-6 py-3 me-2 text-center inline-flex items-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
+                                    <svg class="me-4 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
+                                      <path d="M10 0C4.612 0 0 5.336 0 7c0 1.742 3.546 7 10 7 6.454 0 10-5.258 10-7 0-1.664-4.612-7-10-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
+                                    </svg>
+                                    View more
+                            </button>
+                            <button type="button" class="text-sky-800 bg-transparent border border-sky-800 hover:bg-sky-900 hover:text-white focus:ring-2 focus:outline-none focus:ring-sky-300 font-medium rounded-[12px] px-6 py-3 text-center dark:hover:bg-sky-600 dark:border-sky-600 dark:text-sky-400 dark:hover:text-white dark:focus:ring-sky-800" data-dismiss-target="#alert-additional-content-3" aria-label="Close">
+                                    I know
+                            </button>
+                          </div>
+                      <div data-popper-arrow></div>
+                    </motion.div>
+                    </AnimatePresence>
 
 
 
                 <div className='flex items-center max-w-[60%] overflow-show'>
-
+                <AnimatePresence>
                   {windowWidth > 876 &&
                     <motion.div
                       layout
+                      key={"navbarItem"}
+                      transition={{ duration: 0.3 }}
+                      exit={{ opacity: 0,scale:0,x:-100,transition: { duration: 1 } }}
                       id="main-navigation"
                       style={{
                         display: '-webkit-box', WebkitBoxOrient: 'horizontal', overflow: 'hidden',
@@ -170,64 +287,67 @@ function Navbar({ topTextColor }) {
                           display: 'none',
                         },
                       }}
-                      class="place-items-center items-center flex justify-center  w-full text-center my-3  ">
+                      className="place-items-center items-center flex justify-center  w-full text-center my-3  ">
                       {navbarItem.map((item, index) => (
 
                         <div>
-                          <motion.button
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                            layout
+                        <motion.button
+                          layout
+                          key={item.name}
+                          whileHover={{ scale: 1.05 ,transition: { duration: 0.7 }}}
+                          whileTap={{ scale: 0.95 }}
+                          transition={{ duration: 0.3 }}
+                          onMouseEnter={() => setSelectedTab(item.name[0])}
                           >
                             <a
                               href={item.href}
                               key={index}
                               style={{ animationDelay: `${index * 0.2}s` }}
-                              data-popover-target={`nav-des-${index}`}
+                              data-popover-target={`nav-des-${item.name[0]}`}
                               type="button"
                               className={`rounded-[5px] smoothchange items-center  ${isTop ? `${index === (navbarItem.length - 1) ? `ml-4` : `mx-4`}` : ` ${index === (navbarItem.length - 1) ? `ml-1` : `mx-1`}`} animate__animated animate__fadeInUp relative inline-flex items-center  px-6 py-3 text-[20px] font-medium text-center ${isTopTextColorWhite & isTop ? "text-white" : ""} rounded-lg hover:bg-gray-900/20  `}>
-                              <div class=" w-11 h-11 mr-3 items-center">
-                                <div class="flex-shrink-0">
+                              <div className=" w-11 h-11 mr-3 items-center">
+                                <div className="flex-shrink-0">
                                   <i className={`${isTopTextColorWhite & isTop ? 'text-white text-[20px]' : 'text-gray-900 text-[17px]'}  fi ${item.icon}`}></i></div>
                               </div>
                               <div className={`${isTopTextColorWhite & isTop ? 'text-white text-[20px]' : 'text-gray-900 text-[15px]'} md:hidden lg:flex `}>{item.name[lang]}</div>
                             </a>
 
                           </motion.button>
-
-                          <div
+                        {isTop&&<div
                           data-popover
-                          id={`nav-des-${index}`} 
+                          id={`nav-des-${item.name[0]}`} 
                           role="tooltip" 
-                          class="absolute z-10 invisible inline-flex w-64 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-                            <div class="px-6 py-4">
-                              <p className='text-[13px] text-left font-mono'>{item.des[lang]}</p>
-                              <span className='text-center text-[16px]'>{item.expression}</span>
-                            </div>
-                            <div data-popper-arrow></div>
-                          </div>
+                          className="duration-200 transition-all absolute z-10 top-50 invisible opacity-0 inline-flex w-64 text-gray-500  bg-white rounded-[14px] shadow-2xl  dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                                        <div className="px-6 py-4">
+                                          <p className='text-[13px] text-left font-mono'>{item.des[lang]}</p>
+                                          <span className='text-center text-[16px]'>{item.expression}</span>
+                                        </div>
+                                <div data-popper-arrow></div>
+                          </div>}
                         </div>
 
 
 
                       ))}
-                    </motion.div>}
-                    <div class="ml-[20px] flex items-center">
+                    </motion.div>}</AnimatePresence>
+                    <div className="ml-[20px] flex items-center">
+     
                     {<motion.button
-                      whileHover={isTop ? { scale: 1.2 } : { scale: 1.2 }}
+                      key={"language"}
+                      whileHover={isTop ? { scale: 1.2,transition: { duration: 0.7 } } : { scale: 1.2,transition: { duration: 0.7 } }}
                       animate={isTop ? { scale: 1 } : { scale: 1 }}
                       whileTap={{ scale: 1.1 }}
                       type='button'
                       layout
+                      transition={{ duration: 0.3 }}
                       data-popover-target="lang"
                       onClick={(e) => {
                         e.preventDefault();
                         handleLangToggle();
-                          // navigate("/");
-                          window.location.reload();
                       }}
                       >
-                      <span class={`${windowWidth < 768 ? '' : ''} ExpandButton`}>
+                      <span className={`${windowWidth < 768 ? '' : ''} ExpandButton`}>
                         <i 
                         style={{ animationDelay: `${4* 0.2}s` }}
                         className={`animate__animated animate__fadeInUp mt-3 fi fi-rr-globe ${isTopTextColorWhite & isTop ? 'text-white text-[20px]' : 'text-gray-900 text-[17px]'} `} />
@@ -237,35 +357,36 @@ function Navbar({ topTextColor }) {
                           data-popover
                           id="lang"
                           role="tooltip" 
-                          class="absolute z-10 invisible justify-center flex w-auto text-gray-500 text-center transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
-                            <div class="px-6 py-4 flex items-center flex-col">
+                          className="absolute z-10 invisible justify-center flex w-auto text-gray-500 text-center transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                            <div className="px-6 py-4 flex items-center flex-col">
                               <span className='text-center text-[15px] font-semibold'>{(lang==0)&&"点击切换中文"}{(lang==1)&&"Switch to English"}</span>
                               <span className='text-[14px] text-center font-semibold'>{(lang==1)&&"点击切换英文"}{(lang==0)&&"Switch to Chinese"}</span>
                             </div>
                             <div data-popper-arrow></div>
                           </div>
-    
+                          <AnimatePresence>
                     {isHomeOrRoot &&
                       <motion.button
                         initial={{ rotate: 180 }}
-                        whileHover={{ scale: 1.2 }}
+                        whileHover={isExpanded ? { scale: 1.1, rotate:360} :{ scale: 1.1, rotate:540 }}
                         animate={isExpanded ? { rotate: 0 } : { rotate: 180 }}
                         whileTap={{ scale: 0.8 }}
+                        // transition={{ duration: 0.3 }}
                         type='button'
                         layout
                         onClick={(e) =>
                           e.preventDefault() & setIsExpanded(!isExpanded) & (isTop && setIsOpened(!isOpened))}>
-                        <span class={`${windowWidth < 768 ? 'mx-5' : 'hover:bg-gray-900/10'} ExpandButton`}>
+                        <span className={`${windowWidth < 768 ? 'mx-5' : 'hover:bg-gray-900/10'} ExpandButton`}>
                           <i 
                           style={{ animationDelay: `${5* 0.2}s` }}
                           className={`animate__animated animate__fadeInUp smoothchange mt-1 ${windowWidth < 768 ? 'text-[20px] ' : 'text-3xl p-5'} ${isTop ? 'text-white text-bold' : ''} fi fi-br-angle-up`} />
                         </span>
-                      </motion.button>}
+                      </motion.button>}</AnimatePresence>
                     {windowWidth < 1024 && <button
                       style={{ animationDelay: `${0.4}s` }}
-                      type="button" class={`mr-10px `}
+                      type="button" className={`mx-[10px] `}
                       onClick={(e) => e.preventDefault() & setIsOpened(!isOpened) & (isTop && setIsExpanded(!isExpanded))}>
-                        <span class={`${windowWidth < 768 ? '' : ''} ExpandButton`}>
+                        <span className={`${windowWidth < 768 ? '' : ''} ExpandButton`}>
                         <i 
                         style={{ animationDelay: `${4* 0.2}s` }}
                         className={`animate__animated animate__fadeInUp mt-3 fi ${!isOpened ? 'fi fi-rr-menu-burger ' : 'fi fi-rr-circle-xmark'} ${isTopTextColorWhite & isTop ? 'text-white text-[20px]' : 'text-gray-900 text-[17px]'} `} />
@@ -278,48 +399,53 @@ function Navbar({ topTextColor }) {
                 </div>
 
               </div>
-              
-              {windowWidth <= 1024 && isOpened && <div class={`w-full`}>
+              {/* menu button */}
+              {windowWidth <= 1024 && isOpened && <div className={`w-full mx-[10px]`}>
                 <div
                   className="z-20  w-full divide-y divide-gray-100 rounded-lg shadow "
                 >
                 </div>
-                <div class={`rounded-2xl ${isTop ? 'backdrop-blur-md ' : 'divide-y divide-gray-200'}`}>
+                <div className={`rounded-2xl ${isTop ? 'backdrop-blur-md ' : 'divide-y divide-gray-200'}`}>
                   {navbarItem.map((item, index) => (
-                    <motion.div
-                      layout
-                      whileHover={{ scale: 1.01 }}
-                      whileTap={{ scale: 0.9 }}
+                  <AnimatePresence>
+                  <motion.div
+                  layout
+                  key={item.name}
+                  exit={{ opacity: 0,scale:0,transition: { duration: 0.7 } }}
+                  whileHover={{ scale: 1.05 ,transition: { duration: 0.7 }}}
+                  whileTap={{ scale: 0.95 }}
+                  transition={{ duration: 0.3 }}
                     >
-                      <a style={{ animationDelay: `${index * 0.2}s` }} key={index} href={item.href} class={`py-5 animate__animated animate__zoomIn flex place-items-center items-center px-4 ${isTop ? 'hover:bg-gray-900/50 rounded-2xl' : 'hover:bg-gray-300/50 '}`}>
-                        <div class="flex-shrink-0">
-                          <div class="rounded-full w-24 h-24 items-center flex justify-center">
+                      <a style={{ animationDelay: `${index * 0.2}s` }} key={index} href={item.href} className={`py-5 animate__animated animate__zoomIn flex place-items-center items-center px-4 ${isTop ? 'hover:bg-gray-900/50 rounded-2xl' : 'hover:bg-gray-300/50 '}`}>
+                        <div className="flex-shrink-0">
+                          <div className="rounded-full w-24 h-24 items-center flex justify-center">
                             <i className={`${isTopTextColorWhite & isTop ? 'text-white' : 'text-gray-900'} text-5xl fi ${item.icon}`}></i></div>
                         </div>
-                        <div class="w-full ps-2">
-                          <div class={`${isTopTextColorWhite & isTop ? 'text-white' : 'text-gray-900'} font-bold text-4xl`}>{item.name}</div>
-                          <div class={`${isTopTextColorWhite & isTop ? 'text-white' : 'text-gray-900'} text-xs text-blue-500 `}>{item.des}</div>
+                        <div className="w-full ps-2">
+                          <div className={`${isTopTextColorWhite & isTop ? 'text-white' : 'text-gray-900'} font-bold text-4xl`}>{item.name}</div>
+                          <div className={`${isTopTextColorWhite & isTop ? 'text-white' : 'text-gray-900'} text-xs text-blue-500 `}>{item.des}</div>
                         </div>
-                      </a></motion.div>))}
+                      </a></motion.div></AnimatePresence>))}
                 </div>
               </div>
               }
 
               {/* 二级NavbarLocation */}       
-              {isHomeOrRoot && (isExpanded || isTop) && 
-              (<motion.div 
+              {(selectedTab == "Home" || (isExpanded==true)) && (
+              <motion.div 
                 layout
+                key={"isExpanded"}
                 transition={{ type: "spring", duration: 1 }}
                 initial={{opacity: 0,scale:0}}
                 animate={{opacity:1,scale:1}}
                 exit={{ opacity: 0,scale:0 }}
 
-                className={`w-full ${!isExpanded
+                className={`w-full my-[20px] ${!isExpanded&&!selectedTab == "Home"
                 ? 'hidden items-center justify-center'
-                : ` items-center justify-center  ${isTop ? 'hidden' : ''}  `
+                : ` items-center justify-center ${isTop?  "hidden": ""}  `
                 }`}>
                 <motion.div
-                  class={`w-full animate__animated   justify-between flex rounded-full items-center ${isExpanded ? ('my-8') : (``)}  ${isTop ? ('backdrop-blur-md bg-white/50 shadow-xl animate__slideInUp') : (`border divide-x  border-gray-900  divide-gray-900 animate__zoomIn`)}`} >
+                  className={`w-full animate__animated   justify-between flex rounded-full items-center ${isExpanded ? ('my-8') : (``)}  ${isTop ? ('backdrop-blur-md bg-white/50 shadow-xl animate__slideInUp') : (`border divide-x  border-gray-900  divide-gray-900 animate__zoomIn`)}`} >
                   {navLocation.map((item, index) => (
 
                     <a key={index} href={item.id} style={{ animationDelay: `${index * 0.17}s` }} className={`flex  w-full h-full  justify-center animate__zoomIn ${isTop ? 'text-black  ' : 'text-gray-900  '} ${index === 0 ? 'rounded-s-full' : ''} ${index === (navLocation.length - 1) ? 'rounded-e-full' : ''} animate__animated  opacity-80 hover:opacity-100 font-medium hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}>
@@ -341,12 +467,42 @@ function Navbar({ topTextColor }) {
                   ))}
                 </motion.div>
               </motion.div>)}
+              {/* lifeCategory */}
+              {selectedTab=="Life" && <div className={`${isTop? "backdrop-blur-md bg-sky-200/20":" bg-sky-200/30 " } rounded-[28px]  `}><LifeCate /></div>}
+              
             </div>
           </div>
         </motion.div>
       </nav>
     </motion.div>
+      {/* toTop buttom */}
+      {!isTop&&<motion.button
+            key="toTop"
+            initial={{ opacity: 0, scale: 0 }}
+            animate={{ opacity: 1, scale: 1,transition: { duration: 0.55,type: "easeInOut" }}}
+            exit={{ opacity: 0, scale: 0}}
+            transition={{ duration: 0.7 }}
+            whileTap={{ scale: 0.9, opacity: 1}}
+            whileHover={{ scale: 1.1,opacity:1 }} 
+            onClick={() => window.scrollTo(0, 0)}
+            className={` anz-card-modal-link fixed bottom-10 lg:right-20 right-10 z-50 drop-shadow-2xl `}>
+                <div className="card-modal-trigger modal-trigger card-cta-modal-button  text-white px-4 py-2 rounded-full lg:scale-150">
+                    <div className="modal-trigger-visblecontainer ">
+                        <motion.span 
+                        initial={{ rotate: 90 }} 
+                        whileTap={{ scale: 0.9, opacity: 0.8,rotate: 270 }}
+                        className="card-cta-modal-button-icon hover:opacity-100 opacity-70 drop-shadow-md shadow-xl bg-white " 
+                        style={buttonStyles} 
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="8 8 20 20" style={iconStyles} className="card-cta-modal-button-small-icon card-modal-button-small-icon w-[18px] h-[18px] text-white rotate-180">
+                                <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+                            </svg>
+                        </motion.span>
+                    </div>
+                </div>
+            </motion.button>}
     </AnimatePresence>
+
   );
 
   return (

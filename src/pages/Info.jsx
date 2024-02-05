@@ -11,6 +11,7 @@ import { Link } from 'react-router-dom';
 
 
 export default function Profile() {
+  document.body.style.overflowX = 'hidden';
   const lang = useLanguage();
   const infos = database.PersonalInfo.Infos[lang]
   const visblecontainer = database.Animation.Variant.fastWelcomevisblecontainer
@@ -45,10 +46,10 @@ export default function Profile() {
             whileInView={{opacity:1,y:"0px",scale:1}} 
             className="relative block" style={{ height: "400px" }}>
           <div
-            className="absolute top-0 w-full h-full bg-center bg-cover"
+            className="absolute top-0 w-full h-full bgrid-colsenter bgrid-colsover"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1499336315816-097655dcfbda?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=2710&q=80')"
+                "url('https://3o.hk/images/2024/01/22/profilebg.jpg')"
             }}
           >
             <span
@@ -86,7 +87,7 @@ export default function Profile() {
                       <img
                         alt="..."
                         src="/Graphs/home/avatar.jpg"
-                        class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-[75px] animate__animated animate__zoomIn"
+                        className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-[75px] animate__animated animate__zoomIn"
                         style={{ maxWidth: "150px" }}
                       />
                     </div>
@@ -122,11 +123,11 @@ export default function Profile() {
                         <motion.div
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
-                          className={`animate__animated animate__zoomIn ${isExpanded ? "hide" : ""}`}>{lang==0&&"Show QA Info" }{lang==1&&"展开QA问答" }</motion.div>
+                          className={`animate__animated animate__zoomIn ${isExpanded ? "hidden" : ""}`}>{lang==0&&"Show QA Info" }{lang==1&&"展开QA问答" }</motion.div>
                         <motion.div
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
-                          className={`animate__animated animate__zoomIn ${!isExpanded ? "hide" : ""}`}>{lang==0&&"Show Basic Information" }{lang==1&&"展开基本信息" }</motion.div>
+                          className={`animate__animated animate__zoomIn ${!isExpanded ? "hidden" : ""}`}>{lang==0&&"Show Basic Information" }{lang==1&&"展开基本信息" }</motion.div>
                       </button>
                     </div>
                   </div>
@@ -171,7 +172,7 @@ export default function Profile() {
                     <h3 className="tile-headline typography-subsection-headline mx-8 py-16 animate__animated animate__zoomIn">
                       {lang==0&&"Basic Information" }{lang==1&&"基本信息" }
                     </h3>
-                    <div class={`grid ${windowWidth > 786 ? "grid-cols-2" : "grid-cols-1"} `}>
+                    <div className={`grid ${windowWidth > 786 ? "grid-cols-2" : "grid-cols-1"} `}>
 
                       {infos.map((info, index) => {
                         // 判断是否为 "Age"
@@ -193,16 +194,16 @@ export default function Profile() {
                             style={{ animationDelay: `${0.05 * index}s` }}
                             className="py-3 sm:py-4 border-b mx-8 animate__animated animate__fadeInRight"
                           >
-                            <div class="flex items-center">
-                              <div class="flex-shrink-0">
-                                <i class={`text-[17px] text-gray-900 fi ${info.label}`}></i>
+                            <div className="flex items-center">
+                              <div className="flex-shrink-0">
+                                <i className={`text-[17px] text-gray-900 fi ${info.label}`}></i>
                               </div>
-                              <div class="flex-1 min-w-0 ms-4">
-                                <p class="text-3xl font-medium text-gray-900 font-semibold truncate dark:text-white">
+                              <div className="flex-1 min-w-0 ms-4">
+                                <p className="text-3xl font-medium text-gray-900 font-semibold truncate dark:text-white">
                                   {info.cont}
                                 </p>
                               </div>
-                              <div class="inline-flex text-2xl items-center  text-gray-900 dark:text-white">
+                              <div className="inline-flex text-2xl items-center  text-gray-900 dark:text-white">
                                 {info.icon}
                               </div>
                             </div>

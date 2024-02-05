@@ -263,7 +263,7 @@ a:focus {
 }
 
 a:focus {
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 5px auto -webkit-focus-ringrid-colsolor;
     outline-offset: -2px
 }
 
@@ -301,7 +301,7 @@ img {
     height: auto
 }
 
-.img-circle {
+.imgrid-colsircle {
     border-radius: 50%
 }
 
@@ -2122,7 +2122,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 5px auto -webkit-focus-ringrid-colsolor;
     outline-offset: -2px
 }
 
@@ -2636,7 +2636,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
-    outline: 5px auto -webkit-focus-ring-color;
+    outline: 5px auto -webkit-focus-ringrid-colsolor;
     outline-offset: -2px
 }
 
