@@ -107,6 +107,10 @@ function GridHouseCard() {
     }
     delayIndex = 0;
     setLoadedImages((prev) => prev + 36);
+    setZIndexes((prevZIndexes) => {
+      const updatedZIndexes = prevZIndexes.map((value, i) => (i == index ? 1 : 0));
+      return updatedZIndexes;
+    });
   };
 
   const handleIntersection = (entry) => {
@@ -150,21 +154,14 @@ function GridHouseCard() {
   }, [inView]); // Run whenever inView changes
 
   return (
-    <div className={`dark:bg-gray-700`}>
+    <div >
+      <Navbar />
       <link
         rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-      <AnimatePresence>
-      <motion.div
-          initial={{ opacity: 0,y:-150 }}
-          animate={{ opacity: 1,y:0 }}
-          exit={{ opacity: 0,y:-150 }}
-          transition={{ duration: 0.5 }}
-          >
-      <Navbar/>
-      </motion.div>
+
       
-      </AnimatePresence>
+      
       
       <div className={`flex justify-between w-[100%]`}>
         <div className='mt-24 px-[20px] w-[100%]'>
@@ -228,7 +225,7 @@ function GridHouseCard() {
             </motion.div>
 
             <motion.div
-              className={` w-[100%] px-auto grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8 lg:gap-12  z-1`}
+              className={` w-[100%] px-auto grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8 lg:gap-12  z-0`}
               style={{display: "grid"}}
               >
               <LayoutGroup>
@@ -255,7 +252,7 @@ function GridHouseCard() {
                           setcurrentImage(item);
                           localStorage.setItem('currentImage', item);
                           setZIndexes((prevZIndexes) => {
-                            const updatedZIndexes = prevZIndexes.map((value, i) => (i === index ? 1 : 0));
+                            const updatedZIndexes = prevZIndexes.map((value, i) => (i == index ? 1 : 0));
                             return updatedZIndexes;
                           });
 
