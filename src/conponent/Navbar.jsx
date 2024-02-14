@@ -258,7 +258,7 @@ function Navbar({ topTextColor,BG,ExpandElement,onHeightChange }) {
                                             {updateLog[0].version}
                                             </h3>
                                   </div>
-                                  <div class="bg-gray-100 text-gray-800 text-[10px] font-medium inline-flex items-center ml-4 px-3 justify-center py-[4px] rounded-[14px] dark:bg-gray-700 dark:text-blue-400 border border-gray-400">
+                                  <div class="bg-gray-100 text-gray-800 text-[10px] font-medium inline-flex items-center ml-4 px-3 justify-center py-1 rounded-[14px] dark:bg-gray-700 dark:text-blue-400 border border-gray-400">
                                               <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                                 <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z"/>
                                                 </svg>
