@@ -24,7 +24,15 @@ export default function Life() {
   return (
     <section className="p-[20px] my-[20px]">
       <div className="">
-        <div className={`animate__animated animate__fadeIn grid ${windowWidth < 786 ? "grid-cols-2" : `${windowWidth < 1024 ? "grid-cols-3" : "grid-cols-4"}`} justify-center`}>
+        <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: `repeat(auto-fit, minmax(${windowWidth < 786 ? "50%" : windowWidth < 1024 ? "30%" : "23%"}, 1fr))`,
+              justifyContent: "center",
+              gap: "20px",
+            }}
+            className={`animate__animated animate__fadeIn`}
+          >
           {Lifes.map((life, index) => (
             <motion.a
               whileHover={{ scale: 1.02 }}
@@ -32,13 +40,13 @@ export default function Life() {
               href={life.link}
               onMouseEnter={() => {setHoverColor(true);setIndex(index);}}
               onMouseLeave={() => setHoverColor(false)}
-              className="welcomeanimation w-full duration-500 smoothchange pt-[100px] text-center rounded-[12px] overflow-visible"
+              className="welcomeanimation w-full duration-500 smoothchange pt-[120px] text-center rounded-[12px] overflow-visible"
               style={{
                 backgroundImage: `url(${life.pic})`,
                 backgroundSize: '70% auto',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'left bottom',
-                animationDelay: `${index * 0.2}s`
+                animationDelay: `${index * 0.15}s`
               }}
             >
               <div

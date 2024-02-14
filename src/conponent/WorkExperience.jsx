@@ -29,15 +29,15 @@ function WorkExperience() {
   }, []);
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.75,
+    // threshold: 0.75,
   });
 
   const WorkExperience = (
-    <div id='WorkExperience' className=''>
+    <div id='WorkExperience' className='h-min-[100vh]'>
       <div >
         <div className="">
           {/* 一级标题 */}
-          <div className='flex justify-center lg:my-24 pt-48'>
+          <div className='flex justify-center mt-[20vh] '>
           <motion.div
                   initial={{  opacity: 0}}
                   whileInView={{ opacity: 1}}
@@ -77,7 +77,7 @@ function WorkExperience() {
                           whileTap={{ scale: 0.99 }}
                           layout
                           ref={ref}
-                          style={{ animationDelay: `${0.15*index}s` }}
+                          style={{ animationDelay: `${0.15*index+0.4}s` }}
                           className={`gallery-item grid-item current  ${inView ? 'welcomeanimation' : 'Exitanimation'}`}
                         >
                           <div className='icon-card card-visblecontainer'>
@@ -179,11 +179,9 @@ function WorkExperience() {
   );
 
   return (
-    <div>
-      <div>
+      <div className=''>
         {WorkExperience}
       </div>
-    </div>
   );
 }
 

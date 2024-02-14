@@ -28,7 +28,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
 
   const [ref, inView] = useInView({
     triggerOnce: true,
-    threshold: 0.6,
+    // threshold: 0.6,
   });
 
   const StudyExperience = (
@@ -48,7 +48,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
           layout
           className=''>
           <div className='animate__animated animate__rotateIn '>
-            <div className=' py-24 justify-center flex '>
+            <div className=' py-12 justify-center flex '>
               <a
                 href='#StudyExperience'
                 id='StudyExperience'
@@ -103,7 +103,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                       onClick={localStorage.setItem("currenStu",Experience.id)}
                       layout
                       ref={ref}
-                      style={{ animationDelay: `${0.15*index}s` }}
+                      style={{ animationDelay: `${0.15*index+0.4}s` }}
                       className={`gallery-item grid-item current  ${inView ? 'welcomeanimation' : 'Exitanimation'}`}
                     >
                       <div

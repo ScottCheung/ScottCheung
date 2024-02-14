@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from "framer-motion"
 import Database from '../Datebase.json';
-import { hideRow,bgPic,useLanguage } from '../help/helpFunction';
+import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
 import More from './More';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -74,7 +74,7 @@ function WhyMe({hideTittle}) {
                   variants={Welcomevisblecontainer}
                   initial="hidden"
                   whileInView="visible"
-                  // viewport={{ once: true }}
+                  viewport={{ once: true }}
                   className="card-set p-[20px] overflow-hidden" role="list">
                   {keyfeature.map((feature, index) => (
                     <motion.div
@@ -104,7 +104,8 @@ function WhyMe({hideTittle}) {
                                   </div>
                                 </div>
                                 <div className={`${hideTittle? "hidden":""} copy-visblecontainer md:h-[450px] h-[290px]`}>
-                                  <div style={{...hideRow(3), animationDelay: `${index * 0.3}s` }}  className={`text-full  my-7 animate__animated  animate__fadeInUp  card-description text-justify `}>{feature.description}</div>
+                                  <div style={{...hideRow(3), animationDelay: `${index * 0.3}s` }}  className={`text-full  my-7 animate__animated  animate__fadeInUp  card-description text-justify `}>
+                                    {feature.description}</div>
                                   <More color={`  ${feature.color1+" "+feature.color2} bg-gradient-to-r text-transparent bg-clip-text `}/>
                                 </div>
                               </div>

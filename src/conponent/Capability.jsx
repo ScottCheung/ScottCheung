@@ -28,7 +28,7 @@ const visblecontainer = Database.Animation.Variant.Welcomevisblecontainer
 const item = Database.Animation.Variant.WelcomeItem
 
 const tabs = [
-  { label: ["Frontend","前端"], color1: "red-500", color2: "red-500", content: "Content for Frontend Tab" },
+  { label: ["Frontend","前端"], color1: "red-500", color2: "red-700", content: "Content for Frontend Tab" },
   { label: ["Backend","后端"], color1: "orange-500", color2: "amber-500", content: "Content for Backend Tab" },
   { label: ["DataBase","数据库"], color1: "sky-500", color2: "emerald-500", content: "Content for Data Tab" },
   { label: ["Algorithm","算法"], color1: "cyan-500", color2: "blue-500", content: "Content for Algorithm Tab" },
@@ -830,10 +830,10 @@ function Capability() {
           initial={{ scale: 0, y: 330, opacity: 0 }}
           animate={{ scale: 1, y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
-          data-popover
+
           id={`infp`}
           role="tooltip"
-          className="m-[20px] absolute z-50 invisible rounded-[28px] flex w-[300px] md:w-[400px] lg:w-[600px]  transition-opacity duration-300 backdrop-blur-lg bg-white/80 shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+          className="m-[20px] absolute z-50 invisible rounded-[28px] flex w-[300px] md:w-[400px] lg:w-[800px]  transition-opacity duration-300 backdrop-blur-lg bg-white/80 shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
         >
           <motion.div className="p-[40px]">
             <p className='text-[17px] md:text-[18px] lg:text-[20px] text-gray-900  py-4 text-center font-black '>
@@ -852,7 +852,7 @@ function Capability() {
             </motion.div>
 
           </motion.div>
-          <motion.div data-popper-arrow></motion.div>
+          <motion.div tooltip-arrow></motion.div>
         </motion.div>
 
         <motion.div
@@ -895,7 +895,8 @@ function Capability() {
                   <h3 className="tile-headline typography-subsection-headline py-4 text-gray-600">
                     {lang == 0 && "Personality"}{lang == 1 && "人格类型"}
                   </h3>
-                  <a data-popover-target={`infp`}
+                  <a data-tooltip-target={`infp`}
+                    data-tooltip-placement={"bottom"}
                     href="https://www.16personalities.com/infp-personality" className='flex jusitify-between items-center '>
                     <p className="tile-headline text-xl typography-subsection-headline text-gray-600 ">
                       {lang == 0 && "INFP"}{lang == 1 && "小蝴蝶"}

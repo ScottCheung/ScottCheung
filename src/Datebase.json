@@ -74,7 +74,7 @@
       {
         "id": "/#SelfDescribing",
         "label": [
-          "Self-Describe",
+          "Describe",
           "自述"
         ],
         "logo": "fi-rr-comment-heart"
@@ -115,8 +115,201 @@
         "Sidere mens eadem mutato",
         "繁星纵变，智慧永存"
       ]
+    },
+    "UpdateLog": [
+    {
+      "version":"7.1.4",
+      "time": "2024-01-14",
+      "content": [
+        "I am glad you are visiting my page as I am currently in the middle of my last semester of studies. I am also very busy and cannot make timely updates. But I will try to keep updating as much as possible, thank you for your understanding. Any questions about the use or feeling. Be free to contact me at any time at: z5443003@ad.unsw.edu.au",
+        "很高兴您能访问我的网页，因为目前我正在进行我最后一学期的学习。平时也非常繁忙，不能进行及时的更新。但是我会尽量保持更新，谢谢您的理解。有任何使用问题，欢迎随时通过邮箱联系我： z5443003@ad.unsw.edu.au。"
+      ],
+      "opints": [ 
+        
+      [        
+        "New feature: “Gallery” and “Life Tabs” now have quick access. ",
+        "Improvement: “Gallery” has adjusted the display spacing, which is more beautiful and easy to watch.",
+        "Debug: fixed the problem of elements disappearing due to the lagging of the lead animation, optimized the animation curve, the animation is more silky and smooth.",
+        "Known issues: project experience and work experience are currently not accessible and the page is being designed. The Stories and Music sections of the Life section and the QA section of the profile are also still waiting to go live. All Certificates are not avalible due to preparedness of original materials. They will be update in a not soon future. These are content that I need to produce content for and it will take time, so stay tuned. "
+    ],[
+      "新功能上线：“图库”和“生活标签增加了快速访问的方式” ",
+      "功能改进：“图库”调整了显示间距，更加美观 ",
+      "故障修复：修复了引动画卡顿导致元素消失的问题，优化了动画曲线，动画更加丝滑流畅。",
+      "已知问题：目前项目经历和工作经历还无法访问，页面正在设计中。生活部分的故事和音乐部分以及个人资料的QA部分也还在等待上线中。荣誉的具体证书还没有准备齐全，所以目前这块是错误信息，这些内容，我需要生产内容，还需要时间，敬请期待。 "
+    ]]
+    },
+    {
+      "version":"7.1.3",
+      "time": "2024-01-14",
+      "content": [
+        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+      ],
+      "opints": [
+        [
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+      ],
+      [        
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+    ]]
+    },
+    {
+      "version":"7.1.4",
+      "time": "2024-01-14",
+      "content": [
+        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+      ],
+      "opints": [
+        [
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+      ],
+      [        
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+    ]]
+    },
+    {
+      "version":"7.1.4",
+      "time": "2024-01-14",
+      "content": [
+        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+      ],
+      "opints": [
+        [
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+      ],
+      [        
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+    ]]
+    },
+    {
+      "version":"7.1.4",
+      "time": "2024-01-14",
+      "content": [
+        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+      ],
+      "opints": [
+        [
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+      ],
+      [        
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+    ]]
+    },
+    {
+      "version":"7.1.4",
+      "time": "2024-01-14",
+      "content": [
+        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+      ],
+      "opints": [
+        [
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+      ],
+      [        
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+    ]]
+    },
+    {
+      "version":"7.1.4",
+      "time": "2024-01-14",
+      "content": [
+        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+      ],
+      "opints": [
+        [
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+      ],
+      [        
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+    ]]
+    },
+    {
+      "version":"7.1.4",
+      "time": "2024-01-14",
+      "content": [
+        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+      ],
+      "opints": [
+        [
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+      ],
+      [        
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+    ]]
+    },
+    {
+      "version":"7.1.4",
+      "time": "2024-01-14",
+      "content": [
+        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+      ],
+      "opints": [
+        [
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+      ],
+      [        
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+    ]]
+    },
+    {
+      "version":"7.1.4",
+      "time": "2024-01-14",
+      "content": [
+        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+      ],
+      "opints": [
+        [
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+      ],
+      [        
+        "新功能上线：“图库”和“生活快速标签”",
+        "添加了新项目'个人网站'和'个人信息'",
+        "添加了新项目'个人网站'和'个人信息'"
+    ]]
     }
-  },
+]},
   "PersonalInfo": {
     "Welcomebg":["/Graphs/home/Welcomebg.jpg", "https://3o.hk/images/2024/01/14/welcomebg.jpg"],
     "KeyFeaturebg": ["/Graphs/home/keyfeaturebg.jpg", "https://3o.hk/images/2024/01/14/keyfeaturebg.jpg"],
@@ -1136,79 +1329,67 @@
       [
         {
           "id": "LearningAbility",
-          "advantage": [
-            "Learning ability"
-          ],
+          "advantage": ["Learning Ability"],
           "href": "/whyme/LearningAbility",
-          "pic": ["https://3o.hk/images/2024/01/19/LearningAbility.png","/Graphs/whyme/LearningAbility.png"],
+          "pic": ["https://3o.hk/images/2024/01/19/LearningAbility.png", "/Graphs/whyme/LearningAbility.png"],
           "pic2": "/Graphs/whyme/LearningAbility2.jpg",
           "icon": "fi-rr-graduation-cap",
-          "description": "Demonstrated exceptional learning agility by independently mastering piano and guitar skills. Maintained a stellar GPA while initiating the completion of 90% of a second degree by the junior year, achieving a three-year curriculum in just one. Simultaneously, holding three degrees across four majors serves as compelling evidence.",
+          "description": "The candidate possesses outstanding learning ability.\n1. Excellent self-driven learning. The candidate maintains a mindset of constantly learning new things, self-learning piano and guitar out of passion, and systematically studying photography, Photoshop editing, Adobe Illustrator vector graphics design, Lightroom color correction, Premiere, and Final Cut Pro video editing software in spare time. The candidate always learns new technologies and methods with a results-oriented approach for achieving perfection.\n2. Exceptional learning speed. The candidate completed 90% of the coursework for a second degree within one year of their third year of undergraduate study, which should have taken four years. Additionally, the candidate studied four majors and holds three degrees, accomplishing the learning of four majors in the time usually taken for two.\n3. Excellent learning methods. Thanks to AI empowerment, the candidate adeptly uses ChatGPT and other AI tools to quickly grasp fresh technologies and efficiently solve problems. The candidate consistently embraces new technologies and methods rapidly.",
           "color1": "from-red-500",
           "color2": "to-red-700"
         },
         {
           "id": "Leadership",
-          "advantage": [
-            "Leadership"
-          ],
+          "advantage": ["Leadership"],
           "href": "/whyme/Leadership",
-          "pic": ["https://3o.hk/images/2024/01/19/Leadership.png","/Graphs/whyme/Leadership.png"],
+          "pic": ["https://3o.hk/images/2024/01/19/Leadership.png", "/Graphs/whyme/Leadership.png"],
           "pic2": "/Graphs/whyme/Leadership2.jpg",
           "icon": "fi-rr-users-alt",
-          "description": "Held pivotal roles in the university's study department, technology and entrepreneurship guidance station, debate team, and served as class president, study committee leader, and life committee leader. Led the class to secure victories in city, school, and university competitions, garnering numerous provincial awards.",
+          "description": "The candidate demonstrates outstanding leadership.\n1. Diverse leadership roles. The candidate held key positions in the university's study department, technology and entrepreneurship guidance station, and debate team. Additionally, they served as class president, study committee member, and life committee member, leading the class to stand out in various competitions, winning all awards and honors with top-ranking results.\n2. Rich experience as a competition leader. As a manager, the candidate led over 100 competitions, achieving numerous first prizes at the provincial and district levels, totaling over 60 awards.\n3. The candidate led a team in entrepreneurship, expanding business in a new area, involving crucial tasks such as leasing company space, purchasing corporate supplies, recruiting personnel, planning marketing activities, and managing finances.",
           "color1": "from-orange-500",
           "color2": "to-amber-500"
         },
         {
           "id": "Communication",
-          "advantage": [
-            "Communication"
-          ],
+          "advantage": ["Communication Skills"],
           "href": "/whyme/Communication",
-          "pic": ["https://3o.hk/images/2024/01/19/Communication.png","/Graphs/whyme/Communication.png"],
+          "pic": ["https://3o.hk/images/2024/01/19/Communication.png", "/Graphs/whyme/Communication.png"],
           "pic2": "/Graphs/whyme/Communication2.jpg",
           "icon": "fi-rr-comments",
-          "description": "Adept presenter with a track record of participating in over 100 competitions and delivering more than 50 public speeches. Star lecturer at NUSTP, hosted a 400-person party, and excelled in the champion debating team. Negotiated a 50% discount on supplies for a startup and secured sponsorships for club activities.",
+          "description": "The candidate possesses excellent communication skills.\n1. Proficient speaker and communicator. The candidate participated in over 100 competitions, delivering over 50 public speeches as a representative. They are a star presenter for NUSTP, explaining to over 400 visitors. Furthermore, the candidate served in the debate team, winning debate championships, and earning the title of the best debater. The candidate negotiated a 50% discount on materials during the procurement process for the company and secured advertising sponsorship for club activities.\n2. Strong empathy. The candidate, having studied organizational management and organizational psychology, easily perceives others' emotions and feelings, swiftly establishing emotional connections for efficient and logical communication.",
           "color1": "from-amber-400",
           "color2": "to-yellow-400"
         },
         {
           "id": "ProblemSolving",
-          "advantage": [
-            "Problem-Solving"
-          ],
+          "advantage": ["Problem-Solving Ability"],
           "href": "/whyme/ProblemSolving",
-          "pic": ["https://3o.hk/images/2024/01/19/ProblemSolving.png","/Graphs/whyme/ProblemSolving.png"],
+          "pic": ["https://3o.hk/images/2024/01/19/ProblemSolving.png", "/Graphs/whyme/ProblemSolving.png"],
           "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
           "icon": "fi-rr-lightbulb-question",
-          "description": "Exhibits clear logical and divergent thinking, employing effective frameworks to dissect and solve complex problems. Demonstrates resilience, tenacity, and a passion for conquering challenges. Proficiently utilizes familiar tools and processes to automate repetitive tasks. Notable achievements include technical breakthroughs in the Chemical Design Competition and Concrete Design Competition.",
+          "description": "The candidate has strong problem-solving ability.\n1. Proficient use of management principles to analyze problems, such as SWOT analysis, Porter's Five Forces model, and the Boston Matrix. The candidate quickly analyzes problems using these tools, identifies key solutions, and proficiently visualizes them.\n2. Clear logic and divergent thinking. The candidate, having systematically studied strategic management, management principles, project management, and operations research, adeptly uses management tools and mathematical methods to solve problems, improving task flow and optimizing work efficiency.",
           "color1": "from-sky-500",
           "color2": "to-emerald-500"
         },
         {
           "id": "AestheticAttitude",
-          "advantage": [
-            "Aesthetic attitude"
-          ],
+          "advantage": ["Aesthetic Attitude"],
           "href": "/whyme/AestheticAttitude",
-          "pic": ["https://3o.hk/images/2024/01/19/AestheticAttitude.png","/Graphs/whyme/AestheticAttitude.png"],
+          "pic": ["https://3o.hk/images/2024/01/19/AestheticAttitude.png", "/Graphs/whyme/AestheticAttitude.png"],
           "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
           "icon": "fi-rr-sparkles",
-          "description": "Autonomously designs and crafts launch-level slides, advanced posters, brochures, logos, and interior layouts for various companies. Recognized with 2 first prizes, 2 second prizes, and 2 third prizes in diverse design competitions. Official poster designer for the publicity department of the National University Science and Technology Park.",
+          "description": "The candidate possesses an outstanding aesthetic attitude.\n1. The candidate studied fine arts from an early age, having advanced aesthetic sense. They believe that excellent projects and products require exceptional packaging and marketing. The candidate independently designed brand logos for multiple companies and assisted in their registration.\n2. The candidate is committed to aesthetic pursuits, rejecting disorganized formats, irregular layouts, and failed color schemes in deliverables. They have high standards for all documents, projects, and works.\n3. The candidate has sufficient delivery capability for aesthetics. They can independently design and create vector and pixel graphics, proficient in software such as Photoshop, Illustrator, Pages, DI, LR, PPT, KeyNote. The candidate has a profound understanding of layout, color matching, and can independently deliver conference-level slides, high-quality posters, brochures, and company logos. They have won awards in multiple design competitions and were a designated poster design member for the university's science and technology entrepreneurship guidance station.",
           "color1": "from-cyan-500",
           "color2": "to-blue-500"
         },
         {
           "id": "EmotionalStable",
-          "advantage": [
-            "Emotional Stable"
-          ],
+          "advantage": ["Emotional Stability"],
           "href": "/whyme/EmotionalStable",
-          "pic": ["https://3o.hk/images/2024/01/19/EmotionalStable.png","/Graphs/whyme/EmotionalStable.png"],
+          "pic": ["https://3o.hk/images/2024/01/19/EmotionalStable.png", "/Graphs/whyme/EmotionalStable.png"],
           "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
           "icon": "fi-rr-smile",
-          "description": "As an INFP with a heightened emotional perception, adept micro-expression observer, and strong empathic abilities. Thrives in resolving customer complaints and unforeseen situations. Optimistic and stress-resistant, capable of swiftly managing negative emotions at work. Always be positive and energetic.",
+          "description": "The candidate possesses good emotional energy, stability, and firmness.\nThe candidate has a high level of emotional awareness, familiarity with micro-expressions and organizational psychology. They can effectively manage upwards and downwards, demonstrating excellent communication in resolving customer complaints and unexpected situations. The candidate remains optimistic, resilient, quickly handling negative emotions at work. They consistently maintain a positive and energetic attitude, bringing joy and positive feedback to those around them, always providing emotional support.",
           "color1": "from-indigo-500",
           "color2": "to-pink-500"
         }
@@ -1223,7 +1404,7 @@
           "pic": ["https://3o.hk/images/2024/01/19/LearningAbility.png","/Graphs/whyme/LearningAbility.png"],
           "pic2": "/Graphs/whyme/LearningAbility2.jpg",
           "icon": "fi-rr-graduation-cap",
-          "description": "候选人自学了钢琴和吉他技能，展示出色的学习敏捷性。在大三完成了第二学位90%的课程，取得了三年课程的成绩。同时，持有四个专业的三个学位，均是有力的证据。",
+          "description": "候选人拥有出色的学习能力。\n1.优秀的学习自驱力。候选人时刻保持学习新事物的心态。仅凭爱好自学了钢琴和吉他，利用业余时间，还系统的学习了摄影、Ps修图、Adobe Ai矢量图形设计、Lr调色、Pr以及Final cut pro等视频剪辑软件。候选人总会以结果为导向学习新技术、新方法，以达到更完美的实现结果。\n2.优秀的学习速度。候选人在本科大三一年的时间内完成了第二学位本该4年完成的90%的课程。同时，候选人学习过四个专业，持有三个学位。候选人4个专业只消耗了2个专业的学习时间. \n3.优秀的学习方法。得益于AI赋能，候选人善于利用ChatGPT等AI快速掌握新鲜技术，更高效的解决方法。候选人总能快速拥抱新技术，快速拥抱新方法。",
           "color1": "from-red-500",
           "color2": "to-red-700"
         },
@@ -1236,7 +1417,7 @@
           "pic": ["https://3o.hk/images/2024/01/19/Leadership.png","/Graphs/whyme/Leadership.png"],
           "pic2": "/Graphs/whyme/Leadership2.jpg",
           "icon": "fi-rr-users-alt",
-          "description": "候选人具有在大学学习部门、科技和创业指导站、辩论队担任关键角色，并担任班长、学习委员会负责人和生活委员会负责人。带领班级在城市、学校和大学比赛中获胜，赢得了众多省级奖项。",
+          "description": "候选人具有卓越的领导力。\n1.多元的领导角色。候选人曾在大学学习部、科技和创业指导站、辩论队担任关键角色。并在班级担任过班长、学习委员和生活委员等职位。带领班级在各级评优中脱颖而出，不仅赢得所有的奖项和荣誉，且均是第一名的成绩。\n2.丰富的竞赛领导者经历。候选人作为管理者领导了超过100次比赛，获得多个省赛一等奖，市区一等奖等，总计60多项奖项。\n3.候选人曾经带领团队创业，候选人带领一个团队到一个新地区扩展业务。涉及租赁公司场地，购置企业物资，招聘企业人员，策划营销活动，计划和管理财务等关键任务。",
           "color1": "from-orange-500",
           "color2": "to-amber-500"
         },
@@ -1249,7 +1430,7 @@
           "pic": ["https://3o.hk/images/2024/01/19/Communication.png","/Graphs/whyme/Communication.png"],
           "pic2": "/Graphs/whyme/Communication2.jpg",
           "icon": "fi-rr-comments",
-          "description": "候选人是一位熟练的演讲者，他参与了100多场比赛并发表了50多次公开演讲。是NUSTP的明星讲解员，主持了一场400人的派对，并在冠军辩论队表现出色。为初创公司谈判获得50%的物资折扣，并为俱乐部活动争取了获得广告赞助。",
+          "description": "候选人拥有良好的沟通能力。\n1.候选人一位熟练的演讲者及表达者，候选人曾参与了100多场比赛并作为代表人发表了50多次公开演讲。是NUSTP的明星讲解员，讲解过超过400人的参观。同时，候选人曾就职于辩论队，所在队伍获得辩论赛冠军，候选人并获得最佳辩手称号。候选人曾在采购过程为公司谈判获得50%的物资折扣，并为俱乐部活动谈判过广告赞助。\n2.候选人具有强大的共情能力。同时候选人学习过组织管理学，组织心理学。候选人能轻松感知他人情绪和感受，并快速建立情感连接，从而做到快速高效地科学沟通。沟通做到有情有理有逻辑。",
           "color1": "from-amber-400",
           "color2": "to-yellow-400"
         },
@@ -1262,7 +1443,7 @@
           "pic": ["https://3o.hk/images/2024/01/19/ProblemSolving.png","/Graphs/whyme/ProblemSolving.png"],
           "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
           "icon": "fi-rr-lightbulb-question",
-          "description": "候选人具有清晰的逻辑和发散性思维，运用有效的框架来分析和解决复杂问题。表现出对克服挑战的韧性、坚韧和激情。熟练使用熟悉的工具和流程自动化重复性任务。在化学设计竞赛和混凝土设计竞赛中取得了技术突破。",
+          "description": "候选人具有强大的解题能力。\n1.候选人熟练使用管理学原理分析问题，例如SWOT分析，波特五力模型，波士顿矩阵等。候选人可以借助这些工具快速的分析问题，找到解决问题的关键。并熟练将其可视化分享。\n2.候选人具有清晰的逻辑和发散性思维，懂得合理地运用有效的多种框架来分析和解决复杂问题。候选人曾系统学习过战略管理，管理学原理，项目管理，运筹学等课程。能熟练使用管理学工具和数学方法来解决问题，改善任务流畅，优化工作效率。",
           "color1": "from-sky-500",
           "color2": "to-emerald-500"
         },
@@ -1275,7 +1456,7 @@
           "pic": ["https://3o.hk/images/2024/01/19/AestheticAttitude.png","/Graphs/whyme/AestheticAttitude.png"],
           "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
           "icon": "fi-rr-sparkles",
-          "description": "候选人具有具有自主设计和制作专业级幻灯片、高级海报、宣传册、标志和各种公司的内部布局。在多个设计竞赛中获得2个一等奖、2个二等奖和2个三等奖。是国家大学科技园宣传部的官方海报设计师。",
+          "description": "候选人具有具有优秀的审美态度。\n1.候选人从小学习美术，拥有高级的审美。候选人相信任何良好的项目和产品都离不开优秀的包装和营销。候选人曾为多个企业独立设计品牌logo，并帮助完成注册。\n2.候选人对美学有执着追求。候选人不能接受格式混乱，排版不规范，配色失败的交付方式。对所有交付的文件、项目、作品都有较高的要求。\n3.候选人对美学有足够的交付能力。候选人可独立自主设计和制作矢量图、像素图。候选人精通PS、AI、Pages、DI、LR、PPT、KeyNote等软件。候选人对排版、配色、版面都有深刻的理解。可独立交付发布会级幻灯片、高级海报、宣传册、企业logo。候选人曾在多个设计竞赛中获得奖。曾经是大学生科技创业指导站的御用海报设计成员之一。设计作品获2个一等奖、2个二等奖和2个三等奖。",
           "color1": "from-cyan-500",
           "color2": "to-blue-500"
         },
@@ -1288,7 +1469,7 @@
           "pic": ["https://3o.hk/images/2024/01/19/EmotionalStable.png","/Graphs/whyme/EmotionalStable.png"],
           "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
           "icon": "fi-rr-smile",
-          "description": "候选人作为一个具有高度情绪感知、熟练观察微表情和强大共情能力的INFP。在解决客户投诉和突发情况方面表现出色。乐观且抗压，能够迅速处理工作中的负面情绪。始终保持积极和充满活力。",
+          "description": "候选人具有良好的情绪能量，稳定而坚定。\n候选人具有高度情绪感知能力、熟悉微表情和组织心理学。能合理向上向下管理，在解决客户投诉和突发情况的沟通方面表现出色。候选人乐观且抗压，能够快速处理工作中的负面情绪。始终保持积极向上的态度和充满活力。能为身边的人带来快乐和正面反馈，时刻为身边人提供正向的情感支持。",
           "color1": "from-indigo-500",
           "color2": "to-pink-500"
         }
@@ -1297,8 +1478,8 @@
     "SelfDescribing": {
       "pic": "https://cdn.pixabay.com/photo/2014/05/26/09/58/sydney-opera-house-354375_1280.jpg",
       "description": [
-        "Demonstrated exceptional learning agility by independently mastering piano and guitar skills. Maintained a stellar GPA while initiating the completion of 90% of a second degree by the junior year, achieving a three-year curriculum in just one. Simultaneously, holding three degrees across four visblecontainers serves as compelling evidence.",
-        "zwb"
+        "Hello! I'm Scott Zhang from Sichuan Province, China. I grew up in a family where my father is a doctor, and my mother is a teacher. From a young age, I've been a person with diverse interests. I have a passion for music and photography, enjoying exploring new things. I've experienced both being the top student and facing challenges as the last one in class during my academic journey. My motivation for learning comes from my interests and the desire to solve problems. I consider myself intelligent, unafraid of challenges, and resilient, believing I can tackle various issues. My strengths lie in flexible thinking and a willingness to try new methods, although I tend to be overly concerned about details and aesthetics. I'm also aware of my weaker sense of time, and I'm currently making efforts to improve in this aspect. I am currently studying IT and planning to seek relevant employment in the coming months. I am eager to continually enhance myself through hard work. If you have any questions or suggestions, feel free to share; I'll provide you with constructive feedback. I hope I can be appealing and shine brightly for you.",
+        "你好！我是张贤哲，来自中国四川省。我在一个医生和一名教师的家庭中长大，从小就是一个兴趣广泛的人。我热爱音乐和摄影，喜欢探索新鲜事物。我曾在学业中取得过班上的第一名，也经历过班上的最后一名。这是因为我的学习动力来自于兴趣和解决问题的欲望。我认为自己聪明、不怕困难，有毅力，相信可以解决各种问题。灵活的思维和敢于尝试新方法是我的特点，尽管我对细节和美观度有些过于在意，同时时间观念相对较弱，能意识到问题是很好的开始，我目前正在尽力改善这一点。我正在学习IT，并计划在未来几个月内寻找相关工作。期待通过努力不断提升自己。有任何问题或建议，欢迎分享，我会给你良好的反馈。我希望我对你是足够吸引和闪耀的。"
       ]
     },
     "KeyFeature": [
@@ -1384,8 +1565,8 @@
             "电话"
           ],
           "icon": "fi-sr-circle-phone-flip",
-          "link": "17381484512",
-          "name": "+86 17381484512"
+          "link": "+61 0434344292",
+          "name": "+61 0434344292"
         },
         {
           "type": [

@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import Database from '../Datebase.json';
 import { useLanguage } from '../help/helpFunction';
 import { Link } from 'react-router-dom';
+import Toast from './toast';
 
 const data = Database.PersonalInfo.Contacts
 const codes = Database.PersonalInfo.ContactsScanCode
@@ -16,14 +17,14 @@ function Contact({isTopOut}) {
   const isOut = isTopOut; //True of false
   const Contact = (
     <>
-      <div className={` ${isOut? "min-h-[70vh] max-h-[70vh]":"min-h-[100vh]"}  relative`}>
-        <div className="absolute top-0 bottle-0 w-full h-full  bg-center bg-cover pb-[100px]"
+      <div className={` ${isOut? "min-h-[70vh] max-h-[70vh]":"min-h-[100vh]"}  flex relative`}>
+        <div className="absolute top-0 bottle-0 w-full h-full  bg-center bg-cover pb-[50px]"
             style={{ 
               backgroundImage: `url(${data.bg})`
             }}
             >
             <span  className={`w-full h-full absolute bg-black  ${isOut? "opacity-50":"opacity-60"}  `}></span>
-            <div className="pt-[150px]">
+            <div className="pt-[50px]">
           <AnimatePresence>
             <section
               className="section-incentive background-alt staggered-end relative"
@@ -37,10 +38,11 @@ function Contact({isTopOut}) {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="card-set p-[20px] overflow-hidden" role="list">
+                        className="card-set p-[50px] overflow-hidden" role="list">
                         {data.items.map((type, index) => (
 
                           <motion.li
+                            data-popover-target={`copy-${index}`}
                             href={type.link}
                             key={index}
                             variants={WelcomeItem}
@@ -69,11 +71,28 @@ function Contact({isTopOut}) {
                                   </div>
                                 </div>
                               </div>
-                              <a className="anz-card-modal-link"
-                                  href={type.link}>
+                              <button className="anz-card-modal-link z-10"
+                                type="button"
+                                onClick={() => {const tempInput = document.createElement('input');
+                                // 将链接值设置为 input 的值
+                                tempInput.value = type.name;
+                                // 将 input 添加到 DOM 中
+                                document.body.appendChild(tempInput);
+                                // 选择 input 的内容
+                                tempInput.select();
+                                // 将内容复制到剪贴板
+                                document.execCommand('copy');
+                                // 移除临时 input
+                                document.body.removeChild(tempInput); 
+                                  {lang==0&&Toast('success', `you have added ${type.type[0]} info into your clipboard`, 3000);}
+                                  {lang==1&&Toast('success', `您已成功添加 ${type.type[1]}信息 到您的剪贴板`, 3000);}
+  
+                              }}
+                                  >
                                   <button
-                                    className="card-modal-trigger modal-trigger card-cta-modal-button"
-                                    type="link">
+                                    className="card-modal-trigger modal-trigger card-cta-modal-button z-50 "
+                    
+                                    type="button">
                                     <div className="modal-trigger-visblecontainer">
                                       <span className="card-cta-modal-button-icon">
                                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" className="card-cta-modal-button-small-icon card-modal-button-small-icon">
@@ -83,7 +102,19 @@ function Contact({isTopOut}) {
                                       </span>
                                     </div>
                                   </button>
-                                </a>
+                                </button>
+                            </div>
+                            
+                              <div data-popover id={`copy-${index}`} role="tooltip" className="absolute z-50 invisible rounded-full flex justify-center w-full text-white transition-opacity duration-300 backdrop-blur-md bg-black/50 shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                              <p className="px-6 py-4 text-center">
+                                {lang==0&&('Copy the info of ')}
+                                {lang==1&&('复制 ')}
+                                {type.type[lang]}
+                                {lang==0&&(' into your clipboard.')}
+                                {lang==1&&(' 到剪贴板。')}
+                               
+                              </p>
+                              <div data-popper-arrow></div>
                             </div>
                           </motion.li>
                         ))}
@@ -95,7 +126,7 @@ function Contact({isTopOut}) {
 
                   </div>
                   {/* Contact way */}
-                  <div className="py-24 sm:py-32 ">
+                  <div className="py-12 sm:py-32 ">
                     <div className="visblecontainer">
                       <motion.ul
                         variants={Welcomevisblecontainer}
@@ -121,13 +152,17 @@ function Contact({isTopOut}) {
                             whileTap={{ scale: 0.99 }}
                             data-popover-target={`way-${index}`}
                             layout>
-                            <a className="flex-shrink-0"
-                              href={type.link} >
+                            <a 
+                            href={type.link}
+                            className="flex-shrink-0">
+                                
                               <div className="items-center flex justify-center">
-                                <i style={{ animationDelay: `${index * 0.3}s` }} className={`${type.icon} text-white text-5xl animate__animated  animate__zoomIn animate__fast `}></i></div>
+                                <i style={{ animationDelay: `${index * 0.15}s` }} className={`${type.icon} text-white text-5xl animate__animated  animate__zoomIn animate__fast `}></i></div>
                               {/* {<p className='lg:text-[15px] text-white text-center'>{type.type[lang]}</p>} */}
                               <div data-popover id={`way-${index}`} role="tooltip" className="absolute z-10 invisible rounded-full flex justify-center w-64 text-white transition-opacity duration-300 backdrop-blur-md bg-black/50 shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
                               <p className="px-6 py-4 text-center">
+                              {lang==0&&('Go to ')}
+                                {lang==1&&('访问 ')}
                                {type.type[lang]}
                               </p>
                               <div data-popper-arrow></div>
@@ -135,18 +170,19 @@ function Contact({isTopOut}) {
                             </a>
                           </motion.li>
                         ))}
+                        
                       </motion.ul>
                     </div>
                   </div>
                   {/* Scan Code */}
-                  <div className="py-10 px-10 ">
+                  <div className="py-12 px-10 ">
                     <div className="visblecontainer max-w-7xl">
                       <motion.div
                         variants={Welcomevisblecontainer}
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className=" flex justify-between  items-center ">
+                        className=" flex justify-center  items-center space-x-[90px]">
                         {codes.map((code, index) => (
                           <motion.div
                             key={index}
@@ -182,6 +218,7 @@ function Contact({isTopOut}) {
                 </div>
               </div>
             </section>
+            {/* <Toast type={"success"} message={"ssss"}/> */}
           </AnimatePresence>
         </div>
         </div>

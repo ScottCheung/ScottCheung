@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import database from "../Datebase.json";
 import Contact from "../conponent/Contact";
 import WhyMe from '../conponent/WhyMe';
-import { hideRow, bgPic,useLanguage } from '../help/helpFunction';
+import { hideRow, bgPic,useLanguage,SelectText } from '../help/helpFunction';
 import { useParams } from 'react-router';
 
 
@@ -149,7 +149,7 @@ export default function WhyM() {
                     className={`grid `}>
                     {/* row1-right-with-button */}
                     <div
-                      className="grid-item large-span-12 small-span-12 rounded-[14px] p-[28px] ">
+                      className="grid-item large-span-12 small-span-12 rounded-[14px]  ">
                       <div className="tile tile-rounded" >
                         <div className="tile-content" >
                           <div className='content-between'>
@@ -167,8 +167,13 @@ export default function WhyM() {
                                 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className={`tile-headline typography-subsection-headline ${selectedWhyMeItem.color1+" "+selectedWhyMeItem.color2} bg-clip-text text-transparent bg-gradient-to-r text-[28px] animate__animated animate__zoomIn min-h-[600px]`}>
-                                {selectedWhyMeItem.description}
+                                className={`tile-headline typography-subsection-headline ${selectedWhyMeItem.color1+" "+selectedWhyMeItem.color2} bg-clip-text text-transparent bg-gradient-to-r text-[28px] animate__animated animate__zoomIn h-auto pb-[400px]`}>
+                                {selectedWhyMeItem.description.split('\n').map((paragraph, index) => (
+                                        <motion.div key={index}>
+                                          <p className='mb-2 text-left'>{SelectText(paragraph)}</p>
+                                          <br className='border-b' />
+                                        </motion.div>
+                                      ))}
                               </motion.div>
                             </div>
                           </div>

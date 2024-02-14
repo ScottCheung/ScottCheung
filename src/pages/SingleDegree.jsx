@@ -38,6 +38,12 @@ export default function Example() {
 // let data = [];
   const lang = useLanguage();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [navbarHeight, setNavbarHeight] = useState(40);
+
+  const handleNavbarHeightChange = (height) => {
+    setNavbarHeight(height);
+  };
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -58,7 +64,7 @@ export default function Example() {
   data-component-list="PageXpController"
   data-anim-scroll-group="body"
 >
-  <Navbar />
+  <Navbar className="z-50" onHeightChange={handleNavbarHeightChange}/>
       <script src="https://cdn.tailwindcss.com"></script>
       <link rel="stylesheet" href="../style/output.css" type="text/css"/>
       <link rel="stylesheet" href="../style/style.css" type="text/css"/>
@@ -84,23 +90,26 @@ export default function Example() {
         </header>
       </div>
           {data[0].type[0]=="Bacholor degree"&&
-          <div
-          className="welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bgrid-colsover bgrid-colsenter sticky top-0 z-50 shadow-2xl" 
+          <a
+          href={data[0].web}
+          className={`welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky z-30 shadow-2xl`}
+          style={{ top: `calc(${navbarHeight}px + 10px)` }}
           >
             <div className='flex flex-row justify-center items-center'>
                 <img className='w-[130px] px-7' src="https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/817d5684-7ac9-491b-8752-60cfa0809adc.png" alt="" />
                 <img className='w-[400px] h-[130px] py-12 px-7' src="https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/ea60b2ce-3079-4e5f-ad4d-440410ae50af.png" alt="" />
             </div>
-        </div>}
+        </a>}
 
-          {data[0].type[0]=="Master degree"&&<div
-            className="welcome-video-wall-visblecontainer w-full flex justify-center py-9 flex-col z-50 bg-yellow-100 bgrid-colsover bgrid-colsenter sticky top-0 z-50 shadow-2xl" 
-            style={{backgroundImage:"url(https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png)"}}
+          {data[0].type[0]=="Master degree"&&<a
+                      href={data[0].web}
+                      className={`welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky z-30 shadow-2xl`}
+                      style={{ top: `calc(${navbarHeight}px + 10px)` ,backgroundImage:"url(https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png)"}}
             >
               <div className='flex flex-row justify-center items-center'>
-                  <img className='w-[220px] ' src="https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png" alt="" />
+                  <img className='w-[110px] h-auto' src="https://www.edigitalagency.com.au/wp-content/uploads/new-UNSW-logo-png-vertical-crest.png" alt="" />
               </div>
-          </div>}
+          </a>}
       <div className='welcome-video-wall-visblecontainer visblecontainer space-y-6 h-auto'>
           <div className=" text-gray-500 pt-24 pb-4" >
             <h2 className="typography-section-intro-headline section-intro-headline">

@@ -166,10 +166,10 @@ function GridHouseCard() {
       
       </AnimatePresence>
       
-      <div className={`flex justify-center `}>
-        <div className='mt-24 px-[10px]'>
+      <div className={`flex justify-between w-[100%]`}>
+        <div className='mt-24 px-[20px] w-[100%]'>
           <AnimatePresence>
-            <header className="py-12 animate__animated animate__fadeIn">
+            <header className="py-12 animate__animated animate__fadeIn w-[100%] px-auto">
               <div className=" items-end lg:flex justify-between">
                 <div className='justify-start flex-col'>
                   <h1 className="text-[40px] font-[500]  animate__animated animate__fadeInLeft">
@@ -197,7 +197,7 @@ function GridHouseCard() {
 
 
             </header>
-            <motion.div layout className="flex justify-between lg:z-50 sticky top-[12px] mt-[20px] h-0 mb-[50px]">
+            <motion.div layout className="w-[100%] px-auto flex justify-between lg:z-50 sticky top-[12px] mt-[20px] h-0 mb-[50px]">
               <motion.label layout className="flex-col inline-flex relative  cursor-pointer mb-12 lg:z-50">
               {!lightboxIsOpen&& <div className='inline-flex items-center'>
                   {/* {con} */}
@@ -228,7 +228,9 @@ function GridHouseCard() {
             </motion.div>
 
             <motion.div
-              className={`grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 md:gap-12 lg:gap-16 overflow-hidden z-1`}>
+              className={` w-[100%] px-auto grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8 lg:gap-12  z-1`}
+              style={{display: "grid"}}
+              >
               <LayoutGroup>
                 {picturesToDisplay.map((item, index) => (
                   <AnimatePresence>
@@ -241,7 +243,7 @@ function GridHouseCard() {
                       transition={{ duration: 0.6}}
                       key={item}
                       style={{ animationDelay: `${0.04 * (index % 12)}s`, zIndex: zIndexes[index]}}
-                      className="transition-all duration-500 flex w-90 h-90 justify-center items-center lg:w-96 lg:h-96  overflow-hidden bg-gray-500/90  rounded-[14px] shadow-lg animate__animated animate__zoomIn dark:bg-gray-700 "
+                      className="transition-all duration-500 flex w-full  aspect-square justify-center items-center  overflow-hidden bg-gray-500/90  rounded-[14px] shadow-lg animate__animated animate__zoomIn dark:bg-gray-700 "
                     >
                       <motion.div
                         initial={{ scale: 1.2 }}
@@ -277,7 +279,7 @@ function GridHouseCard() {
 
                       </motion.div>
                       <div
-                        role="status" className=" flex -z-10  items-center justify-center w-96 h-96 max-w-sm bg-gray-300/30 rounded-lg  animate__faster dark:bg-gray-700/30"
+                        role="status" className=" flex -z-10  items-center justify-center w-full h-full bg-gray-300/30 rounded-lg  animate__faster dark:bg-gray-700/30"
                         style={{imageBackground: `url(${item.replace(/\.(png|jpg|jpeg|gif|bmp|svg|webp)$/, ".md.$1")})`}}
                         >
                         <svg className="w-36 h-36 text-gray-200 dark:text-gray-600 animate-pulse" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">

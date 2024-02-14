@@ -4,17 +4,22 @@ import { motion, useTime, AnimatePresence } from "framer-motion";
 import data from '../Datebase.json';
 import { hideRow, bgPic, useLanguage, SelectText,scrollToHash } from '../help/helpFunction';
 import LifeCate from './lifeCategory';
+import ContactCate from './contactCategory';
+
+import Toast from './toast';
 
 // import { Trans } from "@lingui/macro";
 
 
 const navbarItem = data.Navbar.navbarItem;
 const navLocation = data.Navbar.Location;
+const updateLog =  data.Navbar.UpdateLog;
 
 
 
 
-function Navbar({ topTextColor,BG,ExpandElement }) {
+function Navbar({ topTextColor,BG,ExpandElement,onHeightChange }) {
+  const [currentVersion, setCurrentVersion] = useState(localStorage.getItem('Current version')||null);
   const [lang, setLang] = useState(parseInt(localStorage.getItem('lang')) || 0);
   const isTopTextColorWhite = topTextColor;
   const scrollTo = scrollToHash();
@@ -29,6 +34,7 @@ function Navbar({ topTextColor,BG,ExpandElement }) {
   const isHomeOrRoot = (currentPage === ('/') || currentPage === ('/home'))
   const [currentTime, setCurrentTime] = useState(new Date());
   const [selectedTab, setSelectedTab] = useState(null);
+  const [ShowProfile, setShowProfile] = useState(false);
   const hideExpandElement= ExpandElement ||false ;
   const buttonStyles = {
     '--scrim-background-color': 'rgb(66, 66, 66)',
@@ -74,6 +80,7 @@ function Navbar({ topTextColor,BG,ExpandElement }) {
     const intervalId = setInterval(() => {
       setCurrentTime(new Date());
     }, 60000);
+    
 
     // if (isExpanded === false) {
     //   setSelectedTab(null);
@@ -153,8 +160,10 @@ function Navbar({ topTextColor,BG,ExpandElement }) {
                       whileHover={{ scale: 1.03 ,transition: { duration: 1 }}}
                       whileTap={{ scale: 0.99 }}
                       transition={{ duration: 0.3 }}
+                      data-popover-target={`version`}
                       layout
-                      data-popover-target="popover-user-profile" type="button"
+                      onMouseEnter={() => {setShowProfile(true)}}
+                      onMouseLeave={() => {setShowProfile(false)}} 
                       className='flex z-50'
                     >
                       <a href='/info' style={{ animationDelay: `${0.5}s` }}  classname="animate__animated animate__fadeInRight animate_slow"  >
@@ -163,12 +172,17 @@ function Navbar({ topTextColor,BG,ExpandElement }) {
                             <img  className={`smoothchange animate__animated animate__zoomIn  ${isTop ? 'w-20' : 'w-16'}  rounded-md shadow-lg`}
                               src={"https://3o.hk/images/2024/01/14/avatar.jpg"}
                               alt="Xianzhe's Page" width="100" height="100"></img>
-                              <motion.span 
-                              initial={{ scale: 0,opacity:0 }}
-                              animate={{ scale: 1,opacity:1 }}
-                              transition={{ delay:1,duration: 0.5 }}
-                              exit={{ scale: 0,opacity:0 }}
-                              class={`${isTop? "-top-3 -right-4 w-10 h-10":"-top-3 -right-3 w-7 h-7 text-[10px]"}  absolute   bg-sky-400 border-2 border-white dark:border-gray-800 rounded-full flex justify-center items-center text-white font-black p-2`}>3</motion.span>
+                             {currentVersion != updateLog[0].version && (
+                                  <motion.span
+                                    initial={{ scale: 0, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    transition={{ delay: 1, duration: 0.5 }}
+                                    exit={{ scale: 0, opacity: 0 }}
+                                    className={`${isTop ? "-top-3 -right-4 w-10 h-10" : "-top-3 -right-3 w-7 h-7 text-[10px]"} absolute bg-sky-400 border-2 border-white dark:border-gray-800 rounded-full flex justify-center items-center text-white font-black p-2`}
+                                  >
+                                    {updateLog[0].opints[0].length}
+                                  </motion.span>
+                                )}
                           </div>
                           {/* <span className="relative flex h-7 w-7">
                                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
@@ -184,90 +198,121 @@ function Navbar({ topTextColor,BG,ExpandElement }) {
                       </a>
                     </motion.button>
                   <AnimatePresence>
-                  <motion.div 
+                  {ShowProfile && <motion.div
+                  onMouseEnter={() => {setShowProfile(true)}}
+                    onMouseLeave={() => {setShowProfile(false)}} 
                     layout
                     layoutId='version'
-                    initial={{ opacity: 0,scale:0 }}
-                    animate={{ opacity: 1,scale:1 }}
-                    exit={{ opacity: 0,scale:0 }}
-                    transition={{ duration: 0.3 }}
-                    data-popover id="popover-user-profile" className={`${isShowVersion? " w-[96%] p-[28px] " : "w-[400px] p-[14px]"} transition-all duration-1000  rounded-[20px] absolute z-50 invisible flex flex-col   m-[20px]  text-gray-500 bg-white border border-gray-200 shadow-sm opacity-0 dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600`}>
+                    initial={{ opacity: 0,scale:0,y:300 }}
+                    animate={{ opacity: 1,scale:1,y:0 }}
+                    exit={{ opacity: 0,scale:0,y:300 }}
+                    
+                    type="popover"
+                    id='version'
+                    data-popover
+                    transition={{ duration: 0.5 }} 
+                    className={`w-[500px]  absolute m-[40px]    z-50  flex flex-col   `}>
                       <motion.div 
-                      layoutId='version2'
-                      className={`flex space-x-4 ${isShowVersion? "pb-[28px]" : " pb-[14px]"}`}>
-                        <a href='/info'className="flex items-center justify-between">
-                          <img className="w-24 h-24 rounded-full" src={"https://3o.hk/images/2024/01/14/avatar.jpg"} />
-                          <div>
-                          </div>
-                        </a>
-                        <div>
-                        <a href='/info' className="text-base  font-semibold leading-none text-gray-900 dark:text-white">
-                            <div className='text-3xl'>
-                            {lang == "0" && "Click Avatar to know me better"}
-                            {lang == "1" && "点击头像了解更多资料"}
-                            </div>
-                          </a>
-                          <p className="mb-3 text-sm font-normal">
-                            <a href='/info' className="hover:underline text-2xl duration-300">@Scottt1110
-                            <span class="inline-flex items-center justify-center w-7 h-7 ml-2 text-sm font-semibold text-blue-800 bg-sky-100 rounded-full dark:bg-sky-700 dark:text-sky-400">
-                              <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                              <path fill="currentColor" d="m18.774 8.245-.892-.893a1.5 1.5 0 0 1-.437-1.052V5.036a2.484 2.484 0 0 0-2.48-2.48H13.7a1.5 1.5 0 0 1-1.052-.438l-.893-.892a2.484 2.484 0 0 0-3.51 0l-.893.892a1.5 1.5 0 0 1-1.052.437H5.036a2.484 2.484 0 0 0-2.48 2.481V6.3a1.5 1.5 0 0 1-.438 1.052l-.892.893a2.484 2.484 0 0 0 0 3.51l.892.893a1.5 1.5 0 0 1 .437 1.052v1.264a2.484 2.484 0 0 0 2.481 2.481H6.3a1.5 1.5 0 0 1 1.052.437l.893.892a2.484 2.484 0 0 0 3.51 0l.893-.892a1.5 1.5 0 0 1 1.052-.437h1.264a2.484 2.484 0 0 0 2.481-2.48V13.7a1.5 1.5 0 0 1 .437-1.052l.892-.893a2.484 2.484 0 0 0 0-3.51Z"/>
-                              <path fill="#fff" d="M8 13a1 1 0 0 1-.707-.293l-2-2a1 1 0 1 1 1.414-1.414l1.42 1.42 5.318-3.545a1 1 0 0 1 1.11 1.664l-6 4A1 1 0 0 1 8 13Z"/>
-                              </svg>
-                              <span class="sr-only">Icon description</span>
-                              </span>
-                            </a>
-                            
-                          </p>
-                        </div>
-  
-                      </motion.div>
-                      <div  class="p-4 text-sky-800 border border-sky-300 rounded-[14px] bg-sky-50 dark:bg-gray-800 dark:text-sky-400 dark:border-sky-800" role="alert">
-                        <div className='flex justify-between '>
-                            <div class="flex items-center">
-                                <svg class="flex-shrink-0 w-8 h-8 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                  <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
-                                </svg>
-                                      <h3 class="text-[15px] font-medium text-sky-800">Version 7.1.2</h3>
+                      className={`p-[28px] absolute top-0 left-0 right-0 bottle-0 rounded-[20px] text-gray-500 bg-white border border-gray-200 shadow-sm  dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600`}>
+                          <motion.div 
+                          layoutId='version2'
+                          className={`flex space-x-4  pb-[28px]`}>
+                            <a href='/info'className="flex items-center justify-between">
+                              <img className="w-24 h-24 rounded-full" src={"https://3o.hk/images/2024/01/14/avatar.jpg"} />
+                              <div>
                               </div>
-                              <div class="bg-gray-100 text-gray-800 text-[10px] font-medium inline-flex items-center ml-4 px-3 justify-center py-[4px] rounded-[14px] dark:bg-gray-700 dark:text-blue-400 border border-gray-400">
-                                          <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                            <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z"/>
-                                            </svg>
-                                            3 days ago
-                                        </div>
-
-                        </div>
-
-                          
-                          <div class="mt-2 mb-4 text-[12px]">
-                          More info about this info success goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.                            More info about this info success goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.                            More info about this info success goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.                            More info about this info success goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.                            More info about this info success goes here. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
-                          </div>
-                          <ul role="list" class="marker:text-sky-700 list-disc pl-5 space-y-3 text-sky-700 text-[12px]">
-                            <li>5 cups chopped Porcini mushrooms</li>
-                            <li>1/2 cup of olive oil</li>
-                            <li>3lb of celery</li>
-                          </ul>
-
-
-                        </div>
-
-                        <div class="flex text-[15px] pt-[28px] space-x-4">
-                            <button 
-                                  onClick={() => {setIsShowVersion(!isShowVersion);
-                                    }}
-                                  type="button" class="text-white bg-sky-800 hover:bg-sky-900 focus:ring-2 focus:outline-none focus:ring-sky-300 font-medium rounded-[12px] px-6 py-3 me-2 text-center inline-flex items-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
-                                    <svg class="me-4 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
-                                      <path d="M10 0C4.612 0 0 5.336 0 7c0 1.742 3.546 7 10 7 6.454 0 10-5.258 10-7 0-1.664-4.612-7-10-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
+                            </a>
+                            <div>
+                            <a href='/info' className="text-base  font-semibold leading-none text-gray-900 dark:text-white">
+                                <div className='text-3xl'>
+                                {lang == "0" && "Click Avatar to know me better"}
+                                {lang == "1" && "点击头像了解更多资料"}
+                                </div>
+                              </a>
+                              <p className="mb-3 text-sm font-normal">
+                                <a href='/info' className="hover:underline text-2xl duration-300">@Scottt1110
+                                <span class="inline-flex items-center justify-center w-7 h-7 ml-2 text-sm font-semibold text-blue-800 bg-sky-100 rounded-full dark:bg-sky-700 dark:text-sky-400">
+                                  <svg class="w-6 h-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                  <path fill="currentColor" d="m18.774 8.245-.892-.893a1.5 1.5 0 0 1-.437-1.052V5.036a2.484 2.484 0 0 0-2.48-2.48H13.7a1.5 1.5 0 0 1-1.052-.438l-.893-.892a2.484 2.484 0 0 0-3.51 0l-.893.892a1.5 1.5 0 0 1-1.052.437H5.036a2.484 2.484 0 0 0-2.48 2.481V6.3a1.5 1.5 0 0 1-.438 1.052l-.892.893a2.484 2.484 0 0 0 0 3.51l.892.893a1.5 1.5 0 0 1 .437 1.052v1.264a2.484 2.484 0 0 0 2.481 2.481H6.3a1.5 1.5 0 0 1 1.052.437l.893.892a2.484 2.484 0 0 0 3.51 0l.893-.892a1.5 1.5 0 0 1 1.052-.437h1.264a2.484 2.484 0 0 0 2.481-2.48V13.7a1.5 1.5 0 0 1 .437-1.052l.892-.893a2.484 2.484 0 0 0 0-3.51Z"/>
+                                  <path fill="#fff" d="M8 13a1 1 0 0 1-.707-.293l-2-2a1 1 0 1 1 1.414-1.414l1.42 1.42 5.318-3.545a1 1 0 0 1 1.11 1.664l-6 4A1 1 0 0 1 8 13Z"/>
+                                  </svg>
+                                  <span class="sr-only">Icon description</span>
+                                  </span>
+                                </a>
+                                
+                              </p>
+                            </div>
+      
+                          </motion.div>
+                      
+                          <div  class="p-4 text-sky-800 border border-sky-300 rounded-[14px] bg-sky-50 dark:bg-gray-800 dark:text-sky-400 dark:border-sky-800" role="alert">
+                            <div className='flex justify-between '>
+                                <div class="flex items-center">
+                                    <svg class="flex-shrink-0 w-8 h-8 me-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                      <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
                                     </svg>
-                                    View more
-                            </button>
-                            <button type="button" class="text-sky-800 bg-transparent border border-sky-800 hover:bg-sky-900 hover:text-white focus:ring-2 focus:outline-none focus:ring-sky-300 font-medium rounded-[12px] px-6 py-3 text-center dark:hover:bg-sky-600 dark:border-sky-600 dark:text-sky-400 dark:hover:text-white dark:focus:ring-sky-800" data-dismiss-target="#alert-additional-content-3" aria-label="Close">
-                                    I know
-                            </button>
-                          </div>
+                                          <h3 class="text-[15px] font-medium text-sky-800">
+                                          {lang == "0" && "Version ："}
+                                          {lang == "1" && "版本号 ："}
+                                            
+                                            {updateLog[0].version}
+                                            </h3>
+                                  </div>
+                                  <div class="bg-gray-100 text-gray-800 text-[10px] font-medium inline-flex items-center ml-4 px-3 justify-center py-[4px] rounded-[14px] dark:bg-gray-700 dark:text-blue-400 border border-gray-400">
+                                              <svg class="w-4 h-4 me-1.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                                <path d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm3.982 13.982a1 1 0 0 1-1.414 0l-3.274-3.274A1.012 1.012 0 0 1 9 10V6a1 1 0 0 1 2 0v3.586l2.982 2.982a1 1 0 0 1 0 1.414Z"/>
+                                                </svg>
+                                                {updateLog[0].time}
+                                            </div>
+
+                            </div>
+                            {/* 欢迎第一次访问 */}
+                            <div class="mt-8 mb-4 text-[12px]">
+                            {currentVersion==null&&<> {lang == "0" && "Welcome to visit my page first time!"}{lang == "1" && "感谢您第一次访问我的网页！"}</>}
+                            </div>
+                              {/* 消息 */}
+                              <div class="mt-8 mb-4 text-[12px]">
+                              {updateLog[0].content[lang]}
+                              </div>
+                              <ul role="list" class="marker:text-sky-700 list-disc pl-5 space-y-3 text-sky-700 text-[12px]">
+                              {updateLog[0].opints[lang].map((item, index) => (
+                              
+                              <li>{item}</li>
+                              ))}
+                              </ul>
+
+
+                            </div>
+
+                            <div class="flex text-[15px] pt-[28px] space-x-4">
+                                <button 
+                                      onClick={() => {
+
+                                        Toast('attention', lang == 0 ? 'Sorry, you are not owner of this website, you can not get access to the fully database at present.' : '抱歉，您不是管理者，您暂时无法访问所有数据库。', 10000);
+                                        }}
+                                      type="button" class="text-white bg-sky-800 hover:bg-sky-900 focus:ring-2 focus:outline-none focus:ring-sky-300 font-medium rounded-[12px] px-6 py-3 me-2 text-center inline-flex items-center dark:bg-sky-600 dark:hover:bg-sky-700 dark:focus:ring-sky-800">
+                                        <svg class="me-4 h-6 w-6" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 14">
+                                          <path d="M10 0C4.612 0 0 5.336 0 7c0 1.742 3.546 7 10 7 6.454 0 10-5.258 10-7 0-1.664-4.612-7-10-7Zm0 10a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/>
+                                        </svg>
+                                        
+                                        {lang == "0" && "View more"}
+                                          {lang == "1" && "展示更多"}
+                                </button>
+                                <button 
+                                       onClick={() => {setIsShowVersion(!isShowVersion);
+                                        setShowProfile(false);
+                                        setCurrentVersion(updateLog[0].version);
+                                        localStorage.setItem('Current version', updateLog[0].version);
+                                       }}
+                                type="button" class="text-sky-800 bg-transparent border border-sky-800 hover:bg-sky-900 hover:text-white focus:ring-2 focus:outline-none focus:ring-sky-300 font-medium rounded-[12px] px-6 py-3 text-center dark:hover:bg-sky-600 dark:border-sky-600 dark:text-sky-400 dark:hover:text-white dark:focus:ring-sky-800" data-dismiss-target="#alert-additional-content-3" aria-label="Close">
+                                        
+                                        {lang == "0" && "I know"}
+                                          {lang == "1" && "我知道了"}
+                                </button>
+                              </div>
+                      </motion.div>
                       <div data-popper-arrow></div>
-                    </motion.div>
+                    </motion.div>}
                     </AnimatePresence>
 
 
@@ -318,7 +363,7 @@ function Navbar({ topTextColor,BG,ExpandElement }) {
                           data-popover
                           id={`nav-des-${item.name[0]}`} 
                           role="tooltip" 
-                          className="duration-200 transition-all absolute z-10 top-50 invisible opacity-0 inline-flex w-64 text-gray-500  bg-white rounded-[14px] shadow-2xl  dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
+                          className="duration-200 transition-all absolute z-10 top-0    invisible opacity-0 inline-flex w-64 text-gray-500  bg-white rounded-[14px] shadow-2xl  dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800">
                                         <div className="px-6 py-4">
                                           <p className='text-[13px] text-left font-mono'>{item.des[lang]}</p>
                                           <span className='text-center text-[16px]'>{item.expression}</span>
@@ -365,7 +410,7 @@ function Navbar({ topTextColor,BG,ExpandElement }) {
                             <div data-popper-arrow></div>
                           </div>
                           <AnimatePresence>
-                    {isHomeOrRoot &&
+                    {
                       <motion.button
                         initial={{ rotate: 180 }}
                         whileHover={isExpanded ? { scale: 1.1, rotate:360} :{ scale: 1.1, rotate:540 }}
@@ -429,7 +474,6 @@ function Navbar({ topTextColor,BG,ExpandElement }) {
                 </div>
               </div>
               }
-
               {/* 二级NavbarLocation */}       
               {(selectedTab == "Home" || (isExpanded==true)) && (
               <motion.div 
@@ -468,8 +512,12 @@ function Navbar({ topTextColor,BG,ExpandElement }) {
                 </motion.div>
               </motion.div>)}
               {/* lifeCategory */}
-              {selectedTab=="Life" && <div className={`${isTop? "backdrop-blur-md bg-sky-200/20":" bg-sky-200/30 " } rounded-[28px]  `}><LifeCate /></div>}
-              
+              {selectedTab=="Life" && <motion.div 
+              //  layout layoutId='isExp' 
+               className={`${isTop? "backdrop-blur-md bg-sky-200/20":" bg-sky-200/30 " } rounded-[28px]  `}><LifeCate /></motion.div>}
+              {selectedTab=="Contact" &&  <motion.div 
+              // layout layoutId='isExp' 
+              className={`${isTop? "backdrop-blur-md bg-sky-200/20 text-white":" bg-sky-200/30 " } rounded-[14px]  `}><ContactCate /></motion.div>}
             </div>
           </div>
         </motion.div>
@@ -501,13 +549,19 @@ function Navbar({ topTextColor,BG,ExpandElement }) {
                     </div>
                 </div>
             </motion.button>}
+            <div className='relative z-50 '>
+              <div 
+              id='toast-root'
+              className='fixed top-40 right-20 flex flex-col '>
+              </div>
+            </div>
     </AnimatePresence>
 
   );
 
   return (
     <motion.div
-    className='smoothchange'
+    
     layout
     >
       {navbar}

@@ -36,7 +36,7 @@ function Welcome () {
   );
 
   return (
-    <div >
+    <div className=''>
       {Welcome}
     </div>
   );

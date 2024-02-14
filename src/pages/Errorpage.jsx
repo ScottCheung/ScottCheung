@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 import Navbar from '../conponent/Navbar'
 import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
 import { motion } from "framer-motion"
 import { Link } from 'react-router-dom';
+import Toast from '../conponent/toast';
 
 
 const Message ={ 
@@ -21,6 +22,16 @@ const Message ={
 export default function Errorpage () {
   const lang = useLanguage();
   document.body.style.overflow = 'hidden';
+  useEffect(() => {
+    // 在组件挂载后自动触发 Toast
+    const timeoutId = setTimeout(() => {
+      Toast('error', lang == 0 ? 'You can not get access to the database at present.' : '您暂时无法访问数据库。', 10000);
+    }, 1000); // 1000 毫秒延时，你可以根据需要调整
+
+    // 清除定时器以避免内存泄漏
+    return () => clearTimeout(timeoutId);
+  }, [lang]);
+
   return (
     <div className="min-h-screen ">
       <Navbar topTextColor={true}/>
@@ -52,6 +63,7 @@ export default function Errorpage () {
                   transition={{duration:0.7}}
                   className="animate__animated animate__zoomIn animate__slow">
             <a
+            
             style={{ animationDelay: `0.4s` }} href="/" className="animate__animated animate__fadeInUp rounded-lg text-3xl  bg-sky-900 px-10 py-6 font-semibold text-white shadow-sm hover:bg-sky-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:scale-[1.05]">
                       <i className={ `fi  mr-6 mt-3 ${Message.btn1Icon} `}></i>{Message.btn1[lang]}
               </a>

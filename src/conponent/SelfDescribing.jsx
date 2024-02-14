@@ -30,7 +30,7 @@ function SelfDescribing () {
       
           <section className={`smoothchange items-center bg-fixed bg-center relative flex justify-center`} style={{ backgroundImage: `url(${data.pic})`, backgroundSize: 'cover', backgroundRepeat: 'no-repeat', backgroundPosition: 'center center' }}>
                 <span className="w-full h-full absolute opacity-70 bg-black "></span>
-              <div className="visblecontainer pt-[30vh]">
+              <div className="visblecontainer py-[20vh]">
               <motion.div
                   initial={{  opacity: 0}}
                   whileInView={{ opacity: 1}}
