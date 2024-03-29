@@ -104,7 +104,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                       layout
                       ref={ref}
                       style={{ animationDelay: `${0.15*index+0.4}s` }}
-                      className={`gallery-item grid-item current  ${inView ? 'welcomeanimation' : 'Exitanimation'}`}
+                      className={`gallery-item grid-item current ${windowWidth>700? inView ? 'welcomeanimation' : 'Exitanimation':null}`}
                     >
                       <div
                         className="icon-card card-visblecontainer "

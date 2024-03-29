@@ -61,10 +61,7 @@
   "PersonalInfo": {
     "StudyExperience": [
       {
-        "major": [
-          "Functional",
-          "Material"
-        ],
+        "major": ["Functional", "Material"],
         "href": "/major/major=FunctionalMaterial",
         "type": "Bacholor",
         "logo": "/Graphs/study/swust.png",
@@ -76,10 +73,7 @@
           "Functional materials are generally characterised as those materials which possess particular native properties and functions of their own. For example, ferroelectricity, piezoelectricity, magnetism or energy storage functions.",
           "Functional materials are found in all classes of materials: ceramics, metals, polymers and organic molecules. Functional materials are often used in electromagnetic applications from KHz to THz and at optical frequencies where the plasmonic properties of metals assume particular importance. Functional materials are also of critical importance in materials for energy such as electro- and magnetocaloric materials, for energy storage and for solar harvesting functions."
         ],
-        "tag": [
-          "Key university",
-          ""
-        ],
+        "tag": ["Key university", ""],
         "web": "http://www.english.swust.edu.cn/main.htm",
         "majorweb": "https://en.wikipedia.org/wiki/Functional_materials",
         "time": "Sep 4, 2017 - Sep 6, 2021",
@@ -225,10 +219,7 @@
         ]
       },
       {
-        "major": [
-          "Business",
-          "Administration"
-        ],
+        "major": ["Business", "Administration"],
         "href": "/major/major=BusinessAdministration",
         "type": "Bacholor",
         "logo": "/Graphs/study/swust.png",
@@ -240,10 +231,7 @@
           "In simple terms, business administration is the work of managing an organization's resources, time and people. Business administration professionals work to ensure that businesses and organizations are run effectively, efficiently and profitably.",
           "Business administration, also known as business management, is the administration of a commercial enterprise.[1] It includes all aspects of overseeing and supervising the business operations of an organization. From the point of view of management and leadership, it also covers fields that include office building administration, accounting, finance, designing, development, quality assurance, data analysis, sales, project management, information-technology management, research and development, marketing and communication studies."
         ],
-        "tag": [
-          "Key university",
-          ""
-        ],
+        "tag": ["Key university", ""],
         "web": "http://www.english.swust.edu.cn/main.htm",
         "majorweb": "https://en.wikipedia.org/wiki/Artificial_intelligence",
         "time": "Sep 4, 2019 - Sep 6, 2021",
@@ -339,10 +327,7 @@
         ]
       },
       {
-        "major": [
-          "Artifical",
-          "Inteliigence"
-        ],
+        "major": ["Artifical", "Inteliigence"],
         "href": "/major/major=ArtificalInteliigence",
         "type": "Master",
         "logo": "/Graphs/study/unsw.png",
@@ -355,10 +340,7 @@
           "Artificial intelligence (AI) is the intelligence of machines or software, as opposed to the intelligence of humans or animals. It is a field of study in computer science that develops and studies intelligent machines. Such machines may be called AIs.",
           "AI technology is widely used throughout industry, government, and science. Some high-profile applications are: advanced web search engines (e.g., Google Search), recommendation systems (used by YouTube, Amazon, and Netflix), understanding human speech (such as Google Assistant, Siri, and Alexa), self-driving cars (e.g., Waymo), generative and creative tools (ChatGPT and AI art), and superhuman play and analysis in strategy games (such as chess and Go)."
         ],
-        "tag": [
-          "Top 19",
-          "G8"
-        ],
+        "tag": ["Top 19", "G8"],
         "web": "https://www.unsw.edu.au/",
         "majorweb": "https://en.wikipedia.org/wiki/Artificial_intelligence",
         "time": "Sep 13, 2022 - Sep 6, 2024",
@@ -442,10 +424,7 @@
         ]
       },
       {
-        "major": [
-          "Data",
-          "Science"
-        ],
+        "major": ["Data", "Science"],
         "href": "/major/major=DataScience",
         "type": "Master",
         "logo": "/Graphs/study/unsw.png",
@@ -459,10 +438,7 @@
         ],
         "web": "https://www.unsw.edu.au/",
         "majorweb": "https://en.wikipedia.org/wiki/Data_science",
-        "tag": [
-          "Top 19",
-          "G8"
-        ],
+        "tag": ["Top 19", "G8"],
         "time": "Sep 13, 2022 - Sep 6, 2024",
         "description": "This degree covers a wide range of data-related fields, covers Machine Learning & Data Mining, Database Systems Implementation, Recommender Systems, and Design & Analysis of Algorithms. This comprehensive curriculum provides candidates with a rich and thorough understanding of data, strengthening his professional depth.",
         "courses": [
@@ -547,9 +523,7 @@
     "WhyMe": [
       {
         "id": "LearningAbility",
-        "advantage": [
-          "Learning ability"
-        ],
+        "advantage": ["Learning ability"],
         "href": "/whyme/whyme=LearningAbility",
         "pic": "/Graphs/whyme/LearningAbility.png",
         "pic2": "/Graphs/whyme/LearningAbility2.jpg",
@@ -560,9 +534,7 @@
       },
       {
         "id": "Leadership",
-        "advantage": [
-          "Leadership"
-        ],
+        "advantage": ["Leadership"],
         "href": "/whyme/whyme=Leadership",
         "pic": "/Graphs/whyme/Leadership.png",
         "pic2": "/Graphs/whyme/Leadership2.jpg",
@@ -573,9 +545,7 @@
       },
       {
         "id": "Communication",
-        "advantage": [
-          "Communication"
-        ],
+        "advantage": ["Communication"],
         "href": "/whyme/whyme=Communication",
         "pic": "/Graphs/whyme/Communication.png",
         "pic2": "/Graphs/whyme/Communication2.jpg",
@@ -586,9 +556,7 @@
       },
       {
         "id": "ProblemSolving",
-        "advantage": [
-          "Problem-Solving"
-        ],
+        "advantage": ["Problem-Solving"],
         "href": "/whyme/whyme=ProblemSolving",
         "pic": "/Graphs/whyme/ProblemSolving.png",
         "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
@@ -599,9 +567,7 @@
       },
       {
         "id": "AestheticAttitude",
-        "advantage": [
-          "Aesthetic attitude"
-        ],
+        "advantage": ["Aesthetic attitude"],
         "href": "/whyme/whyme=AestheticAttitude",
         "pic": "/Graphs/whyme/AestheticAttitude.png",
         "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
@@ -612,14 +578,12 @@
       },
       {
         "id": "EmotionalStable",
-        "advantage": [
-          "Emotional Stable"
-        ],
+        "advantage": ["Emotional Stable"],
         "href": "/whyme/whyme=EmotionalStable",
         "pic": "/Graphs/whyme/EmotionalStable.png",
         "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
         "icon": "fi-rr-smile",
-        "description": "As an INFP with a heightened emotional perception, adept micro-expression observer, and strong empathic abilities. Thrives in resolving customer complaints and unforeseen situations. Optimistic and stress-resistant, capable of swiftly managing negative emotions at work. Always be positive and energetic.",
+        "description": "As an infj with a heightened emotional perception, adept micro-expression observer, and strong empathic abilities. Thrives in resolving customer complaints and unforeseen situations. Optimistic and stress-resistant, capable of swiftly managing negative emotions at work. Always be positive and energetic.",
         "color1": "from-indigo-500",
         "color2": "to-pink-500"
       }
@@ -630,85 +594,74 @@
     },
     "KeyFeature": [
       {
-        "no":4,
-        "keyfeature": [
-          "Majors"
-        ],
-        "href": [
-          "Degrees"
-        ],
+        "no": 4,
+        "keyfeature": ["Majors"],
+        "href": ["Degrees"],
         "icon": "fi-rr-graduation-cap",
         "description": "Possessing a diverse academic background, he has expertise in various majors."
       },
       {
-        "no":17,
-        "keyfeature": [
-          "scholarships"
-        ],
-        "href": [
-          "scholarships"
-        ],
+        "no": 17,
+        "keyfeature": ["scholarships"],
+        "href": ["scholarships"],
         "icon": "fi-rr-trophy-star",
         "description": "Demonstrating excellence, he has been awarded and achieved success in winning 17 scholarships comprehensively."
       },
       {
-        "no":60,
-        "keyfeature": [
-          " Certificates"
-        ],
-        "href": [
-          "Certificates"
-        ],
+        "no": 60,
+        "keyfeature": [" Certificates"],
+        "href": ["Certificates"],
         "icon": "fi-rr-diploma",
         "description": "Active participation has led to the acquisition of over 60 certificates, showcasing a proactive commitment to continuous learning."
       }
     ],
     "Contacts": {
-    "bg":"https://cdn.pixabay.com/photo/2018/05/07/22/08/opera-house-3381786_1280.jpg",
-    "items":[
-      {
-        "type": "Linkedin",
-        "icon": "fi-brands-linkedin",
-        "link": "https://www.linkedin.com/in/zhang-xianzhe-03133a259/",
-        "name": "Xianzhe Zhang"
-      },
-      {
-        "type": "E-mail",
-        "icon": "fi-rr-envelope",
-        "link": "https://outlook.office365.com/mail/",
-        "name": "z5443003@ad.unsw.edu.au"
-      },
-      {
-        "type": "Facebook",
-        "icon": "fi-brands-facebook",
-        "link": "https://www.facebook.com/profile.php?id=100085874466260",
-        "name": "Xianzhe Zhang"
-      },
-      {
-        "type": "Phone",
-        "icon": "fi-sr-circle-phone-flip",
-        "link": "17381484512",
-        "name": "+86 17381484512"
-      },
-      {
-        "type": "Instagram",
-        "icon": "fi-brands-instagram",
-        "link": "https://www.instagram.com/invites/contact/?i=er73s6a2y80u&utm_content=pblnb0t",
-        "name": "scottzhang9779"
-      },
-      {
-        "type": "Little Red Book",
-        "icon": "fi-sr-book-alt",
-        "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579",
-        "name": "贤哲scott"
-      },
-      {
-        "type": "Wechat",
-        "icon": "fi-sr-comments",
-        "link": "https://www.wechat.com/",
-        "name": "Scottt1110"
-      }
-    ]},
+      "bg": "https://cdn.pixabay.com/photo/2018/05/07/22/08/opera-house-3381786_1280.jpg",
+      "items": [
+        {
+          "type": "Linkedin",
+          "icon": "fi-brands-linkedin",
+          "link": "https://www.linkedin.com/in/zhang-xianzhe-03133a259/",
+          "name": "Xianzhe Zhang"
+        },
+        {
+          "type": "E-mail",
+          "icon": "fi-rr-envelope",
+          "link": "https://outlook.office365.com/mail/",
+          "name": "z5443003@ad.unsw.edu.au"
+        },
+        {
+          "type": "Facebook",
+          "icon": "fi-brands-facebook",
+          "link": "https://www.facebook.com/profile.php?id=100085874466260",
+          "name": "Xianzhe Zhang"
+        },
+        {
+          "type": "Phone",
+          "icon": "fi-sr-circle-phone-flip",
+          "link": "17381484512",
+          "name": "+86 17381484512"
+        },
+        {
+          "type": "Instagram",
+          "icon": "fi-brands-instagram",
+          "link": "https://www.instagram.com/invites/contact/?i=er73s6a2y80u&utm_content=pblnb0t",
+          "name": "scottzhang9779"
+        },
+        {
+          "type": "Little Red Book",
+          "icon": "fi-sr-book-alt",
+          "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579",
+          "name": "贤哲scott"
+        },
+        {
+          "type": "Wechat",
+          "icon": "fi-sr-comments",
+          "link": "https://www.wechat.com/",
+          "name": "Scottt1110"
+        }
+      ]
+    },
     "ContactsScanCode": [
       {
         "lable": "Resume",
@@ -776,194 +729,194 @@
           "color2": "to-pink-500"
         }
       ],
-        "Apps": [
-          {
-            "alt": "Word",
-            "src": "https://cdn.worldvectorlogo.com/logos/word-1.svg"
-          },
-          {
-            "alt": "Excel",
-            "src": "https://cdn.worldvectorlogo.com/logos/excel-4.svg"
-          },
-          {
-            "alt": "PPT",
-            "src": "https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg"
-          },
-          {
-            "alt": "PS",
-            "src": "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg"
-          },
-          {
-            "alt": "AE",
-            "src": "https://cdn.worldvectorlogo.com/logos/after-effects-1.svg"
-          },
-          {
-            "alt": "AI",
-            "src": "https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc-icon.svg"
-          },
-          {
-            "alt": "LR",
-            "src": "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-lightroom-cc-icon.svg"
-          },
-          {
-            "alt": "ID",
-            "src": "https://cdn.worldvectorlogo.com/logos/adobe-indesign-cc-icon.svg"
-          },
-          {
-            "alt": "PR",
-            "src": "https://cdn.worldvectorlogo.com/logos/premiere-pro-cc.svg"
-          },
-          {
-            "alt": "AU",
-            "src": "https://cdn.worldvectorlogo.com/logos/adobe-audition-cc-icon-2020-.svg"
-          },
-          {
-            "alt": "VS code",
-            "src": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg"
-          },
-          {
-            "alt": "Pycharm",
-            "src": "https://cdn.worldvectorlogo.com/logos/pycharmedu-icon.svg"
-          },
-          {
-            "alt": "Clion",
-            "src": "https://cdn.worldvectorlogo.com/logos/clion-1.svg"
-          },
-          {
-            "alt": "Webstorm",
-            "src": "https://cdn.worldvectorlogo.com/logos/webstorm-icon.svg"
-          },
-          {
-            "alt": "Github",
-            "src": "https://cdn.worldvectorlogo.com/logos/github-icon-1.svg"
-          },
-          {
-            "alt": "Keynote",
-            "src": "https://www.icloud.com/system/icloud.com/2404Project58/43f50d5d6df53dc6bddf56d7ceb257d0.png"
-          },
-          {
-            "alt": "Pages",
-            "src": "https://www.icloud.com/system/icloud.com/2404Project58/3c581ce16ec89eedc1d6862e31ccd8b3.png"
-          },
-          {
-            "alt": "Numbers",
-            "src": "https://www.icloud.com/system/icloud.com/2404Project58/f5b837094af69a157a6fc7f413e04fb7.png"
-          },
-          {
-            "alt": "Tailwind",
-            "src": "https://cdn.worldvectorlogo.com/logos/tailwind-css-1.svg"
-          },
-          {
-            "alt": "Bootstrap",
-            "src": "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg"
-          },
-          {
-            "alt": "MUI",
-            "src": "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg"
-          },
-          {
-            "alt": "EUI",
-            "src": "https://cdn.worldvectorlogo.com/logos/element-ui-1.svg"
-          },
-          {
-            "alt": "Framer",
-            "src": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg"
-          }
-        ],
-        "front-end":[
-          {
-            "name": "HTML",
-            "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg"
-          },
-          {
-            "name": "CSS",
-            "image": "https://www.svgrepo.com/show/521591/css.svg"
-          },
-          {
-            "name": "JavaScript",
-            "image": "https://www.svgrepo.com/show/510028/javascript-file.svg"
-          },
-          {
-            "name": "React",
-            "image": "https://www.svgrepo.com/show/473768/react.svg"
-          },
-          {
-            "name": "Tailwind",
-            "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg"
-          },
-          {
-            "name": "Framer",
-            "image": "https://www.svgrepo.com/show/371686/animation.svg"
-          },
-          {
-            "name": "React",
-            "image": "https://www.svgrepo.com/show/473768/react.svg"
-          },
-          {
-            "name": "Main UI",
-            "image": "https://www.svgrepo.com/show/38133/ui8.svg"
-          },
-          {
-            "name": "Animation libs",
-            "image": "https://www.svgrepo.com/show/488047/animation.svg"
-          }
-        ],
-        "backend-end":[
-          {
-            "name": "Python",
-            "image": "https://www.svgrepo.com/show/510150/python-file.svg"
-          },
-          {
-            "name": "NodeJS",
-            "image": "https://www.svgrepo.com/show/473736/nodejs.svg"
-          },
-          {
-            "name": "Json",
-            "image": "https://www.svgrepo.com/show/74933/json-file.svg"
-          },
-          {
-            "name": "TablePlus",
-            "image": "https://www.svgrepo.com/show/532228/table-list.svg"
-          }
-        ],
-        "database":[
-          {
-            "name": "MySQL",
-            "image": "https://www.svgrepo.com/show/394296/mysql.svg"
-          },
-          {
-            "name": "PostgreSQL",
-            "image": "https://www.svgrepo.com/show/473760/postgresql.svg"
-          }
-        ],
-        "Algorithm":[
-          {
-            "name": "Machine Learning",
-            "image": "https://www.svgrepo.com/show/445872/machine-learning.svg"
-          },
-          {
-            "name": "Deep Learning",
-            "image": "https://www.svgrepo.com/show/473805/tensorflow.svg"
-          },
-          {
-            "name": "Natural Language",
-            "image": "https://www.svgrepo.com/show/64578/nlp-neurolinguistic-programation.svg"
-          },
-          {
-            "name": "Recommender System",
-            "image": "https://www.svgrepo.com/show/324465/neuron-connections-neural-network.svg"
-          }
-        ],
-        "other":[
-          {
-            "name": "Github",
-            "image": "https://www.svgrepo.com/show/512317/github-142.svg"
-          },
-          {
-            "name": "SSH",
-            "image": "https://www.svgrepo.com/show/501028/terminal.svg"
-          }
-        ]
+      "Apps": [
+        {
+          "alt": "Word",
+          "src": "https://cdn.worldvectorlogo.com/logos/word-1.svg"
+        },
+        {
+          "alt": "Excel",
+          "src": "https://cdn.worldvectorlogo.com/logos/excel-4.svg"
+        },
+        {
+          "alt": "PPT",
+          "src": "https://cdn.worldvectorlogo.com/logos/powerpoint-2.svg"
+        },
+        {
+          "alt": "PS",
+          "src": "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg"
+        },
+        {
+          "alt": "AE",
+          "src": "https://cdn.worldvectorlogo.com/logos/after-effects-1.svg"
+        },
+        {
+          "alt": "AI",
+          "src": "https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc-icon.svg"
+        },
+        {
+          "alt": "LR",
+          "src": "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-lightroom-cc-icon.svg"
+        },
+        {
+          "alt": "ID",
+          "src": "https://cdn.worldvectorlogo.com/logos/adobe-indesign-cc-icon.svg"
+        },
+        {
+          "alt": "PR",
+          "src": "https://cdn.worldvectorlogo.com/logos/premiere-pro-cc.svg"
+        },
+        {
+          "alt": "AU",
+          "src": "https://cdn.worldvectorlogo.com/logos/adobe-audition-cc-icon-2020-.svg"
+        },
+        {
+          "alt": "VS code",
+          "src": "https://cdn.worldvectorlogo.com/logos/visual-studio-code-1.svg"
+        },
+        {
+          "alt": "Pycharm",
+          "src": "https://cdn.worldvectorlogo.com/logos/pycharmedu-icon.svg"
+        },
+        {
+          "alt": "Clion",
+          "src": "https://cdn.worldvectorlogo.com/logos/clion-1.svg"
+        },
+        {
+          "alt": "Webstorm",
+          "src": "https://cdn.worldvectorlogo.com/logos/webstorm-icon.svg"
+        },
+        {
+          "alt": "Github",
+          "src": "https://cdn.worldvectorlogo.com/logos/github-icon-1.svg"
+        },
+        {
+          "alt": "Keynote",
+          "src": "https://www.icloud.com/system/icloud.com/2404Project58/43f50d5d6df53dc6bddf56d7ceb257d0.png"
+        },
+        {
+          "alt": "Pages",
+          "src": "https://www.icloud.com/system/icloud.com/2404Project58/3c581ce16ec89eedc1d6862e31ccd8b3.png"
+        },
+        {
+          "alt": "Numbers",
+          "src": "https://www.icloud.com/system/icloud.com/2404Project58/f5b837094af69a157a6fc7f413e04fb7.png"
+        },
+        {
+          "alt": "Tailwind",
+          "src": "https://cdn.worldvectorlogo.com/logos/tailwind-css-1.svg"
+        },
+        {
+          "alt": "Bootstrap",
+          "src": "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg"
+        },
+        {
+          "alt": "MUI",
+          "src": "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg"
+        },
+        {
+          "alt": "EUI",
+          "src": "https://cdn.worldvectorlogo.com/logos/element-ui-1.svg"
+        },
+        {
+          "alt": "Framer",
+          "src": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg"
+        }
+      ],
+      "front-end": [
+        {
+          "name": "HTML",
+          "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg"
+        },
+        {
+          "name": "CSS",
+          "image": "https://www.svgrepo.com/show/521591/css.svg"
+        },
+        {
+          "name": "JavaScript",
+          "image": "https://www.svgrepo.com/show/510028/javascript-file.svg"
+        },
+        {
+          "name": "React",
+          "image": "https://www.svgrepo.com/show/473768/react.svg"
+        },
+        {
+          "name": "Tailwind",
+          "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg"
+        },
+        {
+          "name": "Framer",
+          "image": "https://www.svgrepo.com/show/371686/animation.svg"
+        },
+        {
+          "name": "React",
+          "image": "https://www.svgrepo.com/show/473768/react.svg"
+        },
+        {
+          "name": "Main UI",
+          "image": "https://www.svgrepo.com/show/38133/ui8.svg"
+        },
+        {
+          "name": "Animation libs",
+          "image": "https://www.svgrepo.com/show/488047/animation.svg"
+        }
+      ],
+      "backend-end": [
+        {
+          "name": "Python",
+          "image": "https://www.svgrepo.com/show/510150/python-file.svg"
+        },
+        {
+          "name": "NodeJS",
+          "image": "https://www.svgrepo.com/show/473736/nodejs.svg"
+        },
+        {
+          "name": "Json",
+          "image": "https://www.svgrepo.com/show/74933/json-file.svg"
+        },
+        {
+          "name": "TablePlus",
+          "image": "https://www.svgrepo.com/show/532228/table-list.svg"
+        }
+      ],
+      "database": [
+        {
+          "name": "MySQL",
+          "image": "https://www.svgrepo.com/show/394296/mysql.svg"
+        },
+        {
+          "name": "PostgreSQL",
+          "image": "https://www.svgrepo.com/show/473760/postgresql.svg"
+        }
+      ],
+      "Algorithm": [
+        {
+          "name": "Machine Learning",
+          "image": "https://www.svgrepo.com/show/445872/machine-learning.svg"
+        },
+        {
+          "name": "Deep Learning",
+          "image": "https://www.svgrepo.com/show/473805/tensorflow.svg"
+        },
+        {
+          "name": "Natural Language",
+          "image": "https://www.svgrepo.com/show/64578/nlp-neurolinguistic-programation.svg"
+        },
+        {
+          "name": "Recommender System",
+          "image": "https://www.svgrepo.com/show/324465/neuron-connections-neural-network.svg"
+        }
+      ],
+      "other": [
+        {
+          "name": "Github",
+          "image": "https://www.svgrepo.com/show/512317/github-142.svg"
+        },
+        {
+          "name": "SSH",
+          "image": "https://www.svgrepo.com/show/501028/terminal.svg"
+        }
+      ]
     },
     "Certificates": [
       {
@@ -1182,7 +1135,7 @@
       },
       {
         "label": "fi-sr-person-circle-question",
-        "icon": "INFP",
+        "icon": "infj",
         "cont": "MBTI"
       },
       {
@@ -1258,19 +1211,14 @@
       }
     ],
     "WorkExperience": [
-      { "id":"FA-swust",
-        "tittle": [
-          "Financial",
-          "Assistant"
-        ],
+      {
+        "id": "FA-swust",
+        "tittle": ["Financial", "Assistant"],
         "href": "/work/work=FA-swust",
         "type": "Part-time",
-        "logoRound":"rounded",
+        "logoRound": "rounded",
         "logo": "/Graphs/study/swust.png",
-        "tag": [
-          null,
-          "Part-time"
-        ],
+        "tag": [null, "Part-time"],
         "web": "http://www.english.swust.edu.cn/main.htm",
         "time": "Mar 1, 2021 - Feb 1, 2022",
         "company": "Southwest University of Science and Technology Analytical Testing Centre",
@@ -1278,53 +1226,38 @@
           "Responsible for auditing the invoices of the business office up to RMB1,000,000, drawing up contracts up to RMB100,000, compliance review and signing. The business is responsible for the assessment and audit of the business system and occasional audits of the accounts flow according to the monthly and annual reports of the business. During the course of the work, it was found that the business progress audit was a single simple and time-consuming task, and with the help of office automation software, the business audit workload of this position for a year was completed in half a day, receiving high praise and commendation from the Business Office Director."
         ]
       },
-      {"id":"FA-swust2",
-        "tittle": [
-          "Product",
-          "Operation"
-        ],
+      {
+        "id": "FA-swust2",
+        "tittle": ["Product", "Operation"],
         "href": "/work/work=FA-swust2",
         "type": "Part-time",
-        "logoRound":"rounded",
+        "logoRound": "rounded",
         "logo": "/Graphs/study/swust.png",
-        "tag": [
-          null,
-          "Part-time"
-        ],
+        "tag": [null, "Part-time"],
         "web": "http://www.english.swust.edu.cn/main.htm",
         "time": "Aug 1, 2018 - Feb 1, 2019",
         "company": "Domi Group Buying",
-        "description": [
-          "Responsible for the backend "
-        ]
+        "description": ["Responsible for the backend "]
       },
-      {"id":"PL-swust3",
-        "tittle": [
-          "Project",
-          "Launcher"
-        ],
+      {
+        "id": "PL-swust3",
+        "tittle": ["Project", "Launcher"],
         "href": "/work/work=PL-swust3",
         "type": "Part-time",
-        "logoRound":"nonrounded",
+        "logoRound": "nonrounded",
         "logo": "/Graphs/study/unsw.png",
-        "tag": [
-          "Full-time",
-          null
-        ],
+        "tag": ["Full-time", null],
         "web": "http://www.english.swust.edu.cn/main.htm",
         "time": "Aug 1, 2018 - Feb 1, 2019",
         "company": "Domi Group Buying",
-        "description": [
-          "Responsible "
-        ]
+        "description": ["Responsible "]
       }
     ]
   },
   "Animation": {
     "Variant": {
       "Welcomevisblecontainer": {
-        "hidden": {
-        },
+        "hidden": {},
         "visible": {
           "transition": {
             "delayChildren": 0.15,
@@ -1389,25 +1322,15 @@
     },
     "Transition": {
       "StagerFadeInUp": {
-          "ease": [0.455, 0.030, 0.515, 0.955],
-          "duration": 0.7
+        "ease": [0.455, 0.03, 0.515, 0.955],
+        "duration": 0.7
       },
       "ProgressBar": {
-        "ease": [
-          0.645,
-          0.045,
-          0.355,
-          1
-        ],
+        "ease": [0.645, 0.045, 0.355, 1],
         "duration": 0.4
       },
       "LeftappearBar": {
-        "ease": [
-          0.645,
-          0.045,
-          0.355,
-          1
-        ],
+        "ease": [0.645, 0.045, 0.355, 1],
         "duration": 0.5
       }
     }

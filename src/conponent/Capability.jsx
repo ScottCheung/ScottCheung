@@ -831,14 +831,14 @@ function Capability() {
           animate={{ scale: 1, y: 0, opacity: 1 }}
           transition={{ duration: 1 }}
 
-          id={`infp`}
+          id={`infj`}
           role="tooltip"
           className="m-[20px] absolute z-50 invisible rounded-[28px] flex w-[300px] md:w-[400px] lg:w-[800px]  transition-opacity duration-300 backdrop-blur-lg bg-white/80 shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
         >
           <motion.div className="p-[40px]">
             <p className='text-[17px] md:text-[18px] lg:text-[20px] text-gray-900  py-4 text-center font-black '>
-              {lang == 0 && "Click to learn INFP"}
-              {lang == 1 && "点击了解INFP人格"}
+              {lang == 0 && "Click to learn infj"}
+              {lang == 1 && "点击了解infj人格"}
             </p>
             <motion.div className='text-[14px] md:text-[15px] lg:text-[14px] text-gray-500 text-left font-mono'>
               {personality.Mbti[lang].split('\n').map((paragraph, index) => (
@@ -863,14 +863,14 @@ function Capability() {
           <motion.div className="tile tile-rounded" >
             <motion.div className="tile-content bg-[#fed9d3]"
               style={{
-                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infp[1]})`,
+                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj[1]})`,
                 backgroundSize: '100% auto',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center bottom'
               }}>
                 <div className="tile-content"
               style={{
-                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infp[0]})`,
+                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj[0]})`,
                 backgroundSize: '100% auto',
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center bottom'
@@ -895,11 +895,11 @@ function Capability() {
                   <h3 className="tile-headline typography-subsection-headline py-4 text-gray-600">
                     {lang == 0 && "Personality"}{lang == 1 && "人格类型"}
                   </h3>
-                  <a data-tooltip-target={`infp`}
+                  <a data-tooltip-target={`infj`}
                     data-tooltip-placement={"bottom"}
-                    href="https://www.16personalities.com/infp-personality" className='flex jusitify-between items-center '>
+                    href="https://www.16personalities.com/infj-personality" className='flex jusitify-between items-center '>
                     <p className="tile-headline text-xl typography-subsection-headline text-gray-600 ">
-                      {lang == 0 && "INFP"}{lang == 1 && "小蝴蝶"}
+                      {lang == 0 && "INFJ"}{lang == 1 && "绿老头"}
                     </p>
 
                     <i className="ml-2 fi fi-rr-interrogation flex justify-end items-center my-0"></i>

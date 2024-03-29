@@ -256,7 +256,7 @@ function Home () {
                         </section> */}
 
                 </div>
-
+{/* 
                 <div  className="rounded-3xl h-[80vh] hestia-contact contactus section-image" data-sorder="hestia_contact"
                 style={{backgroundImage: 'url(./contact1.jpg)'}}>
                 <div className="visblecontainer rounded-3xl">
@@ -302,7 +302,7 @@ function Home () {
                         <p>Copyright © 2023-2024 - All right reserved by Xianzhe</p>
                     </footer>
                     </div>
-                </div>
+                </div> */}
                 </div>
       
                                     

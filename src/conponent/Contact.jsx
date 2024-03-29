@@ -74,15 +74,10 @@ function Contact({isTopOut}) {
                               <button className="anz-card-modal-link z-10"
                                 type="button"
                                 onClick={() => {const tempInput = document.createElement('input');
-                                // 将链接值设置为 input 的值
                                 tempInput.value = type.name;
-                                // 将 input 添加到 DOM 中
                                 document.body.appendChild(tempInput);
-                                // 选择 input 的内容
                                 tempInput.select();
-                                // 将内容复制到剪贴板
                                 document.execCommand('copy');
-                                // 移除临时 input
                                 document.body.removeChild(tempInput); 
                                   {lang==0&&Toast('success', `you have added ${type.type[0]} info into your clipboard`, 3000);}
                                   {lang==1&&Toast('success', `您已成功添加 ${type.type[1]}信息 到您的剪贴板`, 3000);}

@@ -2,339 +2,308 @@
   "Navbar": {
     "navbarItem": [
       {
-        "name": [
-          "Home",
-          "主页"
-        ],
+        "name": ["Home", "主页"],
         "href": "/",
         "icon": "fi-rr-home-heart",
-        "des": [
-          "Key information here ~",
-          "主要信息都在这里 ~"
-        ],
+        "des": ["Key information here ~", "主要信息都在这里 ~"],
         "expression": "❤٩(◕‿◕｡)۶"
       },
       {
-        "name": [
-          "Project",
-          "项目"
-        ],
+        "name": ["Project", "项目"],
         "href": "/project",
         "icon": "fi-rr-trophy-star",
-        "des": [
-          "All projects I contributed ~",
-          "我参与的项目 ~"
-        ],
+        "des": ["All projects I contributed ~", "我参与的项目 ~"],
         "expression": "ʕ•ᴥ•ʔ"
       },
       {
-        "name": [
-          "Life",
-          "生活"
-        ],
+        "name": ["Life", "生活"],
         "href": "/life",
         "icon": "fi-rr-mountains",
-        "des": [
-          "It records my wonderful life ~",
-          "我的精彩生活 ~"
-        ],
+        "des": ["It records my wonderful life ~", "我的精彩生活 ~"],
         "expression": "(＾◡＾)"
       },
       {
-        "name": [
-          "Contact",
-          "联络"
-        ],
+        "name": ["Contact", "联络"],
         "href": "/ContactMe",
         "icon": "fi-rr-following",
-        "des": [
-          "You can contact me by these ways ~",
-          "您可以这样找到我 ~"
-        ],
+        "des": ["You can contact me by these ways ~", "您可以这样找到我 ~"],
         "expression": "(｡♥‿♥｡)"
       }
     ],
     "Location": [
       {
         "id": "/#StudyExperience",
-        "label": [
-          "Study",
-          "学习"
-        ],
+        "label": ["Study", "学习"],
         "logo": "fi-rr-book"
       },
       {
         "id": "/#Capability",
-        "label": [
-          "Capability",
-          "能力"
-        ],
+        "label": ["Capability", "能力"],
         "logo": "fi-rr-user"
       },
       {
         "id": "/#SelfDescribing",
-        "label": [
-          "Describe",
-          "自述"
-        ],
+        "label": ["Describe", "自述"],
         "logo": "fi-rr-comment-heart"
       },
       {
         "id": "/#WorkExperience",
-        "label": [
-          "Work",
-          "工作"
-        ],
+        "label": ["Work", "工作"],
         "logo": "fi-rr-tool-box"
       },
       {
         "id": "/#WhyMe",
-        "label": [
-          "Why me",
-          "优势"
-        ],
+        "label": ["Why me", "优势"],
         "logo": "fi-rr-lightbulb-on"
       }
     ],
     "Avatar": {
-      "Webname": [
-        "Scott's Profile",
-        "贤哲的个人资料"
-      ],
-      "helloword": [
-        "I love you ❤",
-        "要爱自己 ❤"
-      ]
+      "Webname": ["Scott's Profile", "贤哲的个人资料"],
+      "helloword": ["I love you ❤", "要爱自己 ❤"]
     },
     "Hero": {
-      "hello": [
-        "Welcome! I'm Scott.",
-        "好久不见，我是贤哲"
-      ],
-      "word": [
-        "Sidere mens eadem mutato",
-        "繁星纵变，智慧永存"
-      ]
+      "hello": ["Welcome! I'm Scott.", "好久不见，我是贤哲"],
+      "word": ["Sidere mens eadem mutato", "繁星纵变，智慧永存"]
     },
     "UpdateLog": [
-    {
-      "version":"7.1.4",
-      "time": "2024-01-14",
-      "content": [
-        "I am glad you are visiting my page as I am currently in the middle of my last semester of studies. I am also very busy and cannot make timely updates. But I will try to keep updating as much as possible, thank you for your understanding. Any questions about the use or feeling. Be free to contact me at any time at: z5443003@ad.unsw.edu.au",
-        "很高兴您能访问我的网页，因为目前我正在进行我最后一学期的学习。平时也非常繁忙，不能进行及时的更新。但是我会尽量保持更新，谢谢您的理解。有任何使用问题，欢迎随时通过邮箱联系我： z5443003@ad.unsw.edu.au。"
-      ],
-      "opints": [ 
-        
-      [        
-        "New feature: “Gallery” and “Life Tabs” now have quick access. ",
-        "Improvement: “Gallery” has adjusted the display spacing, which is more beautiful and easy to watch.",
-        "Debug: fixed the problem of elements disappearing due to the lagging of the lead animation, optimized the animation curve, the animation is more silky and smooth.",
-        "Known issues: project experience and work experience are currently not accessible and the page is being designed. The Stories and Music sections of the Life section and the QA section of the profile are also still waiting to go live. All Certificates are not avalible due to preparedness of original materials. They will be update in a not soon future. These are content that I need to produce content for and it will take time, so stay tuned. "
-    ],[
-      "新功能上线：“图库”和“生活标签增加了快速访问的方式” ",
-      "功能改进：“图库”调整了显示间距，更加美观 ",
-      "故障修复：修复了引动画卡顿导致元素消失的问题，优化了动画曲线，动画更加丝滑流畅。",
-      "已知问题：目前项目经历和工作经历还无法访问，页面正在设计中。生活部分的故事和音乐部分以及个人资料的QA部分也还在等待上线中。荣誉的具体证书还没有准备齐全，所以目前这块是错误信息，这些内容，我需要生产内容，还需要时间，敬请期待。 "
-    ]]
-    },
-    {
-      "version":"7.1.3",
-      "time": "2024-01-14",
-      "content": [
-        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
-        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
-      ],
-      "opints": [
-        [
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-      ],
-      [        
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-    ]]
-    },
-    {
-      "version":"7.1.4",
-      "time": "2024-01-14",
-      "content": [
-        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
-        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
-      ],
-      "opints": [
-        [
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-      ],
-      [        
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-    ]]
-    },
-    {
-      "version":"7.1.4",
-      "time": "2024-01-14",
-      "content": [
-        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
-        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
-      ],
-      "opints": [
-        [
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-      ],
-      [        
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-    ]]
-    },
-    {
-      "version":"7.1.4",
-      "time": "2024-01-14",
-      "content": [
-        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
-        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
-      ],
-      "opints": [
-        [
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-      ],
-      [        
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-    ]]
-    },
-    {
-      "version":"7.1.4",
-      "time": "2024-01-14",
-      "content": [
-        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
-        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
-      ],
-      "opints": [
-        [
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-      ],
-      [        
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-    ]]
-    },
-    {
-      "version":"7.1.4",
-      "time": "2024-01-14",
-      "content": [
-        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
-        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
-      ],
-      "opints": [
-        [
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-      ],
-      [        
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-    ]]
-    },
-    {
-      "version":"7.1.4",
-      "time": "2024-01-14",
-      "content": [
-        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
-        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
-      ],
-      "opints": [
-        [
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-      ],
-      [        
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-    ]]
-    },
-    {
-      "version":"7.1.4",
-      "time": "2024-01-14",
-      "content": [
-        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
-        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
-      ],
-      "opints": [
-        [
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-      ],
-      [        
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-    ]]
-    },
-    {
-      "version":"7.1.4",
-      "time": "2024-01-14",
-      "content": [
-        "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
-        "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
-      ],
-      "opints": [
-        [
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-      ],
-      [        
-        "新功能上线：“图库”和“生活快速标签”",
-        "添加了新项目'个人网站'和'个人信息'",
-        "添加了新项目'个人网站'和'个人信息'"
-    ]]
-    }
-]},
+      {
+        "version": "7.1.4",
+        "time": "2024-01-14",
+        "content": [
+          "I am glad you are visiting my page as I am currently in the middle of my last semester of studies. I am also very busy and cannot make timely updates. But I will try to keep updating as much as possible, thank you for your understanding. Any questions about the use or feeling. Be free to contact me at any time at: z5443003@ad.unsw.edu.au",
+          "很高兴您能访问我的网页，因为目前我正在进行我最后一学期的学习。平时也非常繁忙，不能进行及时的更新。但是我会尽量保持更新，谢谢您的理解。有任何使用问题，欢迎随时通过邮箱联系我： z5443003@ad.unsw.edu.au。"
+        ],
+        "opints": [
+          [
+            "New feature: “Gallery” and “Life Tabs” now have quick access. ",
+            "Improvement: “Gallery” has adjusted the display spacing, which is more beautiful and easy to watch.",
+            "Debug: fixed the problem of elements disappearing due to the lagging of the lead animation, optimized the animation curve, the animation is more silky and smooth.",
+            "Known issues: project experience and work experience are currently not accessible and the page is being designed. The Stories and Music sections of the Life section and the QA section of the profile are also still waiting to go live. All Certificates are not avalible due to preparedness of original materials. They will be update in a not soon future. These are content that I need to produce content for and it will take time, so stay tuned. "
+          ],
+          [
+            "新功能上线：“图库”和“生活标签增加了快速访问的方式” ",
+            "功能改进：“图库”调整了显示间距，更加美观 ",
+            "故障修复：修复了引动画卡顿导致元素消失的问题，优化了动画曲线，动画更加丝滑流畅。",
+            "已知问题：目前项目经历和工作经历还无法访问，页面正在设计中。生活部分的故事和音乐部分以及个人资料的QA部分也还在等待上线中。荣誉的具体证书还没有准备齐全，所以目前这块是错误信息，这些内容，我需要生产内容，还需要时间，敬请期待。 "
+          ]
+        ]
+      },
+      {
+        "version": "7.1.3",
+        "time": "2024-01-14",
+        "content": [
+          "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+          "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+        ],
+        "opints": [
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ],
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ]
+        ]
+      },
+      {
+        "version": "7.1.4",
+        "time": "2024-01-14",
+        "content": [
+          "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+          "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+        ],
+        "opints": [
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ],
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ]
+        ]
+      },
+      {
+        "version": "7.1.4",
+        "time": "2024-01-14",
+        "content": [
+          "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+          "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+        ],
+        "opints": [
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ],
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ]
+        ]
+      },
+      {
+        "version": "7.1.4",
+        "time": "2024-01-14",
+        "content": [
+          "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+          "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+        ],
+        "opints": [
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ],
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ]
+        ]
+      },
+      {
+        "version": "7.1.4",
+        "time": "2024-01-14",
+        "content": [
+          "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+          "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+        ],
+        "opints": [
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ],
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ]
+        ]
+      },
+      {
+        "version": "7.1.4",
+        "time": "2024-01-14",
+        "content": [
+          "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+          "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+        ],
+        "opints": [
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ],
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ]
+        ]
+      },
+      {
+        "version": "7.1.4",
+        "time": "2024-01-14",
+        "content": [
+          "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+          "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+        ],
+        "opints": [
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ],
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ]
+        ]
+      },
+      {
+        "version": "7.1.4",
+        "time": "2024-01-14",
+        "content": [
+          "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+          "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+        ],
+        "opints": [
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ],
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ]
+        ]
+      },
+      {
+        "version": "7.1.4",
+        "time": "2024-01-14",
+        "content": [
+          "I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~I'm currently updating the website, please wait a moment ~",
+          "我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~我正在更新网站，请稍等 ~"
+        ],
+        "opints": [
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ],
+          [
+            "新功能上线：“图库”和“生活快速标签”",
+            "添加了新项目'个人网站'和'个人信息'",
+            "添加了新项目'个人网站'和'个人信息'"
+          ]
+        ]
+      }
+    ]
+  },
   "PersonalInfo": {
-    "Welcomebg":["/Graphs/home/Welcomebg.jpg", "https://3o.hk/images/2024/01/14/welcomebg.jpg"],
-    "KeyFeaturebg": ["/Graphs/home/keyfeaturebg.jpg", "https://3o.hk/images/2024/01/14/keyfeaturebg.jpg"],
-    "selfdesbg": ["/Graphs/home/keyfeaturebg.jpg", "https://3o.hk/images/2024/01/14/selfdesbg.jpg"],
-    "welcomebg": ["/Graphs/home/welcomebg.jpg", "https://3o.hk/images/2024/01/14/welcomebg.jpg"],
-    "contactbg":["/Graphs/home/contactbg.jpeg", "https://3o.hk/images/2024/01/14/contactbg.jpg"],
-    "Avatar":["/Graphs/home/avatar.jpg", "https://3o.hk/images/2024/01/14/avatar.jpg"],
+    "Welcomebg": [
+      "/Graphs/home/Welcomebg.jpg",
+      "https://3o.hk/images/2024/01/14/welcomebg.jpg"
+    ],
+    "KeyFeaturebg": [
+      "/Graphs/home/keyfeaturebg.jpg",
+      "https://3o.hk/images/2024/01/14/keyfeaturebg.jpg"
+    ],
+    "selfdesbg": [
+      "/Graphs/home/keyfeaturebg.jpg",
+      "https://3o.hk/images/2024/01/14/selfdesbg.jpg"
+    ],
+    "welcomebg": [
+      "/Graphs/home/welcomebg.jpg",
+      "https://3o.hk/images/2024/01/14/welcomebg.jpg"
+    ],
+    "contactbg": [
+      "/Graphs/home/contactbg.jpeg",
+      "https://3o.hk/images/2024/01/14/contactbg.jpg"
+    ],
+    "Avatar": [
+      "/Graphs/home/avatar.jpg",
+      "https://3o.hk/images/2024/01/14/avatar.jpg"
+    ],
     "StudyExperience": [
       {
         "id": "FunctionalMaterial",
         "major": [
-          [
-            "Functional",
-            "Material"
-          ],
-          [
-            "功能",
-            "材料"
-          ]
+          ["Functional", "Material"],
+          ["功能", "材料"]
         ],
         "href": "/major/FunctionalMaterial",
-        "type": [
-          "Bacholor degree",
-          "学士学位"
-        ],
+        "type": ["Bacholor degree", "学士学位"],
         "logo": "/Graphs/study/swust.png",
         "unides": [
           [
@@ -357,21 +326,12 @@
           ]
         ],
         "tag": [
-          [
-            "Bachelor",
-            "Key university"
-          ],
-          [
-            "学士",
-            "重点大学"
-          ]
+          ["Bachelor", "Key university"],
+          ["学士", "重点大学"]
         ],
         "web": "http://www.english.swust.edu.cn/main.htm",
         "majorweb": "https://en.wikipedia.org/wiki/Functional_materials",
-        "time": [
-          "Sep 4, 2017 - Sep 6, 2021",
-          "2017.09.04 - 2021.09.04"
-        ],
+        "time": ["Sep 4, 2017 - Sep 6, 2021", "2017.09.04 - 2021.09.04"],
         "description": [
           [
             "This experience encompasses a broad spectrum of chemistry, including inorganic chemistry, organic chemistry, and physical chemistry, along with the fundamentals of material science. Additionally, it covers mechanical design, electronic technology, and engineering mechanics, providing candidates with a comprehensive and rich engineering background."
@@ -660,20 +620,11 @@
       {
         "id": "BusinessAdministration",
         "major": [
-          [
-            "Business",
-            "Administration"
-          ],
-          [
-            "工商",
-            "管理"
-          ]
+          ["Business", "Administration"],
+          ["工商", "管理"]
         ],
         "href": "/major/BusinessAdministration",
-        "type": [
-          "Bacholor degree",
-          "学士学位"
-        ],
+        "type": ["Bacholor degree", "学士学位"],
         "logo": "/Graphs/study/swust.png",
         "unides": [
           [
@@ -696,21 +647,12 @@
           ]
         ],
         "tag": [
-          [
-            "Bachelor",
-            "Key university"
-          ],
-          [
-            "学士",
-            "重点大学"
-          ]
+          ["Bachelor", "Key university"],
+          ["学士", "重点大学"]
         ],
         "web": "http://www.english.swust.edu.cn/main.htm",
         "majorweb": "https://en.wikipedia.org/wiki/Business_administration",
-        "time": [
-          "Sep 4, 2019 - Sep 6, 2021",
-          "2019.09.04 - 2021.09.06"
-        ],
+        "time": ["Sep 4, 2019 - Sep 6, 2021", "2019.09.04 - 2021.09.06"],
         "description": [
           "This experience encompasses fields such as economics, management, and accounting, including core courses in marketing, project management, human resource management, and financial management. Through the pursuit of this degree, candidates acquire a keen business mindset and systematic enterprise management capabilities.",
           "该经历涵盖了经济学、管理学和会计学等领域，包括营销、项目管理、人力资源管理和财务管理等核心课程。通过攻读这个学位，学生将获得敏锐的商业思维和系统的企业管理能力。"
@@ -895,20 +837,11 @@
       {
         "id": "ArtificalInteliigence",
         "major": [
-          [
-            "Artifical",
-            "Inteliigence"
-          ],
-          [
-            "人工",
-            "智能"
-          ]
+          ["Artifical", "Inteliigence"],
+          ["人工", "智能"]
         ],
         "href": "/major/ArtificalInteliigence",
-        "type": [
-          "Master degree",
-          "硕士学位"
-        ],
+        "type": ["Master degree", "硕士学位"],
         "logo": "/Graphs/study/unsw.png",
         "banner": "https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png",
         "unides": [
@@ -932,21 +865,12 @@
           ]
         ],
         "tag": [
-          [
-            "Master",
-            "QS 19"
-          ],
-          [
-            "硕士",
-            "全球排名 19"
-          ]
+          ["Master", "QS 19"],
+          ["硕士", "全球排名 19"]
         ],
         "web": "https://www.unsw.edu.au/",
         "majorweb": "https://en.wikipedia.org/wiki/Artificial_intelligence",
-        "time": [
-          "Sep 13, 2022 - Sep 6, 2024",
-          "2022.09.13 - 2021.09.06"
-        ],
+        "time": ["Sep 13, 2022 - Sep 6, 2024", "2022.09.13 - 2021.09.06"],
         "description": [
           "This experience encompasses a broad spectrum of the AI field, covers advanced topics such as Machine Learning & Data Mining, Neural Networks, Deep Learning, Recommender Systems, and Natural Language Processing. This comprehensive curriculum provides candidates with a rich and thorough understanding of AI, strengthening his professional depth.",
           "该经历涵盖了人工智能领域的内容，包括机器学习与数据挖掘、神经网络、深度学习、推荐系统以及自然语言处理等先进主题。这个全面的课程设置为学生提供了对人工智能的深入而全面的理解，增强了他们在专业领域的深度。"
@@ -1111,20 +1035,11 @@
       {
         "id": "DataScience",
         "major": [
-          [
-            "Data",
-            "Science"
-          ],
-          [
-            "数据",
-            "科学"
-          ]
+          ["Data", "Science"],
+          ["数据", "科学"]
         ],
         "href": "/major/DataScience",
-        "type": [
-          "Master degree",
-          "硕士学位"
-        ],
+        "type": ["Master degree", "硕士学位"],
         "logo": "/Graphs/study/unsw.png",
         "banner": "https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png",
         "unides": [
@@ -1148,21 +1063,12 @@
           ]
         ],
         "tag": [
-          [
-            "Master",
-            "QS 19"
-          ],
-          [
-            "硕士",
-            "全球排名 19"
-          ]
+          ["Master", "QS 19"],
+          ["硕士", "全球排名 19"]
         ],
         "web": "https://www.unsw.edu.au/",
         "majorweb": "https://en.wikipedia.org/wiki/data_science",
-        "time": [
-          "Sep 13, 2022 - Sep 6, 2024",
-          "2022.09.13 - 2021.09.06"
-        ],
+        "time": ["Sep 13, 2022 - Sep 6, 2024", "2022.09.13 - 2021.09.06"],
         "description": [
           "This degree covers a wide range of data-related fields, covers Machine Learning & Data Mining, Database Systems Implementation, Recommender Systems, and Design & Analysis of Algorithms. This comprehensive curriculum provides candidates with a rich and thorough understanding of data, strengthening his professional depth.",
           "该经历涵盖了广泛的与数据相关的内容，包括机器学习与数据挖掘、数据库系统实现、推荐系统以及算法的设计与分析。这个全面的课程体系为学生提供了对数据的丰富和深入的理解，增强了他们的专业深度。"
@@ -1331,7 +1237,10 @@
           "id": "LearningAbility",
           "advantage": ["Learning Ability"],
           "href": "/whyme/LearningAbility",
-          "pic": ["https://3o.hk/images/2024/01/19/LearningAbility.png", "/Graphs/whyme/LearningAbility.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/LearningAbility.png",
+            "/Graphs/whyme/LearningAbility.png"
+          ],
           "pic2": "/Graphs/whyme/LearningAbility2.jpg",
           "icon": "fi-rr-graduation-cap",
           "description": "The candidate possesses outstanding learning ability.\n1. Excellent self-driven learning. The candidate maintains a mindset of constantly learning new things, self-learning piano and guitar out of passion, and systematically studying photography, Photoshop editing, Adobe Illustrator vector graphics design, Lightroom color correction, Premiere, and Final Cut Pro video editing software in spare time. The candidate always learns new technologies and methods with a results-oriented approach for achieving perfection.\n2. Exceptional learning speed. The candidate completed 90% of the coursework for a second degree within one year of their third year of undergraduate study, which should have taken four years. Additionally, the candidate studied four majors and holds three degrees, accomplishing the learning of four majors in the time usually taken for two.\n3. Excellent learning methods. Thanks to AI empowerment, the candidate adeptly uses ChatGPT and other AI tools to quickly grasp fresh technologies and efficiently solve problems. The candidate consistently embraces new technologies and methods rapidly.",
@@ -1342,7 +1251,10 @@
           "id": "Leadership",
           "advantage": ["Leadership"],
           "href": "/whyme/Leadership",
-          "pic": ["https://3o.hk/images/2024/01/19/Leadership.png", "/Graphs/whyme/Leadership.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/Leadership.png",
+            "/Graphs/whyme/Leadership.png"
+          ],
           "pic2": "/Graphs/whyme/Leadership2.jpg",
           "icon": "fi-rr-users-alt",
           "description": "The candidate demonstrates outstanding leadership.\n1. Diverse leadership roles. The candidate held key positions in the university's study department, technology and entrepreneurship guidance station, and debate team. Additionally, they served as class president, study committee member, and life committee member, leading the class to stand out in various competitions, winning all awards and honors with top-ranking results.\n2. Rich experience as a competition leader. As a manager, the candidate led over 100 competitions, achieving numerous first prizes at the provincial and district levels, totaling over 60 awards.\n3. The candidate led a team in entrepreneurship, expanding business in a new area, involving crucial tasks such as leasing company space, purchasing corporate supplies, recruiting personnel, planning marketing activities, and managing finances.",
@@ -1353,7 +1265,10 @@
           "id": "Communication",
           "advantage": ["Communication Skills"],
           "href": "/whyme/Communication",
-          "pic": ["https://3o.hk/images/2024/01/19/Communication.png", "/Graphs/whyme/Communication.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/Communication.png",
+            "/Graphs/whyme/Communication.png"
+          ],
           "pic2": "/Graphs/whyme/Communication2.jpg",
           "icon": "fi-rr-comments",
           "description": "The candidate possesses excellent communication skills.\n1. Proficient speaker and communicator. The candidate participated in over 100 competitions, delivering over 50 public speeches as a representative. They are a star presenter for NUSTP, explaining to over 400 visitors. Furthermore, the candidate served in the debate team, winning debate championships, and earning the title of the best debater. The candidate negotiated a 50% discount on materials during the procurement process for the company and secured advertising sponsorship for club activities.\n2. Strong empathy. The candidate, having studied organizational management and organizational psychology, easily perceives others' emotions and feelings, swiftly establishing emotional connections for efficient and logical communication.",
@@ -1364,7 +1279,10 @@
           "id": "ProblemSolving",
           "advantage": ["Problem-Solving Ability"],
           "href": "/whyme/ProblemSolving",
-          "pic": ["https://3o.hk/images/2024/01/19/ProblemSolving.png", "/Graphs/whyme/ProblemSolving.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/ProblemSolving.png",
+            "/Graphs/whyme/ProblemSolving.png"
+          ],
           "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
           "icon": "fi-rr-lightbulb-question",
           "description": "The candidate has strong problem-solving ability.\n1. Proficient use of management principles to analyze problems, such as SWOT analysis, Porter's Five Forces model, and the Boston Matrix. The candidate quickly analyzes problems using these tools, identifies key solutions, and proficiently visualizes them.\n2. Clear logic and divergent thinking. The candidate, having systematically studied strategic management, management principles, project management, and operations research, adeptly uses management tools and mathematical methods to solve problems, improving task flow and optimizing work efficiency.",
@@ -1375,7 +1293,10 @@
           "id": "AestheticAttitude",
           "advantage": ["Aesthetic Attitude"],
           "href": "/whyme/AestheticAttitude",
-          "pic": ["https://3o.hk/images/2024/01/19/AestheticAttitude.png", "/Graphs/whyme/AestheticAttitude.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/AestheticAttitude.png",
+            "/Graphs/whyme/AestheticAttitude.png"
+          ],
           "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
           "icon": "fi-rr-sparkles",
           "description": "The candidate possesses an outstanding aesthetic attitude.\n1. The candidate studied fine arts from an early age, having advanced aesthetic sense. They believe that excellent projects and products require exceptional packaging and marketing. The candidate independently designed brand logos for multiple companies and assisted in their registration.\n2. The candidate is committed to aesthetic pursuits, rejecting disorganized formats, irregular layouts, and failed color schemes in deliverables. They have high standards for all documents, projects, and works.\n3. The candidate has sufficient delivery capability for aesthetics. They can independently design and create vector and pixel graphics, proficient in software such as Photoshop, Illustrator, Pages, DI, LR, PPT, KeyNote. The candidate has a profound understanding of layout, color matching, and can independently deliver conference-level slides, high-quality posters, brochures, and company logos. They have won awards in multiple design competitions and were a designated poster design member for the university's science and technology entrepreneurship guidance station.",
@@ -1386,7 +1307,10 @@
           "id": "EmotionalStable",
           "advantage": ["Emotional Stability"],
           "href": "/whyme/EmotionalStable",
-          "pic": ["https://3o.hk/images/2024/01/19/EmotionalStable.png", "/Graphs/whyme/EmotionalStable.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/EmotionalStable.png",
+            "/Graphs/whyme/EmotionalStable.png"
+          ],
           "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
           "icon": "fi-rr-smile",
           "description": "The candidate possesses good emotional energy, stability, and firmness.\nThe candidate has a high level of emotional awareness, familiarity with micro-expressions and organizational psychology. They can effectively manage upwards and downwards, demonstrating excellent communication in resolving customer complaints and unexpected situations. The candidate remains optimistic, resilient, quickly handling negative emotions at work. They consistently maintain a positive and energetic attitude, bringing joy and positive feedback to those around them, always providing emotional support.",
@@ -1397,11 +1321,12 @@
       [
         {
           "id": "LearningAbility",
-          "advantage": [
-            "学习能力"
-          ],
+          "advantage": ["学习能力"],
           "href": "/whyme/LearningAbility",
-          "pic": ["https://3o.hk/images/2024/01/19/LearningAbility.png","/Graphs/whyme/LearningAbility.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/LearningAbility.png",
+            "/Graphs/whyme/LearningAbility.png"
+          ],
           "pic2": "/Graphs/whyme/LearningAbility2.jpg",
           "icon": "fi-rr-graduation-cap",
           "description": "候选人拥有出色的学习能力。\n1.优秀的学习自驱力。候选人时刻保持学习新事物的心态。仅凭爱好自学了钢琴和吉他，利用业余时间，还系统的学习了摄影、Ps修图、Adobe Ai矢量图形设计、Lr调色、Pr以及Final cut pro等视频剪辑软件。候选人总会以结果为导向学习新技术、新方法，以达到更完美的实现结果。\n2.优秀的学习速度。候选人在本科大三一年的时间内完成了第二学位本该4年完成的90%的课程。同时，候选人学习过四个专业，持有三个学位。候选人4个专业只消耗了2个专业的学习时间. \n3.优秀的学习方法。得益于AI赋能，候选人善于利用ChatGPT等AI快速掌握新鲜技术，更高效的解决方法。候选人总能快速拥抱新技术，快速拥抱新方法。",
@@ -1410,11 +1335,12 @@
         },
         {
           "id": "Leadership",
-          "advantage": [
-            "领导力"
-          ],
+          "advantage": ["领导力"],
           "href": "/whyme/Leadership",
-          "pic": ["https://3o.hk/images/2024/01/19/Leadership.png","/Graphs/whyme/Leadership.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/Leadership.png",
+            "/Graphs/whyme/Leadership.png"
+          ],
           "pic2": "/Graphs/whyme/Leadership2.jpg",
           "icon": "fi-rr-users-alt",
           "description": "候选人具有卓越的领导力。\n1.多元的领导角色。候选人曾在大学学习部、科技和创业指导站、辩论队担任关键角色。并在班级担任过班长、学习委员和生活委员等职位。带领班级在各级评优中脱颖而出，不仅赢得所有的奖项和荣誉，且均是第一名的成绩。\n2.丰富的竞赛领导者经历。候选人作为管理者领导了超过100次比赛，获得多个省赛一等奖，市区一等奖等，总计60多项奖项。\n3.候选人曾经带领团队创业，候选人带领一个团队到一个新地区扩展业务。涉及租赁公司场地，购置企业物资，招聘企业人员，策划营销活动，计划和管理财务等关键任务。",
@@ -1423,11 +1349,12 @@
         },
         {
           "id": "Communication",
-          "advantage": [
-            "沟通能力"
-          ],
+          "advantage": ["沟通能力"],
           "href": "/whyme/Communication",
-          "pic": ["https://3o.hk/images/2024/01/19/Communication.png","/Graphs/whyme/Communication.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/Communication.png",
+            "/Graphs/whyme/Communication.png"
+          ],
           "pic2": "/Graphs/whyme/Communication2.jpg",
           "icon": "fi-rr-comments",
           "description": "候选人拥有良好的沟通能力。\n1.候选人一位熟练的演讲者及表达者，候选人曾参与了100多场比赛并作为代表人发表了50多次公开演讲。是NUSTP的明星讲解员，讲解过超过400人的参观。同时，候选人曾就职于辩论队，所在队伍获得辩论赛冠军，候选人并获得最佳辩手称号。候选人曾在采购过程为公司谈判获得50%的物资折扣，并为俱乐部活动谈判过广告赞助。\n2.候选人具有强大的共情能力。同时候选人学习过组织管理学，组织心理学。候选人能轻松感知他人情绪和感受，并快速建立情感连接，从而做到快速高效地科学沟通。沟通做到有情有理有逻辑。",
@@ -1436,11 +1363,12 @@
         },
         {
           "id": "ProblemSolving",
-          "advantage": [
-            "解题能力"
-          ],
+          "advantage": ["解题能力"],
           "href": "/whyme/ProblemSolving",
-          "pic": ["https://3o.hk/images/2024/01/19/ProblemSolving.png","/Graphs/whyme/ProblemSolving.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/ProblemSolving.png",
+            "/Graphs/whyme/ProblemSolving.png"
+          ],
           "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
           "icon": "fi-rr-lightbulb-question",
           "description": "候选人具有强大的解题能力。\n1.候选人熟练使用管理学原理分析问题，例如SWOT分析，波特五力模型，波士顿矩阵等。候选人可以借助这些工具快速的分析问题，找到解决问题的关键。并熟练将其可视化分享。\n2.候选人具有清晰的逻辑和发散性思维，懂得合理地运用有效的多种框架来分析和解决复杂问题。候选人曾系统学习过战略管理，管理学原理，项目管理，运筹学等课程。能熟练使用管理学工具和数学方法来解决问题，改善任务流畅，优化工作效率。",
@@ -1449,11 +1377,12 @@
         },
         {
           "id": "AestheticAttitude",
-          "advantage": [
-            "审美态度"
-          ],
+          "advantage": ["审美态度"],
           "href": "/whyme/AestheticAttitude",
-          "pic": ["https://3o.hk/images/2024/01/19/AestheticAttitude.png","/Graphs/whyme/AestheticAttitude.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/AestheticAttitude.png",
+            "/Graphs/whyme/AestheticAttitude.png"
+          ],
           "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
           "icon": "fi-rr-sparkles",
           "description": "候选人具有具有优秀的审美态度。\n1.候选人从小学习美术，拥有高级的审美。候选人相信任何良好的项目和产品都离不开优秀的包装和营销。候选人曾为多个企业独立设计品牌logo，并帮助完成注册。\n2.候选人对美学有执着追求。候选人不能接受格式混乱，排版不规范，配色失败的交付方式。对所有交付的文件、项目、作品都有较高的要求。\n3.候选人对美学有足够的交付能力。候选人可独立自主设计和制作矢量图、像素图。候选人精通PS、AI、Pages、DI、LR、PPT、KeyNote等软件。候选人对排版、配色、版面都有深刻的理解。可独立交付发布会级幻灯片、高级海报、宣传册、企业logo。候选人曾在多个设计竞赛中获得奖。曾经是大学生科技创业指导站的御用海报设计成员之一。设计作品获2个一等奖、2个二等奖和2个三等奖。",
@@ -1462,11 +1391,12 @@
         },
         {
           "id": "EmotionalStable",
-          "advantage": [
-            "情绪稳定"
-          ],
+          "advantage": ["情绪稳定"],
           "href": "/whyme/EmotionalStable",
-          "pic": ["https://3o.hk/images/2024/01/19/EmotionalStable.png","/Graphs/whyme/EmotionalStable.png"],
+          "pic": [
+            "https://3o.hk/images/2024/01/19/EmotionalStable.png",
+            "/Graphs/whyme/EmotionalStable.png"
+          ],
           "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
           "icon": "fi-rr-smile",
           "description": "候选人具有良好的情绪能量，稳定而坚定。\n候选人具有高度情绪感知能力、熟悉微表情和组织心理学。能合理向上向下管理，在解决客户投诉和突发情况的沟通方面表现出色。候选人乐观且抗压，能够快速处理工作中的负面情绪。始终保持积极向上的态度和充满活力。能为身边的人带来快乐和正面反馈，时刻为身边人提供正向的情感支持。",
@@ -1485,13 +1415,8 @@
     "KeyFeature": [
       {
         "no": 4,
-        "keyfeature": [
-          "Majors",
-          "专业"
-        ],
-        "href": [
-          "Degrees"
-        ],
+        "keyfeature": ["Majors", "专业"],
+        "href": ["Degrees"],
         "icon": "fi-rr-graduation-cap",
         "description": [
           "Smart and Hardworking, diverse academic background.",
@@ -1500,13 +1425,8 @@
       },
       {
         "no": 17,
-        "keyfeature": [
-          "scholarships",
-          "奖学金"
-        ],
-        "href": [
-          "scholarships"
-        ],
+        "keyfeature": ["scholarships", "奖学金"],
+        "href": ["scholarships"],
         "icon": "fi-rr-trophy-star",
         "description": [
           "Demonstrating excellence, won 17 scholarships.",
@@ -1515,13 +1435,8 @@
       },
       {
         "no": 60,
-        "keyfeature": [
-          " Certificates",
-          "荣誉"
-        ],
-        "href": [
-          "Certificates"
-        ],
+        "keyfeature": [" Certificates", "荣誉"],
+        "href": ["Certificates"],
         "icon": "fi-rr-diploma",
         "description": [
           "Actively advancing, achieved over 60 honors.",
@@ -1533,64 +1448,43 @@
       "bg": "https://cdn.pixabay.com/photo/2018/05/07/22/08/opera-house-3381786_1280.jpg",
       "items": [
         {
-          "type": [
-            "Linkedin",
-            "领英"
-          ],
+          "type": ["Linkedin", "领英"],
           "icon": "fi-brands-linkedin",
           "link": "https://www.linkedin.com/in/zhang-xianzhe-03133a259/",
           "name": "Xianzhe Zhang"
         },
         {
-          "type": [
-            "E-mail",
-            "邮件"
-          ],
+          "type": ["E-mail", "邮件"],
           "icon": "fi-rr-envelope",
           "link": "https://outlook.office365.com/mail/",
           "name": "z5443003@ad.unsw.edu.au"
         },
         {
-          "type": [
-            "Facebook",
-            " Facebook"
-          ],
+          "type": ["Facebook", " Facebook"],
           "icon": "fi-brands-facebook",
           "link": "https://www.facebook.com/profile.php?id=100085874466260",
           "name": "Xianzhe Zhang"
         },
         {
-          "type": [
-            "Phone",
-            "电话"
-          ],
+          "type": ["Phone", "电话"],
           "icon": "fi-sr-circle-phone-flip",
           "link": "+61 0434344292",
           "name": "+61 0434344292"
         },
         {
-          "type": [
-            "Instagram",
-            "Instagram"
-          ],
+          "type": ["Instagram", "Instagram"],
           "icon": "fi-brands-instagram",
           "link": "https://www.instagram.com/invites/contact/?i=er73s6a2y80u&utm_content=pblnb0t",
           "name": "scottzhang9779"
         },
         {
-          "type": [
-            "Little Red Book",
-            "小红书"
-          ],
+          "type": ["Little Red Book", "小红书"],
           "icon": "fi-sr-book-alt",
           "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579",
           "name": "贤哲scott"
         },
         {
-          "type": [
-            "Wechat",
-            "微信"
-          ],
+          "type": ["Wechat", "微信"],
           "icon": "fi-sr-comments",
           "link": "https://www.wechat.com/",
           "name": "Scottt1110"
@@ -1599,39 +1493,21 @@
     },
     "ContactsScanCode": [
       {
-        "lable": [
-          "Resume",
-          "简历"
-        ],
+        "lable": ["Resume", "简历"],
         "codepic": "/Graphs/contact/wechat.jpg",
-        "des": [
-          "Scan me to download his RESUME.",
-          "扫我下载简历"
-        ],
+        "des": ["Scan me to download his RESUME.", "扫我下载简历"],
         "expression": "(｡♥‿♥｡)"
       },
       {
-        "lable": [
-          "Personal Info",
-          "个人信息"
-        ],
+        "lable": ["Personal Info", "个人信息"],
         "codepic": "/Graphs/contact/wechat.jpg",
-        "des": [
-          "Scan me to obtain Personal Info.",
-          "扫我获取个人信息"
-        ],
+        "des": ["Scan me to obtain Personal Info.", "扫我获取个人信息"],
         "expression": "ʕ•ᴥ•ʔ"
       },
       {
-        "lable": [
-          "Wechat",
-          "微信"
-        ],
+        "lable": ["Wechat", "微信"],
         "codepic": "/Graphs/contact/wechat.jpg",
-        "des": [
-          "Scan me to add his WECHAT.",
-          "扫我添加微信"
-        ],
+        "des": ["Scan me to add his WECHAT.", "扫我添加微信"],
         "expression": "(＾◡＾)"
       }
     ],
@@ -1645,59 +1521,59 @@
           [
             {
               "name": "Introverted",
-              "label": 56,
-              "column": "56%",
+              "label": 76,
+              "column": "76%",
               "color1": "from-red-500",
               "color2": "to-red-700"
             },
             {
               "name": "Intuitive",
-              "label": 55,
-              "column": "55%",
+              "label": 61,
+              "column": "61%",
               "color1": "from-orange-500",
               "color2": "to-amber-500"
             },
             {
               "name": "Feeling",
-              "label": 68,
-              "column": "68%",
+              "label": 62,
+              "column": "62%",
               "color1": "from-amber-400",
               "color2": "to-yellow-400"
             },
             {
-              "name": "Prospecting",
-              "label": 63,
-              "column": "63%",
+              "name": "Judging",
+              "label": 57,
+              "column": "57%",
               "color1": "from-sky-500",
               "color2": "to-emerald-500"
             }
           ],
           [
             {
-              "name": "内向（I）",
-              "label": 56,
-              "column": "56%",
+              "name": "内向型",
+              "label": 76,
+              "column": "76%",
               "color1": "from-red-500",
               "color2": "to-red-700"
             },
             {
-              "name": "直觉（N）",
-              "label": 55,
-              "column": "55%",
+              "name": "直觉型",
+              "label": 61,
+              "column": "61%",
               "color1": "from-orange-500",
               "color2": "to-amber-500"
             },
             {
-              "name": "情感（F）",
-              "label": 68,
-              "column": "68%",
+              "name": "感觉型",
+              "label": 62,
+              "column": "62%",
               "color1": "from-amber-400",
               "color2": "to-yellow-400"
             },
             {
-              "name": "知觉（P）",
-              "label": 63,
-              "column": "63%",
+              "name": "判断型",
+              "label": 57,
+              "column": "57%",
               "color1": "from-sky-500",
               "color2": "to-emerald-500"
             }
@@ -1705,37 +1581,39 @@
         ]
       },
       "language": [
-      [
-        {
-          "name": "English (PTE)",
-          "label": "64",
-          "column": "70%",
-          "color1": "from-cyan-500",
-          "color2": "to-blue-500"
-        },
-        {
-          "name": "Chinese (Mandarin)",
-          "label": "A-II 88",
-          "column": "90%",
-          "color1": "from-indigo-500",
-          "color2": "to-pink-500"
-        }
-      ],[
-        {
-          "name": "英语（PTE）",
-          "label": "64",
-          "column": "70%",
-          "color1": "from-cyan-500",
-          "color2": "to-blue-500"
-        },
-        {
-          "name": "中文（普通话）",
-          "label": "A-II 88",
-          "column": "90%",
-          "color1": "from-indigo-500",
-          "color2": "to-pink-500"
-        }
-      ]],
+        [
+          {
+            "name": "English (PTE)",
+            "label": "64",
+            "column": "70%",
+            "color1": "from-cyan-500",
+            "color2": "to-blue-500"
+          },
+          {
+            "name": "Chinese (Mandarin)",
+            "label": "A-II 88",
+            "column": "90%",
+            "color1": "from-indigo-500",
+            "color2": "to-pink-500"
+          }
+        ],
+        [
+          {
+            "name": "英语（PTE）",
+            "label": "64",
+            "column": "70%",
+            "color1": "from-cyan-500",
+            "color2": "to-blue-500"
+          },
+          {
+            "name": "中文（普通话）",
+            "label": "A-II 88",
+            "column": "90%",
+            "color1": "from-indigo-500",
+            "color2": "to-pink-500"
+          }
+        ]
+      ],
       "Apps": [
         {
           "alt": "Word",
@@ -1799,15 +1677,15 @@
         },
         {
           "alt": "Keynote",
-          "src": "https://www.icloud.com/system/icloud.com/2404Project58/43f50d5d6df53dc6bddf56d7ceb257d0.png"
+          "src": "https://www.apple.com/v/keynote/n/images/overview/icon_keynote__fwcssyfzxxqq_large_2x.png"
         },
         {
           "alt": "Pages",
-          "src": "https://www.icloud.com/system/icloud.com/2404Project58/3c581ce16ec89eedc1d6862e31ccd8b3.png"
+          "src": "https://www.apple.com/v/pages/o/images/overview/icon_pages__q25ozbj7q9m6_large_2x.png"
         },
         {
           "alt": "Numbers",
-          "src": "https://www.icloud.com/system/icloud.com/2404Project58/f5b837094af69a157a6fc7f413e04fb7.png"
+          "src": "https://www.apple.com/v/numbers/n/images/overview/icon_hero_numbers__b7t2xnmny5ea_large_2x.png"
         },
         {
           "alt": "Tailwind",
@@ -1936,10 +1814,19 @@
           "image": "https://www.svgrepo.com/show/521276/docker-16.svg"
         }
       ],
-      "graphs":{
-        "gallerybg":["/Graphs/capability/gallerybg.jpg","https://cdn.pixabay.com/photo/2019/08/19/11/59/milky-way-4416194_1280.jpg"],
-       "code":["/Graphs/capability/code.jpg","https://3o.hk/images/2024/01/19/code.jpg"],
-        "infp":["/Graphs/capability/infp.jpg","https://3o.hk/images/2024/01/19/infp.jpg"]
+      "graphs": {
+        "gallerybg": [
+          "/Graphs/capability/gallerybg.jpg",
+          "https://cdn.pixabay.com/photo/2019/08/19/11/59/milky-way-4416194_1280.jpg"
+        ],
+        "code": [
+          "/Graphs/capability/code.jpg",
+          "https://3o.hk/images/2024/01/19/code.jpg"
+        ],
+        "infj": [
+          "/Graphs/capability/infp.jpg",
+          "https://3o.hk/images/2024/01/19/infp.jpg"
+        ]
       }
     },
     "Certificates": [
@@ -2303,7 +2190,6 @@
           "Description": "-"
         }
       ]
-      
     ],
     "Infos": [
       [
@@ -2344,7 +2230,7 @@
         },
         {
           "label": "fi-sr-person-circle-question",
-          "icon": "INFP",
+          "icon": "infj",
           "cont": "MBTI"
         },
         {
@@ -2431,7 +2317,7 @@
         },
         {
           "label": "fi-sr-person-circle-question",
-          "icon": "INFP",
+          "icon": "infj",
           "cont": "MBTI（人格类型）"
         },
         {
@@ -2484,28 +2370,28 @@
     "Lifes": [
       {
         "icon": "music-alt",
-        "label": ["Music","音 乐"],
+        "label": ["Music", "音 乐"],
         "link": "/life/music",
         "pic": "/Graphs/whyme/EmotionalStable.png",
         "des": "It collect musics I recommend ~"
       },
       {
         "icon": "user-music",
-        "label": ["Perform","表 演"],
+        "label": ["Perform", "表 演"],
         "link": "/life/perform",
         "pic": "/Graphs/whyme/EmotionalStable.png",
         "des": "It collect musics I perform ~"
       },
       {
         "icon": "picture",
-        "label": ["Gallery","图 库"],
+        "label": ["Gallery", "图 库"],
         "link": "/life/gallery",
         "pic": "/Graphs/whyme/AestheticAttitude.png",
         "des": "It collect picture I take ~"
       },
       {
         "icon": "followcollection",
-        "label": ["Story","故 事"],
+        "label": ["Story", "故 事"],
         "link": "/life/story",
         "pic": "/Graphs/whyme/Leadership.png",
         "des": "It collect stories I undergo ~"
@@ -2515,18 +2401,12 @@
       [
         {
           "id": "FA-swust",
-          "tittle": [
-            "Financial",
-            "Assistant"
-          ],
+          "tittle": ["Financial", "Assistant"],
           "href": "/work/work=FA-swust",
           "type": "Part-time",
           "logoRound": "rounded",
           "logo": "/Graphs/study/swust.png",
-          "tag": [
-            null,
-            "Part-time"
-          ],
+          "tag": [null, "Part-time"],
           "web": "http://www.english.swust.edu.cn/main.htm",
           "time": "Mar 1, 2021 - Feb 1, 2022",
           "company": "Southwest University of Science and Technology Analytical Testing Centre",
@@ -2536,62 +2416,40 @@
         },
         {
           "id": "FA-swust2",
-          "tittle": [
-            "Product",
-            "Operation"
-          ],
+          "tittle": ["Product", "Operation"],
           "href": "/work/work=FA-swust2",
           "type": "Part-time",
           "logoRound": "rounded",
           "logo": "/Graphs/study/swust.png",
-          "tag": [
-            null,
-            "Part-time"
-          ],
+          "tag": [null, "Part-time"],
           "web": "http://www.english.swust.edu.cn/main.htm",
           "time": "Aug 1, 2018 - Feb 1, 2019",
           "company": "Domi Group Buying",
-          "description": [
-            "Responsible for the backend "
-          ]
+          "description": ["Responsible for the backend "]
         },
         {
           "id": "PL-swust3",
-          "tittle": [
-            "Project",
-            "Launcher"
-          ],
+          "tittle": ["Project", "Launcher"],
           "href": "/work/work=PL-swust3",
           "type": "Part-time",
           "logoRound": "nonrounded",
           "logo": "/Graphs/study/unsw.png",
-          "tag": [
-            "Full-time",
-            null
-          ],
+          "tag": ["Full-time", null],
           "web": "http://www.english.swust.edu.cn/main.htm",
           "time": "Aug 1, 2018 - Feb 1, 2019",
           "company": "Domi Group Buying",
-          "description": [
-            "Responsible "
-          ]
+          "description": ["Responsible "]
         }
       ],
       [
         {
           "id": "FA-swust",
-          "title": [
-            "财务",
-            "助理"
-          ],
+          "title": ["财务", "助理"],
           "href": "/work/work=FA-swust",
           "type": "兼职",
           "logoRound": "rounded",
           "logo": "/Graphs/study/swust.png",
-          "tag": [
-            null,
-            "兼职"
-          ],
+          "tag": [null, "兼职"],
           "web": "http://www.english.swust.edu.cn/main.htm",
           "time": "2021年3月1日 - 2022年2月1日",
           "company": "西南科技大学分析测试中心",
@@ -2601,714 +2459,701 @@
         },
         {
           "id": "FA-swust2",
-          "title": [
-            "产品",
-            "运营"
-          ],
+          "title": ["产品", "运营"],
           "href": "/work/work=FA-swust2",
           "type": "兼职",
           "logoRound": "rounded",
           "logo": "/Graphs/study/swust.png",
-          "tag": [
-            null,
-            "兼职"
-          ],
+          "tag": [null, "兼职"],
           "web": "http://www.english.swust.edu.cn/main.htm",
           "time": "2018年8月1日 - 2019年2月1日",
           "company": "多米团购",
-          "description": [
-            "负责后台"
-          ]
+          "description": ["负责后台"]
         },
         {
           "id": "PL-swust3",
-          "title": [
-            "项目",
-            "发起人"
-          ],
+          "title": ["项目", "发起人"],
           "href": "/work/work=PL-swust3",
           "type": "兼职",
           "logoRound": "nonrounded",
           "logo": "/Graphs/study/unsw.png",
-          "tag": [
-            "全职",
-            null
-          ],
+          "tag": ["全职", null],
           "web": "http://www.english.swust.edu.cn/main.htm",
           "time": "2018年8月1日 - 2019年2月1日",
           "company": "多米团购",
-          "description": [
-            "负责"
-          ]
+          "description": ["负责"]
         }
       ]
     ],
-    "Picture":{    
-      "AllPicture": 
-    ["https://3o.hk/images/2024/01/21/IMG_1040.png",
-    "https://3o.hk/images/2024/01/21/IMG_1039.png",
-    "https://3o.hk/images/2024/01/21/IMG_1037.png",
-    "https://3o.hk/images/2024/01/21/IMG_1036.png",
-    "https://3o.hk/images/2024/01/21/IMG_1035.png",
-    "https://3o.hk/images/2024/01/21/IMG_1034.png",
-    "https://3o.hk/images/2024/01/21/IMG_1033.png",
-    "https://3o.hk/images/2024/01/21/IMG_1032.png",
-    "https://3o.hk/images/2024/01/21/IMG_1031.png",
-    "https://3o.hk/images/2024/01/21/IMG_1030.png",
-    "https://3o.hk/images/2024/01/21/IMG_1029.png",
-    "https://3o.hk/images/2024/01/21/IMG_1028.png",
-    "https://3o.hk/images/2024/01/21/IMG_1027.png",
-    "https://3o.hk/images/2024/01/21/IMG_1026.png",
-    "https://3o.hk/images/2024/01/21/IMG_1025.png",
-    "https://3o.hk/images/2024/01/21/IMG_1023.png",
-    "https://3o.hk/images/2024/01/21/IMG_1024.png",
-    "https://3o.hk/images/2024/01/21/IMG_1022.png",
-    "https://3o.hk/images/2024/01/21/IMG_1021.png",
-    "https://3o.hk/images/2024/01/21/IMG_1020.png",
-    "https://3o.hk/images/2024/01/21/IMG_1019.png",
-    "https://3o.hk/images/2024/01/21/IMG_1018.png",
-    "https://3o.hk/images/2024/01/21/IMG_1017.png",
-    "https://3o.hk/images/2024/01/21/IMG_1016.png",
-    "https://3o.hk/images/2024/01/21/IMG_1015.png",
-    "https://3o.hk/images/2024/01/21/IMG_1014.png",
-    "https://3o.hk/images/2024/01/21/IMG_1013.png",
-    "https://3o.hk/images/2024/01/21/IMG_1012.png",
-    "https://3o.hk/images/2024/01/21/IMG_1011.png",
-    "https://3o.hk/images/2024/01/21/IMG_1010.png",
-    "https://3o.hk/images/2024/01/21/IMG_1009.png",
-    "https://3o.hk/images/2024/01/21/IMG_1008.png",
-    "https://3o.hk/images/2024/01/21/IMG_1007.png",
-    "https://3o.hk/images/2024/01/21/IMG_1006.png",
-    "https://3o.hk/images/2024/01/21/IMG_1005.png",
-    "https://3o.hk/images/2024/01/21/IMG_1004.png",
-    "https://3o.hk/images/2024/01/21/IMG_1003.png",
-    "https://3o.hk/images/2024/01/21/IMG_1002.png",
-    "https://3o.hk/images/2024/01/21/IMG_1001.png",
-    "https://3o.hk/images/2024/01/21/IMG_0999.png",
-    "https://3o.hk/images/2024/01/21/IMG_0998.png",
-    "https://3o.hk/images/2024/01/21/IMG_0997.png",
-    "https://3o.hk/images/2024/01/21/IMG_0995.png",
-    "https://3o.hk/images/2024/01/21/IMG_0994.png",
-    "https://3o.hk/images/2024/01/21/IMG_0992.png",
-    "https://3o.hk/images/2024/01/21/IMG_0991.png",
-    "https://3o.hk/images/2024/01/21/IMG_0990.png",
-    "https://3o.hk/images/2024/01/21/IMG_0988.png",
-    "https://3o.hk/images/2024/01/21/IMG_0987.png",
-    "https://3o.hk/images/2024/01/21/IMG_0986.png",
-    "https://3o.hk/images/2024/01/21/IMG_0985.png",
-    "https://3o.hk/images/2024/01/21/IMG_0984.png",
-    "https://3o.hk/images/2024/01/21/IMG_0983.png",
-    "https://3o.hk/images/2024/01/21/IMG_0982.png",
-    "https://3o.hk/images/2024/01/21/IMG_0980.png",
-    "https://3o.hk/images/2024/01/21/IMG_0979.png",
-    "https://3o.hk/images/2024/01/21/IMG_0978.png",
-    "https://3o.hk/images/2024/01/21/IMG_0977.png",
-    "https://3o.hk/images/2024/01/21/IMG_0976.png",
-    "https://3o.hk/images/2024/01/21/IMG_0974.png",
-    "https://3o.hk/images/2024/01/21/IMG_0971.png",
-    "https://3o.hk/images/2024/01/21/IMG_0973.png",
-    "https://3o.hk/images/2024/01/21/IMG_0972.png",
-    "https://3o.hk/images/2024/01/21/IMG_0970.png",
-    "https://3o.hk/images/2024/01/21/IMG_0969.png",
-    "https://3o.hk/images/2024/01/21/IMG_0967.png",
-    "https://3o.hk/images/2024/01/21/IMG_0968.png",
-    "https://3o.hk/images/2024/01/21/IMG_0965.png",
-    "https://3o.hk/images/2024/01/21/IMG_0966.png",
-    "https://3o.hk/images/2024/01/21/IMG_0963.png",
-    "https://3o.hk/images/2024/01/21/IMG_0964.png",
-    "https://3o.hk/images/2024/01/21/IMG_0962.png",
-    "https://3o.hk/images/2024/01/21/IMG_0961.png",
-    "https://3o.hk/images/2024/01/21/IMG_0960.png",
-    "https://3o.hk/images/2024/01/21/IMG_0959.png",
-    "https://3o.hk/images/2024/01/21/IMG_0958.png",
-    "https://3o.hk/images/2024/01/21/IMG_0957.png",
-    "https://3o.hk/images/2024/01/21/IMG_0956.png",
-    "https://3o.hk/images/2024/01/21/IMG_0955.png",
-    "https://3o.hk/images/2024/01/21/IMG_0954.png",
-    "https://3o.hk/images/2024/01/21/IMG_0953.png",
-    "https://3o.hk/images/2024/01/21/IMG_0952.png",
-    "https://3o.hk/images/2024/01/21/IMG_0951.png",
-    "https://3o.hk/images/2024/01/21/IMG_0950.png",
-    "https://3o.hk/images/2024/01/21/IMG_0949.png",
-    "https://3o.hk/images/2024/01/21/IMG_0948.png",
-    "https://3o.hk/images/2024/01/21/IMG_0947.png",
-    "https://3o.hk/images/2024/01/21/IMG_0946.png",
-    "https://3o.hk/images/2024/01/21/IMG_0945.png",
-    "https://3o.hk/images/2024/01/21/IMG_0944.png",
-    "https://3o.hk/images/2024/01/21/IMG_0943.png",
-    "https://3o.hk/images/2024/01/21/IMG_0942.png",
-    "https://3o.hk/images/2024/01/21/IMG_0941.png",
-    "https://3o.hk/images/2024/01/21/IMG_0940.png",
-    "https://3o.hk/images/2024/01/21/IMG_0939.png",
-    "https://3o.hk/images/2024/01/21/IMG_0938.png",
-    "https://3o.hk/images/2024/01/21/IMG_0937.png",
-    "https://3o.hk/images/2024/01/21/IMG_0936.png",
-    "https://3o.hk/images/2024/01/21/IMG_0935.png",
-    "https://3o.hk/images/2024/01/21/IMG_0934.png",
-    "https://3o.hk/images/2024/01/21/IMG_0933.png",
-    "https://3o.hk/images/2024/01/21/IMG_0931.png",
-    "https://3o.hk/images/2024/01/21/IMG_0932.png",
-    "https://3o.hk/images/2024/01/21/IMG_0930.png",
-    "https://3o.hk/images/2024/01/21/IMG_0929.png",
-    "https://3o.hk/images/2024/01/21/IMG_0928.png",
-    "https://3o.hk/images/2024/01/21/IMG_0927.png",
-    "https://3o.hk/images/2024/01/21/IMG_0926.png",
-    "https://3o.hk/images/2024/01/21/IMG_0925.png",
-    "https://3o.hk/images/2024/01/21/IMG_0924.png",
-    "https://3o.hk/images/2024/01/21/IMG_0923.png",
-    "https://3o.hk/images/2024/01/21/IMG_0922.png",
-    "https://3o.hk/images/2024/01/21/IMG_0921.png",
-    "https://3o.hk/images/2024/01/21/IMG_0920.png",
-    "https://3o.hk/images/2024/01/21/IMG_0919.png",
-    "https://3o.hk/images/2024/01/21/IMG_0918.png",
-    "https://3o.hk/images/2024/01/21/IMG_0917.png",
-    "https://3o.hk/images/2024/01/21/IMG_0916.png",
-    "https://3o.hk/images/2024/01/21/IMG_0915.png",
-    "https://3o.hk/images/2024/01/21/IMG_0914.png",
-    "https://3o.hk/images/2024/01/21/IMG_0913.png",
-    "https://3o.hk/images/2024/01/21/IMG_0912.png",
-    "https://3o.hk/images/2024/01/21/IMG_0911.png",
-    "https://3o.hk/images/2024/01/21/IMG_0910.png",
-    "https://3o.hk/images/2024/01/21/IMG_0909.png",
-    "https://3o.hk/images/2024/01/21/IMG_0908.png",
-    "https://3o.hk/images/2024/01/21/IMG_0907.png",
-    "https://3o.hk/images/2024/01/21/IMG_0906.png",
-    "https://3o.hk/images/2024/01/21/IMG_0905.png",
-    "https://3o.hk/images/2024/01/21/IMG_0904.png",
-    "https://3o.hk/images/2024/01/21/IMG_0903.png",
-    "https://3o.hk/images/2024/01/21/IMG_0902.png",
-    "https://3o.hk/images/2024/01/21/IMG_0900.png",
-    "https://3o.hk/images/2024/01/21/IMG_0899.png",
-    "https://3o.hk/images/2024/01/21/IMG_0896.png",
-    "https://3o.hk/images/2024/01/21/IMG_0895.png",
-    "https://3o.hk/images/2024/01/21/IMG_0894.png",
-    "https://3o.hk/images/2024/01/21/IMG_0893.png",
-    "https://3o.hk/images/2024/01/21/IMG_0891.png",
-    "https://3o.hk/images/2024/01/21/IMG_0890.png",
-    "https://3o.hk/images/2024/01/21/IMG_0889.png",
-    "https://3o.hk/images/2024/01/21/IMG_0888.png",
-    "https://3o.hk/images/2024/01/21/IMG_0887.png",
-    "https://3o.hk/images/2024/01/21/IMG_0886.png",
-    "https://3o.hk/images/2024/01/21/IMG_0885.png",
-    "https://3o.hk/images/2024/01/21/IMG_0884.png",
-    "https://3o.hk/images/2024/01/21/IMG_0883.png",
-    "https://3o.hk/images/2024/01/21/IMG_0882.png",
-    "https://3o.hk/images/2024/01/21/IMG_0881.png",
-    "https://3o.hk/images/2024/01/21/IMG_0879.png",
-    "https://3o.hk/images/2024/01/21/IMG_0878.png",
-    "https://3o.hk/images/2024/01/21/IMG_0877.png",
-    "https://3o.hk/images/2024/01/21/IMG_0876.png",
-    "https://3o.hk/images/2024/01/21/IMG_0875.png",
-    "https://3o.hk/images/2024/01/21/IMG_0874.png",
-    "https://3o.hk/images/2024/01/21/IMG_0872.png",
-    "https://3o.hk/images/2024/01/21/IMG_0873.png",
-    "https://3o.hk/images/2024/01/21/IMG_0871.png",
-    "https://3o.hk/images/2024/01/21/IMG_0870.png",
-    "https://3o.hk/images/2024/01/21/IMG_0869.png",
-    "https://3o.hk/images/2024/01/21/IMG_0867.png",
-    "https://3o.hk/images/2024/01/21/IMG_0866.png",
-    "https://3o.hk/images/2024/01/21/IMG_0865.png",
-    "https://3o.hk/images/2024/01/21/IMG_0864.png",
-    "https://3o.hk/images/2024/01/21/IMG_0862.png",
-    "https://3o.hk/images/2024/01/21/IMG_0863.png",
-    "https://3o.hk/images/2024/01/21/IMG_0861.png",
-    "https://3o.hk/images/2024/01/21/IMG_0860.png",
-    "https://3o.hk/images/2024/01/21/IMG_0859.png",
-    "https://3o.hk/images/2024/01/21/IMG_0857.png",
-    "https://3o.hk/images/2024/01/21/IMG_0856.png",
-    "https://3o.hk/images/2024/01/21/IMG_0854.png",
-    "https://3o.hk/images/2024/01/21/IMG_0853.png",
-    "https://3o.hk/images/2024/01/21/IMG_0852.png",
-    "https://3o.hk/images/2024/01/21/IMG_0851.png",
-    "https://3o.hk/images/2024/01/21/IMG_0850.png",
-    "https://3o.hk/images/2024/01/21/IMG_0849.png",
-    "https://3o.hk/images/2024/01/21/IMG_0848.png",
-    "https://3o.hk/images/2024/01/21/IMG_0847.png",
-    "https://3o.hk/images/2024/01/21/IMG_0846.png",
-    "https://3o.hk/images/2024/01/21/IMG_0845.png",
-    "https://3o.hk/images/2024/01/21/IMG_0844.png",
-    "https://3o.hk/images/2024/01/21/IMG_0843.png",
-    "https://3o.hk/images/2024/01/21/IMG_0842.png",
-    "https://3o.hk/images/2024/01/21/IMG_0841.png",
-    "https://3o.hk/images/2024/01/21/IMG_0840.png",
-    "https://3o.hk/images/2024/01/21/IMG_0839.png",
-    "https://3o.hk/images/2024/01/21/IMG_0838.png",
-    "https://3o.hk/images/2024/01/21/IMG_0837.png",
-    "https://3o.hk/images/2024/01/21/IMG_0836.png",
-    "https://3o.hk/images/2024/01/21/IMG_0835.png",
-    "https://3o.hk/images/2024/01/21/IMG_0833.png",
-    "https://3o.hk/images/2024/01/21/IMG_0832.png",
-    "https://3o.hk/images/2024/01/21/IMG_0830.png",
-    "https://3o.hk/images/2024/01/21/IMG_0831.png",
-    "https://3o.hk/images/2024/01/21/IMG_0829.png",
-    "https://3o.hk/images/2024/01/21/IMG_0828.png",
-    "https://3o.hk/images/2024/01/21/IMG_0827.png",
-    "https://3o.hk/images/2024/01/21/IMG_0826.png",
-    "https://3o.hk/images/2024/01/21/IMG_0825.png",
-    "https://3o.hk/images/2024/01/21/IMG_0823.png",
-    "https://3o.hk/images/2024/01/21/IMG_0824.png",
-    "https://3o.hk/images/2024/01/21/IMG_0822.png",
-    "https://3o.hk/images/2024/01/21/IMG_0821.png",
-    "https://3o.hk/images/2024/01/21/IMG_0820.png",
-    "https://3o.hk/images/2024/01/21/IMG_0819.png",
-    "https://3o.hk/images/2024/01/21/IMG_0818.png",
-    "https://3o.hk/images/2024/01/21/IMG_0817.png",
-    "https://3o.hk/images/2024/01/21/IMG_0816.png",
-    "https://3o.hk/images/2024/01/21/IMG_0815.png",
-    "https://3o.hk/images/2024/01/21/IMG_0814.png",
-    "https://3o.hk/images/2024/01/21/IMG_0813.png",
-    "https://3o.hk/images/2024/01/21/IMG_0812.png",
-    "https://3o.hk/images/2024/01/21/IMG_0811.png",
-    "https://3o.hk/images/2024/01/21/IMG_0810.png",
-    "https://3o.hk/images/2024/01/21/IMG_0809.png",
-    "https://3o.hk/images/2024/01/21/IMG_0808.png",
-    "https://3o.hk/images/2024/01/21/IMG_0807.png",
-    "https://3o.hk/images/2024/01/21/IMG_0806.png",
-    "https://3o.hk/images/2024/01/21/IMG_0805.png",
-    "https://3o.hk/images/2024/01/21/IMG_0804.png",
-    "https://3o.hk/images/2024/01/21/IMG_0803.png",
-    "https://3o.hk/images/2024/01/21/IMG_0802.png",
-    "https://3o.hk/images/2024/01/21/IMG_0801.png",
-    "https://3o.hk/images/2024/01/21/IMG_0800.png",
-    "https://3o.hk/images/2024/01/21/IMG_0799.png",
-    "https://3o.hk/images/2024/01/21/IMG_0798.png",
-    "https://3o.hk/images/2024/01/21/IMG_0797.png",
-    "https://3o.hk/images/2024/01/21/IMG_0796.png",
-    "https://3o.hk/images/2024/01/21/IMG_0795.png",
-    "https://3o.hk/images/2024/01/21/IMG_0794.png",
-    "https://3o.hk/images/2024/01/21/IMG_0793.png",
-    "https://3o.hk/images/2024/01/21/IMG_0792.png",
-    "https://3o.hk/images/2024/01/21/IMG_0791.png",
-    "https://3o.hk/images/2024/01/21/IMG_0790.png",
-    "https://3o.hk/images/2024/01/21/IMG_0789.png",
-    "https://3o.hk/images/2024/01/21/IMG_0788.png",
-    "https://3o.hk/images/2024/01/21/IMG_0786.png",
-    "https://3o.hk/images/2024/01/21/IMG_0785.png",
-    "https://3o.hk/images/2024/01/21/IMG_0784.png",
-    "https://3o.hk/images/2024/01/21/IMG_0783.png",
-    "https://3o.hk/images/2024/01/21/IMG_0782.png",
-    "https://3o.hk/images/2024/01/21/IMG_0781.png",
-    "https://3o.hk/images/2024/01/21/IMG_0780.png",
-    "https://3o.hk/images/2024/01/21/IMG_0779.png",
-    "https://3o.hk/images/2024/01/21/IMG_0778.png",
-    "https://3o.hk/images/2024/01/21/IMG_0777.png",
-    "https://3o.hk/images/2024/01/21/IMG_0776.png",
-    "https://3o.hk/images/2024/01/21/IMG_0775.png",
-    "https://3o.hk/images/2024/01/21/IMG_0774.png",
-    "https://3o.hk/images/2024/01/21/IMG_0773.png",
-    "https://3o.hk/images/2024/01/21/IMG_0772.png",
-    "https://3o.hk/images/2024/01/21/IMG_0771.png",
-    "https://3o.hk/images/2024/01/21/IMG_0770.png",
-    "https://3o.hk/images/2024/01/21/IMG_0769.png",
-    "https://3o.hk/images/2024/01/21/IMG_0768.png",
-    "https://3o.hk/images/2024/01/21/IMG_0767.png",
-    "https://3o.hk/images/2024/01/21/IMG_0766.png",
-    "https://3o.hk/images/2024/01/21/IMG_0765.png",
-    "https://3o.hk/images/2024/01/21/IMG_0764.png",
-    "https://3o.hk/images/2024/01/21/IMG_0763.png",
-    "https://3o.hk/images/2024/01/21/IMG_0762.png",
-    "https://3o.hk/images/2024/01/21/IMG_0761.png",
-    "https://3o.hk/images/2024/01/21/IMG_0760.png",
-    "https://3o.hk/images/2024/01/21/IMG_0759.png",
-    "https://3o.hk/images/2024/01/21/IMG_0758.png",
-    "https://3o.hk/images/2024/01/21/IMG_0757.png",
-    "https://3o.hk/images/2024/01/21/IMG_0756.png",
-    "https://3o.hk/images/2024/01/21/IMG_0755.png",
-    "https://3o.hk/images/2024/01/21/IMG_0754.png",
-    "https://3o.hk/images/2024/01/21/IMG_0753.png",
-    "https://3o.hk/images/2024/01/21/IMG_0752.png",
-    "https://3o.hk/images/2024/01/21/IMG_0751.png",
-    "https://3o.hk/images/2024/01/21/IMG_0750.png",
-    "https://3o.hk/images/2024/01/21/IMG_0749.png",
-    "https://3o.hk/images/2024/01/21/IMG_0748.png",
-    "https://3o.hk/images/2024/01/21/IMG_0747.png",
-    "https://3o.hk/images/2024/01/21/IMG_0746.png",
-    "https://3o.hk/images/2024/01/21/IMG_0744.png",
-    "https://3o.hk/images/2024/01/21/IMG_0743.png",
-    "https://3o.hk/images/2024/01/21/IMG_0742.png",
-    "https://3o.hk/images/2024/01/21/IMG_0741.png",
-    "https://3o.hk/images/2024/01/21/IMG_0740.png",
-    "https://3o.hk/images/2024/01/21/IMG_0739.png",
-    "https://3o.hk/images/2024/01/21/IMG_0738.png",
-    "https://3o.hk/images/2024/01/21/IMG_0737.png",
-    "https://3o.hk/images/2024/01/21/IMG_0736.png",
-    "https://3o.hk/images/2024/01/21/IMG_0735.png",
-    "https://3o.hk/images/2024/01/21/IMG_0734.png",
-    "https://3o.hk/images/2024/01/21/IMG_0733.png",
-    "https://3o.hk/images/2024/01/21/IMG_0732.png",
-    "https://3o.hk/images/2024/01/21/IMG_0731.png",
-    "https://3o.hk/images/2024/01/21/IMG_0729.png",
-    "https://3o.hk/images/2024/01/21/IMG_0728.png",
-    "https://3o.hk/images/2024/01/21/IMG_0727.png",
-    "https://3o.hk/images/2024/01/21/IMG_0726.png",
-    "https://3o.hk/images/2024/01/21/IMG_0725.png",
-    "https://3o.hk/images/2024/01/21/IMG_0723.png",
-    "https://3o.hk/images/2024/01/21/IMG_0722.png",
-    "https://3o.hk/images/2024/01/21/IMG_0721.png",
-    "https://3o.hk/images/2024/01/21/IMG_0720.png",
-    "https://3o.hk/images/2024/01/20/IMG_0878.png",
-    "https://3o.hk/images/2024/01/20/IMG_0877.png",
-    "https://3o.hk/images/2024/01/20/IMG_0876.png",
-    "https://3o.hk/images/2024/01/20/IMG_0875.png",
-    "https://3o.hk/images/2024/01/20/IMG_0874.png",
-    "https://3o.hk/images/2024/01/20/IMG_0873.png",
-    "https://3o.hk/images/2024/01/20/IMG_0872.png",
-    "https://3o.hk/images/2024/01/20/IMG_0871.png",
-    "https://3o.hk/images/2024/01/20/IMG_0870.png",
-    "https://3o.hk/images/2024/01/20/IMG_0869.png",
-    "https://3o.hk/images/2024/01/20/IMG_0867.png",
-    "https://3o.hk/images/2024/01/20/IMG_0866.png",
-    "https://3o.hk/images/2024/01/20/IMG_0865.png",
-    "https://3o.hk/images/2024/01/20/IMG_0864.png",
-    "https://3o.hk/images/2024/01/20/IMG_0862.png",
-    "https://3o.hk/images/2024/01/20/IMG_0863.png",
-    "https://3o.hk/images/2024/01/20/IMG_0860.png",
-    "https://3o.hk/images/2024/01/20/IMG_0861.png",
-    "https://3o.hk/images/2024/01/20/IMG_0859.png",
-    "https://3o.hk/images/2024/01/20/IMG_0857.png",
-    "https://3o.hk/images/2024/01/20/IMG_0856.png",
-    "https://3o.hk/images/2024/01/20/IMG_0854.png",
-    "https://3o.hk/images/2024/01/20/IMG_0853.png",
-    "https://3o.hk/images/2024/01/20/IMG_0852.png",
-    "https://3o.hk/images/2024/01/20/IMG_0851.png",
-    "https://3o.hk/images/2024/01/20/IMG_0850.png",
-    "https://3o.hk/images/2024/01/20/IMG_0849.png",
-    "https://3o.hk/images/2024/01/20/IMG_0848.png",
-    "https://3o.hk/images/2024/01/20/IMG_0847.png",
-    "https://3o.hk/images/2024/01/20/IMG_0846.png",
-    "https://3o.hk/images/2024/01/20/IMG_0845.png",
-    "https://3o.hk/images/2024/01/20/IMG_0844.png",
-    "https://3o.hk/images/2024/01/20/IMG_0843.png",
-    "https://3o.hk/images/2024/01/20/IMG_0842.png",
-    "https://3o.hk/images/2024/01/20/IMG_0841.png",
-    "https://3o.hk/images/2024/01/20/IMG_0840.png",
-    "https://3o.hk/images/2024/01/20/IMG_0839.png",
-    "https://3o.hk/images/2024/01/20/IMG_0837.png",
-    "https://3o.hk/images/2024/01/20/IMG_0838.png",
-    "https://3o.hk/images/2024/01/20/IMG_0836.png",
-    "https://3o.hk/images/2024/01/20/IMG_0835.png",
-    "https://3o.hk/images/2024/01/20/IMG_0834.png",
-    "https://3o.hk/images/2024/01/20/IMG_0833.png",
-    "https://3o.hk/images/2024/01/20/IMG_0832.png",
-    "https://3o.hk/images/2024/01/20/IMG_0831.png",
-    "https://3o.hk/images/2024/01/20/IMG_0830.png",
-    "https://3o.hk/images/2024/01/20/IMG_0829.png",
-    "https://3o.hk/images/2024/01/20/IMG_0828.png",
-    "https://3o.hk/images/2024/01/20/IMG_0827.png",
-    "https://3o.hk/images/2024/01/20/IMG_0826.png",
-    "https://3o.hk/images/2024/01/20/IMG_0825.png",
-    "https://3o.hk/images/2024/01/20/IMG_0824.png",
-    "https://3o.hk/images/2024/01/20/IMG_0823.png",
-    "https://3o.hk/images/2024/01/20/IMG_0822.png",
-    "https://3o.hk/images/2024/01/20/IMG_0821.png",
-    "https://3o.hk/images/2024/01/20/IMG_0820.png",
-    "https://3o.hk/images/2024/01/20/IMG_0819.png",
-    "https://3o.hk/images/2024/01/20/IMG_0818.png",
-    "https://3o.hk/images/2024/01/20/IMG_0817.png",
-    "https://3o.hk/images/2024/01/20/IMG_0816.png",
-    "https://3o.hk/images/2024/01/20/IMG_0815.png",
-    "https://3o.hk/images/2024/01/20/IMG_0814.png",
-    "https://3o.hk/images/2024/01/20/IMG_0813.png",
-    "https://3o.hk/images/2024/01/20/IMG_0812.png",
-    "https://3o.hk/images/2024/01/20/IMG_0811.png",
-    "https://3o.hk/images/2024/01/20/IMG_0810.png",
-    "https://3o.hk/images/2024/01/20/IMG_0809.png",
-    "https://3o.hk/images/2024/01/20/IMG_0808.png",
-    "https://3o.hk/images/2024/01/20/IMG_0807.png",
-    "https://3o.hk/images/2024/01/20/IMG_0806.png",
-    "https://3o.hk/images/2024/01/20/IMG_0805.png",
-    "https://3o.hk/images/2024/01/20/IMG_0804.png",
-    "https://3o.hk/images/2024/01/20/IMG_0803.png",
-    "https://3o.hk/images/2024/01/20/IMG_0802.png",
-    "https://3o.hk/images/2024/01/20/IMG_0801.png",
-    "https://3o.hk/images/2024/01/20/IMG_0800.png",
-    "https://3o.hk/images/2024/01/20/IMG_0799.png",
-    "https://3o.hk/images/2024/01/20/IMG_0798.png",
-    "https://3o.hk/images/2024/01/20/IMG_0797.png",
-    "https://3o.hk/images/2024/01/20/IMG_0796.png",
-    "https://3o.hk/images/2024/01/20/IMG_0795.png",
-    "https://3o.hk/images/2024/01/20/IMG_0794.png",
-    "https://3o.hk/images/2024/01/20/IMG_0793.png",
-    "https://3o.hk/images/2024/01/20/IMG_0792.png",
-    "https://3o.hk/images/2024/01/20/IMG_0791.png",
-    "https://3o.hk/images/2024/01/20/IMG_0790.png",
-    "https://3o.hk/images/2024/01/20/IMG_0789.png",
-    "https://3o.hk/images/2024/01/20/IMG_0788.png",
-    "https://3o.hk/images/2024/01/20/IMG_0786.png",
-    "https://3o.hk/images/2024/01/20/IMG_0785.png",
-    "https://3o.hk/images/2024/01/20/IMG_0784.png",
-    "https://3o.hk/images/2024/01/20/IMG_0783.png",
-    "https://3o.hk/images/2024/01/20/IMG_0782.png",
-    "https://3o.hk/images/2024/01/20/IMG_0781.png",
-    "https://3o.hk/images/2024/01/20/IMG_0780.png",
-    "https://3o.hk/images/2024/01/20/IMG_0779.png",
-    "https://3o.hk/images/2024/01/20/IMG_0778.png",
-    "https://3o.hk/images/2024/01/20/IMG_0777.png",
-    "https://3o.hk/images/2024/01/20/IMG_0776.png",
-    "https://3o.hk/images/2024/01/20/IMG_0775.png",
-    "https://3o.hk/images/2024/01/20/IMG_0774.png",
-    "https://3o.hk/images/2024/01/20/IMG_0772.png",
-    "https://3o.hk/images/2024/01/20/IMG_0773.png",
-    "https://3o.hk/images/2024/01/20/IMG_0771.png",
-    "https://3o.hk/images/2024/01/20/IMG_0770.png",
-    "https://3o.hk/images/2024/01/20/IMG_0768.png",
-    "https://3o.hk/images/2024/01/20/IMG_0769.png",
-    "https://3o.hk/images/2024/01/20/IMG_0767.png",
-    "https://3o.hk/images/2024/01/20/IMG_0766.png",
-    "https://3o.hk/images/2024/01/20/IMG_0765.png",
-    "https://3o.hk/images/2024/01/20/IMG_0764.png",
-    "https://3o.hk/images/2024/01/20/IMG_0763.png",
-    "https://3o.hk/images/2024/01/20/IMG_0762.png",
-    "https://3o.hk/images/2024/01/20/IMG_0761.png",
-    "https://3o.hk/images/2024/01/20/IMG_0760.png",
-    "https://3o.hk/images/2024/01/20/IMG_0759.png",
-    "https://3o.hk/images/2024/01/20/IMG_0758.png",
-    "https://3o.hk/images/2024/01/20/IMG_0756.png",
-    "https://3o.hk/images/2024/01/20/IMG_0757.png",
-    "https://3o.hk/images/2024/01/20/IMG_0755.png",
-    "https://3o.hk/images/2024/01/20/IMG_0754.png",
-    "https://3o.hk/images/2024/01/20/IMG_0753.png",
-    "https://3o.hk/images/2024/01/20/IMG_0752.png",
-    "https://3o.hk/images/2024/01/20/IMG_0751.png",
-    "https://3o.hk/images/2024/01/20/IMG_0750.png",
-    "https://3o.hk/images/2024/01/20/IMG_0749.png",
-    "https://3o.hk/images/2024/01/20/IMG_0748.png",
-    "https://3o.hk/images/2024/01/20/IMG_0747.png",
-    "https://3o.hk/images/2024/01/20/IMG_0746.png",
-    "https://3o.hk/images/2024/01/20/IMG_0744.png",
-    "https://3o.hk/images/2024/01/20/IMG_0745.png",
-    "https://3o.hk/images/2024/01/20/IMG_0743.png",
-    "https://3o.hk/images/2024/01/20/IMG_0742.png",
-    "https://3o.hk/images/2024/01/20/IMG_0741.png",
-    "https://3o.hk/images/2024/01/20/IMG_0740.png",
-    "https://3o.hk/images/2024/01/20/IMG_0739.png",
-    "https://3o.hk/images/2024/01/20/IMG_0738.png",
-    "https://3o.hk/images/2024/01/20/IMG_0737.png",
-    "https://3o.hk/images/2024/01/20/IMG_0736.png",
-    "https://3o.hk/images/2024/01/20/IMG_0735.png",
-    "https://3o.hk/images/2024/01/20/IMG_0734.png",
-    "https://3o.hk/images/2024/01/20/IMG_0733.png",
-    "https://3o.hk/images/2024/01/20/IMG_0732.png",
-    "https://3o.hk/images/2024/01/20/IMG_0731.png",
-    "https://3o.hk/images/2024/01/20/IMG_0730.png",
-    "https://3o.hk/images/2024/01/20/IMG_0729.png",
-    "https://3o.hk/images/2024/01/20/IMG_0727.png",
-    "https://3o.hk/images/2024/01/20/IMG_0726.png",
-    "https://3o.hk/images/2024/01/20/IMG_0725.png",
-    "https://3o.hk/images/2024/01/20/IMG_0724.png",
-    "https://3o.hk/images/2024/01/20/IMG_0723.png",
-    "https://3o.hk/images/2024/01/20/IMG_0719.png",
-    "https://3o.hk/images/2024/02/03/IMG_1183.jpg",
-    "https://3o.hk/images/2024/02/03/IMG_1185.jpg",
-    "https://3o.hk/images/2024/02/03/IMG_1189.jpg",
-    "https://3o.hk/images/2024/02/03/IMG_1191.jpg",
-    "https://3o.hk/images/2024/02/03/IMG_1192.jpg",
-    "https://3o.hk/images/2024/02/03/IMG_1193.jpg",
-    "https://3o.hk/images/2024/02/03/IMG_1194.jpg",
-    "https://3o.hk/images/2024/02/03/IMG_1196.jpg"],
-    "Favorite": 
-    [
-"https://3o.hk/images/2024/01/21/IMG_1040.png",
-"https://3o.hk/images/2024/01/21/IMG_1039.png",
-"https://3o.hk/images/2024/01/21/IMG_1037.png",
-"https://3o.hk/images/2024/01/21/IMG_1036.png",
-"https://3o.hk/images/2024/01/21/IMG_1035.png",
-"https://3o.hk/images/2024/01/21/IMG_1034.png",
-"https://3o.hk/images/2024/01/21/IMG_1033.png",
-"https://3o.hk/images/2024/01/21/IMG_1032.png",
-"https://3o.hk/images/2024/01/21/IMG_1031.png",
-"https://3o.hk/images/2024/01/21/IMG_1030.png",
-"https://3o.hk/images/2024/01/21/IMG_1029.png",
-"https://3o.hk/images/2024/01/21/IMG_1028.png",
-"https://3o.hk/images/2024/01/21/IMG_1027.png",
-"https://3o.hk/images/2024/01/21/IMG_1026.png",
-"https://3o.hk/images/2024/01/21/IMG_1025.png",
-"https://3o.hk/images/2024/01/21/IMG_1023.png",
-"https://3o.hk/images/2024/01/21/IMG_1024.png",
-"https://3o.hk/images/2024/01/21/IMG_1022.png",
-"https://3o.hk/images/2024/01/21/IMG_1021.png",
-"https://3o.hk/images/2024/01/21/IMG_1020.png",
-"https://3o.hk/images/2024/01/21/IMG_1019.png",
-"https://3o.hk/images/2024/01/21/IMG_1018.png",
-"https://3o.hk/images/2024/01/21/IMG_1017.png",
-"https://3o.hk/images/2024/01/21/IMG_1016.png",
-"https://3o.hk/images/2024/01/21/IMG_1015.png",
-"https://3o.hk/images/2024/01/21/IMG_1014.png",
-"https://3o.hk/images/2024/01/21/IMG_1013.png",
-"https://3o.hk/images/2024/01/21/IMG_1012.png",
-"https://3o.hk/images/2024/01/21/IMG_1011.png",
-"https://3o.hk/images/2024/01/21/IMG_1010.png",
-"https://3o.hk/images/2024/01/21/IMG_1009.png",
-"https://3o.hk/images/2024/01/21/IMG_1008.png",
-"https://3o.hk/images/2024/01/21/IMG_1007.png",
-"https://3o.hk/images/2024/01/21/IMG_1006.png",
-"https://3o.hk/images/2024/01/21/IMG_1005.png",
-"https://3o.hk/images/2024/01/21/IMG_1004.png",
-"https://3o.hk/images/2024/01/21/IMG_1003.png",
-"https://3o.hk/images/2024/01/21/IMG_1002.png",
-"https://3o.hk/images/2024/01/21/IMG_1001.png",
-"https://3o.hk/images/2024/01/21/IMG_0999.png",
-"https://3o.hk/images/2024/01/21/IMG_0998.png",
-"https://3o.hk/images/2024/01/21/IMG_0997.png",
-"https://3o.hk/images/2024/01/21/IMG_0995.png",
-"https://3o.hk/images/2024/01/21/IMG_0994.png",
-"https://3o.hk/images/2024/01/21/IMG_0992.png",
-"https://3o.hk/images/2024/01/21/IMG_0991.png",
-"https://3o.hk/images/2024/01/21/IMG_0990.png",
-"https://3o.hk/images/2024/01/21/IMG_0988.png",
-"https://3o.hk/images/2024/01/21/IMG_0987.png",
-"https://3o.hk/images/2024/01/21/IMG_0986.png",
-"https://3o.hk/images/2024/01/21/IMG_0985.png",
-"https://3o.hk/images/2024/01/21/IMG_0984.png",
-"https://3o.hk/images/2024/01/21/IMG_0982.png",
-"https://3o.hk/images/2024/01/21/IMG_0977.png",
-"https://3o.hk/images/2024/01/21/IMG_0974.png",
-"https://3o.hk/images/2024/01/21/IMG_0971.png",
-"https://3o.hk/images/2024/01/21/IMG_0973.png",
-"https://3o.hk/images/2024/01/21/IMG_0970.png",
-"https://3o.hk/images/2024/01/21/IMG_0969.png",
-"https://3o.hk/images/2024/01/21/IMG_0965.png",
-"https://3o.hk/images/2024/01/21/IMG_0966.png",
-"https://3o.hk/images/2024/01/21/IMG_0961.png",
-"https://3o.hk/images/2024/01/21/IMG_0959.png",
-"https://3o.hk/images/2024/01/21/IMG_0956.png",
-"https://3o.hk/images/2024/01/21/IMG_0954.png",
-"https://3o.hk/images/2024/01/21/IMG_0953.png",
-"https://3o.hk/images/2024/01/21/IMG_0949.png",
-"https://3o.hk/images/2024/01/21/IMG_0948.png",
-"https://3o.hk/images/2024/01/21/IMG_0946.png",
-"https://3o.hk/images/2024/01/21/IMG_0945.png",
-"https://3o.hk/images/2024/01/21/IMG_0943.png",
-"https://3o.hk/images/2024/01/21/IMG_0942.png",
-"https://3o.hk/images/2024/01/21/IMG_0940.png",
-"https://3o.hk/images/2024/01/21/IMG_0939.png",
-"https://3o.hk/images/2024/01/21/IMG_0936.png",
-"https://3o.hk/images/2024/01/21/IMG_0935.png",
-"https://3o.hk/images/2024/01/21/IMG_0933.png",
-"https://3o.hk/images/2024/01/21/IMG_0931.png",
-"https://3o.hk/images/2024/01/21/IMG_0929.png",
-"https://3o.hk/images/2024/01/21/IMG_0927.png",
-"https://3o.hk/images/2024/01/21/IMG_0926.png",
-"https://3o.hk/images/2024/01/21/IMG_0925.png",
-"https://3o.hk/images/2024/01/21/IMG_0924.png",
-"https://3o.hk/images/2024/01/21/IMG_0923.png",
-"https://3o.hk/images/2024/01/21/IMG_0922.png",
-"https://3o.hk/images/2024/01/21/IMG_0921.png",
-"https://3o.hk/images/2024/01/21/IMG_0920.png",
-"https://3o.hk/images/2024/01/21/IMG_0918.png",
-"https://3o.hk/images/2024/01/21/IMG_0917.png",
-"https://3o.hk/images/2024/01/21/IMG_0916.png",
-"https://3o.hk/images/2024/01/21/IMG_0915.png",
-"https://3o.hk/images/2024/01/21/IMG_0914.png",
-"https://3o.hk/images/2024/01/21/IMG_0913.png",
-"https://3o.hk/images/2024/01/21/IMG_0911.png",
-"https://3o.hk/images/2024/01/21/IMG_0910.png",
-"https://3o.hk/images/2024/01/21/IMG_0909.png",
-"https://3o.hk/images/2024/01/21/IMG_0908.png",
-"https://3o.hk/images/2024/01/21/IMG_0907.png",
-"https://3o.hk/images/2024/01/21/IMG_0906.png",
-"https://3o.hk/images/2024/01/21/IMG_0905.png",
-"https://3o.hk/images/2024/01/21/IMG_0904.png",
-"https://3o.hk/images/2024/01/21/IMG_0903.png",
-"https://3o.hk/images/2024/01/21/IMG_0900.png",
-"https://3o.hk/images/2024/01/21/IMG_0899.png",
-"https://3o.hk/images/2024/01/21/IMG_0896.png",
-"https://3o.hk/images/2024/01/21/IMG_0895.png",
-"https://3o.hk/images/2024/01/21/IMG_0889.png",
-"https://3o.hk/images/2024/01/21/IMG_0881.png",
-"https://3o.hk/images/2024/01/21/IMG_0878.png",
-"https://3o.hk/images/2024/01/21/IMG_0877.png",
-"https://3o.hk/images/2024/01/21/IMG_0875.png",
-"https://3o.hk/images/2024/01/21/IMG_0873.png",
-"https://3o.hk/images/2024/01/21/IMG_0871.png",
-"https://3o.hk/images/2024/01/21/IMG_0869.png",
-"https://3o.hk/images/2024/01/21/IMG_0864.png",
-"https://3o.hk/images/2024/01/21/IMG_0863.png",
-"https://3o.hk/images/2024/01/21/IMG_0861.png",
-"https://3o.hk/images/2024/01/21/IMG_0860.png",
-"https://3o.hk/images/2024/01/21/IMG_0859.png",
-"https://3o.hk/images/2024/01/21/IMG_0857.png",
-"https://3o.hk/images/2024/01/21/IMG_0854.png",
-"https://3o.hk/images/2024/01/21/IMG_0852.png",
-"https://3o.hk/images/2024/01/21/IMG_0849.png",
-"https://3o.hk/images/2024/01/21/IMG_0848.png",
-"https://3o.hk/images/2024/01/21/IMG_0846.png",
-"https://3o.hk/images/2024/01/21/IMG_0845.png",
-"https://3o.hk/images/2024/01/21/IMG_0843.png",
-"https://3o.hk/images/2024/01/21/IMG_0842.png",
-"https://3o.hk/images/2024/01/21/IMG_0840.png",
-"https://3o.hk/images/2024/01/21/IMG_0839.png",
-"https://3o.hk/images/2024/01/21/IMG_0837.png",
-"https://3o.hk/images/2024/01/21/IMG_0836.png",
-"https://3o.hk/images/2024/01/21/IMG_0833.png",
-"https://3o.hk/images/2024/01/21/IMG_0830.png",
-"https://3o.hk/images/2024/01/21/IMG_0831.png",
-"https://3o.hk/images/2024/01/21/IMG_0828.png",
-"https://3o.hk/images/2024/01/21/IMG_0826.png",
-"https://3o.hk/images/2024/01/21/IMG_0823.png",
-"https://3o.hk/images/2024/01/21/IMG_0822.png",
-"https://3o.hk/images/2024/01/21/IMG_0818.png",
-"https://3o.hk/images/2024/01/21/IMG_0817.png",
-"https://3o.hk/images/2024/01/21/IMG_0816.png",
-"https://3o.hk/images/2024/01/21/IMG_0815.png",
-"https://3o.hk/images/2024/01/21/IMG_0814.png",
-"https://3o.hk/images/2024/01/21/IMG_0808.png",
-"https://3o.hk/images/2024/01/21/IMG_0807.png",
-"https://3o.hk/images/2024/01/21/IMG_0803.png",
-"https://3o.hk/images/2024/01/21/IMG_0798.png",
-"https://3o.hk/images/2024/01/21/IMG_0781.png",
-"https://3o.hk/images/2024/01/21/IMG_0778.png",
-"https://3o.hk/images/2024/01/21/IMG_0776.png",
-"https://3o.hk/images/2024/01/21/IMG_0774.png",
-"https://3o.hk/images/2024/01/21/IMG_0771.png",
-"https://3o.hk/images/2024/01/21/IMG_0770.png",
-"https://3o.hk/images/2024/01/21/IMG_0767.png",
-"https://3o.hk/images/2024/01/21/IMG_0765.png",
-"https://3o.hk/images/2024/01/21/IMG_0764.png",
-"https://3o.hk/images/2024/01/21/IMG_0763.png",
-"https://3o.hk/images/2024/01/21/IMG_0762.png",
-"https://3o.hk/images/2024/01/21/IMG_0760.png",
-"https://3o.hk/images/2024/01/21/IMG_0758.png",
-"https://3o.hk/images/2024/01/21/IMG_0756.png",
-"https://3o.hk/images/2024/01/21/IMG_0755.png",
-"https://3o.hk/images/2024/01/21/IMG_0754.png",
-"https://3o.hk/images/2024/01/21/IMG_0753.png",
-"https://3o.hk/images/2024/01/21/IMG_0750.png",
-"https://3o.hk/images/2024/01/21/IMG_0749.png",
-"https://3o.hk/images/2024/01/21/IMG_0743.png",
-"https://3o.hk/images/2024/01/21/IMG_0742.png",
-"https://3o.hk/images/2024/01/21/IMG_0741.png",
-"https://3o.hk/images/2024/01/21/IMG_0740.png",
-"https://3o.hk/images/2024/01/21/IMG_0739.png",
-"https://3o.hk/images/2024/01/21/IMG_0738.png",
-"https://3o.hk/images/2024/01/21/IMG_0736.png",
-"https://3o.hk/images/2024/01/21/IMG_0735.png",
-"https://3o.hk/images/2024/01/21/IMG_0734.png",
-"https://3o.hk/images/2024/01/21/IMG_0733.png",
-"https://3o.hk/images/2024/01/21/IMG_0732.png",
-"https://3o.hk/images/2024/01/21/IMG_0731.png",
-"https://3o.hk/images/2024/01/21/IMG_0728.png",
-"https://3o.hk/images/2024/01/21/IMG_0726.png",
-"https://3o.hk/images/2024/01/21/IMG_0725.png",
-"https://3o.hk/images/2024/01/21/IMG_0721.png",
-"https://3o.hk/images/2024/01/20/IMG_0719.png",
-"https://3o.hk/images/2024/02/03/IMG_1183.jpg",
-"https://3o.hk/images/2024/02/03/IMG_1189.jpg",
-"https://3o.hk/images/2024/02/03/IMG_1191.jpg",
-"https://3o.hk/images/2024/02/03/IMG_1192.jpg",
-"https://3o.hk/images/2024/02/03/IMG_1193.jpg",
-"https://3o.hk/images/2024/02/03/IMG_1194.jpg",
-"https://3o.hk/images/2024/02/03/IMG_1196.jpg"],
-    "pictureNotify":["Record beauty","记录美好"]}
+    "Picture": {
+      "AllPicture": [
+        "https://3o.hk/images/2024/01/21/IMG_1040.png",
+        "https://3o.hk/images/2024/01/21/IMG_1039.png",
+        "https://3o.hk/images/2024/01/21/IMG_1037.png",
+        "https://3o.hk/images/2024/01/21/IMG_1036.png",
+        "https://3o.hk/images/2024/01/21/IMG_1035.png",
+        "https://3o.hk/images/2024/01/21/IMG_1034.png",
+        "https://3o.hk/images/2024/01/21/IMG_1033.png",
+        "https://3o.hk/images/2024/01/21/IMG_1032.png",
+        "https://3o.hk/images/2024/01/21/IMG_1031.png",
+        "https://3o.hk/images/2024/01/21/IMG_1030.png",
+        "https://3o.hk/images/2024/01/21/IMG_1029.png",
+        "https://3o.hk/images/2024/01/21/IMG_1028.png",
+        "https://3o.hk/images/2024/01/21/IMG_1027.png",
+        "https://3o.hk/images/2024/01/21/IMG_1026.png",
+        "https://3o.hk/images/2024/01/21/IMG_1025.png",
+        "https://3o.hk/images/2024/01/21/IMG_1023.png",
+        "https://3o.hk/images/2024/01/21/IMG_1024.png",
+        "https://3o.hk/images/2024/01/21/IMG_1022.png",
+        "https://3o.hk/images/2024/01/21/IMG_1021.png",
+        "https://3o.hk/images/2024/01/21/IMG_1020.png",
+        "https://3o.hk/images/2024/01/21/IMG_1019.png",
+        "https://3o.hk/images/2024/01/21/IMG_1018.png",
+        "https://3o.hk/images/2024/01/21/IMG_1017.png",
+        "https://3o.hk/images/2024/01/21/IMG_1016.png",
+        "https://3o.hk/images/2024/01/21/IMG_1015.png",
+        "https://3o.hk/images/2024/01/21/IMG_1014.png",
+        "https://3o.hk/images/2024/01/21/IMG_1013.png",
+        "https://3o.hk/images/2024/01/21/IMG_1012.png",
+        "https://3o.hk/images/2024/01/21/IMG_1011.png",
+        "https://3o.hk/images/2024/01/21/IMG_1010.png",
+        "https://3o.hk/images/2024/01/21/IMG_1009.png",
+        "https://3o.hk/images/2024/01/21/IMG_1008.png",
+        "https://3o.hk/images/2024/01/21/IMG_1007.png",
+        "https://3o.hk/images/2024/01/21/IMG_1006.png",
+        "https://3o.hk/images/2024/01/21/IMG_1005.png",
+        "https://3o.hk/images/2024/01/21/IMG_1004.png",
+        "https://3o.hk/images/2024/01/21/IMG_1003.png",
+        "https://3o.hk/images/2024/01/21/IMG_1002.png",
+        "https://3o.hk/images/2024/01/21/IMG_1001.png",
+        "https://3o.hk/images/2024/01/21/IMG_0999.png",
+        "https://3o.hk/images/2024/01/21/IMG_0998.png",
+        "https://3o.hk/images/2024/01/21/IMG_0997.png",
+        "https://3o.hk/images/2024/01/21/IMG_0995.png",
+        "https://3o.hk/images/2024/01/21/IMG_0994.png",
+        "https://3o.hk/images/2024/01/21/IMG_0992.png",
+        "https://3o.hk/images/2024/01/21/IMG_0991.png",
+        "https://3o.hk/images/2024/01/21/IMG_0990.png",
+        "https://3o.hk/images/2024/01/21/IMG_0988.png",
+        "https://3o.hk/images/2024/01/21/IMG_0987.png",
+        "https://3o.hk/images/2024/01/21/IMG_0986.png",
+        "https://3o.hk/images/2024/01/21/IMG_0985.png",
+        "https://3o.hk/images/2024/01/21/IMG_0984.png",
+        "https://3o.hk/images/2024/01/21/IMG_0983.png",
+        "https://3o.hk/images/2024/01/21/IMG_0982.png",
+        "https://3o.hk/images/2024/01/21/IMG_0980.png",
+        "https://3o.hk/images/2024/01/21/IMG_0979.png",
+        "https://3o.hk/images/2024/01/21/IMG_0978.png",
+        "https://3o.hk/images/2024/01/21/IMG_0977.png",
+        "https://3o.hk/images/2024/01/21/IMG_0976.png",
+        "https://3o.hk/images/2024/01/21/IMG_0974.png",
+        "https://3o.hk/images/2024/01/21/IMG_0971.png",
+        "https://3o.hk/images/2024/01/21/IMG_0973.png",
+        "https://3o.hk/images/2024/01/21/IMG_0972.png",
+        "https://3o.hk/images/2024/01/21/IMG_0970.png",
+        "https://3o.hk/images/2024/01/21/IMG_0969.png",
+        "https://3o.hk/images/2024/01/21/IMG_0967.png",
+        "https://3o.hk/images/2024/01/21/IMG_0968.png",
+        "https://3o.hk/images/2024/01/21/IMG_0965.png",
+        "https://3o.hk/images/2024/01/21/IMG_0966.png",
+        "https://3o.hk/images/2024/01/21/IMG_0963.png",
+        "https://3o.hk/images/2024/01/21/IMG_0964.png",
+        "https://3o.hk/images/2024/01/21/IMG_0962.png",
+        "https://3o.hk/images/2024/01/21/IMG_0961.png",
+        "https://3o.hk/images/2024/01/21/IMG_0960.png",
+        "https://3o.hk/images/2024/01/21/IMG_0959.png",
+        "https://3o.hk/images/2024/01/21/IMG_0958.png",
+        "https://3o.hk/images/2024/01/21/IMG_0957.png",
+        "https://3o.hk/images/2024/01/21/IMG_0956.png",
+        "https://3o.hk/images/2024/01/21/IMG_0955.png",
+        "https://3o.hk/images/2024/01/21/IMG_0954.png",
+        "https://3o.hk/images/2024/01/21/IMG_0953.png",
+        "https://3o.hk/images/2024/01/21/IMG_0952.png",
+        "https://3o.hk/images/2024/01/21/IMG_0951.png",
+        "https://3o.hk/images/2024/01/21/IMG_0950.png",
+        "https://3o.hk/images/2024/01/21/IMG_0949.png",
+        "https://3o.hk/images/2024/01/21/IMG_0948.png",
+        "https://3o.hk/images/2024/01/21/IMG_0947.png",
+        "https://3o.hk/images/2024/01/21/IMG_0946.png",
+        "https://3o.hk/images/2024/01/21/IMG_0945.png",
+        "https://3o.hk/images/2024/01/21/IMG_0944.png",
+        "https://3o.hk/images/2024/01/21/IMG_0943.png",
+        "https://3o.hk/images/2024/01/21/IMG_0942.png",
+        "https://3o.hk/images/2024/01/21/IMG_0941.png",
+        "https://3o.hk/images/2024/01/21/IMG_0940.png",
+        "https://3o.hk/images/2024/01/21/IMG_0939.png",
+        "https://3o.hk/images/2024/01/21/IMG_0938.png",
+        "https://3o.hk/images/2024/01/21/IMG_0937.png",
+        "https://3o.hk/images/2024/01/21/IMG_0936.png",
+        "https://3o.hk/images/2024/01/21/IMG_0935.png",
+        "https://3o.hk/images/2024/01/21/IMG_0934.png",
+        "https://3o.hk/images/2024/01/21/IMG_0933.png",
+        "https://3o.hk/images/2024/01/21/IMG_0931.png",
+        "https://3o.hk/images/2024/01/21/IMG_0932.png",
+        "https://3o.hk/images/2024/01/21/IMG_0930.png",
+        "https://3o.hk/images/2024/01/21/IMG_0929.png",
+        "https://3o.hk/images/2024/01/21/IMG_0928.png",
+        "https://3o.hk/images/2024/01/21/IMG_0927.png",
+        "https://3o.hk/images/2024/01/21/IMG_0926.png",
+        "https://3o.hk/images/2024/01/21/IMG_0925.png",
+        "https://3o.hk/images/2024/01/21/IMG_0924.png",
+        "https://3o.hk/images/2024/01/21/IMG_0923.png",
+        "https://3o.hk/images/2024/01/21/IMG_0922.png",
+        "https://3o.hk/images/2024/01/21/IMG_0921.png",
+        "https://3o.hk/images/2024/01/21/IMG_0920.png",
+        "https://3o.hk/images/2024/01/21/IMG_0919.png",
+        "https://3o.hk/images/2024/01/21/IMG_0918.png",
+        "https://3o.hk/images/2024/01/21/IMG_0917.png",
+        "https://3o.hk/images/2024/01/21/IMG_0916.png",
+        "https://3o.hk/images/2024/01/21/IMG_0915.png",
+        "https://3o.hk/images/2024/01/21/IMG_0914.png",
+        "https://3o.hk/images/2024/01/21/IMG_0913.png",
+        "https://3o.hk/images/2024/01/21/IMG_0912.png",
+        "https://3o.hk/images/2024/01/21/IMG_0911.png",
+        "https://3o.hk/images/2024/01/21/IMG_0910.png",
+        "https://3o.hk/images/2024/01/21/IMG_0909.png",
+        "https://3o.hk/images/2024/01/21/IMG_0908.png",
+        "https://3o.hk/images/2024/01/21/IMG_0907.png",
+        "https://3o.hk/images/2024/01/21/IMG_0906.png",
+        "https://3o.hk/images/2024/01/21/IMG_0905.png",
+        "https://3o.hk/images/2024/01/21/IMG_0904.png",
+        "https://3o.hk/images/2024/01/21/IMG_0903.png",
+        "https://3o.hk/images/2024/01/21/IMG_0902.png",
+        "https://3o.hk/images/2024/01/21/IMG_0900.png",
+        "https://3o.hk/images/2024/01/21/IMG_0899.png",
+        "https://3o.hk/images/2024/01/21/IMG_0896.png",
+        "https://3o.hk/images/2024/01/21/IMG_0895.png",
+        "https://3o.hk/images/2024/01/21/IMG_0894.png",
+        "https://3o.hk/images/2024/01/21/IMG_0893.png",
+        "https://3o.hk/images/2024/01/21/IMG_0891.png",
+        "https://3o.hk/images/2024/01/21/IMG_0890.png",
+        "https://3o.hk/images/2024/01/21/IMG_0889.png",
+        "https://3o.hk/images/2024/01/21/IMG_0888.png",
+        "https://3o.hk/images/2024/01/21/IMG_0887.png",
+        "https://3o.hk/images/2024/01/21/IMG_0886.png",
+        "https://3o.hk/images/2024/01/21/IMG_0885.png",
+        "https://3o.hk/images/2024/01/21/IMG_0884.png",
+        "https://3o.hk/images/2024/01/21/IMG_0883.png",
+        "https://3o.hk/images/2024/01/21/IMG_0882.png",
+        "https://3o.hk/images/2024/01/21/IMG_0881.png",
+        "https://3o.hk/images/2024/01/21/IMG_0879.png",
+        "https://3o.hk/images/2024/01/21/IMG_0878.png",
+        "https://3o.hk/images/2024/01/21/IMG_0877.png",
+        "https://3o.hk/images/2024/01/21/IMG_0876.png",
+        "https://3o.hk/images/2024/01/21/IMG_0875.png",
+        "https://3o.hk/images/2024/01/21/IMG_0874.png",
+        "https://3o.hk/images/2024/01/21/IMG_0872.png",
+        "https://3o.hk/images/2024/01/21/IMG_0873.png",
+        "https://3o.hk/images/2024/01/21/IMG_0871.png",
+        "https://3o.hk/images/2024/01/21/IMG_0870.png",
+        "https://3o.hk/images/2024/01/21/IMG_0869.png",
+        "https://3o.hk/images/2024/01/21/IMG_0867.png",
+        "https://3o.hk/images/2024/01/21/IMG_0866.png",
+        "https://3o.hk/images/2024/01/21/IMG_0865.png",
+        "https://3o.hk/images/2024/01/21/IMG_0864.png",
+        "https://3o.hk/images/2024/01/21/IMG_0862.png",
+        "https://3o.hk/images/2024/01/21/IMG_0863.png",
+        "https://3o.hk/images/2024/01/21/IMG_0861.png",
+        "https://3o.hk/images/2024/01/21/IMG_0860.png",
+        "https://3o.hk/images/2024/01/21/IMG_0859.png",
+        "https://3o.hk/images/2024/01/21/IMG_0857.png",
+        "https://3o.hk/images/2024/01/21/IMG_0856.png",
+        "https://3o.hk/images/2024/01/21/IMG_0854.png",
+        "https://3o.hk/images/2024/01/21/IMG_0853.png",
+        "https://3o.hk/images/2024/01/21/IMG_0852.png",
+        "https://3o.hk/images/2024/01/21/IMG_0851.png",
+        "https://3o.hk/images/2024/01/21/IMG_0850.png",
+        "https://3o.hk/images/2024/01/21/IMG_0849.png",
+        "https://3o.hk/images/2024/01/21/IMG_0848.png",
+        "https://3o.hk/images/2024/01/21/IMG_0847.png",
+        "https://3o.hk/images/2024/01/21/IMG_0846.png",
+        "https://3o.hk/images/2024/01/21/IMG_0845.png",
+        "https://3o.hk/images/2024/01/21/IMG_0844.png",
+        "https://3o.hk/images/2024/01/21/IMG_0843.png",
+        "https://3o.hk/images/2024/01/21/IMG_0842.png",
+        "https://3o.hk/images/2024/01/21/IMG_0841.png",
+        "https://3o.hk/images/2024/01/21/IMG_0840.png",
+        "https://3o.hk/images/2024/01/21/IMG_0839.png",
+        "https://3o.hk/images/2024/01/21/IMG_0838.png",
+        "https://3o.hk/images/2024/01/21/IMG_0837.png",
+        "https://3o.hk/images/2024/01/21/IMG_0836.png",
+        "https://3o.hk/images/2024/01/21/IMG_0835.png",
+        "https://3o.hk/images/2024/01/21/IMG_0833.png",
+        "https://3o.hk/images/2024/01/21/IMG_0832.png",
+        "https://3o.hk/images/2024/01/21/IMG_0830.png",
+        "https://3o.hk/images/2024/01/21/IMG_0831.png",
+        "https://3o.hk/images/2024/01/21/IMG_0829.png",
+        "https://3o.hk/images/2024/01/21/IMG_0828.png",
+        "https://3o.hk/images/2024/01/21/IMG_0827.png",
+        "https://3o.hk/images/2024/01/21/IMG_0826.png",
+        "https://3o.hk/images/2024/01/21/IMG_0825.png",
+        "https://3o.hk/images/2024/01/21/IMG_0823.png",
+        "https://3o.hk/images/2024/01/21/IMG_0824.png",
+        "https://3o.hk/images/2024/01/21/IMG_0822.png",
+        "https://3o.hk/images/2024/01/21/IMG_0821.png",
+        "https://3o.hk/images/2024/01/21/IMG_0820.png",
+        "https://3o.hk/images/2024/01/21/IMG_0819.png",
+        "https://3o.hk/images/2024/01/21/IMG_0818.png",
+        "https://3o.hk/images/2024/01/21/IMG_0817.png",
+        "https://3o.hk/images/2024/01/21/IMG_0816.png",
+        "https://3o.hk/images/2024/01/21/IMG_0815.png",
+        "https://3o.hk/images/2024/01/21/IMG_0814.png",
+        "https://3o.hk/images/2024/01/21/IMG_0813.png",
+        "https://3o.hk/images/2024/01/21/IMG_0812.png",
+        "https://3o.hk/images/2024/01/21/IMG_0811.png",
+        "https://3o.hk/images/2024/01/21/IMG_0810.png",
+        "https://3o.hk/images/2024/01/21/IMG_0809.png",
+        "https://3o.hk/images/2024/01/21/IMG_0808.png",
+        "https://3o.hk/images/2024/01/21/IMG_0807.png",
+        "https://3o.hk/images/2024/01/21/IMG_0806.png",
+        "https://3o.hk/images/2024/01/21/IMG_0805.png",
+        "https://3o.hk/images/2024/01/21/IMG_0804.png",
+        "https://3o.hk/images/2024/01/21/IMG_0803.png",
+        "https://3o.hk/images/2024/01/21/IMG_0802.png",
+        "https://3o.hk/images/2024/01/21/IMG_0801.png",
+        "https://3o.hk/images/2024/01/21/IMG_0800.png",
+        "https://3o.hk/images/2024/01/21/IMG_0799.png",
+        "https://3o.hk/images/2024/01/21/IMG_0798.png",
+        "https://3o.hk/images/2024/01/21/IMG_0797.png",
+        "https://3o.hk/images/2024/01/21/IMG_0796.png",
+        "https://3o.hk/images/2024/01/21/IMG_0795.png",
+        "https://3o.hk/images/2024/01/21/IMG_0794.png",
+        "https://3o.hk/images/2024/01/21/IMG_0793.png",
+        "https://3o.hk/images/2024/01/21/IMG_0792.png",
+        "https://3o.hk/images/2024/01/21/IMG_0791.png",
+        "https://3o.hk/images/2024/01/21/IMG_0790.png",
+        "https://3o.hk/images/2024/01/21/IMG_0789.png",
+        "https://3o.hk/images/2024/01/21/IMG_0788.png",
+        "https://3o.hk/images/2024/01/21/IMG_0786.png",
+        "https://3o.hk/images/2024/01/21/IMG_0785.png",
+        "https://3o.hk/images/2024/01/21/IMG_0784.png",
+        "https://3o.hk/images/2024/01/21/IMG_0783.png",
+        "https://3o.hk/images/2024/01/21/IMG_0782.png",
+        "https://3o.hk/images/2024/01/21/IMG_0781.png",
+        "https://3o.hk/images/2024/01/21/IMG_0780.png",
+        "https://3o.hk/images/2024/01/21/IMG_0779.png",
+        "https://3o.hk/images/2024/01/21/IMG_0778.png",
+        "https://3o.hk/images/2024/01/21/IMG_0777.png",
+        "https://3o.hk/images/2024/01/21/IMG_0776.png",
+        "https://3o.hk/images/2024/01/21/IMG_0775.png",
+        "https://3o.hk/images/2024/01/21/IMG_0774.png",
+        "https://3o.hk/images/2024/01/21/IMG_0773.png",
+        "https://3o.hk/images/2024/01/21/IMG_0772.png",
+        "https://3o.hk/images/2024/01/21/IMG_0771.png",
+        "https://3o.hk/images/2024/01/21/IMG_0770.png",
+        "https://3o.hk/images/2024/01/21/IMG_0769.png",
+        "https://3o.hk/images/2024/01/21/IMG_0768.png",
+        "https://3o.hk/images/2024/01/21/IMG_0767.png",
+        "https://3o.hk/images/2024/01/21/IMG_0766.png",
+        "https://3o.hk/images/2024/01/21/IMG_0765.png",
+        "https://3o.hk/images/2024/01/21/IMG_0764.png",
+        "https://3o.hk/images/2024/01/21/IMG_0763.png",
+        "https://3o.hk/images/2024/01/21/IMG_0762.png",
+        "https://3o.hk/images/2024/01/21/IMG_0761.png",
+        "https://3o.hk/images/2024/01/21/IMG_0760.png",
+        "https://3o.hk/images/2024/01/21/IMG_0759.png",
+        "https://3o.hk/images/2024/01/21/IMG_0758.png",
+        "https://3o.hk/images/2024/01/21/IMG_0757.png",
+        "https://3o.hk/images/2024/01/21/IMG_0756.png",
+        "https://3o.hk/images/2024/01/21/IMG_0755.png",
+        "https://3o.hk/images/2024/01/21/IMG_0754.png",
+        "https://3o.hk/images/2024/01/21/IMG_0753.png",
+        "https://3o.hk/images/2024/01/21/IMG_0752.png",
+        "https://3o.hk/images/2024/01/21/IMG_0751.png",
+        "https://3o.hk/images/2024/01/21/IMG_0750.png",
+        "https://3o.hk/images/2024/01/21/IMG_0749.png",
+        "https://3o.hk/images/2024/01/21/IMG_0748.png",
+        "https://3o.hk/images/2024/01/21/IMG_0747.png",
+        "https://3o.hk/images/2024/01/21/IMG_0746.png",
+        "https://3o.hk/images/2024/01/21/IMG_0744.png",
+        "https://3o.hk/images/2024/01/21/IMG_0743.png",
+        "https://3o.hk/images/2024/01/21/IMG_0742.png",
+        "https://3o.hk/images/2024/01/21/IMG_0741.png",
+        "https://3o.hk/images/2024/01/21/IMG_0740.png",
+        "https://3o.hk/images/2024/01/21/IMG_0739.png",
+        "https://3o.hk/images/2024/01/21/IMG_0738.png",
+        "https://3o.hk/images/2024/01/21/IMG_0737.png",
+        "https://3o.hk/images/2024/01/21/IMG_0736.png",
+        "https://3o.hk/images/2024/01/21/IMG_0735.png",
+        "https://3o.hk/images/2024/01/21/IMG_0734.png",
+        "https://3o.hk/images/2024/01/21/IMG_0733.png",
+        "https://3o.hk/images/2024/01/21/IMG_0732.png",
+        "https://3o.hk/images/2024/01/21/IMG_0731.png",
+        "https://3o.hk/images/2024/01/21/IMG_0729.png",
+        "https://3o.hk/images/2024/01/21/IMG_0728.png",
+        "https://3o.hk/images/2024/01/21/IMG_0727.png",
+        "https://3o.hk/images/2024/01/21/IMG_0726.png",
+        "https://3o.hk/images/2024/01/21/IMG_0725.png",
+        "https://3o.hk/images/2024/01/21/IMG_0723.png",
+        "https://3o.hk/images/2024/01/21/IMG_0722.png",
+        "https://3o.hk/images/2024/01/21/IMG_0721.png",
+        "https://3o.hk/images/2024/01/21/IMG_0720.png",
+        "https://3o.hk/images/2024/01/20/IMG_0878.png",
+        "https://3o.hk/images/2024/01/20/IMG_0877.png",
+        "https://3o.hk/images/2024/01/20/IMG_0876.png",
+        "https://3o.hk/images/2024/01/20/IMG_0875.png",
+        "https://3o.hk/images/2024/01/20/IMG_0874.png",
+        "https://3o.hk/images/2024/01/20/IMG_0873.png",
+        "https://3o.hk/images/2024/01/20/IMG_0872.png",
+        "https://3o.hk/images/2024/01/20/IMG_0871.png",
+        "https://3o.hk/images/2024/01/20/IMG_0870.png",
+        "https://3o.hk/images/2024/01/20/IMG_0869.png",
+        "https://3o.hk/images/2024/01/20/IMG_0867.png",
+        "https://3o.hk/images/2024/01/20/IMG_0866.png",
+        "https://3o.hk/images/2024/01/20/IMG_0865.png",
+        "https://3o.hk/images/2024/01/20/IMG_0864.png",
+        "https://3o.hk/images/2024/01/20/IMG_0862.png",
+        "https://3o.hk/images/2024/01/20/IMG_0863.png",
+        "https://3o.hk/images/2024/01/20/IMG_0860.png",
+        "https://3o.hk/images/2024/01/20/IMG_0861.png",
+        "https://3o.hk/images/2024/01/20/IMG_0859.png",
+        "https://3o.hk/images/2024/01/20/IMG_0857.png",
+        "https://3o.hk/images/2024/01/20/IMG_0856.png",
+        "https://3o.hk/images/2024/01/20/IMG_0854.png",
+        "https://3o.hk/images/2024/01/20/IMG_0853.png",
+        "https://3o.hk/images/2024/01/20/IMG_0852.png",
+        "https://3o.hk/images/2024/01/20/IMG_0851.png",
+        "https://3o.hk/images/2024/01/20/IMG_0850.png",
+        "https://3o.hk/images/2024/01/20/IMG_0849.png",
+        "https://3o.hk/images/2024/01/20/IMG_0848.png",
+        "https://3o.hk/images/2024/01/20/IMG_0847.png",
+        "https://3o.hk/images/2024/01/20/IMG_0846.png",
+        "https://3o.hk/images/2024/01/20/IMG_0845.png",
+        "https://3o.hk/images/2024/01/20/IMG_0844.png",
+        "https://3o.hk/images/2024/01/20/IMG_0843.png",
+        "https://3o.hk/images/2024/01/20/IMG_0842.png",
+        "https://3o.hk/images/2024/01/20/IMG_0841.png",
+        "https://3o.hk/images/2024/01/20/IMG_0840.png",
+        "https://3o.hk/images/2024/01/20/IMG_0839.png",
+        "https://3o.hk/images/2024/01/20/IMG_0837.png",
+        "https://3o.hk/images/2024/01/20/IMG_0838.png",
+        "https://3o.hk/images/2024/01/20/IMG_0836.png",
+        "https://3o.hk/images/2024/01/20/IMG_0835.png",
+        "https://3o.hk/images/2024/01/20/IMG_0834.png",
+        "https://3o.hk/images/2024/01/20/IMG_0833.png",
+        "https://3o.hk/images/2024/01/20/IMG_0832.png",
+        "https://3o.hk/images/2024/01/20/IMG_0831.png",
+        "https://3o.hk/images/2024/01/20/IMG_0830.png",
+        "https://3o.hk/images/2024/01/20/IMG_0829.png",
+        "https://3o.hk/images/2024/01/20/IMG_0828.png",
+        "https://3o.hk/images/2024/01/20/IMG_0827.png",
+        "https://3o.hk/images/2024/01/20/IMG_0826.png",
+        "https://3o.hk/images/2024/01/20/IMG_0825.png",
+        "https://3o.hk/images/2024/01/20/IMG_0824.png",
+        "https://3o.hk/images/2024/01/20/IMG_0823.png",
+        "https://3o.hk/images/2024/01/20/IMG_0822.png",
+        "https://3o.hk/images/2024/01/20/IMG_0821.png",
+        "https://3o.hk/images/2024/01/20/IMG_0820.png",
+        "https://3o.hk/images/2024/01/20/IMG_0819.png",
+        "https://3o.hk/images/2024/01/20/IMG_0818.png",
+        "https://3o.hk/images/2024/01/20/IMG_0817.png",
+        "https://3o.hk/images/2024/01/20/IMG_0816.png",
+        "https://3o.hk/images/2024/01/20/IMG_0815.png",
+        "https://3o.hk/images/2024/01/20/IMG_0814.png",
+        "https://3o.hk/images/2024/01/20/IMG_0813.png",
+        "https://3o.hk/images/2024/01/20/IMG_0812.png",
+        "https://3o.hk/images/2024/01/20/IMG_0811.png",
+        "https://3o.hk/images/2024/01/20/IMG_0810.png",
+        "https://3o.hk/images/2024/01/20/IMG_0809.png",
+        "https://3o.hk/images/2024/01/20/IMG_0808.png",
+        "https://3o.hk/images/2024/01/20/IMG_0807.png",
+        "https://3o.hk/images/2024/01/20/IMG_0806.png",
+        "https://3o.hk/images/2024/01/20/IMG_0805.png",
+        "https://3o.hk/images/2024/01/20/IMG_0804.png",
+        "https://3o.hk/images/2024/01/20/IMG_0803.png",
+        "https://3o.hk/images/2024/01/20/IMG_0802.png",
+        "https://3o.hk/images/2024/01/20/IMG_0801.png",
+        "https://3o.hk/images/2024/01/20/IMG_0800.png",
+        "https://3o.hk/images/2024/01/20/IMG_0799.png",
+        "https://3o.hk/images/2024/01/20/IMG_0798.png",
+        "https://3o.hk/images/2024/01/20/IMG_0797.png",
+        "https://3o.hk/images/2024/01/20/IMG_0796.png",
+        "https://3o.hk/images/2024/01/20/IMG_0795.png",
+        "https://3o.hk/images/2024/01/20/IMG_0794.png",
+        "https://3o.hk/images/2024/01/20/IMG_0793.png",
+        "https://3o.hk/images/2024/01/20/IMG_0792.png",
+        "https://3o.hk/images/2024/01/20/IMG_0791.png",
+        "https://3o.hk/images/2024/01/20/IMG_0790.png",
+        "https://3o.hk/images/2024/01/20/IMG_0789.png",
+        "https://3o.hk/images/2024/01/20/IMG_0788.png",
+        "https://3o.hk/images/2024/01/20/IMG_0786.png",
+        "https://3o.hk/images/2024/01/20/IMG_0785.png",
+        "https://3o.hk/images/2024/01/20/IMG_0784.png",
+        "https://3o.hk/images/2024/01/20/IMG_0783.png",
+        "https://3o.hk/images/2024/01/20/IMG_0782.png",
+        "https://3o.hk/images/2024/01/20/IMG_0781.png",
+        "https://3o.hk/images/2024/01/20/IMG_0780.png",
+        "https://3o.hk/images/2024/01/20/IMG_0779.png",
+        "https://3o.hk/images/2024/01/20/IMG_0778.png",
+        "https://3o.hk/images/2024/01/20/IMG_0777.png",
+        "https://3o.hk/images/2024/01/20/IMG_0776.png",
+        "https://3o.hk/images/2024/01/20/IMG_0775.png",
+        "https://3o.hk/images/2024/01/20/IMG_0774.png",
+        "https://3o.hk/images/2024/01/20/IMG_0772.png",
+        "https://3o.hk/images/2024/01/20/IMG_0773.png",
+        "https://3o.hk/images/2024/01/20/IMG_0771.png",
+        "https://3o.hk/images/2024/01/20/IMG_0770.png",
+        "https://3o.hk/images/2024/01/20/IMG_0768.png",
+        "https://3o.hk/images/2024/01/20/IMG_0769.png",
+        "https://3o.hk/images/2024/01/20/IMG_0767.png",
+        "https://3o.hk/images/2024/01/20/IMG_0766.png",
+        "https://3o.hk/images/2024/01/20/IMG_0765.png",
+        "https://3o.hk/images/2024/01/20/IMG_0764.png",
+        "https://3o.hk/images/2024/01/20/IMG_0763.png",
+        "https://3o.hk/images/2024/01/20/IMG_0762.png",
+        "https://3o.hk/images/2024/01/20/IMG_0761.png",
+        "https://3o.hk/images/2024/01/20/IMG_0760.png",
+        "https://3o.hk/images/2024/01/20/IMG_0759.png",
+        "https://3o.hk/images/2024/01/20/IMG_0758.png",
+        "https://3o.hk/images/2024/01/20/IMG_0756.png",
+        "https://3o.hk/images/2024/01/20/IMG_0757.png",
+        "https://3o.hk/images/2024/01/20/IMG_0755.png",
+        "https://3o.hk/images/2024/01/20/IMG_0754.png",
+        "https://3o.hk/images/2024/01/20/IMG_0753.png",
+        "https://3o.hk/images/2024/01/20/IMG_0752.png",
+        "https://3o.hk/images/2024/01/20/IMG_0751.png",
+        "https://3o.hk/images/2024/01/20/IMG_0750.png",
+        "https://3o.hk/images/2024/01/20/IMG_0749.png",
+        "https://3o.hk/images/2024/01/20/IMG_0748.png",
+        "https://3o.hk/images/2024/01/20/IMG_0747.png",
+        "https://3o.hk/images/2024/01/20/IMG_0746.png",
+        "https://3o.hk/images/2024/01/20/IMG_0744.png",
+        "https://3o.hk/images/2024/01/20/IMG_0745.png",
+        "https://3o.hk/images/2024/01/20/IMG_0743.png",
+        "https://3o.hk/images/2024/01/20/IMG_0742.png",
+        "https://3o.hk/images/2024/01/20/IMG_0741.png",
+        "https://3o.hk/images/2024/01/20/IMG_0740.png",
+        "https://3o.hk/images/2024/01/20/IMG_0739.png",
+        "https://3o.hk/images/2024/01/20/IMG_0738.png",
+        "https://3o.hk/images/2024/01/20/IMG_0737.png",
+        "https://3o.hk/images/2024/01/20/IMG_0736.png",
+        "https://3o.hk/images/2024/01/20/IMG_0735.png",
+        "https://3o.hk/images/2024/01/20/IMG_0734.png",
+        "https://3o.hk/images/2024/01/20/IMG_0733.png",
+        "https://3o.hk/images/2024/01/20/IMG_0732.png",
+        "https://3o.hk/images/2024/01/20/IMG_0731.png",
+        "https://3o.hk/images/2024/01/20/IMG_0730.png",
+        "https://3o.hk/images/2024/01/20/IMG_0729.png",
+        "https://3o.hk/images/2024/01/20/IMG_0727.png",
+        "https://3o.hk/images/2024/01/20/IMG_0726.png",
+        "https://3o.hk/images/2024/01/20/IMG_0725.png",
+        "https://3o.hk/images/2024/01/20/IMG_0724.png",
+        "https://3o.hk/images/2024/01/20/IMG_0723.png",
+        "https://3o.hk/images/2024/01/20/IMG_0719.png",
+        "https://3o.hk/images/2024/02/03/IMG_1183.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1185.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1189.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1191.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1192.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1193.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1194.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1196.jpg"
+      ],
+      "Favorite": [
+        "https://3o.hk/images/2024/01/21/IMG_1040.png",
+        "https://3o.hk/images/2024/01/21/IMG_1039.png",
+        "https://3o.hk/images/2024/01/21/IMG_1037.png",
+        "https://3o.hk/images/2024/01/21/IMG_1036.png",
+        "https://3o.hk/images/2024/01/21/IMG_1035.png",
+        "https://3o.hk/images/2024/01/21/IMG_1034.png",
+        "https://3o.hk/images/2024/01/21/IMG_1033.png",
+        "https://3o.hk/images/2024/01/21/IMG_1032.png",
+        "https://3o.hk/images/2024/01/21/IMG_1031.png",
+        "https://3o.hk/images/2024/01/21/IMG_1030.png",
+        "https://3o.hk/images/2024/01/21/IMG_1029.png",
+        "https://3o.hk/images/2024/01/21/IMG_1028.png",
+        "https://3o.hk/images/2024/01/21/IMG_1027.png",
+        "https://3o.hk/images/2024/01/21/IMG_1026.png",
+        "https://3o.hk/images/2024/01/21/IMG_1025.png",
+        "https://3o.hk/images/2024/01/21/IMG_1023.png",
+        "https://3o.hk/images/2024/01/21/IMG_1024.png",
+        "https://3o.hk/images/2024/01/21/IMG_1022.png",
+        "https://3o.hk/images/2024/01/21/IMG_1021.png",
+        "https://3o.hk/images/2024/01/21/IMG_1020.png",
+        "https://3o.hk/images/2024/01/21/IMG_1019.png",
+        "https://3o.hk/images/2024/01/21/IMG_1018.png",
+        "https://3o.hk/images/2024/01/21/IMG_1017.png",
+        "https://3o.hk/images/2024/01/21/IMG_1016.png",
+        "https://3o.hk/images/2024/01/21/IMG_1015.png",
+        "https://3o.hk/images/2024/01/21/IMG_1014.png",
+        "https://3o.hk/images/2024/01/21/IMG_1013.png",
+        "https://3o.hk/images/2024/01/21/IMG_1012.png",
+        "https://3o.hk/images/2024/01/21/IMG_1011.png",
+        "https://3o.hk/images/2024/01/21/IMG_1010.png",
+        "https://3o.hk/images/2024/01/21/IMG_1009.png",
+        "https://3o.hk/images/2024/01/21/IMG_1008.png",
+        "https://3o.hk/images/2024/01/21/IMG_1007.png",
+        "https://3o.hk/images/2024/01/21/IMG_1006.png",
+        "https://3o.hk/images/2024/01/21/IMG_1005.png",
+        "https://3o.hk/images/2024/01/21/IMG_1004.png",
+        "https://3o.hk/images/2024/01/21/IMG_1003.png",
+        "https://3o.hk/images/2024/01/21/IMG_1002.png",
+        "https://3o.hk/images/2024/01/21/IMG_1001.png",
+        "https://3o.hk/images/2024/01/21/IMG_0999.png",
+        "https://3o.hk/images/2024/01/21/IMG_0998.png",
+        "https://3o.hk/images/2024/01/21/IMG_0997.png",
+        "https://3o.hk/images/2024/01/21/IMG_0995.png",
+        "https://3o.hk/images/2024/01/21/IMG_0994.png",
+        "https://3o.hk/images/2024/01/21/IMG_0992.png",
+        "https://3o.hk/images/2024/01/21/IMG_0991.png",
+        "https://3o.hk/images/2024/01/21/IMG_0990.png",
+        "https://3o.hk/images/2024/01/21/IMG_0988.png",
+        "https://3o.hk/images/2024/01/21/IMG_0987.png",
+        "https://3o.hk/images/2024/01/21/IMG_0986.png",
+        "https://3o.hk/images/2024/01/21/IMG_0985.png",
+        "https://3o.hk/images/2024/01/21/IMG_0984.png",
+        "https://3o.hk/images/2024/01/21/IMG_0982.png",
+        "https://3o.hk/images/2024/01/21/IMG_0977.png",
+        "https://3o.hk/images/2024/01/21/IMG_0974.png",
+        "https://3o.hk/images/2024/01/21/IMG_0971.png",
+        "https://3o.hk/images/2024/01/21/IMG_0973.png",
+        "https://3o.hk/images/2024/01/21/IMG_0970.png",
+        "https://3o.hk/images/2024/01/21/IMG_0969.png",
+        "https://3o.hk/images/2024/01/21/IMG_0965.png",
+        "https://3o.hk/images/2024/01/21/IMG_0966.png",
+        "https://3o.hk/images/2024/01/21/IMG_0961.png",
+        "https://3o.hk/images/2024/01/21/IMG_0959.png",
+        "https://3o.hk/images/2024/01/21/IMG_0956.png",
+        "https://3o.hk/images/2024/01/21/IMG_0954.png",
+        "https://3o.hk/images/2024/01/21/IMG_0953.png",
+        "https://3o.hk/images/2024/01/21/IMG_0949.png",
+        "https://3o.hk/images/2024/01/21/IMG_0948.png",
+        "https://3o.hk/images/2024/01/21/IMG_0946.png",
+        "https://3o.hk/images/2024/01/21/IMG_0945.png",
+        "https://3o.hk/images/2024/01/21/IMG_0943.png",
+        "https://3o.hk/images/2024/01/21/IMG_0942.png",
+        "https://3o.hk/images/2024/01/21/IMG_0940.png",
+        "https://3o.hk/images/2024/01/21/IMG_0939.png",
+        "https://3o.hk/images/2024/01/21/IMG_0936.png",
+        "https://3o.hk/images/2024/01/21/IMG_0935.png",
+        "https://3o.hk/images/2024/01/21/IMG_0933.png",
+        "https://3o.hk/images/2024/01/21/IMG_0931.png",
+        "https://3o.hk/images/2024/01/21/IMG_0929.png",
+        "https://3o.hk/images/2024/01/21/IMG_0927.png",
+        "https://3o.hk/images/2024/01/21/IMG_0926.png",
+        "https://3o.hk/images/2024/01/21/IMG_0925.png",
+        "https://3o.hk/images/2024/01/21/IMG_0924.png",
+        "https://3o.hk/images/2024/01/21/IMG_0923.png",
+        "https://3o.hk/images/2024/01/21/IMG_0922.png",
+        "https://3o.hk/images/2024/01/21/IMG_0921.png",
+        "https://3o.hk/images/2024/01/21/IMG_0920.png",
+        "https://3o.hk/images/2024/01/21/IMG_0918.png",
+        "https://3o.hk/images/2024/01/21/IMG_0917.png",
+        "https://3o.hk/images/2024/01/21/IMG_0916.png",
+        "https://3o.hk/images/2024/01/21/IMG_0915.png",
+        "https://3o.hk/images/2024/01/21/IMG_0914.png",
+        "https://3o.hk/images/2024/01/21/IMG_0913.png",
+        "https://3o.hk/images/2024/01/21/IMG_0911.png",
+        "https://3o.hk/images/2024/01/21/IMG_0910.png",
+        "https://3o.hk/images/2024/01/21/IMG_0909.png",
+        "https://3o.hk/images/2024/01/21/IMG_0908.png",
+        "https://3o.hk/images/2024/01/21/IMG_0907.png",
+        "https://3o.hk/images/2024/01/21/IMG_0906.png",
+        "https://3o.hk/images/2024/01/21/IMG_0905.png",
+        "https://3o.hk/images/2024/01/21/IMG_0904.png",
+        "https://3o.hk/images/2024/01/21/IMG_0903.png",
+        "https://3o.hk/images/2024/01/21/IMG_0900.png",
+        "https://3o.hk/images/2024/01/21/IMG_0899.png",
+        "https://3o.hk/images/2024/01/21/IMG_0896.png",
+        "https://3o.hk/images/2024/01/21/IMG_0895.png",
+        "https://3o.hk/images/2024/01/21/IMG_0889.png",
+        "https://3o.hk/images/2024/01/21/IMG_0881.png",
+        "https://3o.hk/images/2024/01/21/IMG_0878.png",
+        "https://3o.hk/images/2024/01/21/IMG_0877.png",
+        "https://3o.hk/images/2024/01/21/IMG_0875.png",
+        "https://3o.hk/images/2024/01/21/IMG_0873.png",
+        "https://3o.hk/images/2024/01/21/IMG_0871.png",
+        "https://3o.hk/images/2024/01/21/IMG_0869.png",
+        "https://3o.hk/images/2024/01/21/IMG_0864.png",
+        "https://3o.hk/images/2024/01/21/IMG_0863.png",
+        "https://3o.hk/images/2024/01/21/IMG_0861.png",
+        "https://3o.hk/images/2024/01/21/IMG_0860.png",
+        "https://3o.hk/images/2024/01/21/IMG_0859.png",
+        "https://3o.hk/images/2024/01/21/IMG_0857.png",
+        "https://3o.hk/images/2024/01/21/IMG_0854.png",
+        "https://3o.hk/images/2024/01/21/IMG_0852.png",
+        "https://3o.hk/images/2024/01/21/IMG_0849.png",
+        "https://3o.hk/images/2024/01/21/IMG_0848.png",
+        "https://3o.hk/images/2024/01/21/IMG_0846.png",
+        "https://3o.hk/images/2024/01/21/IMG_0845.png",
+        "https://3o.hk/images/2024/01/21/IMG_0843.png",
+        "https://3o.hk/images/2024/01/21/IMG_0842.png",
+        "https://3o.hk/images/2024/01/21/IMG_0840.png",
+        "https://3o.hk/images/2024/01/21/IMG_0839.png",
+        "https://3o.hk/images/2024/01/21/IMG_0837.png",
+        "https://3o.hk/images/2024/01/21/IMG_0836.png",
+        "https://3o.hk/images/2024/01/21/IMG_0833.png",
+        "https://3o.hk/images/2024/01/21/IMG_0830.png",
+        "https://3o.hk/images/2024/01/21/IMG_0831.png",
+        "https://3o.hk/images/2024/01/21/IMG_0828.png",
+        "https://3o.hk/images/2024/01/21/IMG_0826.png",
+        "https://3o.hk/images/2024/01/21/IMG_0823.png",
+        "https://3o.hk/images/2024/01/21/IMG_0822.png",
+        "https://3o.hk/images/2024/01/21/IMG_0818.png",
+        "https://3o.hk/images/2024/01/21/IMG_0817.png",
+        "https://3o.hk/images/2024/01/21/IMG_0816.png",
+        "https://3o.hk/images/2024/01/21/IMG_0815.png",
+        "https://3o.hk/images/2024/01/21/IMG_0814.png",
+        "https://3o.hk/images/2024/01/21/IMG_0808.png",
+        "https://3o.hk/images/2024/01/21/IMG_0807.png",
+        "https://3o.hk/images/2024/01/21/IMG_0803.png",
+        "https://3o.hk/images/2024/01/21/IMG_0798.png",
+        "https://3o.hk/images/2024/01/21/IMG_0781.png",
+        "https://3o.hk/images/2024/01/21/IMG_0778.png",
+        "https://3o.hk/images/2024/01/21/IMG_0776.png",
+        "https://3o.hk/images/2024/01/21/IMG_0774.png",
+        "https://3o.hk/images/2024/01/21/IMG_0771.png",
+        "https://3o.hk/images/2024/01/21/IMG_0770.png",
+        "https://3o.hk/images/2024/01/21/IMG_0767.png",
+        "https://3o.hk/images/2024/01/21/IMG_0765.png",
+        "https://3o.hk/images/2024/01/21/IMG_0764.png",
+        "https://3o.hk/images/2024/01/21/IMG_0763.png",
+        "https://3o.hk/images/2024/01/21/IMG_0762.png",
+        "https://3o.hk/images/2024/01/21/IMG_0760.png",
+        "https://3o.hk/images/2024/01/21/IMG_0758.png",
+        "https://3o.hk/images/2024/01/21/IMG_0756.png",
+        "https://3o.hk/images/2024/01/21/IMG_0755.png",
+        "https://3o.hk/images/2024/01/21/IMG_0754.png",
+        "https://3o.hk/images/2024/01/21/IMG_0753.png",
+        "https://3o.hk/images/2024/01/21/IMG_0750.png",
+        "https://3o.hk/images/2024/01/21/IMG_0749.png",
+        "https://3o.hk/images/2024/01/21/IMG_0743.png",
+        "https://3o.hk/images/2024/01/21/IMG_0742.png",
+        "https://3o.hk/images/2024/01/21/IMG_0741.png",
+        "https://3o.hk/images/2024/01/21/IMG_0740.png",
+        "https://3o.hk/images/2024/01/21/IMG_0739.png",
+        "https://3o.hk/images/2024/01/21/IMG_0738.png",
+        "https://3o.hk/images/2024/01/21/IMG_0736.png",
+        "https://3o.hk/images/2024/01/21/IMG_0735.png",
+        "https://3o.hk/images/2024/01/21/IMG_0734.png",
+        "https://3o.hk/images/2024/01/21/IMG_0733.png",
+        "https://3o.hk/images/2024/01/21/IMG_0732.png",
+        "https://3o.hk/images/2024/01/21/IMG_0731.png",
+        "https://3o.hk/images/2024/01/21/IMG_0728.png",
+        "https://3o.hk/images/2024/01/21/IMG_0726.png",
+        "https://3o.hk/images/2024/01/21/IMG_0725.png",
+        "https://3o.hk/images/2024/01/21/IMG_0721.png",
+        "https://3o.hk/images/2024/01/20/IMG_0719.png",
+        "https://3o.hk/images/2024/02/03/IMG_1183.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1189.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1191.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1192.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1193.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1194.jpg",
+        "https://3o.hk/images/2024/02/03/IMG_1196.jpg"
+      ],
+      "pictureNotify": ["Record beauty", "记录美好"]
+    }
   },
-  
+
   "Animation": {
     "Variant": {
       "Welcomevisblecontainer": {
         "hidden": {
           "transition": {
-          "when": "afterChildren"
-        }},
+            "when": "afterChildren"
+          }
+        },
         "visible": {
           "transition": {
             "when": "beforeChildren",
@@ -3321,13 +3166,13 @@
         "hidden": {
           "opacity": 0,
           "y": "60px",
-          "scale":0.95,
+          "scale": 0.95,
           "pointerEvents": "none"
         },
         "visible": {
           "opacity": 1,
           "y": "0px",
-          "scale":1,
+          "scale": 1,
           "pointerEvents": "auto"
         }
       },
@@ -3379,39 +3224,29 @@
     "Transition": {
       "StagerFadeInUp": {
         "opacity": {
-          "ease": [0.455, 0.030, 0.515, 0.955],
+          "ease": [0.455, 0.03, 0.515, 0.955],
           "duration": 1.2
         },
         "y": {
-          "ease": [0.455, 0.030, 0.515, 0.955],
+          "ease": [0.455, 0.03, 0.515, 0.955],
           "duration": 0.9
         },
         "scale": {
-          "ease": [0.455, 0.030, 0.515, 0.955],
+          "ease": [0.455, 0.03, 0.515, 0.955],
           "duration": 0.9
         }
       },
       "ProgressBar": {
-        "ease": [
-          0.645,
-          0.045,
-          0.355,
-          1
-        ],
+        "ease": [0.645, 0.045, 0.355, 1],
         "duration": 0.4
       },
       "LeftappearBar": {
-        "ease": [
-          0.645,
-          0.045,
-          0.355,
-          1
-        ],
+        "ease": [0.645, 0.045, 0.355, 1],
         "duration": 0.5
       }
     }
   },
-  "preloadImages":[
+  "preloadImages": [
     "public/Graphs/home/welcomebg.JPG",
     "public/Graphs/home/avatar.jpg",
     "public/Graphs/home/keyfeaturebg.JPG",
@@ -3424,6 +3259,5 @@
     "https://3o.hk/images/2024/01/14/contactbg.jpg",
     "https://3o.hk/images/2024/01/20/IMG_0742.png",
     "https://cdn.pixabay.com/photo/2023/12/16/00/06/mountain-8451604_1280.jpg"
-    
   ]
 }
