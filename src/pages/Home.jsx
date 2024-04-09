@@ -9,6 +9,7 @@ import KeyFeature from '../conponent/KeyFeature';
 import Welcome from '../conponent/Welocome';
 import Contact from '../conponent/Contact';
 import SubNav from '../conponent/subNav';
+import Carousel from '../conponent/Carousel';
 import Hero from '../pages/Hero';
 import Database from '../Datebase.json';
 import { preloadImages } from '../help/helpFunction';
@@ -21,22 +22,26 @@ function Home() {
     preloadImages(bgImages);
     
     return (
-        <div>
+        <div className='overflow-hidden '>
             <Navbar topTextColor={true} />
-            {/* <Hero /> */}
-            <body className='bg-fixed bgrid-colsenter bgrid-colsover left-0 top-0 bottle-0 right-0 overflow-hidden bg-sky-600/40' style={{ backgroundImage: `url(${bg[0]})`}}>
-                   <div className='bg-fixed bgrid-colsenter bgrid-colsover left-0 top-0 bottle-0 right-0 overflow-hidden' style={{ backgroundImage: `url(${bg[1]})`}}>
-                    <motion.div 
-                    initial={{ opacity: 0, y: -30}}
-                    animate={{ opacity: 1, y:0, transition: { duration: 1,ease: "easeInOut"}}}
-                    exit={{ opacity: 0}}
-                    // transition={{ duration: 1 }}
-                    className='bg-black/50  '>
-                            <Welcome />
+            <div className='z-0 w-full block  overflow-hidden transition-all duration-0'>
+                        <Carousel interval={3000}>
+                            <div className='w-full h-full object-cover'><img className='' src={`${bg[1]}`} alt="" /></div>
+                           <div className='w-full h-full object-cover'><img className='w-full h-full object-cover' src={`${Database.PersonalInfo.Contacts.bg}`} alt="" /></div>
+                            <div className='w-full h-full object-cover'><img className='w-full h-full object-cover' src={`/Graphs/whyme/LearningAbility2.jpg`} alt="" /></div>
+                            <div className='w-full h-full object-cover'><img  className='' src={`https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg`} alt="" /></div>
+                            <div className='w-full h-full object-cover'><img  className='' src={`https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg`} alt="" /></div> 
                             
-
-                            <div className="mt-[-100px] rounded-[35px] lg:px-[28px] md:px-[14px] shadow-[15px]">
-                                <div className='mt-[-70px] absolute min-h-[100px] w-full flex justify-center'><SubNav /></div>
+                            
+                            
+                            
+                            
+                            
+                            
+                        </Carousel>
+            </div>
+            <div className="mt-[-100px] rounded-[35px] lg:px-[28px] md:px-[14px] shadow-[15px] overflow-hidden z-40  ">
+                                <div className='mt-[-70px] absolute min-h-[100px] w-full flex justify-center '><SubNav /></div>
                                 <div className="bg-[#fafafa] dark:bg-gray-950 rounded-[35px]">
                                     <StudyExperience />
                                     <KeyFeature />
@@ -48,11 +53,6 @@ function Home() {
                                     {/* <div className='py-[400px]'>111</div> */}
                                 </div>
                             </div>
-                        </motion.div>
-
-                   </div>
-
-            </body>
         </div>
     );
 }

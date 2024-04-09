@@ -46,7 +46,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
             ease: [0.455, 0.03, 0.515, 0.955],
           }}
           layout
-          className=''>
+          className='z-50'>
           <div className='animate__animated animate__rotateIn '>
             <div className=' py-12 justify-center flex '>
               <a
@@ -76,7 +76,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
             <div className='animate__animated animate__zoomIn'>
               <i className=" fi text-5xl lg:text-8xl fi-rr-circle-book-open mr-[20px] pt-3 "></i>
             </div>
-            <h2 className="animate__animated animate__zoomIn text-5xl lg:text-8xl font-bold font-mono">{lang==1&&"学习经历"}{lang==0&&"Study Experience"}</h2>
+            <h2 className="animate__animated animate__zoomIn text-5xl lg:text-8xl font-bold font-mono">{lang=='1'&&"学习经历"}{lang=='0'&&"Study Experience"}</h2>
           </motion.div>
         </div>
       </div>) : (<></>)}
@@ -125,7 +125,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                                   </div>
                                 </div>
                                 <div className="copy-visblecontainer">
-                                  <div style={{ animationDelay: `${index * 0.2}s` }} className='flex flex-col items-start animate__animated animate__zoomIn  justify-start flex mb-3'>
+                                  <div style={{ animationDelay: `${index * 0.2}s` }} className='flex flex-col items-start animate__animated animate__zoomIn  justify-start  mb-3'>
                                     <div className="typography-card-headline">{`${Experience.major[lang][0]}`}{lang==1&&Experience.major[lang][1]} </div>
                                     <div className="typography-card-headline">{lang==0&&Experience.major[lang][1]}</div>
                                   </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Buttons = ({ position,btnsize,icon,type,onClick,disabled}) => {
+const Buttons = ({ position,btnsize,icon,type,onClick,disabled,location}) => {
   const buttonStyles = {
     '--scrim-background-color': 'rgb(66, 66, 66)',
     '--scrim-hover-background-color': '#37373a',
@@ -39,7 +39,7 @@ const Buttons = ({ position,btnsize,icon,type,onClick,disabled}) => {
       whileTap={{ ...(disabled ? {} : { scale: 0.9, opacity: 0.5 }) }}
       whileHover={{ ...(disabled ? {} : { scale: 1.1, opacity: 1 }) }}
       type="button"
-      className={`fixed absolute ${position} z-50 drop-shadow-2xl ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}
+      className={` ${location||"absolute"} flex  ${position} z-50 drop-shadow-2xl ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}`}
       onClick={onClick}
       style={buttonStyles}
       disabled={disabled}

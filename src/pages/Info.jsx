@@ -30,9 +30,9 @@ export default function Profile() {
   }, []);
 
   return (
-    <>
+    <div className="profile-page overflow-hidden">
       <Navbar topTextColor={true} />
-      <main className="profile-page">
+      <main className="profile-page overflow-hidden">
       <motion.div
             initial={{opacity:0,y:"-60px",scale:0.95}}
             transition={{"ease": [
@@ -222,6 +222,6 @@ export default function Profile() {
         </div>
       </div>
       <Contact isTopOut={true} />
-    </>
+    </div>
   );
 }

@@ -9,7 +9,7 @@ import { useState, useEffect } from 'react';
 function Welcome () {
   const lang = useLanguage();
   const Welcome = (
-    <div className="bgrid-colsover bgrid-colsenter">
+    <div className="z-10">
         <div className="h-[100vh] flex items-center">
             {/* Home hello des */}
             <div className="visblecontainer">
