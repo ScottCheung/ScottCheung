@@ -666,7 +666,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               strokeLinejoin='round'
                               points='2 12, 16 12'
                               animate={{
-                                points: isOpened
+                                points: !isOpened
                                   ? '2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5'
                                   : '3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12',
                               }}
@@ -680,7 +680,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               strokeLinejoin='round'
                               points='2 5, 16 5'
                               animate={{
-                                points: isOpened
+                                points: !isOpened
                                   ? '2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15'
                                   : '3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5',
                               }}
