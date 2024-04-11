@@ -93,7 +93,7 @@ const Carousel = ({ interval, children }) => {
 
   return (
     <motion.div
-      className='flex relative w-full h-[100vh] object-cover overflow-hidden -z-30'
+      className='flex relative w-full h-[100vh]  overflow-hidden -z-30'
       onKeyDown={(e) => {
         if (e.key === 'ArrowRight') nextSlide();
         if (e.key === 'ArrowLeft') prevSlide();
@@ -101,12 +101,12 @@ const Carousel = ({ interval, children }) => {
       tabIndex='0'
     >
       {/* <span className='bg-black/50 w-full h-full absolute z-20'></span> */}
-      <div className='w-full h-full object-cover'>
+      <div className='w-full h-full '>
         {React.Children.map(children, (child, index) => (
           <div
-            className={`object-cover  ${
+            className={`w-full h-full ${
               index === activeIndex
-                ? `object cursor-pointer animate__animated ${animate} `
+                ? ` cursor-pointer animate__animated ${animate} `
                 : 'hidden animate__animated animate__fadeOutLeft'
             }`}
             key={index}

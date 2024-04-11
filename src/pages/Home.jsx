@@ -31,25 +31,25 @@ const HomeCarousel = [
     href: '/life',
     type: 'image',
     duration: null,
-    src: '/Graphs/whyme/LearningAbility2.jpg',
+    src: 'https://3o.hk/images/2024/01/21/IMG_0958.png',
   },
   {
     href: '/life',
     type: 'image',
     duration: null,
-    src: '/Graphs/whyme/Communication2.jpg',
+    src: 'https://3o.hk/images/2024/01/21/IMG_0895.png',
   },
   {
     href: '/life',
     type: 'image',
     duration: null,
-    src: '/Graphs/whyme/AestheticAttitude2.jpg',
+    src: 'https://3o.hk/images/2024/01/21/IMG_0875.png',
   },
   {
     href: '/life',
     type: 'image',
     duration: null,
-    src: '/Graphs/whyme/EmotionalStable2.jpg',
+    src: 'https://3o.hk/images/2024/01/21/IMG_0843.png',
   },
   //   {
   //     href: '/life',
@@ -90,30 +90,31 @@ function Home() {
               key={index}
               href={media.href}
               className='w-full h-full object-cover overflow-hidden  '
+              style={{
+                backgroundImage: `url(${media.src})`,
+                backgroundRepeat: 'repeat',
+              }}
             >
               <Welcome />
-              <div className='w-full h-full object-cover'>
-                <span className='bg-black/50 w-full h-full absolute z-20'></span>
-                {media.type === 'image' ? (
-                  <img
-                    className='w-full h-full object-cover'
-                    src={media.src}
-                    alt=''
-                  />
-                ) : (
-                  <iframe
-                    width='1920px'
-                    height='1080px'
-                    src='https://www.youtube.com/embed/HAnw168huqA?si=e-ptNjN-B9h_TxdH'
-                    //   title='YouTube video player'
-                    frameborder='0'
-                    allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
-                    referrerpolicy='strict-origin-when-cross-origin'
-                    allowfullscreen
-                  ></iframe>
-                )}
-                {media.duration && <p>播放时长：{media.duration}</p>}
-              </div>
+              <span className='bg-black/50 w-full h-full object-cover absolute z-20'></span>
+              {media.type === 'image' ? (
+                <img
+                  className='w-full h-full object-cover object-left'
+                  src={media.src}
+                  alt=''
+                />
+              ) : (
+                <iframe
+                  width='1920px'
+                  height='1080px'
+                  src='https://www.youtube.com/embed/HAnw168huqA?si=e-ptNjN-B9h_TxdH'
+                  //   title='YouTube video player'
+                  frameborder='0'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                  referrerpolicy='strict-origin-when-cross-origin'
+                  allowfullscreen
+                ></iframe>
+              )}
             </a>
           ))}
         </Carousel>

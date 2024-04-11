@@ -25,7 +25,7 @@ function KeyFeature() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['-100% -100%', '-10% -10%'],
+    offset: ['-70% -70%', '-40% -40%'],
   });
 
   // 根据滚动进度计算位移
@@ -43,15 +43,15 @@ function KeyFeature() {
       style={{ x, borderRadius, opacity }}
       className={`w-full flex h-[230vh] overflow-hidden  absolute z-0`}
     >
-      <motion.section className='w-full h-[120vh] relative'>
+      <motion.section className='w-full h-[120vh] relative overflow-hidden'>
         <img
           className='w-full md:h-[150vh] object-cover absolute object-bottom gradient-mask'
           src={bg[0]}
         />
-        <span
-          style={{ borderRadius }}
+        <motion.span
+          // style={{ borderRadius, opacity }}
           className={`w-full h-full absolute gradient-mask transition-all bg-black/50`}
-        ></span>
+        ></motion.span>
 
         <div className='flex mt-[30%]  w-full justify-center relative'>
           <motion.div
