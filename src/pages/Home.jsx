@@ -96,7 +96,7 @@ function Home() {
               }}
             >
               <Welcome />
-              <span className='bg-black/50 w-full h-full object-cover absolute z-20'></span>
+              <span className='bg-black/30 w-full h-full object-cover absolute z-20'></span>
               {media.type === 'image' ? (
                 <img
                   className='w-full h-full object-cover object-left'

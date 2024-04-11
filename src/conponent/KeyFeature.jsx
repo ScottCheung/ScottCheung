@@ -25,7 +25,7 @@ function KeyFeature() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['-70% -70%', '-40% -40%'],
+    offset: ['-90% -90%', '-40% -40%'],
   });
 
   // 根据滚动进度计算位移
