@@ -36,7 +36,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const [isOpened, setIsOpened] = useState(false);
   const currentPage = window.location.pathname;
   const isHomeOrRoot = currentPage === '/' || currentPage === '/home';
-  const [currentTime, setCurrentTime] = useState(new Date());
   const [selectedTab, setSelectedTab] = useState(null);
   const [ShowProfile, setShowProfile] = useState(false);
   const hideExpandElement = ExpandElement || false;
@@ -78,10 +77,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 60000);
-
     // if (isExpanded === false) {
     //   setSelectedTab(null);
     // }
@@ -108,9 +103,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     function handleScrollStatus(event) {
       clearTimeout(scrollTimer);
       scrollTimer = setTimeout(() => {
-        if (Math.abs(event.deltaY) > 100) {
+        if (event.deltaY > 30) {
           setIsScrolling(true);
-        } else {
+        } else if (event.deltaY < 0) {
           setIsScrolling(false);
         }
       }, []);
@@ -124,7 +119,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
       window.removeEventListener('scroll', handleScroll1);
       window.removeEventListener('wheel', handleScrollStatus);
       window.removeEventListener('resize', handleResize);
-      clearInterval(intervalId);
     };
   }, [isExpanded, selectedTab]);
 
@@ -132,8 +126,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     <AnimatePresence>
       <motion.div
         onMouseLeave={() => setSelectedTab(null)}
-        layout
-        className=' z-50 top-0 sticky '
+        className={`z-50 transition-all duration-700 fixed  ${
+          isScrolling ? '  -top-[100px]' : '  '
+        }  `}
       >
         <nav className={` fixed w-full flex flex-col`}>
           <motion.div
@@ -144,7 +139,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             className={`flex flex-col w-full ${BG}
         ${
           windowWidth < 768
-            ? `p-3  ${isTop ? `h-auto` : `h-auto`}`
+            ? 'h-auto p-[15px]'
             : `${
                 isTop
                   ? `${isHomeOrRoot ? 'px-[5%] pt-[12vh] ' : 'pt-3'} h-auto`
@@ -153,13 +148,20 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
         }
         ${
           isScrolling
-            ? `${isTop ? '' : 'backdrop-blur-lg  shadow-xl'}`
-            : `${isTop ? '' : 'backdrop-blur-[20px] bg-white/50 shadow-xl'}`
+            ? `${isTop ? '' : ' backdrop-blur-[20px]'}`
+            : `${
+                isTop
+                  ? isOpened
+                    ? 'backdrop-blur-[20px] '
+                    : ''
+                  : ' backdrop-blur-[20px] bg-white/50 shadow-xl'
+              }`
         }`}
           >
-            <div className='w-full flex justify-center items-center'>
-              <div className='container lg:px-[10%]'>
-                <div className='smoothchange w-full flex justify-between place-items-center '>
+            <div className='w-full flex justify-center items-center '>
+              <div className='container lg:px-[10%] relative'>
+                {/* 最主要的内容 */}
+                <div className=' w-full flex justify-between  items-center'>
                   <motion.button
                     whileHover={{ scale: 1.03, transition: { duration: 1 } }}
                     whileTap={{ scale: 0.99 }}
@@ -237,11 +239,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             }`}
                           >
                             {' '}
-                            {data.Navbar.Avatar.helloword[lang]} |{' '}
-                            {currentTime.toLocaleTimeString([], {
-                              hour: '2-digit',
-                              minute: '2-digit',
-                            })}{' '}
+                            {data.Navbar.Avatar.helloword[lang]}
                           </motion.div>
                         </div>
                       </div>
@@ -531,7 +529,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                   data-popover
                                   id={`nav-des-${item.name[0]}`}
                                   role='tooltip'
-                                  className='duration-200 transition-all absolute z-10 top-0    invisible opacity-0 inline-flex w-64 text-gray-500  bg-white rounded-[14px] shadow-2xl  dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800'
+                                  className='duration-200    absolute z-10 top-0    invisible opacity-0 inline-flex w-64 text-gray-500  bg-white rounded-[14px] shadow-2xl  dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800'
                                 >
                                   <div className='px-6 py-4'>
                                     <p className='text-[13px] text-left font-mono'>
@@ -549,7 +547,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                    <div className='ml-[20px] flex items-center'>
+                    <div className='ml-[20px] flex items-center relative'>
                       {
                         <motion.button
                           key={'language'}
@@ -603,78 +601,92 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         </div>
                         <div data-popper-arrow></div>
                       </div>
-                      <AnimatePresence>
-                        {
-                          <motion.button
-                            initial={{ rotate: 180 }}
-                            whileHover={
-                              isExpanded
-                                ? { scale: 1.1, rotate: 360 }
-                                : { scale: 1.1, rotate: 540 }
-                            }
-                            animate={
-                              isExpanded ? { rotate: 0 } : { rotate: 180 }
-                            }
-                            whileTap={{ scale: 0.8 }}
-                            // transition={{ duration: 0.3 }}
-                            type='button'
-                            layout
-                            onClick={(e) =>
-                              e.preventDefault() &
-                              setIsExpanded(!isExpanded) &
-                              (isTop && setIsOpened(!isOpened))
-                            }
-                          >
-                            <span
-                              className={`${
-                                windowWidth < 768
-                                  ? 'mx-5'
-                                  : 'hover:bg-gray-900/10'
-                              } ExpandButton`}
-                            >
-                              <i
-                                style={{ animationDelay: `${5 * 0.2}s` }}
-                                className={`animate__animated animate__fadeInUp smoothchange mt-1 ${
-                                  windowWidth < 768
-                                    ? 'text-[20px] '
-                                    : 'text-3xl p-5'
-                                } ${
-                                  isTop ? 'text-white text-bold' : ''
-                                } fi fi-br-angle-up`}
-                              />
-                            </span>
-                          </motion.button>
+                      <motion.button
+                        initial={{ rotate: 180 }}
+                        whileHover={
+                          isExpanded
+                            ? { scale: 1.1, rotate: 360 }
+                            : { scale: 1.1, rotate: 540 }
                         }
-                      </AnimatePresence>
+                        animate={isExpanded ? { rotate: 0 } : { rotate: 180 }}
+                        whileTap={{ scale: 0.8 }}
+                        // transition={{ duration: 0.3 }}
+                        type='button'
+                        layout
+                        onClick={(e) =>
+                          e.preventDefault() &
+                          setIsExpanded(!isExpanded) &
+                          (isTop && setIsOpened(!isOpened))
+                        }
+                      >
+                        <span
+                          className={`${
+                            windowWidth < 768 ? 'mx-5' : 'hover:bg-gray-900/10'
+                          } ExpandButton`}
+                        >
+                          <i
+                            style={{ animationDelay: `${5 * 0.2}s` }}
+                            className={`animate__animated animate__fadeInUp smoothchange mt-1 ${
+                              windowWidth < 768
+                                ? 'text-[20px] '
+                                : 'text-3xl p-5'
+                            } ${
+                              isTop ? 'text-white text-bold' : ''
+                            } fi fi-br-angle-up`}
+                          />
+                        </span>
+                      </motion.button>
                       {windowWidth < 1024 && (
                         <button
                           style={{ animationDelay: `${0.4}s` }}
                           type='button'
-                          className={`mx-[10px] `}
+                          className={`mx-[10px]  right-0 top-[20px] `}
                           onClick={(e) =>
                             e.preventDefault() &
                             setIsOpened(!isOpened) &
                             (isTop && setIsExpanded(!isExpanded))
                           }
                         >
-                          <span
-                            className={`${
-                              windowWidth < 768 ? '' : ''
-                            } ExpandButton`}
+                          <motion.svg
+                            width='18'
+                            height='18'
+                            viewBox='0 0 18 18'
+                            transition={{ duration: 0.5 }}
+                            style={{
+                              color: isTop
+                                ? 'fill-white text-bold'
+                                : 'fill-gray-700 ',
+                            }}
                           >
-                            <i
-                              style={{ animationDelay: `${4 * 0.2}s` }}
-                              className={`animate__animated animate__fadeInUp mt-3 fi ${
-                                !isOpened
-                                  ? 'fi fi-rr-menu-burger '
-                                  : 'fi fi-rr-circle-xmark'
-                              } ${
-                                isTopTextColorWhite & isTop
-                                  ? 'text-white text-[20px]'
-                                  : 'text-gray-900 text-[17px]'
-                              } `}
+                            <motion.polyline
+                              fill={isTop ? 'white' : 'gray'}
+                              stroke={isTop ? 'white' : 'currentColor'}
+                              strokeWidth='3'
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              points='2 12, 16 12'
+                              animate={{
+                                points: isOpened
+                                  ? '2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5'
+                                  : '3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12',
+                              }}
+                              transition={{ duration: 0.5 }}
                             />
-                          </span>
+                            <motion.polyline
+                              fill={isTop ? 'white' : 'gray'}
+                              stroke={isTop ? 'white' : 'currentColor'}
+                              strokeWidth='3'
+                              strokeLinecap='round'
+                              strokeLinejoin='round'
+                              points='2 5, 16 5'
+                              animate={{
+                                points: isOpened
+                                  ? '2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15'
+                                  : '3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5',
+                              }}
+                              transition={{ duration: 0.5 }}
+                            />
+                          </motion.svg>
                         </button>
                       )}
                     </div>
@@ -683,11 +695,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 {/* menu button */}
                 {windowWidth <= 1024 && isOpened && (
                   <div className={`w-full mx-[10px]`}>
-                    <div className='z-20  w-full divide-y divide-gray-100 rounded-lg shadow '></div>
+                    <div className='z-20  w-full  rounded-lg shadow '></div>
                     <div
-                      className={`rounded-2xl ${
-                        isTop ? 'backdrop-blur-md ' : 'divide-y divide-gray-200'
-                      }`}
+                      className={`rounded-2xl pt-[30px] ${isTop ? ' ' : ''}`}
                     >
                       {navbarItem.map((item, index) => (
                         <AnimatePresence>
@@ -700,8 +710,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               transition: { duration: 0.7 },
                             }}
                             whileHover={{
-                              scale: 1.05,
-                              transition: { duration: 0.7 },
+                              scale: 1.02,
+                              transition: { duration: 0.3 },
                             }}
                             whileTap={{ scale: 0.95 }}
                             transition={{ duration: 0.3 }}
@@ -712,8 +722,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               href={item.href}
                               className={`py-5 animate__animated animate__zoomIn flex place-items-center items-center px-4 ${
                                 isTop
-                                  ? 'hover:bg-gray-900/50 rounded-2xl'
-                                  : 'hover:bg-gray-300/50 '
+                                  ? 'hover:bg-gray-900/50 rounded-l-full'
+                                  : 'hover:bg-gray-300/50 rounded-l-full '
                               }`}
                             >
                               <div className='flex-shrink-0'>
@@ -757,7 +767,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 {/* 二级NavbarLocation */}
                 {(selectedTab == 'Home' || isExpanded == true) && (
                   <motion.div
-                    layout
                     key={'isExpanded'}
                     transition={{ type: 'spring', duration: 1 }}
                     initial={{ opacity: 0, scale: 0 }}

@@ -1,4 +1,11 @@
 import React, { useEffect, useRef } from 'react';
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+  easeInOut,
+} from 'framer-motion';
 import Navbar from '../conponent/Navbar';
 import StudyExperience from '../conponent/StudyExperience';
 import WhyMe from '../conponent/WhyMe';
@@ -10,10 +17,8 @@ import Welcome from '../conponent/Welocome';
 import Contact from '../conponent/Contact';
 import SubNav from '../conponent/subNav';
 import Carousel from '../conponent/Carousel';
-import Hero from '../pages/Hero';
 import Database from '../Datebase.json';
-import { preloadImages } from '../help/helpFunction';
-import { motion, useTime, AnimatePresence } from 'framer-motion';
+
 const bg = Database.PersonalInfo.Welcomebg[0];
 const HomeCarousel = [
   {
@@ -63,22 +68,38 @@ function Home() {
       videoRef.current.play();
     }
   }, []);
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['0 0 ', '7% 7%'],
+  });
 
+  // 根据滚动进度计算位移
+  const y = useTransform(scrollYProgress, [0, 1], [7, 0]);
+  const borderRadius = useTransform(scrollYProgress, [0, 1], [35, 0]);
+  const targetValue = useTransform(scrollYProgress, [0, 1], [0, 70]);
+  const opacity = useTransform(targetValue, [0, 70], [0.2, 5]);
+  const margin = useTransform(scrollYProgress, [0, 1], ['10%', '0%']);
   return (
-    <div className='overflow-hidden relative'>
+    <div className='relative overflow-hidden'>
       <Navbar topTextColor={true} />
-      <div className='w-full  overflow-hidden transition-all duration-0  fixed'>
+      <div className='w-full ref={ref}  overflow-hidden transition-all duration-0  fixed'>
         <Carousel interval={3000}>
           {HomeCarousel.map((media, index) => (
             <a
               key={index}
               href={media.href}
-              className='w-full h-full overflow-hidden relative '
+              className='w-full h-full object-cover overflow-hidden  '
             >
-              <div>
+              <Welcome />
+              <div className='w-full h-full object-cover'>
                 <span className='bg-black/50 w-full h-full absolute z-20'></span>
                 {media.type === 'image' ? (
-                  <img className='' src={media.src} alt='' />
+                  <img
+                    className='w-full h-full object-cover'
+                    src={media.src}
+                    alt=''
+                  />
                 ) : (
                   <iframe
                     width='1920px'
@@ -98,12 +119,19 @@ function Home() {
         </Carousel>
       </div>
       <div className='w-full h-[100vh]   -z-50'></div>
-      <div className='absolute z-40 -mt-[85px] w-full flex justify-center '>
-        {' '}
+      <div className='relative z-40 -mt-[85px] w-full flex justify-center '>
         <SubNav />
       </div>
-
-      <div className='-mt-[3%] rounded-[35px] lg:mx-[28px] md:mx-[14px]  overflow-visible   bg-gradient-to-b from-white/30 backdrop-blur-[15px] to-gray-50/90 dark:bg-gray-450  z-30 shadow-[15px]'>
+      <motion.div
+        style={{
+          // y,
+          borderRadius,
+          opacity,
+          marginLeft: margin,
+          marginRight: margin,
+        }}
+        className='-mt-[30px] relative rounded-[35px] overflow-hidden backdrop-blur-[15px] bg-white/70 dark:bg-sky-950/20  z-30 shadow-[15px]'
+      >
         {/* <div className='-mt-[70px] absolute min-h-[100px] w-full flex justify-center '> */}
 
         {/* </div> */}
@@ -115,7 +143,8 @@ function Home() {
         <WhyMe />
         <Contact />
         {/* <div className='py-[400px]'>111</div> */}
-      </div>
+      </motion.div>
+      <span className=''></span>
     </div>
   );
 }

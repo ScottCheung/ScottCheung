@@ -23,11 +23,7 @@ const Carousel = ({ interval, children }) => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentTime(new Date());
-    }, 60000);
-
-    // if (isExpanded === false) {
+    // if (isExpanded === fal0se) {
     //   setSelectedTab(null);
     // }
     // if (selectedTab === "Home"||"Life") {
@@ -97,7 +93,7 @@ const Carousel = ({ interval, children }) => {
 
   return (
     <motion.div
-      className='flex relative w-full h-[100vh] overflow-hidden -z-30'
+      className='flex relative w-full h-[100vh] object-cover overflow-hidden -z-30'
       onKeyDown={(e) => {
         if (e.key === 'ArrowRight') nextSlide();
         if (e.key === 'ArrowLeft') prevSlide();
@@ -105,10 +101,10 @@ const Carousel = ({ interval, children }) => {
       tabIndex='0'
     >
       {/* <span className='bg-black/50 w-full h-full absolute z-20'></span> */}
-      <div className='relative object-cover z-0'>
+      <div className='w-full h-full object-cover'>
         {React.Children.map(children, (child, index) => (
           <div
-            className={`  ${
+            className={`object-cover  ${
               index === activeIndex
                 ? `object cursor-pointer animate__animated ${animate} `
                 : 'hidden animate__animated animate__fadeOutLeft'
@@ -130,7 +126,7 @@ const Carousel = ({ interval, children }) => {
             isTop && setIsPaused(false);
           }}
           onClick={prevSlide}
-          className='absolute left-0 w-[20%] h-full z-50 bg-gradient-to-r hover:from-black/20 to-transparent cursor-pointer'
+          className='absolute left-0 w-[20%] h-full z-40 bg-gradient-to-r hover:from-black/20 to-transparent cursor-pointer'
         >
           {showleftbutton && (
             <motion.button
@@ -178,7 +174,7 @@ const Carousel = ({ interval, children }) => {
 
       <motion.div
         layout
-        className='w-full h-[30px] opacity-70 hover:opacity-100  rounded-lg absolute bottom-[120px] inline-flex justify-center items-center z-20  transition-all'
+        className='w-full h-[30px] opacity-70 hover:opacity-100  rounded-lg absolute bottom-[120px] inline-flex justify-center items-center z-50  transition-all'
       >
         <div className='w-auto flex gap-x-[20px]'>
           <div

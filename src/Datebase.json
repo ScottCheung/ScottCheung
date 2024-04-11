@@ -69,7 +69,7 @@
     ],
     "Avatar": {
       "Webname": ["Scott's Profile", "贤哲的个人资料"],
-      "helloword": ["I love you ❤", "要爱自己 ❤"]
+      "helloword": ["I love you ❤ Keep Enthusiasm", "要爱自己 ❤ 保持热爱"]
     },
     "Hero": {
       "hello": ["Welcome! I'm Scott.", "好久不见，我是贤哲"],
@@ -3158,7 +3158,7 @@
         "visible": {
           "transition": {
             "when": "beforeChildren",
-            "delayChildren": 0.2,
+            "delayChildren": 0.1,
             "staggerChildren": 0.175
           }
         }
@@ -3166,7 +3166,7 @@
       "WelcomeItem": {
         "hidden": {
           "opacity": 0,
-          "y": "60px",
+          "y": "30px",
           "scale": 0.95,
           "pointerEvents": "none"
         },

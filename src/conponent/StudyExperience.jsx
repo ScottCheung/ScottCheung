@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { hideRow, useLanguage } from '../help/helpFunction';
 import More from './More';
 import { useInView } from 'react-intersection-observer';
+import ScrollableContainer from './ScrollableContainer';
 
 const data = Database.PersonalInfo.StudyExperience;
 const visblecontainer = Database.Animation.Variant.Welcomevisblecontainer;
@@ -57,7 +58,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                   href='#StudyExperience'
                   id='StudyExperience'
                   style={{ animationDelay: `${0.4}s` }}
-                  className='flex  w-24 h-24 rounded-full items-center justify-center bg-gray-200  text-center hover:text-white shadow-none hover:bg-sky-900 z-50'
+                  className='flex  w-24 h-24 rounded-full items-center justify-center bg-gray-200/20  text-center hover:text-white shadow-none hover:bg-sky-900 z-50'
                 >
                   <i className='fi fi-br-angle-up text-3xl '></i>
                 </a>
@@ -104,6 +105,10 @@ function StudyExperience({ hideTittle, simpleVer }) {
                   className='card-set p-[20px] overflow-hidden'
                   role='list'
                 >
+                  {/* <ScrollableContainer
+                    container={'pl-[40px]'}
+                    Button_mt={'mt-[20px]'}
+                  > */}
                   {data.map((Experience, index) => (
                     <motion.div
                       href={Experience.href}
@@ -113,7 +118,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                       whileHover={{ scale: 1.001 }}
                       whileTap={{ scale: 0.99 }}
                       style={{ animationDelay: `${0.15 * index + 0.4}s` }}
-                      className={`gallery-item grid-item current `}
+                      className={`gallery-item grid-item current snap-start`}
                     >
                       <div className='icon-card card-visblecontainer '>
                         <motion.div className='card ' tabIndex={index}>
@@ -227,6 +232,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                       </div>
                     </motion.div>
                   ))}
+                  {/* </ScrollableContainer> */}
                 </motion.ul>
               </div>
             </div>
@@ -238,7 +244,9 @@ function StudyExperience({ hideTittle, simpleVer }) {
 
   return (
     <div>
-      <motion.div className=' pb-[10vh]'>{StudyExperience}</motion.div>
+      <motion.div className='max-h-[120vh] min-h-[120vh] pb-[30vh]'>
+        {StudyExperience}
+      </motion.div>
     </div>
   );
 }

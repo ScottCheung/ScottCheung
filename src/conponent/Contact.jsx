@@ -338,7 +338,7 @@ function Contact({ isTopOut }) {
     </>
   );
 
-  return <div>{Contact}</div>;
+  return <div className=' Z-50'>{Contact}</div>;
 }
 
 export default Contact;

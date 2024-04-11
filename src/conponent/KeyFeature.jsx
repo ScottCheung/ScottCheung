@@ -1,9 +1,16 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Database from '../Datebase.json';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+  easeInOut,
+} from 'framer-motion';
 import N from './Num';
 import { hideRow, useLanguage } from '../help/helpFunction';
+import ScrollableContainer from './ScrollableContainer';
 
 const KeyFeatures = Database.PersonalInfo.KeyFeature;
 const bg = Database.PersonalInfo.KeyFeaturebg;
@@ -15,105 +22,103 @@ const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 function KeyFeature() {
   const lang = useLanguage();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['-100% -100%', '-10% -10%'],
+  });
+
+  // 根据滚动进度计算位移
+  const x = useTransform(scrollYProgress, [0, 1], [-1000, 0], {
+    ease: easeInOut,
+  });
+  const borderRadius = useTransform(scrollYProgress, [0, 1], [500, 0]);
+  const targetValue = useTransform(scrollYProgress, [0, 1], [0, 70]);
+  const opacity = useTransform(targetValue, [0, 70], [0.8, 1]);
+  // const height = useTransform(scrollYProgress, [0, 1], [0, 2000]);
 
   const KeyFeature = (
-    <section className={`w-full h-full   `}>
-      <div
-        style={{
-          backgroundImage: `url(${bg[0]})`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center center',
-        }}
-        className='smoothchange  items-center bg-fixed bg-center relative flex justify-center  rounded-t-[48px] gradient-mask rounded-tl-none'
-      >
+    <motion.div
+      ref={ref}
+      style={{ x, borderRadius, opacity }}
+      className={`w-full flex h-[230vh] overflow-hidden  absolute z-0`}
+    >
+      <motion.section className='w-full h-[120vh] relative'>
         <img
-          className='w-full h-full object-cover absolute hidden gradient-mask'
+          className='w-full md:h-[150vh] object-cover absolute object-bottom gradient-mask'
           src={bg[0]}
         />
-        <span className='w-full h-full absolute gradient-mask bg-black/70 rounded-t-[48px] rounded-tl-none'></span>
-        <div className='items-center min-h-[100vh]  flex justify-center py-[20vh]'>
-          <div className=' items-center '>
-            <AnimatePresence>
-              <motion.dl
-                variants={Welcomevisblecontainer}
-                initial='hidden'
-                whileInView='visible'
-                transition={StagerFadeInUp}
-                viewport={{ once: true }}
-                className='grid grid-cols-1  md:grid-cols-3 lg:grid-cols-3 animate__animated animate__fadeInUp place-items-center'
-              >
-                {KeyFeatures.map((KeyFeature, index) => (
-                  <motion.div
-                    key={index}
-                    variants={WelcomeItem}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    transition={StagerFadeInUp}
-                    layout
-                    className='flex flex-col w-[33%]  p-[20px] m-5 rounded-[28px] min-w-[350px]  hover:bg-gray-950/20 hover:backdrop-blur-md  hover:shadow-2xl focus:shadow-2xl  items-center'
+        <span
+          style={{ borderRadius }}
+          className={`w-full h-full absolute gradient-mask transition-all bg-black/50`}
+        ></span>
+
+        <div className='flex mt-[30%]  w-full justify-center relative'>
+          <motion.div
+            variants={Welcomevisblecontainer}
+            initial='hidden'
+            whileInView='visible'
+            transition={StagerFadeInUp}
+            // viewport={{ once: true }}
+            className='flex justify-center animate__animated animate__fadeInUp place-items-center w-full container  '
+          >
+            <ScrollableContainer Button_mt={'mt-[80px]'}>
+              {KeyFeatures.map((KeyFeature, index) => (
+                <motion.div
+                  key={index}
+                  variants={WelcomeItem}
+                  whileTap={{ scale: 0.97, transition: { duration: 0.1 } }}
+                  transition={StagerFadeInUp}
+                  layout
+                  className='flex flex-col   px-[20px] rounded-[28px]  hover:bg-gray-950/40  hover:backdrop-blur-md  hover:shadow-2xl focus:shadow-2xl  items-start '
+                >
+                  <a
+                    data-popover-target={`keyFeatureDes-${index}`}
+                    href={`${KeyFeature.href}`}
+                    className='w-full flex item-start justify-start text-left text-white p-[28px]'
                   >
-                    <div className='items-start flex'>
-                      <a
-                        data-popover-target={`keyFeatureDes-${index}`}
-                        href={`${KeyFeature.href}`}
-                      >
-                        <div
-                          style={{ animationDelay: `${index * 0.2}s` }}
-                          className='ml-[-5px] text-center animate__animated animate__zoomIn text-[150px] font-semibold  text-white '
-                        >
-                          <N n={KeyFeature.no} d={1.5} />
-                        </div>
-                        <div className='flex items-center justify-center mt-[-10px]'>
-                          <div
-                            style={{ animationDelay: `${index * 0.2}s` }}
-                            className='flex-shrink-0 mr-[20px]'
-                          >
-                            <div className='rounded-full w-[30px] h-[30px] items-center flex justify-center bg-lime-500'>
-                              <i
-                                className={`pt-3 text-[20px] fi text-gray-50  ${KeyFeature.icon}`}
-                              ></i>
-                            </div>
-                          </div>
-                          <div className='animate__animated animate__zoomIn text-[30px]  text-lime-500  items-center'>
-                            {KeyFeature.keyfeature[lang]}
-                          </div>
-                        </div>
-                      </a>
-                    </div>
                     <div
-                      data-popover
-                      id={`keyFeatureDes-${index}`}
-                      role='tooltip'
-                      className='absolute z-10 invisible  inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800'
+                      style={{ animationDelay: `${index * 0.2}s` }}
+                      className='w-full flex item-start justify-start text-left animate__animated animate__zoomIn text-[16vh]  font-semibold  text-white '
                     >
-                      <div className='px-6 py-4'>
-                        <p className='text-[13px] text-left font-mono'>
-                          {KeyFeature.description[lang]}
-                        </p>
-                      </div>
-                      <div data-popper-arrow></div>
+                      <N n={KeyFeature.no} d={1.5} />
                     </div>
-                  </motion.div>
-                ))}
-              </motion.dl>
-            </AnimatePresence>
-          </div>
+                    <div className='flex items-center w-full justify-center mt-[-10px]'>
+                      <div
+                        style={{ animationDelay: `${index * 0.2}s` }}
+                        className='flex animate__animated animate__zoomIn text-[2vh]  text-lime-500  items-center'
+                      >
+                        <i className={`  px-[10%]  fi  ${KeyFeature.icon}`}></i>
+                        {KeyFeature.keyfeature[lang]}
+                      </div>
+                    </div>
+                  </a>
+
+                  <div
+                    data-popover
+                    id={`keyFeatureDes-${index}`}
+                    role='tooltip'
+                    className='absolute z-10 invisible inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800'
+                  >
+                    <div className='px-6 py-4'>
+                      <p className='text-[13px] text-left font-mono'>
+                        {KeyFeature.description[lang]}
+                      </p>
+                    </div>
+                    <div data-popper-arrow></div>
+                  </div>
+                </motion.div>
+              ))}
+            </ScrollableContainer>
+          </motion.div>
         </div>
-      </div>
-    </section>
+      </motion.section>
+    </motion.div>
   );
 
-  return <div>{KeyFeature}</div>;
+  return (
+    <div className='flex relative pb-[80vh] md:pb-[100vh]'>{KeyFeature}</div>
+  );
 }
 
 export default KeyFeature;

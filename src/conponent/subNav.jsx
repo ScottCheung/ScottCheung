@@ -76,7 +76,6 @@ export function more() {
                   whileHover={{ scale: 1.1, transition: { duration: 0.7 } }}
                   whileTap={{ scale: 0.95 }}
                   whileFocus={{ scale: 1 }}
-                  transition={{ duration: 0.3 }}
                   className='w-full'
                 >
                   <div className=' text-center  content-center py-2 my-3'>
