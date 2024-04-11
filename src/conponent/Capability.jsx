@@ -83,7 +83,7 @@ function Capability() {
         {/* stack */}
         <motion.div
           layout
-          className='transition-all duration-500 grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers  mt-[-25vh]'
+          className='transition-all duration-500 grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers  -mt-[30vh]'
         >
           <motion.div
             layout

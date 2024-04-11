@@ -282,10 +282,7 @@
   },
   "PersonalInfo": {
     "Welcomebg": ["https://3o.hk/images/2024/01/14/welcomebg.jpg"],
-    "KeyFeaturebg": [
-      "/Graphs/home/keyfeaturebg.jpg",
-      "https://3o.hk/images/2024/01/14/keyfeaturebg.jpg"
-    ],
+    "KeyFeaturebg": ["https://3o.hk/images/2024/01/14/keyfeaturebg.jpg"],
     "selfdesbg": [
       "/Graphs/home/keyfeaturebg.jpg",
       "https://3o.hk/images/2024/01/14/selfdesbg.jpg"

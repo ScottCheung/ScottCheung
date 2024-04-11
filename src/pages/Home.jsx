@@ -78,7 +78,7 @@ function Home() {
               <div>
                 <span className='bg-black/50 w-full h-full absolute z-20'></span>
                 {media.type === 'image' ? (
-                  <img className='gradient-mask' src={media.src} alt='' />
+                  <img className='' src={media.src} alt='' />
                 ) : (
                   <iframe
                     width='1920px'
