@@ -1,45 +1,52 @@
 import React from 'react';
 import data from '../Datebase.json';
 import { useLanguage } from '../help/helpFunction';
-import { motion, useTime, AnimatePresence } from "framer-motion";
+import { motion, useTime, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 
-
-
-function Welcome () {
+function Welcome() {
   const lang = useLanguage();
   const Welcome = (
-    <div className="z-10">
-        <div className="h-[100vh] flex items-center">
-            {/* Home hello des */}
-            <div className="visblecontainer">
-                <div className="flex flex-col justify-end">
-                    <motion.h1 
-                    layout
-                    initial={{ opacity: 0,scale:0.8, x: -1200}}
-                    animate={{ opacity: 1,scale:1, x:0, transition: { duration: 0.7,delay:0.4}}}
-                    exit={{ opacity: 0}}
-
-                    className="from-white/50 to-white/50 bg-clip-text text-transparent bg-gradient-to-r text-right animate__animatedanimate__slideInLeft font-black  text-[35px] md:text-[50px] font-[Verdana] font-[] lg:text-9xl">{data.Navbar.Hero.hello[lang]}</motion.h1>
-                    <motion.h2 
-                    layout
-                    initial={{ opacity: 0,scale:0.5, x: 1200}}
-                    animate={{ opacity: 1,scale:1, x:0, transition: { duration: 0.7,delay:0.4}}}
-                    exit={{ opacity: 0}}
-                    className="from-sky-100/50 to-sky-200/50 bg-clip-text text-transparent bg-gradient-to-r  text-right animate__animatedanimate__slideInRight lg:text-[30px] font-[Cambria] p-[20px]">{data.Navbar.Hero.word[lang]}</motion.h2>
-                </div>
-            </div>
-
-
+    <div className='z-10'>
+      <div className='h-[100vh] flex items-center'>
+        {/* Home hello des */}
+        <div className='visblecontainer'>
+          <div className='flex flex-col justify-end'>
+            <motion.h1
+              layout
+              initial={{ opacity: 0, scale: 0.8, x: -1200 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                transition: { duration: 0.7, delay: 0.4 },
+              }}
+              exit={{ opacity: 0 }}
+              className='from-white/50 to-white/50 bg-clip-text text-transparent bg-gradient-to-r text-right animate__animatedanimate__slideInLeft font-black  text-[35px] md:text-[50px] font-[Verdana] font-[] lg:text-9xl'
+            >
+              {data.Navbar.Hero.hello[lang]}
+            </motion.h1>
+            <motion.h2
+              layout
+              initial={{ opacity: 0, scale: 0.5, x: 1200 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+                x: 0,
+                transition: { duration: 0.7, delay: 0.4 },
+              }}
+              exit={{ opacity: 0 }}
+              className='from-sky-100/50 to-sky-200/50 bg-clip-text text-transparent bg-gradient-to-r  text-right animate__animatedanimate__slideInRight lg:text-[30px] font-[Cambria] p-[20px]'
+            >
+              {data.Navbar.Hero.word[lang]}
+            </motion.h2>
+          </div>
         </div>
+      </div>
     </div>
   );
 
-  return (
-    <div className=''>
-      {Welcome}
-    </div>
-  );
+  return <div className=''>{Welcome}</div>;
 }
 
 export default Welcome;

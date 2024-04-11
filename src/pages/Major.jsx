@@ -3,66 +3,68 @@ import React, { useEffect } from 'react';
 import Navbar from '../conponent/Navbar';
 import StudyExperience from '../conponent/StudyExperience';
 import WhyMe from '../conponent/WhyMe';
-import SelfDescribing from '../conponent/SelfDescribing'
+import SelfDescribing from '../conponent/SelfDescribing';
 import WorkExperience from '../conponent/WorkExperience';
 import Capability from '../conponent/Capability';
 import KeyFeature from '../conponent/KeyFeature';
 import Welcome from '../conponent/Welocome';
 import { Link } from 'react-router-dom';
 
-function Home () {
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                const target = entry.target;
-    
-                if (entry.isIntersecting) {
-                    target.classList.add('visible');
-                    target.classList.remove('lazyload');
-                } else {
-                    target.classList.add('lazyload');
-                }
-            });
-        }, {
-            root: null, 
-            rootMargin: '50px',
-            threshold: 0.5, // 当目标元素的50%可见时触发回调
+function Home() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const target = entry.target;
+
+          if (entry.isIntersecting) {
+            target.classList.add('visible');
+            target.classList.remove('lazyload');
+          } else {
+            target.classList.add('lazyload');
+          }
         });
-    
-        const sections = document.querySelectorAll('.lazyload');
-    
-        sections.forEach((section) => {
-            observer.observe(section);
-        });
-    
-        return () => {
-            sections.forEach((section) => {
-                observer.unobserve(section);
-            });
-        };
-    }, []);
-    
-      
+      },
+      {
+        root: null,
+        rootMargin: '50px',
+        threshold: 0.5, // 当目标元素的50%可见时触发回调
+      },
+    );
+
+    const sections = document.querySelectorAll('.lazyload');
+
+    sections.forEach((section) => {
+      observer.observe(section);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        observer.unobserve(section);
+      });
+    };
+  }, []);
 
   return (
     <div>
+      <Navbar />
 
-        <Navbar />
-        
-        <body>
-                <Welcome />
+      <body>
+        <Welcome />
 
-                <div className="main  main-raised rounded-[44px] ">
-                    <div className="bg-[#fafafa] dark:bg-gray-950 rounded-[44px]" id="subscribe">
-                        <StudyExperience className='sm:m-[-4em]' />
-                        <KeyFeature />
-                        {/* <Capability /> */}
-                        {/* <SelfDescribing /> */}
-                        {/* <WhyMe /> */}
-                        {/* <WorkExperience /> */}
-                        
-                         
-                        {/* <div className='p-10'>
+        <div className='main  main-raised rounded-[44px] '>
+          <div
+            className='bg-[#fafafa] dark:bg-gray-950 rounded-[44px]'
+            id='subscribe'
+          >
+            <StudyExperience className='sm:m-[-4em]' />
+            <KeyFeature />
+            {/* <Capability /> */}
+            {/* <SelfDescribing /> */}
+            {/* <WhyMe /> */}
+            {/* <WorkExperience /> */}
+
+            {/* <div className='p-10'>
                             <div className='min-h-[15vh] max-h-[15vh] my-10'>
                             <iframe
                                 className='smothchange lazyload animate__animated animate__fadeInUp'
@@ -94,14 +96,8 @@ function Home () {
                         </div>
 
                             </div> */}
-                        
-                                
 
-                                
-                                
-                                
-
-                        {/*<WorkExperience />
+            {/*<WorkExperience />
 
 
                         <section className="hestia-testimonials " id="testimonials" data-sorder="hestia_testimonials">
@@ -254,9 +250,8 @@ function Home () {
                                     </div>
                                 </div>
                         </section> */}
-
-                </div>
-{/* 
+          </div>
+          {/* 
                 <div  className="rounded-3xl h-[80vh] hestia-contact contactus section-image" data-sorder="hestia_contact"
                 style={{backgroundImage: 'url(./contact1.jpg)'}}>
                 <div className="visblecontainer rounded-3xl">
@@ -303,13 +298,8 @@ function Home () {
                     </footer>
                     </div>
                 </div> */}
-                </div>
-      
-                                    
-                
-                
-        </body>
-        
+        </div>
+      </body>
     </div>
   );
 }

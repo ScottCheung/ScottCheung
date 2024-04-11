@@ -34,27 +34,37 @@
       {
         "id": "/#StudyExperience",
         "label": ["Study", "学习"],
-        "logo": "fi-rr-book"
+        "logo": "fi-rr-book",
+        "color1": "from-red-500",
+        "color2": "to-red-700"
       },
       {
         "id": "/#Capability",
         "label": ["Capability", "能力"],
-        "logo": "fi-rr-user"
+        "logo": "fi-rr-user",
+        "color1": "from-orange-500",
+        "color2": "to-amber-500"
       },
       {
         "id": "/#SelfDescribing",
         "label": ["Describe", "自述"],
-        "logo": "fi-rr-comment-heart"
+        "logo": "fi-rr-comment-heart",
+        "color1": "from-sky-500",
+        "color2": "to-emerald-500"
       },
       {
         "id": "/#WorkExperience",
         "label": ["Work", "工作"],
-        "logo": "fi-rr-tool-box"
+        "logo": "fi-rr-tool-box",
+        "color1": "from-cyan-500",
+        "color2": "to-blue-500"
       },
       {
         "id": "/#WhyMe",
         "label": ["Why me", "优势"],
-        "logo": "fi-rr-lightbulb-on"
+        "logo": "fi-rr-lightbulb-on",
+        "color1": "from-indigo-500",
+        "color2": "to-pink-500"
       }
     ],
     "Avatar": {
@@ -271,10 +281,7 @@
     ]
   },
   "PersonalInfo": {
-    "Welcomebg": [
-      "/Graphs/home/Welcomebg.jpg",
-      "https://3o.hk/images/2024/01/14/welcomebg.jpg"
-    ],
+    "Welcomebg": ["https://3o.hk/images/2024/01/14/welcomebg.jpg"],
     "KeyFeaturebg": [
       "/Graphs/home/keyfeaturebg.jpg",
       "https://3o.hk/images/2024/01/14/keyfeaturebg.jpg"
@@ -291,10 +298,7 @@
       "/Graphs/home/contactbg.jpeg",
       "https://3o.hk/images/2024/01/14/contactbg.jpg"
     ],
-    "Avatar": [
-      "/Graphs/home/avatar.jpg",
-      "https://3o.hk/images/2024/01/14/avatar.jpg"
-    ],
+    "Avatar": ["https://3o.hk/images/2024/04/10/avater.png"],
     "StudyExperience": [
       {
         "id": "FunctionalMaterial",
