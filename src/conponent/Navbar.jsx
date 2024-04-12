@@ -161,7 +161,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             <div className='w-full flex justify-center items-center '>
               <div className='container lg:px-[10%] relative'>
                 {/* 最主要的内容 */}
-                <div className=' w-full flex justify-between  items-center'>
+                <div className=' w-full flex justify-between  h-full  items-center'>
                   <motion.button
                     whileHover={{ scale: 1.03, transition: { duration: 1 } }}
                     whileTap={{ scale: 0.99 }}
@@ -439,152 +439,153 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     )}
                   </AnimatePresence>
 
-                  <div className='flex items-center max-w-[70%] '>
-                    <div>
-                      <AnimatePresence className='flex'>
-                        {windowWidth > 876 && (
-                          <motion.div
-                            layout
-                            key={'navbarItem'}
-                            transition={{ duration: 0.3 }}
-                            exit={{
-                              opacity: 0,
-                              scale: 0,
-                              x: -100,
-                              transition: { duration: 1 },
-                            }}
-                            id='main-navigation'
-                            className='items-center flex justify-start  w-full text-center overflow-y-hidden  overflow-x-scroll scrollbar-hide'
-                            // style={{
-                            //   mask: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%)',
-                            //   WebkitMaskImage:
-                            //     'linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%)',
-                            // }}
-                          >
-                            {navbarItem.map((item, index) => (
-                              <div>
-                                <motion.button
-                                  layout
-                                  key={item.name}
-                                  whileHover={{
-                                    scale: 1.05,
-                                    transition: { duration: 0.7 },
-                                  }}
-                                  whileTap={{ scale: 0.95 }}
-                                  transition={{ duration: 0.3 }}
-                                  onMouseEnter={() =>
-                                    setSelectedTab(item.name[0])
-                                  }
-                                >
-                                  <a
-                                    href={item.href}
-                                    key={index}
-                                    style={{
-                                      animationDelay: `${index * 0.2}s`,
-                                    }}
-                                    data-popover-target={`nav-des-${item.name[0]}`}
-                                    type='button'
-                                    className={`rounded-[5px] smoothchange items-center  ${
-                                      isTop
-                                        ? `${
-                                            index === navbarItem.length - 1
-                                              ? `ml-4`
-                                              : `mx-4`
-                                          }`
-                                        : ` ${
-                                            index === navbarItem.length - 1
-                                              ? `ml-1`
-                                              : `mx-1`
-                                          }`
-                                    } animate__animated animate__fadeInUp relative inline-flex items-center  px-6 py-3 text-[20px] font-medium text-center ${
-                                      isTopTextColorWhite & isTop
-                                        ? 'text-white'
-                                        : ''
-                                    } rounded-lg hover:bg-gray-900/20  `}
-                                  >
-                                    <div className=' w-11 h-11 mr-3 items-center'>
-                                      <div className='flex-shrink-0'>
-                                        <i
-                                          className={`${
-                                            isTopTextColorWhite & isTop
-                                              ? 'text-white text-[20px]'
-                                              : 'text-gray-900 text-[17px]'
-                                          }  fi ${item.icon}`}
-                                        ></i>
-                                      </div>
-                                    </div>
-                                    <div
-                                      className={`${
-                                        isTopTextColorWhite & isTop
-                                          ? 'text-white text-[20px]'
-                                          : 'text-gray-900 text-[15px]'
-                                      } md:hidden lg:flex `}
-                                    >
-                                      {item.name[lang]}
-                                    </div>
-                                  </a>
-                                </motion.button>
-                              </div>
-                            ))}
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-
-                    <div className='ml-[20px] flex items-center relative'>
-                      {
-                        <motion.button
-                          key={'language'}
-                          whileHover={
-                            isTop
-                              ? { scale: 1.2, transition: { duration: 0.7 } }
-                              : { scale: 1.2, transition: { duration: 0.7 } }
-                          }
-                          animate={isTop ? { scale: 1 } : { scale: 1 }}
-                          whileTap={{ scale: 1.1 }}
-                          type='button'
+                  <motion.div
+                    layout
+                    className={`flex items-center h-full ${
+                      windowWidth < 876 ? 'w-[30%]' : 'w-[70%]'
+                    } gap-[30px] justify-end `}
+                  >
+                    <AnimatePresence className='flex'>
+                      {windowWidth > 876 && (
+                        <motion.div
                           layout
+                          key='navbarItem'
                           transition={{ duration: 0.3 }}
-                          data-popover-target='lang'
-                          onClick={(e) => {
-                            e.preventDefault();
-                            handleLangToggle();
+                          exit={{
+                            opacity: 0,
+                            scale: 0,
+                            x: -100,
+                            transition: { duration: 1 },
                           }}
+                          className='flex overflow-hidden  '
+                          // style={{
+                          //   mask: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%)',
+                          //   WebkitMaskImage:
+                          //     'linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%)',
+                          // }}
                         >
-                          <span
-                            className={`${
-                              windowWidth < 768 ? '' : ''
-                            } ExpandButton`}
-                          >
-                            <i
-                              style={{ animationDelay: `${4 * 0.2}s` }}
-                              className={`animate__animated animate__fadeInUp mt-3 fi fi-rr-globe ${
-                                isTopTextColorWhite & isTop
-                                  ? 'text-white text-[20px]'
-                                  : 'text-gray-900 text-[17px]'
-                              } `}
-                            />
-                          </span>
-                        </motion.button>
-                      }
-                      <div
-                        data-popover
-                        id='lang'
-                        role='tooltip'
-                        className='absolute z-10 invisible justify-center flex w-auto text-gray-500 text-center transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800'
+                          {navbarItem.map((item, index) => (
+                            <div>
+                              <motion.button
+                                layout
+                                key={item.name}
+                                whileHover={{
+                                  scale: 1.05,
+                                  transition: { duration: 0.7 },
+                                }}
+                                whileTap={{ scale: 0.95 }}
+                                transition={{ duration: 0.3 }}
+                                onMouseEnter={() =>
+                                  setSelectedTab(item.name[0])
+                                }
+                              >
+                                <a
+                                  href={item.href}
+                                  key={index}
+                                  style={{
+                                    animationDelay: `${index * 0.2}s`,
+                                  }}
+                                  data-popover-target={`nav-des-${item.name[0]}`}
+                                  type='button'
+                                  className={`rounded-[5px] smoothchange items-center  ${
+                                    isTop
+                                      ? `${
+                                          index === navbarItem.length - 1
+                                            ? `ml-4`
+                                            : `mx-4`
+                                        }`
+                                      : ` ${
+                                          index === navbarItem.length - 1
+                                            ? `ml-1`
+                                            : `mx-1`
+                                        }`
+                                  } animate__animated animate__fadeInUp relative inline-flex items-center  px-6 py-3 text-[20px] font-medium text-center ${
+                                    isTopTextColorWhite & isTop
+                                      ? 'text-white'
+                                      : ''
+                                  } rounded-lg hover:bg-gray-900/20  `}
+                                >
+                                  <div className=' w-11 h-11 mr-3 items-center'>
+                                    <div className='flex-shrink-0'>
+                                      <i
+                                        className={`${
+                                          isTopTextColorWhite & isTop
+                                            ? 'text-white text-[20px]'
+                                            : 'text-gray-900 text-[17px]'
+                                        }  fi ${item.icon}`}
+                                      ></i>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className={`${
+                                      isTopTextColorWhite & isTop
+                                        ? 'text-white text-[20px]'
+                                        : 'text-gray-900 text-[15px]'
+                                    } md:hidden lg:flex `}
+                                  >
+                                    {item.name[lang]}
+                                  </div>
+                                </a>
+                              </motion.button>
+                            </div>
+                          ))}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                    {/* 切换语言按钮 */}
+                    {
+                      <motion.button
+                        key={'language'}
+                        whileHover={
+                          isTop
+                            ? { scale: 1.1, transition: { duration: 0.7 } }
+                            : { scale: 1.1, transition: { duration: 0.7 } }
+                        }
+                        whileTap={{ scale: 1.05 }}
+                        transition={{ duration: 0.3 }}
+                        data-popover-target='lang'
+                        style={{ animationDelay: `${4 * 0.2}s` }}
+                        className='animate__animated animate__fadeInUp'
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleLangToggle();
+                        }}
                       >
-                        <div className='px-6 py-4 flex items-center flex-col'>
-                          <span className='text-center text-[15px] font-semibold'>
-                            {lang == 0 && '点击切换中文'}
-                            {lang == 1 && 'Switch to English'}
-                          </span>
-                          <span className='text-[14px] text-center font-semibold'>
-                            {lang == 1 && '点击切换英文'}
-                            {lang == 0 && 'Switch to Chinese'}
-                          </span>
-                        </div>
-                        <div data-popper-arrow></div>
+                        <span
+                          className={`${
+                            windowWidth < 768 ? '' : ''
+                          } ExpandButton`}
+                        >
+                          <i
+                            className={` mt-3 fi fi-rr-globe ${
+                              isTopTextColorWhite & isTop
+                                ? 'text-white text-[20px]'
+                                : 'text-gray-900 text-[17px]'
+                            } `}
+                          />
+                        </span>
+                      </motion.button>
+                    }
+                    {/* 切换语言按钮提示 */}
+                    <div
+                      data-popover
+                      role='tooltip'
+                      className='absolute z-10 invisible justify-center flex w-auto text-gray-500 text-center transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800'
+                    >
+                      <div className='px-6 py-4 flex items-center flex-col'>
+                        <span className='text-center text-[15px] font-semibold'>
+                          {lang == 0 && '点击切换中文'}
+                          {lang == 1 && 'Switch to English'}
+                        </span>
+                        <span className='text-[14px] text-center font-semibold'>
+                          {lang == 1 && '点击切换英文'}
+                          {lang == 0 && 'Switch to Chinese'}
+                        </span>
                       </div>
+                      <div data-popper-arrow></div>
+                    </div>
+                    {/* 主页下拉菜单 */}
+                    {windowWidth > 1024 && (
                       <motion.button
                         initial={{ rotate: 180 }}
                         whileHover={
@@ -606,7 +607,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         <span
                           className={`${
                             windowWidth < 768 ? 'mx-5' : 'hover:bg-gray-900/10'
-                          } ExpandButton`}
+                          } ExpandButton `}
                         >
                           <i
                             style={{ animationDelay: `${5 * 0.2}s` }}
@@ -620,61 +621,62 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           />
                         </span>
                       </motion.button>
-                      {windowWidth < 1024 && (
-                        <button
-                          style={{ animationDelay: `${0.4}s` }}
-                          type='button'
-                          className={`mx-[10px]  right-0 top-[20px] `}
-                          onClick={(e) =>
-                            e.preventDefault() &
-                            setIsOpened(!isOpened) &
-                            (isTop && setIsExpanded(!isExpanded))
-                          }
+                    )}
+                    {/* 下拉菜单按钮 */}
+                    {windowWidth < 1024 && (
+                      <button
+                        style={{ animationDelay: `${1}s` }}
+                        type='button'
+                        className={`mx-[10px] transition-none animate__animated animate__fadeInUp `}
+                        onClick={(e) =>
+                          e.preventDefault() &
+                          setIsOpened(!isOpened) &
+                          (isTop && setIsExpanded(!isExpanded))
+                        }
+                      >
+                        <motion.svg
+                          width='18'
+                          height='18'
+                          viewBox='0 0 18 18'
+                          transition={{ duration: 0.5 }}
+                          style={{
+                            color: isTop
+                              ? 'fill-white text-bold'
+                              : 'fill-gray-700 ',
+                          }}
                         >
-                          <motion.svg
-                            width='18'
-                            height='18'
-                            viewBox='0 0 18 18'
-                            transition={{ duration: 0.5 }}
-                            style={{
-                              color: isTop
-                                ? 'fill-white text-bold'
-                                : 'fill-gray-700 ',
+                          <motion.polyline
+                            fill={isTop ? 'white' : 'gray'}
+                            stroke={isTop ? 'white' : 'currentColor'}
+                            strokeWidth='3'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            points='2 12, 16 12'
+                            animate={{
+                              points: !isOpened
+                                ? '2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5'
+                                : '3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12',
                             }}
-                          >
-                            <motion.polyline
-                              fill={isTop ? 'white' : 'gray'}
-                              stroke={isTop ? 'white' : 'currentColor'}
-                              strokeWidth='3'
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              points='2 12, 16 12'
-                              animate={{
-                                points: !isOpened
-                                  ? '2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5'
-                                  : '3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12',
-                              }}
-                              transition={{ duration: 0.5 }}
-                            />
-                            <motion.polyline
-                              fill={isTop ? 'white' : 'gray'}
-                              stroke={isTop ? 'white' : 'currentColor'}
-                              strokeWidth='3'
-                              strokeLinecap='round'
-                              strokeLinejoin='round'
-                              points='2 5, 16 5'
-                              animate={{
-                                points: !isOpened
-                                  ? '2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15'
-                                  : '3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5',
-                              }}
-                              transition={{ duration: 0.5 }}
-                            />
-                          </motion.svg>
-                        </button>
-                      )}
-                    </div>
-                  </div>
+                            transition={{ duration: 0.5 }}
+                          />
+                          <motion.polyline
+                            fill={isTop ? 'white' : 'gray'}
+                            stroke={isTop ? 'white' : 'currentColor'}
+                            strokeWidth='3'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            points='2 5, 16 5'
+                            animate={{
+                              points: !isOpened
+                                ? '2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15'
+                                : '3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5',
+                            }}
+                            transition={{ duration: 0.5 }}
+                          />
+                        </motion.svg>
+                      </button>
+                    )}
+                  </motion.div>
                 </div>
                 {/* menu button */}
                 {windowWidth <= 1024 && isOpened && (
@@ -704,7 +706,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               style={{ animationDelay: `${index * 0.2}s` }}
                               key={index}
                               href={item.href}
-                              className={`py-5 animate__animated animate__zoomIn flex place-items-center items-center px-4 ${
+                              className={`flex py-5 animate__animated animate__zoomIn  place-items-center items-center px-4 ${
                                 isTop
                                   ? 'hover:bg-gray-900/50 rounded-l-full'
                                   : 'hover:bg-gray-300/50 rounded-l-full '
@@ -861,7 +863,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                       className='md:mx-[10%] mt-[30px] flex flex-col gap-1 my-[5px] transition-all duration-200 '
                     >
                       <div className='p-[28px] flex flex-col w-full max-w-[320px] leading-1.5  backdrop-blur-[20px] border-gray-200 bg-gray-500/40 rounded-e-[28px] rounded-es-[28px] dark:bg-gray-700/20'>
-                        <p className='text-[13px] font-normal dark:text-gray-900 text-white  '>
+                        <p className='text-[25px] font-normal dark:text-gray-900 text-white  '>
                           {item.des[lang]}
                         </p>
                         <span className='text-center text-[30px] dark:text-gray-900 text-white '>
