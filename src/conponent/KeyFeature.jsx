@@ -25,13 +25,11 @@ function KeyFeature() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['-90% -90%', '-40% -40%'],
+    offset: ['-80% -80%', '-45% -45%'],
   });
 
   // 根据滚动进度计算位移
-  const x = useTransform(scrollYProgress, [0, 1], [-1000, 0], {
-    ease: easeInOut,
-  });
+  const x = useTransform(scrollYProgress, [0, 1], [-1000, 0]);
   const borderRadius = useTransform(scrollYProgress, [0, 1], [500, 0]);
   const targetValue = useTransform(scrollYProgress, [0, 1], [0, 70]);
   const opacity = useTransform(targetValue, [0, 70], [0.8, 1]);
@@ -39,9 +37,10 @@ function KeyFeature() {
 
   const KeyFeature = (
     <motion.div
+      layout
       ref={ref}
       style={{ x, borderRadius, opacity }}
-      className={`w-full flex h-[230vh] overflow-hidden  absolute z-0`}
+      className={`w-full flex h-[230vh] overflow-hidden  absolute z-0 transition-all`}
     >
       <motion.section className='w-full h-[120vh] relative overflow-hidden'>
         <img

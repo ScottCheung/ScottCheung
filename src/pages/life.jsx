@@ -36,7 +36,7 @@ export default function Life() {
     };
   }, []);
   return (
-    <>
+    <div className='overflow-hidden'>
       <Navbar topTextColor={true} />
       <main>
         <div
@@ -404,6 +404,6 @@ export default function Life() {
         </section> */}
       </main>
       <Contact isTopOut={true} />
-    </>
+    </div>
   );
 }

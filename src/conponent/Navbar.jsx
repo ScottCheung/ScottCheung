@@ -439,114 +439,98 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     )}
                   </AnimatePresence>
 
-                  <div className='flex items-center max-w-[60%] overflow-show'>
-                    <AnimatePresence>
-                      {windowWidth > 876 && (
-                        <motion.div
-                          layout
-                          key={'navbarItem'}
-                          transition={{ duration: 0.3 }}
-                          exit={{
-                            opacity: 0,
-                            scale: 0,
-                            x: -100,
-                            transition: { duration: 1 },
-                          }}
-                          id='main-navigation'
-                          style={{
-                            display: '-webkit-box',
-                            WebkitBoxOrient: 'horizontal',
-                            overflow: 'hidden',
-                            WebkitScrollbarButton: {
-                              display: 'none',
-                            },
-                          }}
-                          className='place-items-center items-center flex justify-center  w-full text-center my-3  '
-                        >
-                          {navbarItem.map((item, index) => (
-                            <div>
-                              <motion.button
-                                layout
-                                key={item.name}
-                                whileHover={{
-                                  scale: 1.05,
-                                  transition: { duration: 0.7 },
-                                }}
-                                whileTap={{ scale: 0.95 }}
-                                transition={{ duration: 0.3 }}
-                                onMouseEnter={() =>
-                                  setSelectedTab(item.name[0])
-                                }
-                              >
-                                <a
-                                  href={item.href}
-                                  key={index}
-                                  style={{ animationDelay: `${index * 0.2}s` }}
-                                  data-popover-target={`nav-des-${item.name[0]}`}
-                                  type='button'
-                                  className={`rounded-[5px] smoothchange items-center  ${
-                                    isTop
-                                      ? `${
-                                          index === navbarItem.length - 1
-                                            ? `ml-4`
-                                            : `mx-4`
-                                        }`
-                                      : ` ${
-                                          index === navbarItem.length - 1
-                                            ? `ml-1`
-                                            : `mx-1`
-                                        }`
-                                  } animate__animated animate__fadeInUp relative inline-flex items-center  px-6 py-3 text-[20px] font-medium text-center ${
-                                    isTopTextColorWhite & isTop
-                                      ? 'text-white'
-                                      : ''
-                                  } rounded-lg hover:bg-gray-900/20  `}
+                  <div className='flex items-center max-w-[70%] '>
+                    <div>
+                      <AnimatePresence className='flex'>
+                        {windowWidth > 876 && (
+                          <motion.div
+                            layout
+                            key={'navbarItem'}
+                            transition={{ duration: 0.3 }}
+                            exit={{
+                              opacity: 0,
+                              scale: 0,
+                              x: -100,
+                              transition: { duration: 1 },
+                            }}
+                            id='main-navigation'
+                            className='items-center flex justify-start  w-full text-center overflow-y-hidden  overflow-x-scroll scrollbar-hide'
+                            // style={{
+                            //   mask: 'linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%)',
+                            //   WebkitMaskImage:
+                            //     'linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%)',
+                            // }}
+                          >
+                            {navbarItem.map((item, index) => (
+                              <div>
+                                <motion.button
+                                  layout
+                                  key={item.name}
+                                  whileHover={{
+                                    scale: 1.05,
+                                    transition: { duration: 0.7 },
+                                  }}
+                                  whileTap={{ scale: 0.95 }}
+                                  transition={{ duration: 0.3 }}
+                                  onMouseEnter={() =>
+                                    setSelectedTab(item.name[0])
+                                  }
                                 >
-                                  <div className=' w-11 h-11 mr-3 items-center'>
-                                    <div className='flex-shrink-0'>
-                                      <i
-                                        className={`${
-                                          isTopTextColorWhite & isTop
-                                            ? 'text-white text-[20px]'
-                                            : 'text-gray-900 text-[17px]'
-                                        }  fi ${item.icon}`}
-                                      ></i>
-                                    </div>
-                                  </div>
-                                  <div
-                                    className={`${
+                                  <a
+                                    href={item.href}
+                                    key={index}
+                                    style={{
+                                      animationDelay: `${index * 0.2}s`,
+                                    }}
+                                    data-popover-target={`nav-des-${item.name[0]}`}
+                                    type='button'
+                                    className={`rounded-[5px] smoothchange items-center  ${
+                                      isTop
+                                        ? `${
+                                            index === navbarItem.length - 1
+                                              ? `ml-4`
+                                              : `mx-4`
+                                          }`
+                                        : ` ${
+                                            index === navbarItem.length - 1
+                                              ? `ml-1`
+                                              : `mx-1`
+                                          }`
+                                    } animate__animated animate__fadeInUp relative inline-flex items-center  px-6 py-3 text-[20px] font-medium text-center ${
                                       isTopTextColorWhite & isTop
-                                        ? 'text-white text-[20px]'
-                                        : 'text-gray-900 text-[15px]'
-                                    } md:hidden lg:flex `}
+                                        ? 'text-white'
+                                        : ''
+                                    } rounded-lg hover:bg-gray-900/20  `}
                                   >
-                                    {item.name[lang]}
-                                  </div>
-                                </a>
-                              </motion.button>
-                              {isTop && (
-                                <div
-                                  data-popover
-                                  id={`nav-des-${item.name[0]}`}
-                                  role='tooltip'
-                                  className='duration-200    absolute z-10 top-0    invisible opacity-0 inline-flex w-64 text-gray-500  bg-white rounded-[14px] shadow-2xl  dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800'
-                                >
-                                  <div className='px-6 py-4'>
-                                    <p className='text-[13px] text-left font-mono'>
-                                      {item.des[lang]}
-                                    </p>
-                                    <span className='text-center text-[16px]'>
-                                      {item.expression}
-                                    </span>
-                                  </div>
-                                  <div data-popper-arrow></div>
-                                </div>
-                              )}
-                            </div>
-                          ))}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
+                                    <div className=' w-11 h-11 mr-3 items-center'>
+                                      <div className='flex-shrink-0'>
+                                        <i
+                                          className={`${
+                                            isTopTextColorWhite & isTop
+                                              ? 'text-white text-[20px]'
+                                              : 'text-gray-900 text-[17px]'
+                                          }  fi ${item.icon}`}
+                                        ></i>
+                                      </div>
+                                    </div>
+                                    <div
+                                      className={`${
+                                        isTopTextColorWhite & isTop
+                                          ? 'text-white text-[20px]'
+                                          : 'text-gray-900 text-[15px]'
+                                      } md:hidden lg:flex `}
+                                    >
+                                      {item.name[lang]}
+                                    </div>
+                                  </a>
+                                </motion.button>
+                              </div>
+                            ))}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+
                     <div className='ml-[20px] flex items-center relative'>
                       {
                         <motion.button
@@ -764,6 +748,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     </div>
                   </div>
                 )}
+
                 {/* 二级NavbarLocation */}
                 {(selectedTab == 'Home' || isExpanded == true) && (
                   <motion.div
@@ -864,6 +849,57 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 )}
               </div>
             </div>
+          </motion.div>
+          <motion.div layout children='container flex '>
+            <AnimatePresence>
+              {navbarItem.map(
+                (item, index) =>
+                  selectedTab == item.name[0] && (
+                    <div
+                      key={item.name[0] + index + 'introduction'}
+                      layoutId='introduction'
+                      className='md:mx-[10%] mt-[30px] flex flex-col gap-1 my-[5px] transition-all duration-200 '
+                    >
+                      <div className='p-[28px] flex flex-col w-full max-w-[320px] leading-1.5  backdrop-blur-[20px] border-gray-200 bg-gray-500/40 rounded-e-[28px] rounded-es-[28px] dark:bg-gray-700/20'>
+                        <p className='text-[13px] font-normal dark:text-gray-900 text-white  '>
+                          {item.des[lang]}
+                        </p>
+                        <span className='text-center text-[30px] dark:text-gray-900 text-white '>
+                          {item.expression}{' '}
+                        </span>
+                        <div className='group relative my-2.5 hidden'>
+                          <div className='absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center'>
+                            <button
+                              data-tooltip-target='download-image'
+                              className='inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50'
+                            >
+                              <svg
+                                className='w-5 h-5 text-white'
+                                aria-hidden='true'
+                                xmlns='http://www.w3.org/2000/svg'
+                                fill='none'
+                                viewBox='0 0 16 18'
+                              >
+                                <path
+                                  stroke='currentColor'
+                                  strokeLinecap='round'
+                                  strokeLinejoin='round'
+                                  strokeWidth={2}
+                                  d='M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3'
+                                />
+                              </svg>
+                            </button>
+                          </div>
+                          <img
+                            src='/docs/images/blog/image-1.jpg'
+                            className='rounded-lg'
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  ),
+              )}
+            </AnimatePresence>
           </motion.div>
         </nav>
       </motion.div>
