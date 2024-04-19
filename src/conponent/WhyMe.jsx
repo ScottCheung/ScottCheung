@@ -73,6 +73,8 @@ function WhyMe({ hideTittle }) {
                   initial='hidden'
                   whileInView='visible'
                   // viewport={{ once: true }}
+                  exit={{ opacity: 0}}
+                  viewport={{ margin: '-50%'}}
                   className='card-set p-[20px] overflow-hidden'
                   role='list'
                 >
@@ -82,6 +84,7 @@ function WhyMe({ hideTittle }) {
                       key={index}
                       variants={WelcomeItem}
                       transition={StagerFadeInUp}
+                
                       whileHover={{ scale: 1.001 }}
                       whileTap={{ scale: 0.99 }}
                       className='gallery-item grid-item current'

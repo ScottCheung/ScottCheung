@@ -46,10 +46,11 @@ export default function material() {
                   {lang == 0 && 'Certificates'}
                 </h2>
                 <p className=' text-justify pb-[30px]'>
-                  {lang == 1 && '所有荣誉真实有效。'}
-                  {lang == 0 && 'All Certificates are real.'}
+                  {lang == 1 && '所有荣誉真实有效。因部分图片遗失，正在整理中。表格可能不正确。'}
+                  {lang == 0 && 'All Certificates are real. The table below shows the certificates I have received. Because of the large number of certificates, I have not collected all of them. I will update them in the not soon. Table is not correct.'}
                 </p>
               </div>
+              <img className='w-full' src='https://3o.hk/images/2024/04/15/certificate.png'></img>
               <div className='pb-48 relative overflow-x-auto'>
                 <motion.table
                   variants={visblecontainer}

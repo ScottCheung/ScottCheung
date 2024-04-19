@@ -49,7 +49,6 @@ function StudyExperience({ hideTittle, simpleVer }) {
               duration: 0.7,
               ease: [0.455, 0.03, 0.515, 0.955],
             }}
-            layout
             className='z-50'
           >
             <div className='animate__animated animate__rotateIn '>
@@ -66,7 +65,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
             </div>
           </motion.div>
           {/* 一级标题 */}
-          <div className='flex justify-center py-12'>
+          <div className=' flex justify-center py-12 min-h-[100px] max-h-[100px]'>
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -74,7 +73,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                 ease: [0.455, 0.03, 0.515, 0.955],
                 duration: 1,
               }}
-              className='animate__animated animate__fadeInUp items-center flex justify-center  '
+              className=' items-center flex justify-center  '
             >
               <div className='animate__animated animate__zoomIn'>
                 <i className=' fi text-5xl lg:text-8xl fi-rr-circle-book-open mr-[20px] pt-3 '></i>
@@ -92,7 +91,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
 
       {/* Item 容器 */}
       <AnimatePresence>
-        <section className='section section-incentive background-alt staggered-end'>
+        <section className=' section section-incentive background-alt staggered-end'>
           <div className='gallery gallery-align-start gallery-icon-cards'>
             <div className='scroll-visblecontainer'>
               <div className='item-visblecontainer  '>
@@ -102,6 +101,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                   initial='hidden'
                   whileInView='visible'
                   // viewport={{ once: true }}
+                  viewport={{ margin: '-40%'}}
                   className='card-set p-[20px] overflow-hidden'
                   role='list'
                 >

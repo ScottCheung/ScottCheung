@@ -1598,7 +1598,7 @@ function Capability() {
     </motion.div>
   );
 
-  return <motion.div className='z-50 '>{Capability}</motion.div>;
+  return <motion.div className='z-50 -mt-[10vh] md:-mt-[30vh]'>{Capability}</motion.div>;
 }
 
 export default Capability;

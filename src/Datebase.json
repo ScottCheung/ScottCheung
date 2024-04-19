@@ -3166,7 +3166,7 @@
       "WelcomeItem": {
         "hidden": {
           "opacity": 0,
-          "y": "30px",
+          "y": "90px",
           "scale": 0.95,
           "pointerEvents": "none"
         },

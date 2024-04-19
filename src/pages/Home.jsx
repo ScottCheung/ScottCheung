@@ -71,12 +71,12 @@ function Home() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['0 0 ', '7% 7%'],
+    offset: ['0 ', '7% '],
   });
 
   // 根据滚动进度计算位移
   const y = useTransform(scrollYProgress, [0, 1], [7, 0]);
-  const borderRadius = useTransform(scrollYProgress, [0, 1], [35, 0]);
+  const borderRadius = useTransform(scrollYProgress, [0, 1], [150, 0]);
   const targetValue = useTransform(scrollYProgress, [0, 1], [0, 70]);
   const opacity = useTransform(targetValue, [0, 70], [0.2, 5]);
   const margin = useTransform(scrollYProgress, [0, 1], ['10%', '0%']);

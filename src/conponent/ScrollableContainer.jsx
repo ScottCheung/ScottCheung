@@ -37,7 +37,7 @@ const ScrollableContainer = ({ children, Button_mt, container }) => {
   return (
     <div className='flex flex-col items-center justify-center'>
       <div
-        className={`${container} w-[100vw] flex overflow-x-scroll overflow-y-hidden scrollbar-hide gap-x-[20px] justify-center  '`}
+        className={`${container} w-full flex overflow-x-scroll scrollbar-hide gap-x-[20px] justify-start  py-[200px]`}
         style={containerStyle}
         onScroll={handleScroll}
         ref={containerRef}

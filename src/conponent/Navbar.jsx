@@ -125,24 +125,25 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const navbar = (
     <AnimatePresence>
       <motion.div
-        onMouseLeave={() => setSelectedTab(null)}
+
         className={`z-50 transition-all duration-700 fixed  ${
           isScrolling ? '  -top-[100px]' : '  '
         }  `}
       >
         <nav className={` fixed w-full flex flex-col`}>
           <motion.div
+                    onMouseLeave={() => setSelectedTab(null)}
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             layout
             transition={{ transition: { duration: 1 } }}
-            className={`flex flex-col w-full ${BG}
+            className={`flex flex-col w-full ${BG} py-[10px]
         ${
           windowWidth < 768
-            ? 'h-auto p-[15px]'
+            ? 'h-auto p-[15px] '
             : `${
                 isTop
-                  ? `${isHomeOrRoot ? 'px-[5%] pt-[12vh] ' : 'pt-3'} h-auto`
+                  ? `${isHomeOrRoot ? 'px-[5%] pt-[12vh] ' : 'pt-3'} h-auto `
                   : ''
               }  md:px-10`
         }
@@ -862,7 +863,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                       layoutId='introduction'
                       className='md:mx-[10%] mt-[30px] flex flex-col gap-1 my-[5px] transition-all duration-200 '
                     >
-                      <div className='p-[28px] flex flex-col w-full max-w-[320px] leading-1.5  backdrop-blur-[20px] border-gray-200 bg-gray-500/40 rounded-e-[28px] rounded-es-[28px] dark:bg-gray-700/20'>
+                      <div className='p-[28px] flex flex-col w-full max-w-[320px] leading-1.5  backdrop-blur-[20px] border-gray-200 bg-black/50 rounded-e-[28px] rounded-es-[28px] dark:bg-gray-700/20'>
                         <p className='text-[25px] font-normal dark:text-gray-900 text-white  '>
                           {item.des[lang]}
                         </p>
@@ -949,7 +950,15 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           className='fixed top-40 right-20 flex flex-col '
         ></div>
       </div>
-    </AnimatePresence>
+      <AnimatePresence>
+
+      {selectedTab!==null&&<motion.div 
+      initial={{opacity:0}}
+      animate={{opacity:1}}
+      exit={{opacity:0}}
+      transition={{duration:0.5}}
+      className='fixed top-0 left-0 z-40 w-full h-full backdrop-blur-[20px]'></motion.div>}
+    </AnimatePresence> </AnimatePresence>
   );
 
   return <motion.div layout>{navbar}</motion.div>;
