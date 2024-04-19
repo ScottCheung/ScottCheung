@@ -101,7 +101,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                   initial='hidden'
                   whileInView='visible'
                   // viewport={{ once: true }}
-                  viewport={{ margin: '-40%'}}
+                  viewport={{ margin: '-30%'}}
                   className='card-set p-[20px] overflow-hidden'
                   role='list'
                 >

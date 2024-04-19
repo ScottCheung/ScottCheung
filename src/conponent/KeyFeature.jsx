@@ -51,7 +51,7 @@ function KeyFeature() {
           className={`w-full h-full absolute gradient-mask transition-all bg-black/50`}
         ></motion.span>
 
-        <div className='flex justify-center items-end relative w-full h-full md:pb-[30%] pb-[90%]'>
+
         <motion.div
                     variants={Welcomevisblecontainer}
                     initial='hidden'
@@ -59,7 +59,7 @@ function KeyFeature() {
                     transition={StagerFadeInUp}
                     // viewport={{ once: true }}
                     
-                    className='grid visblecontainer  py-48  z-50  absolute left-0 right-0 items-center '
+                    className='grid visblecontainer  py-48  z-50  absolute left-0 right-0 items-center md:top-[40vh] '
                   >
 
                       {KeyFeatures.map((KeyFeature, index) => (
@@ -68,7 +68,7 @@ function KeyFeature() {
                           variants={WelcomeItem}
                           whileTap={{ scale: 0.97, transition: { duration: 0.1 } }}
                           transition={StagerFadeInUp}
-                          viewport={{ margin: '-40%'}}
+                          viewport={{ margin: '-30%'}}
                           layout
                           className=' px-[20px] rounded-[28px]  hover:bg-gradient-to-t   from-lime-500/20  to-emerald-500/20  hover:backdrop-blur-md  hover:shadow-2xl focus:shadow-2xl  grid-item large-span-4 medium-span-6 small-span-6 grid-item-search h-[230px]'
 
@@ -109,7 +109,7 @@ function KeyFeature() {
                         </motion.div>
                       ))}
                   </motion.div>
-        </div>
+
  
 
       </motion.section>

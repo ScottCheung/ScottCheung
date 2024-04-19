@@ -74,7 +74,7 @@ function WhyMe({ hideTittle }) {
                   whileInView='visible'
                   // viewport={{ once: true }}
                   exit={{ opacity: 0}}
-                  viewport={{ margin: '-50%'}}
+                  viewport={{ margin: '-30%'}}
                   className='card-set p-[20px] overflow-hidden'
                   role='list'
                 >

@@ -3151,22 +3151,18 @@
     "Variant": {
       "Welcomevisblecontainer": {
         "hidden": {
-          "transition": {
-            "when": "afterChildren"
-          }
+          "transition": {}
         },
         "visible": {
           "transition": {
-            "when": "beforeChildren",
-            "delayChildren": 0.1,
-            "staggerChildren": 0.175
+            "staggerChildren": 0.1
           }
         }
       },
       "WelcomeItem": {
         "hidden": {
           "opacity": 0,
-          "y": "90px",
+          "y": "150px",
           "scale": 0.95,
           "pointerEvents": "none"
         },
