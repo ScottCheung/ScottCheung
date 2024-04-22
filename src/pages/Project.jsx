@@ -70,7 +70,7 @@ export default function Example() {
   return (
     <div
       id='animation-carousel'
-      className='relative w-full h-[100vh]'
+      className='relative w-full h-[100vh] over'
       data-carousel='static'
     >
       {/* Carousel wrapper */}

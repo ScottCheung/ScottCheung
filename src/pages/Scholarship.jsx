@@ -8,7 +8,7 @@ import { hideRow, useLanguage } from '../help/helpFunction';
 export default function Scholarship() {
   const lang = useLanguage();
   return (
-    <>
+    <div className='overflow-hidden'>
       <div
         className='page-overview '
         data-component-list='PageXpController'
@@ -130,6 +130,6 @@ export default function Scholarship() {
           <KeyFeature />
         </main>
       </div>
-    </>
+    </div>
   );
 }

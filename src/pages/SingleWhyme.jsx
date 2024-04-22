@@ -32,7 +32,7 @@ export default function WhyM() {
   }, []);
 
   return (
-    <>
+    <div className='overflow-hidden'>
       <Navbar topTextColor={true} />
       {/* <link rel="stylesheet" href="../style/output.css" type="text/css"/> */}
       {/* <link rel="stylesheet" href="../style/style.css" type="text/css"/> */}
@@ -203,6 +203,6 @@ export default function WhyM() {
       </main>
 
       <Contact />
-    </>
+    </div>
   );
 }

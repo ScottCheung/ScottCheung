@@ -130,7 +130,9 @@ function WhyMe({ hideTittle }) {
                       <motion.div
                         // href={feature.href}
                         onClick={() => {
-                          openCard(feature);
+                          if (windowWidth > 1024) {
+                            openCard(feature);
+                          }
                         }}
                         key={index}
                         variants={WelcomeItem}

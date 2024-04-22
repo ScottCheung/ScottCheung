@@ -10,7 +10,7 @@ const LeftappearBar = Database.Animation.Transition.LeftappearBar;
 const item = Database.Animation.Variant.LeftWelcomeItem;
 export default function material() {
   return (
-    <>
+    <div className='overflow-hidden'>
       <div
         className='page-overview '
         data-component-list='PageXpController'
@@ -197,6 +197,6 @@ export default function material() {
           <StudyExperience hideTittle={true} className='h-[100vh]' />
         </main>
       </div>
-    </>
+    </div>
   );
 }

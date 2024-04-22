@@ -12,7 +12,7 @@ const item = database.Animation.Variant.LeftWelcomeItem;
 export default function material() {
   const lang = useLanguage();
   return (
-    <>
+    <div className='overflow-hidden'>
       <div
         className='page-overview '
         data-component-list='PageXpController'
@@ -134,6 +134,6 @@ export default function material() {
           </section>
         </main>
       </div>
-    </>
+    </div>
   );
 }

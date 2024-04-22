@@ -50,7 +50,7 @@ export default function Example() {
     };
   }, []);
   return (
-    <div className='bg-white'>
+    <div className='overflow-hidden bg-white'>
       <AnimatePresence>
         <motion.div
           layout

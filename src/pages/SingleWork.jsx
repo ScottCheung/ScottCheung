@@ -38,7 +38,7 @@ export default function singleWork() {
   }, []);
 
   return (
-    <>
+    <div className='overflow-hidden'>
       <Navbar topTextColor={true} />
       <main
         className={`profile-page`}
@@ -176,6 +176,6 @@ export default function singleWork() {
       />
 
       <Contact isTopOut={true} />
-    </>
+    </div>
   );
 }

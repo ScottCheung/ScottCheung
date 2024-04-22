@@ -5,7 +5,7 @@ import { hideRow, bgPic, useLanguage } from '../help/helpFunction';
 
 export default function Example() {
   return (
-    <div className='bg-gradient-to-br from-pink-100 from-10% via-pink-50 via-50% to-white/0 '>
+    <div className='bg-gradient-to-br from-pink-100 from-10% via-pink-50 via-50% to-white/0 overflow-hidden'>
       <Navbar />
       <div className='flex justify-center w-full px-[28px] pt-[70px]'>
         <div
