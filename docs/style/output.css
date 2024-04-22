@@ -2173,7 +2173,7 @@ video {
   --tw-bg-opacity: 0.9;
 }
 
-.bg-gradient-to-b {
+.bg-gradient-to-br {
   background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
 }
 

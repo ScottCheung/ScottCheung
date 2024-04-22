@@ -1538,7 +1538,7 @@
               "name": "Feeling",
               "label": 62,
               "column": "62%",
-              "color1": "from-amber-400",
+              "color1": "from-amber-500",
               "color2": "to-yellow-400"
             },
             {
@@ -1817,17 +1817,10 @@
       ],
       "graphs": {
         "gallerybg": [
-          "/Graphs/capability/gallerybg.jpg",
           "https://cdn.pixabay.com/photo/2019/08/19/11/59/milky-way-4416194_1280.jpg"
         ],
-        "code": [
-          "/Graphs/capability/code.jpg",
-          "https://3o.hk/images/2024/01/19/code.jpg"
-        ],
-        "infj": [
-          "/Graphs/capability/infp.jpg",
-          "https://3o.hk/images/2024/01/19/infp.jpg"
-        ]
+        "code": ["https://3o.hk/images/2024/04/21/code.png"],
+        "infj": ["https://3o.hk/images/2024/04/21/infj.png"]
       }
     },
     "Certificates": [

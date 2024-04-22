@@ -125,18 +125,16 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const navbar = (
     <AnimatePresence>
       <motion.div
-
         className={`z-50 transition-all duration-700 fixed  ${
           isScrolling ? '  -top-[100px]' : '  '
         }  `}
       >
         <nav className={` fixed w-full flex flex-col`}>
           <motion.div
-                    onMouseLeave={() => setSelectedTab(null)}
+            onMouseLeave={() => setSelectedTab(null)}
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             layout
-            transition={{ transition: { duration: 1 } }}
             className={`flex flex-col w-full ${BG} py-[10px]
         ${
           windowWidth < 768
@@ -155,7 +153,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                   ? isOpened
                     ? 'backdrop-blur-[20px] '
                     : ''
-                  : ' backdrop-blur-[20px] bg-white/50 shadow-xl'
+                  : ' backdrop-blur-[20px] bg-white/20 shadow-xl'
               }`
         }`}
           >
@@ -755,8 +753,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 {/* 二级NavbarLocation */}
                 {(selectedTab == 'Home' || isExpanded == true) && (
                   <motion.div
+                    onMouseLeave={() => setSelectedTab(null)}
                     key={'isExpanded'}
-                    transition={{ type: 'spring', duration: 1 }}
+                    layoutId='isExp'
+                    // transition={{ type: 'spring', duration: 1 }}
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0 }}
@@ -828,7 +828,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 {/* lifeCategory */}
                 {selectedTab == 'Life' && (
                   <motion.div
-                    //  layout layoutId='isExp'
+                    initial={{ scaleY: 0 }}
+                    animate={{ scaleY: 1 }}
+                    transition={{ duration: 0.5 }}
+                    layout
+                    layoutId='isExp'
+                    onMouseLeave={() => setSelectedTab(null)}
                     className={`${
                       isTop
                         ? 'backdrop-blur-md bg-sky-200/20'
@@ -840,7 +845,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 )}
                 {selectedTab == 'Contact' && (
                   <motion.div
-                    // layout layoutId='isExp'
+                    layout
+                    layoutId='isExp'
+                    onMouseLeave={() => setSelectedTab(null)}
                     className={`${
                       isTop
                         ? 'backdrop-blur-md bg-sky-200/20 text-white'
@@ -854,55 +861,52 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             </div>
           </motion.div>
           <motion.div layout children='container flex '>
-            <AnimatePresence>
-              {navbarItem.map(
-                (item, index) =>
-                  selectedTab == item.name[0] && (
-                    <div
-                      key={item.name[0] + index + 'introduction'}
-                      layoutId='introduction'
-                      className='md:mx-[10%] mt-[30px] flex flex-col gap-1 my-[5px] transition-all duration-200 '
-                    >
-                      <div className='p-[28px] flex flex-col w-full max-w-[320px] leading-1.5  backdrop-blur-[20px] border-gray-200 bg-black/50 rounded-e-[28px] rounded-es-[28px] dark:bg-gray-700/20'>
-                        <p className='text-[25px] font-normal dark:text-gray-900 text-white  '>
-                          {item.des[lang]}
-                        </p>
-                        <span className='text-center text-[30px] dark:text-gray-900 text-white '>
-                          {item.expression}{' '}
-                        </span>
-                        <div className='group relative my-2.5 hidden'>
-                          <div className='absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center'>
-                            <button
-                              data-tooltip-target='download-image'
-                              className='inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50'
+            {navbarItem.map(
+              (item, index) =>
+                selectedTab == item.name[0] && (
+                  <motion.div
+                    key={item.name[0] + index + 'introduction'}
+                    className='md:mx-[10%] mt-[30px] flex flex-col gap-1 my-[5px] transition-all duration-200 '
+                  >
+                    <div className='p-[28px] flex flex-col w-full max-w-[320px] leading-1.5  backdrop-blur-[20px] border-gray-200 bg-white/50 rounded-e-[28px] rounded-es-[28px] dark:bg-gray-700/20'>
+                      <p className='text-[25px] font-normal dark:text-gray-900 text-white  '>
+                        {item.des[lang]}
+                      </p>
+                      <span className='text-center text-[30px] dark:text-gray-900 text-white '>
+                        {item.expression}{' '}
+                      </span>
+                      <div className='group relative my-2.5 hidden'>
+                        <div className='absolute w-full h-full bg-gray-900/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-lg flex items-center justify-center'>
+                          <button
+                            data-tooltip-target='download-image'
+                            className='inline-flex items-center justify-center rounded-full h-10 w-10 bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50'
+                          >
+                            <svg
+                              className='w-5 h-5 text-white'
+                              aria-hidden='true'
+                              xmlns='http://www.w3.org/2000/svg'
+                              fill='none'
+                              viewBox='0 0 16 18'
                             >
-                              <svg
-                                className='w-5 h-5 text-white'
-                                aria-hidden='true'
-                                xmlns='http://www.w3.org/2000/svg'
-                                fill='none'
-                                viewBox='0 0 16 18'
-                              >
-                                <path
-                                  stroke='currentColor'
-                                  strokeLinecap='round'
-                                  strokeLinejoin='round'
-                                  strokeWidth={2}
-                                  d='M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3'
-                                />
-                              </svg>
-                            </button>
-                          </div>
-                          <img
-                            src='/docs/images/blog/image-1.jpg'
-                            className='rounded-lg'
-                          />
+                              <path
+                                stroke='currentColor'
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                strokeWidth={2}
+                                d='M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3'
+                              />
+                            </svg>
+                          </button>
                         </div>
+                        <img
+                          src='/docs/images/blog/image-1.jpg'
+                          className='rounded-lg'
+                        />
                       </div>
                     </div>
-                  ),
-              )}
-            </AnimatePresence>
+                  </motion.div>
+                ),
+            )}
           </motion.div>
         </nav>
       </motion.div>
@@ -951,17 +955,20 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
         ></div>
       </div>
       <AnimatePresence>
-
-      {selectedTab!==null&&<motion.div 
-      initial={{opacity:0}}
-      animate={{opacity:1}}
-      exit={{opacity:0}}
-      transition={{duration:0.5}}
-      className='fixed top-0 left-0 z-40 w-full h-full backdrop-blur-[20px]'></motion.div>}
-    </AnimatePresence> </AnimatePresence>
+        {selectedTab !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            // transition={{duration:0.5}}
+            className='fixed top-0 left-0 z-40 w-full h-full backdrop-blur-[20px] bg-black/10'
+          ></motion.div>
+        )}
+      </AnimatePresence>{' '}
+    </AnimatePresence>
   );
 
-  return <motion.div layout>{navbar}</motion.div>;
+  return navbar;
 }
 
 export default Navbar;

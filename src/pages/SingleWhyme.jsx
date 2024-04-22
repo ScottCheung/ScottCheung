@@ -99,7 +99,7 @@ export default function WhyM() {
             className={`pb-[30px] relative flex flex-col min-w-0 break-words ${
               windowWidth > 768
                 ? 'bg-white'
-                : 'bg-gradient-to-b from-white via-white to-white/80 backdrop-blur-md'
+                : 'bg-gradient-to-br from-white via-white to-white/80 backdrop-blur-md'
             }  w-full mb-6 shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp`}
             style={
               (windowWidth > 768 && {

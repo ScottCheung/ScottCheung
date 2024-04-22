@@ -40,17 +40,22 @@ export default function material() {
           </section>
           <section className='section section-welcome no-pad-bottom'>
             <div className='welcome-video-wall-visblecontainer visblecontainer space-y-6 h-auto '>
-              <div className=' text-gray-500  pb-4 sticky   top-0 z-50 bg-gradient-to-b from-white from-10% via-white via-90% to-white/10  '>
+              <div className=' text-gray-500  pb-4 sticky   top-0 z-50 bg-gradient-to-br from-white from-10% via-white via-90% to-white/10  '>
                 <h2 className='sticky top-0 z-50 typography-section-intro-headline section-intro-headline pt-[100px]'>
                   {lang == 1 && '荣誉'}
                   {lang == 0 && 'Certificates'}
                 </h2>
                 <p className=' text-justify pb-[30px]'>
-                  {lang == 1 && '所有荣誉真实有效。因部分图片遗失，正在整理中。表格可能不正确。'}
-                  {lang == 0 && 'All Certificates are real. The table below shows the certificates I have received. Because of the large number of certificates, I have not collected all of them. I will update them in the not soon. Table is not correct.'}
+                  {lang == 1 &&
+                    '所有荣誉真实有效。因部分图片遗失，正在整理中。表格可能不正确。'}
+                  {lang == 0 &&
+                    'All Certificates are real. The table below shows the certificates I have received. Because of the large number of certificates, I have not collected all of them. I will update them in the not soon. Table is not correct.'}
                 </p>
               </div>
-              <img className='w-full' src='https://3o.hk/images/2024/04/15/certificate.png'></img>
+              <img
+                className='w-full'
+                src='https://3o.hk/images/2024/04/15/certificate.png'
+              ></img>
               <div className='pb-48 relative overflow-x-auto'>
                 <motion.table
                   variants={visblecontainer}

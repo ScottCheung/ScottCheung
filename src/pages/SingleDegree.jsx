@@ -178,7 +178,7 @@ export default function Example() {
             </section>
             <section className='section section-welcome no-pad-bottom visblecontainer'>
               <div className='welcome-video-wall-visblecontainer  space-y-6 h-auto w-[100%]'>
-                <div className='w-[100%] text-gray-500 pt-24 pb-4  bg-gradient-to-b from-white from-10% via-white via-90% to-white/0  sticky top-[25px] z-50'>
+                <div className='w-[100%] text-gray-500 pt-24 pb-4  bg-gradient-to-br from-white from-10% via-white via-90% to-white/0  sticky top-[25px] z-50'>
                   <h2 className='typography-section-intro-headline section-intro-headline '>
                     {lang == 1 && '主要课程'}
                     {lang == 0 && 'Main Course'}

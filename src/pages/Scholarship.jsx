@@ -35,7 +35,7 @@ export default function Scholarship() {
           </section>
           <section className='section section-welcome no-pad-bottom'>
             <div className='welcome-video-wall-visblecontainer visblecontainer space-y-6 h-auto '>
-              <div className=' text-gray-500  pb-4 sticky top-0 z-50 bg-gradient-to-b from-white from-10% via-white via-90% to-white/0 '>
+              <div className=' text-gray-500  pb-4 sticky top-0 z-50 bg-gradient-to-br from-white from-10% via-white via-90% to-white/0 '>
                 <h2 className='typography-section-intro-headline section-intro-headline pt-[100px]'>
                   {lang == 1 && '奖学金'}
                   {lang == 0 && 'Scholorship'}
