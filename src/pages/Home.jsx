@@ -81,7 +81,7 @@ function Home() {
   const opacity = useTransform(targetValue, [0, 70], [0.2, 5]);
   const margin = useTransform(scrollYProgress, [0, 1], ['10%', '0%']);
   return (
-    <div className='relative overflow-hidden'>
+    <div className='relative overflow-hidden scroll-smooth transition-all'>
       <Navbar topTextColor={true} />
       <div className='w-full ref={ref}  overflow-hidden transition-all duration-0  fixed'>
         <Carousel interval={3000}>
