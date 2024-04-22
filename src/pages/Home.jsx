@@ -18,6 +18,9 @@ import Contact from '../conponent/Contact';
 import SubNav from '../conponent/subNav';
 import Carousel from '../conponent/Carousel';
 import Database from '../Datebase.json';
+import { useAppContext } from '../help/ContextManager';
+import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
+import WhyMeCard from '../conponent/WhyMeCard';
 
 const bg = Database.PersonalInfo.Welcomebg[0];
 const HomeCarousel = [
@@ -60,7 +63,11 @@ const HomeCarousel = [
 ];
 
 function Home() {
+  const { Components, setComponents, whymeCard, setWhymeCard } =
+    useAppContext();
   const videoRef = useRef(null);
+  const lang = useLanguage();
+  const keyfeature = Database.PersonalInfo.WhyMe[lang];
 
   // 页面加载完成后自动播放视频
   useEffect(() => {
@@ -81,7 +88,7 @@ function Home() {
   const opacity = useTransform(targetValue, [0, 70], [0.2, 5]);
   const margin = useTransform(scrollYProgress, [0, 1], ['10%', '0%']);
   return (
-    <div className='relative overflow-hidden scroll-smooth transition-all'>
+    <div className='relative overflow-hidden transition-all'>
       <Navbar topTextColor={true} />
       <div className='w-full ref={ref}  overflow-hidden transition-all duration-0  fixed'>
         <Carousel interval={3000}>
@@ -144,6 +151,7 @@ function Home() {
         <WhyMe />
         <Contact />
       </motion.div>
+      <WhyMeCard />
     </div>
   );
 }

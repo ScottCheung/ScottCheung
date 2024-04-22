@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  RouterProvider, createBrowserRouter
-} from 'react-router-dom';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Home from './pages/Home.jsx';
 import Certificate from './pages/Certificate.jsx';
 import Errorpage from './pages/Errorpage.jsx';
@@ -14,8 +12,7 @@ import Life from './pages/life.jsx';
 import SingleWhyme from './pages/SingleWhyme.jsx';
 import SingleWork from './pages/SingleWork.jsx';
 import Gallery from './conponent/Gallery.jsx';
-import SinglePicture from './conponent/SinglePicture.jsx';
-
+import { AppContextProvider } from './help/ContextManager';
 
 const router = createBrowserRouter([
   {
@@ -34,7 +31,7 @@ const router = createBrowserRouter([
     path: '/life',
     element: <Life />,
   },
-    {
+  {
     path: '/life/gallery',
     element: <Gallery />,
   },
@@ -42,7 +39,7 @@ const router = createBrowserRouter([
     path: '/life/gallery/:gallery',
     element: <Gallery />,
   },
-  
+
   {
     path: '*',
     element: <Errorpage />,
@@ -78,15 +75,15 @@ const router = createBrowserRouter([
   {
     path: '/ContactMe',
     element: <Contact />,
-  }
+  },
 ]);
 
-function Router () {
-    return (
-
-        <RouterProvider router={router} />
-
-    );
-    }
+function Router() {
+  return (
+    <AppContextProvider>
+      <RouterProvider router={router} />
+    </AppContextProvider>
+  );
+}
 
 export default Router;

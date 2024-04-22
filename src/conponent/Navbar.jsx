@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, useTime, AnimatePresence } from 'framer-motion';
 import data from '../Datebase.json';
+import { useAppContext } from '../help/ContextManager';
 import {
   hideRow,
   bgPic,
@@ -21,6 +22,7 @@ const navLocation = data.Navbar.Location;
 const updateLog = data.Navbar.UpdateLog;
 
 function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
+  const { Components } = useAppContext();
   const [currentVersion, setCurrentVersion] = useState(
     localStorage.getItem('Current version') || null,
   );
@@ -126,7 +128,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     <AnimatePresence>
       <motion.div
         className={`z-50 transition-all duration-700 fixed  ${
-          isScrolling ? '  -top-[100px]' : '  '
+          isScrolling || Components.NavBar === 'hide' ? '  -top-[100px]' : '  '
         }  `}
       >
         <nav className={` fixed w-full flex flex-col`}>

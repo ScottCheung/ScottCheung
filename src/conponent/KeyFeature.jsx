@@ -29,7 +29,7 @@ function KeyFeature() {
   });
 
   // 根据滚动进度计算位移
-  const x = useTransform(scrollYProgress, [0, 1], ['-50vw', '0vw']);
+  const x = useTransform(scrollYProgress, [0, 1], ['-200vw', '0vw']);
   // const y = useTransform(scrollYProgress, [0, 1], ["30vh",'0vh']);
   const borderTopRightRadius = useTransform(scrollYProgress, [0, 1], [200, 0]);
 
