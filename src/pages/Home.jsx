@@ -125,7 +125,7 @@ function Home() {
       </div>
       <motion.div
         style={{
-          // y,
+          y,
           borderRadius,
           opacity,
           marginLeft: margin,
@@ -143,9 +143,7 @@ function Home() {
         <WorkExperience />
         <WhyMe />
         <Contact />
-        {/* <div className='py-[400px]'>111</div> */}
       </motion.div>
-      <span className=''></span>
     </div>
   );
 }
