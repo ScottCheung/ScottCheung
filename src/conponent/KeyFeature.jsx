@@ -46,7 +46,7 @@ function KeyFeature() {
         />
         <motion.span
           // style={{ borderRadius, opacity }}
-          className={`w-full h-full absolute  transition-all bg-black/50`}
+          className={`w-full h-full absolute  transition-all bg-black/60`}
         ></motion.span>
 
         <motion.div

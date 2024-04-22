@@ -40,13 +40,13 @@ const Buttons = ({
 
   return (
     <motion.button
-      initial={{ opacity: 0, scale: 0 }}
+      initial={{ opacity: 0 }}
       animate={{
         ...(disabled
-          ? { opacity: 0.2, scale: 1 }
-          : { opacity: 0.7, scale: 1, transition: { duration: 0.5 } }),
+          ? { opacity: 0.2 }
+          : { opacity: 0.7, transition: { duration: 0.5 } }),
       }}
-      exit={{ opacity: 0, scale: 0 }}
+      exit={{ opacity: 0 }}
       transition={{ duration: 0.3, delay: 0.5 }}
       whileTap={{
         ...(disabled ? {} : { scale: 0.9, opacity: 0.5 }),

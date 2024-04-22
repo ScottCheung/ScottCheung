@@ -129,9 +129,6 @@ function WhyMe({ hideTittle }) {
                     {keyfeature.map((feature, index) => (
                       <motion.div
                         // href={feature.href}
-                        style={{ willChange: 'transform' }}
-                        layout
-                        layoutId={feature.advantage}
                         onClick={() => {
                           openCard(feature);
                         }}
@@ -145,11 +142,8 @@ function WhyMe({ hideTittle }) {
                         <div className='icon-card card-visblecontainer'>
                           <div className='card '>
                             <motion.span
-                              className='absolute top-0 left-0 right-0 bottom-0 -z-20 overflow-hidden rounded-[28px] first-letter:'
-                              layoutId={feature.pic[0]}
-                              layout='position'
+                              className='absolute top-0 left-0 right-0  bottom-0 -z-20 overflow-hidden rounded-[28px] first-letter:'
                               style={{
-                                willChange: 'transform',
                                 ...(!hideTittle
                                   ? bgPic(
                                       feature.pic[0],
@@ -159,7 +153,10 @@ function WhyMe({ hideTittle }) {
                                   : {}),
                               }}
                             ></motion.span>
-                            <div
+                            <motion.div
+                              style={{ willChange: 'transform' }}
+                              layout
+                              layoutId={feature.advantage}
                               className={`${
                                 hideTittle
                                   ? `${
@@ -170,10 +167,10 @@ function WhyMe({ hideTittle }) {
                                   : 'bg-white/40 -z-30'
                               }  card-modifier  fixed-width bg-button card-padding has-trigger-button`}
                             >
-                              <div className='card-viewport-content'>
+                              <motion.div className='card-viewport-content'>
                                 <div className='icon-card-content'>
                                   <div className=''>
-                                    <div className={``}>
+                                    <motion.div>
                                       <motion.div className='items-center flex justify-start'>
                                         <i
                                           style={{
@@ -181,7 +178,7 @@ function WhyMe({ hideTittle }) {
                                           }}
                                           className={`${
                                             feature.icon
-                                          } fi animate__animated animate__delay-3s  animate__zoomIn animate__slow text-6xl ${
+                                          } fi animate__animated animate__delay-3s  animate__zoomIn  text-6xl ${
                                             feature.color1 +
                                             ' ' +
                                             feature.color2
@@ -203,7 +200,7 @@ function WhyMe({ hideTittle }) {
                                           {feature.advantage}
                                         </motion.div>
                                       </div>
-                                    </div>
+                                    </motion.div>
                                   </div>
                                   <div
                                     className={`${
@@ -226,9 +223,9 @@ function WhyMe({ hideTittle }) {
                                     />
                                   </div>
                                 </div>
-                              </div>
+                              </motion.div>
                               <div></div>
-                            </div>
+                            </motion.div>
                           </div>
                           {windowWidth < 1024 && (
                             <a
