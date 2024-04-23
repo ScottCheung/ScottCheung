@@ -6,14 +6,15 @@
         "href": "/",
         "icon": "fi-rr-home-heart",
         "des": ["Key information here ~", "主要信息都在这里 ~"],
-        "expression": "❤٩(◕‿◕｡)۶"
+        "expression": "❤٩ (◕‿◕｡)۶"
       },
+
       {
-        "name": ["Project", "项目"],
-        "href": "/project",
+        "name": ["Resume", "简历"],
+        "href": "/resume",
         "icon": "fi-rr-trophy-star",
-        "des": ["All projects I contributed ~", "我参与的项目 ~"],
-        "expression": "ʕ•ᴥ•ʔ"
+        "des": ["Here is my resume ~", "这里是我的简历~"],
+        "expression": "(｡◕‿◕｡)"
       },
       {
         "name": ["Life", "生活"],
@@ -26,14 +27,14 @@
         "name": ["Contact", "联络"],
         "href": "/Contact",
         "icon": "fi-rr-following",
-        "des": ["You can contact me by these ways ~", "您可以这样找到我 ~"],
+        "des": [" You can contact me by these ways ~ ", " 您可以这样找到我 ~ "],
         "expression": "(｡♥‿♥｡)"
       }
     ],
     "Location": [
       {
-        "id": "/#StudyExperience",
-        "label": ["Study", "学习"],
+        "id": "/#Education",
+        "label": ["Education", "教育"],
         "logo": "fi-rr-book",
         "color1": "from-red-500",
         "color2": "to-red-700"
@@ -296,7 +297,7 @@
       "https://3o.hk/images/2024/01/14/contactbg.jpg"
     ],
     "Avatar": ["https://3o.hk/images/2024/04/10/avater.png"],
-    "StudyExperience": [
+    "Education": [
       {
         "id": "FunctionalMaterial",
         "major": [

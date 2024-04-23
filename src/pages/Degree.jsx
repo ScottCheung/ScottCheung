@@ -1,6 +1,6 @@
 import Contact from '../conponent/Contact';
 import Navbar from '../conponent/Navbar';
-import StudyExperience from '../conponent/StudyExperience';
+import Education from '../conponent/Education';
 import { hideRow, bgPic, useLanguage } from '../help/helpFunction';
 
 export default function Example() {
@@ -22,7 +22,7 @@ export default function Example() {
             I have 4 majors
           </div>
           <div className='h-[25vh] '></div>
-          <StudyExperience hideTittle='ture' className='h-[100vh] ' />
+          <Education hideTittle='ture' className='h-[100vh] ' />
           <Contact className='mt-[50vh] rounded-[28px] overflow-hidden p-[28px] ' />
         </div>
       </div>

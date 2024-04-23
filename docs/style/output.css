@@ -2181,7 +2181,7 @@ video {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
 
-.bg-gradient-to-r {
+.bg-gradient-to-br {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
 }
 

@@ -110,7 +110,7 @@ function WorkExperience() {
                                           style={{
                                             animationDelay: `${index * 0.2}s`,
                                           }}
-                                          className={`inline-flex animate__animated animate__zoomIn bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium py-1 px-5 ${
+                                          className={`inline-flex animate__animated animate__zoomIn bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium py-1 px-5 ${
                                             Experience.tag[0] ? '' : 'hidden'
                                           }`}
                                         >
@@ -121,7 +121,7 @@ function WorkExperience() {
                                           style={{
                                             animationDelay: `${index * 0.2}s`,
                                           }}
-                                          className={`inline-flex animate__animated animate__zoomIn text-white rounded-3xl bg-gradient-to-r from-emerald-500 to-sky-500 font-medium py-1 px-5 ${
+                                          className={`inline-flex animate__animated animate__zoomIn text-white rounded-3xl bg-gradient-to-br from-emerald-500 to-sky-500 font-medium py-1 px-5 ${
                                             Experience.tag[1] ? '' : 'hidden'
                                           }`}
                                         >
@@ -181,7 +181,7 @@ function WorkExperience() {
                                                   index * 0.2
                                                 }s`,
                                               }}
-                                              className={`inline-flex animate__animated animate__zoomIn bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium  px-3 ${
+                                              className={`inline-flex animate__animated animate__zoomIn bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium  px-3 ${
                                                 Experience.tag[0]
                                                   ? ''
                                                   : 'hidden'
@@ -195,7 +195,7 @@ function WorkExperience() {
                                                   index * 0.2
                                                 }s`,
                                               }}
-                                              className={`inline-flex animate__animated animate__zoomIn text-white rounded-3xl bg-gradient-to-r from-emerald-500 to-sky-500 font-medium  px-3 ${
+                                              className={`inline-flex animate__animated animate__zoomIn text-white rounded-3xl bg-gradient-to-br from-emerald-500 to-sky-500 font-medium  px-3 ${
                                                 Experience.tag[1]
                                                   ? ''
                                                   : 'hidden'

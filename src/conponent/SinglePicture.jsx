@@ -3,9 +3,7 @@ import Navbar from './Navbar';
 import Database from '../Datebase.json';
 import { useLanguage } from '../help/helpFunction';
 import { useParams, Link, useNavigate } from 'react-router-dom';
-import Lightbox from 'react-image-lightbox';
 import { motion } from 'framer-motion';
-import 'react-image-lightbox/style.css';
 
 function SinglPic() {
   const lang = useLanguage();

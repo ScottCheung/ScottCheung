@@ -126,7 +126,7 @@ export default function WhyM() {
                         selectedWhyMeItem.color1 +
                         ' ' +
                         selectedWhyMeItem.color2
-                      } bg-gradient-to-r rounded-full w-[100px] h-[100px] border border-white border-[4px]`}
+                      } bg-gradient-to-br rounded-full w-[100px] h-[100px] border border-white border-[4px]`}
                     >
                       <i
                         className={`fi text-white text-[50px] mt-[10px] ${selectedWhyMeItem.icon}`}
@@ -148,7 +148,7 @@ export default function WhyM() {
                 <h3
                   className={`text-[32px] font-semibold leading-normal mb-2 ${
                     selectedWhyMeItem.color1 + ' ' + selectedWhyMeItem.color2
-                  } bg-clip-text text-transparent bg-gradient-to-r mb-2 animate__animated animate__zoomIn`}
+                  } bg-clip-text text-transparent bg-gradient-to-br mb-2 animate__animated animate__zoomIn`}
                 >
                   {selectedWhyMeItem.advantage}
                 </h3>
@@ -174,7 +174,7 @@ export default function WhyM() {
                                   selectedWhyMeItem.color1 +
                                   ' ' +
                                   selectedWhyMeItem.color2
-                                } bg-clip-text text-transparent bg-gradient-to-r text-[28px] animate__animated animate__zoomIn h-auto pb-[400px]`}
+                                } bg-clip-text text-transparent bg-gradient-to-br text-[28px] animate__animated animate__zoomIn h-auto pb-[400px]`}
                               >
                                 {selectedWhyMeItem.description
                                   .split('\n')

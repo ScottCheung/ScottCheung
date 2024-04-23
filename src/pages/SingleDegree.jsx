@@ -1,9 +1,9 @@
 import Navbar from '../conponent/Navbar';
-import StudyExperience from '../conponent/StudyExperience';
+import Education from '../conponent/Education';
 import database from '../Datebase.json';
 import React, { useState, useEffect } from 'react';
 const pathname = window.location.pathname;
-const course = database.PersonalInfo.StudyExperience;
+const course = database.PersonalInfo.Education;
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../help/helpFunction';
 import { useParams } from 'react-router';
@@ -299,7 +299,7 @@ export default function Example() {
                 </div>
               </div>
             </section>
-            <StudyExperience hideTittle={true} simpleVer={true} />
+            <Education hideTittle={true} simpleVer={true} />
           </main>
         </motion.div>
       </AnimatePresence>

@@ -126,7 +126,7 @@ const Carousel = ({ interval, children }) => {
             isTop && setIsPaused(false);
           }}
           onClick={prevSlide}
-          className='absolute left-0 w-[20%] h-full z-40 bg-gradient-to-r hover:from-black/20 to-transparent cursor-pointer'
+          className='absolute left-0 w-[20%] h-full z-40 bg-gradient-to-br hover:from-black/20 to-transparent cursor-pointer'
         >
           {showleftbutton && (
             <motion.button
@@ -252,7 +252,7 @@ const Carousel = ({ interval, children }) => {
                       progress >= 0 &&
                       isPaused === false && (
                         <div
-                          className={`bg-gradient-to-r from-sky-500 to-emerald-500 h-[15px] rounded-full`}
+                          className={`bg-gradient-to-br from-sky-500 to-emerald-500 h-[15px] rounded-full`}
                           style={{ width: `${progress}%` }}
                         />
                       )}

@@ -4,14 +4,14 @@ const CanvasBackground = () => {
   const canvasRef = useRef(null);
   const stars = [];
   let count = 0;
-  const maxStars = 1200;
+  const maxStars = 700;
   const hue = 217;
 
   useEffect(() => {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext('2d');
-    const w = (canvas.width = 1200);
-    const h = (canvas.height = 2560);
+    const w = (canvas.width = visualViewport.width);
+    const h = (canvas.height = visualViewport.height);
 
     const canvas2 = document.createElement('canvas');
     const ctx2 = canvas2.getContext('2d');
@@ -24,7 +24,7 @@ const CanvasBackground = () => {
       0,
       half,
       half,
-      half
+      half,
     );
     gradient2.addColorStop(0.025, '#fff');
     gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
@@ -87,7 +87,7 @@ const CanvasBackground = () => {
         x - this.radius / 2,
         y - this.radius / 2,
         this.radius,
-        this.radius
+        this.radius,
       );
       this.timePassed += this.speed;
     };
@@ -100,7 +100,7 @@ const CanvasBackground = () => {
     function animation() {
       ctx.globalCompositeOperation = 'source-over';
       ctx.globalAlpha = 0.8;
-      ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 1)';
+      ctx.fillStyle = 'hsla(' + 217 + ', 64%, 6%, 1)';
       ctx.fillRect(0, 0, w, h);
 
       ctx.globalCompositeOperation = 'lighter';
@@ -128,9 +128,7 @@ const CanvasBackground = () => {
     };
   }, []);
 
-  return (
-      <canvas ref={canvasRef}></canvas>
-  );
+  return <canvas ref={canvasRef}></canvas>;
 };
 
 export default CanvasBackground;

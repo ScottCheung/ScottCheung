@@ -25,19 +25,24 @@ function KeyFeature() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['-80vh ', '-30vh'],
+    offset: ['-100%', '0%'],
   });
 
-  // 根据滚动进度计算位移
-  const x = useTransform(scrollYProgress, [0, 1], ['-200vw', '0vw']);
-  // const y = useTransform(scrollYProgress, [0, 1], ["30vh",'0vh']);
-  const borderTopRightRadius = useTransform(scrollYProgress, [0, 1], [200, 0]);
+  const width = useTransform(scrollYProgress, [0, 1], ['0vw', '100vw'], {
+    ease: easeInOut,
+  });
+  const height = useTransform(scrollYProgress, [0, 1], ['100vw', '150vw'], {
+    ease: easeInOut,
+  });
+  const borderRadius = useTransform(scrollYProgress, [0, 1], [200, 0], {
+    ease: easeInOut,
+  });
 
   const KeyFeature = (
     <motion.div
       ref={ref}
-      style={{ x, borderTopRightRadius }}
-      className={`w-full flex h-[100vh]  md:h-[150vh]   overflow-hidden `}
+      style={{ width, borderRadius }}
+      className={`w-full flex h-[100vh]  md:h-[150vh]   overflow-hidden transform-gpu `}
     >
       <motion.section className='w-full h-[150vh] relative overflow-hidden  '>
         <img
@@ -105,7 +110,7 @@ function KeyFeature() {
     </motion.div>
   );
 
-  return KeyFeature;
+  return <div className='flex justify-center'>{KeyFeature}</div>;
 }
 
 export default KeyFeature;

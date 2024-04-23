@@ -32,7 +32,7 @@
     ],
     "Location": [
       {
-        "id": "#StudyExperience",
+        "id": "#Education",
         "label": "Study",
         "logo": "fi-rr-book"
       },
@@ -59,7 +59,7 @@
     ]
   },
   "PersonalInfo": {
-    "StudyExperience": [
+    "Education": [
       {
         "major": ["Functional", "Material"],
         "href": "/major/major=FunctionalMaterial",

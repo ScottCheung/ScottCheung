@@ -99,7 +99,7 @@ function Contact({ isTopOut }) {
                                                     ? `${
                                                         ColorMapping[index % 6]
                                                       }
-                                                } bg-gradient-to-r text-transparent bg-clip-text`
+                                                } bg-gradient-to-br text-transparent bg-clip-text`
                                                     : 'text-white'
                                                 }  text-7xl animate__animated  animate__zoomIn animate__fast `}
                                               ></i>
@@ -111,7 +111,7 @@ function Contact({ isTopOut }) {
                                             className={`typography-card-headline ${
                                               isOut
                                                 ? `${ColorMapping[index % 6]}
-                                            } bg-gradient-to-r text-transparent bg-clip-text`
+                                            } bg-gradient-to-br text-transparent bg-clip-text`
                                                 : 'text-white'
                                             } `}
                                           >
@@ -125,7 +125,7 @@ function Contact({ isTopOut }) {
                                             ${
                                               isOut
                                                 ? `${ColorMapping[index % 6]}
-                                            } bg-gradient-to-r text-transparent bg-clip-text`
+                                            } bg-gradient-to-br text-transparent bg-clip-text`
                                                 : 'text-white'
                                             } `}
                                           >

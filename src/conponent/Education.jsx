@@ -8,7 +8,7 @@ import More from './More';
 import { useInView } from 'react-intersection-observer';
 import ScrollableContainer from './ScrollableContainer';
 
-const data = Database.PersonalInfo.StudyExperience;
+const data = Database.PersonalInfo.Education;
 const visblecontainer = Database.Animation.Variant.Welcomevisblecontainer;
 const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
 const item = Database.Animation.Variant.WelcomeItem;
@@ -16,7 +16,7 @@ const Welcomevisblecontainer =
   Database.Animation.Variant.Welcomevisblecontainer;
 const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 
-function StudyExperience({ hideTittle, simpleVer }) {
+function Education({ hideTittle, simpleVer }) {
   const isTittle = hideTittle || false;
   const lang = useLanguage();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -35,7 +35,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
     // threshold: 0.6,
   });
 
-  const StudyExperience = (
+  const Education = (
     <div className='z-50'>
       {!isTittle ? (
         <div>
@@ -54,8 +54,8 @@ function StudyExperience({ hideTittle, simpleVer }) {
             <div className='animate__animated animate__rotateIn '>
               <div className=' py-12 justify-center flex '>
                 <a
-                  href='#StudyExperience'
-                  id='StudyExperience'
+                  href='#Education'
+                  id='Education'
                   style={{ animationDelay: `${0.4}s` }}
                   className='flex  w-24 h-24 rounded-full items-center justify-center bg-gray-200/20  text-center hover:text-white shadow-none hover:bg-sky-900 z-50'
                 >
@@ -79,8 +79,8 @@ function StudyExperience({ hideTittle, simpleVer }) {
                 <i className=' fi text-5xl lg:text-8xl fi-rr-circle-book-open mr-[20px] pt-3 '></i>
               </div>
               <h2 className='animate__animated animate__zoomIn text-5xl lg:text-8xl font-bold font-mono'>
-                {lang == '1' && '学习经历'}
-                {lang == '0' && 'Study Experience'}
+                {lang == '1' && '教育'}
+                {lang == '0' && 'Education'}
               </h2>
             </motion.div>
           </div>
@@ -101,7 +101,7 @@ function StudyExperience({ hideTittle, simpleVer }) {
                   initial='hidden'
                   whileInView='visible'
                   // viewport={{ once: true }}
-                  viewport={{ margin: '-30%'}}
+                  viewport={{ margin: '-30%' }}
                   className='card-set p-[20px] overflow-hidden'
                   role='list'
                 >
@@ -152,12 +152,12 @@ function StudyExperience({ hideTittle, simpleVer }) {
                                         style={{
                                           animationDelay: `${index * 0.2}s`,
                                         }}
-                                        className='inline-flex animate__animated  animate__zoomIn animate__slow bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium  py-1 px-5'
+                                        className='inline-flex animate__animated  animate__zoomIn animate__slow bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium  py-1 px-5'
                                       >
                                         {Experience.tag[lang][0]}
                                       </div>
                                       {Experience.tag[lang][1] && (
-                                        <div className='inline-flex animate__animated  animate__zoomIn animate__slow text-white rounded-3xl bg-gradient-to-r from-emerald-500 to-sky-500 font-medium  py-1 px-5  '>
+                                        <div className='inline-flex animate__animated  animate__zoomIn animate__slow text-white rounded-3xl bg-gradient-to-br from-emerald-500 to-sky-500 font-medium  py-1 px-5  '>
                                           {Experience.tag[lang][1]}
                                         </div>
                                       )}
@@ -245,10 +245,10 @@ function StudyExperience({ hideTittle, simpleVer }) {
   return (
     <div>
       <motion.div className='max-h-[120vh] min-h-[120vh] pb-[30vh]'>
-        {StudyExperience}
+        {Education}
       </motion.div>
     </div>
   );
 }
 
-export default StudyExperience;
+export default Education;

@@ -1,9 +1,9 @@
 import Navbar from '../conponent/Navbar';
 import Database from '../Datebase.json';
 import { motion, AnimatePresence } from 'framer-motion';
-import StudyExperience from '../conponent/StudyExperience';
+import Education from '../conponent/Education';
 import { Link } from 'react-router-dom';
-const course = Database.PersonalInfo.StudyExperience;
+const course = Database.PersonalInfo.Education;
 const FM = course.filter((item) => item.major.includes('Material'));
 const visblecontainer = Database.Animation.Variant.fastWelcomevisblecontainer;
 const LeftappearBar = Database.Animation.Transition.LeftappearBar;
@@ -194,7 +194,7 @@ export default function material() {
               </div>
             </div>
           </section>
-          <StudyExperience hideTittle={true} className='h-[100vh]' />
+          <Education hideTittle={true} className='h-[100vh]' />
         </main>
       </div>
     </div>

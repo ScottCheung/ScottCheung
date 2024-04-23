@@ -3,8 +3,7 @@ import Navbar from './Navbar';
 import Database from '../Datebase.json';
 import { useLanguage } from '../help/helpFunction';
 import { useParams, useNavigate } from 'react-router-dom';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
+
 import { useInView } from 'react-intersection-observer';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import N from './Num';
@@ -207,7 +206,7 @@ function GridHouseCard() {
                     <div
                       className={`animate__animated animate__fadeInLeft w-20 h-12   flex  items-center rounded-full p-2 cursor-pointer ${
                         !reverseOrder == true
-                          ? 'justify-end bg-gradient-to-r from-sky-500 to-emerald-500'
+                          ? 'justify-end bg-gradient-to-br from-sky-500 to-emerald-500'
                           : 'justify-start bg-gray-300'
                       }`}
                       onClick={() => {
@@ -239,7 +238,7 @@ function GridHouseCard() {
                     <div
                       className={`animate__animated animate__fadeInRight w-20 h-12 flex items-center rounded-full p-2 cursor-pointer ${
                         FavSecMode == true
-                          ? 'justify-end bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500'
+                          ? 'justify-end bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500'
                           : 'justify-start bg-gray-300'
                       }`}
                       onClick={() => {

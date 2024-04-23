@@ -21,7 +21,7 @@ function WhymeCard() {
   const [isDelay, setIsDelay] = useState(false);
   const { Components, setComponents, whymeCard, setWhymeCard } =
     useAppContext();
-  const data = Database.PersonalInfo.StudyExperience;
+  const data = Database.PersonalInfo.Education;
   const lang = useLanguage();
   const keyfeature = Database.PersonalInfo.WhyMe[lang];
   const adjustPaddingForScrollbar = () => {

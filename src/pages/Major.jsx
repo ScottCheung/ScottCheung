@@ -1,7 +1,7 @@
 import '../LazyLoad';
 import React, { useEffect } from 'react';
 import Navbar from '../conponent/Navbar';
-import StudyExperience from '../conponent/StudyExperience';
+import Education from '../conponent/Education';
 import WhyMe from '../conponent/WhyMe';
 import SelfDescribing from '../conponent/SelfDescribing';
 import WorkExperience from '../conponent/WorkExperience';
@@ -57,7 +57,7 @@ function Home() {
             className='bg-[#fafafa] dark:bg-gray-950 rounded-[44px]'
             id='subscribe'
           >
-            <StudyExperience className='sm:m-[-4em]' />
+            <Education className='sm:m-[-4em]' />
             <KeyFeature />
             {/* <Capability /> */}
             {/* <SelfDescribing /> */}
