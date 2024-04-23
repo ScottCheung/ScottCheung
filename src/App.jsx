@@ -13,6 +13,7 @@ import SingleWhyme from './pages/SingleWhyme.jsx';
 import SingleWork from './pages/SingleWork.jsx';
 import Gallery from './conponent/Gallery.jsx';
 import { AppContextProvider } from './help/ContextManager';
+import Resume from './pages/Resume.jsx';
 
 const router = createBrowserRouter([
   {
@@ -69,12 +70,16 @@ const router = createBrowserRouter([
     element: <Scholarship />,
   },
   {
-    path: '/Gallery',
+    path: '/gallery',
     element: <Gallery />,
   },
   {
-    path: '/ContactMe',
+    path: '/Contact',
     element: <Contact />,
+  },
+  {
+    path: '/resume',
+    element: <Resume />,
   },
 ]);
 

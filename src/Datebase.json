@@ -24,7 +24,7 @@
       },
       {
         "name": ["Contact", "联络"],
-        "href": "/ContactMe",
+        "href": "/Contact",
         "icon": "fi-rr-following",
         "des": ["You can contact me by these ways ~", "您可以这样找到我 ~"],
         "expression": "(｡♥‿♥｡)"
