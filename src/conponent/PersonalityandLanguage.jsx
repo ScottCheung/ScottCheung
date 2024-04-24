@@ -143,7 +143,7 @@ function PersonalityandLanguage() {
                       per.color1 + ' ' + per.color2
                     } flex justify-between bg-gradient-to-r text-transparent bg-clip-text`}
                   >
-                    <motion.div className='text-2xl font-normal'>
+                    <motion.div className='text-[15px] font-[500]'>
                       {per.name}
                     </motion.div>
                     <motion.div className='typography-subsection-copy flex'>
@@ -201,13 +201,13 @@ function PersonalityandLanguage() {
               }}
               className='flex justify-between'
             >
-              <h3 className='tile-headline typography-subsection-headline py-4 text-white'>
+              <h3 className='tile-headline typography-subsection-headline py-4 text-gray-600'>
                 {lang == 0 && 'Language'}
                 {lang == 1 && '语言能力'}
               </h3>
               <a
                 href='https://en.wikipedia.org/wiki/Multilingualism'
-                className=' tile-headline text-xl typography-subsection-headline py-4 text-white'
+                className=' tile-headline text-xl typography-subsection-headline py-4 text-gray-600'
               >
                 {lang == 0 && 'Multi-language'}
                 {lang == 1 && '多语言'}
@@ -222,7 +222,7 @@ function PersonalityandLanguage() {
                       personality.color1 + ' ' + personality.color2
                     } flex justify-between bg-gradient-to-r text-transparent bg-clip-text`}
                   >
-                    <motion.div className='text-2xl font-normal'>
+                    <motion.div className='text-[15px] font-[500]'>
                       {personality.name}
                     </motion.div>
                     <motion.div className='typography-subsection-copy flex'>

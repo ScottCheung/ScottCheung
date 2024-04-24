@@ -108,7 +108,7 @@ function Skill() {
               ease: [0.455, 0.03, 0.515, 0.955],
               duration: 2,
             }}
-            className={`transition-all   pb-24 tile-header z-40 typography-section-intro-headline section-intro-headline from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br text-transparent bg-clip-text text-center pt-[70px] `}
+            className={`transition-all   pb-24 tile-header z-40 typography-section-intro-headline section-intro-headline from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-r text-transparent bg-clip-text text-center pt-[70px] `}
           >
             <i className=' fi text-5xl lg:text-8xl fi-rr-circle-user mr-[20px] pt-3 '></i>
             {lang == 0 && 'Capability'}
