@@ -81,14 +81,16 @@ function Gooduser() {
   const Gooduser = (
     // {/* Good User */}
     <motion.div
-      className='grid-item large-span-6 small-span-12 grid-item-check-in will-change carnival-item-in-view '
+      className='grid-item large-span-8 medium-span-6 small-span-12 grid-item-check-in will-change carnival-item-in-view '
       data-component-list='CarnivalInlineVideo TileOverlay WillChange'
       data-analytics-section-engagement='name:let your friend know when you arrive safely'
       data-tile-name='check-in'
     >
       <motion.div className='tile tile-with-overlay'>
         <motion.div
-          style={{ background: 'linear-gradient(45deg,#767676,#1d1d1f)' }}
+          style={{
+            background: `linear-gradient(45deg, rgba(118, 118, 118, 0.4), rgba(29, 29, 31, 1))`,
+          }}
           className='tile-content tile-rounded '
         >
           <motion.div
@@ -128,7 +130,7 @@ function Gooduser() {
               whileInView='visible'
               // viewport={{ once: true }}
 
-              className=' justify-center items-center w-full h-full grid grid-cols-4 content-center    '
+              className=' justify-center items-center w-full h-full grid  content-center    '
             >
               {apps.map((app, index) => (
                 <motion.div
@@ -146,6 +148,7 @@ function Gooduser() {
                   transition={{ duration: 1, delay: index * 0.05 }}
                   whileHover={{ scale: 1.02, transition: { duration: 0.5 } }}
                   whileTap={{ scale: 0.98, transition: { duration: 0.5 } }}
+                  className='grid-item large-span-3 medium-span-4 small-span-4'
                 >
                   <motion.div className='flex-shrink-0 flex justify-center'>
                     <img
@@ -155,7 +158,7 @@ function Gooduser() {
                       alt={app.alt}
                     />
                   </motion.div>
-                  <motion.div className='text-center pt-3 text-[14px] text-white typography-subsection-headline '>
+                  <motion.div className='text-center pt-3 text-[15px] lg:text-[18px]  md:text-[15px] py-[10px] text-white  typography-subsection-headline '>
                     {app.alt}
                   </motion.div>
                 </motion.div>

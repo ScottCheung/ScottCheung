@@ -1690,24 +1690,16 @@
           "src": "https://www.apple.com/v/numbers/n/images/overview/icon_hero_numbers__b7t2xnmny5ea_large_2x.png"
         },
         {
-          "alt": "Tailwind",
-          "src": "https://cdn.worldvectorlogo.com/logos/tailwind-css-1.svg"
+          "alt": "Figma",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/800px-Figma-logo.svg.png"
         },
         {
-          "alt": "Bootstrap",
-          "src": "https://cdn.worldvectorlogo.com/logos/bootstrap-5-1.svg"
+          "alt": "Sharp 3D",
+          "src": "https://www.svgrepo.com/show/532930/cube.svg"
         },
         {
-          "alt": "MUI",
-          "src": "https://cdn.worldvectorlogo.com/logos/material-ui-1.svg"
-        },
-        {
-          "alt": "EUI",
-          "src": "https://cdn.worldvectorlogo.com/logos/element-ui-1.svg"
-        },
-        {
-          "alt": "Framer",
-          "src": "https://cdn.worldvectorlogo.com/logos/framer-motion.svg"
+          "alt": "X-Mind",
+          "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Xmind_wikipedia.png/240px-Xmind_wikipedia.png"
         }
       ],
       "front-end": [
@@ -1727,6 +1719,12 @@
           "name": "React",
           "image": "https://www.svgrepo.com/show/473768/react.svg"
         },
+
+        {
+          "name": "Redux",
+          "image": "https://www.svgrepo.com/show/378456/redux-fill.svg"
+        },
+
         {
           "name": "Tailwind",
           "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg"
@@ -1782,6 +1780,10 @@
         {
           "name": "Python",
           "image": "https://www.svgrepo.com/show/510150/python-file.svg"
+        },
+        {
+          "name": "Neo4j",
+          "image": "https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg"
         }
       ],
       "Algorithm": [

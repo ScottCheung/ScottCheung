@@ -93,13 +93,14 @@ function Capability() {
       {/* stack */}
       <Skill />
 
-      {/* good user */}
-      <Gooduser />
       {/* High Quality */}
       <Highquality />
+      {/* good user */}
+      <Gooduser />
+
       {/* row2-left */}
       <Otherability />
-      {/* row2-right */}
+
       <PersonalityandLanguage />
       {/* INFJ instruction hover */}
       <motion.div

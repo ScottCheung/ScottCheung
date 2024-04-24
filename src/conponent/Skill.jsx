@@ -321,7 +321,7 @@ function Skill() {
                             <motion.div className='flex-shrink-0 flex justify-center'>
                               <img
                                 key={index}
-                                className='w-[50px] h-[50px] md:w-[60px] md:h-[60px]  from-red-500 to-red-700 bg-gradient-to-br p-2 rounded-[9px]'
+                                className='w-[50px] h-[50px]     from-red-500 to-red-700 bg-gradient-to-br p-2 rounded-[9px]'
                                 src={app.image}
                                 alt={app.name}
                               />
@@ -458,7 +458,7 @@ function Skill() {
                             <motion.div className='flex-shrink-0 flex justify-center'>
                               <img
                                 key={index}
-                                className='w-[50px] h-[50px] md:w-[60px] md:h-[60px]   from-orange-500 to-amber-500  bg-gradient-to-br p-2 rounded-[9px]'
+                                className='w-[50px] h-[50px]      from-orange-500 to-amber-500  bg-gradient-to-br p-2 rounded-[9px]'
                                 src={app.image}
                                 alt={app.name}
                               />
@@ -611,7 +611,7 @@ function Skill() {
                             <motion.div className='flex-shrink-0 flex justify-center'>
                               <img
                                 key={index}
-                                className='w-[50px] h-[50px] md:w-[60px] md:h-[60px]   from-sky-500 to-emerald-500 bg-gradient-to-br p-2 rounded-[9px]'
+                                className='w-[50px] h-[50px]      from-sky-500 to-emerald-500 bg-gradient-to-br p-2 rounded-[9px]'
                                 src={app.image}
                                 alt={app.name}
                               />
@@ -752,7 +752,7 @@ function Skill() {
                             <motion.div className='flex-shrink-0 flex justify-center'>
                               <img
                                 key={index}
-                                className='w-[50px] h-[50px] md:w-[60px] md:h-[60px]   from-cyan-500 bg-gradient-to-br to-blue-500  p-2 rounded-[9px]'
+                                className='w-[50px] h-[50px]      from-cyan-500 bg-gradient-to-br to-blue-500  p-2 rounded-[9px]'
                                 src={app.image}
                                 alt={app.name}
                               />
@@ -891,7 +891,7 @@ function Skill() {
                             >
                               <img
                                 key={index}
-                                className='w-[50px] h-[50px] md:w-[60px] md:h-[60px]   from-indigo-500 to-pink-500 bg-gradient-to-br  p-2 rounded-[9px]'
+                                className='w-[50px] h-[50px]      from-indigo-500 to-pink-500 bg-gradient-to-br  p-2 rounded-[9px]'
                                 src={app.image}
                                 alt={app.name}
                               />

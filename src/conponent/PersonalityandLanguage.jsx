@@ -87,7 +87,7 @@ function PersonalityandLanguage() {
       <motion.div className='tile tile-rounded gap-y-[28px] tile-content '>
         <motion.div
           style={{
-            background: 'linear-gradient(to bottom right,#d6dec2, #7dc23f ',
+            background: `linear-gradient(to bottom right, rgba(214, 222, 194, 0.5), rgba(125, 194, 63, 1))`,
           }}
           className='tile-header  rounded-[28px]  '
         >
@@ -178,7 +178,9 @@ function PersonalityandLanguage() {
           initial='hidden'
           whileInView='visible'
           className='tile-header rounded-[28px]  h-full  '
-          style={{ background: 'linear-gradient(135deg, #f4c2c2, #d6a3a3)' }}
+          style={{
+            background: `linear-gradient(135deg, rgba(244, 194, 194, 0.5), rgba(214, 163, 163, 1))`,
+          }}
         >
           <div
             className=' h-full w-full pb-[40vh] md:pb-[20vh]'

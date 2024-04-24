@@ -79,7 +79,7 @@ function Highquality() {
   }, []);
 
   const Highquality = (
-    <motion.div className='grid-item large-span-6 small-span-12 grid-item-check-in will-change carnival-item-in-view min-h-[650px]'>
+    <motion.div className='grid-item large-span-4 medium-span-6 small-span-12 grid-item-check-in will-change carnival-item-in-view min-h-[650px]'>
       {/* 半透明要改 */}
       <motion.div className='tile tile-rounded tile-with-overlay bg-white/30'>
         <div
@@ -102,8 +102,8 @@ function Highquality() {
             className='tile-header'
           >
             <h3 className='tile-headline typography-subsection-headline'>
-              {lang == 0 && 'High Quality? Not just for code'}
-              {lang == 1 && '完美？不止是代码'}
+              {lang == 0 && 'High Quality for evertthing'}
+              {lang == 1 && '完美方方面面'}
             </h3>
             {/* 完美主义 内容 */}
             <p className='tile-copy typography-subsection-copy'>
