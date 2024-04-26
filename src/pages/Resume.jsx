@@ -61,10 +61,10 @@ export default function Resume() {
     },
     sections: [
       {
-        title: 'Self-Introduction',
+        title: 'Summary',
         icon: <i class='fi fi-rr-user'></i>,
         content:
-          'Hello, I am Xianzhe Zhang, a student from UNSW. I am a full-stack developer with a strong background in computer science and engineering. I am passionate about software development and have a strong interest in AI and data science. I am a quick learner and a good team player. I am looking for a software development job. Looking forward to hearing from you.',
+          "Hello, I am Xianzhe, and just graduated from UNSW in May. I'm a full-stack developer with a strong computer science and engineering background. I am obsessed with front-end development and often stay up all night to develop websites (staying up late is not healthy, I am correcting it). I have a strong learning ability, can always quickly adapt to new technologies and new environments, and have a good team spirit. I'm looking for a software development job. Looking forward to your reply. This resume is rich in links. If you want to explore further, please click to explore more of my world.",
       },
       {
         title: 'Highlights',
@@ -73,19 +73,19 @@ export default function Resume() {
           {
             no: 4,
             keyfeature: 'Majors',
-            href: 'Degrees',
+            href: 'https://xianzhe.site/Degrees',
             icon: 'fi-rr-graduation-cap',
           },
           {
             no: 17,
             keyfeature: 'scholarships',
-            href: 'scholarships',
+            href: 'https://xianzhe.site/scholarships',
             icon: 'fi-rr-trophy-star',
           },
           {
             no: 60,
             keyfeature: ' Certificates',
-            href: 'Certificates',
+            href: 'https://xianzhe.site/Certificates',
             icon: 'fi-rr-diploma',
           },
           {
@@ -111,27 +111,49 @@ export default function Resume() {
         icon: <i class='fi fi-rr-graduation-cap'></i>,
         edus: [
           {
-            degree: 'BE',
-            school: 'SouthWest University of Science and Technology',
-            link: 'https://xianzhe.site/#Education',
+            degree: 'Bachelor of Engineer',
+            school: 'SWUST',
+            link: 'https://xianzhe.site/major/FunctionalMaterial',
             major: 'Functional Material',
             gpa: '84/100',
-            coursework: [
-              'circuit analysis',
-              'circuit design',
-              'Organic Chemistry',
-              'Physical Chemistry',
-              'Inorganic Chemistry',
-              'Analytical Chemistry',
-              'Polymer Chemistry',
-            ],
+            // coursework: [
+            //   'circuit analysis',
+            //   'circuit design',
+            //   'Organic Chemistry',
+            //   'Physical Chemistry',
+            //   'Inorganic Chemistry',
+            //   'Analytical Chemistry',
+            //   'Polymer Chemistry',
+            // ],
+            period: 'Sep 2017 - May 2022',
+          },
+          {
+            degree: 'Bachelor of Management',
+            school: 'SWUST',
+            link: 'https://xianzhe.site/major/BusinessAdministration',
+            major: 'Administration Management',
+
+            period: 'Sep 2021 - May 2022',
+          },
+          {
+            degree: 'Master of IT',
+            school: 'UNSW',
+            link: 'https://xianzhe.site/major/ArtificalInteliigence',
+            major: 'Artificial Intelligence',
+            period: 'Sep 2017 - May 2022',
+          },
+          {
+            degree: 'Master of IT',
+            school: 'UNSW',
+            link: 'https://xianzhe.site/major/DataScience',
+            major: 'Data Science',
             period: 'Sep 2017 - May 2022',
           },
         ],
       },
       {
         title: 'Projects',
-        link: 'https://xianzhe.site/#Project',
+        // link: 'https://xianzhe.site/#Project',
         icon: <i class='fi  fi-rr-folder'></i>,
         projects: [
           {
@@ -146,7 +168,7 @@ export default function Resume() {
         title: 'Skill',
         icon: <i class='fi fi-rr-tool-box'></i>,
         skills: {
-          Manage: [
+          Management: [
             '☆ Jira',
             '☆ SWOT',
             '☆ PEST',
@@ -257,7 +279,7 @@ export default function Resume() {
   };
 
   const h1 = `font-sans text-${EmphasizeColorLists[forceColor]}-${colorDepth} text-[50px] font-bold  transition-all duration-1000`;
-  const normaltext = 'text-[20px]';
+  const normaltext = 'text-[15px] text-jusify transition-all duration-1000';
   const h2 = `flex text-[30px]  font-black text-${
     EmphasizeColorLists[forceColor]
   }-${colorDepth} group-hover:text-${
@@ -345,7 +367,18 @@ export default function Resume() {
               <span className={divisionline}></span>
             </a>
             {/* Summary */}
-            {section.content && <p className={normaltext}>{section.content}</p>}
+            {section.content && (
+              <p
+                style={{
+                  textAlign: 'justify',
+                  textJustify: 'inter-word',
+                  width: '100%',
+                }}
+                className={normaltext}
+              >
+                {section.content}
+              </p>
+            )}
             {/* Highlights*/}
             <div className='flex flex-wrap w-full justify-center md:justify-between gap-[30px]'>
               {section.highlights &&
@@ -358,12 +391,15 @@ export default function Resume() {
                       className='group'
                     >
                       <a
-                        href={`${KeyFeature.href}`}
+                        href={KeyFeature.href ? `${KeyFeature.href}` : '#'}
+                        onClick={(e) => !KeyFeature.href && e.preventDefault()}
+                        target='_blank'
+                        rel='noopener noreferrer'
                         className='w-full flex flex-col item-center md:justify-center justify-start group transition-all'
                       >
                         <div className={whymeIcon}>
                           <i className={`mr-2 ${KeyFeature.icon} `}></i>
-                          <N n={KeyFeature.no} d={5} />
+                          <N n={KeyFeature.no} d={2} />
                         </div>
                         <div className='flex items-center w-full justify-center'>
                           <div className={whymelable}>
@@ -382,68 +418,74 @@ export default function Resume() {
             </div>
 
             {/* Education */}
-            {section.edus &&
-              section.edus.map((edu, index) => (
-                <a
-                  href={edu.link}
-                  target='_blank'
-                  rel='noopener noreferrer'
-                  key={index}
-                  className={
-                    edu.link &&
-                    'group cursor-pointer ' +
-                      ' mt-3 flex justify-between items-start ' +
-                      ` `
-                  }
-                >
-                  <div className={contentContainer}>
-                    <div className='md:flex flex-col justify-start md:flex-row md:justify-between items-center'>
-                      <h3 className={h3 + `cursor-pointer group-hover:bold `}>
-                        <div>
-                          {edu.degree} - {edu.school}
-                        </div>
-                        {edu.link && (
+            {section.edus && (
+              <div className='grid  -mx-[20px] gap-x-[20px]'>
+                {section.edus.map((edu, index) => (
+                  <a
+                    href={edu.link}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    key={index}
+                    className={
+                      edu.link &&
+                      'group cursor-pointer ' +
+                        ' mt-3 flex justify-between items-start ' +
+                        `large-span-6 medium-span-6 small-span-12 grid-item `
+                    }
+                  >
+                    <div className={contentContainer}>
+                      <div className='md:flex flex-col justify-start md:flex-row md:justify-between items-center'>
+                        <h3 className={h3 + `cursor-pointer group-hover:bold `}>
                           <div>
-                            <svg
-                              class='w-4 h-4 mx-2  -rotate-45'
-                              aria-hidden='true'
-                              xmlns='http://www.w3.org/2000/svg'
-                              fill='none'
-                              viewBox='0 0 14 10'
-                            >
-                              <path
-                                stroke='currentColor'
-                                stroke-linecap='round'
-                                stroke-linejoin='round'
-                                stroke-width='2'
-                                d='M1 5h12m0 0L9 1m4 4L9 9'
-                              />
-                            </svg>
+                            {edu.degree} - {edu.school}
                           </div>
-                        )}
-                      </h3>
-                      {/* duration */}
+                          {edu.link && (
+                            <div>
+                              <svg
+                                class='w-4 h-4 mx-2  -rotate-45'
+                                aria-hidden='true'
+                                xmlns='http://www.w3.org/2000/svg'
+                                fill='none'
+                                viewBox='0 0 14 10'
+                              >
+                                <path
+                                  stroke='currentColor'
+                                  stroke-linecap='round'
+                                  stroke-linejoin='round'
+                                  stroke-width='2'
+                                  d='M1 5h12m0 0L9 1m4 4L9 9'
+                                />
+                              </svg>
+                            </div>
+                          )}
+                        </h3>
+                        {/* duration */}
 
-                      <div className='flex flex-col justify-end '>
-                        <p className={timetext}>{edu.period}</p>
+                        <div className='flex flex-col justify-end '>
+                          <p className={timetext}>{edu.period}</p>
+                        </div>
+                      </div>
+
+                      <div
+                        className={
+                          normaltext +
+                          `  group-hover:text-${
+                            EmphasizeColorLists[forceColor]
+                          }-${colorDepth - 100}`
+                        }
+                      >
+                        <p className='mt-1 group-hover:underline '>
+                          {edu.major}
+                        </p>
+                        {/* <p>{edu.gpa}</p> */}
+                        {/* <p>{edu.coursework.join(', ')}</p> */}
                       </div>
                     </div>
+                  </a>
+                ))}
+              </div>
+            )}
 
-                    <div
-                      className={
-                        normaltext +
-                        `  group-hover:text-${
-                          EmphasizeColorLists[forceColor]
-                        }-${colorDepth - 100}`
-                      }
-                    >
-                      <p className='mt-1 group-hover:underline '>{edu.major}</p>
-                      <p>{edu.gpa}</p>
-                      <p>{edu.coursework.join(', ')}</p>
-                    </div>
-                  </div>
-                </a>
-              ))}
             {/* Projects */}
             {section.projects &&
               section.projects.map((project, index) => (

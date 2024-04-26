@@ -12,7 +12,7 @@
       {
         "name": ["Resume", "简历"],
         "href": "/resume",
-        "icon": "fi-rr-trophy-star",
+        "icon": "fi-rr-person-cv",
         "des": ["Here is my resume ~", "这里是我的简历~"],
         "expression": "(｡◕‿◕｡)"
       },

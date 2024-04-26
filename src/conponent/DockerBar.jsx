@@ -4,6 +4,7 @@ import { useAppContext } from '../help/ContextManager';
 import { useNavigate } from 'react-router-dom';
 import { Menu, Transition } from '@headlessui/react';
 import { Dialog } from '@headlessui/react';
+import N from './Num';
 
 function DockerBar(props) {
   const laptopMode = window.innerWidth > 1024;
@@ -11,7 +12,7 @@ function DockerBar(props) {
   const navigate = useNavigate();
   const cancelButtonRef = useRef(null);
   const { ResumeView, setResumeView } = useAppContext();
-  const [DockerBarPosition, setDockerBarPosition] = useState('center');
+  const [DockerBarPosition, setDockerBarPosition] = useState('hide');
   const EmphasizeColorLists = [
     'red',
     'orange',
@@ -23,9 +24,7 @@ function DockerBar(props) {
   ];
   const [isColorPanelOpen, setIsColorPanelOpen] = useState(laptopMode);
   const [isColorDepthPanelOpen, setIsColorDepthPanelOpen] = useState(true);
-  useEffect(() => {
-    console.log(ResumeView);
-  }, [ResumeView]);
+
   const shortcuts = [
     {
       key: 'D',
@@ -194,6 +193,8 @@ function DockerBar(props) {
     'inline-flex justify-center items-center bg-gray-200/95 dark:bg-gray-600/80 backdrop-blur-[25px]   rounded-[20px] ';
   const DockerButtonStyle =
     'flex transition-all duration-50 justify-center items-center w-[45px] h-[45px]   bg-gray-400  dark:bg-gray-100/50  backdrop-blur-[5px] rounded-[10px] ';
+  const PanelButtonStyle =
+    'flex transition-all duration-50 justify-center items-center w-[45px] h-[45px]     dark:bg-gray-100/50  backdrop-blur-[5px] rounded-[10px] ';
   const iconStyle = 'text-[20px] text-center text-gray-700 dark:text-gray-500';
 
   const Keyboard =
@@ -222,7 +223,7 @@ function DockerBar(props) {
         }
         ${
           DockerBarPosition === 'hide' &&
-          'scale-0 left-0 right-0 -bottom-[100px]'
+          'scale-0 left-0 right-0 -bottom-[100px] opacity-0'
         }
         }   `}
       >
@@ -601,6 +602,7 @@ function DockerBar(props) {
                               >
                                 Setting and Instruction
                               </Dialog.Title>
+
                               <button
                                 className='D p-[7px] flex justify-center items-center rounded-full w-[30px] h-[30px] bg-gray-200 dark:bg-gray-800/50 hover:bg-gray-300 dark:hover:bg-gray-700 transition-all duration-300'
                                 onClick={() => {
@@ -612,92 +614,146 @@ function DockerBar(props) {
                               </button>
                             </div>
 
-                            <div className='mt-2'>
-                              <div className='grid gap-[20px] grid-cols-4 py-[20px]'>
-                                {' '}
-                                {!laptopMode &&
-                                  EmphasizeColorLists.map((label, index) => (
-                                    <motion.div
-                                      key={index + Tools.length}
-                                      onClick={() => {
-                                        setResumeView({
-                                          ...ResumeView,
-                                          forceColor: index,
-                                        });
-                                        setIsColorDepthPanelOpen(false);
-                                      }}
-                                      className='flex flex-col justify-center items-center transition-all duration-50'
-                                    >
-                                      <div className='p-[7.5px]'>
+                            <div className='mt-8 '>
+                              <div className='flex w-full justify-between'>
+                                <label
+                                  htmlFor='steps-range'
+                                  className='block mb-2 text-[20px] font-medium text-gray-900 dark:text-white'
+                                >
+                                  Emphasize Color
+                                </label>
+                                <label
+                                  htmlFor='steps-range'
+                                  className={`block mb-2 text-[20px] font-medium text-${
+                                    EmphasizeColorLists[ResumeView.forceColor]
+                                  }-${ResumeView.colorDepth} dark:text-white`}
+                                >
+                                  <div className='rounded-full w-14 bg-black'></div>
+                                  {EmphasizeColorLists[ResumeView.forceColor]}
+                                </label>
+                              </div>
+                              <p className='text-[20px] text-left text-gray-500'>
+                                Choose the color you like to emphasize and
+                                adjust
+                              </p>
+                              {/* Color Panel */}
+                              <div className='grid gap-[20px] grid-cols-7 py-[20px]'>
+                                {EmphasizeColorLists.map((label, index) => (
+                                  <motion.div
+                                    key={index + Tools.length}
+                                    onClick={() => {
+                                      setResumeView({
+                                        ...ResumeView,
+                                        forceColor: index,
+                                      });
+                                      // setIsColorDepthPanelOpen(false);
+                                    }}
+                                    className={`flex flex-col justify-center items-center transition-all duration-50 `}
+                                  >
+                                    <div className={`p-[7.5px]`}>
+                                      <motion.div
+                                        style={{
+                                          animationDelay: ` ${
+                                            index * AnimationDelay
+                                          }s`,
+                                        }}
+                                        className={`${
+                                          hasEntered === 0
+                                            ? 'animate__animated animate__fadeInUp'
+                                            : ''
+                                        } ${PanelButtonStyle} 
+                                        transition-all duration-50
+                                        ${
+                                          EmphasizeColorLists[
+                                            ResumeView.forceColor
+                                          ] === label
+                                            ? ` bg-${
+                                                EmphasizeColorLists[
+                                                  ResumeView.forceColor
+                                                ]
+                                              }-${ResumeView.colorDepth}`
+                                            : `bg-gray-200`
+                                        }
+                                        `}
+                                      >
                                         <motion.div
-                                          style={{
-                                            animationDelay: ` ${
-                                              index * AnimationDelay
-                                            }s`,
-                                          }}
-                                          className={`${
-                                            hasEntered === 0
-                                              ? 'animate__animated animate__fadeInUp'
-                                              : ''
-                                          } 
-                  ${hasEntered ? 'rounded-full' : ''}
-                   
-                   ${DockerButtonStyle}                  
-                      `}
-                                        >
-                                          <motion.div
-                                            className={` ${
-                                              currentIndex ===
-                                              index + Tools.length
-                                                ? 'w-[30px] h-[30px]'
-                                                : 'rounded-full  blur-[5px] w-[20px] h-[20px] '
-                                            } cursor-pointer rounded-full text-gray-500 dark:text-white duration-300 transition-all bg-${label}-${
-                                              ResumeView.colorDepth
-                                            } dark:bg-${label}-900/50`}
-                                          ></motion.div>
-                                        </motion.div>
-                                      </div>
-                                      {/* Label Tag */}
-                                      {currentIndex ===
-                                        +index + Tools.length && (
-                                        <AnimatePresence>
-                                          <motion.div
-                                            initial={{
-                                              opacity: 0,
-                                              y: -40,
-                                              scale: 0,
-                                            }}
-                                            animate={{
-                                              opacity: 1,
-                                              y: 0,
-                                              scale: 1,
-                                              transition: { duration: 0.31 },
-                                            }}
-                                            exit={{
-                                              opacity: 0,
-                                              y: -15,
-                                              scale: 0,
-                                              transition: { duration: 0.3 },
-                                            }}
-                                            id={label}
-                                            className='  z-10 -mt-[53px] flex px-[7px] py-[2px] text-[12px] font-medium text-white  bg-gray-900/60 rounded-full shadow-sm   dark:bg-gray-700'
-                                          >
-                                            {label}
-                                          </motion.div>
-                                        </AnimatePresence>
-                                      )}
-                                    </motion.div>
-                                  ))}
+                                          className={`  w-[30px] h-[30px]  cursor-pointer rounded-full text-gray-500 dark:text-white duration-300 transition-all bg-${label}-${ResumeView.colorDepth} dark:bg-${label}-900/50`}
+                                        ></motion.div>
+                                      </motion.div>
+                                    </div>
+                                  </motion.div>
+                                ))}
+                              </div>
+                              <>
+                                <div className='flex w-full justify-between'>
+                                  <label
+                                    htmlFor='steps-range'
+                                    className='block mb-2 text-[20px] font-medium text-gray-900 dark:text-white'
+                                  >
+                                    Color Depth
+                                  </label>
+                                  <label
+                                    htmlFor='steps-range'
+                                    className='block mb-2 text-[20px] font-medium text-gray-900 dark:text-white'
+                                  >
+                                    <N n={ResumeView.colorDepth} d={1} />
+                                  </label>
+                                </div>
+                                <p className='text-[20px] text-left text-gray-500'>
+                                  Choose the color depth you like, higher
+                                  colorDepth is more visiible for high
+                                  performance display.
+                                </p>
+
+                                <motion.input
+                                  layout
+                                  whileTap={{
+                                    borderRadius: '10px',
+                                    height: '30px',
+                                  }}
+                                  type='range'
+                                  min={100}
+                                  max={900}
+                                  defaultValue='700'
+                                  onChange={(e) => {
+                                    e.preventDefault();
+                                    setResumeView({
+                                      ...ResumeView,
+                                      colorDepth: e.target.value,
+                                    });
+                                  }}
+                                  step='100'
+                                  className='w-full h-8 bg-gray-200 rounded-full appearance-none cursor-pointer dark:bg-gray-700 my-[20px]'
+                                />
+                              </>
+                              <div className='flex justify-start md:justify-between items-center flex-wrap'>
+                                <p className='flex text-left'>
+                                  Your Final Color is{' '}
+                                  {EmphasizeColorLists[ResumeView.forceColor]}{' '}
+                                  with color depth {ResumeView.colorDepth},
+                                  Enjoy! When you download or read the PDF, the
+                                  color will be applied to the PDF. Be like:
+                                </p>
+
+                                <p
+                                  className={`text-${
+                                    EmphasizeColorLists[ResumeView.forceColor]
+                                  }-${
+                                    ResumeView.colorDepth
+                                  } font-black text-[25px]`}
+                                >
+                                  Emphasize Color
+                                </p>
                               </div>
 
                               {laptopMode && (
-                                <div>
+                                <div className='mt-[40px]'>
                                   <p className='text-[20px] text-left text-gray-500'>
                                     Here are some convenient keyboard shortcuts
                                     for you to control dockerbar and the view
                                     settings.
                                   </p>
-                                  <div className='flex flex-col text-left gap-y-[10px]'>
+                                  <div className='grid grid-cols-2 text-left gap-y-[30px] my-[20px]'>
                                     {shortcuts.map((shortcut, index) => (
                                       <div
                                         key={index}
