@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "publish": "rm -rf docs && react-scripts build && mv build docs && gg",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "TW": "tailwindcss build public/style/style.css -o output.css"
