@@ -95,8 +95,8 @@ function DockerBar(props) {
       onClick: () => {
         const link = document.createElement('a');
         link.href =
-          "https://github.com/Xianzhezhang97/CV/raw/main/Xianzhe's%20Page.pdf"; // GitHub的文件下载链接
-        link.download = "Xianzhe's Page.pdf"; // 设置下载的文件名
+          "https://github.com/Xianzhezhang97/CV/raw/main/Xianzhe's%20Page.pdf";
+        link.download = "Xianzhe's CV.pdf";
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);

@@ -463,7 +463,7 @@ function Skill() {
                                 alt={app.name}
                               />
                             </motion.div>
-                            <motion.div className='text-[18px] lg:text-[20px]  font-semibold md:text-[20px] text-center pt-[20px] from-orange-500 to-amber-500  bg-gradient-to-br text-transparent bgrid-colslip-text'>
+                            <motion.div className='text-[18px] lg:text-[20px]  font-semibold md:text-[20px] text-center pt-[20px] from-orange-500 to-amber-500  bg-gradient-to-br text-transparent bg-clip-text'>
                               {app.name}
                             </motion.div>
                           </motion.div>
@@ -637,7 +637,7 @@ function Skill() {
                         {lang == 0 && 'Algorithm'}
                         {lang == 1 && '算法'}
                       </h3>
-                      <p className='tile-copy  from-cyan-500 bg-gradient-to-br to-blue-500 text-transparent bgrid-colslip-text'>
+                      <p className='tile-copy  from-cyan-500  to-blue-500 bg-gradient-to-br text-transparent bg-clip-text'>
                         {lang == 0 && (
                           <motion.div>
                             <p className='py-10  text-[17px] '>
@@ -757,7 +757,7 @@ function Skill() {
                                 alt={app.name}
                               />
                             </motion.div>
-                            <motion.div className='text-[18px] lg:text-[20px]  font-semibold md:text-[20px] text-center pt-[20px] from-cyan-500 bg-gradient-to-br to-blue-500 text-transparent bgrid-colslip-text'>
+                            <motion.div className='text-[18px] lg:text-[20px]  font-semibold md:text-[20px] text-center pt-[20px] from-cyan-500 bg-gradient-to-br to-blue-500 bg-gradient-to-br text-transparent bg-clip-text'>
                               {app.name}
                             </motion.div>
                           </motion.div>

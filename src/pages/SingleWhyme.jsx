@@ -126,7 +126,7 @@ export default function WhyM() {
                         selectedWhyMeItem.color1 +
                         ' ' +
                         selectedWhyMeItem.color2
-                      } bg-gradient-to-br rounded-full w-[100px] h-[100px] border border-white border-[4px]`}
+                      } bg-gradient-to-br rounded-full w-[100px] h-[100px]  border-white border-[4px]`}
                     >
                       <i
                         className={`fi text-white text-[50px] mt-[10px] ${selectedWhyMeItem.icon}`}
@@ -174,13 +174,20 @@ export default function WhyM() {
                                   selectedWhyMeItem.color1 +
                                   ' ' +
                                   selectedWhyMeItem.color2
-                                } bg-clip-text text-transparent bg-gradient-to-br text-[28px] animate__animated animate__zoomIn h-auto pb-[400px]`}
+                                } bg-clip-text text-transparent bg-gradient-to-br text-[15px] md:text-[28px] animate__animated animate__zoomIn h-auto pb-[400px]`}
                               >
                                 {selectedWhyMeItem.description
                                   .split('\n')
                                   .map((paragraph, index) => (
                                     <motion.div key={index}>
-                                      <p className='mb-2 text-left'>
+                                      <p
+                                        style={{
+                                          textAlign: 'justify',
+                                          textJustify: 'inter-word',
+                                          width: '100%',
+                                        }}
+                                        className='mb-2 text-jusify animate__animated animate__fadeInUp'
+                                      >
                                         {SelectText(paragraph)}
                                       </p>
                                       <br className='border-b' />
