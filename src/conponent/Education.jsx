@@ -90,155 +90,150 @@ function Education({ hideTittle, simpleVer }) {
       )}
 
       {/* Item 容器 */}
-      <AnimatePresence>
-        <section className=' section section-incentive background-alt staggered-end'>
-          <div className='gallery gallery-align-start gallery-icon-cards'>
-            <div className='scroll-visblecontainer'>
-              <div className='item-visblecontainer  '>
-                <motion.ul
-                  layout
-                  variants={Welcomevisblecontainer}
-                  initial='hidden'
-                  whileInView='visible'
-                  // viewport={{ once: true }}
-                  viewport={{ margin: '-30%' }}
-                  className='card-set p-[20px] overflow-hidden'
-                  role='list'
-                >
-                  {/* <ScrollableContainer
+      <section className=' section section-incentive background-alt staggered-end'>
+        <div className='gallery gallery-align-start gallery-icon-cards'>
+          <div className='scroll-visblecontainer'>
+            <div className='item-visblecontainer  '>
+              <motion.ul
+                layout
+                variants={Welcomevisblecontainer}
+                initial='hidden'
+                whileInView='visible'
+                viewport={{ once: true, margin: '-30%' }}
+                className='card-set p-[20px] overflow-hidden'
+                role='list'
+              >
+                {/* <ScrollableContainer
                     container={'pl-[40px]'}
                     Button_mt={'mt-[20px]'}
                   > */}
-                  {data.map((Experience, index) => (
-                    <motion.div
-                      href={Experience.href}
-                      key={index}
-                      variants={WelcomeItem}
-                      transition={StagerFadeInUp}
-                      whileHover={{ scale: 1.001 }}
-                      whileTap={{ scale: 0.99 }}
-                      style={{ animationDelay: `${0.15 * index + 0.4}s` }}
-                      className={`gallery-item grid-item current snap-start`}
-                    >
-                      <div className='icon-card card-visblecontainer '>
-                        <motion.div className='card ' tabIndex={index}>
-                          <div
-                            className={`card-modifier card-padding has-trigger-button fixed-width ${
-                              hideTittle ? 'bg-gray-50' : 'bg-white/30'
-                            }`}
-                          >
-                            <div className='card-viewport-content'>
-                              <div className='icon-card-content'>
-                                <div className=''>
-                                  <div className='flex-shrink-0'>
+                {data.map((Experience, index) => (
+                  <motion.div
+                    href={Experience.href}
+                    key={index}
+                    variants={WelcomeItem}
+                    transition={StagerFadeInUp}
+                    whileHover={{ scale: 1.001 }}
+                    whileTap={{ scale: 0.99 }}
+                    style={{ animationDelay: `${0.15 * index + 0.4}s` }}
+                    className={`gallery-item grid-item current snap-start`}
+                  >
+                    <div className='icon-card card-visblecontainer '>
+                      <motion.div className='card ' tabIndex={index}>
+                        <div
+                          className={`card-modifier card-padding has-trigger-button fixed-width ${
+                            hideTittle ? 'bg-gray-50' : 'bg-white/30'
+                          }`}
+                        >
+                          <div className='card-viewport-content'>
+                            <div className='icon-card-content'>
+                              <div className=''>
+                                <div className='flex-shrink-0'>
+                                  <div
+                                    className={` max-w-[120px] h-auto items-center flex justify-center overflow-hidden ${
+                                      Experience.tag[0][0] == 'Bachelor'
+                                        ? 'rounded-full bg-white '
+                                        : ''
+                                    }  `}
+                                  >
+                                    <img
+                                      style={{
+                                        animationDelay: `${index * 0.3}s`,
+                                      }}
+                                      src={Experience.logo}
+                                      alt={Experience.university}
+                                      className={`rounded-xl animate__animated  animate__zoomIn animate__fast `}
+                                    ></img>
+                                  </div>
+                                  <div className='py-10 flex justify-start space-x-3'>
                                     <div
-                                      className={` max-w-[120px] h-auto items-center flex justify-center overflow-hidden ${
-                                        Experience.tag[0][0] == 'Bachelor'
-                                          ? 'rounded-full bg-white '
-                                          : ''
-                                      }  `}
+                                      style={{
+                                        animationDelay: `${index * 0.2}s`,
+                                      }}
+                                      className='inline-flex animate__animated  animate__zoomIn animate__slow bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium  py-1 px-5'
                                     >
-                                      <img
-                                        style={{
-                                          animationDelay: `${index * 0.3}s`,
-                                        }}
-                                        src={Experience.logo}
-                                        alt={Experience.university}
-                                        className={`rounded-xl animate__animated  animate__zoomIn animate__fast `}
-                                      ></img>
+                                      {Experience.tag[lang][0]}
                                     </div>
-                                    <div className='py-10 flex justify-start space-x-3'>
-                                      <div
-                                        style={{
-                                          animationDelay: `${index * 0.2}s`,
-                                        }}
-                                        className='inline-flex animate__animated  animate__zoomIn animate__slow bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium  py-1 px-5'
-                                      >
-                                        {Experience.tag[lang][0]}
+                                    {Experience.tag[lang][1] && (
+                                      <div className='inline-flex animate__animated  animate__zoomIn animate__slow text-white rounded-3xl bg-gradient-to-br from-emerald-500 to-sky-500 font-medium  py-1 px-5  '>
+                                        {Experience.tag[lang][1]}
                                       </div>
-                                      {Experience.tag[lang][1] && (
-                                        <div className='inline-flex animate__animated  animate__zoomIn animate__slow text-white rounded-3xl bg-gradient-to-br from-emerald-500 to-sky-500 font-medium  py-1 px-5  '>
-                                          {Experience.tag[lang][1]}
-                                        </div>
-                                      )}
-                                    </div>
+                                    )}
                                   </div>
                                 </div>
-                                <div className='copy-visblecontainer'>
-                                  <div
+                              </div>
+                              <div className='copy-visblecontainer'>
+                                <div
+                                  style={{
+                                    animationDelay: `${index * 0.2}s`,
+                                  }}
+                                  className='flex flex-col items-start animate__animated animate__zoomIn  justify-start  mb-3'
+                                >
+                                  <div className='typography-card-headline'>
+                                    {`${Experience.major[lang][0]}`}
+                                    {lang == 1 &&
+                                      Experience.major[lang][1]}{' '}
+                                  </div>
+                                  <div className='typography-card-headline'>
+                                    {lang == 0 && Experience.major[lang][1]}
+                                  </div>
+                                </div>
+                                <div className={`${simpleVer ? 'hidden' : ''}`}>
+                                  <span
                                     style={{
-                                      animationDelay: `${index * 0.2}s`,
+                                      animationDelay: `${index * 0.3}s`,
                                     }}
-                                    className='flex flex-col items-start animate__animated animate__zoomIn  justify-start  mb-3'
+                                    className='text-justify-between text-center  animate__animated card-description animate__zoomIn  category text-white rounded-3xl bg-sky-900 py-1  font-medium px-5  ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700'
                                   >
-                                    <div className='typography-card-headline'>
-                                      {`${Experience.major[lang][0]}`}
-                                      {lang == 1 &&
-                                        Experience.major[lang][1]}{' '}
-                                    </div>
-                                    <div className='typography-card-headline'>
-                                      {lang == 0 && Experience.major[lang][1]}
-                                    </div>
-                                  </div>
-                                  <div
-                                    className={`${simpleVer ? 'hidden' : ''}`}
+                                    {Experience.time[lang]}
+                                  </span>
+                                  <p
+                                    style={{
+                                      ...hideRow(3),
+                                      animationDelay: `${index * 0.3}s`,
+                                    }}
+                                    className='mt-7 animate__animated  animate__fadeInUp  card-description text-justify text-gray-600 dark:text-gray-50'
                                   >
-                                    <span
-                                      style={{
-                                        animationDelay: `${index * 0.3}s`,
-                                      }}
-                                      className='text-justify-between text-center  animate__animated card-description animate__zoomIn  category text-white rounded-3xl bg-sky-900 py-1  font-medium px-5  ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700'
-                                    >
-                                      {Experience.time[lang]}
-                                    </span>
-                                    <p
-                                      style={{
-                                        ...hideRow(3),
-                                        animationDelay: `${index * 0.3}s`,
-                                      }}
-                                      className='mt-7 animate__animated  animate__fadeInUp  card-description text-justify text-gray-600 dark:text-gray-50'
-                                    >
-                                      {Experience.description[lang]}
-                                    </p>{' '}
-                                    <More color={'blue'} />
-                                  </div>
+                                    {Experience.description[lang]}
+                                  </p>{' '}
+                                  <More color={'blue'} />
                                 </div>
                               </div>
                             </div>
                           </div>
-                        </motion.div>
-                        <a
-                          className='anz-card-modal-link'
-                          href={Experience.href}
-                          aria-label=''
+                        </div>
+                      </motion.div>
+                      <a
+                        className='anz-card-modal-link'
+                        href={Experience.href}
+                        aria-label=''
+                      >
+                        <button
+                          className='card-modal-trigger modal-trigger card-cta-modal-button'
+                          type='link'
                         >
-                          <button
-                            className='card-modal-trigger modal-trigger card-cta-modal-button'
-                            type='link'
-                          >
-                            <div className='modal-trigger-visblecontainer'>
-                              <span className='card-cta-modal-button-icon'>
-                                <svg
-                                  xmlns='http://www.w3.org/2000/svg'
-                                  viewBox='8 8 20 20'
-                                  className='card-cta-modal-button-small-icon card-modal-button-small-icon'
-                                >
-                                  <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
-                                </svg>
-                              </span>
-                            </div>
-                          </button>
-                        </a>
-                      </div>
-                    </motion.div>
-                  ))}
-                  {/* </ScrollableContainer> */}
-                </motion.ul>
-              </div>
+                          <div className='modal-trigger-visblecontainer'>
+                            <span className='card-cta-modal-button-icon'>
+                              <svg
+                                xmlns='http://www.w3.org/2000/svg'
+                                viewBox='8 8 20 20'
+                                className='card-cta-modal-button-small-icon card-modal-button-small-icon'
+                              >
+                                <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+                      </a>
+                    </div>
+                  </motion.div>
+                ))}
+                {/* </ScrollableContainer> */}
+              </motion.ul>
             </div>
           </div>
-        </section>
-      </AnimatePresence>
+        </div>
+      </section>
     </div>
   );
 

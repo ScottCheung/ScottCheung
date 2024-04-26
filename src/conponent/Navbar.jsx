@@ -177,12 +177,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     transition={{ duration: 0.3 }}
                     data-popover-target={`version`}
                     layout
-                    onMouseEnter={() => {
-                      setShowProfile(true);
-                    }}
-                    onMouseLeave={() => {
-                      setShowProfile(false);
-                    }}
+                    // onMouseEnter={() => {
+                    //   setShowProfile(true);
+                    // }}
+                    // onMouseLeave={() => {
+                    //   setShowProfile(false);
+                    // }}
                     className='flex z-50'
                   >
                     <a
@@ -272,7 +272,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         id='version'
                         data-popover
                         transition={{ duration: 0.5 }}
-                        className={`w-[500px]  absolute m-[40px]    z-50  flex flex-col   `}
+                        className={`w-[500px]  absolute m-[40px] hidden   z-50  flex flex-col   `}
                       >
                         <motion.div
                           className={`p-[28px] absolute top-0 left-0 right-0 bottle-0 rounded-[20px] text-gray-500 bg-white border border-gray-200 shadow-sm  dark:text-gray-400 dark:bg-gray-800 dark:border-gray-600`}

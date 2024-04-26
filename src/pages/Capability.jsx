@@ -89,7 +89,10 @@ function Capability() {
   }, []);
 
   const Capability = (
-    <motion.div className=' grid visblecontainer section-sapphire py-48  z-50 '>
+    <motion.div
+      id='Capability'
+      className=' grid visblecontainer section-sapphire py-48  z-50 '
+    >
       {/* stack */}
       <Skill />
 

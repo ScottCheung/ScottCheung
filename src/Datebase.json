@@ -1618,6 +1618,18 @@
       ],
       "Apps": [
         {
+          "alt": "Keynote",
+          "src": "https://www.apple.com/v/keynote/n/images/overview/icon_keynote__fwcssyfzxxqq_large_2x.png"
+        },
+        {
+          "alt": "Pages",
+          "src": "https://www.apple.com/v/pages/o/images/overview/icon_pages__q25ozbj7q9m6_large_2x.png"
+        },
+        {
+          "alt": "Numbers",
+          "src": "https://www.apple.com/v/numbers/n/images/overview/icon_hero_numbers__b7t2xnmny5ea_large_2x.png"
+        },
+        {
           "alt": "Word",
           "src": "https://cdn.worldvectorlogo.com/logos/word-1.svg"
         },
@@ -1677,18 +1689,7 @@
           "alt": "Github",
           "src": "https://cdn.worldvectorlogo.com/logos/github-icon-1.svg"
         },
-        {
-          "alt": "Keynote",
-          "src": "https://www.apple.com/v/keynote/n/images/overview/icon_keynote__fwcssyfzxxqq_large_2x.png"
-        },
-        {
-          "alt": "Pages",
-          "src": "https://www.apple.com/v/pages/o/images/overview/icon_pages__q25ozbj7q9m6_large_2x.png"
-        },
-        {
-          "alt": "Numbers",
-          "src": "https://www.apple.com/v/numbers/n/images/overview/icon_hero_numbers__b7t2xnmny5ea_large_2x.png"
-        },
+
         {
           "alt": "Figma",
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Figma-logo.svg/800px-Figma-logo.svg.png"
@@ -1700,6 +1701,14 @@
         {
           "alt": "X-Mind",
           "src": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Xmind_wikipedia.png/240px-Xmind_wikipedia.png"
+        },
+        {
+          "alt": "Jira",
+          "src": "https://cdn.worldvectorlogo.com/logos/jira-1.svg"
+        },
+        {
+          "alt": "Final Cut Pro",
+          "src": "https://help.apple.com/assets/64FFB258AE78C91D760CB66A/64FFB25D3DC7043983057480/en_US/97f5f4dfe6df84d78caacff68ec63538.png"
         }
       ],
       "front-end": [

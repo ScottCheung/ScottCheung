@@ -101,13 +101,13 @@ const Carousel = ({ interval, children }) => {
       tabIndex='0'
     >
       {/* <span className='bg-black/50 w-full h-full absolute z-20'></span> */}
-      <div className='w-full h-full '>
+      <div className='w-full h-full bg-black '>
         {React.Children.map(children, (child, index) => (
           <div
             className={`w-full h-full ${
               index === activeIndex
-                ? ` cursor-pointer animate__animated ${animate} `
-                : 'hidden animate__animated animate__fadeOutLeft'
+                ? `absolute cursor-pointer animate__animated ${animate} `
+                : 'absolute animate__animated animate__fadeOut'
             }`}
             key={index}
           >

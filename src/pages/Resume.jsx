@@ -1,25 +1,28 @@
+import { useTime } from 'framer-motion';
 import React, { useState } from 'react';
+import DockerBar from '../conponent/DockerBar';
+import { useAppContext } from '../help/ContextManager';
+import { motion } from 'framer-motion';
+import N from '../conponent/Num';
 
 const EmphasizeColorLists = [
-  'blue',
-  'emerald',
-  'pink',
-  'green',
-  'orange',
-  'amber',
-  'lime',
-  'purple',
-  'sky',
   'red',
+  'orange',
+  'yellow',
+  'lime',
+  'sky',
   'blue',
+  'purple',
 ];
 
 export default function Resume() {
-  const [view, setView] = useState({ forceColor: 0 });
-  const [colorDepth, setColorDepth] = useState(900);
+  const { ResumeView } = useAppContext();
+  const forceColor = ResumeView.forceColor;
+  const colorDepth = ResumeView.colorDepth;
+
   const cvData = {
     header: {
-      name: 'Scott Zhang',
+      name: 'Xianzhe(Scott) Zhang',
       contacts: [
         {
           name: '+61 434344292',
@@ -40,9 +43,7 @@ export default function Resume() {
           name: 'xianzhe1110',
           icon: (
             <svg
-              className={`fill-${
-                EmphasizeColorLists[view.forceColor]
-              }-${colorDepth}`}
+              className={`fill-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
               xmlns='http://www.w3.org/2000/svg'
               viewBox='0 0 448 512'
             >
@@ -51,11 +52,11 @@ export default function Resume() {
           ),
           link: 'https://www.linkedin.com/in/xianzhe1110/',
         },
-        {
-          name: 'Project',
-          icon: <i class='fi fi-rr-folder'></i>,
-          link: 'https://xianzhe.site/project',
-        },
+        // {
+        //   name: 'Project',
+        //   icon: <i class='fi fi-rr-folder'></i>,
+        //   link: 'https://xianzhe.site/project',
+        // },
       ],
     },
     sections: [
@@ -66,13 +67,53 @@ export default function Resume() {
           'This is an example resume to showcase the capabilities of the open-source LaTeX CV generator, RenderCV. A substantial part of the content is taken from here, where a clean and tidy CV pattern is proposed by Gayle L. McDowell.',
       },
       {
+        title: 'Highlights',
+        icon: <i class='fi fi-sr-star-shooting'></i>,
+        highlights: [
+          {
+            no: 4,
+            keyfeature: 'Majors',
+            href: 'Degrees',
+            icon: 'fi-rr-graduation-cap',
+          },
+          {
+            no: 17,
+            keyfeature: 'scholarships',
+            href: 'scholarships',
+            icon: 'fi-rr-trophy-star',
+          },
+          {
+            no: 60,
+            keyfeature: ' Certificates',
+            href: 'Certificates',
+            icon: 'fi-rr-diploma',
+          },
+          {
+            no: 59,
+            keyfeature: ' Skills',
+            icon: 'fi-rr-tool-box',
+          },
+          {
+            no: 23,
+            keyfeature: ' Applications',
+            icon: 'fi-sr-window-alt',
+          },
+          {
+            no: 1000000,
+            result: '1 M+',
+            keyfeature: '1 million views+',
+            icon: 'fi-br-following',
+          },
+        ],
+      },
+      {
         title: 'Education',
-        href: 'https://xianzhe.site/#Education',
         icon: <i class='fi fi-rr-graduation-cap'></i>,
         edus: [
           {
             degree: 'BE',
             school: 'SouthWest University of Science and Technology',
+            link: 'https://xianzhe.site/#Education',
             major: 'Functional Material',
             gpa: '3.9/4.0',
             coursework: [
@@ -84,12 +125,102 @@ export default function Resume() {
               'Computational Theory',
             ],
             period: 'Sep 2000 - May 2005',
+            endtime: 'May 2005',
           },
         ],
       },
       {
+        title: 'Projects',
+        link: 'https://xianzhe.site/#Project',
+        icon: <i class='fi  fi-rr-folder'></i>,
+        projects: [
+          {
+            name: 'Neo4j iGrapher',
+            link: 'http://43.128.92.60/',
+            outcome: [
+              'Software Foundations',
+              'Computer Architecture',
+              'Algorithms',
+              'Artificial Intelligence',
+              'Comparison of Learning Algorithms',
+              'Computational Theory',
+            ],
+            period: 'Feb 2024 - May 2024',
+            endtime: 'May 2024',
+          },
+        ],
+      },
+      {
+        title: 'Skill',
+        icon: <i class='fi fi-rr-tool-box'></i>,
+        skills: {
+          Manage: [
+            '☆ Jira',
+            '☆ SWOT',
+            '☆ PEST',
+            '☆ Boston Matrix',
+            'Gantt Chart',
+            'Organizational Behavioral Analysis',
+            'strategic management',
+          ],
+          'Front-end': [
+            'HTML',
+            'CSS',
+            '☆ JavaScript',
+            '☆ React',
+            'Redux',
+            '☆ Tailwind',
+            '☆ Framer',
+            'Main UI',
+            'Animation libs',
+          ],
+          'Back-end': [
+            'MySQL',
+            '☆ PostgreSQL',
+            '☆ NodeJS',
+            '☆ Json',
+            'TablePlus',
+          ],
+          Database: [
+            'MySQL',
+            '☆ PostgreSQL',
+            'Tableau',
+            '☆ Python',
+            '☆ Neo4j',
+            '☆ Pandas',
+          ],
+          'AI-Algorithm': [
+            'Machine Learning',
+            '☆ Deep Learning',
+            'Natural Language',
+            '☆ Recommender System',
+          ],
+          'IT-Tool': ['☆ Github', '☆ SSH', 'Docker', '☆ Zsh', 'Vim'],
+          Text: ['☆ Markdown', 'LaTeX', '☆ Word', '☆ Pages', 'HTML'],
+          Slides: ['☆ PowerPoint', '☆ Keynotes', 'Google Slides'],
+          Video: [
+            '☆ Final Cut Pro',
+            'Premiere',
+            'After Effects',
+            '☆ DaVinci',
+            'iMovie',
+            '☆ JianYing',
+          ],
+          Graph: [
+            '☆ Photoshop',
+            '☆ Lightroom',
+            'Illustrator',
+            '☆ InDesign',
+            'XD',
+            '3D Max',
+            '☆ Sharp 3D',
+          ],
+          Language: ['English', '☆ Chinese', '☆ SiChuan Dialect'],
+          Music: ['Guitar', '☆ Piano'],
+        },
+      },
+      {
         title: 'Why Me',
-        href: 'https://xianzhe.site/#whyme',
         icon: <i className=' fi fi-rr-lightbulb-on'></i>,
         whymes: [
           {
@@ -133,30 +264,32 @@ export default function Resume() {
     ],
   };
 
-  const h1 = `font-sans text-${
-    EmphasizeColorLists[view.forceColor]
-  }-${colorDepth} text-[50px] font-bold`;
-  const normaltext = 'text-[15px]';
+  const h1 = `font-sans text-${EmphasizeColorLists[forceColor]}-${colorDepth} text-[50px] font-bold  transition-all duration-1000`;
+  const normaltext = 'text-[20px]';
   const h2 = `flex text-[30px]  font-black text-${
-    EmphasizeColorLists[view.forceColor]
-  }-${colorDepth} gap-x-[15px] items-center`;
-  const icon = `w-[15px] text-[15px] mr-[5px] mt-[2px]`;
-  const divisionline = ` flex-1 h-[2px] m-0 rounded-full bg-${
-    EmphasizeColorLists[view.forceColor]
-  }-${colorDepth} opacity-50`;
-  const h3 = `text-xl font-black`;
-  const whymeIcon = `text-[20px] flex justify-center items-center text-gray-400`;
-  const whymelable = `text-[15px] text-gray-400`;
-  // const normaltext = 'text-base';
-  // const h2 = `text-6xl font-black text-${EmphasizeColorLists[view.forceColor]}-${colorDepth} `; // 使用更大的尺寸 6xl 来增加 h2 标签的字体大小
-  // const icon = `w-4 text-base mr-1 mt-0.5`; // 使用 rem 单位, text-base 为字体大小，w-4, mr-1, mt-0.5 对应宽度和边距
-  // const divisionline = `w-full h-0.5 m-0 rounded-full bg-${
-  //   EmphasizeColorLists[view.forceColor]
-  // }-${colorDepth} opacity-50`; // 使用 rem 单位使线条高度更适应不同屏幕
-  // const h3 = `text-2xl font-black`; // 将 h3 的字体大小增加到 2xl
+    EmphasizeColorLists[forceColor]
+  }-${colorDepth} group-hover:text-${
+    EmphasizeColorLists[forceColor]
+  }-${Math.max(
+    colorDepth - 200 || 100,
+  )} gap-x-[15px] items-center transition-all duration-1000`;
+  const icon = `w-[15px] text-[15px] mr-[5px] mt-[2px]  transition-all duration-1000`;
+  const divisionline = ` flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-50  transition-all duration-1000`;
+  const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-10  transition-all duration-1000`;
+
+  const h3 = `text-[15px] font-black flex items-center `;
+  const timetext = `text-2xl font-[500] text-gray-400  transition-all duration-1000`;
+  const whymeIcon = `text-[20px] flex justify-center items-center text-gray-400 group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
+  const whymelable = `text-[15px] text-gray-400 group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
+  const contentContainer = `flex-1 flex flex-col justify-between`;
+  const laptopMode = window.innerWidth > 1024;
 
   return (
-    <div className='bg-white flex justify-center py-[5%] px-[5%] '>
+    <motion.div
+      layout
+      className={`bg-white flex justify-center py-[5%] px-[5%] pb-[30vh] `}
+    >
+      <DockerBar />
       <div className='max-w-[1000px] min-h-[100vh]'>
         <div className='text-center py-4'>
           <h1 className={h1}>{cvData.header.name}</h1>
@@ -167,18 +300,16 @@ export default function Resume() {
                   href={contact.link}
                   target='_blank'
                   rel='noopener noreferrer'
-                  className={`text-${
-                    EmphasizeColorLists[view.forceColor]
-                  }-${colorDepth}  flex justify-center items-center gap-x-[5px] `}
+                  className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth}  flex justify-center items-center gap-x-[5px] `}
                 >
                   <div className={icon}>{contact.icon}</div>
-                  {contact.name}
+                  <div className={contact.link && 'hover:underline'}>
+                    {contact.name}
+                  </div>
                 </a>
                 {index !== cvData.header.contacts.length - 1 && (
                   <div
-                    className={`w-[1px] h-4 bg-${
-                      EmphasizeColorLists[view.forceColor]
-                    }-${colorDepth}`}
+                    className={`w-[1px] h-4 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
                   ></div>
                 )}
               </React.Fragment>
@@ -187,33 +318,205 @@ export default function Resume() {
         </div>
         {cvData.sections.map((section) => (
           <div key={section.title} className=''>
+            {/* Headers */}
             <a
               target='_blank'
               rel='noopener noreferrer'
               href={section.href}
-              className='flex justify-between items-center gap-x-[20px] mt-[30px] mb-[20px]'
+              className={`flex justify-between items-center gap-x-[20px] mt-[30px] mb-[20px] ${
+                section.href && 'group'
+              }`}
             >
               <h2 className={h2}>
                 {section.icon}
                 {section.title}
+                {section.link && (
+                  <div className='-ml-[10px] flex'>
+                    <svg
+                      class='w-[20px] h-[20px]  -rotate-45'
+                      aria-hidden='true'
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 14 10'
+                    >
+                      <path
+                        stroke='currentColor'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='2'
+                        d='M1 5h12m0 0L9 1m4 4L9 9'
+                      />
+                    </svg>
+                  </div>
+                )}
               </h2>
               <span className={divisionline}></span>
             </a>
-
+            {/* Summary */}
             {section.content && <p className={normaltext}>{section.content}</p>}
+            {/* Highlights*/}
+            <div className='flex flex-wrap w-full justify-center md:justify-between gap-[30px]'>
+              {section.highlights &&
+                section.highlights.map((KeyFeature, index) => (
+                  <React.Fragment key={index}>
+                    <motion.div
+                      whileTap={{ scale: 0.97, transition: { duration: 0.1 } }}
+                      viewport={{ margin: '-30%' }}
+                      layout
+                      className='group'
+                    >
+                      <a
+                        href={`${KeyFeature.href}`}
+                        className='w-full flex flex-col item-center md:justify-center justify-start group transition-all'
+                      >
+                        <div className={whymeIcon}>
+                          <i className={`mr-2 ${KeyFeature.icon} `}></i>
+                          <N n={KeyFeature.no} d={5} />
+                        </div>
+                        <div className='flex items-center w-full justify-center'>
+                          <div className={whymelable}>
+                            <p>{KeyFeature.keyfeature}</p>
+                          </div>
+                        </div>
+                      </a>
+                    </motion.div>
+                    {index !== section.highlights.length - 1 && (
+                      <div
+                        className={`w-[1px] h-4 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
+                      ></div>
+                    )}
+                  </React.Fragment>
+                ))}
+            </div>
+
             {/* Education */}
             {section.edus &&
               section.edus.map((edu, index) => (
-                <div key={index} className='mt-3'>
-                  <h3 className={h3}>
-                    {edu.degree} - {edu.school}
-                  </h3>
-                  <div className={normaltext}>
-                    <p className='mt-1'>{edu.major}</p>
-                    <p>{edu.gpa}</p>
-                    <p>{edu.coursework.join(', ')}</p>
-                    <p>{edu.period}</p>
+                <a
+                  href={edu.link}
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  key={index}
+                  className={
+                    edu.link &&
+                    'group cursor-pointer ' +
+                      ' mt-3 flex justify-between items-start ' +
+                      ` `
+                  }
+                >
+                  <div className={contentContainer}>
+                    <div className='md:flex flex-col justify-start md:flex-row md:justify-between items-center'>
+                      <h3 className={h3 + `cursor-pointer group-hover:bold `}>
+                        <div>
+                          {edu.degree} - {edu.school}
+                        </div>
+                        {edu.link && (
+                          <div>
+                            <svg
+                              class='w-4 h-4 mx-2  -rotate-45'
+                              aria-hidden='true'
+                              xmlns='http://www.w3.org/2000/svg'
+                              fill='none'
+                              viewBox='0 0 14 10'
+                            >
+                              <path
+                                stroke='currentColor'
+                                stroke-linecap='round'
+                                stroke-linejoin='round'
+                                stroke-width='2'
+                                d='M1 5h12m0 0L9 1m4 4L9 9'
+                              />
+                            </svg>
+                          </div>
+                        )}
+                      </h3>
+                      {/* duration */}
+
+                      <div className='flex flex-col justify-end '>
+                        <p className={timetext}>{edu.period}</p>
+                      </div>
+                    </div>
+
+                    <div
+                      className={
+                        normaltext +
+                        `  group-hover:text-${
+                          EmphasizeColorLists[forceColor]
+                        }-${colorDepth - 100}`
+                      }
+                    >
+                      <p className='mt-1 group-hover:underline '>{edu.major}</p>
+                      <p>{edu.gpa}</p>
+                      <p>{edu.coursework.join(', ')}</p>
+                    </div>
                   </div>
+                </a>
+              ))}
+            {/* Projects */}
+            {section.projects &&
+              section.projects.map((project, index) => (
+                <a
+                  target='_blank'
+                  rel='noopener noreferrer'
+                  href={project.link}
+                  key={index}
+                  className={
+                    project.link &&
+                    'group cursor-pointer ' +
+                      ' mt-3 flex justify-between items-start ' +
+                      ` `
+                  }
+                >
+                  <div className={contentContainer}>
+                    <div className='md:flex flex-col justify-start md:flex-row md:justify-between items-center'>
+                      <h3 className={h3}>
+                        {project.name}
+                        {project.link && (
+                          <div>
+                            <svg
+                              class='w-4 h-4 mx-2  -rotate-45'
+                              aria-hidden='true'
+                              xmlns='http://www.w3.org/2000/svg'
+                              fill='none'
+                              viewBox='0 0 14 10'
+                            >
+                              <path
+                                stroke='currentColor'
+                                stroke-linecap='round'
+                                stroke-linejoin='round'
+                                stroke-width='2'
+                                d='M1 5h12m0 0L9 1m4 4L9 9'
+                              />
+                            </svg>
+                          </div>
+                        )}
+                      </h3>
+                      {/* duration */}
+                      <div className='flex flex-col justify-end '>
+                        <p className={timetext}>{project.period}</p>
+                      </div>
+                    </div>
+
+                    <div className={normaltext}>
+                      <p className='mt-1'>{project.major}</p>
+                      <p>{project.gpa}</p>
+                      <p>{project.outcome.join(', ')}</p>
+                    </div>
+                  </div>
+                </a>
+              ))}
+            {/* Skills */}
+            {section.skills &&
+              Object.entries(section.skills).map(([category, list], index) => (
+                <div
+                  key={index}
+                  className='flex justify-between items-start md:items-center gap-x-[30px] py-[15px] md:py-[3px] '
+                >
+                  <h2 className='font-[500] min-[20%]'>{category}</h2>
+
+                  <span className={division}></span>
+
+                  <p className='text-right'>{list.join('、')}</p>
                 </div>
               ))}
             {/* Whyme */}
@@ -225,6 +528,7 @@ export default function Resume() {
                       target='_blank'
                       rel='noopener noreferrer'
                       href={whyme.href}
+                      className={`group`}
                     >
                       <div key={index} className={whymeIcon}>
                         <i className={whyme.icon}></i>
@@ -233,9 +537,7 @@ export default function Resume() {
                     </a>
                     {index !== section.whymes.length - 1 && (
                       <div
-                        className={`w-[1px] h-4 bg-${
-                          EmphasizeColorLists[view.forceColor]
-                        }-${colorDepth}`}
+                        className={`w-[1px] h-4 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
                       ></div>
                     )}
                   </React.Fragment>
@@ -244,6 +546,6 @@ export default function Resume() {
           </div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 }

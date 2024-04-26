@@ -142,7 +142,7 @@ function WhymeCard() {
           style={{ willChange: 'transform' }}
           // transition={{ duration: EnterDuration }}
           layoutId={whymeCard.advantage}
-          className={` top-[10vh] left-[10vw]   right-[40vw] -bottom-[20vh] pb-[20vh] shadow-[30px] bg-white backdrop-blur-[200px] transform-gpu  rounded-[40px] p-[40px]  z-50 fixed`}
+          className={` top-[10vh] left-[10vw]   right-[40vw] -bottom-[20vh] pb-[20vh] shadow-[30px] bg-white backdrop-blur-[200px]  rounded-[40px] p-[40px]  z-50 fixed`}
         >
           {show && (
             <div className='flex   gap-x-[30px]'>

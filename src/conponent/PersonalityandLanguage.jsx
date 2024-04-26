@@ -147,15 +147,16 @@ function PersonalityandLanguage() {
                       {per.name}
                     </motion.div>
                     <motion.div className='typography-subsection-copy flex'>
-                      <N className='' n={per.label} d={1.5} /> %
+                      <N className='' n={per.label} d={3} /> %
                     </motion.div>
                   </motion.div>
                   <motion.div className='w-full bg-white/20 rounded-full h-4 mb-4 dark:bg-gray-700'>
                     <motion.div
                       key={index}
                       variants={{
-                        hidden: { width: '0%' },
+                        hidden: { opacity: 0, width: '0%' },
                         visible: {
+                          opacity: 1,
                           width: `${per.column}`,
                         },
                       }}
@@ -226,15 +227,16 @@ function PersonalityandLanguage() {
                       {personality.name}
                     </motion.div>
                     <motion.div className='typography-subsection-copy flex'>
-                      <N n={personality.label} d={1.5} />
+                      <N n={personality.label} d={3} />
                     </motion.div>
                   </motion.div>
                   <motion.div className='w-full bg-white/20 rounded-full h-4 mb-4 dark:bg-gray-700'>
                     <motion.div
                       key={index}
                       variants={{
-                        hidden: { width: '0%' },
+                        hidden: { opacity: 0, width: '0%' },
                         visible: {
+                          opacity: 1,
                           width: `${personality.column}`,
                         },
                       }}

@@ -83,9 +83,10 @@ function Home() {
 
   // 根据滚动进度计算位移
   const borderRadius = useTransform(scrollYProgress, [0, 1], [150, 0]);
+  const width = useTransform(scrollYProgress, [0, 1], ['20vw', '100vw']);
   const targetValue = useTransform(scrollYProgress, [0, 1], [0, 70]);
-  const opacity = useTransform(targetValue, [0, 70], [0, 5]);
-  const margin = useTransform(scrollYProgress, [0, 1], ['10%', '0%']);
+  const opacity = useTransform(targetValue, [0, 70], [0, 2]);
+  const margin = useTransform(scrollYProgress, [0, 1], ['20%', '0%']);
   return (
     <div className='relative overflow-hidden transition-all'>
       <Navbar topTextColor={true} />
@@ -126,11 +127,12 @@ function Home() {
         </Carousel>
       </div>
       <div className='w-full h-[100vh]   -z-50'></div>
-      <div className='relative z-40 -mt-[85px] w-full flex justify-center '>
+      <div className='relative z-40 -mt-[85px] w-full flex justify-center  '>
         <SubNav />
       </div>
       <motion.div
         style={{
+          width,
           borderRadius,
           opacity,
           marginLeft: margin,
