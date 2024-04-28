@@ -18,9 +18,10 @@ const EmphasizeColorLists = [
 ];
 
 export default function Resume() {
+  const printMode = false;
   let { resume } = useParams();
   const { ResumeView } = useAppContext();
-  const printMode = false;
+
   console.log("id", resume);
   const forceColor = printMode ? resume : ResumeView.forceColor;
   const colorDepth = ResumeView.colorDepth;
@@ -382,7 +383,9 @@ export default function Resume() {
         id="pdf-content"
         className={`bg-white flex relative justify-center ${printMode ? "" : "py-[5%] px-[5%]"} pb-[30vh] `}
       >
-        <div className="max-w-[1000px] min-h-[100vh] flex flex-col ">
+        <div
+          className={`${printMode ? "max-w-[1000px]" : "visblecontainer mx-auto"} min-h-[100vh] flex flex-col `}
+        >
           <div className="text-center py-4">
             <h1 className={h1}>{cvData.header.name}</h1>
             <div className="flex justify-center items-center gap-x-[15px] flex-wrap mt-[25px] ">
