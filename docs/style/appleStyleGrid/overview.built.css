@@ -16674,7 +16674,7 @@ html.text-zoom .card {
 
 @media only screen and (max-width: 734px) {
   .card .card-modifier {
-    min-width: 260px;
+    width: 344px;
   }
 }
 
@@ -16763,7 +16763,7 @@ html.text-zoom .card {
 
 @media only screen and (max-width: 734px) {
   .card .card-modifier.fixed-width {
-    width: 260px;
+    width: 344px;
   }
 }
 

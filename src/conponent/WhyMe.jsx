@@ -99,12 +99,12 @@ function WhyMe({ hideTittle }) {
               ease: [0.455, 0.03, 0.515, 0.955],
               duration: 1,
             }}
-            className="flex justify-center items-center animate__animated animate__fadeInUp"
+            className="flex items-center justify-center animate__animated animate__fadeInUp"
           >
             <div className="animate__animated animate__zoomIn">
-              <i className="text-5xl fi lg:text-8xl fi-rr-lightbulb-on mr-3 pt-3"></i>
+              <i className="pt-3 mr-3 text-5xl fi lg:text-8xl fi-rr-lightbulb-on"></i>
             </div>
-            <h2 className="text-5xl font-mono animate__animated animate__zoomIn lg:text-8xl font-bold">
+            <h2 className="font-mono text-5xl font-bold animate__animated animate__zoomIn lg:text-8xl">
               {lang == 0 && "Why me?"}
               {lang == 1 && "优势"}
             </h2>
@@ -140,7 +140,7 @@ function WhyMe({ hideTittle }) {
                         whileTap={{ scale: 0.99 }}
                         className="gallery-item grid-item current "
                       >
-                        <div className="icon-card card-visblecontainer">
+                        <div className="icon-card card-visblecontainer ">
                           <div className="card ">
                             <motion.span
                               className="absolute top-0 left-0 right-0  bottom-0 -z-20 overflow-hidden rounded-[28px] first-letter:"
@@ -155,24 +155,23 @@ function WhyMe({ hideTittle }) {
                               }}
                             ></motion.span>
                             <motion.div
-                              style={{ willChange: "transform" }}
                               layout
                               layoutId={feature.advantage}
                               className={`${
                                 hideTittle
                                   ? `${
                                       windowWidth > 768
-                                        ? "bg-gray-100"
+                                        ? "bg-gray-100 "
                                         : "bg-gray-900/80"
                                     }  `
-                                  : "bg-white/40 -z-30"
+                                  : "bg-white/40  -z-30"
                               }  card-modifier  fixed-width bg-button card-padding has-trigger-button`}
                             >
                               <motion.div className="card-viewport-content">
                                 <div className="icon-card-content">
                                   <div className="">
                                     <motion.div>
-                                      <motion.div className="flex justify-start items-center">
+                                      <motion.div className="flex items-center justify-start">
                                         <i
                                           style={{
                                             animationDelay: `${index * 0.2}s`,
@@ -206,7 +205,7 @@ function WhyMe({ hideTittle }) {
                                   <div
                                     className={`${
                                       hideTittle ? "hidden" : ""
-                                    } copy-visblecontainer md:h-[450px] h-[290px]`}
+                                    } copy-visblecontainer md:h-[450px] h-[400px] overflow-hidden`}
                                   >
                                     <div
                                       style={{
@@ -232,7 +231,7 @@ function WhyMe({ hideTittle }) {
                             (hideTittle && (
                               <a
                                 href={feature.href}
-                                className="anz-card-modal-link z-50 "
+                                className="z-50 anz-card-modal-link "
                               >
                                 <button
                                   className="card-modal-trigger modal-trigger card-cta-modal-button"
