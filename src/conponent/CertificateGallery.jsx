@@ -27,7 +27,7 @@ function CertificateGallery() {
               key={index}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              transition={{ type: "spring", duration: 2, delay: 0.02 * index }}
+              transition={{ type: "spring", duration: 2, delay: 0.3 * index }}
             >
               <div className="w-full rounded-[14px] flex justify-center items-center">
                 <img

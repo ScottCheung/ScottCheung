@@ -50,7 +50,7 @@ export default function Example() {
     };
   }, []);
   return (
-    <div className="overflow-hidden bg-white">
+    <div className="bg-white overflow-hidden">
       <AnimatePresence>
         <motion.div
           layout
@@ -142,15 +142,15 @@ export default function Example() {
                   </div>
                 </a>
               )}
-              <div className="welcome-video-wall-visblecontainer visblecontainer space-y-6 h-auto">
-                <div className=" text-gray-500 pt-24 pb-4">
+              <div className="h-auto welcome-video-wall-visblecontainer visblecontainer space-y-6">
+                <div className="text-gray-500 pt-24 pb-4">
                   <h2 className="typography-section-intro-headline section-intro-headline">
                     {lang == 0 && "University Status"}
                     {lang == 1 && "学校信息"}
                   </h2>
                 </div>
-                <p className=" text-justify">{data[0].unides[lang][0]}</p>
-                <p className=" text-justify">
+                <p className="text-justify ">{data[0].unides[lang][0]}</p>
+                <p className="text-justify ">
                   {data[0].unides[lang][1]}
                   <a className="text-sky-500" href={data[0].web}>
                     {" "}
@@ -158,15 +158,15 @@ export default function Example() {
                     {lang == 1 && "官网"} ]
                   </a>
                 </p>
-                <div className=" text-gray-500 pt-24 pb-4">
+                <div className="text-gray-500 pt-24 pb-4">
                   <h2 className="typography-section-intro-headline section-intro-headline">
                     {data[0].major[lang][0]}
                     {lang == 0 && " "}
                     {data[0].major[lang][1]}
                   </h2>
                 </div>
-                <p className=" text-justify">{data[0].majordes[lang][0]}</p>
-                <p className=" text-justify">
+                <p className="text-justify ">{data[0].majordes[lang][0]}</p>
+                <p className="text-justify ">
                   {data[0].majordes[lang][1]}
                   <a className="text-sky-500" href={data[0].majorweb}>
                     {" "}
@@ -176,7 +176,7 @@ export default function Example() {
                 </p>
               </div>
             </section>
-            <section className="section section-welcome no-pad-bottom visblecontainer">
+            <section className="section section-welcome no-pad-bottom visblecontainer overflow-hidden">
               <div className="welcome-video-wall-visblecontainer  space-y-6 h-auto w-[100%]">
                 <div className="w-[100%] text-gray-500 pt-24 pb-4  bg-gradient-to-br from-white from-10% via-white via-90% to-white/0  sticky top-[25px] z-50">
                   <h2 className="typography-section-intro-headline section-intro-headline ">
@@ -215,14 +215,14 @@ export default function Example() {
                   )}
                 </div>
 
-                <p className=" text-justify">{data[0].description[lang]}</p>
-                <div className="pb-48 relative overflow-x-auto">
+                <p className="text-justify ">{data[0].description[lang]}</p>
+                <div className="relative pb-48 overflow-x-auto md:overflow-hidden">
                   <motion.table
                     variants={visblecontainer}
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="w-full  text-left rtl:text-right text-gray-500 dark:text-gray-40"
+                    className="w-full text-left text-gray-500 rtl:text-right dark:text-gray-40 "
                   >
                     {lang == 0 && (
                       <thead
@@ -231,16 +231,16 @@ export default function Example() {
                         } text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 `}
                       >
                         <tr>
-                          <th scope="col" className="px-6 py-3 text-center">
+                          <th scope="col" className="text-center px-6 py-3">
                             Serial
                           </th>
                           <th scope="col" className="px-6 py-3">
                             Course
                           </th>
-                          <th scope="col" className="px-6 py-3 text-center">
+                          <th scope="col" className="text-center px-6 py-3">
                             Type
                           </th>
-                          <th scope="col" className="px-6 py-3 text-center">
+                          <th scope="col" className="text-center px-6 py-3">
                             descrition
                           </th>
                         </tr>
@@ -272,24 +272,25 @@ export default function Example() {
                         whileHover={{ scale: 1.001 }}
                         whileTap={{ scale: 0.99 }}
                         layout
+                        className=""
                       >
-                        <tr className="max-w-full text-center bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <tr className="text-center bg-white max-w-full border-b dark:bg-gray-800 dark:border-gray-700 ">
                           <th
                             scope="row"
-                            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center"
+                            className="text-center text-gray-900 px-6 py-4 font-medium whitespace-nowrap dark:text-white"
                           >
                             {index + 1}
                           </th>
                           <td
                             scope="row"
-                            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                            className="text-gray-900 px-6 py-4 font-medium whitespace-nowrap dark:text-white"
                           >
                             {subject.CourseName}
                           </td>
-                          <td className="px-6 py-4 text-center">
+                          <td className="text-center px-6 py-4">
                             {subject.Type}
                           </td>
-                          <td className="px-6 py-4 text-center">
+                          <td className="text-center px-6 py-4">
                             {subject.Description}
                           </td>
                         </tr>

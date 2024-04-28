@@ -242,8 +242,8 @@ function DockerBar(props) {
           <div className="fixed inset-0 bg-black/30 transition-opacity backdrop-blur-[20px]" />
         </Transition.Child>
 
-        <div className="fixed w-screen inset-0 z-10 overflow-y-auto">
-          <div className="flex justify-center items-start p-4 text-center min-h-full md:items-center sm:p-0">
+        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
+          <div className="flex items-start justify-center min-h-full p-4 text-center md:items-center sm:p-0">
             <Transition.Child
               as={Fragment}
               enter="transition ease-out duration-500"
@@ -369,7 +369,7 @@ function DockerBar(props) {
                             type="range"
                             min={100}
                             max={900}
-                            defaultValue="700"
+                            defaultValue={ResumeView.colorDepth}
                             onChange={(e) => {
                               e.preventDefault();
                               setResumeView({
@@ -381,7 +381,7 @@ function DockerBar(props) {
                             className="w-full h-8 bg-gray-200 appearance-none cursor-pointer dark:bg-gray-700 my-[20px] rounded-full overflow-hidden"
                           />
                         </>
-                        <div className="flex flex-wrap justify-start items-center md:justify-between">
+                        <div className="flex flex-wrap items-center justify-start md:justify-between">
                           <p className="flex ">
                             Your Final Color is{" "}
                             {" " +
@@ -491,14 +491,14 @@ function DockerBar(props) {
         >
           <motion.div
             layout
-            className="justify-center items-center inline-flex"
+            className="inline-flex items-center justify-center"
           >
             {/* Tools */}
             <AnimatePresence>
               <motion.div
                 layout
                 exit={{ width: 0 }}
-                className="justify-center items-center inline-flex "
+                className="inline-flex items-center justify-center "
               >
                 {!hidebutton &&
                   Tools.map((tool, index) => {
@@ -686,7 +686,7 @@ function DockerBar(props) {
                       forceColor: index,
                     })
                   }
-                  className="flex flex-col justify-center items-center transition-all duration-50"
+                  className="flex flex-col items-center justify-center transition-all duration-50"
                 >
                   <motion.div
                     layout
