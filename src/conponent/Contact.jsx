@@ -41,7 +41,7 @@ function Contact({ isTopOut }) {
               isOut ? "opacity-50" : "opacity-60"
             }  `}
           ></span>
-          <div className="pt-[50px]">
+          <div className="pt-[150px]">
             <AnimatePresence>
               <section className="relative section-incentive background-alt staggered-end">
                 <div className="blackoverlay">
@@ -56,7 +56,7 @@ function Contact({ isTopOut }) {
                           initial={{ opacity: 0 }}
                           whileInView={{ opacity: 1 }}
                           viewport={{ once: true }}
-                          className="card-set p-[50px] overflow-hidden pt-[60px]"
+                          className="card-set p-[50px] overflow-hidden pt-[100px]"
                           role="list"
                         >
                           {data.items.map((type, index) => (
@@ -134,7 +134,7 @@ function Contact({ isTopOut }) {
                                   </div>
                                 </div>
                                 <button
-                                  className="anz-card-modal-link z-10"
+                                  className="z-10 anz-card-modal-link"
                                   type="button"
                                   onClick={() => {
                                     const tempInput =
@@ -163,7 +163,7 @@ function Contact({ isTopOut }) {
                                   }}
                                 >
                                   <button
-                                    className="card-modal-trigger modal-trigger card-cta-modal-button z-50 "
+                                    className="z-50 card-modal-trigger modal-trigger card-cta-modal-button "
                                     type="button"
                                   >
                                     <div className="modal-trigger-visblecontainer">
@@ -185,9 +185,9 @@ function Contact({ isTopOut }) {
                                 data-popover
                                 id={`copy-${index}`}
                                 role="tooltip"
-                                className="flex absolute justify-center w-full text-white shadow-2xl opacity-0 z-50 invisible rounded-full transition-opacity duration-300 backdrop-blur-md bg-black/50 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+                                className="absolute z-50 flex justify-center invisible w-full text-white transition-opacity duration-300 rounded-full shadow-2xl opacity-0 backdrop-blur-md bg-black/50 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
                               >
-                                <p className="text-center px-6 py-4">
+                                <p className="px-6 py-4 text-center">
                                   {lang == 0 && "Copy the info of "}
                                   {lang == 1 && "复制 "}
                                   {type.type[lang]}
@@ -209,7 +209,7 @@ function Contact({ isTopOut }) {
                           initial={{ opacity: 0 }}
                           whileInView={{ opacity: 1 }}
                           transition={{ duration: 2, delay: 0.3 }}
-                          className="flex justify-between items-center px-20"
+                          className="flex items-center justify-between px-20"
                         >
                           {data.items.map((type, index) => (
                             <motion.li
@@ -220,7 +220,7 @@ function Contact({ isTopOut }) {
                               layout
                             >
                               <a href={type.link} className="flex-shrink-0">
-                                <div className="flex justify-center items-center">
+                                <div className="flex items-center justify-center">
                                   <i
                                     style={{
                                       animationDelay: `${index * 0.15}s`,
@@ -233,9 +233,9 @@ function Contact({ isTopOut }) {
                                   data-popover
                                   id={`way-${index}`}
                                   role="tooltip"
-                                  className="flex absolute justify-center w-64 text-white shadow-2xl opacity-0 z-10 invisible rounded-full transition-opacity duration-300 backdrop-blur-md bg-black/50 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+                                  className="absolute z-10 flex justify-center invisible w-64 text-white transition-opacity duration-300 rounded-full shadow-2xl opacity-0 backdrop-blur-md bg-black/50 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
                                 >
-                                  <p className="text-center px-6 py-4">
+                                  <p className="px-6 py-4 text-center">
                                     {lang == 0 && "Go to "}
                                     {lang == 1 && "访问 "}
                                     {type.type[lang]}
@@ -249,7 +249,7 @@ function Contact({ isTopOut }) {
                       </div>
                     </div>
                     {/* Scan Code */}
-                    <div className="py-12 px-10 ">
+                    <div className="px-10 py-12 ">
                       <div className="visblecontainer max-w-7xl">
                         <motion.div
                           initial={{ opacity: 0 }}
@@ -277,7 +277,7 @@ function Contact({ isTopOut }) {
                                     className={`text-white text-3xl animate__animated  animate__zoomIn`}
                                   ></img>
                                 </div>
-                                <div className="text-center text-white card-description py-4">
+                                <div className="py-4 text-center text-white card-description">
                                   {code.lable[lang]}
                                 </div>
                               </div>
@@ -302,7 +302,7 @@ function Contact({ isTopOut }) {
                         </motion.div>
                       </div>
                     </div>
-                    <footer className="flex justify-center text-white text-base-content my-12">
+                    <footer className="flex justify-center my-12 text-white text-base-content">
                       <p>
                         Copyright © 2023-2024 - All right reserved by Xianzhe
                       </p>
