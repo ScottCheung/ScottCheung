@@ -32,7 +32,10 @@ function CertificateGallery() {
               <div className="w-full rounded-[14px] flex justify-center items-center">
                 <img
                   className="flex h-auto max-w-full"
-                  src={item.src}
+                  src={item.src.replace(
+                    /\.(png|jpg|jpeg|gif|bmp|svg|webp)$/,
+                    ".md.$1",
+                  )}
                   alt={item.name}
                 />
               </div>
