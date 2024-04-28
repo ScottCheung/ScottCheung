@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { LazyMotion, domAnimation, m } from 'framer-motion';
-import Database from '../Datebase.json';
-import { Link } from 'react-router-dom';
-import { hideRow, useLanguage } from '../help/helpFunction';
-import More from './More';
-import { useInView } from 'react-intersection-observer';
-import ScrollableContainer from './ScrollableContainer';
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { LazyMotion, domAnimation, m } from "framer-motion";
+import Database from "../Database.json";
+import { Link } from "react-router-dom";
+import { hideRow, useLanguage } from "../help/helpFunction";
+import More from "./More";
+import { useInView } from "react-intersection-observer";
+import ScrollableContainer from "./ScrollableContainer";
 
 const data = Database.PersonalInfo.Education;
 const visblecontainer = Database.Animation.Variant.Welcomevisblecontainer;
@@ -24,9 +24,9 @@ function Education({ hideTittle, simpleVer }) {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -36,7 +36,7 @@ function Education({ hideTittle, simpleVer }) {
   });
 
   const Education = (
-    <div className='z-50'>
+    <div className="z-50">
       {!isTittle ? (
         <div>
           {/* 引导按钮 */}
@@ -49,23 +49,23 @@ function Education({ hideTittle, simpleVer }) {
               duration: 0.7,
               ease: [0.455, 0.03, 0.515, 0.955],
             }}
-            className='z-50'
+            className="z-50"
           >
-            <div className='animate__animated animate__rotateIn '>
-              <div className=' py-12 justify-center flex '>
+            <div className="animate__animated animate__rotateIn ">
+              <div className="flex justify-center py-12">
                 <a
-                  href='#Education'
-                  id='Education'
+                  href="#Education"
+                  id="Education"
                   style={{ animationDelay: `${0.4}s` }}
-                  className='flex  w-24 h-24 rounded-full items-center justify-center bg-gray-200/20  text-center hover:text-white shadow-none hover:bg-sky-900 z-50'
+                  className="flex justify-center items-center w-24 h-24 text-center rounded-full bg-gray-200/20 hover:text-white shadow-none hover:bg-sky-900 z-50"
                 >
-                  <i className='fi fi-br-angle-up text-3xl '></i>
+                  <i className="text-3xl fi fi-br-angle-up "></i>
                 </a>
               </div>
             </div>
           </motion.div>
           {/* 一级标题 */}
-          <div className=' flex justify-center py-12 min-h-[100px] max-h-[100px]'>
+          <div className=" flex justify-center py-12 min-h-[100px] max-h-[100px]">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -73,14 +73,14 @@ function Education({ hideTittle, simpleVer }) {
                 ease: [0.455, 0.03, 0.515, 0.955],
                 duration: 1,
               }}
-              className=' items-center flex justify-center  '
+              className="flex justify-center items-center "
             >
-              <div className='animate__animated animate__zoomIn'>
-                <i className=' fi text-5xl lg:text-8xl fi-rr-circle-book-open mr-[20px] pt-3 '></i>
+              <div className="animate__animated animate__zoomIn">
+                <i className=" fi text-5xl lg:text-8xl fi-rr-circle-book-open mr-[20px] pt-3 "></i>
               </div>
-              <h2 className='animate__animated animate__zoomIn text-5xl lg:text-8xl font-bold font-mono'>
-                {lang == '1' && '教育'}
-                {lang == '0' && 'Education'}
+              <h2 className="text-5xl font-mono animate__animated animate__zoomIn lg:text-8xl font-bold">
+                {lang == "1" && "教育"}
+                {lang == "0" && "Education"}
               </h2>
             </motion.div>
           </div>
@@ -90,18 +90,18 @@ function Education({ hideTittle, simpleVer }) {
       )}
 
       {/* Item 容器 */}
-      <section className=' section section-incentive background-alt staggered-end'>
-        <div className='gallery gallery-align-start gallery-icon-cards'>
-          <div className='scroll-visblecontainer'>
-            <div className='item-visblecontainer  '>
+      <section className=" section section-incentive background-alt staggered-end">
+        <div className="gallery gallery-align-center gallery-icon-cards">
+          <div className="scroll-visblecontainer">
+            <div className="item-visblecontainer ">
               <motion.ul
                 layout
                 variants={Welcomevisblecontainer}
-                initial='hidden'
-                whileInView='visible'
-                viewport={{ once: true, margin: '-30%' }}
-                className='card-set p-[20px] overflow-hidden'
-                role='list'
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-30%" }}
+                className={`card-set p-[20px] `}
+                role="list"
               >
                 {/* <ScrollableContainer
                     container={'pl-[40px]'}
@@ -118,22 +118,22 @@ function Education({ hideTittle, simpleVer }) {
                     style={{ animationDelay: `${0.15 * index + 0.4}s` }}
                     className={`gallery-item grid-item current snap-start`}
                   >
-                    <div className='icon-card card-visblecontainer '>
-                      <motion.div className='card ' tabIndex={index}>
+                    <div className="icon-card card-visblecontainer ">
+                      <motion.div className="card " tabIndex={index}>
                         <div
                           className={`card-modifier card-padding has-trigger-button fixed-width ${
-                            hideTittle ? 'bg-gray-50' : 'bg-white/30'
+                            hideTittle ? "bg-gray-50" : "bg-white/30"
                           }`}
                         >
-                          <div className='card-viewport-content'>
-                            <div className='icon-card-content'>
-                              <div className=''>
-                                <div className='flex-shrink-0'>
+                          <div className="card-viewport-content">
+                            <div className="icon-card-content">
+                              <div className="">
+                                <div className="flex-shrink-0">
                                   <div
                                     className={` max-w-[120px] h-auto items-center flex justify-center overflow-hidden ${
-                                      Experience.tag[0][0] == 'Bachelor'
-                                        ? 'rounded-full bg-white '
-                                        : ''
+                                      Experience.tag[0][0] == "Bachelor"
+                                        ? "rounded-full bg-white "
+                                        : ""
                                     }  `}
                                   >
                                     <img
@@ -145,45 +145,45 @@ function Education({ hideTittle, simpleVer }) {
                                       className={`rounded-xl animate__animated  animate__zoomIn animate__fast `}
                                     ></img>
                                   </div>
-                                  <div className='py-10 flex justify-start space-x-3'>
+                                  <div className="flex justify-start py-10 space-x-3">
                                     <div
                                       style={{
                                         animationDelay: `${index * 0.2}s`,
                                       }}
-                                      className='inline-flex animate__animated  animate__zoomIn animate__slow bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium  py-1 px-5'
+                                      className="text-white rounded-3xl inline-flex animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category font-medium py-1 px-5"
                                     >
                                       {Experience.tag[lang][0]}
                                     </div>
                                     {Experience.tag[lang][1] && (
-                                      <div className='inline-flex animate__animated  animate__zoomIn animate__slow text-white rounded-3xl bg-gradient-to-br from-emerald-500 to-sky-500 font-medium  py-1 px-5  '>
+                                      <div className="text-white rounded-3xl inline-flex animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-emerald-500 to-sky-500 font-medium py-1 px-5 ">
                                         {Experience.tag[lang][1]}
                                       </div>
                                     )}
                                   </div>
                                 </div>
                               </div>
-                              <div className='copy-visblecontainer'>
+                              <div className="copy-visblecontainer">
                                 <div
                                   style={{
                                     animationDelay: `${index * 0.2}s`,
                                   }}
-                                  className='flex flex-col items-start animate__animated animate__zoomIn  justify-start  mb-3'
+                                  className="flex flex-col justify-start items-start animate__animated animate__zoomIn mb-3"
                                 >
-                                  <div className='typography-card-headline'>
+                                  <div className="typography-card-headline">
                                     {`${Experience.major[lang][0]}`}
                                     {lang == 1 &&
-                                      Experience.major[lang][1]}{' '}
+                                      Experience.major[lang][1]}{" "}
                                   </div>
-                                  <div className='typography-card-headline'>
+                                  <div className="typography-card-headline">
                                     {lang == 0 && Experience.major[lang][1]}
                                   </div>
                                 </div>
-                                <div className={`${simpleVer ? 'hidden' : ''}`}>
+                                <div className={`${simpleVer ? "hidden" : ""}`}>
                                   <span
                                     style={{
                                       animationDelay: `${index * 0.3}s`,
                                     }}
-                                    className='text-justify-between text-center  animate__animated card-description animate__zoomIn  category text-white rounded-3xl bg-sky-900 py-1  font-medium px-5  ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700'
+                                    className="text-center text-white rounded-3xl text-justify-between animate__animated card-description animate__zoomIn category bg-sky-900 py-1 font-medium px-5 ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700"
                                   >
                                     {Experience.time[lang]}
                                   </span>
@@ -192,11 +192,11 @@ function Education({ hideTittle, simpleVer }) {
                                       ...hideRow(3),
                                       animationDelay: `${index * 0.3}s`,
                                     }}
-                                    className='mt-7 animate__animated  animate__fadeInUp  card-description text-justify text-gray-600 dark:text-gray-50'
+                                    className="text-justify text-gray-600 mt-7 animate__animated animate__fadeInUp card-description dark:text-gray-50"
                                   >
                                     {Experience.description[lang]}
-                                  </p>{' '}
-                                  <More color={'blue'} />
+                                  </p>{" "}
+                                  <More color={"blue"} />
                                 </div>
                               </div>
                             </div>
@@ -204,22 +204,22 @@ function Education({ hideTittle, simpleVer }) {
                         </div>
                       </motion.div>
                       <a
-                        className='anz-card-modal-link'
+                        className="anz-card-modal-link"
                         href={Experience.href}
-                        aria-label=''
+                        aria-label=""
                       >
                         <button
-                          className='card-modal-trigger modal-trigger card-cta-modal-button'
-                          type='link'
+                          className="card-modal-trigger modal-trigger card-cta-modal-button"
+                          type="link"
                         >
-                          <div className='modal-trigger-visblecontainer'>
-                            <span className='card-cta-modal-button-icon'>
+                          <div className="modal-trigger-visblecontainer">
+                            <span className="card-cta-modal-button-icon">
                               <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                viewBox='8 8 20 20'
-                                className='card-cta-modal-button-small-icon card-modal-button-small-icon'
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="8 8 20 20"
+                                className="card-cta-modal-button-small-icon card-modal-button-small-icon"
                               >
-                                <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
+                                <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
                               </svg>
                             </span>
                           </div>
@@ -239,7 +239,7 @@ function Education({ hideTittle, simpleVer }) {
 
   return (
     <div>
-      <motion.div className='max-h-[120vh] min-h-[120vh] pb-[30vh]'>
+      <motion.div className="max-h-[120vh] min-h-[120vh] pb-[30vh]">
         {Education}
       </motion.div>
     </div>

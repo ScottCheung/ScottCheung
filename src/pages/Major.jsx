@@ -1,14 +1,14 @@
-import '../LazyLoad';
-import React, { useEffect } from 'react';
-import Navbar from '../conponent/Navbar';
-import Education from '../conponent/Education';
-import WhyMe from '../conponent/WhyMe';
-import SelfDescribing from '../conponent/SelfDescribing';
-import WorkExperience from '../conponent/WorkExperience';
-import Capability from '../conponent/Capability';
-import KeyFeature from '../conponent/KeyFeature';
-import Welcome from '../conponent/Welocome';
-import { Link } from 'react-router-dom';
+import "../LazyLoad";
+import React, { useEffect } from "react";
+import Navbar from "../conponent/Navbar";
+import Education from "../conponent/Education";
+import WhyMe from "../conponent/WhyMe";
+import SelfDescribing from "../conponent/SelfDescribing";
+import WorkExperience from "../conponent/WorkExperience";
+import Capability from "../conponent/Capability";
+import KeyFeature from "../conponent/KeyFeature";
+import Welcome from "../conponent/Welocome";
+import { Link } from "react-router-dom";
 
 function Home() {
   useEffect(() => {
@@ -18,21 +18,21 @@ function Home() {
           const target = entry.target;
 
           if (entry.isIntersecting) {
-            target.classList.add('visible');
-            target.classList.remove('lazyload');
+            target.classList.add("visible");
+            target.classList.remove("lazyload");
           } else {
-            target.classList.add('lazyload');
+            target.classList.add("lazyload");
           }
         });
       },
       {
         root: null,
-        rootMargin: '50px',
+        rootMargin: "50px",
         threshold: 0.5, // 当目标元素的50%可见时触发回调
       },
     );
 
-    const sections = document.querySelectorAll('.lazyload');
+    const sections = document.querySelectorAll(".lazyload");
 
     sections.forEach((section) => {
       observer.observe(section);
@@ -46,18 +46,18 @@ function Home() {
   }, []);
 
   return (
-    <div className='overflow-hidden'>
+    <div className="overflow-hidden">
       <Navbar />
 
       <body>
         <Welcome />
 
-        <div className='main  main-raised rounded-[44px] '>
+        <div className="main  main-raised rounded-[44px] ">
           <div
-            className='bg-[#fafafa] dark:bg-gray-950 rounded-[44px]'
-            id='subscribe'
+            className="bg-[#fafafa] dark:bg-gray-950 rounded-[44px]"
+            id="subscribe"
           >
-            <Education className='sm:m-[-4em]' />
+            <Education className="sm:m-[-4em]" />
             <KeyFeature />
             {/* <Capability /> */}
             {/* <SelfDescribing /> */}

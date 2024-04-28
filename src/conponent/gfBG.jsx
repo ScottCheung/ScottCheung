@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 const CanvasBackground = () => {
   const canvasRef = useRef(null);
@@ -9,12 +9,12 @@ const CanvasBackground = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     const w = (canvas.width = visualViewport.width);
     const h = (canvas.height = visualViewport.height);
 
-    const canvas2 = document.createElement('canvas');
-    const ctx2 = canvas2.getContext('2d');
+    const canvas2 = document.createElement("canvas");
+    const ctx2 = canvas2.getContext("2d");
     canvas2.width = 100;
     canvas2.height = 100;
     const half = canvas2.width / 2;
@@ -26,10 +26,10 @@ const CanvasBackground = () => {
       half,
       half,
     );
-    gradient2.addColorStop(0.025, '#fff');
-    gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
-    gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
-    gradient2.addColorStop(1, 'transparent');
+    gradient2.addColorStop(0.025, "#fff");
+    gradient2.addColorStop(0.1, "hsl(" + hue + ", 61%, 33%)");
+    gradient2.addColorStop(0.25, "hsl(" + hue + ", 64%, 6%)");
+    gradient2.addColorStop(1, "transparent");
 
     ctx2.fillStyle = gradient2;
     ctx2.beginPath();
@@ -98,12 +98,12 @@ const CanvasBackground = () => {
     }
 
     function animation() {
-      ctx.globalCompositeOperation = 'source-over';
+      ctx.globalCompositeOperation = "source-over";
       ctx.globalAlpha = 0.8;
-      ctx.fillStyle = 'hsla(' + 217 + ', 64%, 6%, 1)';
+      ctx.fillStyle = "hsla(" + 217 + ", 64%, 6%, 1)";
       ctx.fillRect(0, 0, w, h);
 
-      ctx.globalCompositeOperation = 'lighter';
+      ctx.globalCompositeOperation = "lighter";
       for (let i = 1, l = stars.length; i < l; i++) {
         stars[i].draw();
       }
@@ -119,11 +119,11 @@ const CanvasBackground = () => {
       canvas.height = window.innerHeight;
     }
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Cleanup function
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
       cancelAnimationFrame(animation);
     };
   }, []);

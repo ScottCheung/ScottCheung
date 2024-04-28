@@ -1,84 +1,88 @@
-import React from 'react';
-import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './pages/Home.jsx';
-import Certificate from './pages/Certificate.jsx';
-import Errorpage from './pages/Errorpage.jsx';
-import SingleDegree from './pages/SingleDegree.jsx';
-import Contact from './pages/ContactPage.jsx';
-import Degrees from './pages/Degree.jsx';
-import Info from './pages/Info.jsx';
-import Scholarship from './pages/Scholarship.jsx';
-import Life from './pages/life.jsx';
-import SingleWhyme from './pages/SingleWhyme.jsx';
-import SingleWork from './pages/SingleWork.jsx';
-import Gallery from './conponent/Gallery.jsx';
-import { AppContextProvider } from './help/ContextManager';
-import Resume from './pages/Resume.jsx';
+import React from "react";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Certificate from "./pages/Certificate.jsx";
+import Errorpage from "./pages/Errorpage.jsx";
+import SingleDegree from "./pages/SingleDegree.jsx";
+import Contact from "./pages/ContactPage.jsx";
+import Degrees from "./pages/Degree.jsx";
+import Info from "./pages/Info.jsx";
+import Scholarship from "./pages/Scholarship.jsx";
+import Life from "./pages/life.jsx";
+import SingleWhyme from "./pages/SingleWhyme.jsx";
+import SingleWork from "./pages/SingleWork.jsx";
+import Gallery from "./conponent/Gallery.jsx";
+import { AppContextProvider } from "./help/ContextManager";
+import Resume from "./pages/Resume.jsx";
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Home />,
   },
   {
-    path: '/info',
+    path: "/info",
     element: <Info />,
   },
   {
-    path: '/Home',
+    path: "/Home",
     element: <Home />,
   },
   {
-    path: '/life',
+    path: "/life",
     element: <Life />,
   },
   {
-    path: '/life/gallery',
+    path: "/life/gallery",
     element: <Gallery />,
   },
   {
-    path: '/life/gallery/:gallery',
+    path: "/life/gallery/:gallery",
     element: <Gallery />,
   },
 
   {
-    path: '*',
+    path: "*",
     element: <Errorpage />,
   },
   {
-    path: '/major/:major',
+    path: "/major/:major",
     element: <SingleDegree />,
   },
   {
-    path: '/whyme/:whyme',
+    path: "/whyme/:whyme",
     element: <SingleWhyme />,
   },
   {
-    path: '/work/:work',
+    path: "/work/:work",
     element: <SingleWork />,
   },
   {
-    path: '/Degrees',
+    path: "/Degrees",
     element: <Degrees />,
   },
   {
-    path: '/certificates',
+    path: "/certificates",
     element: <Certificate />,
   },
   {
-    path: '/scholarships',
+    path: "/scholarships",
     element: <Scholarship />,
   },
   {
-    path: '/gallery',
+    path: "/gallery",
     element: <Gallery />,
   },
   {
-    path: '/Contact',
+    path: "/Contact",
     element: <Contact />,
   },
   {
-    path: '/resume',
+    path: "/resume",
+    element: <Resume />,
+  },
+  {
+    path: "/resume/:resume",
     element: <Resume />,
   },
 ]);

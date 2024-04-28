@@ -3,11 +3,11 @@ require = (function () {
     function o(i, f) {
       if (!n[i]) {
         if (!e[i]) {
-          var c = 'function' == typeof require && require;
+          var c = "function" == typeof require && require;
           if (!f && c) return c(i, !0);
           if (u) return u(i, !0);
           var a = new Error("Cannot find module '" + i + "'");
-          throw ((a.code = 'MODULE_NOT_FOUND'), a);
+          throw ((a.code = "MODULE_NOT_FOUND"), a);
         }
         var p = (n[i] = { exports: {} });
         e[i][0].call(
@@ -27,7 +27,7 @@ require = (function () {
       return n[i].exports;
     }
     for (
-      var u = 'function' == typeof require && require, i = 0;
+      var u = "function" == typeof require && require, i = 0;
       i < t.length;
       i++
     )
@@ -39,18 +39,18 @@ require = (function () {
   {
     1: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
-        var e = require('@apple/analytics-utils'),
-          t = require('@apple/analytics-data-layer'),
-          n = require('@apple/analytics-omniture-constants');
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
+        var e = require("@apple/analytics-utils"),
+          t = require("@apple/analytics-data-layer"),
+          n = require("@apple/analytics-omniture-constants");
         function r(e) {
           if (e && e.__esModule) return e;
           var t = Object.create(null);
           return (
             e &&
               Object.keys(e).forEach(function (n) {
-                if ('default' !== n) {
+                if ("default" !== n) {
                   var r = Object.getOwnPropertyDescriptor(e, n);
                   Object.defineProperty(
                     t,
@@ -73,14 +73,14 @@ require = (function () {
         var o = r(t),
           a = function (e) {
             return function (t) {
-              return 'string' == typeof t ? t.slice(0, e) : null;
+              return "string" == typeof t ? t.slice(0, e) : null;
             };
           },
-          i = { path: '/', secure: !0 },
+          i = { path: "/", secure: !0 },
           c = [t.KEYS.PERSISTED, t.KEYS.DEFERRED_BEACON],
           s = [
             {
-              name: 'btuid',
+              name: "btuid",
               sanitizers: [e.beaconHelpers.toBeaconSafeVal, a(7)],
             },
             {
@@ -119,7 +119,7 @@ require = (function () {
               name: n.VARS.EVAR_2,
               sanitizers: [e.beaconHelpers.toBeaconSafeVal, a(250)],
             },
-            { name: 'pj', sanitizers: [a(100)] },
+            { name: "pj", sanitizers: [a(100)] },
           ];
         function u(e, t) {
           var n = Object.keys(e);
@@ -141,14 +141,17 @@ require = (function () {
                   p(e, t, n[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : u(Object(n)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(n, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(n),
+                  )
+                : u(Object(n)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(n, t),
+                    );
+                  });
           }
           return e;
         }
@@ -172,29 +175,29 @@ require = (function () {
             })(e) ||
             (function (e) {
               if (
-                ('undefined' != typeof Symbol && null != e[Symbol.iterator]) ||
-                null != e['@@iterator']
+                ("undefined" != typeof Symbol && null != e[Symbol.iterator]) ||
+                null != e["@@iterator"]
               )
                 return Array.from(e);
             })(e) ||
             (function (e, t) {
               if (e) {
-                if ('string' == typeof e) return f(e, t);
+                if ("string" == typeof e) return f(e, t);
                 var n = Object.prototype.toString.call(e).slice(8, -1);
                 return (
-                  'Object' === n && e.constructor && (n = e.constructor.name),
-                  'Map' === n || 'Set' === n
+                  "Object" === n && e.constructor && (n = e.constructor.name),
+                  "Map" === n || "Set" === n
                     ? Array.from(e)
-                    : 'Arguments' === n ||
-                      /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
-                    ? f(e, t)
-                    : void 0
+                    : "Arguments" === n ||
+                        /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+                      ? f(e, t)
+                      : void 0
                 );
               }
             })(e) ||
             (function () {
               throw new TypeError(
-                'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+                "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
               );
             })()
           );
@@ -204,16 +207,16 @@ require = (function () {
           for (var n = 0, r = new Array(t); n < t; n++) r[n] = e[n];
           return r;
         }
-        var m = [].concat(b(t.KEYS.PATHS.CONFIG), ['global', 'cookieDomain']),
+        var m = [].concat(b(t.KEYS.PATHS.CONFIG), ["global", "cookieDomain"]),
           y = function () {
             return t.get(m);
           },
           S = e.pipe(
             function () {
-              var t = e.cookieJson.get('mk_epub');
+              var t = e.cookieJson.get("mk_epub");
               return (
                 e.cookieJson.set(
-                  'mk_epub',
+                  "mk_epub",
                   null,
                   l(l({}, i), {}, { domain: y() }),
                 ),
@@ -225,7 +228,7 @@ require = (function () {
               !e.beaconHelpers.isNotEmpty(t) ||
                 (e.beaconHelpers.isNotEmpty(n) && t.btuid === n.btuid) ||
                 o.set(c, t),
-                o.remove([].concat(b(c), ['btuid']));
+                o.remove([].concat(b(c), ["btuid"]));
             },
           ),
           O = e.pipe(
@@ -272,7 +275,7 @@ require = (function () {
             function (t) {
               e.beaconHelpers.isNotEmpty(t) &&
                 e.cookieJson.set(
-                  'mk_epub',
+                  "mk_epub",
                   t,
                   l(l({}, i), {}, { domain: y() }),
                 );
@@ -281,18 +284,18 @@ require = (function () {
         (exports.retrieve = S), (exports.store = g);
       },
       {
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-omniture-constants': 8,
-        '@apple/analytics-utils': 12,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-omniture-constants": 8,
+        "@apple/analytics-utils": 12,
       },
     ],
     2: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
-        var e = require('@apple/analytics-merge-beacons'),
-          r = require('@apple/analytics-passive-tracker'),
-          t = require('@apple/analytics-omniture-collection');
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
+        var e = require("@apple/analytics-merge-beacons"),
+          r = require("@apple/analytics-passive-tracker"),
+          t = require("@apple/analytics-omniture-collection");
         function n(e, r) {
           var t = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -313,14 +316,17 @@ require = (function () {
                   c(e, r, t[r]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-              : n(Object(t)).forEach(function (r) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    r,
-                    Object.getOwnPropertyDescriptor(t, r),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(t),
+                  )
+                : n(Object(t)).forEach(function (r) {
+                    Object.defineProperty(
+                      e,
+                      r,
+                      Object.getOwnPropertyDescriptor(t, r),
+                    );
+                  });
           }
           return e;
         }
@@ -344,9 +350,9 @@ require = (function () {
                     ? arguments[0]
                     : {},
                 r = e.keyPrefix,
-                t = void 0 === r ? '' : r,
+                t = void 0 === r ? "" : r,
                 n = e.valuePrefix,
-                a = void 0 === n ? '' : n,
+                a = void 0 === n ? "" : n,
                 o = e.count,
                 c = void 0 === o ? 0 : o,
                 i = {},
@@ -354,43 +360,43 @@ require = (function () {
               u <= c;
               u++
             )
-              i[''.concat(t).concat(u)] = ''.concat(a).concat(u);
+              i["".concat(t).concat(u)] = "".concat(a).concat(u);
             return i;
           },
           i = a(
             a(
               {
-                CAMPAIGN: 'campaign',
-                CHANNEL: 'channel',
-                CHAR_SET: 'charSet',
-                CITY: 'city',
-                CURRENCY_CODE: 'currencyCode',
-                EVENTS: 'events',
-                HIER1: 'hier1',
-                LINK_INTERNAL_FILTERS: 'linkInternalFilters',
-                LINK_TRACK_EVENTS: 'linkTrackEvents',
-                LINK_TRACK_VARS: 'linkTrackVars',
-                LIST_1: 'list1',
-                LIST_2: 'list2',
-                LIST_3: 'list3',
-                PAGE_NAME: 'pageName',
-                PAGE_TYPE: 'pageType',
-                PAGE_URL: 'pageURL',
-                PRODUCTS: 'products',
-                PROVINCE: 'province',
-                PURCHASE_ID: 'purchaseID',
-                REFERRER: 'referrer',
-                SERVER: 'server',
-                STATE: 'state',
-                TRACKING_SERVER: 'trackingServer',
-                TRACKING_SERVER_SECURE: 'trackingServerSecure',
-                ZIP: 'zip',
+                CAMPAIGN: "campaign",
+                CHANNEL: "channel",
+                CHAR_SET: "charSet",
+                CITY: "city",
+                CURRENCY_CODE: "currencyCode",
+                EVENTS: "events",
+                HIER1: "hier1",
+                LINK_INTERNAL_FILTERS: "linkInternalFilters",
+                LINK_TRACK_EVENTS: "linkTrackEvents",
+                LINK_TRACK_VARS: "linkTrackVars",
+                LIST_1: "list1",
+                LIST_2: "list2",
+                LIST_3: "list3",
+                PAGE_NAME: "pageName",
+                PAGE_TYPE: "pageType",
+                PAGE_URL: "pageURL",
+                PRODUCTS: "products",
+                PROVINCE: "province",
+                PURCHASE_ID: "purchaseID",
+                REFERRER: "referrer",
+                SERVER: "server",
+                STATE: "state",
+                TRACKING_SERVER: "trackingServer",
+                TRACKING_SERVER_SECURE: "trackingServerSecure",
+                ZIP: "zip",
               },
-              o({ keyPrefix: 'PROP_', valuePrefix: 'prop', count: 75 }),
+              o({ keyPrefix: "PROP_", valuePrefix: "prop", count: 75 }),
             ),
-            o({ keyPrefix: 'EVAR_', valuePrefix: 'eVar', count: 155 }),
+            o({ keyPrefix: "EVAR_", valuePrefix: "eVar", count: 155 }),
           ),
-          u = o({ keyPrefix: 'EVENT_', valuePrefix: 'event', count: 520 });
+          u = o({ keyPrefix: "EVENT_", valuePrefix: "event", count: 520 });
         function l(e, r) {
           var t = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -411,14 +417,17 @@ require = (function () {
                   s(e, r, t[r]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-              : l(Object(t)).forEach(function (r) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    r,
-                    Object.getOwnPropertyDescriptor(t, r),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(t),
+                  )
+                : l(Object(t)).forEach(function (r) {
+                    Object.defineProperty(
+                      e,
+                      r,
+                      Object.getOwnPropertyDescriptor(t, r),
+                    );
+                  });
           }
           return e;
         }
@@ -435,7 +444,7 @@ require = (function () {
             e
           );
         }
-        (u.SC_ADD = 'scAdd'), (u.PROD_VIEW = 'prodView');
+        (u.SC_ADD = "scAdd"), (u.PROD_VIEW = "prodView");
         var f = function () {
             var e =
                 arguments.length > 0 && void 0 !== arguments[0]
@@ -472,17 +481,17 @@ require = (function () {
                     var n = e[t];
                     if (!n || !n.api) return r;
                     var a = n.api,
-                      o = ''.concat('current' === t ? 'pageName' : 'c14', '+"');
+                      o = "".concat("current" === t ? "pageName" : "c14", '+"');
                     return r.concat(
                       a.map(function (e) {
                         var r = e.type,
                           t = e.value;
-                        return o + '::' + r + '::' + t;
+                        return o + "::" + r + "::" + t;
                       }),
                     );
                   }, [])
                   .join('^"+');
-              return 0 === r.length ? null : s({}, i.LIST_2, 'D=' + r + '"');
+              return 0 === r.length ? null : s({}, i.LIST_2, "D=" + r + '"');
             },
             function () {
               var e = (
@@ -505,7 +514,7 @@ require = (function () {
               return s({}, i.PROP_57, r);
             },
           ],
-          O = { pageLoad: 'page', userInteraction: 'next' },
+          O = { pageLoad: "page", userInteraction: "next" },
           b = function (t) {
             var n = t.type,
               a = t.globalTracking,
@@ -515,13 +524,13 @@ require = (function () {
               (a &&
                 (function (e) {
                   if (!o) return !1;
-                  var r = o.closest('a');
+                  var r = o.closest("a");
                   return (
                     null !== r &&
                     !(
                       !r.dataset.aseLoader &&
                       !r.dataset.aseTabsLoader &&
-                      '#' !== r.getAttribute('href')
+                      "#" !== r.getAttribute("href")
                     )
                   );
                 })()) ||
@@ -532,7 +541,7 @@ require = (function () {
               var t =
                   arguments.length > 0 && void 0 !== arguments[0]
                     ? arguments[0]
-                    : 'next',
+                    : "next",
                 n = r.load(t);
               return null === n
                 ? null
@@ -547,52 +556,52 @@ require = (function () {
               t
             );
           };
-        (b.label = 'analytics-bp-passive-tracker-loader'),
+        (b.label = "analytics-bp-passive-tracker-loader"),
           (exports.passiveTrackerLoader = b);
       },
       {
-        '@apple/analytics-merge-beacons': 6,
-        '@apple/analytics-omniture-collection': 7,
-        '@apple/analytics-passive-tracker': 9,
+        "@apple/analytics-merge-beacons": 6,
+        "@apple/analytics-omniture-collection": 7,
+        "@apple/analytics-passive-tracker": 9,
       },
     ],
     3: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
         var e = {
-          CONFIG: ['pageDataModel', 'config'],
-          PAGE_DATA: ['pageDataModel', 'data'],
-          DEFERRED_BEACON: ['persisted', 'deferredBeacon'],
+          CONFIG: ["pageDataModel", "config"],
+          PAGE_DATA: ["pageDataModel", "data"],
+          DEFERRED_BEACON: ["persisted", "deferredBeacon"],
         };
-        (exports.CLICK_TIMER = 'clickTimer'),
-          (exports.DEFERRED_BEACON = 'deferredBeacon'),
-          (exports.METADATA = 'metaData'),
-          (exports.PAGE_DATA_MODEL = 'pageDataModel'),
-          (exports.PAGE_DATA_MODEL_LEGACY = 'pageDataModel.data.properties'),
-          (exports.PAGE_LOAD = 'pageLoad'),
+        (exports.CLICK_TIMER = "clickTimer"),
+          (exports.DEFERRED_BEACON = "deferredBeacon"),
+          (exports.METADATA = "metaData"),
+          (exports.PAGE_DATA_MODEL = "pageDataModel"),
+          (exports.PAGE_DATA_MODEL_LEGACY = "pageDataModel.data.properties"),
+          (exports.PAGE_LOAD = "pageLoad"),
           (exports.PATHS = e),
-          (exports.PERSISTED = 'persisted'),
-          (exports.PURCHASE_JOURNEY = 'purchaseJourney'),
-          (exports.REFERRER = 'referrer'),
-          (exports.RELAY = 'relay'),
-          (exports.SESSION_STORE = 'sessionStore');
+          (exports.PERSISTED = "persisted"),
+          (exports.PURCHASE_JOURNEY = "purchaseJourney"),
+          (exports.REFERRER = "referrer"),
+          (exports.RELAY = "relay"),
+          (exports.SESSION_STORE = "sessionStore");
       },
       {},
     ],
     4: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
-        var e = require('@apple/analytics-data-layer-keys'),
-          t = require('@apple/analytics-utils');
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
+        var e = require("@apple/analytics-data-layer-keys"),
+          t = require("@apple/analytics-utils");
         function r(e) {
           if (e && e.__esModule) return e;
           var t = Object.create(null);
           return (
             e &&
               Object.keys(e).forEach(function (r) {
-                if ('default' !== r) {
+                if ("default" !== r) {
                   var o = Object.getOwnPropertyDescriptor(e, r);
                   Object.defineProperty(
                     t,
@@ -615,17 +624,17 @@ require = (function () {
         var o,
           n = r(e),
           i = function () {
-            t.localStorage.remove('mk_epub_expiry'),
-              t.localStorage.remove('mk_epub');
+            t.localStorage.remove("mk_epub_expiry"),
+              t.localStorage.remove("mk_epub");
           },
           s = function () {
             return (
-              (Number(t.localStorage.get('mk_epub_expiry')) || 0) < Date.now()
+              (Number(t.localStorage.get("mk_epub_expiry")) || 0) < Date.now()
             );
           },
           a = function e(r) {
             (!r && s()) ||
-              (t.localStorage.set('mk_epub_expiry', Date.now() + 72e5),
+              (t.localStorage.set("mk_epub_expiry", Date.now() + 72e5),
               (o = setTimeout(e, 3e5)));
           },
           c = function () {
@@ -645,16 +654,16 @@ require = (function () {
         }
         function f(e) {
           return (f =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
@@ -672,7 +681,7 @@ require = (function () {
           );
         }
         var l = function (e) {
-            return !(!e || 'object' !== f(e) || Array.isArray(e));
+            return !(!e || "object" !== f(e) || Array.isArray(e));
           },
           y = {},
           b = function (e) {
@@ -683,11 +692,11 @@ require = (function () {
           },
           g = {},
           k = {
-            pageDataModel: ['key', 'selector'],
-            meta: ['key', 'selector', 'keyAttribute', 'valueAttribute'],
-            state: ['defaultState'],
-            persisted: ['key'],
-            sessionStore: ['key'],
+            pageDataModel: ["key", "selector"],
+            meta: ["key", "selector", "keyAttribute", "valueAttribute"],
+            state: ["defaultState"],
+            persisted: ["key"],
+            sessionStore: ["key"],
           },
           d = function (e) {
             l(e) &&
@@ -709,17 +718,17 @@ require = (function () {
                             p(e, t, r[t]);
                           })
                         : Object.getOwnPropertyDescriptors
-                        ? Object.defineProperties(
-                            e,
-                            Object.getOwnPropertyDescriptors(r),
-                          )
-                        : u(Object(r)).forEach(function (t) {
-                            Object.defineProperty(
+                          ? Object.defineProperties(
                               e,
-                              t,
-                              Object.getOwnPropertyDescriptor(r, t),
-                            );
-                          });
+                              Object.getOwnPropertyDescriptors(r),
+                            )
+                          : u(Object(r)).forEach(function (t) {
+                              Object.defineProperty(
+                                e,
+                                t,
+                                Object.getOwnPropertyDescriptor(r, t),
+                              );
+                            });
                     }
                     return e;
                   })({}, e[t]));
@@ -731,7 +740,7 @@ require = (function () {
                 [g.persisted.key],
                 (function () {
                   if (s()) return i(), {};
-                  var e = t.localStorageJson.get('mk_epub');
+                  var e = t.localStorageJson.get("mk_epub");
                   return e ? (c(), e) : (i(), {});
                 })(),
               );
@@ -740,28 +749,28 @@ require = (function () {
             var e;
             g.persisted &&
               ((e = b([g.persisted.key])) &&
-              'object' === f(e) &&
+              "object" === f(e) &&
               Object.keys(e).length
-                ? (c(), t.localStorageJson.set('mk_epub', e))
+                ? (c(), t.localStorageJson.set("mk_epub", e))
                 : i());
           },
           v = function () {
-            t.sessionStorage.remove('mk_epub');
+            t.sessionStorage.remove("mk_epub");
           },
           O = function () {
             g.sessionStore &&
               m(
                 [g.sessionStore.key],
-                t.sessionStorageJson.get('mk_epub') || (v(), {}),
+                t.sessionStorageJson.get("mk_epub") || (v(), {}),
               );
           },
           P = function () {
             var e;
             g.sessionStore &&
               ((e = b([g.sessionStore.key])) &&
-              'object' === f(e) &&
+              "object" === f(e) &&
               Object.keys(e).length
-                ? t.sessionStorageJson.set('mk_epub', e)
+                ? t.sessionStorageJson.set("mk_epub", e)
                 : v());
           },
           h = function (e, r) {
@@ -789,7 +798,7 @@ require = (function () {
                     u < c.length;
                     u++
                   )
-                    s[c[u].getAttribute(o).replace(n, '')] =
+                    s[c[u].getAttribute(o).replace(n, "")] =
                       c[u].getAttribute(i);
                   h(t, s);
                 }
@@ -819,12 +828,12 @@ require = (function () {
               d(e),
               _(),
               g.persisted &&
-                'function' == typeof (t = S) &&
+                "function" == typeof (t = S) &&
                 window.addEventListener(
-                  'storage',
+                  "storage",
                   (function (e) {
                     return function (t) {
-                      'mk_epub' === t.key && e();
+                      "mk_epub" === t.key && e();
                     };
                   })(t),
                 ));
@@ -839,14 +848,14 @@ require = (function () {
           }),
           (exports.set = h);
       },
-      { '@apple/analytics-data-layer-keys': 3, '@apple/analytics-utils': 12 },
+      { "@apple/analytics-data-layer-keys": 3, "@apple/analytics-utils": 12 },
     ],
     5: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
-        var e = require('@apple/analytics-omniture-collection'),
-          n = require('@apple/analytics-omniture-constants'),
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
+        var e = require("@apple/analytics-omniture-collection"),
+          n = require("@apple/analytics-omniture-constants"),
           t = {
             engagementObserver: {},
             onPageEnd: function () {},
@@ -891,7 +900,7 @@ require = (function () {
           n instanceof HTMLElement &&
             (a ||
               ((t.element = n),
-              'function' == typeof r && (t.onPageEnd = r),
+              "function" == typeof r && (t.onPageEnd = r),
               o({ element: n }),
               (a = !0)));
         }),
@@ -901,15 +910,15 @@ require = (function () {
           });
       },
       {
-        '@apple/analytics-omniture-collection': 7,
-        '@apple/analytics-omniture-constants': 8,
+        "@apple/analytics-omniture-collection": 7,
+        "@apple/analytics-omniture-constants": 8,
       },
     ],
     6: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
-        var e = require('@apple/analytics-omniture-collection'),
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
+        var e = require("@apple/analytics-omniture-collection"),
           r = Object.freeze({
             __proto__: null,
             target: function (e) {
@@ -955,23 +964,23 @@ require = (function () {
               i[r]
                 ? (n[r] = i[r](n[r], o[r]))
                 : n[r] instanceof e.OmnitureCollection &&
-                  o[r] instanceof e.OmnitureCollection
-                ? n[r].merge(o[r])
-                : (n[r] = o[r]);
+                    o[r] instanceof e.OmnitureCollection
+                  ? n[r].merge(o[r])
+                  : (n[r] = o[r]);
             }),
             n
           );
         }),
           (exports.mergers = r);
       },
-      { '@apple/analytics-omniture-collection': 7 },
+      { "@apple/analytics-omniture-collection": 7 },
     ],
     7: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
-        var t = require('@apple/analytics-utils'),
-          e = require('@apple/analytics-omniture-constants');
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
+        var t = require("@apple/analytics-utils"),
+          e = require("@apple/analytics-omniture-constants");
         function r(t, e) {
           var r = Object.keys(t);
           if (Object.getOwnPropertySymbols) {
@@ -992,27 +1001,30 @@ require = (function () {
                   a(t, e, n[e]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-              : r(Object(n)).forEach(function (e) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     t,
-                    e,
-                    Object.getOwnPropertyDescriptor(n, e),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(n),
+                  )
+                : r(Object(n)).forEach(function (e) {
+                    Object.defineProperty(
+                      t,
+                      e,
+                      Object.getOwnPropertyDescriptor(n, e),
+                    );
+                  });
           }
           return t;
         }
         function i(t, e) {
           if (!(t instanceof e))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function o(t, e) {
           for (var r = 0; r < e.length; r++) {
             var n = e[r];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(t, n.key, n);
           }
         }
@@ -1020,7 +1032,7 @@ require = (function () {
           return (
             e && o(t.prototype, e),
             r && o(t, r),
-            Object.defineProperty(t, 'prototype', { writable: !1 }),
+            Object.defineProperty(t, "prototype", { writable: !1 }),
             t
           );
         }
@@ -1038,14 +1050,14 @@ require = (function () {
           );
         }
         function c(t, e) {
-          if ('function' != typeof e && null !== e)
+          if ("function" != typeof e && null !== e)
             throw new TypeError(
-              'Super expression must either be null or a function',
+              "Super expression must either be null or a function",
             );
           (t.prototype = Object.create(e && e.prototype, {
             constructor: { value: t, writable: !0, configurable: !0 },
           })),
-            Object.defineProperty(t, 'prototype', { writable: !1 }),
+            Object.defineProperty(t, "prototype", { writable: !1 }),
             e && l(t, e);
         }
         function s(t) {
@@ -1063,9 +1075,9 @@ require = (function () {
             })(t, e);
         }
         function f() {
-          if ('undefined' == typeof Reflect || !Reflect.construct) return !1;
+          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
-          if ('function' == typeof Proxy) return !0;
+          if ("function" == typeof Proxy) return !0;
           try {
             return (
               Boolean.prototype.valueOf.call(
@@ -1088,18 +1100,18 @@ require = (function () {
               }).apply(null, arguments);
         }
         function y(t) {
-          var e = 'function' == typeof Map ? new Map() : void 0;
+          var e = "function" == typeof Map ? new Map() : void 0;
           return (y = function (t) {
             if (
               null === t ||
               ((r = t),
-              -1 === Function.toString.call(r).indexOf('[native code]'))
+              -1 === Function.toString.call(r).indexOf("[native code]"))
             )
               return t;
             var r;
-            if ('function' != typeof t)
+            if ("function" != typeof t)
               throw new TypeError(
-                'Super expression must either be null or a function',
+                "Super expression must either be null or a function",
               );
             if (void 0 !== e) {
               if (e.has(t)) return e.get(t);
@@ -1122,10 +1134,10 @@ require = (function () {
           })(t);
         }
         function v(t, e) {
-          if (e && ('object' == typeof e || 'function' == typeof e)) return e;
+          if (e && ("object" == typeof e || "function" == typeof e)) return e;
           if (void 0 !== e)
             throw new TypeError(
-              'Derived constructors may only return object or undefined',
+              "Derived constructors may only return object or undefined",
             );
           return (function (t) {
             if (void 0 === t)
@@ -1156,8 +1168,8 @@ require = (function () {
               var r =
                 null == t
                   ? null
-                  : ('undefined' != typeof Symbol && t[Symbol.iterator]) ||
-                    t['@@iterator'];
+                  : ("undefined" != typeof Symbol && t[Symbol.iterator]) ||
+                    t["@@iterator"];
               if (null != r) {
                 var n,
                   i,
@@ -1186,7 +1198,7 @@ require = (function () {
             m(t, e) ||
             (function () {
               throw new TypeError(
-                'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+                "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
               );
             })()
           );
@@ -1198,31 +1210,31 @@ require = (function () {
             })(t) ||
             (function (t) {
               if (
-                ('undefined' != typeof Symbol && null != t[Symbol.iterator]) ||
-                null != t['@@iterator']
+                ("undefined" != typeof Symbol && null != t[Symbol.iterator]) ||
+                null != t["@@iterator"]
               )
                 return Array.from(t);
             })(t) ||
             m(t) ||
             (function () {
               throw new TypeError(
-                'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+                "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
               );
             })()
           );
         }
         function m(t, e) {
           if (t) {
-            if ('string' == typeof t) return d(t, e);
+            if ("string" == typeof t) return d(t, e);
             var r = Object.prototype.toString.call(t).slice(8, -1);
             return (
-              'Object' === r && t.constructor && (r = t.constructor.name),
-              'Map' === r || 'Set' === r
+              "Object" === r && t.constructor && (r = t.constructor.name),
+              "Map" === r || "Set" === r
                 ? Array.from(t)
-                : 'Arguments' === r ||
-                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-                ? d(t, e)
-                : void 0
+                : "Arguments" === r ||
+                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                  ? d(t, e)
+                  : void 0
             );
           }
         }
@@ -1232,7 +1244,7 @@ require = (function () {
           return n;
         }
         var w = function (t) {
-            if (!t) return { prefix: '', number: 0 };
+            if (!t) return { prefix: "", number: 0 };
             var e = t.match(/\d+$/);
             if (!e) return { prefix: t, number: 0 };
             var r = e.index;
@@ -1245,19 +1257,19 @@ require = (function () {
             return (
               u(e, [
                 {
-                  key: 'merge',
+                  key: "merge",
                   value: function (t) {
                     return t instanceof e && (this.key = t.key), this;
                   },
                 },
                 {
-                  key: 'toString',
+                  key: "toString",
                   value: function () {
                     return this.key;
                   },
                 },
                 {
-                  key: 'compareKeys',
+                  key: "compareKeys",
                   value: function (t) {
                     if (!(t instanceof e)) return 0;
                     var r = w(this.key),
@@ -1273,10 +1285,10 @@ require = (function () {
               e
             );
           })(),
-          O = ',',
-          S = ';',
-          j = '|',
-          E = '|',
+          O = ",",
+          S = ";",
+          j = "|",
+          E = "|",
           P = function () {
             for (var t = arguments.length, e = new Array(t), r = 0; r < t; r++)
               e[r] = arguments[r];
@@ -1302,13 +1314,13 @@ require = (function () {
             return (
               u(r, [
                 {
-                  key: 'add',
+                  key: "add",
                   value: function (t) {
                     return t instanceof k ? this.set(t.key, t) : this;
                   },
                 },
                 {
-                  key: 'merge',
+                  key: "merge",
                   value: function () {
                     var t = this;
                     return (
@@ -1323,7 +1335,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'toString',
+                  key: "toString",
                   value: function () {
                     var t =
                       arguments.length > 0 && void 0 !== arguments[0]
@@ -1338,7 +1350,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'sort',
+                  key: "sort",
                   value: function () {
                     var t = g(this.values());
                     this.clear(),
@@ -1362,7 +1374,7 @@ require = (function () {
             return (
               u(n, [
                 {
-                  key: 'merge',
+                  key: "merge",
                   value: function (t) {
                     return (
                       t instanceof n &&
@@ -1373,12 +1385,12 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'toString',
+                  key: "toString",
                   value: function () {
-                    if (!this.key) return '';
+                    if (!this.key) return "";
                     var e = t.toStrTrim(this.value);
-                    return e && 'true' !== e
-                      ? ''.concat(this.key, '=').concat(e)
+                    return e && "true" !== e
+                      ? "".concat(this.key, "=").concat(e)
                       : this.key;
                   },
                 },
@@ -1396,7 +1408,7 @@ require = (function () {
             return (
               u(n, [
                 {
-                  key: 'merge',
+                  key: "merge",
                   value: function (t) {
                     return (
                       t instanceof n &&
@@ -1407,12 +1419,12 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'toString',
+                  key: "toString",
                   value: function () {
                     var e = t.toStrTrim(this.value);
                     return this.key && e
-                      ? ''.concat(this.key, '=').concat(e)
-                      : '';
+                      ? "".concat(this.key, "=").concat(e)
+                      : "";
                   },
                 },
               ]),
@@ -1433,8 +1445,8 @@ require = (function () {
                 n(
                   {},
                   {
-                    sku: '',
-                    category: '',
+                    sku: "",
+                    category: "",
                     qty: 0,
                     price: 0,
                     events: new x(),
@@ -1457,7 +1469,7 @@ require = (function () {
             return (
               u(o, [
                 {
-                  key: 'merge',
+                  key: "merge",
                   value: function (t) {
                     return (
                       t instanceof o &&
@@ -1472,18 +1484,18 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'toString',
+                  key: "toString",
                   value: function () {
                     return [
                       t.toStrTrim(this.category),
                       t.toStrTrim(this.sku),
-                      this.qty ? t.toStrTrim(this.qty) : '',
-                      this.price ? t.beaconHelpers.formatPrice(this.price) : '',
-                      this.events ? this.events.toString(j) : '',
-                      this.variables ? this.variables.toString(E) : '',
+                      this.qty ? t.toStrTrim(this.qty) : "",
+                      this.price ? t.beaconHelpers.formatPrice(this.price) : "",
+                      this.events ? this.events.toString(j) : "",
+                      this.variables ? this.variables.toString(E) : "",
                     ]
                       .join(S)
-                      .replace(',', '');
+                      .replace(",", "");
                   },
                 },
               ]),
@@ -1496,9 +1508,9 @@ require = (function () {
                   ? arguments[1]
                   : O,
               r = new x();
-            return t && 'string' == typeof t
+            return t && "string" == typeof t
               ? (t.split(e).forEach(function (t) {
-                  var e = b(t.split('='), 2),
+                  var e = b(t.split("="), 2),
                     n = e[0],
                     i = e[1];
                   n && r.add(new T(n, i));
@@ -1531,7 +1543,7 @@ require = (function () {
                   ? arguments[1]
                   : O,
               r = new x();
-            return t && 'string' == typeof t
+            return t && "string" == typeof t
               ? (t.split(e).forEach(function (t) {
                   t && r.add(new k(t));
                 }),
@@ -1540,9 +1552,9 @@ require = (function () {
           }),
           (exports.parseProductCollectionString = function (t) {
             var e = new x();
-            return t && 'string' == typeof t
+            return t && "string" == typeof t
               ? ((function (t) {
-                  return t && 'string' == typeof t
+                  return t && "string" == typeof t
                     ? t
                         .split(O)
                         .filter(Boolean)
@@ -1568,7 +1580,7 @@ require = (function () {
                   })(
                     e,
                     (function (t) {
-                      if (!t || 'string' != typeof t) return null;
+                      if (!t || "string" != typeof t) return null;
                       var e,
                         r,
                         n = b(t.split(S), 6),
@@ -1587,9 +1599,9 @@ require = (function () {
                           variables:
                             ((e = s),
                             (r = new x()),
-                            e && 'string' == typeof e
+                            e && "string" == typeof e
                               ? (e.split(E).forEach(function (t) {
-                                  var e = b(t.split('='), 2),
+                                  var e = b(t.split("="), 2),
                                     n = e[0],
                                     i = e[1];
                                   n && i && r.add(new q(n, i));
@@ -1606,18 +1618,18 @@ require = (function () {
           });
       },
       {
-        '@apple/analytics-omniture-constants': 8,
-        '@apple/analytics-utils': 12,
+        "@apple/analytics-omniture-constants": 8,
+        "@apple/analytics-utils": 12,
       },
     ],
     8: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
         const e = function () {
             let {
-              keyPrefix: e = '',
-              valuePrefix: E = '',
+              keyPrefix: e = "",
+              valuePrefix: E = "",
               count: r = 0,
             } = arguments.length > 0 && void 0 !== arguments[0]
               ? arguments[0]
@@ -1627,44 +1639,44 @@ require = (function () {
             return t;
           },
           r = {
-            CAMPAIGN: 'campaign',
-            CHANNEL: 'channel',
-            CHAR_SET: 'charSet',
-            CITY: 'city',
-            CURRENCY_CODE: 'currencyCode',
-            EVENTS: 'events',
-            HIER1: 'hier1',
-            LINK_INTERNAL_FILTERS: 'linkInternalFilters',
-            LINK_TRACK_EVENTS: 'linkTrackEvents',
-            LINK_TRACK_VARS: 'linkTrackVars',
-            LIST_1: 'list1',
-            LIST_2: 'list2',
-            LIST_3: 'list3',
-            PAGE_NAME: 'pageName',
-            PAGE_TYPE: 'pageType',
-            PAGE_URL: 'pageURL',
-            PRODUCTS: 'products',
-            PROVINCE: 'province',
-            PURCHASE_ID: 'purchaseID',
-            REFERRER: 'referrer',
-            SERVER: 'server',
-            STATE: 'state',
-            TRACKING_SERVER: 'trackingServer',
-            TRACKING_SERVER_SECURE: 'trackingServerSecure',
-            ZIP: 'zip',
-            ...e({ keyPrefix: 'PROP_', valuePrefix: 'prop', count: 75 }),
-            ...e({ keyPrefix: 'EVAR_', valuePrefix: 'eVar', count: 155 }),
+            CAMPAIGN: "campaign",
+            CHANNEL: "channel",
+            CHAR_SET: "charSet",
+            CITY: "city",
+            CURRENCY_CODE: "currencyCode",
+            EVENTS: "events",
+            HIER1: "hier1",
+            LINK_INTERNAL_FILTERS: "linkInternalFilters",
+            LINK_TRACK_EVENTS: "linkTrackEvents",
+            LINK_TRACK_VARS: "linkTrackVars",
+            LIST_1: "list1",
+            LIST_2: "list2",
+            LIST_3: "list3",
+            PAGE_NAME: "pageName",
+            PAGE_TYPE: "pageType",
+            PAGE_URL: "pageURL",
+            PRODUCTS: "products",
+            PROVINCE: "province",
+            PURCHASE_ID: "purchaseID",
+            REFERRER: "referrer",
+            SERVER: "server",
+            STATE: "state",
+            TRACKING_SERVER: "trackingServer",
+            TRACKING_SERVER_SECURE: "trackingServerSecure",
+            ZIP: "zip",
+            ...e({ keyPrefix: "PROP_", valuePrefix: "prop", count: 75 }),
+            ...e({ keyPrefix: "EVAR_", valuePrefix: "eVar", count: 155 }),
           },
-          E = e({ keyPrefix: 'EVENT_', valuePrefix: 'event', count: 520 });
-        (E.SC_ADD = 'scAdd'),
-          (E.PROD_VIEW = 'prodView'),
+          E = e({ keyPrefix: "EVENT_", valuePrefix: "event", count: 520 });
+        (E.SC_ADD = "scAdd"),
+          (E.PROD_VIEW = "prodView"),
           (exports.EVAR_MAX = 155),
           (exports.EVENTS = E),
           (exports.EVENT_MAX = 520),
           (exports.PROP_MAX = 75),
           (exports.TRACK_LINK_ARGS = {
             ELEMENT: { DISABLE_DELAY: !0 },
-            LINK_TYPE: { DOWNLOAD: 'd', EXTERNAL: 'e', CUSTOM: 'o' },
+            LINK_TYPE: { DOWNLOAD: "d", EXTERNAL: "e", CUSTOM: "o" },
           }),
           (exports.VARS = r);
       },
@@ -1672,10 +1684,10 @@ require = (function () {
     ],
     9: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
-        var analyticsOmnitureConstants = require('@apple/analytics-omniture-constants'),
-          analyticsOmnitureCollection = require('@apple/analytics-omniture-collection');
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
+        var analyticsOmnitureConstants = require("@apple/analytics-omniture-constants"),
+          analyticsOmnitureCollection = require("@apple/analytics-omniture-collection");
         function t(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -1696,14 +1708,17 @@ require = (function () {
                   o(e, t, n[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : t(Object(n)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(n, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(n),
+                  )
+                : t(Object(n)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(n, t),
+                    );
+                  });
           }
           return e;
         }
@@ -1729,8 +1744,8 @@ require = (function () {
               var r =
                 null == e
                   ? null
-                  : ('undefined' != typeof Symbol && e[Symbol.iterator]) ||
-                    e['@@iterator'];
+                  : ("undefined" != typeof Symbol && e[Symbol.iterator]) ||
+                    e["@@iterator"];
               if (null != r) {
                 var n,
                   o,
@@ -1759,7 +1774,7 @@ require = (function () {
             s(e, t) ||
             (function () {
               throw new TypeError(
-                'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+                "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
               );
             })()
           );
@@ -1771,31 +1786,31 @@ require = (function () {
             })(e) ||
             (function (e) {
               if (
-                ('undefined' != typeof Symbol && null != e[Symbol.iterator]) ||
-                null != e['@@iterator']
+                ("undefined" != typeof Symbol && null != e[Symbol.iterator]) ||
+                null != e["@@iterator"]
               )
                 return Array.from(e);
             })(e) ||
             s(e) ||
             (function () {
               throw new TypeError(
-                'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+                "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
               );
             })()
           );
         }
         function s(e, t) {
           if (e) {
-            if ('string' == typeof e) return u(e, t);
+            if ("string" == typeof e) return u(e, t);
             var r = Object.prototype.toString.call(e).slice(8, -1);
             return (
-              'Object' === r && e.constructor && (r = e.constructor.name),
-              'Map' === r || 'Set' === r
+              "Object" === r && e.constructor && (r = e.constructor.name),
+              "Map" === r || "Set" === r
                 ? Array.from(e)
-                : 'Arguments' === r ||
-                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-                ? u(e, t)
-                : void 0
+                : "Arguments" === r ||
+                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                  ? u(e, t)
+                  : void 0
             );
           }
         }
@@ -1838,54 +1853,54 @@ require = (function () {
           y = function (e) {
             return e;
           },
-          g = '~',
-          k = '^',
-          h = '::',
+          g = "~",
+          k = "^",
+          h = "::",
           b = {
             v1: {
-              prefix: 'v1',
+              prefix: "v1",
               data: [
                 {
-                  key: 'uuid',
-                  map: 'x',
-                  mergeDefault: 'override',
-                  validStorage: ['session', 'cookie'],
+                  key: "uuid",
+                  map: "x",
+                  mergeDefault: "override",
+                  validStorage: ["session", "cookie"],
                   syncTabs: !1,
                   clean: function (e) {
                     return e;
                   },
                 },
                 {
-                  key: 'minor',
-                  map: 'm',
-                  mergeDefault: 'override',
-                  validStorage: ['session', 'cookie'],
+                  key: "minor",
+                  map: "m",
+                  mergeDefault: "override",
+                  validStorage: ["session", "cookie"],
                   syncTabs: !0,
                   clean: y,
                 },
                 {
-                  key: 'pageName',
-                  map: 'n',
-                  mergeDefault: 'override',
-                  validStorage: ['session', 'cookie'],
+                  key: "pageName",
+                  map: "n",
+                  mergeDefault: "override",
+                  validStorage: ["session", "cookie"],
                   syncTabs: !1,
                   prePack: f(v(120), encodeURIComponent),
                   clean: y,
                   postPack: decodeURIComponent,
                 },
                 {
-                  key: 'area',
-                  map: 'r',
-                  mergeDefault: 'override',
-                  validStorage: ['session', 'cookie'],
+                  key: "area",
+                  map: "r",
+                  mergeDefault: "override",
+                  validStorage: ["session", "cookie"],
                   syncTabs: !1,
                   clean: y,
                 },
                 {
-                  key: 'api',
-                  map: 'a',
-                  mergeDefault: 'append',
-                  validStorage: ['session', 'cookie'],
+                  key: "api",
+                  map: "a",
+                  mergeDefault: "append",
+                  validStorage: ["session", "cookie"],
                   syncTabs: !0,
                   prePack: function (e) {
                     return e
@@ -1905,10 +1920,10 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'beacon',
-                  map: 'b',
-                  mergeDefault: 'merge',
-                  validStorage: ['session'],
+                  key: "beacon",
+                  map: "b",
+                  mergeDefault: "merge",
+                  validStorage: ["session"],
                   syncTabs: !0,
                   prePack: function (e) {
                     return Object.entries(e)
@@ -1936,10 +1951,10 @@ require = (function () {
                 },
               ],
               settings: {
-                sessionName: 'pt-dm',
-                cookieName: 'pt-dm',
+                sessionName: "pt-dm",
+                cookieName: "pt-dm",
                 separator: g,
-                transformers: ['mergeExisting', 'mapToSchema', 'compress'],
+                transformers: ["mergeExisting", "mapToSchema", "compress"],
               },
             },
           },
@@ -1973,7 +1988,7 @@ require = (function () {
                 : {};
             return (
               (e.options = a(
-                a({}, { origin: 'same', version: 'v1', minor: '1' }),
+                a({}, { origin: "same", version: "v1", minor: "1" }),
                 e.options,
               )),
               e
@@ -1985,11 +2000,11 @@ require = (function () {
               n = e.cookieDomain,
               o = e.api,
               a = void 0 === o ? O : o,
-              i = ''.concat(t, '=').concat(r);
-            (i += ';secure'),
-              (i += ';samesite=strict'),
-              (i += ';path=/'),
-              n && (i += ';domain='.concat(n)),
+              i = "".concat(t, "=").concat(r);
+            (i += ";secure"),
+              (i += ";samesite=strict"),
+              (i += ";path=/"),
+              n && (i += ";domain=".concat(n)),
               (a().cookie = i);
           },
           D = function (e) {
@@ -2008,12 +2023,12 @@ require = (function () {
             for (
               var t = e.key,
                 r = e.api,
-                n = String((void 0 === r ? O : r)().cookie).split('; '),
+                n = String((void 0 === r ? O : r)().cookie).split("; "),
                 o = 0;
               o < n.length;
               o++
             ) {
-              var a = i(n[o].split('='), 2),
+              var a = i(n[o].split("="), 2),
                 c = a[0],
                 s = a[1];
               if (c === t) return s;
@@ -2030,12 +2045,12 @@ require = (function () {
               r = e.cookieDomain,
               n = e.api,
               o = void 0 === n ? O : n,
-              a = ''.concat(t, '=');
-            (a += ';secure'),
-              (a += ';samesite=strict'),
-              (a += ';path=/'),
-              (a += ';expires=Thu, 01 Jan 1970 00:00:01 GMT'),
-              r && (a += ';domain='.concat(r)),
+              a = "".concat(t, "=");
+            (a += ";secure"),
+              (a += ";samesite=strict"),
+              (a += ";path=/"),
+              (a += ";expires=Thu, 01 Jan 1970 00:00:01 GMT"),
+              r && (a += ";domain=".concat(r)),
               (o().cookie = a);
           },
           x = function (e) {
@@ -2052,7 +2067,7 @@ require = (function () {
             var t = e.value,
               r = e.api,
               n = void 0 === r ? O : r;
-            E({ api: n, key: 'sync', value: t }), I({ api: n, key: 'sync' });
+            E({ api: n, key: "sync", value: t }), I({ api: n, key: "sync" });
           },
           C = function () {
             var e = (
@@ -2061,17 +2076,17 @@ require = (function () {
                   : {}
               ).api,
               t = void 0 === e ? O : e;
-            E({ api: t, key: 'clearAll', value: 'sync-clear-all' }),
-              I({ api: t, key: 'clearAll' });
+            E({ api: t, key: "clearAll", value: "sync-clear-all" }),
+              I({ api: t, key: "clearAll" });
           },
           R = function (e) {
             var t =
               arguments.length > 1 && void 0 !== arguments[1]
                 ? arguments[1]
                 : O;
-            if (!e || !e.transformed || '' === e.transformed) return null;
+            if (!e || !e.transformed || "" === e.transformed) return null;
             switch (e.destination) {
-              case 'cookie':
+              case "cookie":
                 var r = {
                   api: t,
                   key: e.schema.settings.cookieName,
@@ -2082,7 +2097,7 @@ require = (function () {
                   (r.cookieDomain = e.options.cookieDomain),
                   P(r);
                 break;
-              case 'session':
+              case "session":
               default:
                 D({
                   api: t,
@@ -2090,7 +2105,7 @@ require = (function () {
                   value: e.transformed,
                 }),
                   e.transformedSync &&
-                    '' !== e.transformedSync &&
+                    "" !== e.transformedSync &&
                     V({ api: t, value: e.transformedSync });
             }
             return e.transformed;
@@ -2214,20 +2229,20 @@ require = (function () {
             var t = e.storedValue,
               r = e.newValue;
             switch (e.mergePolicy) {
-              case 'keep':
+              case "keep":
                 return t;
-              case 'override':
+              case "override":
                 return r || t;
-              case 'append':
+              case "append":
                 return H(r, t);
-              case 'merge':
+              case "merge":
                 return K(r, t);
               default:
                 return r;
             }
           },
           B = function (e, t) {
-            return e.isSync ? 'override' : F(e.schema, t);
+            return e.isSync ? "override" : F(e.schema, t);
           },
           F = function (e, t) {
             return e.data.find(function (e) {
@@ -2272,13 +2287,13 @@ require = (function () {
               (e.transformed = {}),
               (e.transformedSync = {}),
               (e.destination =
-                e.options && 'cross' === e.options.origin
-                  ? 'cookie'
-                  : 'session'),
+                e.options && "cross" === e.options.origin
+                  ? "cookie"
+                  : "session"),
               null === e.data ||
-                (!e.data.hasOwnProperty('minor') &&
+                (!e.data.hasOwnProperty("minor") &&
                   e.options &&
-                  e.options.hasOwnProperty('minor') &&
+                  e.options.hasOwnProperty("minor") &&
                   (e.data.minor = e.options.minor),
                 t.data.forEach(function (t) {
                   var r = t.key,
@@ -2292,9 +2307,9 @@ require = (function () {
                   if (o.includes(e.destination) && e.data[r]) {
                     var y = e.data[r],
                       v = f(c, a)(y);
-                    if (v && '' !== v)
+                    if (v && "" !== v)
                       if (((e.transformed[n] = v), u)) e.transformedSync[n] = v;
-                      else if ('uuid' === r) {
+                      else if ("uuid" === r) {
                         var m = p(v).global;
                         e.transformedSync[n] = d(m);
                       }
@@ -2341,14 +2356,14 @@ require = (function () {
                 }),
               (e.transformed = t.join(n)),
               (e.transformedSync = r.join(n)),
-              '' === e.transformed)
+              "" === e.transformed)
             )
               return e;
             if (e.schema.prefix) {
               var o = [e.schema.prefix, n, e.transformed];
-              if (((e.transformed = o.join('')), '' !== e.transformedSync)) {
+              if (((e.transformed = o.join("")), "" !== e.transformedSync)) {
                 var a = [e.schema.prefix, n, e.transformedSync];
-                e.transformedSync = a.join('');
+                e.transformedSync = a.join("");
               }
             }
             return e;
@@ -2361,11 +2376,11 @@ require = (function () {
             if (null === o) return e;
             for (
               var a = new RegExp(
-                  '^'
+                  "^"
                     .concat(r.prefix)
-                    .concat(n.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')),
+                    .concat(n.replace(/[|\\{}()[\]^$+*?.]/g, "\\$&")),
                 ),
-                i = (o = o.replace(a, '')).split(r.settings.separator),
+                i = (o = o.replace(a, "")).split(r.settings.separator),
                 c = {},
                 s = 0;
               s < i.length;
@@ -2412,8 +2427,8 @@ require = (function () {
                     : {}
                 ).api,
                 t = void 0 === e ? O : e;
-              E({ api: t, key: 'onNewPage', value: 'handle-new-page-save' }),
-                I({ api: t, key: 'onNewPage' });
+              E({ api: t, key: "onNewPage", value: "handle-new-page-save" }),
+                I({ api: t, key: "onNewPage" });
             })();
             var e = (function (e) {
                 var t = e.schema,
@@ -2422,7 +2437,7 @@ require = (function () {
                 return function (e) {
                   var r = t.settings.sessionName;
                   switch (e.key) {
-                    case 'onNewPage':
+                    case "onNewPage":
                       var o = N({ api: n, key: r }),
                         i = te({ schema: t, data: o }),
                         c = re({
@@ -2431,10 +2446,10 @@ require = (function () {
                           isSync: !0,
                         }).transformedSync;
                       c &&
-                        (E({ api: n, key: 'sync', value: c }),
-                        I({ api: n, key: 'sync' }));
+                        (E({ api: n, key: "sync", value: c }),
+                        I({ api: n, key: "sync" }));
                       break;
-                    case 'sync':
+                    case "sync":
                       if (e.newValue) {
                         var s = N({ api: n, key: r }),
                           u = e.newValue;
@@ -2457,7 +2472,7 @@ require = (function () {
                         D({ api: n, key: r, value: u });
                       }
                       break;
-                    case 'clearAll':
+                    case "clearAll":
                       x({ api: n, key: r });
                   }
                 };
@@ -2466,9 +2481,9 @@ require = (function () {
                 e(t);
               };
             return (
-              window.addEventListener('storage', t),
+              window.addEventListener("storage", t),
               function () {
-                window.removeEventListener('storage', t);
+                window.removeEventListener("storage", t);
               }
             );
           },
@@ -2505,29 +2520,32 @@ require = (function () {
                   _defineProperty(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : ownKeys(Object(r)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(r, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(r),
+                  )
+                : ownKeys(Object(r)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(r, t),
+                    );
+                  });
           }
           return e;
         }
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
@@ -2557,23 +2575,23 @@ require = (function () {
         }
         function _iterableToArray(e) {
           if (
-            ('undefined' != typeof Symbol && null != e[Symbol.iterator]) ||
-            null != e['@@iterator']
+            ("undefined" != typeof Symbol && null != e[Symbol.iterator]) ||
+            null != e["@@iterator"]
           )
             return Array.from(e);
         }
         function _unsupportedIterableToArray(e, t) {
           if (e) {
-            if ('string' == typeof e) return _arrayLikeToArray(e, t);
+            if ("string" == typeof e) return _arrayLikeToArray(e, t);
             var r = Object.prototype.toString.call(e).slice(8, -1);
             return (
-              'Object' === r && e.constructor && (r = e.constructor.name),
-              'Map' === r || 'Set' === r
+              "Object" === r && e.constructor && (r = e.constructor.name),
+              "Map" === r || "Set" === r
                 ? Array.from(e)
-                : 'Arguments' === r ||
-                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-                ? _arrayLikeToArray(e, t)
-                : void 0
+                : "Arguments" === r ||
+                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                  ? _arrayLikeToArray(e, t)
+                  : void 0
             );
           }
         }
@@ -2584,7 +2602,7 @@ require = (function () {
         }
         function _nonIterableSpread() {
           throw new TypeError(
-            'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         }
         var cookieDomain = null,
@@ -2599,10 +2617,10 @@ require = (function () {
               arguments.length > 0 && void 0 !== arguments[0]
                 ? arguments[0]
                 : {};
-            return _objectSpread2(_objectSpread2({}, { type: 'next' }), e);
+            return _objectSpread2(_objectSpread2({}, { type: "next" }), e);
           },
           dataStore = {},
-          MULE_VERSION = 'v1',
+          MULE_VERSION = "v1",
           readDataStore = function () {
             var e = _objectSpread2({}, dataStore),
               t = ie();
@@ -2621,12 +2639,12 @@ require = (function () {
             var t = e.type,
               r = e.key,
               n = e.data;
-            if ('page' === t) {
+            if ("page" === t) {
               var o = { version: MULE_VERSION },
                 a = _objectSpread2(
                   _objectSpread2({}, o),
                   {},
-                  { origin: 'cross' },
+                  { origin: "cross" },
                 ),
                 i = getCookieDomain();
               return (
@@ -2645,7 +2663,7 @@ require = (function () {
               t = e.type,
               r = e.key,
               n = void 0 === r ? null : r;
-            if ('page' === t) {
+            if ("page" === t) {
               var o = ie();
               return null === n ? o : o[n] || null;
             }
@@ -2657,7 +2675,7 @@ require = (function () {
           },
           clear = function (e) {
             var t = e.type;
-            if ('page' === t) {
+            if ("page" === t) {
               var r = getCookieDomain(),
                 n = {};
               null !== r && (n.cookieDomain = r), ce(n);
@@ -2668,25 +2686,25 @@ require = (function () {
             var e = _objectSpread2(
                 _objectSpread2({}, { version: MULE_VERSION }),
                 {},
-                { origin: 'cross' },
+                { origin: "cross" },
               ),
               t = getCookieDomain();
             null !== t && (e.cookieDomain = t), oe({ data: {}, options: e });
           },
           triggerNewPage = function () {
-            ['next', 'exit'].forEach(function (e) {
+            ["next", "exit"].forEach(function (e) {
               var t = retrieve({ type: e });
               null !== t &&
                 (Object.keys(t).forEach(function (e) {
                   var r = t[e];
-                  'beacon' === e &&
-                    'object' === _typeof(r) &&
+                  "beacon" === e &&
+                    "object" === _typeof(r) &&
                     Object.keys(r).forEach(function (e) {
                       var t = r[e];
-                      'string' == typeof t &&
-                        (r[e] = t.replace(/pageName/g, 'c14'));
+                      "string" == typeof t &&
+                        (r[e] = t.replace(/pageName/g, "c14"));
                     }),
-                    store({ type: 'page', key: e, data: r });
+                    store({ type: "page", key: e, data: r });
                 }),
                 clear({ type: e }));
             }),
@@ -2701,16 +2719,16 @@ require = (function () {
               r = void 0 === t ? null : t,
               n = e.cookieDomain,
               o = void 0 === n ? null : n;
-            configure({ mule: { version: r || 'v1' } }),
+            configure({ mule: { version: r || "v1" } }),
               null !== o && registerCookieDomain(o);
             var a = ae();
             return (
-              window.addEventListener('pagehide', triggerNewPage),
-              window.addEventListener('beforeunload', triggerNewPage),
+              window.addEventListener("pagehide", triggerNewPage),
+              window.addEventListener("beforeunload", triggerNewPage),
               function () {
                 a(),
-                  window.removeEventListener('pagehide', triggerNewPage),
-                  window.removeEventListener('beforeunload', triggerNewPage);
+                  window.removeEventListener("pagehide", triggerNewPage),
+                  window.removeEventListener("beforeunload", triggerNewPage);
               }
             );
           },
@@ -2722,10 +2740,10 @@ require = (function () {
               t = e.type,
               r = void 0 === t ? null : t,
               n = e.message,
-              o = void 0 === n ? 'Unknown error' : n;
+              o = void 0 === n ? "Unknown error" : n;
             return new Error(
-              '[PASSIVE TRACKER'
-                .concat(r ? ':' + r.toUpperCase() : '', '] ')
+              "[PASSIVE TRACKER"
+                .concat(r ? ":" + r.toUpperCase() : "", "] ")
                 .concat(o),
             );
           },
@@ -2734,7 +2752,7 @@ require = (function () {
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : {};
-            if (!e || 'string' != typeof e) throw error('set', 'invalid key');
+            if (!e || "string" != typeof e) throw error("set", "invalid key");
             if (t) {
               var n = setDefaults(r).type;
               store({ type: n, key: e, data: t });
@@ -2746,8 +2764,8 @@ require = (function () {
               n = _objectSpread2(_objectSpread2({}, e), t);
             return (
               r &&
-                e.hasOwnProperty('events') &&
-                t.hasOwnProperty('events') &&
+                e.hasOwnProperty("events") &&
+                t.hasOwnProperty("events") &&
                 (n.events = analyticsOmnitureCollection
                   .parseEventCollectionString(e.events)
                   .merge(
@@ -2757,8 +2775,8 @@ require = (function () {
                   )
                   .toString()),
               r &&
-                e.hasOwnProperty('products') &&
-                t.hasOwnProperty('products') &&
+                e.hasOwnProperty("products") &&
+                t.hasOwnProperty("products") &&
                 (n.products = analyticsOmnitureCollection
                   .parseProductCollectionString(e.products)
                   .merge(
@@ -2771,21 +2789,21 @@ require = (function () {
             );
           },
           isObject = function (e) {
-            return 'object' === _typeof(e);
+            return "object" === _typeof(e);
           },
           merge = function (e, t) {
             var r =
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : {};
-            if (!e || 'string' != typeof e) throw error('merge', 'invalid key');
+            if (!e || "string" != typeof e) throw error("merge", "invalid key");
             if (t) {
               var n = setDefaults(r),
                 o = n.type,
                 a = retrieve({ type: o, key: e }),
                 i = null !== a && !isObject(a),
                 c = !isObject(t);
-              if (i || c) throw error('merge', 'invalid data type');
+              if (i || c) throw error("merge", "invalid data type");
               null !== a
                 ? Array.isArray(a)
                   ? store({
@@ -2803,7 +2821,7 @@ require = (function () {
                   : store({
                       type: o,
                       key: e,
-                      data: mergeObjects(a, t, 'beacon' === e),
+                      data: mergeObjects(a, t, "beacon" === e),
                     })
                 : set(e, t, n);
             }
@@ -2813,19 +2831,19 @@ require = (function () {
               arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : {};
-            if (!e || 'string' != typeof e)
-              throw error('append', 'invalid key');
+            if (!e || "string" != typeof e)
+              throw error("append", "invalid key");
             if (t) {
               var n = setDefaults(r),
                 o = n.type,
                 a = retrieve({ type: o, key: e });
               if (
-                (null !== a && 'function' != typeof a.concat) ||
-                'function' != typeof t.concat
+                (null !== a && "function" != typeof a.concat) ||
+                "function" != typeof t.concat
               )
                 throw error(
-                  'append',
-                  'cannot call append on this type of data',
+                  "append",
+                  "cannot call append on this type of data",
                 );
               null !== a
                 ? store({ type: o, key: e, data: a.concat(t) })
@@ -2836,13 +2854,13 @@ require = (function () {
             var e =
                 arguments.length > 0 && void 0 !== arguments[0]
                   ? arguments[0]
-                  : 'next',
-              t = { current: retrieve({ type: 'next' }) };
+                  : "next",
+              t = { current: retrieve({ type: "next" }) };
             return (
-              clear({ type: 'next' }),
-              'page' === e &&
-                ((t.previous = retrieve({ type: 'page' })),
-                clear({ type: 'page' })),
+              clear({ type: "next" }),
+              "page" === e &&
+                ((t.previous = retrieve({ type: "page" })),
+                clear({ type: "page" })),
               null === t.current && delete t.current,
               null === t.previous && delete t.previous,
               0 === Object.entries(t).length ? null : t
@@ -2857,14 +2875,14 @@ require = (function () {
           (exports.triggerNewPage = triggerNewPage);
       },
       {
-        '@apple/analytics-omniture-collection': 7,
-        '@apple/analytics-omniture-constants': 8,
+        "@apple/analytics-omniture-collection": 7,
+        "@apple/analytics-omniture-constants": 8,
       },
     ],
     10: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
         var t = function (t) {
             return /^\d{3}$/.test(t);
           },
@@ -2877,7 +2895,7 @@ require = (function () {
           r = function (r, o, c) {
             return (
               !t(r) ||
-              'string' != typeof o[r] ||
+              "string" != typeof o[r] ||
               ((a = o[r]), !n(a) && !e(a)) ||
               c >= 5
             );
@@ -2908,8 +2926,8 @@ require = (function () {
               var e =
                 null == t
                   ? null
-                  : ('undefined' != typeof Symbol && t[Symbol.iterator]) ||
-                    t['@@iterator'];
+                  : ("undefined" != typeof Symbol && t[Symbol.iterator]) ||
+                    t["@@iterator"];
               if (null != e) {
                 var r,
                   o,
@@ -2937,22 +2955,22 @@ require = (function () {
             })(t, n) ||
             (function (t, n) {
               if (t) {
-                if ('string' == typeof t) return u(t, n);
+                if ("string" == typeof t) return u(t, n);
                 var e = Object.prototype.toString.call(t).slice(8, -1);
                 return (
-                  'Object' === e && t.constructor && (e = t.constructor.name),
-                  'Map' === e || 'Set' === e
+                  "Object" === e && t.constructor && (e = t.constructor.name),
+                  "Map" === e || "Set" === e
                     ? Array.from(t)
-                    : 'Arguments' === e ||
-                      /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e)
-                    ? u(t, n)
-                    : void 0
+                    : "Arguments" === e ||
+                        /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(e)
+                      ? u(t, n)
+                      : void 0
                 );
               }
             })(t, n) ||
             (function () {
               throw new TypeError(
-                'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+                "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
               );
             })()
           );
@@ -2963,22 +2981,22 @@ require = (function () {
           return r;
         }
         var a = function (t, n) {
-            return ''.concat(t, ':').concat(encodeURIComponent(n[t]));
+            return "".concat(t, ":").concat(encodeURIComponent(n[t]));
           },
           i = function (t) {
             var n = o(t);
             return Object.keys(n).reduce(function (t, e) {
-              return '' === t
+              return "" === t
                 ? a(e, n)
-                : ((r = t), (o = a(e, n)), ''.concat(r, '|').concat(o));
+                : ((r = t), (o = a(e, n)), "".concat(r, "|").concat(o));
               var r, o;
-            }, '');
+            }, "");
           },
           f = function (r) {
-            return 'string' != typeof r
+            return "string" != typeof r
               ? {}
-              : r.split('|').reduce(function (r, o) {
-                  var a = c(o.split(':'), 2),
+              : r.split("|").reduce(function (r, o) {
+                  var a = c(o.split(":"), 2),
                     u = a[0],
                     i = a[1],
                     f = decodeURIComponent(i),
@@ -2991,9 +3009,9 @@ require = (function () {
             return URLSearchParams
               ? new URLSearchParams(t)
               : (function (t) {
-                  var n = t.split('&').reduce(function (t, n) {
-                    if ('' === n) return t;
-                    var e = c(n.split('='), 2),
+                  var n = t.split("&").reduce(function (t, n) {
+                    if ("" === n) return t;
+                    var e = c(n.split("="), 2),
                       r = e[0],
                       o = e[1];
                     return (t[r] = o), t;
@@ -3007,19 +3025,19 @@ require = (function () {
                     },
                     toString: function () {
                       return Object.keys(n).reduce(function (t, e) {
-                        return '' === t
-                          ? ''.concat(e, '=').concat(n[e])
-                          : ''.concat(t, '&').concat(e, '=').concat(n[e]);
-                      }, '');
+                        return "" === t
+                          ? "".concat(e, "=").concat(n[e])
+                          : "".concat(t, "&").concat(e, "=").concat(n[e]);
+                      }, "");
                     },
                   };
                 })(t);
           },
           s = function (t, n) {
-            return t ? ''.concat(t, ',event').concat(n) : 'event'.concat(n);
+            return t ? "".concat(t, ",event").concat(n) : "event".concat(n);
           },
           v = function (t, n) {
-            return t ? ''.concat(t, '|').concat(n) : n;
+            return t ? "".concat(t, "|").concat(n) : n;
           };
         (exports.getBeacon = function (n) {
           var e = n.keys,
@@ -3053,7 +3071,7 @@ require = (function () {
                   ? arguments[0]
                   : {},
               e = n.queryString,
-              r = void 0 === e ? '' : e,
+              r = void 0 === e ? "" : e,
               o = n.relay,
               c = n.cookieData;
             if (!c || !o) return { queryString: r };
@@ -3077,10 +3095,10 @@ require = (function () {
                   ? arguments[0]
                   : {},
               n = t.queryString,
-              e = void 0 === n ? '' : n,
+              e = void 0 === n ? "" : n,
               r = t.cookieData,
-              o = f(void 0 === r ? '' : r),
-              c = l(e).get('rid');
+              o = f(void 0 === r ? "" : r),
+              c = l(e).get("rid");
             return (
               c && (o[c.slice(0, 3)] = encodeURIComponent(c.slice(4))), i(o)
             );
@@ -3090,12 +3108,12 @@ require = (function () {
     ],
     11: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
-        var e = require('@apple/analytics-omniture-collection'),
-          t = require('@apple/analytics-omniture-constants'),
-          n = require('@apple/analytics-utils'),
-          r = require('@apple/analytics-relay');
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
+        var e = require("@apple/analytics-omniture-collection"),
+          t = require("@apple/analytics-omniture-constants"),
+          n = require("@apple/analytics-utils"),
+          r = require("@apple/analytics-relay");
         function o(t, e) {
           var n = Object.keys(t);
           if (Object.getOwnPropertySymbols) {
@@ -3116,14 +3134,17 @@ require = (function () {
                   E(t, e, n[e]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(t, Object.getOwnPropertyDescriptors(n))
-              : o(Object(n)).forEach(function (e) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     t,
-                    e,
-                    Object.getOwnPropertyDescriptor(n, e),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(n),
+                  )
+                : o(Object(n)).forEach(function (e) {
+                    Object.defineProperty(
+                      t,
+                      e,
+                      Object.getOwnPropertyDescriptor(n, e),
+                    );
+                  });
           }
           return t;
         }
@@ -3159,73 +3180,73 @@ require = (function () {
           },
           a = [
             {
-              protocol: 'applenewss:',
-              token: 'nws-0-int_srch-apl',
+              protocol: "applenewss:",
+              token: "nws-0-int_srch-apl",
               event: t.EVENTS.EVENT_285,
             },
             {
-              protocol: 'itms-apps:',
-              token: 'arc-0-int_srch-apl',
+              protocol: "itms-apps:",
+              token: "arc-0-int_srch-apl",
               event: t.EVENTS.EVENT_288,
             },
             {
-              origin: 'https://news.apple.com',
-              token: 'nws-0-int_srch-apl',
+              origin: "https://news.apple.com",
+              token: "nws-0-int_srch-apl",
               event: t.EVENTS.EVENT_285,
             },
             {
-              origin: 'https://music.apple.com',
-              token: 'mus-0-int_srch-apl',
+              origin: "https://music.apple.com",
+              token: "mus-0-int_srch-apl",
               event: t.EVENTS.EVENT_286,
             },
             {
-              origin: 'https://wallet.apple.com',
-              token: 'ccd-0-int_srch-apl',
+              origin: "https://wallet.apple.com",
+              token: "ccd-0-int_srch-apl",
               event: t.EVENTS.EVENT_287,
             },
             {
-              origin: 'https://apps.apple.com',
-              token: 'app_store-0-int_srch-apl',
+              origin: "https://apps.apple.com",
+              token: "app_store-0-int_srch-apl",
               event: t.EVENTS.EVENT_288,
             },
             {
-              origin: 'https://tv.apple.com',
-              token: 'atv-0-int_srch-apl',
+              origin: "https://tv.apple.com",
+              token: "atv-0-int_srch-apl",
               event: t.EVENTS.EVENT_289,
             },
             {
-              origin: 'https://books.apple.com',
-              token: 'books-0-int_srch-apl',
+              origin: "https://books.apple.com",
+              token: "books-0-int_srch-apl",
               event: t.EVENTS.EVENT_294,
             },
             {
-              origin: 'https://fitness.apple.com',
-              token: 'fitness-0-int_srch-apl',
+              origin: "https://fitness.apple.com",
+              token: "fitness-0-int_srch-apl",
               event: t.EVENTS.EVENT_299,
             },
             {
-              origin: 'https://podcasts.apple.com',
-              token: 'podcasts-0-int_srch-apl',
+              origin: "https://podcasts.apple.com",
+              token: "podcasts-0-int_srch-apl",
               event: t.EVENTS.EVENT_300,
             },
           ],
           s = function (t) {
             var n = new e.OmnitureCollection();
             switch (t) {
-              case 'quicklinks':
+              case "quicklinks":
                 n.add(new e.OmnitureEvent(c.COMPLETE)),
                   n.add(new e.OmnitureEvent(c.QUICK_LINK));
                 break;
-              case 'suggestions':
+              case "suggestions":
                 n.add(new e.OmnitureEvent(c.SUGGESTED));
                 break;
-              case 'defaultlinks':
+              case "defaultlinks":
                 n.add(new e.OmnitureEvent(c.COMPLETE)),
                   n.add(new e.OmnitureEvent(c.DEFAULT_LINK));
             }
             return n;
           },
-          S = ['quicklinks', 'suggestions', 'defaultlinks'],
+          S = ["quicklinks", "suggestions", "defaultlinks"],
           l = function (t) {
             var n = t.accessoriesLink,
               r = t.storeLink,
@@ -3258,16 +3279,16 @@ require = (function () {
                 });
               })(E);
               s &&
-                ((n = r.getOne(s.token) || 'aos_search_result'),
+                ((n = r.getOne(s.token) || "aos_search_result"),
                 c.add(new e.OmnitureEvent(s.event)));
             }
             return (
-              n || (n = o ? i || 'aos_search_result' : ''),
+              n || (n = o ? i || "aos_search_result" : ""),
               { eVar17: n, events: c }
             );
           },
           u = function (t) {
-            return t.map(n.toStrTrim).join('|');
+            return t.map(n.toStrTrim).join("|");
           };
         (exports.accessoriesFilter = function () {
           var r,
@@ -3284,12 +3305,12 @@ require = (function () {
             E(
               r,
               t.VARS.EVAR_4,
-              ''.concat(n.toStrTrim(S), ':search:accessories'),
+              "".concat(n.toStrTrim(S), ":search:accessories"),
             ),
             E(
               r,
               t.VARS.PROP_3,
-              'filter - '.concat(n.toStrTrim(a), ' - ').concat(n.toStrTrim(s)),
+              "filter - ".concat(n.toStrTrim(a), " - ").concat(n.toStrTrim(s)),
             ),
             E(r, t.VARS.PROP_7, n.toStrTrim(i).toLowerCase()),
             E(
@@ -3309,12 +3330,12 @@ require = (function () {
                   ? arguments[0]
                   : {}
               ).action,
-              i = void 0 === o ? '' : o;
+              i = void 0 === o ? "" : o;
             return (
               E(
                 (r = {}),
                 t.VARS.PROP_3,
-                ''.concat(n.toStrTrim(i) || 'engage', ' - search field'),
+                "".concat(n.toStrTrim(i) || "engage", " - search field"),
               ),
               E(
                 r,
@@ -3334,7 +3355,7 @@ require = (function () {
             return (
               E((r = {}), t.VARS.PROP_7, n.toStrTrim(o).toLowerCase()),
               E(r, t.VARS.PROP_29, null),
-              E(r, t.VARS.EVAR_2, 'D=c7'),
+              E(r, t.VARS.EVAR_2, "D=c7"),
               E(
                 r,
                 t.VARS.EVENTS,
@@ -3352,19 +3373,19 @@ require = (function () {
               i = o.currentPage,
               a = o.nextPage,
               s = o.action,
-              S = void 0 === s ? 'click' : s;
+              S = void 0 === s ? "click" : s;
             return (
               E(
                 (r = {}),
                 t.VARS.PROP_2,
-                ''.concat(n.toStrTrim(S), ' - page ').concat(n.toStrTrim(i)),
+                "".concat(n.toStrTrim(S), " - page ").concat(n.toStrTrim(i)),
               ),
               E(
                 r,
                 t.VARS.PROP_3,
-                ''.concat(n.toStrTrim(S), ' - page ').concat(n.toStrTrim(a)),
+                "".concat(n.toStrTrim(S), " - page ").concat(n.toStrTrim(a)),
               ),
-              E(r, t.VARS.EVAR_15, 'search (search)'),
+              E(r, t.VARS.EVAR_15, "search (search)"),
               E(
                 r,
                 t.VARS.EVENTS,
@@ -3390,10 +3411,10 @@ require = (function () {
               p = o.suggestedValue,
               _ = o.type,
               R = n.toStrTrim(a).toLowerCase(),
-              O = 'no keyword' === R ? '' : R,
+              O = "no keyword" === R ? "" : R,
               N = n.toStrTrim(p).toLowerCase(),
               m = s(_),
-              d = 'suggestions' === _ ? 'suggested' : l;
+              d = "suggestions" === _ ? "suggested" : l;
             return i(
               i(
                 {},
@@ -3401,7 +3422,7 @@ require = (function () {
                   ? E(
                       {},
                       t.VARS.EVAR_23,
-                      [O, N, d, u, V].map(n.toStrTrim).join('|'),
+                      [O, N, d, u, V].map(n.toStrTrim).join("|"),
                     )
                   : {},
               ),
@@ -3409,15 +3430,15 @@ require = (function () {
               (E(
                 (r = {}),
                 t.VARS.PROP_7,
-                S.includes(_) ? N : R || '___blank___',
+                S.includes(_) ? N : R || "___blank___",
               ),
-              E(r, t.VARS.EVAR_2, 'D=c7'),
+              E(r, t.VARS.EVAR_2, "D=c7"),
               E(
                 r,
                 t.VARS.EVAR_15,
-                ''
-                  .concat(n.toStrTrim(T), ' (')
-                  .concat('suggestions' === _ ? 'typed' : n.toStrTrim(l), ')'),
+                ""
+                  .concat(n.toStrTrim(T), " (")
+                  .concat("suggestions" === _ ? "typed" : n.toStrTrim(l), ")"),
               ),
               E(r, t.VARS.EVENTS, m.add(new e.OmnitureEvent(c.SEARCH))),
               r),
@@ -3454,14 +3475,14 @@ require = (function () {
               }),
               g =
                 (E((e = {}), t.VARS.PROP_7, m),
-                E(e, t.VARS.EVAR_2, 'D=c7'),
+                E(e, t.VARS.EVAR_2, "D=c7"),
                 E(e, t.VARS.EVENTS, w),
                 e);
             return (
               A.eVar17 && (g[t.VARS.EVAR_17] = A.eVar17),
               !a && v && (g[t.VARS.PROP_29] = u([m, S, O, N, T])),
               d && (g[t.VARS.PROP_30] = u([m, S, O, _, T])),
-              d && !c && (g[t.VARS.EVAR_15] = 'null (clicked)'),
+              d && !c && (g[t.VARS.EVAR_15] = "null (clicked)"),
               g
             );
           }),
@@ -3482,26 +3503,26 @@ require = (function () {
               _ = new e.OmnitureCollection(new e.OmnitureEvent(c.SEARCH));
             u || _.add(new e.OmnitureEvent(c.NO_RESULTS)),
               p && _.add(new e.OmnitureEvent(c.CURATED));
-            var R = ''.concat(n.toStrTrim(T), ':search');
+            var R = "".concat(n.toStrTrim(T), ":search");
             return i(
               i(
                 {},
                 (E(
                   (r = {}),
                   t.VARS.PAGE_NAME,
-                  ''.concat(R, ':').concat(n.toStrTrim(V)),
+                  "".concat(R, ":").concat(n.toStrTrim(V)),
                 ),
                 E(r, t.VARS.PROP_7, n.toStrTrim(l).toLowerCase()),
-                E(r, t.VARS.PROP_21, n.toStrTrim(u) || '0'),
+                E(r, t.VARS.PROP_21, n.toStrTrim(u) || "0"),
                 r),
               ),
               {},
               S
-                ? (E((o = {}), t.VARS.EVAR_2, 'D=c7'),
+                ? (E((o = {}), t.VARS.EVAR_2, "D=c7"),
                   E(
                     o,
                     t.VARS.EVAR_15,
-                    'external (direct)|'.concat(n.toStrTrim(V)),
+                    "external (direct)|".concat(n.toStrTrim(V)),
                   ),
                   E(
                     o,
@@ -3509,39 +3530,39 @@ require = (function () {
                     _.add(new e.OmnitureEvent(c.SERP_DIRECT)),
                   ),
                   o)
-                : (E((a = {}), t.VARS.EVAR_15, '|'.concat(n.toStrTrim(V))),
+                : (E((a = {}), t.VARS.EVAR_15, "|".concat(n.toStrTrim(V))),
                   E(a, t.VARS.EVENTS, _),
                   a),
             );
           });
       },
       {
-        '@apple/analytics-omniture-collection': 7,
-        '@apple/analytics-omniture-constants': 8,
-        '@apple/analytics-relay': 10,
-        '@apple/analytics-utils': 12,
+        "@apple/analytics-omniture-collection": 7,
+        "@apple/analytics-omniture-constants": 8,
+        "@apple/analytics-relay": 10,
+        "@apple/analytics-utils": 12,
       },
     ],
     12: [
       function (require, module, exports) {
-        'use strict';
-        Object.defineProperty(exports, '__esModule', { value: !0 });
-        var e = require('@apple/analytics-omniture-constants'),
+        "use strict";
+        Object.defineProperty(exports, "__esModule", { value: !0 });
+        var e = require("@apple/analytics-omniture-constants"),
           t = function () {
             var e =
               arguments.length > 0 && void 0 !== arguments[0]
                 ? arguments[0]
-                : '';
-            return e || !1 === e || 0 === e ? String(e) : '';
+                : "";
+            return e || !1 === e || 0 === e ? String(e) : "";
           },
           r = function (e) {
             return t(e).trim();
           },
           n = function (e) {
-            return t(e).replace(/\s+/g, ' ');
+            return t(e).replace(/\s+/g, " ");
           },
           o = function (e) {
-            return t(e).replace(/[^ -~]+/g, '');
+            return t(e).replace(/[^ -~]+/g, "");
           },
           i = function (e, r) {
             return t(e).slice(0, r).trim();
@@ -3570,17 +3591,17 @@ require = (function () {
             };
           },
           l = [
-            { expression: /\/order\/detail\/.*/i, value: '/order/detail' },
-            { expression: /\/order\/cancel\/.*/i, value: '/order/cancel' },
-            { expression: /\/order\/guest\/.*/i, value: '/order/guest/******' },
+            { expression: /\/order\/detail\/.*/i, value: "/order/detail" },
+            { expression: /\/order\/cancel\/.*/i, value: "/order/cancel" },
+            { expression: /\/order\/guest\/.*/i, value: "/order/guest/******" },
             {
               expression: /\/order\/applynow\/ep_payments\/.*/i,
-              value: '/order/applynow/ep_payments/******',
+              value: "/order/applynow/ep_payments/******",
             },
-            { expression: /\/onMyWay\/.*/i, value: '/onMyWay/******' },
-            { expression: /\/startPickup\/.*/i, value: '/startPickup/******' },
-            { expression: /\/[^\/]+@.*/i, value: '/******' },
-            { expression: /W[0-9-]+/, value: 'WXXXXXXXX' },
+            { expression: /\/onMyWay\/.*/i, value: "/onMyWay/******" },
+            { expression: /\/startPickup\/.*/i, value: "/startPickup/******" },
+            { expression: /\/[^\/]+@.*/i, value: "/******" },
+            { expression: /W[0-9-]+/, value: "WXXXXXXXX" },
           ],
           s = function (e) {
             var r = t(e),
@@ -3603,13 +3624,13 @@ require = (function () {
                 n = e.region,
                 o = f(t, 50),
                 i = p(n),
-                u = 128 - (o.length + i.length + 2 * ' | '.length),
+                u = 128 - (o.length + i.length + 2 * " | ".length),
                 a = f(r, u);
-              return ''
+              return ""
                 .concat(o)
-                .concat(' | ')
+                .concat(" | ")
                 .concat(a)
-                .concat(' | ')
+                .concat(" | ")
                 .concat(i);
             },
             sanitizeRegion: p,
@@ -3618,18 +3639,18 @@ require = (function () {
           m = function (e) {
             if (null == e) return null;
             for (
-              var t = (document.cookie || '').split(';'), r = 0;
+              var t = (document.cookie || "").split(";"), r = 0;
               r < t.length;
               r++
             ) {
-              var n = (t[r] || '').trim();
-              if (n.slice(0, e.length + 1) === ''.concat(e, '='))
+              var n = (t[r] || "").trim();
+              if (n.slice(0, e.length + 1) === "".concat(e, "="))
                 return decodeURIComponent(n.slice(e.length + 1));
             }
             return null;
           },
           y = function (e) {
-            if ('number' == typeof e) {
+            if ("number" == typeof e) {
               var t = new Date();
               return t.setTime(t.getTime() + 24 * (e || 0) * 60 * 60 * 1e3), t;
             }
@@ -3641,12 +3662,12 @@ require = (function () {
                   ? arguments[2]
                   : {},
               n = y(null == t ? -1 : r.expires),
-              o = n ? '; expires=' + n.toUTCString() : '',
-              i = r.path ? '; path=' + r.path : '',
-              u = r.domain ? '; domain=' + r.domain : '',
-              a = r.secure ? '; secure' : '';
+              o = n ? "; expires=" + n.toUTCString() : "",
+              i = r.path ? "; path=" + r.path : "",
+              u = r.domain ? "; domain=" + r.domain : "",
+              a = r.secure ? "; secure" : "";
             document.cookie =
-              e + '=' + encodeURIComponent(t || '') + o + i + u + a;
+              e + "=" + encodeURIComponent(t || "") + o + i + u + a;
           },
           d = Object.freeze({ __proto__: null, get: m, set: v });
         function b(e, t) {
@@ -3669,29 +3690,32 @@ require = (function () {
                   w(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : b(Object(r)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(r, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(r),
+                  )
+                : b(Object(r)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(r, t),
+                    );
+                  });
           }
           return e;
         }
         function _(e) {
           return (_ =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
@@ -3717,8 +3741,8 @@ require = (function () {
               var r =
                 null == e
                   ? null
-                  : ('undefined' != typeof Symbol && e[Symbol.iterator]) ||
-                    e['@@iterator'];
+                  : ("undefined" != typeof Symbol && e[Symbol.iterator]) ||
+                    e["@@iterator"];
               if (null != r) {
                 var n,
                   o,
@@ -3747,7 +3771,7 @@ require = (function () {
             x(e, t) ||
             (function () {
               throw new TypeError(
-                'Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+                "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
               );
             })()
           );
@@ -3759,31 +3783,31 @@ require = (function () {
             })(e) ||
             (function (e) {
               if (
-                ('undefined' != typeof Symbol && null != e[Symbol.iterator]) ||
-                null != e['@@iterator']
+                ("undefined" != typeof Symbol && null != e[Symbol.iterator]) ||
+                null != e["@@iterator"]
               )
                 return Array.from(e);
             })(e) ||
             x(e) ||
             (function () {
               throw new TypeError(
-                'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+                "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
               );
             })()
           );
         }
         function x(e, t) {
           if (e) {
-            if ('string' == typeof e) return j(e, t);
+            if ("string" == typeof e) return j(e, t);
             var r = Object.prototype.toString.call(e).slice(8, -1);
             return (
-              'Object' === r && e.constructor && (r = e.constructor.name),
-              'Map' === r || 'Set' === r
+              "Object" === r && e.constructor && (r = e.constructor.name),
+              "Map" === r || "Set" === r
                 ? Array.from(e)
-                : 'Arguments' === r ||
-                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
-                ? j(e, t)
-                : void 0
+                : "Arguments" === r ||
+                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(r)
+                  ? j(e, t)
+                  : void 0
             );
           }
         }
@@ -3796,10 +3820,10 @@ require = (function () {
             var e =
               arguments.length > 0 && void 0 !== arguments[0]
                 ? arguments[0]
-                : '';
-            if (!e) return '';
+                : "";
+            if (!e) return "";
             var t = window.cookieMap;
-            return (t && 'object' === _(t) && t[e]) || e;
+            return (t && "object" === _(t) && t[e]) || e;
           },
           A = c(k, m),
           P = function (e, t) {
@@ -3836,15 +3860,15 @@ require = (function () {
             },
           }),
           C = function (e) {
-            if ('number' == typeof e) return e;
+            if ("number" == typeof e) return e;
             if (!e) return null;
-            if ('string' != typeof e) return null;
-            var t = O(e.replace(/[^\d.,]/g, '').split(/[.,](\d{1,2})$/), 2),
+            if ("string" != typeof e) return null;
+            var t = O(e.replace(/[^\d.,]/g, "").split(/[.,](\d{1,2})$/), 2),
               r = t[0],
-              n = void 0 === r ? '0' : r,
+              n = void 0 === r ? "0" : r,
               o = t[1],
-              i = void 0 === o ? '00' : o,
-              u = parseFloat(n.replace(/[^\d\/]/g, '') + '.' + i);
+              i = void 0 === o ? "00" : o,
+              u = parseFloat(n.replace(/[^\d\/]/g, "") + "." + i);
             return isNaN(u) ? null : u;
           },
           M = [
@@ -3863,7 +3887,7 @@ require = (function () {
             /^AOS/,
           ],
           R = function (e) {
-            if (!e || 'string' != typeof e) return '';
+            if (!e || "string" != typeof e) return "";
             var t = e.toUpperCase();
             return M.some(function (e) {
               return e.test(t);
@@ -3872,14 +3896,14 @@ require = (function () {
               : e.substring(0, 5);
           },
           U = function (e) {
-            return !(!e || 'object' !== _(e) || Array.isArray(e));
+            return !(!e || "object" !== _(e) || Array.isArray(e));
           },
           D = U,
           W = function (e) {
             return !(!U(e) || !Object.keys(e).length);
           },
           F = function (e) {
-            return e && 'object' !== _(e) ? String(e) : null;
+            return e && "object" !== _(e) ? String(e) : null;
           },
           H = Object.values(e.VARS),
           X = function (e) {
@@ -3914,7 +3938,7 @@ require = (function () {
               var t =
                   arguments.length > 1 && void 0 !== arguments[1]
                     ? arguments[1]
-                    : '0.00',
+                    : "0.00",
                 r = C(e);
               return null === r ? t : r.toFixed(2);
             },
@@ -3955,11 +3979,11 @@ require = (function () {
             },
           }),
           G = function (e) {
-            return ['analytics-form-submit', 'submit'].includes(e.type);
+            return ["analytics-form-submit", "submit"].includes(e.type);
           },
           $ = function (e) {
             return (
-              'click' === e.type && e.target && null !== e.target.closest('a')
+              "click" === e.type && e.target && null !== e.target.closest("a")
             );
           },
           q = Object.freeze({
@@ -3998,12 +4022,12 @@ require = (function () {
             try {
               return window.localStorage.getItem(e);
             } catch (e) {
-              return '';
+              return "";
             }
           },
           Y = function (e, t) {
             try {
-              return window.localStorage.setItem(e, t || ''), !0;
+              return window.localStorage.setItem(e, t || ""), !0;
             } catch (e) {
               return !1;
             }
@@ -4025,11 +4049,11 @@ require = (function () {
             },
             remove: ee,
           }),
-          oe = '.',
+          oe = ".",
           ie = function (e, t) {
             return t && t.length
               ? t.reduce(function (e, t) {
-                  return e && 'object' === _(e) ? e[t] : null;
+                  return e && "object" === _(e) ? e[t] : null;
                 }, e)
               : e;
           },
@@ -4038,7 +4062,7 @@ require = (function () {
           },
           ae = function e(t, r, n) {
             if (!r.length) return n;
-            if ('object' === _(t)) {
+            if ("object" === _(t)) {
               var o = r.pop(),
                 i = Array.isArray(t) ? S(t) : h({}, t);
               return (i[o] = e(i[o], r, n)), i;
@@ -4049,7 +4073,7 @@ require = (function () {
             var n = r.pop(),
               o = Array.isArray(t) ? S(t) : h({}, t);
             return r.length
-              ? ('object' === _(o[n]) && (o[n] = e(o[n], r)), o)
+              ? ("object" === _(o[n]) && (o[n] = e(o[n], r)), o)
               : (Array.isArray(o)
                   ? o.splice(Number(n) || o.length, 1)
                   : delete o[n],
@@ -4087,7 +4111,7 @@ require = (function () {
               };
             },
             remove: function (e, t) {
-              return t && t.length && 'object' === _(e)
+              return t && t.length && "object" === _(e)
                 ? ce(e, S(t).reverse())
                 : e;
             },
@@ -4110,12 +4134,12 @@ require = (function () {
             try {
               return window.sessionStorage.getItem(e);
             } catch (e) {
-              return '';
+              return "";
             }
           },
           pe = function (e, t) {
             try {
-              return window.sessionStorage.setItem(e, t || ''), !0;
+              return window.sessionStorage.setItem(e, t || ""), !0;
             } catch (e) {
               return !1;
             }
@@ -4153,22 +4177,22 @@ require = (function () {
           },
           be = function (e) {
             return e
-              ? 'origin' in e
+              ? "origin" in e
                 ? e.origin
-                : ''.concat(e.protocol, '//').concat(e.hostname)
-              : '';
+                : "".concat(e.protocol, "//").concat(e.hostname)
+              : "";
           },
           he = function (e) {
             if (!e) return !1;
-            if ('A' !== e.tagName) return !1;
-            var t = (e.getAttribute('href') || '').trim();
+            if ("A" !== e.tagName) return !1;
+            var t = (e.getAttribute("href") || "").trim();
             return (
               t.length > 0 &&
-              0 !== t.indexOf('#') &&
-              0 !== t.indexOf('about:') &&
-              0 !== t.indexOf('javascript:') &&
-              0 !== t.indexOf('mailto:') &&
-              0 !== t.indexOf('tel:') &&
+              0 !== t.indexOf("#") &&
+              0 !== t.indexOf("about:") &&
+              0 !== t.indexOf("javascript:") &&
+              0 !== t.indexOf("mailto:") &&
+              0 !== t.indexOf("tel:") &&
               !e.dataset.analyticsIntrapageLink
             );
           },
@@ -4182,14 +4206,14 @@ require = (function () {
               n = e.values;
             return !!t && (void 0 === n ? [] : n).includes(t[r]);
           },
-          we = ['applenews:', 'itms-apps:'],
+          we = ["applenews:", "itms-apps:"],
           Oe = [
-            'apps.apple.com',
-            'news.apple.com',
-            'music.apple.com',
-            'wallet.apple.com',
-            'tv.apple.com',
-            'books.apple.com',
+            "apps.apple.com",
+            "news.apple.com",
+            "music.apple.com",
+            "wallet.apple.com",
+            "tv.apple.com",
+            "books.apple.com",
           ],
           Se = Object.freeze({
             __proto__: null,
@@ -4201,7 +4225,7 @@ require = (function () {
                 : null;
             },
             isAccessoriesSERPLink: function (e) {
-              return de(e, 'as-producttile-tilelink', 'pd-onebox-block');
+              return de(e, "as-producttile-tilelink", "pd-onebox-block");
             },
             isCrossOriginLink: function (e) {
               return he(e) && be(e) !== be(window.document.location);
@@ -4212,56 +4236,56 @@ require = (function () {
             isExternalLink: function (e) {
               return (
                 !(!he(e) || !e.hostname) &&
-                ((Q() || {}).linkInternalFilters || '')
-                  .split(',')
+                ((Q() || {}).linkInternalFilters || "")
+                  .split(",")
                   .every(function (t) {
                     return e.hostname.indexOf(t.trim()) < 0;
                   })
               );
             },
             isGlobalNavLink: function (e) {
-              return de(e, 'ac-gn-link');
+              return de(e, "ac-gn-link");
             },
             isImmediateLink: function (e) {
-              return de(e, 'as-analytics-sendimmediately');
+              return de(e, "as-analytics-sendimmediately");
             },
             isMarcomUrl: function (e) {
-              return !!e && e.indexOf('shop') < 0 && e.indexOf('search') < 0;
+              return !!e && e.indexOf("shop") < 0 && e.indexOf("search") < 0;
             },
             isSearchLink: function (e) {
-              return de(e, 'ac-gn-searchresults-link');
+              return de(e, "ac-gn-searchresults-link");
             },
             isServiceSERPLink: function (e) {
               return (
                 he(e) &&
-                (_e({ element: e, property: 'protocol', values: we }) ||
-                  _e({ element: e, property: 'hostname', values: Oe }))
+                (_e({ element: e, property: "protocol", values: we }) ||
+                  _e({ element: e, property: "hostname", values: Oe }))
               );
             },
             isSignInLink: function (e) {
-              return de(e, 'ac-gn-bagview-nav-link-signIn');
+              return de(e, "ac-gn-bagview-nav-link-signIn");
             },
             isSignOutLink: function (e) {
-              return de(e, 'ac-gn-bagview-nav-link-signOut');
+              return de(e, "ac-gn-bagview-nav-link-signOut");
             },
             isStoreSERPLink: function (e) {
               return (
                 he(e) &&
                 _e({
                   element: e,
-                  property: 'hostname',
-                  values: ['apps.apple.com'],
+                  property: "hostname",
+                  values: ["apps.apple.com"],
                 })
               );
             },
             isTargetingOtherWindow: function (e, t) {
               if (!e || !t) return !1;
-              var r = (e.target || '').toLowerCase();
+              var r = (e.target || "").toLowerCase();
               return (
                 t.metaKey ||
                 t.ctrlKey ||
                 t.shiftKey ||
-                ['', '_self', '_parent', '_top'].every(function (e) {
+                ["", "_self", "_parent", "_top"].every(function (e) {
                   return e !== r;
                 }) ||
                 (window.name.length > 0 && r.length > 0 && r !== window.name)
@@ -4271,14 +4295,14 @@ require = (function () {
             redirectsToSignInLink: function (e) {
               return de(
                 e,
-                'ac-gn-bagview-nav-link-favorites',
-                'ac-gn-bagview-nav-link-orders',
-                'ac-gn-bagview-nav-link-account',
-                'ac-gn-bagview-nav-link-signIn',
+                "ac-gn-bagview-nav-link-favorites",
+                "ac-gn-bagview-nav-link-orders",
+                "ac-gn-bagview-nav-link-account",
+                "ac-gn-bagview-nav-link-signIn",
               );
             },
             resolvesToSearchPage: function (e) {
-              return !!e && /\/search\//.test(e.getAttribute('href'));
+              return !!e && /\/search\//.test(e.getAttribute("href"));
             },
             sanitizeUrl: function () {
               var e =
@@ -4289,25 +4313,25 @@ require = (function () {
                 n = e.pageType,
                 o = e.isReferrerUrl,
                 i = r(t);
-              if (!i) return '';
+              if (!i) return "";
               (o ||
-                ('string' == typeof n && 'errorpage' === n.toLowerCase())) &&
-                (i = i.replace(/\/vieworder\/.*/, '/vieworder/******')),
+                ("string" == typeof n && "errorpage" === n.toLowerCase())) &&
+                (i = i.replace(/\/vieworder\/.*/, "/vieworder/******")),
                 (i = (i = (i = (i = (i = i.replace(
                   /\/order\/guest\/.*/,
-                  '/order/guest/******',
+                  "/order/guest/******",
                 )).replace(
                   /\/order\/applynow\/ep_payments\/.*/,
-                  '/order/applynow/ep_payments/******',
-                )).replace(/\/onMyWay\/.*/, '/onMyWay/******')).replace(
+                  "/order/applynow/ep_payments/******",
+                )).replace(/\/onMyWay\/.*/, "/onMyWay/******")).replace(
                   /\/startPickup\/.*/,
-                  '/startPickup/******',
-                )).replace(/\/[^\/]+@.*/i, '/******'));
+                  "/startPickup/******",
+                )).replace(/\/[^\/]+@.*/i, "/******"));
               var u = new URL(i);
               /(\/shop(\/[^\/\n\r]*)?\/(sign|log)_?in)/i.test(u.pathname) &&
-                (u.search = '');
+                (u.search = "");
               var a = new URLSearchParams(u.search);
-              return a.delete('fnode'), (u.search = a.toString()), u.toString();
+              return a.delete("fnode"), (u.search = a.toString()), u.toString();
             },
           });
         (exports.activityMap = g),
@@ -4317,7 +4341,7 @@ require = (function () {
           (exports.cookie = d),
           (exports.cookieJson = B),
           (exports.deepClone = function e(t) {
-            if (!t || 'object' !== _(t)) return t;
+            if (!t || "object" !== _(t)) return t;
             if (Array.isArray(t)) {
               for (var r = Array(t.length), n = 0; n < t.length; n++)
                 r[n] = e(t[n]);
@@ -4361,12 +4385,12 @@ require = (function () {
           (exports.toStrTrim = r),
           (exports.urlHelpers = Se);
       },
-      { '@apple/analytics-omniture-constants': 8 },
+      { "@apple/analytics-omniture-constants": 8 },
     ],
     13: [
       function (require, module, exports) {
-        'use strict';
-        var DEBUG_MESSAGING_KEY = 'f7c9180f-5c45-47b4-8de4-428015f096c0',
+        "use strict";
+        var DEBUG_MESSAGING_KEY = "f7c9180f-5c45-47b4-8de4-428015f096c0",
           enabled = !1,
           _window = window || self;
         try {
@@ -4378,14 +4402,14 @@ require = (function () {
     ],
     14: [
       function (require, module, exports) {
-        'use strict';
-        var enabled = require('../enabled.js');
+        "use strict";
+        var enabled = require("../enabled.js");
         module.exports = function (e) {
           return function () {
             if (
               enabled &&
-              'object' == typeof window.console &&
-              'function' == typeof console[e]
+              "object" == typeof window.console &&
+              "function" == typeof console[e]
             )
               return console[e].apply(
                 console,
@@ -4394,25 +4418,25 @@ require = (function () {
           };
         };
       },
-      { '../enabled': 13 },
+      { "../enabled": 13 },
     ],
     15: [
       function (require, module, exports) {
-        'use strict';
-        module.exports = require('./internal/expose.js')('log');
+        "use strict";
+        module.exports = require("./internal/expose.js")("log");
       },
-      { './internal/expose': 14 },
+      { "./internal/expose": 14 },
     ],
     16: [
       function (require, module, exports) {
-        'use strict';
-        module.exports = require('./internal/expose.js')('trace');
+        "use strict";
+        module.exports = require("./internal/expose.js")("trace");
       },
-      { './internal/expose': 14 },
+      { "./internal/expose": 14 },
     ],
     17: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (t, e) {
           var i;
           return e
@@ -4424,10 +4448,10 @@ require = (function () {
     ],
     18: [
       function (require, module, exports) {
-        'use strict';
-        var getDimensions = require('./getDimensions.js'),
-          getScrollX = require('./getScrollX.js'),
-          getScrollY = require('./getScrollY.js');
+        "use strict";
+        var getDimensions = require("./getDimensions.js"),
+          getScrollX = require("./getScrollX.js"),
+          getScrollY = require("./getScrollY.js");
         module.exports = function (t, e) {
           var o, r, i, f;
           if (e)
@@ -4462,11 +4486,11 @@ require = (function () {
           };
         };
       },
-      { './getDimensions': 17, './getScrollX': 19, './getScrollY': 20 },
+      { "./getDimensions": 17, "./getScrollX": 19, "./getScrollY": 20 },
     ],
     19: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (o) {
           return (o = o || window) === window
             ? window.scrollX || window.pageXOffset
@@ -4477,7 +4501,7 @@ require = (function () {
     ],
     20: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (o) {
           return (o = o || window) === window
             ? window.scrollY || window.pageYOffset
@@ -4488,7 +4512,7 @@ require = (function () {
     ],
     21: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = Object.freeze({
           ELEMENT: 1,
           TEXT: 3,
@@ -4502,42 +4526,42 @@ require = (function () {
     ],
     22: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = {
-          createDocumentFragment: require('./createDocumentFragment.js'),
-          filterByNodeType: require('./filterByNodeType.js'),
-          insertAfter: require('./insertAfter.js'),
-          insertBefore: require('./insertBefore.js'),
-          insertFirstChild: require('./insertFirstChild.js'),
-          isNode: require('./isNode.js'),
-          isNodeList: require('./isNodeList.js'),
-          isNodeType: require('./isNodeType.js'),
-          replace: require('./replace.js'),
-          NODE_TYPES: require('./NODE_TYPES.js'),
+          createDocumentFragment: require("./createDocumentFragment.js"),
+          filterByNodeType: require("./filterByNodeType.js"),
+          insertAfter: require("./insertAfter.js"),
+          insertBefore: require("./insertBefore.js"),
+          insertFirstChild: require("./insertFirstChild.js"),
+          isNode: require("./isNode.js"),
+          isNodeList: require("./isNodeList.js"),
+          isNodeType: require("./isNodeType.js"),
+          replace: require("./replace.js"),
+          NODE_TYPES: require("./NODE_TYPES.js"),
         };
       },
       {
-        './NODE_TYPES': 21,
-        './createDocumentFragment': 23,
-        './filterByNodeType': 24,
-        './insertAfter': 25,
-        './insertBefore': 26,
-        './insertFirstChild': 27,
-        './isNode': 29,
-        './isNodeList': 30,
-        './isNodeType': 31,
-        './replace': 32,
+        "./NODE_TYPES": 21,
+        "./createDocumentFragment": 23,
+        "./filterByNodeType": 24,
+        "./insertAfter": 25,
+        "./insertBefore": 26,
+        "./insertFirstChild": 27,
+        "./isNode": 29,
+        "./isNodeList": 30,
+        "./isNodeType": 31,
+        "./replace": 32,
       },
     ],
     23: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (e) {
           var t,
             r = document.createDocumentFragment();
           if (e)
             for (
-              (t = document.createElement('div')).innerHTML = e;
+              (t = document.createElement("div")).innerHTML = e;
               t.firstChild;
 
             )
@@ -4549,9 +4573,9 @@ require = (function () {
     ],
     24: [
       function (require, module, exports) {
-        'use strict';
-        var isNodeType = require('./isNodeType.js'),
-          ELEMENT_NODE = require('./NODE_TYPES.js').ELEMENT;
+        "use strict";
+        var isNodeType = require("./isNodeType.js"),
+          ELEMENT_NODE = require("./NODE_TYPES.js").ELEMENT;
         module.exports = function (e, r) {
           return (
             (r = r || ELEMENT_NODE),
@@ -4561,59 +4585,59 @@ require = (function () {
           );
         };
       },
-      { './NODE_TYPES': 21, './isNodeType': 31 },
+      { "./NODE_TYPES": 21, "./isNodeType": 31 },
     ],
     25: [
       function (require, module, exports) {
-        'use strict';
-        var validate = require('./internal/validate.js');
+        "use strict";
+        var validate = require("./internal/validate.js");
         module.exports = function (e, t) {
           return (
-            validate.insertNode(e, 'insertAfter'),
-            validate.childNode(t, 'insertAfter'),
-            validate.hasParentNode(t, 'insertAfter'),
+            validate.insertNode(e, "insertAfter"),
+            validate.childNode(t, "insertAfter"),
+            validate.hasParentNode(t, "insertAfter"),
             t.nextSibling
               ? t.parentNode.insertBefore(e, t.nextSibling)
               : t.parentNode.appendChild(e)
           );
         };
       },
-      { './internal/validate': 28 },
+      { "./internal/validate": 28 },
     ],
     26: [
       function (require, module, exports) {
-        'use strict';
-        var validate = require('./internal/validate.js');
+        "use strict";
+        var validate = require("./internal/validate.js");
         module.exports = function (e, r) {
           return (
-            validate.insertNode(e, 'insertBefore'),
-            validate.childNode(r, 'insertBefore'),
-            validate.hasParentNode(r, 'insertBefore'),
+            validate.insertNode(e, "insertBefore"),
+            validate.childNode(r, "insertBefore"),
+            validate.hasParentNode(r, "insertBefore"),
             r.parentNode.insertBefore(e, r)
           );
         };
       },
-      { './internal/validate': 28 },
+      { "./internal/validate": 28 },
     ],
     27: [
       function (require, module, exports) {
-        'use strict';
-        var validate = require('./internal/validate.js');
+        "use strict";
+        var validate = require("./internal/validate.js");
         module.exports = function (e, i) {
           return (
-            validate.insertNode(e, 'insertFirstChild'),
-            validate.parentNode(i, 'insertFirstChild'),
+            validate.insertNode(e, "insertFirstChild"),
+            validate.parentNode(i, "insertFirstChild"),
             i.firstChild ? i.insertBefore(e, i.firstChild) : i.appendChild(e)
           );
         };
       },
-      { './internal/validate': 28 },
+      { "./internal/validate": 28 },
     ],
     28: [
       function (require, module, exports) {
-        'use strict';
-        var isNodeType = require('../isNodeType.js'),
-          NODE_TYPES = require('../NODE_TYPES.js'),
+        "use strict";
+        var isNodeType = require("../isNodeType.js"),
+          NODE_TYPES = require("../NODE_TYPES.js"),
           COMMENT_NODE = NODE_TYPES.COMMENT,
           DOCUMENT_FRAGMENT_NODE = NODE_TYPES.DOCUMENT_FRAGMENT,
           ELEMENT_NODE = NODE_TYPES.ELEMENT,
@@ -4625,36 +4649,36 @@ require = (function () {
             DOCUMENT_FRAGMENT_NODE,
           ],
           ERR_INVALID_INSERT_NODE =
-            ' must be an Element, TextNode, Comment, or Document Fragment',
+            " must be an Element, TextNode, Comment, or Document Fragment",
           VALID_CHILD_NODE = [ELEMENT_NODE, TEXT_NODE, COMMENT_NODE],
-          ERR_INVALID_CHILD_NODE = ' must be an Element, TextNode, or Comment',
+          ERR_INVALID_CHILD_NODE = " must be an Element, TextNode, or Comment",
           VALID_PARENT_NODE = [ELEMENT_NODE, DOCUMENT_FRAGMENT_NODE],
-          ERR_INVALID_PARENT_NODE = ' must be an Element, or Document Fragment',
-          ERR_NO_PARENT_NODE = ' must have a parentNode';
+          ERR_INVALID_PARENT_NODE = " must be an Element, or Document Fragment",
+          ERR_NO_PARENT_NODE = " must have a parentNode";
         module.exports = {
           parentNode: function (E, N, e) {
-            if (((e = e || 'target'), E && !isNodeType(E, VALID_PARENT_NODE)))
-              throw new TypeError(N + ': ' + e + ERR_INVALID_PARENT_NODE);
+            if (((e = e || "target"), E && !isNodeType(E, VALID_PARENT_NODE)))
+              throw new TypeError(N + ": " + e + ERR_INVALID_PARENT_NODE);
           },
           childNode: function (E, N, e) {
-            if (((e = e || 'target'), E && !isNodeType(E, VALID_CHILD_NODE)))
-              throw new TypeError(N + ': ' + e + ERR_INVALID_CHILD_NODE);
+            if (((e = e || "target"), E && !isNodeType(E, VALID_CHILD_NODE)))
+              throw new TypeError(N + ": " + e + ERR_INVALID_CHILD_NODE);
           },
           insertNode: function (E, N, e) {
-            if (((e = e || 'node'), E && !isNodeType(E, VALID_INSERT_NODE)))
-              throw new TypeError(N + ': ' + e + ERR_INVALID_INSERT_NODE);
+            if (((e = e || "node"), E && !isNodeType(E, VALID_INSERT_NODE)))
+              throw new TypeError(N + ": " + e + ERR_INVALID_INSERT_NODE);
           },
           hasParentNode: function (E, N, e) {
-            if (((e = e || 'target'), !E.parentNode))
-              throw new TypeError(N + ': ' + e + ERR_NO_PARENT_NODE);
+            if (((e = e || "target"), !E.parentNode))
+              throw new TypeError(N + ": " + e + ERR_NO_PARENT_NODE);
           },
         };
       },
-      { '../NODE_TYPES': 21, '../isNodeType': 31 },
+      { "../NODE_TYPES": 21, "../isNodeType": 31 },
     ],
     29: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (e) {
           return !(!e || !e.nodeType);
         };
@@ -4663,14 +4687,14 @@ require = (function () {
     ],
     30: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var nodeListToStringPattern =
           /^\[object (HTMLCollection|NodeList|Object)\]$/;
         module.exports = function (t) {
           return (
             !!t &&
-            'number' == typeof t.length &&
-            !!('object' != typeof t[0] || (t[0] && t[0].nodeType)) &&
+            "number" == typeof t.length &&
+            !!("object" != typeof t[0] || (t[0] && t[0].nodeType)) &&
             nodeListToStringPattern.test(Object.prototype.toString.call(t))
           );
         };
@@ -4679,53 +4703,53 @@ require = (function () {
     ],
     31: [
       function (require, module, exports) {
-        'use strict';
-        var isNode = require('./isNode.js');
+        "use strict";
+        var isNode = require("./isNode.js");
         module.exports = function (e, r) {
           return (
             !!isNode(e) &&
-            ('number' == typeof r
+            ("number" == typeof r
               ? e.nodeType === r
               : !!Array.isArray(r) && -1 !== r.indexOf(e.nodeType))
           );
         };
       },
-      { './isNode': 29 },
+      { "./isNode": 29 },
     ],
     32: [
       function (require, module, exports) {
-        'use strict';
-        var validate = require('./internal/validate.js');
+        "use strict";
+        var validate = require("./internal/validate.js");
         module.exports = function (e, i) {
           return (
-            validate.insertNode(e, 'insertFirstChild', 'newNode'),
-            validate.childNode(i, 'insertFirstChild', 'oldNode'),
-            validate.hasParentNode(i, 'insertFirstChild', 'oldNode'),
+            validate.insertNode(e, "insertFirstChild", "newNode"),
+            validate.childNode(i, "insertFirstChild", "oldNode"),
+            validate.hasParentNode(i, "insertFirstChild", "oldNode"),
             i.parentNode.replaceChild(e, i)
           );
         };
       },
-      { './internal/validate': 28 },
+      { "./internal/validate": 28 },
     ],
     33: [
       function (require, module, exports) {
-        var ElementEngagement = require('./ac-element-engagement/ElementEngagement.js');
+        var ElementEngagement = require("./ac-element-engagement/ElementEngagement.js");
         (module.exports = new ElementEngagement()),
           (module.exports.ElementEngagement = ElementEngagement);
       },
-      { './ac-element-engagement/ElementEngagement': 34 },
+      { "./ac-element-engagement/ElementEngagement": 34 },
     ],
     34: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var proto,
           EventEmitterMicro =
-            require('@marcom/ac-event-emitter-micro').EventEmitterMicro,
+            require("@marcom/ac-event-emitter-micro").EventEmitterMicro,
           ac_Object = {
-            defaults: require('@marcom/ac-object/defaults'),
-            extend: require('@marcom/ac-object/extend'),
+            defaults: require("@marcom/ac-object/defaults"),
+            extend: require("@marcom/ac-object/extend"),
           },
-          Super = require('@marcom/ac-element-tracker').ElementTracker,
+          Super = require("@marcom/ac-element-tracker").ElementTracker,
           trackedElementDefaults = {
             timeToEngage: 500,
             inViewThreshold: 0.75,
@@ -4758,16 +4782,16 @@ require = (function () {
               ac_Object.extend(e, extendedTrackedElementProps);
           }),
           (proto._attachElementListeners = function (e) {
-            e.on('thresholdenter', this._thresholdEnter, this),
-              e.on('thresholdexit', this._thresholdExit, this),
-              e.on('enterview', this._enterView, this),
-              e.on('exitview', this._exitView, this);
+            e.on("thresholdenter", this._thresholdEnter, this),
+              e.on("thresholdexit", this._thresholdExit, this),
+              e.on("enterview", this._enterView, this),
+              e.on("exitview", this._exitView, this);
           }),
           (proto._removeElementListeners = function (e) {
-            e.off('thresholdenter', this._thresholdEnter),
-              e.off('thresholdexit', this._thresholdExit),
-              e.off('enterview', this._enterView),
-              e.off('exitview', this._exitView);
+            e.off("thresholdenter", this._thresholdEnter),
+              e.off("thresholdexit", this._thresholdExit),
+              e.off("enterview", this._enterView),
+              e.off("exitview", this._exitView);
           }),
           (proto._attachAllElementListeners = function () {
             this.elements.forEach(function (e) {
@@ -4791,8 +4815,8 @@ require = (function () {
               !i &&
                 this._elementInViewPastThreshold(e) &&
                 ((e.inThreshold = !0),
-                e.trigger('thresholdenter', e),
-                'number' == typeof e.timeToEngage &&
+                e.trigger("thresholdenter", e),
+                "number" == typeof e.timeToEngage &&
                   e.timeToEngage >= 0 &&
                   (e.engagedTimeout = window.setTimeout(
                     this._engaged.bind(this, e),
@@ -4805,7 +4829,7 @@ require = (function () {
               t &&
                 !this._elementInViewPastThreshold(e) &&
                 ((e.inThreshold = !1),
-                e.trigger('thresholdexit', e),
+                e.trigger("thresholdexit", e),
                 e.engagedTimeout &&
                   (window.clearTimeout(e.engagedTimeout),
                   (e.engagedTimeout = null)));
@@ -4813,23 +4837,23 @@ require = (function () {
           (proto._engaged = function (e) {
             (e.engagedTimeout = null),
               this._elementEngaged(e),
-              e.trigger('engaged', e),
-              this.trigger('engaged', e);
+              e.trigger("engaged", e),
+              this.trigger("engaged", e);
           }),
           (proto._thresholdEnter = function (e) {
             (e.thresholdEnterTime = Date.now()),
               (e.thresholdExitTime = 0),
-              this.trigger('thresholdenter', e);
+              this.trigger("thresholdenter", e);
           }),
           (proto._thresholdExit = function (e) {
             (e.thresholdExitTime = Date.now()),
-              this.trigger('thresholdexit', e);
+              this.trigger("thresholdexit", e);
           }),
           (proto._enterView = function (e) {
-            this.trigger('enterview', e);
+            this.trigger("enterview", e);
           }),
           (proto._exitView = function (e) {
-            this.trigger('exitview', e);
+            this.trigger("exitview", e);
           }),
           (proto._elementEngaged = function (e) {
             (e.engaged = !0), e.stopOnEngaged && this.stop(e);
@@ -4877,48 +4901,48 @@ require = (function () {
           (module.exports = ElementEngagement);
       },
       {
-        '@marcom/ac-element-tracker': 40,
-        '@marcom/ac-event-emitter-micro': 43,
-        '@marcom/ac-object/defaults': 46,
-        '@marcom/ac-object/extend': 47,
+        "@marcom/ac-element-tracker": 40,
+        "@marcom/ac-event-emitter-micro": 43,
+        "@marcom/ac-object/defaults": 46,
+        "@marcom/ac-object/extend": 47,
       },
     ],
     35: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = 1;
       },
       {},
     ],
     36: [
       function (require, module, exports) {
-        'use strict';
-        var isNode = require('../isNode.js');
+        "use strict";
+        var isNode = require("../isNode.js");
         module.exports = function (e, o) {
           return (
             !!isNode(e) &&
-            ('number' == typeof o
+            ("number" == typeof o
               ? e.nodeType === o
               : -1 !== o.indexOf(e.nodeType))
           );
         };
       },
-      { '../isNode': 38 },
+      { "../isNode": 38 },
     ],
     37: [
       function (require, module, exports) {
-        'use strict';
-        var isNodeType = require('./internal/isNodeType.js'),
-          ELEMENT_NODE = require('./ELEMENT_NODE.js');
+        "use strict";
+        var isNodeType = require("./internal/isNodeType.js"),
+          ELEMENT_NODE = require("./ELEMENT_NODE.js");
         module.exports = function (e) {
           return isNodeType(e, ELEMENT_NODE);
         };
       },
-      { './ELEMENT_NODE': 35, './internal/isNodeType': 36 },
+      { "./ELEMENT_NODE": 35, "./internal/isNodeType": 36 },
     ],
     38: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (e) {
           return !(!e || !e.nodeType);
         };
@@ -4927,14 +4951,14 @@ require = (function () {
     ],
     39: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var nodeListToStringPattern =
           /^\[object (HTMLCollection|NodeList|Object)\]$/;
         module.exports = function (t) {
           return (
             !!t &&
-            'number' == typeof t.length &&
-            !!('object' != typeof t[0] || (t[0] && t[0].nodeType)) &&
+            "number" == typeof t.length &&
+            !!("object" != typeof t[0] || (t[0] && t[0].nodeType)) &&
             nodeListToStringPattern.test(Object.prototype.toString.call(t))
           );
         };
@@ -4943,39 +4967,39 @@ require = (function () {
     ],
     40: [
       function (require, module, exports) {
-        var ElementTracker = require('./ac-element-tracker/ElementTracker.js'),
-          TrackedElement = require('./ac-element-tracker/TrackedElement.js');
+        var ElementTracker = require("./ac-element-tracker/ElementTracker.js"),
+          TrackedElement = require("./ac-element-tracker/TrackedElement.js");
         (module.exports = new ElementTracker()),
           (module.exports.ElementTracker = ElementTracker),
           (module.exports.TrackedElement = TrackedElement);
       },
       {
-        './ac-element-tracker/ElementTracker': 41,
-        './ac-element-tracker/TrackedElement': 42,
+        "./ac-element-tracker/ElementTracker": 41,
+        "./ac-element-tracker/TrackedElement": 42,
       },
     ],
     41: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var ac_dom_nodes = {
-            isNodeList: require('@marcom/ac-dom-nodes/isNodeList'),
-            isElement: require('@marcom/ac-dom-nodes/isElement'),
+            isNodeList: require("@marcom/ac-dom-nodes/isNodeList"),
+            isElement: require("@marcom/ac-dom-nodes/isElement"),
           },
           ac_dom_metrics = {
-            getDimensions: require('@marcom/ac-dom-metrics/getDimensions'),
-            getPagePosition: require('@marcom/ac-dom-metrics/getPagePosition'),
-            getScrollY: require('@marcom/ac-dom-metrics/getScrollY'),
+            getDimensions: require("@marcom/ac-dom-metrics/getDimensions"),
+            getPagePosition: require("@marcom/ac-dom-metrics/getPagePosition"),
+            getScrollY: require("@marcom/ac-dom-metrics/getScrollY"),
           },
           ac_Object = {
-            clone: require('@marcom/ac-object/clone'),
-            extend: require('@marcom/ac-object/extend'),
+            clone: require("@marcom/ac-object/clone"),
+            extend: require("@marcom/ac-object/extend"),
           },
-          TrackedElement = require('./TrackedElement.js'),
+          TrackedElement = require("./TrackedElement.js"),
           defaultOptions = { autoStart: !1, useRenderedPosition: !1 };
         function ElementTracker(e, t) {
           (this.options = ac_Object.clone(defaultOptions)),
             (this.options =
-              'object' == typeof t
+              "object" == typeof t
                 ? ac_Object.extend(this.options, t)
                 : this.options),
             (this._scrollY = this._getScrollY()),
@@ -5008,7 +5032,7 @@ require = (function () {
           }),
           (proto._elementInDOM = function (e) {
             var t = !1,
-              i = document.getElementsByTagName('body')[0];
+              i = document.getElementsByTagName("body")[0];
             return ac_dom_nodes.isElement(e) && i.contains(e) && (t = !0), t;
           }),
           (proto._elementPercentInView = function (e) {
@@ -5022,10 +5046,10 @@ require = (function () {
               : Math.min(i, this._windowHeight) - Math.max(t, 0);
           }),
           (proto._ifInView = function (e, t) {
-            t || e.trigger('enterview', e);
+            t || e.trigger("enterview", e);
           }),
           (proto._ifAlreadyInView = function (e) {
-            e.inView || e.trigger('exitview', e);
+            e.inView || e.trigger("exitview", e);
           }),
           (proto.addElements = function (e, t) {
             void 0 === t && (t = this.options.useRenderedPosition);
@@ -5046,7 +5070,7 @@ require = (function () {
               !ac_dom_nodes.isElement(e))
             )
               throw new TypeError(
-                'ElementTracker: ' + e + ' is not a valid DOM element',
+                "ElementTracker: " + e + " is not a valid DOM element",
               );
             return (
               (i = new TrackedElement(e, t)),
@@ -5070,33 +5094,33 @@ require = (function () {
           (proto.start = function () {
             !1 === this.tracking &&
               ((this.tracking = !0),
-              window.addEventListener('resize', this.refreshAllElementMetrics),
+              window.addEventListener("resize", this.refreshAllElementMetrics),
               window.addEventListener(
-                'orientationchange',
+                "orientationchange",
                 this.refreshAllElementMetrics,
               ),
-              window.addEventListener('scroll', this.refreshAllElementStates),
+              window.addEventListener("scroll", this.refreshAllElementStates),
               this.refreshAllElementMetrics());
           }),
           (proto.stop = function () {
             !0 === this.tracking &&
               ((this.tracking = !1),
               window.removeEventListener(
-                'resize',
+                "resize",
                 this.refreshAllElementMetrics,
               ),
               window.removeEventListener(
-                'orientationchange',
+                "orientationchange",
                 this.refreshAllElementMetrics,
               ),
               window.removeEventListener(
-                'scroll',
+                "scroll",
                 this.refreshAllElementStates,
               ));
           }),
           (proto.refreshAllElementMetrics = function (e, t) {
-            'number' != typeof e && (e = this._getScrollY()),
-              'number' != typeof t && (t = this._getWindowHeight()),
+            "number" != typeof e && (e = this._getScrollY()),
+              "number" != typeof t && (t = this._getWindowHeight()),
               (this._scrollY = e),
               (this._windowHeight = t),
               this.elements.forEach(this.refreshElementMetrics, this);
@@ -5114,7 +5138,7 @@ require = (function () {
             return (e = ac_Object.extend(e, t, i)), this.refreshElementState(e);
           }),
           (proto.refreshAllElementStates = function (e) {
-            'number' != typeof e && (e = this._getScrollY()),
+            "number" != typeof e && (e = this._getScrollY()),
               (this._scrollY = e),
               this.elements.forEach(this.refreshElementState, this);
           }),
@@ -5145,29 +5169,29 @@ require = (function () {
           (module.exports = ElementTracker);
       },
       {
-        './TrackedElement': 42,
-        '@marcom/ac-dom-metrics/getDimensions': 17,
-        '@marcom/ac-dom-metrics/getPagePosition': 18,
-        '@marcom/ac-dom-metrics/getScrollY': 20,
-        '@marcom/ac-dom-nodes/isElement': 37,
-        '@marcom/ac-dom-nodes/isNodeList': 39,
-        '@marcom/ac-object/clone': 45,
-        '@marcom/ac-object/extend': 47,
+        "./TrackedElement": 42,
+        "@marcom/ac-dom-metrics/getDimensions": 17,
+        "@marcom/ac-dom-metrics/getPagePosition": 18,
+        "@marcom/ac-dom-metrics/getScrollY": 20,
+        "@marcom/ac-dom-nodes/isElement": 37,
+        "@marcom/ac-dom-nodes/isNodeList": 39,
+        "@marcom/ac-object/clone": 45,
+        "@marcom/ac-object/extend": 47,
       },
     ],
     42: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var ac_dom_nodes = {
-            isElement: require('@marcom/ac-dom-nodes/isElement'),
+            isElement: require("@marcom/ac-dom-nodes/isElement"),
           },
           EventEmitterMicro =
-            require('@marcom/ac-event-emitter-micro').EventEmitterMicro,
+            require("@marcom/ac-event-emitter-micro").EventEmitterMicro,
           superclassName = EventEmitterMicro.prototype;
         function TrackedElement(e, t) {
           if (!ac_dom_nodes.isElement(e))
             throw new TypeError(
-              'TrackedElement: ' + e + ' is not a valid DOM element',
+              "TrackedElement: " + e + " is not a valid DOM element",
             );
           EventEmitterMicro.call(this),
             (this.element = e),
@@ -5191,22 +5215,22 @@ require = (function () {
           (module.exports = TrackedElement);
       },
       {
-        '@marcom/ac-dom-nodes/isElement': 37,
-        '@marcom/ac-event-emitter-micro': 43,
+        "@marcom/ac-dom-nodes/isElement": 37,
+        "@marcom/ac-event-emitter-micro": 43,
       },
     ],
     43: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = {
-          EventEmitterMicro: require('./ac-event-emitter-micro/EventEmitterMicro.js'),
+          EventEmitterMicro: require("./ac-event-emitter-micro/EventEmitterMicro.js"),
         };
       },
-      { './ac-event-emitter-micro/EventEmitterMicro': 44 },
+      { "./ac-event-emitter-micro/EventEmitterMicro": 44 },
     ],
     44: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function EventEmitterMicro() {
           this._events = {};
         }
@@ -5246,9 +5270,9 @@ require = (function () {
     ],
     45: [
       function (require, module, exports) {
-        'use strict';
-        require('@marcom/ac-polyfills/Array/isArray');
-        var extend = require('./extend.js'),
+        "use strict";
+        require("@marcom/ac-polyfills/Array/isArray");
+        var extend = require("./extend.js"),
           hasOwnProp = Object.prototype.hasOwnProperty,
           deepClone = function (e, r) {
             var n;
@@ -5256,36 +5280,36 @@ require = (function () {
               hasOwnProp.call(r, n) &&
                 (null === r[n]
                   ? (e[n] = null)
-                  : 'object' == typeof r[n]
-                  ? ((e[n] = Array.isArray(r[n]) ? [] : {}),
-                    deepClone(e[n], r[n]))
-                  : (e[n] = r[n]));
+                  : "object" == typeof r[n]
+                    ? ((e[n] = Array.isArray(r[n]) ? [] : {}),
+                      deepClone(e[n], r[n]))
+                    : (e[n] = r[n]));
             return e;
           };
         module.exports = function (e, r) {
           return r ? deepClone({}, e) : extend({}, e);
         };
       },
-      { './extend': 47, '@marcom/ac-polyfills/Array/isArray': 48 },
+      { "./extend": 47, "@marcom/ac-polyfills/Array/isArray": 48 },
     ],
     46: [
       function (require, module, exports) {
-        'use strict';
-        var extend = require('./extend.js');
+        "use strict";
+        var extend = require("./extend.js");
         module.exports = function (e, t) {
-          if ('object' != typeof e)
-            throw new TypeError('defaults: must provide a defaults object');
-          if ('object' != typeof (t = t || {}))
-            throw new TypeError('defaults: options must be a typeof object');
+          if ("object" != typeof e)
+            throw new TypeError("defaults: must provide a defaults object");
+          if ("object" != typeof (t = t || {}))
+            throw new TypeError("defaults: options must be a typeof object");
           return extend({}, e, t);
         };
       },
-      { './extend': 47 },
+      { "./extend": 47 },
     ],
     47: [
       function (require, module, exports) {
-        'use strict';
-        require('@marcom/ac-polyfills/Array/prototype.forEach');
+        "use strict";
+        require("@marcom/ac-polyfills/Array/prototype.forEach");
         var hasOwnProp = Object.prototype.hasOwnProperty;
         module.exports = function () {
           var r, o;
@@ -5303,13 +5327,13 @@ require = (function () {
           );
         };
       },
-      { '@marcom/ac-polyfills/Array/prototype.forEach': 49 },
+      { "@marcom/ac-polyfills/Array/prototype.forEach": 49 },
     ],
     48: [
       function (require, module, exports) {
         Array.isArray ||
           (Array.isArray = function (r) {
-            return '[object Array]' === Object.prototype.toString.call(r);
+            return "[object Array]" === Object.prototype.toString.call(r);
           });
       },
       {},
@@ -5321,8 +5345,8 @@ require = (function () {
             var t,
               a,
               c = Object(this);
-            if ('function' != typeof o)
-              throw new TypeError('No function object passed to forEach.');
+            if ("function" != typeof o)
+              throw new TypeError("No function object passed to forEach.");
             var e = this.length;
             for (t = 0; t < e; t += 1) (a = c[t]), o.call(r, a, t, c);
           });
@@ -5331,14 +5355,14 @@ require = (function () {
     ],
     50: [
       function (require, module, exports) {
-        'use strict';
-        var appMeasurementSetup = require('./appmeasurement-setup/AppMeasurementSetup.js');
+        "use strict";
+        var appMeasurementSetup = require("./appmeasurement-setup/AppMeasurementSetup.js");
         module.exports = {
           init: appMeasurementSetup.init,
           getInstance: appMeasurementSetup.getInstance,
         };
       },
-      { './appmeasurement-setup/AppMeasurementSetup': 54 },
+      { "./appmeasurement-setup/AppMeasurementSetup": 54 },
     ],
     51: [
       function (require, module, exports) {
@@ -5350,16 +5374,16 @@ require = (function () {
               i,
               r,
               o = window.s_c_il,
-              c = e.split(','),
+              c = e.split(","),
               s = 0;
             if (o)
               for (n = 0; !s && n < o.length; ) {
-                if ('s_c' == (t = o[n])._c && (t.account || t.oun))
+                if ("s_c" == (t = o[n])._c && (t.account || t.oun))
                   if (t.account && t.account == e) s = 1;
                   else
                     for (
                       a = t.account ? t.account : t.oun,
-                        a = t.allAccounts ? t.allAccounts : a.split(','),
+                        a = t.allAccounts ? t.allAccounts : a.split(","),
                         i = 0;
                       i < c.length;
                       i++
@@ -5395,7 +5419,7 @@ require = (function () {
                   e.d.querySelector && e.d.querySelector(c.scrollReachSelector);
                 t
                   ? ((u = t.scrollTop || 0),
-                    t.addEventListener('scroll', function () {
+                    t.addEventListener("scroll", function () {
                       var e;
                       (e = (t && t.scrollTop + t.clientHeight) || 0) > u &&
                         (u = e);
@@ -5405,7 +5429,7 @@ require = (function () {
             }
             function a(e, t) {
               var n, a, i;
-              if (e && t && (n = c.c[t] || (c.c[t] = t.split(','))))
+              if (e && t && (n = c.c[t] || (c.c[t] = t.split(","))))
                 for (i = 0; i < n.length && (a = n[i++]); )
                   if (-1 < e.indexOf(a)) return null;
               return e;
@@ -5416,19 +5440,19 @@ require = (function () {
                 (t.dataset && (c = t.dataset[n])
                   ? (o = c)
                   : t.getAttribute &&
-                    ((c = t.getAttribute('data-' + a))
+                    ((c = t.getAttribute("data-" + a))
                       ? (o = c)
                       : (c = t.getAttribute(a)) && (o = c)),
                 !o && e.useForcedLinkTracking && r)
               ) {
                 var s;
                 if (
-                  ((t = t.onclick ? '' + t.onclick : ''),
-                  (n = ''),
+                  ((t = t.onclick ? "" + t.onclick : ""),
+                  (n = ""),
                   i && t && 0 <= (a = t.indexOf(i)))
                 ) {
                   for (a += i.length; a < t.length; )
-                    if (((c = t.charAt(a++)), 0 <= '\'"'.indexOf(c))) {
+                    if (((c = t.charAt(a++)), 0 <= "'\"".indexOf(c))) {
                       s = c;
                       break;
                     }
@@ -5437,7 +5461,7 @@ require = (function () {
                     a < t.length && s && ((c = t.charAt(a)), l || c !== s);
 
                   )
-                    '\\' === c ? (l = !0) : ((n += c), (l = !1)), a++;
+                    "\\" === c ? (l = !0) : ((n += c), (l = !1)), a++;
                 }
                 (s = n) && (e.w[i] = s);
               }
@@ -5445,7 +5469,7 @@ require = (function () {
             }
             function r(e, t, n) {
               var i;
-              return (i = c[t](e, n)) && a(o(i), c[t + 'Exclusions']);
+              return (i = c[t](e, n)) && a(o(i), c[t + "Exclusions"]);
             }
             function o(e) {
               if (null == e || null == e) return e;
@@ -5453,24 +5477,24 @@ require = (function () {
                 return e
                   .replace(
                     RegExp(
-                      '^[\\s\\n\\f\\r\\t\t-\r   ᠎ - \u2028\u2029 　\ufeff]+',
-                      'mg',
+                      "^[\\s\\n\\f\\r\\t\t-\r   ᠎ - \u2028\u2029 　\ufeff]+",
+                      "mg",
                     ),
-                    '',
+                    "",
                   )
                   .replace(
                     RegExp(
-                      '[\\s\\n\\f\\r\\t\t-\r   ᠎ - \u2028\u2029 　\ufeff]+$',
-                      'mg',
+                      "[\\s\\n\\f\\r\\t\t-\r   ᠎ - \u2028\u2029 　\ufeff]+$",
+                      "mg",
                     ),
-                    '',
+                    "",
                   )
                   .replace(
                     RegExp(
-                      '[\\s\\n\\f\\r\\t\t-\r   ᠎ - \u2028\u2029 　\ufeff]{1,}',
-                      'mg',
+                      "[\\s\\n\\f\\r\\t\t-\r   ᠎ - \u2028\u2029 　\ufeff]{1,}",
+                      "mg",
                     ),
-                    ' ',
+                    " ",
                   )
                   .substring(0, 254);
               } catch (e) {}
@@ -5483,7 +5507,7 @@ require = (function () {
               (c._in = s.s_c_in),
               (c._il[c._in] = c),
               s.s_c_in++,
-              (c._c = 's_m');
+              (c._c = "s_m");
             var l,
               u = 0,
               f = 60;
@@ -5496,15 +5520,15 @@ require = (function () {
                 i = e.contextData,
                 o = e.linkObject;
               (t = e.pageName || e.pageURL) &&
-                (n = r(o, 'link', e.linkName)) &&
-                (a = r(o, 'region')) &&
-                ((i['a.activitymap.page'] = t.substring(0, 255)),
-                (i['a.activitymap.link'] =
+                (n = r(o, "link", e.linkName)) &&
+                (a = r(o, "region")) &&
+                ((i["a.activitymap.page"] = t.substring(0, 255)),
+                (i["a.activitymap.link"] =
                   128 < n.length ? n.substring(0, 128) : n),
-                (i['a.activitymap.region'] =
+                (i["a.activitymap.region"] =
                   127 < a.length ? a.substring(0, 127) : a),
-                0 < u && (i['a.activitymap.xy'] = 10 * Math.floor(u / 10)),
-                (i['a.activitymap.pageIDType'] = e.pageName ? 1 : 0));
+                0 < u && (i["a.activitymap.xy"] = 10 * Math.floor(u / 10)),
+                (i["a.activitymap.pageIDType"] = e.pageName ? 1 : 0));
             }),
               (c._d = function () {
                 c.trackScrollReach &&
@@ -5513,7 +5537,7 @@ require = (function () {
                     ? n()
                     : (t(),
                       s.addEventListener &&
-                        s.addEventListener('scroll', t, !1)),
+                        s.addEventListener("scroll", t, !1)),
                   (l = !0));
               }),
               (c.link = function (e, t) {
@@ -5521,7 +5545,7 @@ require = (function () {
                 if (t) n = a(o(t), c.linkExclusions);
                 else if (
                   (n = e) &&
-                  !(n = i(e, 'sObjectId', 's-object-id', 's_objectID', 1))
+                  !(n = i(e, "sObjectId", "s-object-id", "s_objectID", 1))
                 ) {
                   var r, s;
                   (s = a(o(e.innerText || e.textContent), c.linkExclusions)) ||
@@ -5542,51 +5566,51 @@ require = (function () {
                           a.t ||
                           a.s ||
                           !t.getAttribute ||
-                          ((i = t.getAttribute('alt'))
+                          ((i = t.getAttribute("alt"))
                             ? (a.a = i)
-                            : (i = t.getAttribute('title'))
-                            ? (a.t = i)
-                            : 'IMG' == ('' + t.nodeName).toUpperCase() &&
-                              (i = t.getAttribute('src') || t.src) &&
-                              (a.s = i)),
+                            : (i = t.getAttribute("title"))
+                              ? (a.t = i)
+                              : "IMG" == ("" + t.nodeName).toUpperCase() &&
+                                (i = t.getAttribute("src") || t.src) &&
+                                (a.s = i)),
                         (i = t.childNodes) && i.length)
                       )
                         for (t = 0; t < i.length; t++) e(i[t], n, a);
                     })(e, (r = []), (n = { a: void 0, t: void 0, s: void 0 })),
-                    (s = a(o(r.join('')))) ||
+                    (s = a(o(r.join("")))) ||
                       (s = a(o(n.a ? n.a : n.t ? n.t : n.s ? n.s : void 0))) ||
                       !(r =
                         (r = e.tagName) && r.toUpperCase
                           ? r.toUpperCase()
-                          : '') ||
-                      ('INPUT' == r || ('SUBMIT' == r && e.value)
+                          : "") ||
+                      ("INPUT" == r || ("SUBMIT" == r && e.value)
                         ? (s = a(o(e.value)))
-                        : 'IMAGE' == r && e.src && (s = a(o(e.src))))),
+                        : "IMAGE" == r && e.src && (s = a(o(e.src))))),
                     (n = s);
                 }
                 return n;
               }),
               (c.region = function (e) {
                 for (
-                  var t, n = c.regionIDAttribute || 'id';
+                  var t, n = c.regionIDAttribute || "id";
                   e && (e = e.parentNode);
 
                 ) {
                   if ((t = i(e, n, n, n))) return t;
-                  if ('BODY' == e.nodeName) return 'BODY';
+                  if ("BODY" == e.nodeName) return "BODY";
                 }
               });
           }),
             (window.AppMeasurement = function (e) {
               var t = this;
-              t.version = '2.23.0';
+              t.version = "2.23.0";
               var n = window;
               n.s_c_in || ((n.s_c_il = []), (n.s_c_in = 0)),
                 (t._il = n.s_c_il),
                 (t._in = n.s_c_in),
                 (t._il[t._in] = t),
                 n.s_c_in++,
-                (t._c = 's_c');
+                (t._c = "s_c");
               var a = n.AppMeasurement.mc;
               a || (a = null);
               var i,
@@ -5599,9 +5623,9 @@ require = (function () {
                   i &&
                   i.location &&
                   r &&
-                  '' + i.location != '' + r &&
+                  "" + i.location != "" + r &&
                   c.location &&
-                  '' + i.location != '' + c.location &&
+                  "" + i.location != "" + c.location &&
                   i.location.host === r.host;
 
                 )
@@ -5613,7 +5637,7 @@ require = (function () {
                 } catch (e) {}
               }),
                 (t.Sa = function (e) {
-                  return '' + parseInt(e) == '' + e;
+                  return "" + parseInt(e) == "" + e;
                 }),
                 (t.replace = function (e, t, n) {
                   return !e || 0 > e.indexOf(t) ? e : e.split(t).join(n);
@@ -5627,13 +5651,13 @@ require = (function () {
                         (e = t.replace(
                           e,
                           a,
-                          '%' + a.charCodeAt(0).toString(16).toUpperCase(),
+                          "%" + a.charCodeAt(0).toString(16).toUpperCase(),
                         ));
                   return e;
                 }),
                 (t.unescape = function (e) {
                   if (!e) return e;
-                  e = 0 <= e.indexOf('+') ? t.replace(e, '+', ' ') : e;
+                  e = 0 <= e.indexOf("+") ? t.replace(e, "+", " ") : e;
                   try {
                     return decodeURIComponent(e);
                   } catch (e) {}
@@ -5649,10 +5673,10 @@ require = (function () {
                       !t.La &&
                       !/^[0-9.]+$/.test(a) &&
                       ((i = 2 < (i = i ? parseInt(i) : 2) ? i : 2),
-                      0 <= (e = a.lastIndexOf('.'))))
+                      0 <= (e = a.lastIndexOf("."))))
                   ) {
                     for (; 0 <= e && 1 < i; )
-                      (e = a.lastIndexOf('.', e - 1)), i--;
+                      (e = a.lastIndexOf(".", e - 1)), i--;
                     t.La = 0 < e ? a.substring(e) : a;
                   }
                   return t.La;
@@ -5660,13 +5684,13 @@ require = (function () {
                 (t.c_r = t.cookieRead =
                   function (e) {
                     e = t.escape(e);
-                    var n = ' ' + t.d.cookie,
-                      a = n.indexOf(' ' + e + '='),
-                      i = 0 > a ? a : n.indexOf(';', a);
-                    return '[[B]]' !=
+                    var n = " " + t.d.cookie,
+                      a = n.indexOf(" " + e + "="),
+                      i = 0 > a ? a : n.indexOf(";", a);
+                    return "[[B]]" !=
                       (e =
                         0 > a
-                          ? ''
+                          ? ""
                           : t.unescape(
                               n.substring(
                                 a + 2 + e.length,
@@ -5674,7 +5698,7 @@ require = (function () {
                               ),
                             ))
                       ? e
-                      : '';
+                      : "";
                   }),
                 (t.c_w = t.cookieWrite =
                   function (e, n, a) {
@@ -5682,50 +5706,50 @@ require = (function () {
                       r = t.Rb(),
                       o = t.cookieLifetime;
                     return (
-                      (n = '' + n),
-                      (o = o ? ('' + o).toUpperCase() : ''),
+                      (n = "" + n),
+                      (o = o ? ("" + o).toUpperCase() : ""),
                       a &&
-                        'SESSION' != o &&
-                        'NONE' != o &&
-                        ((i = '' != n ? parseInt(o || 0) : -60)
+                        "SESSION" != o &&
+                        "NONE" != o &&
+                        ((i = "" != n ? parseInt(o || 0) : -60)
                           ? (a = new Date()).setTime(a.getTime() + 1e3 * i)
                           : 1 === a &&
                             ((i = (a = new Date()).getYear()),
                             a.setYear(i + 2 + (1900 > i ? 1900 : 0)))),
-                      e && 'NONE' != o
+                      e && "NONE" != o
                         ? ((t.d.cookie =
                             t.escape(e) +
-                            '=' +
-                            t.escape('' != n ? n : '[[B]]') +
-                            '; path=/;' +
-                            (a && 'SESSION' != o
-                              ? ' expires=' + a.toUTCString() + ';'
-                              : '') +
-                            (r ? ' domain=' + r + ';' : '') +
-                            (t.writeSecureCookies ? ' secure;' : '')),
+                            "=" +
+                            t.escape("" != n ? n : "[[B]]") +
+                            "; path=/;" +
+                            (a && "SESSION" != o
+                              ? " expires=" + a.toUTCString() + ";"
+                              : "") +
+                            (r ? " domain=" + r + ";" : "") +
+                            (t.writeSecureCookies ? " secure;" : "")),
                           t.cookieRead(e) == n)
                         : 0
                     );
                   }),
                 (t.Ob = function () {
                   var e = t.Util.getIeVersion();
-                  'number' == typeof e &&
+                  "number" == typeof e &&
                     10 > e &&
                     ((t.unsupportedBrowser = !0), t.Bb(t, function () {}));
                 }),
                 (t.za = function () {
                   var e = navigator.userAgent;
                   return (
-                    'Microsoft Internet Explorer' === navigator.appName ||
-                    0 <= e.indexOf('MSIE ') ||
-                    (0 <= e.indexOf('Trident/') &&
-                      0 <= e.indexOf('Windows NT 6'))
+                    "Microsoft Internet Explorer" === navigator.appName ||
+                    0 <= e.indexOf("MSIE ") ||
+                    (0 <= e.indexOf("Trident/") &&
+                      0 <= e.indexOf("Windows NT 6"))
                   );
                 }),
                 (t.Bb = function (e, t) {
                   for (var n in e)
                     Object.prototype.hasOwnProperty.call(e, n) &&
-                      'function' == typeof e[n] &&
+                      "function" == typeof e[n] &&
                       (e[n] = t);
                 }),
                 (t.K = []),
@@ -5735,20 +5759,20 @@ require = (function () {
                   var i = 0,
                     r = new Date().getTime() + t.maxDelay,
                     o = t.d.visibilityState,
-                    c = ['webkitvisibilitychange', 'visibilitychange'];
+                    c = ["webkitvisibilitychange", "visibilitychange"];
                   if (
                     (o || (o = t.d.webkitVisibilityState),
-                    o && 'prerender' == o)
+                    o && "prerender" == o)
                   ) {
                     if (!t.ga)
                       for (t.ga = 1, a = 0; a < c.length; a++)
                         t.d.addEventListener(c[a], function () {
                           var e = t.d.visibilityState;
                           e || (e = t.d.webkitVisibilityState),
-                            'visible' == e && ((t.ga = 0), t.delayReady());
+                            "visible" == e && ((t.ga = 0), t.delayReady());
                         });
                     (i = 1), (r = 0);
-                  } else a || (t.u('_d') && (i = 1));
+                  } else a || (t.u("_d") && (i = 1));
                   return (
                     i &&
                       (t.K.push({ m: e, a: n, t: r }),
@@ -5760,7 +5784,7 @@ require = (function () {
                   var e,
                     n = new Date().getTime(),
                     a = 0;
-                  for (t.u('_d') ? (a = 1) : t.Ba(); 0 < t.K.length; ) {
+                  for (t.u("_d") ? (a = 1) : t.Ba(); 0 < t.K.length; ) {
                     if (((e = t.K.shift()), a && !e.t && e.t > n)) {
                       t.K.unshift(e),
                         setTimeout(t.delayReady, parseInt(t.maxDelay / 2));
@@ -5772,10 +5796,10 @@ require = (function () {
                 (t.setAccount = t.sa =
                   function (e) {
                     var n, a;
-                    if (!t.fa('setAccount', arguments))
+                    if (!t.fa("setAccount", arguments))
                       if (((t.account = e), t.allAccounts))
                         for (
-                          n = t.allAccounts.concat(e.split(',')),
+                          n = t.allAccounts.concat(e.split(",")),
                             t.allAccounts = [],
                             n.sort(),
                             a = 0;
@@ -5784,20 +5808,20 @@ require = (function () {
                         )
                           (0 != a && n[a - 1] == n[a]) ||
                             t.allAccounts.push(n[a]);
-                      else t.allAccounts = e.split(',');
+                      else t.allAccounts = e.split(",");
                   }),
                 (t.foreachVar = function (e, n) {
                   var a,
                     i,
                     r,
                     o,
-                    c = '';
+                    c = "";
                   for (
-                    r = i = '',
+                    r = i = "",
                       t.lightProfileID
                         ? ((a = t.O),
                           (c = t.lightTrackVars) &&
-                            (c = ',' + c + ',' + t.la.join(',') + ','))
+                            (c = "," + c + "," + t.la.join(",") + ","))
                         : ((a = t.g),
                           (t.pe || t.linkType) &&
                             ((c = t.linkTrackVars),
@@ -5807,17 +5831,17 @@ require = (function () {
                                 t.pe.substring(0, 1).toUpperCase() +
                                 t.pe.substring(1)),
                               t[r] && ((c = t[r].ic), (i = t[r].hc)))),
-                          c && (c = ',' + c + ',' + t.D.join(',') + ','),
-                          i && c && (c += ',events,')),
-                      n && (n = ',' + n + ','),
+                          c && (c = "," + c + "," + t.D.join(",") + ","),
+                          i && c && (c += ",events,")),
+                      n && (n = "," + n + ","),
                       i = 0;
                     i < a.length;
                     i++
                   )
                     (r = a[i]),
                       (o = t[r]) &&
-                        (!c || 0 <= c.indexOf(',' + r + ',')) &&
-                        (!n || 0 <= n.indexOf(',' + r + ',')) &&
+                        (!c || 0 <= c.indexOf("," + r + ",")) &&
+                        (!n || 0 <= n.indexOf("," + r + ",")) &&
                         e(r, o);
                 }),
                 (t.l = function (e, n, a, i, r) {
@@ -5825,11 +5849,11 @@ require = (function () {
                     c,
                     s,
                     l,
-                    u = '',
+                    u = "",
                     f = 0;
                   if (
-                    ('contextData' == e && (e = 'c'),
-                    'clientHints' == e && (e = 'h'),
+                    ("contextData" == e && (e = "c"),
+                    "clientHints" == e && (e = "h"),
                     n)
                   ) {
                     for (o in n)
@@ -5840,7 +5864,7 @@ require = (function () {
                         ) &&
                         n[o] &&
                         (!a ||
-                          0 <= a.indexOf(',' + (i ? i + '.' : '') + o + ','))
+                          0 <= a.indexOf("," + (i ? i + "." : "") + o + ","))
                       ) {
                         if (((s = !1), f))
                           for (c = 0; c < f.length; c++)
@@ -5850,55 +5874,55 @@ require = (function () {
                             }
                         if (
                           !s &&
-                          ('' == u && (u += '&' + e + '.'),
+                          ("" == u && (u += "&" + e + "."),
                           (c = n[o]),
                           r && (o = o.substring(r.length)),
                           0 < o.length)
                         )
-                          if (0 < (s = o.indexOf('.')))
-                            (s = (r || '') + (c = o.substring(0, s)) + '.'),
+                          if (0 < (s = o.indexOf(".")))
+                            (s = (r || "") + (c = o.substring(0, s)) + "."),
                               f || (f = []),
                               f.push(s),
                               (u += t.l(c, n, a, i, s));
                           else if (
-                            ('boolean' == typeof c &&
-                              (c = c ? 'true' : 'false'),
+                            ("boolean" == typeof c &&
+                              (c = c ? "true" : "false"),
                             c)
                           ) {
                             if (
-                              'retrieveLightData' == i &&
-                              0 > r.indexOf('.contextData.')
+                              "retrieveLightData" == i &&
+                              0 > r.indexOf(".contextData.")
                             )
                               switch (
                                 ((s = o.substring(0, 4)),
                                 (l = o.substring(4)),
                                 o)
                               ) {
-                                case 'transactionID':
-                                  o = 'xact';
+                                case "transactionID":
+                                  o = "xact";
                                   break;
-                                case 'channel':
-                                  o = 'ch';
+                                case "channel":
+                                  o = "ch";
                                   break;
-                                case 'campaign':
-                                  o = 'v0';
+                                case "campaign":
+                                  o = "v0";
                                   break;
                                 default:
                                   t.Sa(l) &&
-                                    ('prop' == s
-                                      ? (o = 'c' + l)
-                                      : 'eVar' == s
-                                      ? (o = 'v' + l)
-                                      : 'list' == s
-                                      ? (o = 'l' + l)
-                                      : 'hier' == s &&
-                                        ((o = 'h' + l),
-                                        (c = c.substring(0, 255))));
+                                    ("prop" == s
+                                      ? (o = "c" + l)
+                                      : "eVar" == s
+                                        ? (o = "v" + l)
+                                        : "list" == s
+                                          ? (o = "l" + l)
+                                          : "hier" == s &&
+                                            ((o = "h" + l),
+                                            (c = c.substring(0, 255))));
                               }
-                            u += '&' + t.escape(o) + '=' + t.escape(c);
+                            u += "&" + t.escape(o) + "=" + t.escape(c);
                           }
                       }
-                    '' != u && (u += '&.' + e);
+                    "" != u && (u += "&." + e);
                   }
                   return u;
                 }),
@@ -5912,16 +5936,16 @@ require = (function () {
                     c,
                     s,
                     l,
-                    u = '',
-                    f = '',
-                    p = '',
-                    g = (r = ''),
+                    u = "",
+                    f = "",
+                    p = "",
+                    g = (r = ""),
                     d = t.T();
                   if (
                     (t.lightProfileID
                       ? ((e = t.O),
                         (f = t.lightTrackVars) &&
-                          (f = ',' + f + ',' + t.la.join(',') + ','))
+                          (f = "," + f + "," + t.la.join(",") + ","))
                       : ((e = t.g),
                         (t.pe || t.linkType) &&
                           ((f = t.linkTrackVars),
@@ -5931,25 +5955,25 @@ require = (function () {
                               t.pe.substring(0, 1).toUpperCase() +
                               t.pe.substring(1)),
                             t[r] && ((f = t[r].ic), (p = t[r].hc)))),
-                        f && (f = ',' + f + ',' + t.D.join(',') + ','),
-                        p && ((p = ',' + p + ','), f && (f += ',events,')),
-                        t.events2 && (g += ('' != g ? ',' : '') + t.events2)),
+                        f && (f = "," + f + "," + t.D.join(",") + ","),
+                        p && ((p = "," + p + ","), f && (f += ",events,")),
+                        t.events2 && (g += ("" != g ? "," : "") + t.events2)),
                     d && d.getCustomerIDs)
                   ) {
                     if (((r = a), (o = d.getCustomerIDs())))
                       for (n in o)
                         Object.prototype[n] ||
-                          ('object' == typeof (i = o[n]) &&
+                          ("object" == typeof (i = o[n]) &&
                             (r || (r = {}),
-                            i.id && (r[n + '.id'] = i.id),
-                            i.authState && (r[n + '.as'] = i.authState)));
-                    r && (u += t.l('cid', r));
+                            i.id && (r[n + ".id"] = i.id),
+                            i.authState && (r[n + ".as"] = i.authState)));
+                    r && (u += t.l("cid", r));
                   }
                   for (
                     t.AudienceManagement &&
                       t.AudienceManagement.isReady() &&
                       (u += t.l(
-                        'd',
+                        "d",
                         t.AudienceManagement.getEventCallConfigParams(),
                       )),
                       n = 0;
@@ -5962,215 +5986,215 @@ require = (function () {
                       (i = r.substring(0, 4)),
                       (c = r.substring(4)),
                       o ||
-                        ('events' == r && g
-                          ? ((o = g), (g = ''))
-                          : 'marketingCloudOrgID' == r &&
+                        ("events" == r && g
+                          ? ((o = g), (g = ""))
+                          : "marketingCloudOrgID" == r &&
                             d &&
-                            t.V('ECID') &&
+                            t.V("ECID") &&
                             (o = d.marketingCloudOrgID)),
-                      o && (!f || 0 <= f.indexOf(',' + r + ',')))
+                      o && (!f || 0 <= f.indexOf("," + r + ",")))
                     ) {
                       switch (r) {
-                        case 'customerPerspective':
-                          r = 'cp';
+                        case "customerPerspective":
+                          r = "cp";
                           break;
-                        case 'marketingCloudOrgID':
-                          r = 'mcorgid';
+                        case "marketingCloudOrgID":
+                          r = "mcorgid";
                           break;
-                        case 'supplementalDataID':
-                          r = 'sdid';
+                        case "supplementalDataID":
+                          r = "sdid";
                           break;
-                        case 'timestamp':
-                          r = 'ts';
+                        case "timestamp":
+                          r = "ts";
                           break;
-                        case 'dynamicVariablePrefix':
-                          r = 'D';
+                        case "dynamicVariablePrefix":
+                          r = "D";
                           break;
-                        case 'visitorID':
-                          r = 'vid';
+                        case "visitorID":
+                          r = "vid";
                           break;
-                        case 'marketingCloudVisitorID':
-                          r = 'mid';
+                        case "marketingCloudVisitorID":
+                          r = "mid";
                           break;
-                        case 'analyticsVisitorID':
-                          r = 'aid';
+                        case "analyticsVisitorID":
+                          r = "aid";
                           break;
-                        case 'audienceManagerLocationHint':
-                          r = 'aamlh';
+                        case "audienceManagerLocationHint":
+                          r = "aamlh";
                           break;
-                        case 'audienceManagerBlob':
-                          r = 'aamb';
+                        case "audienceManagerBlob":
+                          r = "aamb";
                           break;
-                        case 'authState':
-                          r = 'as';
+                        case "authState":
+                          r = "as";
                           break;
-                        case 'pageURL':
-                          (r = 'g'),
+                        case "pageURL":
+                          (r = "g"),
                             255 < o.length &&
                               ((t.pageURLRest = o.substring(255)),
                               (o = o.substring(0, 255)));
                           break;
-                        case 'pageURLRest':
-                          r = '-g';
+                        case "pageURLRest":
+                          r = "-g";
                           break;
-                        case 'referrer':
-                          r = 'r';
+                        case "referrer":
+                          r = "r";
                           break;
-                        case 'vmk':
-                        case 'visitorMigrationKey':
-                          r = 'vmt';
+                        case "vmk":
+                        case "visitorMigrationKey":
+                          r = "vmt";
                           break;
-                        case 'visitorMigrationServer':
-                          (r = 'vmf'),
-                            t.ssl && t.visitorMigrationServerSecure && (o = '');
+                        case "visitorMigrationServer":
+                          (r = "vmf"),
+                            t.ssl && t.visitorMigrationServerSecure && (o = "");
                           break;
-                        case 'visitorMigrationServerSecure':
-                          (r = 'vmf'),
-                            !t.ssl && t.visitorMigrationServer && (o = '');
+                        case "visitorMigrationServerSecure":
+                          (r = "vmf"),
+                            !t.ssl && t.visitorMigrationServer && (o = "");
                           break;
-                        case 'charSet':
-                          r = 'ce';
+                        case "charSet":
+                          r = "ce";
                           break;
-                        case 'visitorNamespace':
-                          r = 'ns';
+                        case "visitorNamespace":
+                          r = "ns";
                           break;
-                        case 'cookieDomainPeriods':
-                          r = 'cdp';
+                        case "cookieDomainPeriods":
+                          r = "cdp";
                           break;
-                        case 'cookieLifetime':
-                          r = 'cl';
+                        case "cookieLifetime":
+                          r = "cl";
                           break;
-                        case 'variableProvider':
-                          r = 'vvp';
+                        case "variableProvider":
+                          r = "vvp";
                           break;
-                        case 'currencyCode':
-                          r = 'cc';
+                        case "currencyCode":
+                          r = "cc";
                           break;
-                        case 'channel':
-                          r = 'ch';
+                        case "channel":
+                          r = "ch";
                           break;
-                        case 'transactionID':
-                          r = 'xact';
+                        case "transactionID":
+                          r = "xact";
                           break;
-                        case 'campaign':
-                          r = 'v0';
+                        case "campaign":
+                          r = "v0";
                           break;
-                        case 'latitude':
-                          r = 'lat';
+                        case "latitude":
+                          r = "lat";
                           break;
-                        case 'longitude':
-                          r = 'lon';
+                        case "longitude":
+                          r = "lon";
                           break;
-                        case 'resolution':
-                          r = 's';
+                        case "resolution":
+                          r = "s";
                           break;
-                        case 'colorDepth':
-                          r = 'c';
+                        case "colorDepth":
+                          r = "c";
                           break;
-                        case 'javascriptVersion':
-                          r = 'j';
+                        case "javascriptVersion":
+                          r = "j";
                           break;
-                        case 'javaEnabled':
-                          r = 'v';
+                        case "javaEnabled":
+                          r = "v";
                           break;
-                        case 'cookiesEnabled':
-                          r = 'k';
+                        case "cookiesEnabled":
+                          r = "k";
                           break;
-                        case 'browserWidth':
-                          r = 'bw';
+                        case "browserWidth":
+                          r = "bw";
                           break;
-                        case 'browserHeight':
-                          r = 'bh';
+                        case "browserHeight":
+                          r = "bh";
                           break;
-                        case 'connectionType':
-                          r = 'ct';
+                        case "connectionType":
+                          r = "ct";
                           break;
-                        case 'homepage':
-                          r = 'hp';
+                        case "homepage":
+                          r = "hp";
                           break;
-                        case 'events':
+                        case "events":
                           if (
-                            (g && (o += ('' != o ? ',' : '') + g),
-                            p && 'string' == typeof o)
+                            (g && (o += ("" != o ? "," : "") + g),
+                            p && "string" == typeof o)
                           )
                             for (
-                              c = o.split(','), o = '', i = 0;
+                              c = o.split(","), o = "", i = 0;
                               i < c.length;
                               i++
                             )
-                              0 <= (l = (s = c[i]).indexOf('=')) &&
+                              0 <= (l = (s = c[i]).indexOf("=")) &&
                                 (s = s.substring(0, l)),
-                                0 <= (l = s.indexOf(':')) &&
+                                0 <= (l = s.indexOf(":")) &&
                                   (s = s.substring(0, l)),
-                                0 <= p.indexOf(',' + s + ',') &&
-                                  (o += (o ? ',' : '') + c[i]);
+                                0 <= p.indexOf("," + s + ",") &&
+                                  (o += (o ? "," : "") + c[i]);
                           break;
-                        case 'events2':
-                          o = '';
+                        case "events2":
+                          o = "";
                           break;
-                        case 'contextData':
-                          (u += t.l('c', t[r], f, r)), (o = '');
+                        case "contextData":
+                          (u += t.l("c", t[r], f, r)), (o = "");
                           break;
-                        case 'clientHints':
-                          (u += t.l('h', t[r], f, r)), (o = '');
+                        case "clientHints":
+                          (u += t.l("h", t[r], f, r)), (o = "");
                           break;
-                        case 'lightProfileID':
-                          r = 'mtp';
+                        case "lightProfileID":
+                          r = "mtp";
                           break;
-                        case 'lightStoreForSeconds':
-                          (r = 'mtss'), t.lightProfileID || (o = '');
+                        case "lightStoreForSeconds":
+                          (r = "mtss"), t.lightProfileID || (o = "");
                           break;
-                        case 'lightIncrementBy':
-                          (r = 'mti'), t.lightProfileID || (o = '');
+                        case "lightIncrementBy":
+                          (r = "mti"), t.lightProfileID || (o = "");
                           break;
-                        case 'retrieveLightProfiles':
-                          r = 'mtsr';
+                        case "retrieveLightProfiles":
+                          r = "mtsr";
                           break;
-                        case 'deleteLightProfiles':
-                          r = 'mtsd';
+                        case "deleteLightProfiles":
+                          r = "mtsd";
                           break;
-                        case 'retrieveLightData':
+                        case "retrieveLightData":
                           t.retrieveLightProfiles &&
-                            (u += t.l('mts', t[r], f, r)),
-                            (o = '');
+                            (u += t.l("mts", t[r], f, r)),
+                            (o = "");
                           break;
                         default:
                           t.Sa(c) &&
-                            ('prop' == i
-                              ? (r = 'c' + c)
-                              : 'eVar' == i
-                              ? (r = 'v' + c)
-                              : 'list' == i
-                              ? (r = 'l' + c)
-                              : 'hier' == i &&
-                                ((r = 'h' + c), (o = o.substring(0, 255))));
+                            ("prop" == i
+                              ? (r = "c" + c)
+                              : "eVar" == i
+                                ? (r = "v" + c)
+                                : "list" == i
+                                  ? (r = "l" + c)
+                                  : "hier" == i &&
+                                    ((r = "h" + c), (o = o.substring(0, 255))));
                       }
                       o &&
                         (u +=
-                          '&' +
+                          "&" +
                           r +
-                          '=' +
-                          ('pev' != r.substring(0, 3) ? t.escape(o) : o));
+                          "=" +
+                          ("pev" != r.substring(0, 3) ? t.escape(o) : o));
                     }
-                    'pev3' == r && t.e && (u += t.e);
+                    "pev3" == r && t.e && (u += t.e);
                   }
-                  return t.ka && ((u += '&lrt=' + t.ka), (t.ka = null)), u;
+                  return t.ka && ((u += "&lrt=" + t.ka), (t.ka = null)), u;
                 }),
                 (t.B = function (e) {
                   var t = e.tagName;
-                  return 'undefined' != '' + e.pc ||
-                    ('undefined' != '' + e.cc &&
-                      'HTML' != ('' + e.cc).toUpperCase())
-                    ? ''
-                    : ('SHAPE' ==
-                        (t = t && t.toUpperCase ? t.toUpperCase() : '') &&
-                        (t = ''),
+                  return "undefined" != "" + e.pc ||
+                    ("undefined" != "" + e.cc &&
+                      "HTML" != ("" + e.cc).toUpperCase())
+                    ? ""
+                    : ("SHAPE" ==
+                        (t = t && t.toUpperCase ? t.toUpperCase() : "") &&
+                        (t = ""),
                       t &&
-                        (('INPUT' == t || 'BUTTON' == t) &&
+                        (("INPUT" == t || "BUTTON" == t) &&
                         e.type &&
                         e.type.toUpperCase
                           ? (t = e.type.toUpperCase())
-                          : !t && e.href && (t = 'A')),
+                          : !t && e.href && (t = "A")),
                       t);
                 }),
                 (t.Oa = function (e) {
@@ -6178,27 +6202,27 @@ require = (function () {
                     a,
                     i,
                     r = n.location,
-                    o = e.href ? e.href : '';
+                    o = e.href ? e.href : "";
                   return (
-                    'string' != typeof o && (o = ''),
-                    (t = o.indexOf(':')),
-                    (a = o.indexOf('?')),
-                    (i = o.indexOf('/')),
+                    "string" != typeof o && (o = ""),
+                    (t = o.indexOf(":")),
+                    (a = o.indexOf("?")),
+                    (i = o.indexOf("/")),
                     o &&
                       (0 > t || (0 <= a && t > a) || (0 <= i && t > i)) &&
                       ((a =
                         e.protocol && 1 < e.protocol.length
                           ? e.protocol
                           : r.protocol
-                          ? r.protocol
-                          : ''),
-                      (t = r.pathname.lastIndexOf('/')),
+                            ? r.protocol
+                            : ""),
+                      (t = r.pathname.lastIndexOf("/")),
                       (o =
-                        (a ? a + '//' : '') +
-                        (e.host ? e.host : r.host ? r.host : '') +
-                        ('/' != o.substring(0, 1)
-                          ? r.pathname.substring(0, 0 > t ? 0 : t) + '/'
-                          : '') +
+                        (a ? a + "//" : "") +
+                        (e.host ? e.host : r.host ? r.host : "") +
+                        ("/" != o.substring(0, 1)
+                          ? r.pathname.substring(0, 0 > t ? 0 : t) + "/"
+                          : "") +
                         o)),
                     o
                   );
@@ -6207,48 +6231,48 @@ require = (function () {
                   var n,
                     a,
                     i = t.B(e),
-                    r = '',
+                    r = "",
                     o = 0;
                   return i &&
                     ((n = e.protocol),
                     (a = e.onclick),
                     !e.href ||
-                    ('A' != i && 'AREA' != i) ||
-                    (a && n && !(0 > n.toLowerCase().indexOf('javascript')))
+                    ("A" != i && "AREA" != i) ||
+                    (a && n && !(0 > n.toLowerCase().indexOf("javascript")))
                       ? a
                         ? ((r = t.replace(
                             t.replace(
-                              t.replace(t.replace('' + a, '\r', ''), '\n', ''),
-                              '\t',
-                              '',
+                              t.replace(t.replace("" + a, "\r", ""), "\n", ""),
+                              "\t",
+                              "",
                             ),
-                            ' ',
-                            '',
+                            " ",
+                            "",
                           )),
                           (o = 2))
-                        : 'INPUT' == i || 'SUBMIT' == i
-                        ? (e.value
-                            ? (r = e.value)
-                            : e.innerText
-                            ? (r = e.innerText)
-                            : e.textContent && (r = e.textContent),
-                          (o = 3))
-                        : 'IMAGE' == i && e.src && (r = e.src)
+                        : "INPUT" == i || "SUBMIT" == i
+                          ? (e.value
+                              ? (r = e.value)
+                              : e.innerText
+                                ? (r = e.innerText)
+                                : e.textContent && (r = e.textContent),
+                            (o = 3))
+                          : "IMAGE" == i && e.src && (r = e.src)
                       : (r = t.Oa(e)),
                     r)
                     ? { id: r.substring(0, 100), type: o }
                     : 0;
                 }),
                 (t.nc = function (e) {
-                  for (var n = t.B(e), a = t.L(e); e && !a && 'BODY' != n; )
+                  for (var n = t.B(e), a = t.L(e); e && !a && "BODY" != n; )
                     (e = e.parentElement ? e.parentElement : e.parentNode) &&
                       ((n = t.B(e)), (a = t.L(e)));
                   return (
-                    (a && 'BODY' != n) || (e = 0),
+                    (a && "BODY" != n) || (e = 0),
                     e &&
                       (0 <=
-                        (n = e.onclick ? '' + e.onclick : '').indexOf('.tl(') ||
-                        0 <= n.indexOf('.trackLink(')) &&
+                        (n = e.onclick ? "" + e.onclick : "").indexOf(".tl(") ||
+                        0 <= n.indexOf(".trackLink(")) &&
                       (e = 0),
                     e
                   );
@@ -6262,13 +6286,13 @@ require = (function () {
                     c = t.linkType,
                     s = t.linkURL;
                   if (((t.ma = 1), o || ((t.ma = 0), (o = t.clickObject)), o)) {
-                    for (e = t.B(o), a = t.L(o); o && !a && 'BODY' != e; )
+                    for (e = t.B(o), a = t.L(o); o && !a && "BODY" != e; )
                       (o = o.parentElement ? o.parentElement : o.parentNode) &&
                         ((e = t.B(o)), (a = t.L(o)));
-                    if (((a && 'BODY' != e) || (o = 0), o && !t.linkObject)) {
-                      var l = o.onclick ? '' + o.onclick : '';
-                      (0 <= l.indexOf('.tl(') ||
-                        0 <= l.indexOf('.trackLink(')) &&
+                    if (((a && "BODY" != e) || (o = 0), o && !t.linkObject)) {
+                      var l = o.onclick ? "" + o.onclick : "";
+                      (0 <= l.indexOf(".tl(") ||
+                        0 <= l.indexOf(".trackLink(")) &&
                         (o = 0);
                     }
                   } else t.ma = 1;
@@ -6276,7 +6300,7 @@ require = (function () {
                     (!s && o && (s = t.Oa(o)),
                     s &&
                       !t.linkLeaveQueryString &&
-                      0 <= (i = s.indexOf('?')) &&
+                      0 <= (i = s.indexOf("?")) &&
                       (s = s.substring(0, i)),
                     !c && s)
                   ) {
@@ -6285,20 +6309,20 @@ require = (function () {
                       p = 0;
                     if (t.trackDownloadLinks && t.linkDownloadFileTypes)
                       for (
-                        i = (l = s.toLowerCase()).indexOf('?'),
-                          r = l.indexOf('#'),
+                        i = (l = s.toLowerCase()).indexOf("?"),
+                          r = l.indexOf("#"),
                           0 <= i ? 0 <= r && r < i && (i = r) : (i = r),
                           0 <= i && (l = l.substring(0, i)),
-                          i = t.linkDownloadFileTypes.toLowerCase().split(','),
+                          i = t.linkDownloadFileTypes.toLowerCase().split(","),
                           r = 0;
                         r < i.length;
                         r++
                       )
                         (u = i[r]) &&
-                          (l.substring(l.length - (u.length + 1)) == '.' + u ||
+                          (l.substring(l.length - (u.length + 1)) == "." + u ||
                             l.substring(l.length - (u.length + 1)) ==
-                              '/' + u) &&
-                          (c = 'd');
+                              "/" + u) &&
+                          (c = "d");
                     if (
                       t.trackExternalLinks &&
                       !c &&
@@ -6310,24 +6334,24 @@ require = (function () {
                         t.linkExternalFilters
                           ? ((i = t.linkExternalFilters
                               .toLowerCase()
-                              .split(',')),
+                              .split(",")),
                             (f = 1))
                           : t.linkInternalFilters &&
                             (i = t.linkInternalFilters
                               .toLowerCase()
-                              .split(',')),
+                              .split(",")),
                         i))
                     ) {
                       for (r = 0; r < i.length; r++)
                         (u = i[r]), 0 <= l.indexOf(u) && (p = 1);
-                      p ? f && (c = 'e') : f || (c = 'e');
+                      p ? f && (c = "e") : f || (c = "e");
                     }
                   }
                   (t.linkObject = o),
                     (t.linkURL = s),
                     (t.linkType = c),
                     (t.trackClickMap || t.trackInlineStats) &&
-                      ((t.e = ''),
+                      ((t.e = ""),
                       o &&
                         ((c = t.pageName),
                         (s = 1),
@@ -6340,15 +6364,15 @@ require = (function () {
                           a.id &&
                           e &&
                           (t.e =
-                            '&pid=' +
+                            "&pid=" +
                             t.escape(c.substring(0, 255)) +
-                            (s ? '&pidt=' + s : '') +
-                            '&oid=' +
+                            (s ? "&pidt=" + s : "") +
+                            "&oid=" +
                             t.escape(a.id.substring(0, 100)) +
-                            (a.type ? '&oidt=' + a.type : '') +
-                            '&ot=' +
+                            (a.type ? "&oidt=" + a.type : "") +
+                            "&ot=" +
                             e +
-                            (o ? '&oi=' + o : ''))));
+                            (o ? "&oi=" + o : ""))));
                 }),
                 (t.Vb = function () {
                   var e = t.ma,
@@ -6358,10 +6382,10 @@ require = (function () {
                   if (
                     (n &&
                       (a || i) &&
-                      ('d' != (n = n.toLowerCase()) && 'e' != n && (n = 'o'),
-                      (t.pe = 'lnk_' + n),
-                      (t.pev1 = a ? t.escape(a) : ''),
-                      (t.pev2 = i ? t.escape(i) : ''),
+                      ("d" != (n = n.toLowerCase()) && "e" != n && (n = "o"),
+                      (t.pe = "lnk_" + n),
+                      (t.pev1 = a ? t.escape(a) : ""),
+                      (t.pev2 = i ? t.escape(i) : ""),
                       (e = 1)),
                     t.abort && (e = 0),
                     t.trackClickMap || t.trackInlineStats || t.Yb())
@@ -6370,28 +6394,28 @@ require = (function () {
                     var r,
                       o,
                       c,
-                      s = (l = t.vb()) ? l.split('&') : 0,
+                      s = (l = t.vb()) ? l.split("&") : 0,
                       l = 0;
                     if (s)
                       for (r = 0; r < s.length; r++)
-                        (o = s[r].split('=')),
-                          (i = t.unescape(o[0]).split(',')),
+                        (o = s[r].split("=")),
+                          (i = t.unescape(o[0]).split(",")),
                           (n[(o = t.unescape(o[1]))] = i);
-                    for (c in ((i = t.account.split(',')),
+                    for (c in ((i = t.account.split(",")),
                     (r = {}),
                     t.contextData))
                       c &&
                         !Object.prototype[c] &&
-                        'a.activitymap.' == c.substring(0, 14) &&
-                        ((r[c] = t.contextData[c]), (t.contextData[c] = ''));
-                    if (((t.e = t.l('c', r) + (t.e ? t.e : '')), e || t.e)) {
+                        "a.activitymap." == c.substring(0, 14) &&
+                        ((r[c] = t.contextData[c]), (t.contextData[c] = ""));
+                    if (((t.e = t.l("c", r) + (t.e ? t.e : "")), e || t.e)) {
                       for (o in (e && !t.e && (l = 1), n))
                         if (!Object.prototype[o])
                           for (c = 0; c < i.length; c++)
                             for (
                               l &&
-                                (s = n[o].join(',')) == t.account &&
-                                ((t.e += ('&' != o.charAt(0) ? '&' : '') + o),
+                                (s = n[o].join(",")) == t.account &&
+                                ((t.e += ("&" != o.charAt(0) ? "&" : "") + o),
                                 (n[o] = []),
                                 (a = 1)),
                                 r = 0;
@@ -6401,28 +6425,28 @@ require = (function () {
                               (s = n[o][r]) == i[c] &&
                                 (l &&
                                   (t.e +=
-                                    '&u=' +
+                                    "&u=" +
                                     t.escape(s) +
-                                    ('&' != o.charAt(0) ? '&' : '') +
+                                    ("&" != o.charAt(0) ? "&" : "") +
                                     o +
-                                    '&u=0'),
+                                    "&u=0"),
                                 n[o].splice(r, 1),
                                 (a = 1));
                       if ((e || (a = 1), a)) {
-                        for (o in ((l = ''),
+                        for (o in ((l = ""),
                         (r = 2),
                         !e &&
                           t.e &&
-                          ((l = t.escape(i.join(',')) + '=' + t.escape(t.e)),
+                          ((l = t.escape(i.join(",")) + "=" + t.escape(t.e)),
                           (r = 1)),
                         n))
                           !Object.prototype[o] &&
                             0 < r &&
                             0 < n[o].length &&
                             ((l +=
-                              (l ? '&' : '') +
-                              t.escape(n[o].join(',')) +
-                              '=' +
+                              (l ? "&" : "") +
+                              t.escape(n[o].join(",")) +
+                              "=" +
                               t.escape(o)),
                             r--);
                         t.Db(l);
@@ -6454,29 +6478,29 @@ require = (function () {
                       i,
                       r = new Date(),
                       o = c.location,
-                      s = (n = e = ''),
-                      l = '1.2',
-                      u = t.cookieWrite('s_cc', 'true', 0) ? 'Y' : 'N',
-                      f = '',
-                      p = '';
+                      s = (n = e = ""),
+                      l = "1.2",
+                      u = t.cookieWrite("s_cc", "true", 0) ? "Y" : "N",
+                      f = "",
+                      p = "";
                     if (
                       r.setUTCDate &&
-                      ((l = '1.3'),
-                      (0).toPrecision && ((l = '1.5'), (r = []).forEach))
+                      ((l = "1.3"),
+                      (0).toPrecision && ((l = "1.5"), (r = []).forEach))
                     ) {
-                      (l = '1.6'), (n = 0), (e = {});
+                      (l = "1.6"), (n = 0), (e = {});
                       try {
                         (n = new Iterator(e)).next &&
-                          ((l = '1.7'),
+                          ((l = "1.7"),
                           r.reduce &&
-                            (l = '1.8').trim &&
-                            ((l = '1.8.1'),
+                            (l = "1.8").trim &&
+                            ((l = "1.8.1"),
                             Date.parse &&
-                              ((l = '1.8.2'), Object.create && (l = '1.8.5'))));
+                              ((l = "1.8.2"), Object.create && (l = "1.8.5"))));
                       } catch (e) {}
                     }
-                    (e = screen.width + 'x' + screen.height),
-                      (s = navigator.javaEnabled() ? 'Y' : 'N'),
+                    (e = screen.width + "x" + screen.height),
+                      (s = navigator.javaEnabled() ? "Y" : "N"),
                       (n = screen.pixelDepth
                         ? screen.pixelDepth
                         : screen.colorDepth),
@@ -6487,11 +6511,11 @@ require = (function () {
                         ? t.w.innerHeight
                         : t.d.documentElement.offsetHeight);
                     try {
-                      t.b.addBehavior('#default#homePage'),
-                        (f = t.b.oc(o) ? 'Y' : 'N');
+                      t.b.addBehavior("#default#homePage"),
+                        (f = t.b.oc(o) ? "Y" : "N");
                     } catch (e) {}
                     try {
-                      t.b.addBehavior('#default#clientCaps'),
+                      t.b.addBehavior("#default#clientCaps"),
                         (p = t.b.connectionType);
                     } catch (e) {}
                     (t.resolution = e),
@@ -6538,8 +6562,8 @@ require = (function () {
                 (t.loadModule = function (e, a) {
                   var i = t.Q[e];
                   if (!i) {
-                    (i = n['AppMeasurement_Module_' + e]
-                      ? new n['AppMeasurement_Module_' + e](t)
+                    (i = n["AppMeasurement_Module_" + e]
+                      ? new n["AppMeasurement_Module_" + e](t)
                       : {}),
                       (t.Q[e] = t[e] = i),
                       (i.ob = function () {
@@ -6547,12 +6571,12 @@ require = (function () {
                       }),
                       (i.Eb = function (n) {
                         (i.yb = n) &&
-                          ((t[e + '_onLoad'] = n),
-                          t.fa(e + '_onLoad', [t, i], 1) || n(t, i));
+                          ((t[e + "_onLoad"] = n),
+                          t.fa(e + "_onLoad", [t, i], 1) || n(t, i));
                       });
                     try {
                       Object.defineProperty
-                        ? Object.defineProperty(i, 'onLoad', {
+                        ? Object.defineProperty(i, "onLoad", {
                             get: i.ob,
                             set: i.Eb,
                           })
@@ -6562,8 +6586,8 @@ require = (function () {
                     }
                   }
                   a &&
-                    ((t[e + '_onLoad'] = a),
-                    t.fa(e + '_onLoad', [t, i], 1) || a(t, i));
+                    ((t[e + "_onLoad"] = a),
+                    t.fa(e + "_onLoad", [t, i], 1) || a(t, i));
                 }),
                 (t.u = function (e) {
                   var n, a;
@@ -6586,9 +6610,9 @@ require = (function () {
                     a = t.visitorSamplingGroup,
                     i =
                       ((a =
-                        's_vsn_' +
+                        "s_vsn_" +
                         (t.visitorNamespace ? t.visitorNamespace : t.account) +
-                        (a ? '_' + a : '')),
+                        (a ? "_" + a : "")),
                       t.cookieRead(a));
                   if (n) {
                     if (((n *= 100), i && (i = parseInt(i)), !i)) {
@@ -6603,15 +6627,15 @@ require = (function () {
                   var a, i, r, o, c, s, l;
                   for (l = {}, a = 0; 2 > a; a++)
                     for (i = 0 < a ? t.Ha : t.g, r = 0; r < i.length; r++)
-                      if ((c = e[(o = i[r])]) || e['!' + o]) {
+                      if ((c = e[(o = i[r])]) || e["!" + o]) {
                         if (
                           c &&
                           !n &&
-                          ('contextData' == o || 'retrieveLightData' == o) &&
+                          ("contextData" == o || "retrieveLightData" == o) &&
                           t[o]
                         )
                           for (s in t[o]) c[s] || (c[s] = t[o][s]);
-                        t[o] || (l['!' + o] = 1), (l[o] = t[o]), (t[o] = c);
+                        t[o] || (l["!" + o] = 1), (l[o] = t[o]), (t[o] = c);
                       }
                   return l;
                 }),
@@ -6621,38 +6645,38 @@ require = (function () {
                     for (a = 0 < n ? t.Ha : t.g, i = 0; i < a.length; i++)
                       (e[(r = a[i])] = t[r]),
                         e[r] ||
-                          ('prop' !== r.substring(0, 4) &&
-                            'eVar' !== r.substring(0, 4) &&
-                            'hier' !== r.substring(0, 4) &&
-                            'list' !== r.substring(0, 4) &&
-                            'channel' !== r &&
-                            'events' !== r &&
-                            'eventList' !== r &&
-                            'products' !== r &&
-                            'productList' !== r &&
-                            'purchaseID' !== r &&
-                            'transactionID' !== r &&
-                            'state' !== r &&
-                            'zip' !== r &&
-                            'campaign' !== r &&
-                            'events2' !== r &&
-                            'latitude' !== r &&
-                            'longitude' !== r &&
-                            'ms_a' !== r &&
-                            'contextData' !== r &&
-                            'supplementalDataID' !== r &&
-                            'tnt' !== r &&
-                            'timestamp' !== r &&
-                            'abort' !== r &&
-                            'useBeacon' !== r &&
-                            'linkObject' !== r &&
-                            'clickObject' !== r &&
-                            'linkType' !== r &&
-                            'linkName' !== r &&
-                            'linkURL' !== r &&
-                            'bodyClickTarget' !== r &&
-                            'bodyClickFunction' !== r) ||
-                          (e['!' + r] = 1);
+                          ("prop" !== r.substring(0, 4) &&
+                            "eVar" !== r.substring(0, 4) &&
+                            "hier" !== r.substring(0, 4) &&
+                            "list" !== r.substring(0, 4) &&
+                            "channel" !== r &&
+                            "events" !== r &&
+                            "eventList" !== r &&
+                            "products" !== r &&
+                            "productList" !== r &&
+                            "purchaseID" !== r &&
+                            "transactionID" !== r &&
+                            "state" !== r &&
+                            "zip" !== r &&
+                            "campaign" !== r &&
+                            "events2" !== r &&
+                            "latitude" !== r &&
+                            "longitude" !== r &&
+                            "ms_a" !== r &&
+                            "contextData" !== r &&
+                            "supplementalDataID" !== r &&
+                            "tnt" !== r &&
+                            "timestamp" !== r &&
+                            "abort" !== r &&
+                            "useBeacon" !== r &&
+                            "linkObject" !== r &&
+                            "clickObject" !== r &&
+                            "linkType" !== r &&
+                            "linkName" !== r &&
+                            "linkURL" !== r &&
+                            "bodyClickTarget" !== r &&
+                            "bodyClickFunction" !== r) ||
+                          (e["!" + r] = 1);
                 }),
                 (t.Qb = function (e) {
                   var t,
@@ -6662,60 +6686,60 @@ require = (function () {
                     r,
                     o,
                     c = 0,
-                    s = '',
-                    l = '';
+                    s = "",
+                    l = "";
                   if (
                     e &&
                     255 < e.length &&
-                    0 < (n = (t = '' + e).indexOf('?')) &&
+                    0 < (n = (t = "" + e).indexOf("?")) &&
                     ((o = t.substring(n + 1)),
                     (a = 0),
-                    'http://' ==
+                    "http://" ==
                     (i = (t = t.substring(0, n)).toLowerCase()).substring(0, 7)
                       ? (a += 7)
-                      : 'https://' == i.substring(0, 8) && (a += 8),
-                    0 < (n = i.indexOf('/', a)) &&
+                      : "https://" == i.substring(0, 8) && (a += 8),
+                    0 < (n = i.indexOf("/", a)) &&
                       ((i = i.substring(a, n)),
                       (r = t.substring(n)),
                       (t = t.substring(0, n)),
-                      0 <= i.indexOf('google')
-                        ? (c = ',q,ie,start,search_key,word,kw,cd,')
-                        : 0 <= i.indexOf('yahoo.co')
-                        ? (c = ',p,ei,')
-                        : 0 <= i.indexOf('baidu.') && (c = ',wd,word,'),
+                      0 <= i.indexOf("google")
+                        ? (c = ",q,ie,start,search_key,word,kw,cd,")
+                        : 0 <= i.indexOf("yahoo.co")
+                          ? (c = ",p,ei,")
+                          : 0 <= i.indexOf("baidu.") && (c = ",wd,word,"),
                       c && o))
                   ) {
-                    if ((e = o.split('&')) && 1 < e.length) {
+                    if ((e = o.split("&")) && 1 < e.length) {
                       for (a = 0; a < e.length; a++)
-                        0 < (n = (i = e[a]).indexOf('=')) &&
-                        0 <= c.indexOf(',' + i.substring(0, n) + ',')
-                          ? (s += (s ? '&' : '') + i)
-                          : (l += (l ? '&' : '') + i);
-                      s && l ? (o = s + '&' + l) : (l = '');
+                        0 < (n = (i = e[a]).indexOf("=")) &&
+                        0 <= c.indexOf("," + i.substring(0, n) + ",")
+                          ? (s += (s ? "&" : "") + i)
+                          : (l += (l ? "&" : "") + i);
+                      s && l ? (o = s + "&" + l) : (l = "");
                     }
                     e =
                       t +
                       (0 < (n = 253 - (o.length - l.length) - t.length)
                         ? r.substring(0, n)
-                        : '') +
-                      '?' +
+                        : "") +
+                      "?" +
                       o;
                   }
                   return e;
                 }),
                 (t.gb = function (e) {
                   var n = t.d.visibilityState,
-                    a = ['webkitvisibilitychange', 'visibilitychange'];
+                    a = ["webkitvisibilitychange", "visibilitychange"];
                   if (
                     (n || (n = t.d.webkitVisibilityState),
-                    n && 'prerender' == n)
+                    n && "prerender" == n)
                   ) {
                     if (e)
                       for (n = 0; n < a.length; n++)
                         t.d.addEventListener(a[n], function () {
                           var n = t.d.visibilityState;
                           n || (n = t.d.webkitVisibilityState),
-                            'visible' == n && e();
+                            "visible" == n && e();
                         });
                     return !1;
                   }
@@ -6739,7 +6763,7 @@ require = (function () {
                 (t.fb = function (e) {
                   return (
                     t.maxDelay || (t.maxDelay = 250),
-                    !t.u('_d') ||
+                    !t.u("_d") ||
                       (e &&
                         setTimeout(function () {
                           e();
@@ -6842,48 +6866,48 @@ require = (function () {
                 }),
                 (t.Sb = function () {
                   var e,
-                    n = t.cookieRead('s_fid'),
-                    a = '',
-                    i = '';
+                    n = t.cookieRead("s_fid"),
+                    a = "",
+                    i = "";
                   e = 8;
                   var r = 4;
-                  if (!n || 0 > n.indexOf('-')) {
+                  if (!n || 0 > n.indexOf("-")) {
                     for (n = 0; 16 > n; n++)
                       (e = Math.floor(Math.random() * e)),
-                        (a += '0123456789ABCDEF'.substring(e, e + 1)),
+                        (a += "0123456789ABCDEF".substring(e, e + 1)),
                         (e = Math.floor(Math.random() * r)),
-                        (i += '0123456789ABCDEF'.substring(e, e + 1)),
+                        (i += "0123456789ABCDEF".substring(e, e + 1)),
                         (e = r = 16);
-                    n = a + '-' + i;
+                    n = a + "-" + i;
                   }
-                  return t.cookieWrite('s_fid', n, 1) || (n = 0), n;
+                  return t.cookieWrite("s_fid", n, 1) || (n = 0), n;
                 }),
                 (t.Ga = function (e) {
                   var a,
                     i = new Date(),
                     r =
-                      's' +
+                      "s" +
                       (Math.floor(i.getTime() / 108e5) % 10) +
                       Math.floor(1e13 * Math.random()),
                     o = i.getYear(),
                     s =
                       ((o =
-                        't=' +
+                        "t=" +
                         t.escape(
                           i.getDate() +
-                            '/' +
+                            "/" +
                             i.getMonth() +
-                            '/' +
+                            "/" +
                             (1900 > o ? o + 1900 : o) +
-                            ' ' +
+                            " " +
                             i.getHours() +
-                            ':' +
+                            ":" +
                             i.getMinutes() +
-                            ':' +
+                            ":" +
                             i.getSeconds() +
-                            ' ' +
+                            " " +
                             i.getDay() +
-                            ' ' +
+                            " " +
                             i.getTimezoneOffset(),
                         )),
                       t.T());
@@ -6903,7 +6927,7 @@ require = (function () {
                           t.referrer ||
                             t.ab ||
                             ((e = t.Util.getQueryParam(
-                              'adobe_mc_ref',
+                              "adobe_mc_ref",
                               null,
                               null,
                               !0,
@@ -6911,31 +6935,31 @@ require = (function () {
                             (t.referrer =
                               e || void 0 === e
                                 ? void 0 === e
-                                  ? ''
+                                  ? ""
                                   : e
                                 : c.document.referrer)),
                           (t.ab = 1),
                           !t.referrer && t.Z && (t.referrer = t.Z),
                           (t.Z = 0),
                           (t.referrer = t.Qb(t.referrer)),
-                          t.u('_g')),
+                          t.u("_g")),
                         t.Vb() &&
                           !t.abort &&
                           (s &&
-                            t.V('TARGET') &&
+                            t.V("TARGET") &&
                             !t.supplementalDataID &&
                             s.getSupplementalDataID &&
                             (t.supplementalDataID = s.getSupplementalDataID(
-                              'AppMeasurement:' + t._in,
+                              "AppMeasurement:" + t._in,
                               !t.expectSupplementalData,
                             )),
-                          t.V('AAM') || (t.contextData['cm.ssf'] = 1),
+                          t.V("AAM") || (t.contextData["cm.ssf"] = 1),
                           t.Wb(),
                           t.Ab(),
                           (o += t.Ub()),
                           t.wb(r, o),
-                          t.u('_t'),
-                          (t.referrer = ''),
+                          t.u("_t"),
+                          (t.referrer = ""),
                           t.contextData &&
                             t.contextData.excCodes &&
                             (t.contextData.excCodes = 0)))),
@@ -6985,11 +7009,11 @@ require = (function () {
                 (t.registerPreTrackCallback = function (e) {
                   for (var n = [], a = 1; a < arguments.length; a++)
                     n.push(arguments[a]);
-                  'function' == typeof e
+                  "function" == typeof e
                     ? t.Da.push([e, n])
                     : t.debugTracking &&
                       t.log(
-                        'Warning, Non function type passed to registerPreTrackCallback',
+                        "Warning, Non function type passed to registerPreTrackCallback",
                       );
                 }),
                 (t.lb = function (e) {
@@ -6999,22 +7023,22 @@ require = (function () {
                 (t.registerPostTrackCallback = function (e) {
                   for (var n = [], a = 1; a < arguments.length; a++)
                     n.push(arguments[a]);
-                  'function' == typeof e
+                  "function" == typeof e
                     ? t.Ca.push([e, n])
                     : t.debugTracking &&
                       t.log(
-                        'Warning, Non function type passed to registerPostTrackCallback',
+                        "Warning, Non function type passed to registerPostTrackCallback",
                       );
                 }),
                 (t.kb = function (e) {
                   t.wa(t.Ca, e);
                 }),
                 (t.wa = function (e, n) {
-                  if ('object' == typeof e)
+                  if ("object" == typeof e)
                     for (var a = 0; a < e.length; a++) {
                       var i = e[a][0],
                         r = e[a][1].slice();
-                      if ((r.unshift(n), 'function' == typeof i))
+                      if ((r.unshift(n), "function" == typeof i))
                         try {
                           i.apply(null, r);
                         } catch (e) {
@@ -7043,54 +7067,54 @@ require = (function () {
                 (t.clearVars = function () {
                   var e, n;
                   for (e = 0; e < t.g.length; e++)
-                    ('prop' == (n = t.g[e]).substring(0, 4) ||
-                      'eVar' == n.substring(0, 4) ||
-                      'hier' == n.substring(0, 4) ||
-                      'list' == n.substring(0, 4) ||
-                      'channel' == n ||
-                      'events' == n ||
-                      'eventList' == n ||
-                      'products' == n ||
-                      'productList' == n ||
-                      'purchaseID' == n ||
-                      'transactionID' == n ||
-                      'state' == n ||
-                      'zip' == n ||
-                      'campaign' == n) &&
+                    ("prop" == (n = t.g[e]).substring(0, 4) ||
+                      "eVar" == n.substring(0, 4) ||
+                      "hier" == n.substring(0, 4) ||
+                      "list" == n.substring(0, 4) ||
+                      "channel" == n ||
+                      "events" == n ||
+                      "eventList" == n ||
+                      "products" == n ||
+                      "productList" == n ||
+                      "purchaseID" == n ||
+                      "transactionID" == n ||
+                      "state" == n ||
+                      "zip" == n ||
+                      "campaign" == n) &&
                       (t[n] = void 0);
                 }),
-                (t.tagvisblecontainerMarker = ''),
+                (t.tagvisblecontainerMarker = ""),
                 (t.wb = function (e, n) {
                   var a =
                     t.mb() +
-                    '/' +
+                    "/" +
                     e +
-                    '?AQB=1&ndh=1&pf=1&' +
+                    "?AQB=1&ndh=1&pf=1&" +
                     (t.Aa()
-                      ? 'callback=s_c_il[' + t._in + '].doPostbacks&et=1&'
-                      : '') +
+                      ? "callback=s_c_il[" + t._in + "].doPostbacks&et=1&"
+                      : "") +
                     n +
-                    '&AQE=1';
+                    "&AQE=1";
                   t.lb(a), t.jb(a), t.U();
                 }),
                 (t.mb = function () {
                   var e = t.nb();
                   return (
-                    'http' +
-                    (t.ssl ? 's' : '') +
-                    '://' +
+                    "http" +
+                    (t.ssl ? "s" : "") +
+                    "://" +
                     e +
-                    '/b/ss/' +
+                    "/b/ss/" +
                     t.account +
-                    '/' +
-                    (t.mobile ? '5.' : '') +
-                    (t.Aa() ? '10' : '1') +
-                    '/JS-' +
+                    "/" +
+                    (t.mobile ? "5." : "") +
+                    (t.Aa() ? "10" : "1") +
+                    "/JS-" +
                     t.version +
-                    (t.fc ? 'T' : '') +
+                    (t.fc ? "T" : "") +
                     (t.tagvisblecontainerMarker
-                      ? '-' + t.tagvisblecontainerMarker
-                      : '')
+                      ? "-" + t.tagvisblecontainerMarker
+                      : "")
                   );
                 }),
                 (t.Aa = function () {
@@ -7107,10 +7131,10 @@ require = (function () {
                       ? t.trackingServerSecure &&
                         t.ssl &&
                         (n = t.trackingServerSecure)
-                      : ('d1' == (e = e ? ('' + e).toLowerCase() : 'd1')
-                          ? (e = '112')
-                          : 'd2' == e && (e = '122'),
-                        (n = t.pb() + '.' + e + '.2o7.net')),
+                      : ("d1" == (e = e ? ("" + e).toLowerCase() : "d1")
+                          ? (e = "112")
+                          : "d2" == e && (e = "122"),
+                        (n = t.pb() + "." + e + ".2o7.net")),
                     n
                   );
                 }),
@@ -7118,20 +7142,20 @@ require = (function () {
                   var e = t.visitorNamespace;
                   return (
                     e ||
-                      (e = (e = t.account.split(',')[0]).replace(
+                      (e = (e = t.account.split(",")[0]).replace(
                         /[^0-9a-z]/gi,
-                        '',
+                        "",
                       )),
                     e
                   );
                 }),
                 (t.$a = /{(%?)(.*?)(%?)}/),
-                (t.kc = RegExp(t.$a.source, 'g')),
+                (t.kc = RegExp(t.$a.source, "g")),
                 (t.Pb = function (e) {
-                  if ('object' == typeof e.dests)
+                  if ("object" == typeof e.dests)
                     for (var n = 0; n < e.dests.length; ++n) {
                       var a = e.dests[n];
-                      if ('string' == typeof a.c && 'aa.' == a.id.substr(0, 3))
+                      if ("string" == typeof a.c && "aa." == a.id.substr(0, 3))
                         for (
                           var i = a.c.match(t.kc), r = 0;
                           r < i.length;
@@ -7139,11 +7163,11 @@ require = (function () {
                         ) {
                           var o = i[r],
                             c = o.match(t.$a),
-                            s = '';
-                          '%' == c[1] && 'timezone_offset' == c[2]
+                            s = "";
+                          "%" == c[1] && "timezone_offset" == c[2]
                             ? (s = new Date().getTimezoneOffset())
-                            : '%' == c[1] &&
-                              'timestampz' == c[2] &&
+                            : "%" == c[1] &&
+                              "timestampz" == c[2] &&
                               (s = t.Tb()),
                             (a.c = a.c.replace(o, t.escape(s)));
                         }
@@ -7154,19 +7178,19 @@ require = (function () {
                     n = new Date(6e4 * Math.abs(e.getTimezoneOffset()));
                   return (
                     t.k(4, e.getFullYear()) +
-                    '-' +
+                    "-" +
                     t.k(2, e.getMonth() + 1) +
-                    '-' +
+                    "-" +
                     t.k(2, e.getDate()) +
-                    'T' +
+                    "T" +
                     t.k(2, e.getHours()) +
-                    ':' +
+                    ":" +
                     t.k(2, e.getMinutes()) +
-                    ':' +
+                    ":" +
                     t.k(2, e.getSeconds()) +
-                    (0 < e.getTimezoneOffset() ? '-' : '+') +
+                    (0 < e.getTimezoneOffset() ? "-" : "+") +
                     t.k(2, n.getUTCHours()) +
-                    ':' +
+                    ":" +
                     t.k(2, n.getUTCMinutes())
                   );
                 }),
@@ -7175,24 +7199,24 @@ require = (function () {
                 }),
                 (t.qa = {}),
                 (t.doPostbacks = function (e) {
-                  if ('object' == typeof e)
+                  if ("object" == typeof e)
                     if (
                       (t.Pb(e),
-                      'object' == typeof t.AudienceManagement &&
-                        'function' == typeof t.AudienceManagement.isReady &&
+                      "object" == typeof t.AudienceManagement &&
+                        "function" == typeof t.AudienceManagement.isReady &&
                         t.AudienceManagement.isReady() &&
-                        'function' == typeof t.AudienceManagement.passData)
+                        "function" == typeof t.AudienceManagement.passData)
                     )
                       t.AudienceManagement.passData(e);
-                    else if ('object' == typeof e && 'object' == typeof e.dests)
+                    else if ("object" == typeof e && "object" == typeof e.dests)
                       for (var n = 0; n < e.dests.length; ++n) {
                         var a = e.dests[n];
-                        'object' == typeof a &&
-                          'string' == typeof a.c &&
-                          'string' == typeof a.id &&
-                          'aa.' == a.id.substr(0, 3) &&
+                        "object" == typeof a &&
+                          "string" == typeof a.c &&
+                          "string" == typeof a.id &&
+                          "aa." == a.id.substr(0, 3) &&
                           ((t.qa[a.id] = new Image()),
-                          (t.qa[a.id].alt = ''),
+                          (t.qa[a.id].alt = ""),
                           (t.qa[a.id].src = a.c));
                       }
                 }),
@@ -7255,9 +7279,9 @@ require = (function () {
                 (t.ac = function (e) {
                   if (t.debugTracking) {
                     var n,
-                      a = 'AppMeasurement Debug: ' + e;
-                    for (e = e.split('&'), n = 0; n < e.length; n++)
-                      a += '\n\t' + t.unescape(e[n]);
+                      a = "AppMeasurement Debug: " + e;
+                    for (e = e.split("&"), n = 0; n < e.length; n++)
+                      a += "\n\t" + t.unescape(e[n]);
                     t.log(a);
                   }
                 }),
@@ -7271,19 +7295,19 @@ require = (function () {
                 o = null;
               }
               for (
-                o && 'y' == o.x
+                o && "y" == o.x
                   ? ((t.X = !0),
                     (t.W = function (e) {
                       return JSON.parse(e);
                     }))
                   : n.$ && n.$.parseJSON
-                  ? ((t.W = function (e) {
-                      return n.$.parseJSON(e);
-                    }),
-                    (t.X = !0))
-                  : (t.W = function () {
-                      return null;
-                    }),
+                    ? ((t.W = function (e) {
+                        return n.$.parseJSON(e);
+                      }),
+                      (t.X = !0))
+                    : (t.W = function () {
+                        return null;
+                      }),
                   t.ec = function (e) {
                     var i, r, o;
                     if (
@@ -7310,19 +7334,19 @@ require = (function () {
                         (0 != t.usePostbacks ||
                           (t.AudienceManagement &&
                             t.AudienceManagement.isReady())) &&
-                        (i = t.d.createElement('SCRIPT')) &&
-                        ('async' in i) &&
+                        (i = t.d.createElement("SCRIPT")) &&
+                        ("async" in i) &&
                         ((o =
-                          (o = t.d.getElementsByTagName('HEAD')) && o[0]
+                          (o = t.d.getElementsByTagName("HEAD")) && o[0]
                             ? o[0]
                             : t.d.body)
-                          ? ((i.type = 'text/javascript'),
-                            i.setAttribute('async', 'async'),
+                          ? ((i.type = "text/javascript"),
+                            i.setAttribute("async", "async"),
                             (r = 3))
                           : (i = 0)),
                       i ||
                         ((r = 4),
-                        ((i = new Image()).alt = ''),
+                        ((i = new Image()).alt = ""),
                         i.abort ||
                           void 0 === n.InstallTrigger ||
                           (i.abort = function () {
@@ -7373,13 +7397,13 @@ require = (function () {
                     )
                       i.send(e);
                     else if (2 === r)
-                      (o = e.indexOf('?')),
+                      (o = e.indexOf("?")),
                         (r = e.substring(0, o)),
                         (o = (o = e.substring(o + 1)).replace(
                           /&callback=[a-zA-Z0-9_.\[\]]+/,
-                          '',
+                          "",
                         )),
-                        i.open('POST', r, !0),
+                        i.open("POST", r, !0),
                         (i.withCredentials = !0),
                         i.send(o);
                     else if (((i.src = e), 3 === r)) {
@@ -7399,7 +7423,7 @@ require = (function () {
                           : (t.trackOffline && i.abort && i.abort(), i.ha()));
                     }, 5e3)),
                       (t.Mb = e),
-                      (t.v = n['s_i_' + t.replace(t.account, ',', '_')] = i),
+                      (t.v = n["s_i_" + t.replace(t.account, ",", "_")] = i),
                       ((t.useForcedLinkTracking && t.J) ||
                         t.bodyClickFunction) &&
                         (t.forcedLinkTrackingTimeout ||
@@ -7416,15 +7440,15 @@ require = (function () {
                     );
                   },
                   t.tb = function (e) {
-                    return !!(e && 0 < e.indexOf('pe=lnk_e'));
+                    return !!(e && 0 < e.indexOf("pe=lnk_e"));
                   },
                   t.Cb = function (e) {
                     return 64e3 <= e.length;
                   },
                   t.eb = function () {
                     return (
-                      'undefined' != typeof XMLHttpRequest &&
-                      ('withCredentials' in new XMLHttpRequest())
+                      "undefined" != typeof XMLHttpRequest &&
+                      ("withCredentials" in new XMLHttpRequest())
                     );
                   },
                   t.Nb = function () {
@@ -7460,7 +7484,7 @@ require = (function () {
                   },
                   t.na = function () {
                     return (
-                      t.offlineFilename + '-' + t.visitorNamespace + t.account
+                      t.offlineFilename + "-" + t.visitorNamespace + t.account
                     );
                   },
                   t.A = function () {
@@ -7468,10 +7492,10 @@ require = (function () {
                   },
                   t.Ra = function (e) {
                     return (
-                      0 != (e = e.toLowerCase()).indexOf('#') &&
-                      0 != e.indexOf('about:') &&
-                      0 != e.indexOf('opera:') &&
-                      0 != e.indexOf('javascript:')
+                      0 != (e = e.toLowerCase()).indexOf("#") &&
+                      0 != e.indexOf("about:") &&
+                      0 != e.indexOf("opera:") &&
+                      0 != e.indexOf("javascript:")
                     );
                   },
                   t.setTagvisblecontainer = function (e) {
@@ -7479,7 +7503,7 @@ require = (function () {
                     for (t.fc = e, n = 0; n < t._il.length; n++)
                       if (
                         (a = t._il[n]) &&
-                        's_l' == a._c &&
+                        "s_l" == a._c &&
                         a.tagvisblecontainerName == e
                       ) {
                         if ((t.S(a), a.lmq))
@@ -7490,15 +7514,15 @@ require = (function () {
                             if (t[i])
                               for (n in ((e = t[i]), (i = a.ml[i])))
                                 !Object.prototype[n] &&
-                                  ('function' != typeof i[n] ||
-                                    0 > ('' + i[n]).indexOf('s_c_il')) &&
+                                  ("function" != typeof i[n] ||
+                                    0 > ("" + i[n]).indexOf("s_c_il")) &&
                                   (e[n] = i[n]);
                         if (a.mmq)
                           for (n = 0; n < a.mmq.length; n++)
                             (i = a.mmq[n]),
                               t[i.m] &&
                                 (e = t[i.m])[i.f] &&
-                                'function' == typeof e[i.f] &&
+                                "function" == typeof e[i.f] &&
                                 (i.a ? e[i.f].apply(e, i.a) : e[i.f].apply(e));
                         if (a.tq)
                           for (n = 0; n < a.tq.length; n++) t.track(a.tq[n]);
@@ -7513,21 +7537,21 @@ require = (function () {
                     cookieWrite: t.cookieWrite,
                     getQueryParam: function (e, a, i, r) {
                       var o,
-                        c = '';
+                        c = "";
                       return (
                         a || (a = t.pageURL ? t.pageURL : n.location),
-                        (i = i || '&'),
+                        (i = i || "&"),
                         e && a
-                          ? 0 > (o = (a = '' + a).indexOf('?'))
+                          ? 0 > (o = (a = "" + a).indexOf("?"))
                             ? c
                             : ((a = i + a.substring(o + 1) + i),
                               r &&
                               (0 <= a.indexOf(i + e + i) ||
-                                0 <= a.indexOf(i + e + '=' + i))
+                                0 <= a.indexOf(i + e + "=" + i))
                                 ? void 0
-                                : (0 <= (o = a.indexOf('#')) &&
+                                : (0 <= (o = a.indexOf("#")) &&
                                     (a = a.substr(0, o) + i),
-                                  0 > (o = a.indexOf(i + e + '='))
+                                  0 > (o = a.indexOf(i + e + "="))
                                     ? c
                                     : (0 <=
                                         (o = (a = a.substring(
@@ -7543,65 +7567,65 @@ require = (function () {
                       return document.documentMode
                         ? document.documentMode
                         : t.za()
-                        ? 7
-                        : null;
+                          ? 7
+                          : null;
                     },
                   },
                   t.D =
-                    'supplementalDataID timestamp dynamicVariablePrefix visitorID marketingCloudVisitorID analyticsVisitorID audienceManagerLocationHint authState fid vmk visitorMigrationKey visitorMigrationServer visitorMigrationServerSecure charSet visitorNamespace cookieDomainPeriods fpCookieDomainPeriods cookieLifetime pageName pageURL customerPerspective referrer contextData contextData.cm.ssf contextData.opt.dmp contextData.opt.sell clientHints currencyCode lightProfileID lightStoreForSeconds lightIncrementBy retrieveLightProfiles deleteLightProfiles retrieveLightData'.split(
-                      ' ',
+                    "supplementalDataID timestamp dynamicVariablePrefix visitorID marketingCloudVisitorID analyticsVisitorID audienceManagerLocationHint authState fid vmk visitorMigrationKey visitorMigrationServer visitorMigrationServerSecure charSet visitorNamespace cookieDomainPeriods fpCookieDomainPeriods cookieLifetime pageName pageURL customerPerspective referrer contextData contextData.cm.ssf contextData.opt.dmp contextData.opt.sell clientHints currencyCode lightProfileID lightStoreForSeconds lightIncrementBy retrieveLightProfiles deleteLightProfiles retrieveLightData".split(
+                      " ",
                     ),
                   t.g = t.D.concat(
-                    'purchaseID variableProvider channel server pageType transactionID campaign state zip events events2 products audienceManagerBlob tnt'.split(
-                      ' ',
+                    "purchaseID variableProvider channel server pageType transactionID campaign state zip events events2 products audienceManagerBlob tnt".split(
+                      " ",
                     ),
                   ),
                   t.la =
-                    'timestamp charSet visitorNamespace cookieDomainPeriods cookieLifetime contextData lightProfileID lightStoreForSeconds lightIncrementBy'.split(
-                      ' ',
+                    "timestamp charSet visitorNamespace cookieDomainPeriods cookieLifetime contextData lightProfileID lightStoreForSeconds lightIncrementBy".split(
+                      " ",
                     ),
                   t.O = t.la.slice(0),
                   t.Ha =
-                    'account allAccounts debugTracking visitor visitorOptedOut trackOffline offlineLimit offlineThrottleDelay offlineFilename usePlugins doPlugins configURL visitorSampling visitorSamplingGroup linkObject clickObject linkURL linkName linkType trackDownloadLinks trackExternalLinks trackClickMap trackInlineStats linkLeaveQueryString linkTrackVars linkTrackEvents linkDownloadFileTypes linkExternalFilters linkInternalFilters useForcedLinkTracking forcedLinkTrackingTimeout writeSecureCookies useLinkTrackSessionStorage collectHighEntropyUserAgentHints trackingServer trackingServerSecure ssl abort mobile dc lightTrackVars maxDelay expectSupplementalData useBeacon usePostbacks registerPreTrackCallback registerPostTrackCallback bodyClickTarget bodyClickFunction AudienceManagement'.split(
-                      ' ',
+                    "account allAccounts debugTracking visitor visitorOptedOut trackOffline offlineLimit offlineThrottleDelay offlineFilename usePlugins doPlugins configURL visitorSampling visitorSamplingGroup linkObject clickObject linkURL linkName linkType trackDownloadLinks trackExternalLinks trackClickMap trackInlineStats linkLeaveQueryString linkTrackVars linkTrackEvents linkDownloadFileTypes linkExternalFilters linkInternalFilters useForcedLinkTracking forcedLinkTrackingTimeout writeSecureCookies useLinkTrackSessionStorage collectHighEntropyUserAgentHints trackingServer trackingServerSecure ssl abort mobile dc lightTrackVars maxDelay expectSupplementalData useBeacon usePostbacks registerPreTrackCallback registerPostTrackCallback bodyClickTarget bodyClickFunction AudienceManagement".split(
+                      " ",
                     ),
                   i = 0;
                 250 >= i;
                 i++
               )
-                76 > i && (t.g.push('prop' + i), t.O.push('prop' + i)),
-                  t.g.push('eVar' + i),
-                  t.O.push('eVar' + i),
-                  6 > i && t.g.push('hier' + i),
-                  4 > i && t.g.push('list' + i);
+                76 > i && (t.g.push("prop" + i), t.O.push("prop" + i)),
+                  t.g.push("eVar" + i),
+                  t.O.push("eVar" + i),
+                  6 > i && t.g.push("hier" + i),
+                  4 > i && t.g.push("list" + i);
               (i =
-                'pe pev1 pev2 pev3 latitude longitude resolution colorDepth javascriptVersion javaEnabled cookiesEnabled browserWidth browserHeight connectionType homepage pageURLRest marketingCloudOrgID ms_a'.split(
-                  ' ',
+                "pe pev1 pev2 pev3 latitude longitude resolution colorDepth javascriptVersion javaEnabled cookiesEnabled browserWidth browserHeight connectionType homepage pageURLRest marketingCloudOrgID ms_a".split(
+                  " ",
                 )),
                 (t.g = t.g.concat(i)),
                 (t.D = t.D.concat(i)),
                 (t.ssl =
-                  0 <= n.location.protocol.toLowerCase().indexOf('https')),
-                (t.charSet = 'UTF-8'),
+                  0 <= n.location.protocol.toLowerCase().indexOf("https")),
+                (t.charSet = "UTF-8"),
                 (t.contextData = {}),
                 (t.ta = [
-                  'architecture',
-                  'bitness',
-                  'model',
-                  'platformVersion',
-                  'wow64',
+                  "architecture",
+                  "bitness",
+                  "model",
+                  "platformVersion",
+                  "wow64",
                 ]),
                 (t.writeSecureCookies = !1),
                 (t.collectHighEntropyUserAgentHints = !1),
                 (t.offlineThrottleDelay = 0),
-                (t.offlineFilename = 'AppMeasurement.offline'),
-                (t.P = 's_sq'),
+                (t.offlineFilename = "AppMeasurement.offline"),
+                (t.P = "s_sq"),
                 (t.Va = 0),
                 (t.ja = 0),
                 (t.N = 0),
                 (t.Ua = 0),
                 (t.linkDownloadFileTypes =
-                  'exe,zip,wav,mp3,mov,mpg,avi,wmv,pdf,doc,docx,xls,xlsx,ppt,pptx'),
+                  "exe,zip,wav,mp3,mov,mpg,avi,wmv,pdf,doc,docx,xls,xlsx,ppt,pptx"),
                 (t.w = n),
                 (t.d = n.document),
                 (t.da = function () {
@@ -7610,7 +7634,7 @@ require = (function () {
                       t.J &&
                       t.bodyClickTarget.dispatchEvent(t.J),
                     t.bodyClickFunction &&
-                      ('function' == typeof t.bodyClickFunction
+                      ("function" == typeof t.bodyClickFunction
                         ? t.bodyClickFunction()
                         : t.bodyClickTarget &&
                           t.bodyClickTarget.href &&
@@ -7624,17 +7648,17 @@ require = (function () {
                           var a, i, r, o, c;
                           if (
                             !(
-                              (t.d && t.d.getElementById('cppXYctnr')) ||
-                              (e && e['s_fe_' + t._in])
+                              (t.d && t.d.getElementById("cppXYctnr")) ||
+                              (e && e["s_fe_" + t._in])
                             )
                           ) {
                             if (t.Ja) {
                               if (!t.useForcedLinkTracking)
                                 return (
-                                  t.b.removeEventListener('click', t.r, !0),
+                                  t.b.removeEventListener("click", t.r, !0),
                                   void (t.Ja = t.useForcedLinkTracking = 0)
                                 );
-                              t.b.removeEventListener('click', t.r, !1);
+                              t.b.removeEventListener("click", t.r, !1);
                             } else t.useForcedLinkTracking = 0;
                             t.clickObject = e.srcElement
                               ? e.srcElement
@@ -7667,8 +7691,8 @@ require = (function () {
                                     o = e.target;
                                     o &&
                                     o != t.b &&
-                                    'A' != o.tagName.toUpperCase() &&
-                                    'AREA' != o.tagName.toUpperCase();
+                                    "A" != o.tagName.toUpperCase() &&
+                                    "AREA" != o.tagName.toUpperCase();
 
                                   )
                                     o = o.parentNode;
@@ -7680,20 +7704,20 @@ require = (function () {
                                     e.target.dispatchEvent &&
                                       c &&
                                       (!i ||
-                                        '_self' == i ||
-                                        '_top' == i ||
-                                        '_parent' == i ||
+                                        "_self" == i ||
+                                        "_top" == i ||
+                                        "_parent" == i ||
                                         (n.name && i == n.name)))
                                   ) {
                                     try {
-                                      a = t.d.createEvent('MouseEvents');
+                                      a = t.d.createEvent("MouseEvents");
                                     } catch (e) {
                                       a = new n.MouseEvent();
                                     }
                                     if (a) {
                                       try {
                                         a.initMouseEvent(
-                                          'click',
+                                          "click",
                                           e.bubbles,
                                           e.cancelable,
                                           e.view,
@@ -7713,7 +7737,7 @@ require = (function () {
                                         a = 0;
                                       }
                                       a &&
-                                        ((a['s_fe_' + t._in] = a.s_fe = 1),
+                                        ((a["s_fe_" + t._in] = a.s_fe = 1),
                                         e.stopPropagation(),
                                         e.stopImmediatePropagation &&
                                           e.stopImmediatePropagation(),
@@ -7730,19 +7754,19 @@ require = (function () {
                           }
                         }),
                         t.b && t.b.attachEvent
-                          ? t.b.attachEvent('onclick', t.r)
+                          ? t.b.attachEvent("onclick", t.r)
                           : t.b &&
                             t.b.addEventListener &&
                             (navigator &&
-                              ((0 <= navigator.userAgent.indexOf('WebKit') &&
+                              ((0 <= navigator.userAgent.indexOf("WebKit") &&
                                 t.d.createEvent) ||
                                 (0 <=
-                                  navigator.userAgent.indexOf('Firefox/2') &&
+                                  navigator.userAgent.indexOf("Firefox/2") &&
                                   n.MouseEvent)) &&
                               ((t.Ja = 1),
                               (t.useForcedLinkTracking = 1),
-                              t.b.addEventListener('click', t.r, !0)),
-                            t.b.addEventListener('click', t.r, !1)))
+                              t.b.addEventListener("click", t.r, !0)),
+                            t.b.addEventListener("click", t.r, !1)))
                       : setTimeout(t.Ya, 30);
                 }),
                 (t.jc = t.za()),
@@ -7751,10 +7775,10 @@ require = (function () {
                   (e
                     ? t.setAccount(e)
                     : t.log(
-                        'Error, missing Report Suite ID in AppMeasurement initialization',
+                        "Error, missing Report Suite ID in AppMeasurement initialization",
                       ),
                   t.Ya(),
-                  t.loadModule('ActivityMap'));
+                  t.loadModule("ActivityMap"));
             }),
             (AppMeasurement.getInstance = e),
             window.s_objectID || (window.s_objectID = 0),
@@ -7767,19 +7791,19 @@ require = (function () {
     ],
     52: [
       function (require, module, exports) {
-        'use strict';
-        var s_gi = require('./AppMeasurement.js').s_gi,
-          AppMeasurement = require('./AppMeasurement.js');
+        "use strict";
+        var s_gi = require("./AppMeasurement.js").s_gi,
+          AppMeasurement = require("./AppMeasurement.js");
         function initialize(e) {
-          if ('string' == typeof e) return s_gi(e);
+          if ("string" == typeof e) return s_gi(e);
         }
         module.exports = initialize;
       },
-      { './AppMeasurement': 51 },
+      { "./AppMeasurement": 51 },
     ],
     53: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function init(i, t) {
           i.forEach(function (i) {
             i.init ? i.init(t) : i(t);
@@ -7791,10 +7815,10 @@ require = (function () {
     ],
     54: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var app,
-          initSGI = require('./AppMeasurement/initialize.js'),
-          initPlugins = require('./AppMeasurement/plugins.js');
+          initSGI = require("./AppMeasurement/initialize.js"),
+          initPlugins = require("./AppMeasurement/plugins.js");
         function init(i) {
           if (i && (!app || !0 === i.options.force))
             return (
@@ -7811,39 +7835,39 @@ require = (function () {
         }
         function setDefaults(i, t) {
           Object.keys(i).forEach(function (e) {
-            'options' !== e && (t[e] = i[e]);
+            "options" !== e && (t[e] = i[e]);
           }),
             !0 === t.isSafariTopSitesPreview &&
               (t.t = function () {
-                return '';
+                return "";
               });
         }
         function _modifyBucket(i) {
           var t = document.location.search;
           return (
-            (i && 'string' == typeof i) || (i = ''),
+            (i && "string" == typeof i) || (i = ""),
             t &&
               i &&
-              -1 === i.indexOf('applestoreww') &&
-              (t.indexOf('?cid=AOS-') > -1 || t.indexOf('&cid=AOS-') > -1) &&
-              (i += ',applestoreww'),
+              -1 === i.indexOf("applestoreww") &&
+              (t.indexOf("?cid=AOS-") > -1 || t.indexOf("&cid=AOS-") > -1) &&
+              (i += ",applestoreww"),
             i
           );
         }
         module.exports = { init: init, getInstance: getInstance };
       },
-      { './AppMeasurement/initialize': 52, './AppMeasurement/plugins': 53 },
+      { "./AppMeasurement/initialize": 52, "./AppMeasurement/plugins": 53 },
     ],
     55: [
       function (require, module, exports) {
-        'use strict';
-        var isNodeType = require('@marcom/ac-dom-nodes/isNodeType'),
-          validate = require('./internal/validate.js'),
-          ELEMENT = require('@marcom/ac-dom-nodes/NODE_TYPES').ELEMENT;
+        "use strict";
+        var isNodeType = require("@marcom/ac-dom-nodes/isNodeType"),
+          validate = require("./internal/validate.js"),
+          ELEMENT = require("@marcom/ac-dom-nodes/NODE_TYPES").ELEMENT;
         module.exports = function (e, r, o, a) {
           if (
-            (validate.childNode(e, 'ancestors'),
-            validate.selector(r, 'ancestors'),
+            (validate.childNode(e, "ancestors"),
+            validate.selector(r, "ancestors"),
             o && isNodeType(e, ELEMENT) && (!r || e.matches(r)))
           )
             return e;
@@ -7856,16 +7880,16 @@ require = (function () {
         };
       },
       {
-        './internal/validate': 56,
-        '@marcom/ac-dom-nodes/NODE_TYPES': 21,
-        '@marcom/ac-dom-nodes/isNodeType': 31,
+        "./internal/validate": 56,
+        "@marcom/ac-dom-nodes/NODE_TYPES": 21,
+        "@marcom/ac-dom-nodes/isNodeType": 31,
       },
     ],
     56: [
       function (require, module, exports) {
-        'use strict';
-        var isNodeType = require('@marcom/ac-dom-nodes/isNodeType'),
-          NODE_TYPES = require('@marcom/ac-dom-nodes/NODE_TYPES'),
+        "use strict";
+        var isNodeType = require("@marcom/ac-dom-nodes/isNodeType"),
+          NODE_TYPES = require("@marcom/ac-dom-nodes/NODE_TYPES"),
           COMMENT_NODE = NODE_TYPES.COMMENT,
           DOCUMENT_FRAGMENT_NODE = NODE_TYPES.DOCUMENT_FRAGMENT,
           DOCUMENT_NODE = NODE_TYPES.DOCUMENT,
@@ -7877,40 +7901,40 @@ require = (function () {
             DOCUMENT_FRAGMENT_NODE,
           ],
           ERR_INVALID_PARENT_NODE =
-            ' must be an Element, Document, or Document Fragment',
+            " must be an Element, Document, or Document Fragment",
           VALID_CHILD_NODE = [ELEMENT_NODE, TEXT_NODE, COMMENT_NODE],
-          ERR_INVALID_CHILD_NODE = ' must be an Element, TextNode, or Comment',
-          ERR_INVALID_SELECTOR = ' must be a string';
+          ERR_INVALID_CHILD_NODE = " must be an Element, TextNode, or Comment",
+          ERR_INVALID_SELECTOR = " must be a string";
         module.exports = {
           parentNode: function (E, N) {
             if (!E || !isNodeType(E, VALID_PARENT_NODE))
-              throw new TypeError(N + ': node' + ERR_INVALID_PARENT_NODE);
+              throw new TypeError(N + ": node" + ERR_INVALID_PARENT_NODE);
           },
           childNode: function (E, N) {
             if (!E || !isNodeType(E, VALID_CHILD_NODE))
-              throw new TypeError(N + ': node' + ERR_INVALID_CHILD_NODE);
+              throw new TypeError(N + ": node" + ERR_INVALID_CHILD_NODE);
           },
           selector: function (E, N, e) {
             if (
-              ((e = 'boolean' == typeof e && e),
-              (E || e) && 'string' != typeof E)
+              ((e = "boolean" == typeof e && e),
+              (E || e) && "string" != typeof E)
             )
-              throw new TypeError(N + ': selector' + ERR_INVALID_SELECTOR);
+              throw new TypeError(N + ": selector" + ERR_INVALID_SELECTOR);
           },
         };
       },
       {
-        '@marcom/ac-dom-nodes/NODE_TYPES': 21,
-        '@marcom/ac-dom-nodes/isNodeType': 31,
+        "@marcom/ac-dom-nodes/NODE_TYPES": 21,
+        "@marcom/ac-dom-nodes/isNodeType": 31,
       },
     ],
     57: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (n, o) {
           return (
             n !== o &&
-            ('contains' in n
+            ("contains" in n
               ? n.contains(o)
               : !!(
                   n.compareDocumentPosition(o) &
@@ -7926,21 +7950,21 @@ require = (function () {
         const {
           defaultOptions,
           ElementEngagementObserver,
-        } = require('./element-engagement-observer/ElementEngagementObserver.js');
+        } = require("./element-engagement-observer/ElementEngagementObserver.js");
         module.exports = {
           defaultOptions: defaultOptions,
           ElementEngagementObserver: ElementEngagementObserver,
         };
       },
-      { './element-engagement-observer/ElementEngagementObserver': 59 },
+      { "./element-engagement-observer/ElementEngagementObserver": 59 },
     ],
     59: [
       function (require, module, exports) {
         const defaultOptions = {
-          titleDataAttribute: 'analytics-element-engagement',
-          dataAttribute: 'analyticsElementEngagement',
-          startDataAttribute: 'analyticsElementEngagementStart',
-          endDataAttribute: 'analyticsElementEngagementEnd',
+          titleDataAttribute: "analytics-element-engagement",
+          dataAttribute: "analyticsElementEngagement",
+          startDataAttribute: "analyticsElementEngagementStart",
+          endDataAttribute: "analyticsElementEngagementEnd",
           target: document.body,
           startHandler: null,
           endHandler: null,
@@ -7953,7 +7977,7 @@ require = (function () {
         class ElementEngagementObserver {
           constructor(t = {}) {
             (this.options = { ...defaultOptions, ...t }),
-              (this.observerType = 'elementEngagement'),
+              (this.observerType = "elementEngagement"),
               (this.engagements = {}),
               this.options.autoEnable && this.enable();
           }
@@ -8012,7 +8036,7 @@ require = (function () {
           }
           track(t) {
             this.options.track &&
-              'function' == typeof this.options.track &&
+              "function" == typeof this.options.track &&
               this.options.track(t);
           }
         }
@@ -8025,7 +8049,7 @@ require = (function () {
     ],
     60: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = {
           getWindow: function () {
             return window;
@@ -8042,11 +8066,11 @@ require = (function () {
     ],
     61: [
       function (require, module, exports) {
-        'use strict';
-        var os = require('@marcom/useragent-detect').os,
-          touchAvailable = require('./touchAvailable.js').original,
-          globalsHelper = require('./helpers/globals.js'),
-          once = require('@marcom/function-utils/once');
+        "use strict";
+        var os = require("@marcom/useragent-detect").os,
+          touchAvailable = require("./touchAvailable.js").original,
+          globalsHelper = require("./helpers/globals.js"),
+          once = require("@marcom/function-utils/once");
         function isDesktop() {
           var e = globalsHelper.getWindow();
           return (!touchAvailable() && !e.orientation) || os.windows;
@@ -8055,18 +8079,18 @@ require = (function () {
           (module.exports.original = isDesktop);
       },
       {
-        './helpers/globals': 60,
-        './touchAvailable': 64,
-        '@marcom/function-utils/once': 66,
-        '@marcom/useragent-detect': 70,
+        "./helpers/globals": 60,
+        "./touchAvailable": 64,
+        "@marcom/function-utils/once": 66,
+        "@marcom/useragent-detect": 70,
       },
     ],
     62: [
       function (require, module, exports) {
-        'use strict';
-        var isDesktop = require('./isDesktop.js').original,
-          isTablet = require('./isTablet.js').original,
-          once = require('@marcom/function-utils/once');
+        "use strict";
+        var isDesktop = require("./isDesktop.js").original,
+          isTablet = require("./isTablet.js").original,
+          once = require("@marcom/function-utils/once");
         function isHandheld() {
           return !isDesktop() && !isTablet();
         }
@@ -8074,17 +8098,17 @@ require = (function () {
           (module.exports.original = isHandheld);
       },
       {
-        './isDesktop': 61,
-        './isTablet': 63,
-        '@marcom/function-utils/once': 66,
+        "./isDesktop": 61,
+        "./isTablet": 63,
+        "@marcom/function-utils/once": 66,
       },
     ],
     63: [
       function (require, module, exports) {
-        'use strict';
-        var isDesktop = require('./isDesktop.js').original,
-          globalsHelper = require('./helpers/globals.js'),
-          once = require('@marcom/function-utils/once'),
+        "use strict";
+        var isDesktop = require("./isDesktop.js").original,
+          globalsHelper = require("./helpers/globals.js"),
+          once = require("@marcom/function-utils/once"),
           MIN_TABLET_WIDTH = 600;
         function isTablet() {
           var e = globalsHelper.getWindow(),
@@ -8097,22 +8121,22 @@ require = (function () {
         (module.exports = once(isTablet)), (module.exports.original = isTablet);
       },
       {
-        './helpers/globals': 60,
-        './isDesktop': 61,
-        '@marcom/function-utils/once': 66,
+        "./helpers/globals": 60,
+        "./isDesktop": 61,
+        "@marcom/function-utils/once": 66,
       },
     ],
     64: [
       function (require, module, exports) {
-        'use strict';
-        var globalsHelper = require('./helpers/globals.js'),
-          once = require('@marcom/function-utils/once');
+        "use strict";
+        var globalsHelper = require("./helpers/globals.js"),
+          once = require("@marcom/function-utils/once");
         function touchAvailable() {
           var e = globalsHelper.getWindow(),
             o = globalsHelper.getDocument(),
             l = globalsHelper.getNavigator();
           return !!(
-            'ontouchstart' in e ||
+            "ontouchstart" in e ||
             (e.DocumentTouch && o instanceof e.DocumentTouch) ||
             l.maxTouchPoints > 0 ||
             l.msMaxTouchPoints > 0
@@ -8121,21 +8145,21 @@ require = (function () {
         (module.exports = once(touchAvailable)),
           (module.exports.original = touchAvailable);
       },
-      { './helpers/globals': 60, '@marcom/function-utils/once': 66 },
+      { "./helpers/globals": 60, "@marcom/function-utils/once": 66 },
     ],
     65: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var PARAM_ERROR_TEXT =
-            'Error: Expected parameter is missing or has the wrong type',
+            "Error: Expected parameter is missing or has the wrong type",
           DEFAULT_OPTIONS = { trailing: !0, leading: !1 };
         function debounce(e, i, n) {
-          if ('number' != typeof i || 'function' != typeof e)
+          if ("number" != typeof i || "function" != typeof e)
             throw new TypeError(PARAM_ERROR_TEXT);
           if (
-            'boolean' !=
+            "boolean" !=
               typeof (n = Object.assign({}, DEFAULT_OPTIONS, n)).trailing ||
-            'boolean' != typeof n.leading
+            "boolean" != typeof n.leading
           )
             throw new TypeError(PARAM_ERROR_TEXT);
           n.trailing || n.leading || (n.trailing = !0);
@@ -8166,7 +8190,7 @@ require = (function () {
     ],
     66: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (t) {
           var r;
           return function () {
@@ -8178,7 +8202,7 @@ require = (function () {
     ],
     67: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = {
           browser: {
             safari: !1,
@@ -8191,7 +8215,7 @@ require = (function () {
             edgeChromium: !1,
             samsung: !1,
             version: {
-              string: '',
+              string: "",
               major: 0,
               minor: 0,
               patch: 0,
@@ -8206,7 +8230,7 @@ require = (function () {
             linux: !1,
             fireos: !1,
             chromeos: !1,
-            version: { string: '', major: 0, minor: 0, patch: 0 },
+            version: { string: "", major: 0, minor: 0, patch: 0 },
           },
         };
       },
@@ -8214,54 +8238,54 @@ require = (function () {
     ],
     68: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = {
           browser: [
             {
-              name: 'edge',
-              userAgent: 'Edge',
-              version: ['rv', 'Edge'],
+              name: "edge",
+              userAgent: "Edge",
+              version: ["rv", "Edge"],
               test: function (e) {
                 return (
-                  e.ua.indexOf('Edge') > -1 ||
-                  'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' === e.ua
+                  e.ua.indexOf("Edge") > -1 ||
+                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" === e.ua
                 );
               },
             },
             {
-              name: 'edgeChromium',
-              userAgent: 'Edge',
-              version: ['rv', 'Edg'],
+              name: "edgeChromium",
+              userAgent: "Edge",
+              version: ["rv", "Edg"],
               test: function (e) {
-                return e.ua.indexOf('Edg') > -1 && -1 === e.ua.indexOf('Edge');
+                return e.ua.indexOf("Edg") > -1 && -1 === e.ua.indexOf("Edge");
               },
             },
-            { name: 'chrome', userAgent: 'Chrome' },
+            { name: "chrome", userAgent: "Chrome" },
             {
-              name: 'firefox',
+              name: "firefox",
               test: function (e) {
                 return (
-                  e.ua.indexOf('Firefox') > -1 && -1 === e.ua.indexOf('Opera')
+                  e.ua.indexOf("Firefox") > -1 && -1 === e.ua.indexOf("Opera")
                 );
               },
-              version: 'Firefox',
+              version: "Firefox",
             },
-            { name: 'android', userAgent: 'Android' },
+            { name: "android", userAgent: "Android" },
             {
-              name: 'safari',
+              name: "safari",
               test: function (e) {
                 return (
-                  e.ua.indexOf('Safari') > -1 && e.vendor.indexOf('Apple') > -1
+                  e.ua.indexOf("Safari") > -1 && e.vendor.indexOf("Apple") > -1
                 );
               },
-              version: 'Version',
+              version: "Version",
             },
             {
-              name: 'ie',
+              name: "ie",
               test: function (e) {
-                return e.ua.indexOf('IE') > -1 || e.ua.indexOf('Trident') > -1;
+                return e.ua.indexOf("IE") > -1 || e.ua.indexOf("Trident") > -1;
               },
-              version: ['MSIE', 'rv'],
+              version: ["MSIE", "rv"],
               parseDocumentMode: function () {
                 var e = !1;
                 return (
@@ -8272,62 +8296,62 @@ require = (function () {
               },
             },
             {
-              name: 'opera',
-              userAgent: 'Opera',
-              version: ['Version', 'Opera'],
+              name: "opera",
+              userAgent: "Opera",
+              version: ["Version", "Opera"],
             },
-            { name: 'samsung', userAgent: 'SamsungBrowser' },
+            { name: "samsung", userAgent: "SamsungBrowser" },
           ],
           os: [
             {
-              name: 'windows',
+              name: "windows",
               test: function (e) {
-                return e.ua.indexOf('Windows') > -1;
+                return e.ua.indexOf("Windows") > -1;
               },
-              version: 'Windows NT',
+              version: "Windows NT",
             },
             {
-              name: 'osx',
-              userAgent: 'Mac',
+              name: "osx",
+              userAgent: "Mac",
               test: function (e) {
-                return e.ua.indexOf('Macintosh') > -1;
+                return e.ua.indexOf("Macintosh") > -1;
               },
             },
             {
-              name: 'ios',
+              name: "ios",
               test: function (e) {
-                return e.ua.indexOf('iPhone') > -1 || e.ua.indexOf('iPad') > -1;
+                return e.ua.indexOf("iPhone") > -1 || e.ua.indexOf("iPad") > -1;
               },
-              version: ['iPhone OS', 'CPU OS'],
+              version: ["iPhone OS", "CPU OS"],
             },
             {
-              name: 'linux',
-              userAgent: 'Linux',
+              name: "linux",
+              userAgent: "Linux",
               test: function (e) {
                 return (
-                  (e.ua.indexOf('Linux') > -1 ||
-                    e.platform.indexOf('Linux') > -1) &&
-                  -1 === e.ua.indexOf('Android')
+                  (e.ua.indexOf("Linux") > -1 ||
+                    e.platform.indexOf("Linux") > -1) &&
+                  -1 === e.ua.indexOf("Android")
                 );
               },
             },
             {
-              name: 'fireos',
+              name: "fireos",
               test: function (e) {
                 return (
-                  e.ua.indexOf('Firefox') > -1 && e.ua.indexOf('Mobile') > -1
+                  e.ua.indexOf("Firefox") > -1 && e.ua.indexOf("Mobile") > -1
                 );
               },
-              version: 'rv',
+              version: "rv",
             },
             {
-              name: 'android',
-              userAgent: 'Android',
+              name: "android",
+              userAgent: "Android",
               test: function (e) {
-                return e.ua.indexOf('Android') > -1;
+                return e.ua.indexOf("Android") > -1;
               },
             },
-            { name: 'chromeos', userAgent: 'CrOS' },
+            { name: "chromeos", userAgent: "CrOS" },
           ],
         };
       },
@@ -8335,34 +8359,34 @@ require = (function () {
     ],
     69: [
       function (require, module, exports) {
-        'use strict';
-        var defaults = require('./defaults.js'),
-          dictionary = require('./dictionary.js');
+        "use strict";
+        var defaults = require("./defaults.js"),
+          dictionary = require("./dictionary.js");
         function _matchVersionStrRegExp(e) {
-          return new RegExp(e + '[a-zA-Z\\s/:]+([0-9_.]+)', 'i');
+          return new RegExp(e + "[a-zA-Z\\s/:]+([0-9_.]+)", "i");
         }
         function _parseVersion(e, r) {
-          if ('function' == typeof e.parseVersion) return e.parseVersion(r);
+          if ("function" == typeof e.parseVersion) return e.parseVersion(r);
           var n = e.version || e.userAgent;
-          'string' == typeof n && (n = [n]);
+          "string" == typeof n && (n = [n]);
           for (var t, s = n.length, o = 0; o < s; o++)
             if ((t = r.match(_matchVersionStrRegExp(n[o]))) && t.length > 1)
-              return t[1].replace(/_/g, '.');
+              return t[1].replace(/_/g, ".");
           return !1;
         }
         function _parseUserAgent(e, r, n) {
           for (var t, s, o = e.length, i = 0; i < o; i++)
             if (
-              ('function' == typeof e[i].test
+              ("function" == typeof e[i].test
                 ? !0 === e[i].test(n) && (t = e[i].name)
                 : n.ua.indexOf(e[i].userAgent) > -1 && (t = e[i].name),
               t)
             ) {
               if (
                 ((r[t] = !0),
-                'string' == typeof (s = _parseVersion(e[i], n.ua)))
+                "string" == typeof (s = _parseVersion(e[i], n.ua)))
               ) {
-                var a = s.split('.');
+                var a = s.split(".");
                 (r.version.string = s),
                   a &&
                     a.length > 0 &&
@@ -8370,13 +8394,13 @@ require = (function () {
                     (r.version.minor = parseInt(a[1] || 0)),
                     (r.version.patch = parseInt(a[2] || 0)));
               } else
-                'edge' === t &&
-                  ((r.version.string = '12.0.0'),
-                  (r.version.major = '12'),
-                  (r.version.minor = '0'),
-                  (r.version.patch = '0'));
+                "edge" === t &&
+                  ((r.version.string = "12.0.0"),
+                  (r.version.major = "12"),
+                  (r.version.minor = "0"),
+                  (r.version.patch = "0"));
               return (
-                'function' == typeof e[i].parseDocumentMode &&
+                "function" == typeof e[i].parseDocumentMode &&
                   (r.version.documentMode = e[i].parseDocumentMode()),
                 r
               );
@@ -8397,35 +8421,35 @@ require = (function () {
         }
         module.exports = parseUserAgent;
       },
-      { './defaults': 67, './dictionary': 68 },
+      { "./defaults": 67, "./dictionary": 68 },
     ],
     70: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var navigatorObj = {
           ua: window.navigator.userAgent,
           platform: window.navigator.platform,
           vendor: window.navigator.vendor,
         };
-        module.exports = require('./parseUserAgent.js')(navigatorObj);
+        module.exports = require("./parseUserAgent.js")(navigatorObj);
       },
-      { './parseUserAgent': 69 },
+      { "./parseUserAgent": 69 },
     ],
     71: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
@@ -8449,14 +8473,17 @@ require = (function () {
                   _defineProperty(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : ownKeys(Object(r)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(r, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(r),
+                  )
+                : ownKeys(Object(r)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(r, t),
+                    );
+                  });
           }
           return e;
         }
@@ -8475,14 +8502,14 @@ require = (function () {
         }
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var r = 0; r < t.length; r++) {
             var a = t[r];
             (a.enumerable = a.enumerable || !1),
               (a.configurable = !0),
-              'value' in a && (a.writable = !0),
+              "value" in a && (a.writable = !0),
               Object.defineProperty(e, a.key, a);
           }
         }
@@ -8490,36 +8517,36 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             r && _defineProperties(e, r),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
-        var errorHandler = require('../ErrorHandler.js'),
-          appMeasurementSetup = require('@marcom/appmeasurement-setup'),
-          biscuitTin = require('@apple/analytics-biscuit-tin'),
-          get = require('@apple/analytics-data-layer').get,
-          set = require('@apple/analytics-data-layer').set,
-          refreshDataLayer = require('../helpers/dataLayer.js').refresh,
-          eventsToString = require('../helpers/eventsToString.js'),
-          formatter = require('../helpers/formatter.js'),
-          passiveTrackerInit = require('@apple/analytics-passive-tracker').init,
+        var errorHandler = require("../ErrorHandler.js"),
+          appMeasurementSetup = require("@marcom/appmeasurement-setup"),
+          biscuitTin = require("@apple/analytics-biscuit-tin"),
+          get = require("@apple/analytics-data-layer").get,
+          set = require("@apple/analytics-data-layer").set,
+          refreshDataLayer = require("../helpers/dataLayer.js").refresh,
+          eventsToString = require("../helpers/eventsToString.js"),
+          formatter = require("../helpers/formatter.js"),
+          passiveTrackerInit = require("@apple/analytics-passive-tracker").init,
           triggerNewPage =
-            require('@apple/analytics-passive-tracker').triggerNewPage,
-          generateSpecialExitLinks = require('../helpers/generateSpecialExitLinks.js'),
-          submitMethods = require('./submit-methods/submitMethods.js'),
-          templateVarHelper = require('../helpers/templateVar.js'),
-          constants = require('../constants.js'),
+            require("@apple/analytics-passive-tracker").triggerNewPage,
+          generateSpecialExitLinks = require("../helpers/generateSpecialExitLinks.js"),
+          submitMethods = require("./submit-methods/submitMethods.js"),
+          templateVarHelper = require("../helpers/templateVar.js"),
+          constants = require("../constants.js"),
           metaKey = constants.dataLayer.meta.key,
           confKey = constants.dataLayer.configuration.key,
           optionsKey = constants.dataLayer.configuration.optionsKey,
           dlKeys = constants.dataLayer.configuration.keys,
-          doPlugins = require('./doPlugins/doPlugins.js'),
-          corePlugins = require('./appMeasurementPlugins.js'),
-          urlHelpers = require('@apple/analytics-utils').urlHelpers,
-          observerRegistry = require('../observers/observerRegistry.js'),
-          cookie = require('../helpers/cookie.js'),
+          doPlugins = require("./doPlugins/doPlugins.js"),
+          corePlugins = require("./appMeasurementPlugins.js"),
+          urlHelpers = require("@apple/analytics-utils").urlHelpers,
+          observerRegistry = require("../observers/observerRegistry.js"),
+          cookie = require("../helpers/cookie.js"),
           defaultOptions = { force: !0, destroyObservers: !1 },
-          moduleName = 'AppMeasurementPlugin',
+          moduleName = "AppMeasurementPlugin",
           AppMeasurementPlugin = (function () {
             function e(t) {
               _classCallCheck(this, e),
@@ -8533,7 +8560,7 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: 'destroy',
+                  key: "destroy",
                   value: function (e) {
                     (this.options = _objectSpread(
                       _objectSpread({}, defaultOptions),
@@ -8547,12 +8574,12 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'initialize',
+                  key: "initialize",
                   value: function (e) {
                     if (
                       (this.refreshData(e),
                       passiveTrackerInit({
-                        muleVersion: 'v1',
+                        muleVersion: "v1",
                         cookieDomain: get(confKey)[dlKeys.trackingDomain],
                       }),
                       !errorHandler.exception)
@@ -8565,7 +8592,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'refreshData',
+                  key: "refreshData",
                   value: function (e) {
                     refreshDataLayer(e),
                       this._prepareDataLayer(),
@@ -8573,7 +8600,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_prepareDataLayer',
+                  key: "_prepareDataLayer",
                   value: function () {
                     var e = this,
                       t = get(metaKey);
@@ -8581,8 +8608,8 @@ require = (function () {
                       (this._hasRequiredData(t) ||
                         errorHandler.log(
                           moduleName,
-                          '_prepareDataLayer',
-                          'Missing required source data',
+                          "_prepareDataLayer",
+                          "Missing required source data",
                         ),
                       !errorHandler.exception &&
                         (Object.keys(t).forEach(function (r) {
@@ -8603,8 +8630,8 @@ require = (function () {
                         this.conf[dlKeys.locale] ||
                           errorHandler.log(
                             moduleName,
-                            '_prepareDataLayer',
-                            'ISO code must be provided',
+                            "_prepareDataLayer",
+                            "ISO code must be provided",
                           ),
                         !errorHandler.exception))
                     ) {
@@ -8624,7 +8651,7 @@ require = (function () {
                       ),
                         this._setConfigurationProperty(
                           dlKeys.pageURLNoQueryString,
-                          r.replace(a.search, ''),
+                          r.replace(a.search, ""),
                         );
                       var o = get([confKey, dlKeys.referrer]);
                       if (
@@ -8636,7 +8663,7 @@ require = (function () {
                           })),
                         this._setConfigurationProperty(
                           dlKeys.referrer,
-                          o || '',
+                          o || "",
                         ),
                         this._setConfigurationProperty(
                           dlKeys.searchTerm,
@@ -8664,7 +8691,7 @@ require = (function () {
                         ),
                         this._setConfigurationProperty(
                           dlKeys.currencyCode,
-                          'USD',
+                          "USD",
                         ),
                         this._setConfigurationProperty(
                           dlKeys.acAnalyticsVersion,
@@ -8700,7 +8727,7 @@ require = (function () {
                         ),
                         this._setConfigurationProperty(
                           dlKeys.linkDownloadFileTypes,
-                          constants.linkDownloadFileTypes.join(','),
+                          constants.linkDownloadFileTypes.join(","),
                         ),
                         !errorHandler.exception)
                       ) {
@@ -8750,10 +8777,10 @@ require = (function () {
                           set(confKey, this.conf),
                           set(
                             [
-                              'pageDataModel',
-                              'config',
-                              'global',
-                              'cookieDomain',
+                              "pageDataModel",
+                              "config",
+                              "global",
+                              "cookieDomain",
                             ],
                             this.conf[dlKeys.trackingDomain],
                           ),
@@ -8783,21 +8810,21 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_setConfigurationProperty',
+                  key: "_setConfigurationProperty",
                   value: function (e, t) {
                     void 0 === this.conf[e] && (this.conf[e] = t);
                   },
                 },
                 {
-                  key: '_hasRequiredData',
+                  key: "_hasRequiredData",
                   value: function (e) {
                     return !Object.values(e).some(function (e) {
-                      return void 0 === e || '' === e;
+                      return void 0 === e || "" === e;
                     });
                   },
                 },
                 {
-                  key: 'getAppMeasurementConfig',
+                  key: "getAppMeasurementConfig",
                   value: function () {
                     var e = get(confKey),
                       t = { acAnalytics: {}, options: {} };
@@ -8808,11 +8835,11 @@ require = (function () {
                       (t.pageName = e[dlKeys.computedPageName]),
                       (t.bucket = e[dlKeys.bucket]);
                     var r = window.localStorage.getItem(
-                      'acAnalyticsValidationExtraReportSuite',
+                      "acAnalyticsValidationExtraReportSuite",
                     );
                     r &&
-                      'string' == typeof r &&
-                      (t.bucket.includes(r) || (t.bucket += ','.concat(r))),
+                      "string" == typeof r &&
+                      (t.bucket.includes(r) || (t.bucket += ",".concat(r))),
                       (t.channel = e[dlKeys.computedChannel]),
                       (t.currencyCode = e[dlKeys.currencyCode]),
                       (t.trackDownloadLinks = !0),
@@ -8823,13 +8850,13 @@ require = (function () {
                       (t.linkDownloadFileTypes =
                         e[dlKeys.linkDownloadFileTypes]),
                       (t.linkInternalFilters =
-                        'tel:,mailto:,javascript:,' +
+                        "tel:,mailto:,javascript:," +
                         t.acAnalytics.trackingDomain +
-                        ',' +
+                        "," +
                         t.acAnalytics.trackingDomain +
-                        '/media,' +
+                        "/media," +
                         t.acAnalytics.trackingDomain +
-                        '/105'),
+                        "/105"),
                       (t.linkLeaveQueryString = !1),
                       (t._isSafari = !1),
                       (t.usePlugins = !0),
@@ -8839,9 +8866,9 @@ require = (function () {
                       (t.trackingServer = e[dlKeys.trackingServer]),
                       (t.trackingServerSecure = e[dlKeys.trackingServerSecure]);
                     var a = window.localStorage.getItem(
-                      'acAnalyticsValidatationTrackingServer',
+                      "acAnalyticsValidatationTrackingServer",
                     );
-                    a && 'string' == typeof a && (t.trackingServerSecure = a),
+                    a && "string" == typeof a && (t.trackingServerSecure = a),
                       (t.dc = this.getDataCenterId());
                     var o = {};
                     return (
@@ -8859,7 +8886,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'resetReferrer',
+                  key: "resetReferrer",
                   value: function () {
                     var e;
                     this.options && this.options.referrer
@@ -8869,19 +8896,19 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'resetLoadTiming',
+                  key: "resetLoadTiming",
                   value: function () {
                     this.conf.loadTiming = Date.now();
                   },
                 },
                 {
-                  key: 'destroyObservers',
+                  key: "destroyObservers",
                   value: function () {
                     observerRegistry.destroy();
                   },
                 },
                 {
-                  key: 'preAppMeasurementInit',
+                  key: "preAppMeasurementInit",
                   value: function (e) {
                     return (
                       cookie.updateCookieOptions(e.acAnalytics.trackingDomain),
@@ -8894,64 +8921,64 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'getTrackingDomain',
+                  key: "getTrackingDomain",
                   value: function () {
                     return constants.domainRegex.test(window.location.hostname)
-                      ? 'apple.com.cn'
-                      : 'apple.com';
+                      ? "apple.com.cn"
+                      : "apple.com";
                   },
                 },
                 {
-                  key: 'setCookieDomainPeriods',
+                  key: "setCookieDomainPeriods",
                   value: function () {
                     return constants.domainRegex.test(window.location.hostname)
-                      ? '3'
-                      : '2';
+                      ? "3"
+                      : "2";
                   },
                 },
                 {
-                  key: 'destroyAppMeasurement',
+                  key: "destroyAppMeasurement",
                   value: function () {
                     var e = appMeasurementSetup.getInstance();
                     triggerNewPage(),
-                      'object' === _typeof(e) &&
+                      "object" === _typeof(e) &&
                         (e.ac_amt.destroy(),
-                        e.manageVars('clearVars'),
+                        e.manageVars("clearVars"),
                         (e.tcall = void 0),
                         (e.pageURL =
                           e.g_prop6 =
                           e.g_pageURL =
                           e.g_channel =
-                            ''));
+                            ""));
                   },
                 },
                 {
-                  key: 'submit',
+                  key: "submit",
                   value: function (e) {
                     var t = appMeasurementSetup.getInstance();
-                    (e && 'object' === _typeof(e)) ||
+                    (e && "object" === _typeof(e)) ||
                       errorHandler.log(
                         moduleName,
-                        'submit',
-                        'Request param ('.concat(e, ') is not an object'),
+                        "submit",
+                        "Request param (".concat(e, ") is not an object"),
                       ),
                       errorHandler.exception ||
-                        ((e.type && 'string' == typeof e.type) ||
+                        ((e.type && "string" == typeof e.type) ||
                           errorHandler.log(
                             moduleName,
-                            'submit',
+                            "submit",
                             'property "type" ('.concat(
                               e.type,
                               '") must be a string',
                             ),
                           ),
-                        (window.s && 'object' === _typeof(window.s)) ||
+                        (window.s && "object" === _typeof(window.s)) ||
                           errorHandler.log(
                             moduleName,
-                            'submit',
-                            'appMeasurement ('.concat(
+                            "submit",
+                            "appMeasurement (".concat(
                               window.s,
-                              ') is not an object',
+                              ") is not an object",
                             ),
                           ),
                         errorHandler.exception ||
@@ -8966,37 +8993,37 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_getLinkInternalFiltersLocale',
+                  key: "_getLinkInternalFiltersLocale",
                   value: function (e) {
-                    var t = '';
-                    return 'us' !== e && (t = e), t;
+                    var t = "";
+                    return "us" !== e && (t = e), t;
                   },
                 },
                 {
-                  key: '_setAppMeasurementProps',
+                  key: "_setAppMeasurementProps",
                   value: function (e) {
                     var t = e.beacon || {};
                     e.linkTrackVars = [];
                     var r = appMeasurementSetup.getInstance();
-                    for (var a in ((r.linkTrackEvents = ''), t))
-                      'events' === a &&
-                        'page' !== e.type &&
+                    for (var a in ((r.linkTrackEvents = ""), t))
+                      "events" === a &&
+                        "page" !== e.type &&
                         ((t[a] = eventsToString(t[a])),
-                        (r.linkTrackEvents = t[a].replace(/=([^,]+)/g, ''))),
-                        'title' !== a &&
-                          ('page' !== e.type && e.linkTrackVars.push(a),
+                        (r.linkTrackEvents = t[a].replace(/=([^,]+)/g, ""))),
+                        "title" !== a &&
+                          ("page" !== e.type && e.linkTrackVars.push(a),
                           (r[a] = t[a]));
                   },
                 },
                 {
-                  key: '_getProductName',
+                  key: "_getProductName",
                   value: function (e) {
                     var t = this._strToArray(e);
                     if (
                       ((Array.isArray(t) && 0 !== t.length) ||
                         errorHandler.log(
                           moduleName,
-                          '_getProductname',
+                          "_getProductname",
                           '"track" meta tag value is malformed. e.g. "product name - page name"',
                         ),
                       !errorHandler.exception)
@@ -9005,19 +9032,19 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_getPageName',
+                  key: "_getPageName",
                   value: function (e) {
                     if (
-                      (e && '' !== e
+                      (e && "" !== e
                         ? e.match(/[^\S ]/g) &&
                           errorHandler.warn(
                             moduleName,
-                            '_getPageName',
+                            "_getPageName",
                             '"track" meta tag value includes an invalid whitespace character, identified by the following regex: "[^\\S ]"',
                           )
                         : errorHandler.log(
                             moduleName,
-                            '_getPageName',
+                            "_getPageName",
                             '"track" meta tag value is malformed. e.g. "product name - page name"',
                           ),
                       !errorHandler.exception)
@@ -9026,31 +9053,31 @@ require = (function () {
                       return (
                         (t = (t = (t = t.replace(
                           /(%u2018|%u2019|%u02BC|%u02BD)/g,
-                          '%27',
+                          "%27",
                         )).replace(
                           /(%u201C|%u201D|%E2%80%9C|%E2%80%9D)/g,
-                          '%22',
-                        )).replace(/(%09|%0A|%0D)/g, '')),
+                          "%22",
+                        )).replace(/(%09|%0A|%0D)/g, "")),
                         (e = unescape(t)).toLowerCase()
                       );
                     }
                   },
                 },
                 {
-                  key: '_getPageType',
+                  key: "_getPageType",
                   value: function (e) {
-                    return 'search - results' === e
-                      ? 'search'
-                      : '404 - page not found' === e
-                      ? 'errorPage'
-                      : 'normal';
+                    return "search - results" === e
+                      ? "search"
+                      : "404 - page not found" === e
+                        ? "errorPage"
+                        : "normal";
                   },
                 },
                 {
-                  key: '_getSearchTerm',
+                  key: "_getSearchTerm",
                   value: function () {
                     return window.location.pathname
-                      .split('/')
+                      .split("/")
                       .filter(function (e) {
                         return e;
                       })
@@ -9058,24 +9085,24 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_getLocale',
+                  key: "_getLocale",
                   value: function () {
                     if (document && document.documentElement) {
                       var e = document.documentElement;
-                      return e.getAttribute('data-locale') || e.lang;
+                      return e.getAttribute("data-locale") || e.lang;
                     }
                   },
                 },
                 {
-                  key: '_getPlatform',
+                  key: "_getPlatform",
                   value: function () {
-                    var e = 'other',
+                    var e = "other",
                       t = navigator.userAgent,
                       r = {
-                        'mobile other':
-                          '/(kindle|silk-accelerated|android|webos|rim tablet os|windows phone)/i',
+                        "mobile other":
+                          "/(kindle|silk-accelerated|android|webos|rim tablet os|windows phone)/i",
                         windows: /windows/i,
-                        'iphone/ipod touch': /(iphone|ipod)/i,
+                        "iphone/ipod touch": /(iphone|ipod)/i,
                         ipad: /(ipad)/i,
                         Mac: /Mac OS X/i,
                       };
@@ -9088,15 +9115,15 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_strToArray',
+                  key: "_strToArray",
                   value: function (e, t) {
                     if (
-                      ((t = t || '-'),
-                      'string' != typeof e &&
+                      ((t = t || "-"),
+                      "string" != typeof e &&
                         errorHandler.log(
                           moduleName,
-                          '_strToArray',
-                          e + ' is not a valid string',
+                          "_strToArray",
+                          e + " is not a valid string",
                         ),
                       !errorHandler.exception)
                     )
@@ -9104,17 +9131,17 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_transformPropertyName',
+                  key: "_transformPropertyName",
                   value: function (e) {
                     return e
-                      .replace(/^s-/, '')
+                      .replace(/^s-/, "")
                       .replace(/-+(.)?/g, function (e, t) {
-                        return t ? t.toUpperCase() : '';
+                        return t ? t.toUpperCase() : "";
                       });
                   },
                 },
                 {
-                  key: '_getBucket',
+                  key: "_getBucket",
                   value: function (e, t) {
                     for (
                       var r = constants.countryBuckets.length, a = 2, o = 0;
@@ -9125,64 +9152,64 @@ require = (function () {
                         a = o;
                         break;
                       }
-                    var n = this._replaceTemplateVars(e['bucket' + a]);
+                    var n = this._replaceTemplateVars(e["bucket" + a]);
                     if (
                       (n ||
                         errorHandler.log(
                           moduleName,
-                          'bucket',
-                          'analytics-s-bucket-' +
+                          "bucket",
+                          "analytics-s-bucket-" +
                             a +
-                            ' metadata tag must exist',
+                            " metadata tag must exist",
                         ),
                       !errorHandler.exception)
                     ) {
-                      var i = this._replaceTemplateVars(e['bucketProduct' + a]),
+                      var i = this._replaceTemplateVars(e["bucketProduct" + a]),
                         s = this._replaceTemplateVars(e.bucketStore);
-                      return n + (i ? ',' + i : '') + (s ? ',' + s : '');
+                      return n + (i ? "," + i : "") + (s ? "," + s : "");
                     }
                   },
                 },
                 {
-                  key: '_replaceTemplateVars',
+                  key: "_replaceTemplateVars",
                   value: function (e) {
                     return templateVarHelper.translate(e, this.templateVarArr);
                   },
                 },
                 {
-                  key: 'isSafariTopSitesPreview',
+                  key: "isSafariTopSitesPreview",
                   value: function () {
                     return !(
                       !navigator ||
                       !navigator.loadPurpose ||
-                      'preview' !== navigator.loadPurpose
+                      "preview" !== navigator.loadPurpose
                     );
                   },
                 },
                 {
-                  key: 'getTrackingServer',
+                  key: "getTrackingServer",
                   value: function () {
                     return this._isProduction()
-                      ? 'metrics.' + this.conf[dlKeys.trackingDomain]
+                      ? "metrics." + this.conf[dlKeys.trackingDomain]
                       : location.hostname;
                   },
                 },
                 {
-                  key: 'getSecureTrackingServer',
+                  key: "getSecureTrackingServer",
                   value: function () {
                     return this._isProduction()
-                      ? 'securemetrics.' + this.conf[dlKeys.trackingDomain]
+                      ? "securemetrics." + this.conf[dlKeys.trackingDomain]
                       : location.hostname;
                   },
                 },
                 {
-                  key: 'getDataCenterId',
+                  key: "getDataCenterId",
                   value: function () {
                     return 112;
                   },
                 },
                 {
-                  key: '_isProduction',
+                  key: "_isProduction",
                   value: function () {
                     var e = this.generateProdURLs(),
                       t = window.location.host;
@@ -9190,23 +9217,23 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'generateProdURLs',
+                  key: "generateProdURLs",
                   value: function () {
                     var e = this.conf[dlKeys.trackingDomain],
                       t = [],
-                      r = constants.supportedSubdomains || ['apple.com'],
-                      a = constants.subdomains || ['www'];
+                      r = constants.supportedSubdomains || ["apple.com"],
+                      a = constants.subdomains || ["www"];
                     return (
                       -1 !== r.indexOf(e) &&
                         a.forEach(function (r) {
-                          t.push(r + '.' + e);
+                          t.push(r + "." + e);
                         }),
                       t
                     );
                   },
                 },
                 {
-                  key: '_bindMethods',
+                  key: "_bindMethods",
                   value: function () {
                     this._replaceTemplateVars =
                       this._replaceTemplateVars.bind(this);
@@ -9219,56 +9246,56 @@ require = (function () {
         module.exports = AppMeasurementPlugin;
       },
       {
-        '../ErrorHandler': 118,
-        '../constants': 121,
-        '../helpers/cookie': 124,
-        '../helpers/dataLayer': 125,
-        '../helpers/eventsToString': 128,
-        '../helpers/formatter': 130,
-        '../helpers/generateSpecialExitLinks': 131,
-        '../helpers/templateVar': 145,
-        '../observers/observerRegistry': 158,
-        './appMeasurementPlugins': 72,
-        './doPlugins/doPlugins': 83,
-        './submit-methods/submitMethods': 115,
-        '@apple/analytics-biscuit-tin': 1,
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-passive-tracker': 9,
-        '@apple/analytics-utils': 12,
-        '@marcom/appmeasurement-setup': 50,
+        "../ErrorHandler": 118,
+        "../constants": 121,
+        "../helpers/cookie": 124,
+        "../helpers/dataLayer": 125,
+        "../helpers/eventsToString": 128,
+        "../helpers/formatter": 130,
+        "../helpers/generateSpecialExitLinks": 131,
+        "../helpers/templateVar": 145,
+        "../observers/observerRegistry": 158,
+        "./appMeasurementPlugins": 72,
+        "./doPlugins/doPlugins": 83,
+        "./submit-methods/submitMethods": 115,
+        "@apple/analytics-biscuit-tin": 1,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-passive-tracker": 9,
+        "@apple/analytics-utils": 12,
+        "@marcom/appmeasurement-setup": 50,
       },
     ],
     72: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var plugins = [
-          require('./appMeasurementPlugins/AppMeasurementTools.js'),
-          require('./appMeasurementPlugins/utilities/utilities.js'),
-          require('./appMeasurementPlugins/linkHandler.js'),
-          require('./appMeasurementPlugins/getPercentPageViewed.js'),
-          require('./appMeasurementPlugins/getQueryParam.js'),
-          require('./appMeasurementPlugins/getValOnce.js'),
-          require('./appMeasurementPlugins/activitymap/link.js'),
-          require('./appMeasurementPlugins/activitymap/region.js'),
-          require('./appMeasurementPlugins/activitymap/ActivityMapCollection.js'),
+          require("./appMeasurementPlugins/AppMeasurementTools.js"),
+          require("./appMeasurementPlugins/utilities/utilities.js"),
+          require("./appMeasurementPlugins/linkHandler.js"),
+          require("./appMeasurementPlugins/getPercentPageViewed.js"),
+          require("./appMeasurementPlugins/getQueryParam.js"),
+          require("./appMeasurementPlugins/getValOnce.js"),
+          require("./appMeasurementPlugins/activitymap/link.js"),
+          require("./appMeasurementPlugins/activitymap/region.js"),
+          require("./appMeasurementPlugins/activitymap/ActivityMapCollection.js"),
         ];
         module.exports = plugins;
       },
       {
-        './appMeasurementPlugins/AppMeasurementTools': 73,
-        './appMeasurementPlugins/activitymap/ActivityMapCollection': 74,
-        './appMeasurementPlugins/activitymap/link': 76,
-        './appMeasurementPlugins/activitymap/region': 77,
-        './appMeasurementPlugins/getPercentPageViewed': 78,
-        './appMeasurementPlugins/getQueryParam': 79,
-        './appMeasurementPlugins/getValOnce': 80,
-        './appMeasurementPlugins/linkHandler': 81,
-        './appMeasurementPlugins/utilities/utilities': 82,
+        "./appMeasurementPlugins/AppMeasurementTools": 73,
+        "./appMeasurementPlugins/activitymap/ActivityMapCollection": 74,
+        "./appMeasurementPlugins/activitymap/link": 76,
+        "./appMeasurementPlugins/activitymap/region": 77,
+        "./appMeasurementPlugins/getPercentPageViewed": 78,
+        "./appMeasurementPlugins/getQueryParam": 79,
+        "./appMeasurementPlugins/getValOnce": 80,
+        "./appMeasurementPlugins/linkHandler": 81,
+        "./appMeasurementPlugins/utilities/utilities": 82,
       },
     ],
     73: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (e) {
           e.ac_amt &&
             e.ac_amt._isEmpty &&
@@ -9323,24 +9350,24 @@ require = (function () {
     ],
     74: [
       function (require, module, exports) {
-        'use strict';
-        var _ancestor = require('@marcom/dom-traversal/ancestor'),
-          _isAncestorOf = require('@marcom/dom-traversal/isAncestorOf'),
-          _helpers = require('./helpers/helpers.js'),
-          DELIMITER = ' - ';
+        "use strict";
+        var _ancestor = require("@marcom/dom-traversal/ancestor"),
+          _isAncestorOf = require("@marcom/dom-traversal/isAncestorOf"),
+          _helpers = require("./helpers/helpers.js"),
+          DELIMITER = " - ";
         function ActivityMapCollection() {
           (this._regionSelectors = [
-            '[data-analytics-activitymap-region-id]',
-            '[data-analytics-section-engagement]',
-            '[data-card-analytics]',
+            "[data-analytics-activitymap-region-id]",
+            "[data-analytics-section-engagement]",
+            "[data-card-analytics]",
           ]),
             (this._globalRegionSelectors = [
               '[data-analytics-region="buy strip"]',
-              '#globalnav',
-              '#ac-globalnav',
-              '#ac-localnav',
-              '#ac-globalfooter',
-              '#chapternav',
+              "#globalnav",
+              "#ac-globalnav",
+              "#ac-localnav",
+              "#ac-globalfooter",
+              "#chapternav",
             ]),
             (this.createActivityMapCollection =
               this.createActivityMapCollection.bind(this)),
@@ -9352,16 +9379,16 @@ require = (function () {
           (this.AppMeasurement = e),
             this.AppMeasurement &&
               this.AppMeasurement.ac_amt &&
-              ('complete' !== document.readyState &&
-              'interactive' !== document.readyState &&
+              ("complete" !== document.readyState &&
+              "interactive" !== document.readyState &&
               this.AppMeasurement.ac_amt.addListener
                 ? this.AppMeasurement.ac_amt.addListener(
-                    'amc_readystatechange',
+                    "amc_readystatechange",
                     document,
-                    'readystatechange',
+                    "readystatechange",
                     function (e) {
-                      ('interactive' !== e.target.readyState &&
-                        'complete' !== e.target.readyState) ||
+                      ("interactive" !== e.target.readyState &&
+                        "complete" !== e.target.readyState) ||
                         t.createActivityMapCollection();
                     },
                   )
@@ -9408,12 +9435,12 @@ require = (function () {
             )
               (i.linkId = i.linkId.concat(
                 DELIMITER,
-                '#',
+                "#",
                 _helpers.prefixCharacters(1),
               )),
                 (e.linkId = e.linkId.concat(
                   DELIMITER,
-                  '#',
+                  "#",
                   _helpers.prefixCharacters(2),
                 ));
             else
@@ -9421,7 +9448,7 @@ require = (function () {
                 n++,
                   (t = e.linkId.concat(
                     DELIMITER,
-                    '#',
+                    "#",
                     _helpers.prefixCharacters(n),
                   )),
                   (i =
@@ -9437,7 +9464,7 @@ require = (function () {
               this._globalRegionSelectors,
             );
             for (
-              var e = document.querySelectorAll('a, button'), t = [], i = 0;
+              var e = document.querySelectorAll("a, button"), t = [], i = 0;
               i < e.length;
               i++
             ) {
@@ -9452,9 +9479,9 @@ require = (function () {
               (t[n] = t[n] ? t[n] + 1 : 1),
                 t[n] > 1
                   ? (e[a].linkId =
-                      e[a].linkId + ' - #' + _helpers.prefixCharacters(t[n]))
+                      e[a].linkId + " - #" + _helpers.prefixCharacters(t[n]))
                   : (i[n] = a),
-                2 === t[n] && (e[i[n]].linkId = e[i[n]].linkId + ' - #01');
+                2 === t[n] && (e[i[n]].linkId = e[i[n]].linkId + " - #01");
             }
             return e;
           }),
@@ -9464,19 +9491,19 @@ require = (function () {
                 !a &&
                 ((a = t[r]),
                 (n =
-                  'ac-globalnav' === t[r].id
-                    ? a.getAttribute('data-analytics-region') || 'global nav'
-                    : a.id || a.getAttribute('data-analytics-region')));
-            if (!a && (a = _ancestor(e, i.join(','), !0))) {
+                  "ac-globalnav" === t[r].id
+                    ? a.getAttribute("data-analytics-region") || "global nav"
+                    : a.id || a.getAttribute("data-analytics-region")));
+            if (!a && (a = _ancestor(e, i.join(","), !0))) {
               var o = i.find(function (e) {
                 return a.hasAttribute(_helpers.removeArrayBrackets(e));
               });
               (n = a.getAttribute(_helpers.removeArrayBrackets(o))),
-                '[data-analytics-section-engagement]' === o &&
-                  (n = n.replace('name:', ''));
+                "[data-analytics-section-engagement]" === o &&
+                  (n = n.replace("name:", ""));
             }
             return (
-              a || ((a = document.body), (n = 'body')),
+              a || ((a = document.body), (n = "body")),
               { el: a, id: n.toLowerCase() }
             );
           }),
@@ -9489,20 +9516,20 @@ require = (function () {
           (module.exports = new ActivityMapCollection());
       },
       {
-        './helpers/helpers.js': 75,
-        '@marcom/dom-traversal/ancestor': 55,
-        '@marcom/dom-traversal/isAncestorOf': 57,
+        "./helpers/helpers.js": 75,
+        "@marcom/dom-traversal/ancestor": 55,
+        "@marcom/dom-traversal/isAncestorOf": 57,
       },
     ],
     75: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function Helpers() {
           this.createLinkId = this.createLinkId.bind(this);
         }
         var prohref = Helpers.prototype;
         (proto.prefixCharacters = function (t, r, e) {
-          var n = '';
+          var n = "";
           for (r = r || 2, e = e || 0; r; ) (n += e), r--;
           return n.substring(0, n.length - t.toString().length) + t;
         }),
@@ -9510,7 +9537,7 @@ require = (function () {
             return t.substring(0, r).trim();
           }),
           (proto.removeArrayBrackets = function (t) {
-            return '[' === t[0] && ']' === t[t.length - 1]
+            return "[" === t[0] && "]" === t[t.length - 1]
               ? t.substr(1, t.length - 2)
               : t;
           }),
@@ -9523,24 +9550,24 @@ require = (function () {
           }),
           (proto.createLinkText = function (t) {
             var r =
-              t.getAttribute('data-analytics-activitymap-link-id') ||
-              t.getAttribute('data-ac-gallery-trigger') ||
-              t.getAttribute('data-analytics-title') ||
+              t.getAttribute("data-analytics-activitymap-link-id") ||
+              t.getAttribute("data-ac-gallery-trigger") ||
+              t.getAttribute("data-analytics-title") ||
               this.removeSpecialChars(t.textContent) ||
               t.id ||
               t.tagName ||
-              'no text';
+              "no text";
             return this.limitStrLength(r, 50);
           }),
           (proto.createLinkHref = function (t, r) {
             var e, n;
             return (
-              t.protocol && 'http:' !== t.protocol && 'https:' !== t.protocol
+              t.protocol && "http:" !== t.protocol && "https:" !== t.protocol
                 ? (n = t.protocol.substring(0, t.protocol.length - 1))
                 : (t.hostname !== window.location.hostname &&
-                    t.hostname !== 'www.' + r.acAnalytics.trackingDomain &&
+                    t.hostname !== "www." + r.acAnalytics.trackingDomain &&
                     (e = t.hostname + t.pathname),
-                  (n = e || t.hash || t.pathname || 'no href')),
+                  (n = e || t.hash || t.pathname || "no href")),
               n
             );
           }),
@@ -9559,9 +9586,9 @@ require = (function () {
           (proto.removeSpecialChars = function (t) {
             var r;
             if (t) {
-              var e = ['&rlm;', '\\u200F', '&#8207;', '&#x200f;'].join('|'),
-                n = new RegExp(e, 'gi');
-              r = t.replace(n, '').replace(/\s+/g, ' ').trim();
+              var e = ["&rlm;", "\\u200F", "&#8207;", "&#x200f;"].join("|"),
+                n = new RegExp(e, "gi");
+              r = t.replace(n, "").replace(/\s+/g, " ").trim();
             }
             return r;
           }),
@@ -9571,11 +9598,11 @@ require = (function () {
     ],
     76: [
       function (require, module, exports) {
-        'use strict';
-        var ActivityMapCollection = require('./ActivityMapCollection.js'),
-          useragent = require('@marcom/useragent-detect'),
-          closeStr = 'close',
-          openStr = 'open',
+        "use strict";
+        var ActivityMapCollection = require("./ActivityMapCollection.js"),
+          useragent = require("@marcom/useragent-detect"),
+          closeStr = "close",
+          openStr = "open",
           initialBagState =
             useragent.browser.firefox || useragent.browser.ie
               ? openStr
@@ -9585,12 +9612,12 @@ require = (function () {
               ? closeStr
               : openStr;
         function getPath(e) {
-          return e.replace(/.+\.com(\.cn)?/, '');
+          return e.replace(/.+\.com(\.cn)?/, "");
         }
         function getBagString(e, t) {
-          return ''
-            .concat(e, ' - bag - ')
-            .concat(t, ' - globalnav - ')
+          return ""
+            .concat(e, " - bag - ")
+            .concat(t, " - globalnav - ")
             .concat(e);
         }
         module.exports = function (e) {
@@ -9605,16 +9632,16 @@ require = (function () {
             }
             if (
               (!n ||
-                (-1 === n.indexOf('v@e') &&
-                  -1 === n.indexOf('v@sk') &&
-                  -1 === n.indexOf('v@m'))) &&
+                (-1 === n.indexOf("v@e") &&
+                  -1 === n.indexOf("v@sk") &&
+                  -1 === n.indexOf("v@m"))) &&
               t &&
-              !t.hasAttribute('data-analytics-ignore-link')
+              !t.hasAttribute("data-analytics-ignore-link")
             ) {
               if ((r = i(t))) {
-                if (-1 !== r.linkId.indexOf('/shop/goto/bag')) {
+                if (-1 !== r.linkId.indexOf("/shop/goto/bag")) {
                   var a = getPath(r.element.href);
-                  return 'true' === r.element.getAttribute('aria-expanded')
+                  return "true" === r.element.getAttribute("aria-expanded")
                     ? getBagString(initialBagState, a)
                     : getBagString(alteredBagState, a);
                 }
@@ -9628,11 +9655,11 @@ require = (function () {
           };
         };
       },
-      { './ActivityMapCollection': 74, '@marcom/useragent-detect': 70 },
+      { "./ActivityMapCollection": 74, "@marcom/useragent-detect": 70 },
     ],
     77: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (i) {
           i.ActivityMap.region = function (t) {
             if (t) {
@@ -9648,9 +9675,9 @@ require = (function () {
     ],
     78: [
       function (require, module, exports) {
-        'use strict';
-        var isStorageAvailable = require('../../helpers/isStorageAvailable'),
-          SESSION_STORAGE = require('../../constants').sessionStorage;
+        "use strict";
+        var isStorageAvailable = require("../../helpers/isStorageAvailable"),
+          SESSION_STORAGE = require("../../constants").sessionStorage;
         module.exports = function (e) {
           isStorageAvailable(SESSION_STORAGE) &&
             ((e.getPercentPageViewed = function () {
@@ -9660,53 +9687,53 @@ require = (function () {
                     s.ppv.sessionStorageKey,
                   )
                     ? sessionStorage.getItem(s.ppv.sessionStorageKey)
-                    : '';
+                    : "";
                 } catch (e) {}
-                return s.ppv.init(), s.ppv.previous.split(',');
+                return s.ppv.init(), s.ppv.previous.split(",");
               }
               if (!s.ppv.previous) {
                 try {
                   s.ppv.previous =
-                    sessionStorage.getItem(s.ppv.sessionStorageKey) || '';
+                    sessionStorage.getItem(s.ppv.sessionStorageKey) || "";
                 } catch (e) {}
-                return s.ppv.init(), s.ppv.previous.split(',');
+                return s.ppv.init(), s.ppv.previous.split(",");
               }
             }),
             (e.ppv = {
               initialPercent: 0,
               maxPercent: 0,
               throttleAmount: 500,
-              sessionStorageKey: 's_ppv',
+              sessionStorageKey: "s_ppv",
               init: function () {
                 s &&
                   s.ac_amt &&
                   s.ac_amt.addListener &&
                   (s.ac_amt.addListener(
-                    'ppv_scroll',
+                    "ppv_scroll",
                     window,
-                    'scroll',
+                    "scroll",
                     s.ppv.throttle(s.ppv.scroll, s.ppv.throttleAmount),
                     !1,
                   ),
                   s.ac_amt.addListener(
-                    'ppv_resize',
+                    "ppv_resize",
                     window,
-                    'resize',
+                    "resize",
                     s.ppv.throttle(s.ppv.scroll, s.ppv.throttleAmount),
                     !1,
                   ),
                   s.ac_amt.addListener(
-                    'ppv_beforeunload',
+                    "ppv_beforeunload",
                     window,
-                    'beforeunload',
+                    "beforeunload",
                     s.ppv.unload,
                     !1,
                   ),
-                  'complete' !== document.readyState
+                  "complete" !== document.readyState
                     ? s.ac_amt.addListener(
-                        'ppv_load',
+                        "ppv_load",
                         window,
-                        'load',
+                        "load",
                         s.ppv.scroll,
                         !1,
                       )
@@ -9738,7 +9765,7 @@ require = (function () {
                       i.push(e.initialPercent),
                       i.push(t + o);
                     try {
-                      sessionStorage.setItem(e.sessionStorageKey, i.join(','));
+                      sessionStorage.setItem(e.sessionStorageKey, i.join(","));
                     } catch (e) {}
                   }
                 }
@@ -9787,11 +9814,11 @@ require = (function () {
             }));
         };
       },
-      { '../../constants': 121, '../../helpers/isStorageAvailable': 137 },
+      { "../../constants": 121, "../../helpers/isStorageAvailable": 137 },
     ],
     79: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (e) {
           e.getQueryParam = e.Util.getQueryParam;
         };
@@ -9800,20 +9827,20 @@ require = (function () {
     ],
     80: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (e) {
           e.getValOnce = function (e, t, i, r) {
-            (e = e || ''), (t = t || 's_gvo'), (i = i || 0);
+            (e = e || ""), (t = t || "s_gvo"), (i = i || 0);
             var n = this.c_r(t);
             if (e) {
               var s = 0;
               if (0 !== i) {
-                var c = i * ('m' === r ? 6e4 : 864e5);
+                var c = i * ("m" === r ? 6e4 : 864e5);
                 (s = new Date()).setTime(s.getTime() + c);
               }
               this.c_w(t, e, s);
             }
-            return e === n ? '' : e;
+            return e === n ? "" : e;
           };
         };
       },
@@ -9821,35 +9848,35 @@ require = (function () {
     ],
     81: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = function (n) {
           (n.p_gn = function (n, e) {
             var t,
               r,
-              i = n ? n.indexOf('~') : -1;
+              i = n ? n.indexOf("~") : -1;
             return n &&
               e &&
-              ((t = i < 0 ? '' : n.substring(0, i)),
+              ((t = i < 0 ? "" : n.substring(0, i)),
               (r = n.substring(i + 1)),
               e.indexOf(r.toLowerCase()) > -1)
-              ? t || '[['
+              ? t || "[["
               : 0;
           }),
             (n.p_gh = function () {
               var n = this;
               if (n.linkObject) return n.linkObject.href;
-              if (!n.eo && !n.lnk) return '';
+              if (!n.eo && !n.lnk) return "";
               var e = n.eo ? n.eo : n.lnk,
                 t = n.ot(e),
                 r = n.oid(e);
               e.s_oidt;
               if (n.eo && e == n.eo)
-                for (; e && !r && 'BODY' != t; ) {
+                for (; e && !r && "BODY" != t; ) {
                   if (!(e = e.parentElement ? e.parentElement : e.parentNode))
-                    return '';
+                    return "";
                   (t = n.ot(e)), (r = n.oid(e)), e.s_oidt;
                 }
-              return e.href ? e.href : '';
+              return e.href ? e.href : "";
             }),
             (n.pt = function (n, e, t, r) {
               for (var i, o, u = n, s = 0; u; ) {
@@ -9861,9 +9888,9 @@ require = (function () {
                   return o;
                 (s += i + e.length),
                   (u = n.substring(s, n.length)),
-                  (u = s < n.length ? u : '');
+                  (u = s < n.length ? u : "");
               }
-              return '';
+              return "";
             }),
             (n.linkHandler = function (n, e, t) {
               var r,
@@ -9872,17 +9899,17 @@ require = (function () {
                 u = o.p_gh(),
                 s = u;
               return (
-                (e = e || 'o'),
+                (e = e || "o"),
                 !s || (o.linkType && (s || o.linkName))
-                  ? ''
-                  : ((r = s.indexOf('?')),
+                  ? ""
+                  : ((r = s.indexOf("?")),
                     (s =
                       o.linkLeaveQueryString || r < 0 ? s : s.substring(0, r)),
-                    (i = o.pt(n, '|', 'p_gn', s.toLowerCase()))
-                      ? ((o.linkName = '[[' == i ? '' : i),
+                    (i = o.pt(n, "|", "p_gn", s.toLowerCase()))
+                      ? ((o.linkName = "[[" == i ? "" : i),
                         (o.linkType = e),
                         t ? u : s)
-                      : '')
+                      : "")
               );
             });
         };
@@ -9891,19 +9918,19 @@ require = (function () {
     ],
     82: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(t) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
                 }
               : function (t) {
                   return t &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     t.constructor === Symbol &&
                     t !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof t;
                 })(t);
         }
@@ -9913,46 +9940,46 @@ require = (function () {
               o,
               a,
               i = this;
-            if (((e = e || ''), (n = n || 1), !i[t])) return !1;
+            if (((e = e || ""), (n = n || 1), !i[t])) return !1;
             r =
-              'pageName,purchaseID,channel,server,pageType,campaign,state,zip,events,products,transactionID';
-            for (var f = 1; f < 76; f++) r += ',prop' + f;
-            for (f = 1; f < 251; f++) r += ',eVar' + f;
-            for (f = 1; f < 6; f++) r += ',hier' + f;
-            for (f = 1; f < 4; f++) r += ',list' + f;
-            for (f in i.contextData) r += ',contextData.' + f;
+              "pageName,purchaseID,channel,server,pageType,campaign,state,zip,events,products,transactionID";
+            for (var f = 1; f < 76; f++) r += ",prop" + f;
+            for (f = 1; f < 251; f++) r += ",eVar" + f;
+            for (f = 1; f < 6; f++) r += ",hier" + f;
+            for (f = 1; f < 4; f++) r += ",list" + f;
+            for (f in i.contextData) r += ",contextData." + f;
             if (!e || (1 != n && 2 != n))
-              return '' == e && 1 == n && (i.pt(r, ',', t, 0), !0);
+              return "" == e && 1 == n && (i.pt(r, ",", t, 0), !0);
             if (
-              (1 == n && (r = e.replace("['", '.').replace("']", '')), 2 == n)
+              (1 == n && (r = e.replace("['", ".").replace("']", "")), 2 == n)
             ) {
-              for (var s in ((o = e.split(',')),
-              (a = r.split(',')),
-              (r = ''),
+              for (var s in ((o = e.split(",")),
+              (a = r.split(",")),
+              (r = ""),
               o))
                 if (o.hasOwnProperty(s))
-                  for (var c in (o[s].indexOf('contextData') > -1 &&
-                    ((lax = o[s].split("'")), (o[s] = 'contextData.' + lax[1])),
+                  for (var c in (o[s].indexOf("contextData") > -1 &&
+                    ((lax = o[s].split("'")), (o[s] = "contextData." + lax[1])),
                   a))
-                    o[s] == a[c] && (a[c] = '');
-              for (var c in a) r += a[c] ? ',' + a[c] : '';
+                    o[s] == a[c] && (a[c] = "");
+              for (var c in a) r += a[c] ? "," + a[c] : "";
             }
-            return i.pt(r, ',', t, 0), !0;
+            return i.pt(r, ",", t, 0), !0;
           }),
             (t.clearVars = function (t) {
-              if (-1 == t.indexOf('contextData')) this[t] = '';
-              else if (t.indexOf('contextData') > -1) {
-                var e = t.substring(t.indexOf('.') + 1);
-                this.contextData[e] = '';
+              if (-1 == t.indexOf("contextData")) this[t] = "";
+              else if (t.indexOf("contextData") > -1) {
+                var e = t.substring(t.indexOf(".") + 1);
+                this.contextData[e] = "";
               }
             }),
             (t.lowercaseVars = function (t) {
               var e = this;
-              if ('events' != t && -1 == t.indexOf('contextData') && e[t])
+              if ("events" != t && -1 == t.indexOf("contextData") && e[t])
                 (e[t] = e[t].toString()),
-                  0 != e[t].indexOf('D=') && (e[t] = e[t].toLowerCase());
-              else if (t.indexOf('contextData') > -1) {
-                var n = t.substring(t.indexOf('.') + 1);
+                  0 != e[t].indexOf("D=") && (e[t] = e[t].toLowerCase());
+              else if (t.indexOf("contextData") > -1) {
+                var n = t.substring(t.indexOf(".") + 1);
                 e.contextData[n] &&
                   ((e.contextData[n] = e.contextData[n].toString()),
                   (e.contextData[n] = e.contextData[n].toLowerCase()));
@@ -9968,19 +9995,19 @@ require = (function () {
                   return a;
                 (f += o + e.length),
                   (i = t.substring(f, t.length)),
-                  (i = f < t.length ? i : '');
+                  (i = f < t.length ? i : "");
               }
-              return '';
+              return "";
             }),
             (t.join = function (t, e) {
               var n, r, o, a;
               e &&
-                ((n = e.front ? e.front : ''),
-                (r = e.back ? e.back : ''),
-                (o = e.delim ? e.delim : ''),
-                (a = e.wrap ? e.wrap : ''));
-              for (var i = '', f = 0; f < t.length; f++)
-                'object' == _typeof(t[f])
+                ((n = e.front ? e.front : ""),
+                (r = e.back ? e.back : ""),
+                (o = e.delim ? e.delim : ""),
+                (a = e.wrap ? e.wrap : ""));
+              for (var i = "", f = 0; f < t.length; f++)
+                "object" == _typeof(t[f])
                   ? (i += this.join(t[f], e))
                   : (i += a + t[f] + a),
                   f < t.length - 1 && (i += o);
@@ -9988,7 +10015,7 @@ require = (function () {
             }),
             (t.apl = function (t, e, n, r) {
               var o = 0;
-              if ((t || (t = ''), r)) {
+              if ((t || (t = ""), r)) {
                 var a,
                   i,
                   f = this.split(t, n);
@@ -10013,24 +10040,24 @@ require = (function () {
     ],
     83: [
       function (require, module, exports) {
-        'use strict';
-        var doPluginsRegistry = require('./doPluginsRegistry.js');
+        "use strict";
+        var doPluginsRegistry = require("./doPluginsRegistry.js");
         function doPlugins(i) {
           doPluginsRegistry.run(i);
         }
         module.exports = doPlugins;
       },
-      { './doPluginsRegistry': 84 },
+      { "./doPluginsRegistry": 84 },
     ],
     84: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _defineProperties(e, i) {
           for (var s = 0; s < i.length; s++) {
             var n = i[s];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(e, n.key, n);
           }
         }
@@ -10038,13 +10065,13 @@ require = (function () {
           return (
             i && _defineProperties(e.prototype, i),
             s && _defineProperties(e, s),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
         function _classCallCheck(e, i) {
           if (!(e instanceof i))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         var DoPluginsPhase = _createClass(function e(i) {
             _classCallCheck(this, e), (this.name = i), (this.steps = []);
@@ -10070,7 +10097,7 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: 'run',
+                  key: "run",
                   value: function (e) {
                     this.stages.forEach(function (i) {
                       i.phases &&
@@ -10088,115 +10115,115 @@ require = (function () {
             );
           })(),
           doPluginsRegistry = new DoPluginsRegistry([
-            new DoPluginsStage('pretracking', [
-              new DoPluginsPhase('initialize'),
-              new DoPluginsPhase('main'),
-              new DoPluginsPhase('finalize'),
+            new DoPluginsStage("pretracking", [
+              new DoPluginsPhase("initialize"),
+              new DoPluginsPhase("main"),
+              new DoPluginsPhase("finalize"),
             ]),
-            new DoPluginsStage('tracking', [
-              new DoPluginsPhase('initialize'),
-              new DoPluginsPhase('sideEffects'),
-              new DoPluginsPhase('main'),
-              new DoPluginsPhase('finalize'),
-              new DoPluginsPhase('sanitize'),
+            new DoPluginsStage("tracking", [
+              new DoPluginsPhase("initialize"),
+              new DoPluginsPhase("sideEffects"),
+              new DoPluginsPhase("main"),
+              new DoPluginsPhase("finalize"),
+              new DoPluginsPhase("sanitize"),
             ]),
-            new DoPluginsStage('cleanup', [
-              new DoPluginsPhase('initialize'),
-              new DoPluginsPhase('main'),
-              new DoPluginsPhase('finalize'),
+            new DoPluginsStage("cleanup", [
+              new DoPluginsPhase("initialize"),
+              new DoPluginsPhase("main"),
+              new DoPluginsPhase("finalize"),
             ]),
           ]),
-          trackingState = require('./plugins/trackingState.js');
+          trackingState = require("./plugins/trackingState.js");
         doPluginsRegistry.pretracking.main.steps.push(
-          require('./plugins/referrerQueryParam.js'),
+          require("./plugins/referrerQueryParam.js"),
         ),
           doPluginsRegistry.tracking.sideEffects.steps.push(
-            require('./plugins/handleLink.js'),
-            require('./plugins/specialRssLinks.js'),
+            require("./plugins/handleLink.js"),
+            require("./plugins/specialRssLinks.js"),
           ),
           doPluginsRegistry.tracking.main.steps.push(
             trackingState.begin,
-            require('./plugins/acAnalyticsVersion.js'),
-            require('./plugins/externalCampaign.js'),
-            require('./plugins/internalCampaign.js'),
-            require('./plugins/percentPageViewed.js'),
-            require('./plugins/afid.js'),
-            require('./plugins/retailCookies.js'),
-            require('./plugins/feedbackPage.js'),
-            require('./plugins/contactRetail.js'),
-            require('./plugins/asTex.js'),
-            require('./plugins/enhanceDownloadLinks.js'),
-            require('./plugins/langLocale.js'),
-            require('./plugins/userSignInStatus.js'),
-            require('./plugins/pageName.js'),
-            require('./plugins/asPvi.js'),
-            require('./plugins/hierarchy1.js'),
-            require('./plugins/referrerAndCurrentUrl.js'),
-            require('./plugins/clickTimer.js'),
-            require('./plugins/beaconType.js'),
-            require('./plugins/linkMissingTitle.js'),
+            require("./plugins/acAnalyticsVersion.js"),
+            require("./plugins/externalCampaign.js"),
+            require("./plugins/internalCampaign.js"),
+            require("./plugins/percentPageViewed.js"),
+            require("./plugins/afid.js"),
+            require("./plugins/retailCookies.js"),
+            require("./plugins/feedbackPage.js"),
+            require("./plugins/contactRetail.js"),
+            require("./plugins/asTex.js"),
+            require("./plugins/enhanceDownloadLinks.js"),
+            require("./plugins/langLocale.js"),
+            require("./plugins/userSignInStatus.js"),
+            require("./plugins/pageName.js"),
+            require("./plugins/asPvi.js"),
+            require("./plugins/hierarchy1.js"),
+            require("./plugins/referrerAndCurrentUrl.js"),
+            require("./plugins/clickTimer.js"),
+            require("./plugins/beaconType.js"),
+            require("./plugins/linkMissingTitle.js"),
           ),
           doPluginsRegistry.tracking.finalize.steps.push(
-            require('./plugins/passiveTracker.js'),
-            require('./plugins/newPassiveTracker.js'),
+            require("./plugins/passiveTracker.js"),
+            require("./plugins/newPassiveTracker.js"),
           ),
           doPluginsRegistry.tracking.sanitize.steps.push(
-            require('./plugins/removeSpacesInLinkTrackVars.js'),
-            require('./plugins/manageVars.js'),
+            require("./plugins/removeSpacesInLinkTrackVars.js"),
+            require("./plugins/manageVars.js"),
           ),
           doPluginsRegistry.cleanup.main.steps.push(
-            require('./plugins/clearLinkTracksAfterDownloadAndExit.js'),
+            require("./plugins/clearLinkTracksAfterDownloadAndExit.js"),
           ),
           doPluginsRegistry.cleanup.finalize.steps.push(
             trackingState.end,
-            require('./plugins/setTcallToFalse.js'),
+            require("./plugins/setTcallToFalse.js"),
           ),
           (module.exports = doPluginsRegistry);
       },
       {
-        './plugins/acAnalyticsVersion': 86,
-        './plugins/afid': 87,
-        './plugins/asPvi': 88,
-        './plugins/asTex': 89,
-        './plugins/beaconType': 90,
-        './plugins/clearLinkTracksAfterDownloadAndExit': 91,
-        './plugins/clickTimer': 92,
-        './plugins/contactRetail': 93,
-        './plugins/enhanceDownloadLinks': 94,
-        './plugins/externalCampaign': 95,
-        './plugins/feedbackPage': 96,
-        './plugins/handleLink': 97,
-        './plugins/hierarchy1': 98,
-        './plugins/internalCampaign': 99,
-        './plugins/langLocale': 100,
-        './plugins/linkMissingTitle': 101,
-        './plugins/manageVars': 102,
-        './plugins/newPassiveTracker': 103,
-        './plugins/pageName': 104,
-        './plugins/passiveTracker': 105,
-        './plugins/percentPageViewed': 106,
-        './plugins/referrerAndCurrentUrl': 107,
-        './plugins/referrerQueryParam': 108,
-        './plugins/removeSpacesInLinkTrackVars': 109,
-        './plugins/retailCookies': 110,
-        './plugins/setTcallToFalse': 111,
-        './plugins/specialRssLinks': 112,
-        './plugins/trackingState': 113,
-        './plugins/userSignInStatus': 114,
+        "./plugins/acAnalyticsVersion": 86,
+        "./plugins/afid": 87,
+        "./plugins/asPvi": 88,
+        "./plugins/asTex": 89,
+        "./plugins/beaconType": 90,
+        "./plugins/clearLinkTracksAfterDownloadAndExit": 91,
+        "./plugins/clickTimer": 92,
+        "./plugins/contactRetail": 93,
+        "./plugins/enhanceDownloadLinks": 94,
+        "./plugins/externalCampaign": 95,
+        "./plugins/feedbackPage": 96,
+        "./plugins/handleLink": 97,
+        "./plugins/hierarchy1": 98,
+        "./plugins/internalCampaign": 99,
+        "./plugins/langLocale": 100,
+        "./plugins/linkMissingTitle": 101,
+        "./plugins/manageVars": 102,
+        "./plugins/newPassiveTracker": 103,
+        "./plugins/pageName": 104,
+        "./plugins/passiveTracker": 105,
+        "./plugins/percentPageViewed": 106,
+        "./plugins/referrerAndCurrentUrl": 107,
+        "./plugins/referrerQueryParam": 108,
+        "./plugins/removeSpacesInLinkTrackVars": 109,
+        "./plugins/retailCookies": 110,
+        "./plugins/setTcallToFalse": 111,
+        "./plugins/specialRssLinks": 112,
+        "./plugins/trackingState": 113,
+        "./plugins/userSignInStatus": 114,
       },
     ],
     85: [
       function (require, module, exports) {
-        'use strict';
-        var get = require('@apple/analytics-data-layer').get,
-          set = require('@apple/analytics-data-layer').set,
-          dataLayerConfig = require('../../constants').dataLayer.configuration,
-          isIntraPageLink = require('../../helpers/DOM').isIntraPageLink;
+        "use strict";
+        var get = require("@apple/analytics-data-layer").get,
+          set = require("@apple/analytics-data-layer").set,
+          dataLayerConfig = require("../../constants").dataLayer.configuration,
+          isIntraPageLink = require("../../helpers/DOM").isIntraPageLink;
         function getReferrer() {
           return (
             get([dataLayerConfig.key, dataLayerConfig.keys.referrer]) ||
             document.referrer ||
-            ''
+            ""
           );
         }
         function setReferrer(e) {
@@ -10209,19 +10236,19 @@ require = (function () {
           return e.tcall;
         }
         function isExitLink(e) {
-          return 'e' === e.linkType;
+          return "e" === e.linkType;
         }
         function appendList(e, r, i) {
           var n =
               arguments.length > 3 && void 0 !== arguments[3]
                 ? arguments[3]
-                : ',',
+                : ",",
             t =
               arguments.length > 4 && void 0 !== arguments[4]
                 ? arguments[4]
                 : 1;
-          'string' == typeof i && (i = [i]),
-            'string' != typeof e[r] && (e[r] = JSON.stringify(e[r])),
+          "string" == typeof i && (i = [i]),
+            "string" != typeof e[r] && (e[r] = JSON.stringify(e[r])),
             i.forEach(function (i) {
               e[r] = e.apl(e[r], i, n, t);
             });
@@ -10244,61 +10271,61 @@ require = (function () {
         };
       },
       {
-        '../../constants': 121,
-        '../../helpers/DOM': 123,
-        '@apple/analytics-data-layer': 4,
+        "../../constants": 121,
+        "../../helpers/DOM": 123,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     86: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad,
-          get = require('@apple/analytics-data-layer').get,
+          get = require("@apple/analytics-data-layer").get,
           dataLayerConfig =
-            require('../../../constants').dataLayer.configuration;
+            require("../../../constants").dataLayer.configuration;
         function acAnalyticsVersion(a) {
           if (isPageLoad(a)) {
             var e = get([
               dataLayerConfig.key,
               dataLayerConfig.keys.acAnalyticsVersion,
             ]);
-            e && (a.server = 'ac-'.concat(e));
+            e && (a.server = "ac-".concat(e));
           }
         }
         module.exports = acAnalyticsVersion;
       },
       {
-        '../../../constants': 121,
-        '../helpers': 85,
-        '@apple/analytics-data-layer': 4,
+        "../../../constants": 121,
+        "../helpers": 85,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     87: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad,
-          propName = 'eVar10';
+          propName = "eVar10";
         function afid(e) {
           if (isPageLoad(e)) {
-            var a = e.getQueryParam('afid');
-            a && (e[propName] = e.getValOnce(a, 's_afc'));
+            var a = e.getQueryParam("afid");
+            a && (e[propName] = e.getValOnce(a, "s_afc"));
           }
         }
         module.exports = afid;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     88: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad,
           isMicroEvent = _require.isMicroEvent,
           appendList = _require.appendList,
-          trackingProp = 'prop51',
-          cookieName = 'as_pvi';
+          trackingProp = "prop51",
+          cookieName = "as_pvi";
         function asPvi(e) {
           if (isPageLoad(e)) {
             var i = e.Util.cookieRead(cookieName);
@@ -10306,60 +10333,60 @@ require = (function () {
           } else
             isMicroEvent(e) &&
               e[trackingProp] &&
-              appendList(e, 'linkTrackVars', trackingProp);
+              appendList(e, "linkTrackVars", trackingProp);
         }
         module.exports = asPvi;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     89: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isTracking = _require.isTracking,
           isMicroEvent = _require.isMicroEvent,
           appendList = _require.appendList,
-          propName = 'list3',
-          propData = 'D=as_tex';
+          propName = "list3",
+          propData = "D=as_tex";
         function asTex(e) {
           isTracking(e) &&
             ((e[propName] = propData),
-            isMicroEvent(e) && appendList(e, 'linkTrackVars', propName));
+            isMicroEvent(e) && appendList(e, "linkTrackVars", propName));
         }
         module.exports = asTex;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     90: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad,
           isMicroEvent = _require.isMicroEvent,
           appendList = _require.appendList,
-          propName = 'eVar97',
-          pageLoadIdentifer = 's.t-p',
-          microEventIndentifer = 's.tl-';
+          propName = "eVar97",
+          pageLoadIdentifer = "s.t-p",
+          microEventIndentifer = "s.tl-";
         function beaconType(e) {
           isPageLoad(e)
             ? (e[propName] = pageLoadIdentifer)
             : isMicroEvent(e) &&
-              ((e[propName] = ''
+              ((e[propName] = ""
                 .concat(microEventIndentifer)
                 .concat(e.linkType)),
-              appendList(e, 'linkTrackVars', propName));
+              appendList(e, "linkTrackVars", propName));
         }
         module.exports = beaconType;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     91: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function clearLinkTracksAfterDownloadAndExit(n) {
-          ('d' !== n.linkType && 'e' !== n.linkType) ||
+          ("d" !== n.linkType && "e" !== n.linkType) ||
             (n.bodyClickFunction = function (n) {
-              (n.linkTrackVars = ''), (n.linkTrackEvents = '');
+              (n.linkTrackVars = ""), (n.linkTrackEvents = "");
             }.bind(null, n));
         }
         module.exports = clearLinkTracksAfterDownloadAndExit;
@@ -10368,48 +10395,48 @@ require = (function () {
     ],
     92: [
       function (require, module, exports) {
-        'use strict';
-        var passiveTracker = require('../../../passiveTracker'),
-          utils = require('@apple/analytics-utils'),
-          mergeIntoDeferredBeacon = require('../../../helpers/mergeIntoDeferredBeacon'),
+        "use strict";
+        var passiveTracker = require("../../../passiveTracker"),
+          utils = require("@apple/analytics-utils"),
+          mergeIntoDeferredBeacon = require("../../../helpers/mergeIntoDeferredBeacon"),
           cookieJson = utils.cookieJson,
           beaconHelpers = utils.beaconHelpers,
           toStr = utils.toStr,
-          isOutgoingLink = require('../helpers.js').isOutgoingLink,
-          get = require('@apple/analytics-data-layer').get,
-          set = require('@apple/analytics-data-layer').set,
-          dataLayerKeys = require('../../../constants').dataLayer,
+          isOutgoingLink = require("../helpers.js").isOutgoingLink,
+          get = require("@apple/analytics-data-layer").get,
+          set = require("@apple/analytics-data-layer").set,
+          dataLayerKeys = require("../../../constants").dataLayer,
           confKey = dataLayerKeys.configuration.key,
           confKeys = dataLayerKeys.configuration.keys,
           clickCount = [confKey, confKeys.clickTimerCount],
           linkInteraction = [confKey, confKeys.clickTimerLinkInteraction],
           loadTiming = [confKey, confKeys.loadTiming],
           trackingDomain = [confKey, confKeys.trackingDomain],
-          COUNT_PROP = 'eVar93',
-          TIME_PROP = 'eVar94',
-          TIME_EVENT = 'event210',
-          TIME_EVENT_COUNTER = 'event246',
-          INVALID_EVENT = 'event242',
-          COOKIE_NAME = 's_aca_ct',
-          COOKIE_OPTIONS = { path: '/', expires: 0.021, secure: !0 },
+          COUNT_PROP = "eVar93",
+          TIME_PROP = "eVar94",
+          TIME_EVENT = "event210",
+          TIME_EVENT_COUNTER = "event246",
+          INVALID_EVENT = "event242",
+          COOKIE_NAME = "s_aca_ct",
+          COOKIE_OPTIONS = { path: "/", expires: 0.021, secure: !0 },
           CLICK_TIME_THRESHOLD = 900;
         function trackClickTime(e) {
           if (
             !e.linkName ||
-            (-1 === e.linkName.indexOf('v@e') &&
-              -1 === e.linkName.indexOf('v@sk') &&
-              -1 === e.linkName.indexOf('v@m'))
+            (-1 === e.linkName.indexOf("v@e") &&
+              -1 === e.linkName.indexOf("v@sk") &&
+              -1 === e.linkName.indexOf("v@m"))
           )
             if (e.tcall) _track(e);
             else if (
               isOutgoingLink(e) &&
-              'e' !== e.linkType &&
-              'd' !== e.linkType
+              "e" !== e.linkType &&
+              "d" !== e.linkType
             )
               _storeData(e);
             else if (get(linkInteraction) && e.linkName) _track(e);
             else if (e.linkObject) {
-              if ('d' === e.linkType || 'e' === e.linkType)
+              if ("d" === e.linkType || "e" === e.linkType)
                 return void _track(e);
               set(linkInteraction, !0);
             }
@@ -10426,7 +10453,7 @@ require = (function () {
           var n = _createDataObject(e),
             t = {};
           (t.events = JSON.parse(JSON.stringify(n.events))),
-            (t.events = t.events.join(',')),
+            (t.events = t.events.join(",")),
             (t[COUNT_PROP] = n[COUNT_PROP]),
             (t[TIME_PROP] = n[TIME_PROP]),
             beaconHelpers.isNotEmpty(t) &&
@@ -10439,11 +10466,11 @@ require = (function () {
             e.tcall ||
               (void 0 !== n.linkTrackEvents &&
                 n.linkTrackEvents.forEach(function (n) {
-                  e.linkTrackEvents = e.apl(e.linkTrackEvents, n, ',', 1);
+                  e.linkTrackEvents = e.apl(e.linkTrackEvents, n, ",", 1);
                 }),
               void 0 !== n.linkTrackVars &&
                 n.linkTrackVars.forEach(function (n) {
-                  e.linkTrackVars = e.apl(e.linkTrackVars, n, ',', 1);
+                  e.linkTrackVars = e.apl(e.linkTrackVars, n, ",", 1);
                 }));
         }
         function _createDataObject() {
@@ -10452,7 +10479,7 @@ require = (function () {
           return (
             null !== e
               ? (n.events.push(TIME_EVENT_COUNTER),
-                n.events.push(TIME_EVENT + '=' + e),
+                n.events.push(TIME_EVENT + "=" + e),
                 n.linkTrackVars.push(TIME_PROP),
                 n.linkTrackEvents.push(TIME_EVENT, TIME_EVENT_COUNTER),
                 (n[TIME_PROP] = e))
@@ -10460,7 +10487,7 @@ require = (function () {
                 n.linkTrackEvents.push(INVALID_EVENT)),
             (n[COUNT_PROP] = get(clickCount)),
             n.linkTrackVars.push(COUNT_PROP),
-            n.linkTrackVars.push('events'),
+            n.linkTrackVars.push("events"),
             n
           );
         }
@@ -10469,25 +10496,25 @@ require = (function () {
           e ? e++ : (e = 1), set(clickCount, e);
         }
         function _applyEventCounter(e, n) {
-          n && (e.events = e.apl(e.events, n, ',', 1));
+          n && (e.events = e.apl(e.events, n, ",", 1));
         }
         function _applyEventWithValue(e, n) {
           if (n) {
             var t = {},
-              i = n.split('=')[0],
-              a = e.events.split(',');
+              i = n.split("=")[0],
+              a = e.events.split(",");
             a.forEach(function (e, n) {
-              t[e.split('=')[0]] = n;
+              t[e.split("=")[0]] = n;
             }),
               isNaN(t[i])
-                ? (e.events = e.apl(e.events, n, ',', 1))
-                : (a.splice(t[i], 1, n), (e.events = a.join(',')));
+                ? (e.events = e.apl(e.events, n, ",", 1))
+                : (a.splice(t[i], 1, n), (e.events = a.join(",")));
           }
         }
         function _applyEventsData(e, n) {
-          ('string' != typeof e.events && void 0 !== e.events) ||
+          ("string" != typeof e.events && void 0 !== e.events) ||
             n.forEach(function (n) {
-              -1 === n.indexOf('=')
+              -1 === n.indexOf("=")
                 ? _applyEventCounter(e, n)
                 : _applyEventWithValue(e, n);
             });
@@ -10510,17 +10537,17 @@ require = (function () {
           return isNaN(n)
             ? null
             : (n = parseFloat(n)) >= CLICK_TIME_THRESHOLD || n <= 0
-            ? null
-            : n;
+              ? null
+              : n;
         }
         function _sanitizeBeacon(e) {
           return (
             Object.keys(e).forEach(function (n) {
               var t = n.substring(0, 4),
                 i = toStr(e[n]);
-              'prop' === t
+              "prop" === t
                 ? (e[n] = i.substring(0, 100))
-                : 'eVar' === t && (e[n] = i.substring(0, 250));
+                : "eVar" === t && (e[n] = i.substring(0, 250));
             }),
             e
           );
@@ -10528,25 +10555,25 @@ require = (function () {
         module.exports = trackClickTime;
       },
       {
-        '../../../constants': 121,
-        '../../../helpers/mergeIntoDeferredBeacon': 138,
-        '../../../passiveTracker': 159,
-        '../helpers': 85,
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-utils': 12,
+        "../../../constants": 121,
+        "../../../helpers/mergeIntoDeferredBeacon": 138,
+        "../../../passiveTracker": 159,
+        "../helpers": 85,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-utils": 12,
       },
     ],
     93: [
       function (require, module, exports) {
-        'use strict';
-        var appendList = require('../helpers.js').appendList,
-          get = require('@apple/analytics-data-layer').get,
+        "use strict";
+        var appendList = require("../helpers.js").appendList,
+          get = require("@apple/analytics-data-layer").get,
           dataLayerConfig =
-            require('../../../constants').dataLayer.configuration,
-          contactRetailProp = 'prop41';
+            require("../../../constants").dataLayer.configuration,
+          contactRetailProp = "prop41";
         function contactRetail(a) {
-          if ('e' === a.linkType && 'contactretail' === a.linkName) {
-            var t = 'none';
+          if ("e" === a.linkType && "contactretail" === a.linkName) {
+            var t = "none";
             a.ActivityMap &&
               a.ActivityMap.region &&
               a.linkObject &&
@@ -10555,111 +10582,111 @@ require = (function () {
               get([
                 dataLayerConfig.key,
                 dataLayerConfig.keys.computedPageName,
-              ]) || 'none';
-            (a[contactRetailProp] = 'open | apple chat | '
-              .concat(t, ' | ')
+              ]) || "none";
+            (a[contactRetailProp] = "open | apple chat | "
+              .concat(t, " | ")
               .concat(e)),
-              appendList(a, 'linkTrackVars', contactRetailProp);
+              appendList(a, "linkTrackVars", contactRetailProp);
           }
         }
         module.exports = contactRetail;
       },
       {
-        '../../../constants': 121,
-        '../helpers': 85,
-        '@apple/analytics-data-layer': 4,
+        "../../../constants": 121,
+        "../helpers": 85,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     94: [
       function (require, module, exports) {
-        'use strict';
-        var appendList = require('../helpers.js').appendList,
-          downloadEvent = 'event5',
-          interactionTrackingProp = 'prop16',
-          interactionTrackingVar = 'eVar16';
+        "use strict";
+        var appendList = require("../helpers.js").appendList,
+          downloadEvent = "event5",
+          interactionTrackingProp = "prop16",
+          interactionTrackingVar = "eVar16";
         function enhanceDownloadLinks(n) {
-          'd' === n.linkType &&
+          "d" === n.linkType &&
             n.linkURL &&
             (n.linkURL.match(/\.rss|\.xml/)
               ? (n[interactionTrackingVar] = n[interactionTrackingProp] =
-                  'sign ups')
+                  "sign ups")
               : ((n[interactionTrackingVar] = n[interactionTrackingProp] =
-                  'downloads'),
-                appendList(n, 'events', downloadEvent),
-                appendList(n, 'linkTrackVars', 'events'),
-                appendList(n, 'linkTrackEvents', downloadEvent)),
-            appendList(n, 'linkTrackVars', [
+                  "downloads"),
+                appendList(n, "events", downloadEvent),
+                appendList(n, "linkTrackVars", "events"),
+                appendList(n, "linkTrackEvents", downloadEvent)),
+            appendList(n, "linkTrackVars", [
               interactionTrackingVar,
               interactionTrackingProp,
             ]));
         }
         module.exports = enhanceDownloadLinks;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     95: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad,
           setReferrer = _require.setReferrer,
-          propName = 'campaign',
-          cookieName = 's_campaign',
-          queryParam = 'cid',
+          propName = "campaign",
+          cookieName = "s_campaign",
+          queryParam = "cid",
           regexPattern = /OAS-.+?-DOMAINS-/i;
         function externalCampaign(e) {
           isPageLoad(e) &&
             (e[propName] ||
               ((e[propName] = e.getQueryParam(queryParam)),
               e[propName].match(regexPattern) &&
-                setReferrer('http://' + e[propName].replace(regexPattern, ''))),
+                setReferrer("http://" + e[propName].replace(regexPattern, ""))),
             (e[propName] = e.getValOnce(e[propName], cookieName, 0)));
         }
         module.exports = externalCampaign;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     96: [
       function (require, module, exports) {
-        'use strict';
-        var isPageLoad = require('../helpers.js').isPageLoad,
-          get = require('@apple/analytics-data-layer').get,
+        "use strict";
+        var isPageLoad = require("../helpers.js").isPageLoad,
+          get = require("@apple/analytics-data-layer").get,
           dataLayerConfig =
-            require('../../../constants').dataLayer.configuration,
-          trackingProp = 'prop16',
-          trackingVar = 'eVar16';
+            require("../../../constants").dataLayer.configuration,
+          trackingProp = "prop16",
+          trackingVar = "eVar16";
         function feedbackPage(a) {
           var e = get([dataLayerConfig.key, dataLayerConfig.keys.pageName]);
           isPageLoad &&
             e.match(/feedback - thank you/) &&
-            (a[trackingProp] = a[trackingVar] = 'feedback');
+            (a[trackingProp] = a[trackingVar] = "feedback");
         }
         module.exports = feedbackPage;
       },
       {
-        '../../../constants': 121,
-        '../helpers': 85,
-        '@apple/analytics-data-layer': 4,
+        "../../../constants": 121,
+        "../helpers": 85,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     97: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad,
           appendList = _require.appendList,
-          get = require('@apple/analytics-data-layer').get,
-          set = require('@apple/analytics-data-layer').set,
+          get = require("@apple/analytics-data-layer").get,
+          set = require("@apple/analytics-data-layer").set,
           dataLayerConfig =
-            require('../../../constants').dataLayer.configuration,
-          parseFromDataAttribute = require('../../../helpers/parseFromDataAttribute'),
-          _require2 = require('../helpers.js'),
+            require("../../../constants").dataLayer.configuration,
+          parseFromDataAttribute = require("../../../helpers/parseFromDataAttribute"),
+          _require2 = require("../helpers.js"),
           isOutgoingLink = _require2.isOutgoingLink,
-          passiveTrackerInput = require('../../../passiveTracker');
+          passiveTrackerInput = require("../../../passiveTracker");
         function handleLink(e) {
           !isPageLoad(e) &&
             e.linkObject &&
-            'A' == e.linkObject.tagName &&
+            "A" == e.linkObject.tagName &&
             (cancelFalseExitLink(e),
             specialExitLink(e),
             exitLinkAttribute(e),
@@ -10667,36 +10694,36 @@ require = (function () {
             passiveLink(e));
         }
         function cancelFalseExitLink(e) {
-          'e' !== e.linkType ||
+          "e" !== e.linkType ||
             isOutgoingLink(e) ||
-            ((e.linkURL = ''), (e.linkType = ''));
+            ((e.linkURL = ""), (e.linkType = ""));
         }
         function specialExitLink(e) {
           e.linkHandler(
             get([dataLayerConfig.key, dataLayerConfig.keys.specialExitLinks]),
-            'e',
+            "e",
           );
         }
         function exitLinkAttribute(e) {
-          'e' !== e.linkType &&
-            'd' !== e.linkType &&
-            e.linkObject.hasAttribute('data-analytics-exit-link') &&
-            'false' !== e.linkObject.getAttribute('data-analytics-exit-link') &&
-            ((e.linkType = 'e'),
+          "e" !== e.linkType &&
+            "d" !== e.linkType &&
+            e.linkObject.hasAttribute("data-analytics-exit-link") &&
+            "false" !== e.linkObject.getAttribute("data-analytics-exit-link") &&
+            ((e.linkType = "e"),
             (e.linkName = e.linkObject.getAttribute(
-              'data-analytics-exit-link',
+              "data-analytics-exit-link",
             )));
         }
         function shoppingBag(e) {
           if (
-            e.linkObject.classList.contains('ac-gn-link-bag') ||
-            e.linkObject.classList.contains('globalnav-link-bag')
+            e.linkObject.classList.contains("ac-gn-link-bag") ||
+            e.linkObject.classList.contains("globalnav-link-bag")
           ) {
             var a = get([dataLayerConfig.key, dataLayerConfig.keys.pageName]),
               i = e.linkObject.dataset.analyticsTitle;
-            (e.linkName = ''.concat(a, ' - bag')),
+            (e.linkName = "".concat(a, " - bag")),
               (e.prop3 = i),
-              (e.linkType = 'o'),
+              (e.linkType = "o"),
               (e.bodyClickTarget = e.linkObject),
               set(
                 [
@@ -10705,18 +10732,18 @@ require = (function () {
                 ],
                 !0,
               ),
-              (e.eVar1 = ''.concat(e.pageName, ' | global nav | ').concat(i)),
-              appendList(e, 'linkTrackVars', ['eVar1', 'prop3']),
+              (e.eVar1 = "".concat(e.pageName, " | global nav | ").concat(i)),
+              appendList(e, "linkTrackVars", ["eVar1", "prop3"]),
               (e.bodyClickFunction = function (e) {
                 (e.M = 0),
-                  (e.linkTrackVars = ''),
-                  (e.eVar1 = ''),
-                  (e.prop3 = '');
+                  (e.linkTrackVars = ""),
+                  (e.eVar1 = ""),
+                  (e.prop3 = "");
               }.bind(null, e));
           }
         }
         function passiveLink(e) {
-          var a = e.linkObject.getAttribute('data-analytics-passive-link');
+          var a = e.linkObject.getAttribute("data-analytics-passive-link");
           if (a) {
             var i = parseFromDataAttribute(a);
             i && passiveTrackerInput(i);
@@ -10725,52 +10752,52 @@ require = (function () {
         module.exports = handleLink;
       },
       {
-        '../../../constants': 121,
-        '../../../helpers/parseFromDataAttribute': 141,
-        '../../../passiveTracker': 159,
-        '../helpers': 85,
-        '@apple/analytics-data-layer': 4,
+        "../../../constants": 121,
+        "../../../helpers/parseFromDataAttribute": 141,
+        "../../../passiveTracker": 159,
+        "../helpers": 85,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     98: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isTracking = _require.isTracking,
           isMicroEvent = _require.isMicroEvent,
           appendList = _require.appendList,
-          get = require('@apple/analytics-data-layer').get,
+          get = require("@apple/analytics-data-layer").get,
           dataLayerConfig =
-            require('../../../constants').dataLayer.configuration,
-          propName = 'hier1';
+            require("../../../constants").dataLayer.configuration,
+          propName = "hier1";
         function hierarchy1(e) {
           isTracking(e) &&
             ((e[propName] =
               get([
                 dataLayerConfig.key,
                 dataLayerConfig.keys.computedChannel,
-              ]) || ''),
+              ]) || ""),
             e[propName] &&
               isMicroEvent(e) &&
-              appendList(e, 'linkTrackVars', propName));
+              appendList(e, "linkTrackVars", propName));
         }
         module.exports = hierarchy1;
       },
       {
-        '../../../constants': 121,
-        '../helpers': 85,
-        '@apple/analytics-data-layer': 4,
+        "../../../constants": 121,
+        "../helpers": 85,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     99: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad,
-          AppMeasurementSetup = require('@marcom/appmeasurement-setup/src/appmeasurement-setup/AppMeasurementSetup'),
-          propName = 'eVar7',
-          cookieName = 's_var_7',
-          queryParam = 'aid';
+          AppMeasurementSetup = require("@marcom/appmeasurement-setup/src/appmeasurement-setup/AppMeasurementSetup"),
+          propName = "eVar7",
+          cookieName = "s_var_7",
+          queryParam = "aid";
         function internalCampaign(e) {
           isPageLoad(e) &&
             (e[propName] || (e[propName] = e.getQueryParam(queryParam)),
@@ -10779,128 +10806,128 @@ require = (function () {
         module.exports = internalCampaign;
       },
       {
-        '../helpers': 85,
-        '@marcom/appmeasurement-setup/src/appmeasurement-setup/AppMeasurementSetup': 54,
+        "../helpers": 85,
+        "@marcom/appmeasurement-setup/src/appmeasurement-setup/AppMeasurementSetup": 54,
       },
     ],
     100: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           appendList = _require.appendList,
           isMicroEvent = _require.isMicroEvent,
           isPageLoad = _require.isPageLoad,
-          get = require('@apple/analytics-data-layer').get,
+          get = require("@apple/analytics-data-layer").get,
           dataLayerConfig =
-            require('../../../constants').dataLayer.configuration,
-          langLocaleProp = 'eVar14';
+            require("../../../constants").dataLayer.configuration,
+          langLocaleProp = "eVar14";
         function langLocale(e) {
           if (isPageLoad(e)) {
             var a = get([dataLayerConfig.key, dataLayerConfig.keys.locale]);
-            a || (a = 'n/a'), (e[langLocaleProp] = a);
+            a || (a = "n/a"), (e[langLocaleProp] = a);
           } else
-            isMicroEvent(e) && appendList(e, 'linkTrackVars', langLocaleProp);
+            isMicroEvent(e) && appendList(e, "linkTrackVars", langLocaleProp);
         }
         module.exports = langLocale;
       },
       {
-        '../../../constants': 121,
-        '../helpers': 85,
-        '@apple/analytics-data-layer': 4,
+        "../../../constants": 121,
+        "../helpers": 85,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     101: [
       function (require, module, exports) {
-        'use strict';
-        var passiveTracker = require('../../../passiveTracker'),
-          get = require('@apple/analytics-data-layer').get,
-          dataLayerKeys = require('../../../constants').dataLayer,
+        "use strict";
+        var passiveTracker = require("../../../passiveTracker"),
+          get = require("@apple/analytics-data-layer").get,
+          dataLayerKeys = require("../../../constants").dataLayer,
           confKey = dataLayerKeys.configuration.key,
           confKeys = dataLayerKeys.configuration.keys,
           linkInteraction = [confKey, confKeys.trackingStateLinkInteraction],
-          beacon = { events: 'event500' };
+          beacon = { events: "event500" };
         function linkMissingTitle(e) {
           get(linkInteraction) &&
-            (e.linkObject.getAttribute('data-analytics-title') ||
+            (e.linkObject.getAttribute("data-analytics-title") ||
               passiveTracker(beacon));
         }
         module.exports = linkMissingTitle;
       },
       {
-        '../../../constants': 121,
-        '../../../passiveTracker': 159,
-        '@apple/analytics-data-layer': 4,
+        "../../../constants": 121,
+        "../../../passiveTracker": 159,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     102: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isTracking = _require.isTracking;
         function manageVars(e) {
           isTracking(e) &&
             e.manageVars(
-              'lowercaseVars',
-              'purchaseID,pageType,events,products,transactionID',
+              "lowercaseVars",
+              "purchaseID,pageType,events,products,transactionID",
               2,
             );
         }
         module.exports = manageVars;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     103: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var passiveTrackerLoader =
-            require('@apple/analytics-bp-passive-tracker-loader').passiveTrackerLoader,
-          _require = require('@apple/analytics-omniture-collection'),
+            require("@apple/analytics-bp-passive-tracker-loader").passiveTrackerLoader,
+          _require = require("@apple/analytics-omniture-collection"),
           parseEventCollectionString = _require.parseEventCollectionString,
-          _require2 = require('../helpers.js'),
+          _require2 = require("../helpers.js"),
           isTracking = _require2.isTracking,
           isPageLoad = _require2.isPageLoad;
         function track(e) {
           if (isTracking(e)) {
             var r = { beacon: e };
             isPageLoad(e)
-              ? ((r.type = 'pageLoad'),
+              ? ((r.type = "pageLoad"),
                 r.beacon.events &&
-                  'string' == typeof r.beacon.events &&
+                  "string" == typeof r.beacon.events &&
                   (r.beacon.events = parseEventCollectionString(
                     r.beacon.events,
                   )))
-              : (r.type = 'userInteraction'),
+              : (r.type = "userInteraction"),
               passiveTrackerLoader(r);
           }
         }
         module.exports = track;
       },
       {
-        '../helpers': 85,
-        '@apple/analytics-bp-passive-tracker-loader': 2,
-        '@apple/analytics-omniture-collection': 7,
+        "../helpers": 85,
+        "@apple/analytics-bp-passive-tracker-loader": 2,
+        "@apple/analytics-omniture-collection": 7,
       },
     ],
     104: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isTracking = _require.isTracking,
           isMicroEvent = _require.isMicroEvent,
           appendList = _require.appendList,
-          propName = 'eVar4';
+          propName = "eVar4";
         function pageName(e) {
           isTracking(e) &&
-            ((e[propName] = 'D=pageName'),
-            isMicroEvent(e) && appendList(e, 'linkTrackVars', propName));
+            ((e[propName] = "D=pageName"),
+            isMicroEvent(e) && appendList(e, "linkTrackVars", propName));
         }
         module.exports = pageName;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     105: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _toConsumableArray(e) {
           return (
             _arrayWithoutHoles(e) ||
@@ -10911,28 +10938,28 @@ require = (function () {
         }
         function _nonIterableSpread() {
           throw new TypeError(
-            'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         }
         function _unsupportedIterableToArray(e, r) {
           if (e) {
-            if ('string' == typeof e) return _arrayLikeToArray(e, r);
+            if ("string" == typeof e) return _arrayLikeToArray(e, r);
             var a = Object.prototype.toString.call(e).slice(8, -1);
             return (
-              'Object' === a && e.constructor && (a = e.constructor.name),
-              'Map' === a || 'Set' === a
+              "Object" === a && e.constructor && (a = e.constructor.name),
+              "Map" === a || "Set" === a
                 ? Array.from(e)
-                : 'Arguments' === a ||
-                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(a)
-                ? _arrayLikeToArray(e, r)
-                : void 0
+                : "Arguments" === a ||
+                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(a)
+                  ? _arrayLikeToArray(e, r)
+                  : void 0
             );
           }
         }
         function _iterableToArray(e) {
           if (
-            ('undefined' != typeof Symbol && null != e[Symbol.iterator]) ||
-            null != e['@@iterator']
+            ("undefined" != typeof Symbol && null != e[Symbol.iterator]) ||
+            null != e["@@iterator"]
           )
             return Array.from(e);
         }
@@ -10945,24 +10972,24 @@ require = (function () {
           return t;
         }
         var am,
-          _require = require('@apple/analytics-omniture-collection'),
+          _require = require("@apple/analytics-omniture-collection"),
           parseEventCollectionString = _require.parseEventCollectionString,
-          _require2 = require('@apple/analytics-merge-beacons'),
+          _require2 = require("@apple/analytics-merge-beacons"),
           merge = _require2.merge,
-          _require3 = require('../helpers.js'),
+          _require3 = require("../helpers.js"),
           isMicroEvent = _require3.isMicroEvent,
           isExitLink = _require3.isExitLink,
-          filterBeaconsByType = require('../../../helpers/filterBeaconsByType'),
-          getPassiveTrackerData = require('../../../helpers/getPassiveTrackerData'),
-          mergePassiveTrackerData = require('../../../helpers/mergePassiveTrackerData'),
-          remove = require('@apple/analytics-data-layer').remove,
+          filterBeaconsByType = require("../../../helpers/filterBeaconsByType"),
+          getPassiveTrackerData = require("../../../helpers/getPassiveTrackerData"),
+          mergePassiveTrackerData = require("../../../helpers/mergePassiveTrackerData"),
+          remove = require("@apple/analytics-data-layer").remove,
           passiveTrackerPath =
-            require('../../../constants').dataLayer.paths.passiveTracker;
+            require("../../../constants").dataLayer.paths.passiveTracker;
         function track(e) {
           var r;
           if (
             isMicroEvent((am = e)) &&
-            isStorageAvailable('sessionStorage') &&
+            isStorageAvailable("sessionStorage") &&
             (r = getPassiveTrackerData())
           ) {
             var a = trackingType();
@@ -10972,7 +10999,7 @@ require = (function () {
           }
         }
         function trackingType() {
-          if (isMicroEvent(am)) return isExitLink(am) ? 'exit' : 'micro-event';
+          if (isMicroEvent(am)) return isExitLink(am) ? "exit" : "micro-event";
         }
         function prepareAppMeasurement(e) {
           setEventsData(e), setVarData(e), remove(passiveTrackerPath);
@@ -10986,10 +11013,10 @@ require = (function () {
               : (a.events = {});
             var t = merge({ target: a, source: r });
             (am.linkTrackEvents = _toConsumableArray(t.events.keys()).join(
-              ',',
+              ",",
             )),
               (am.events = t.events.toString()),
-              (am.linkTrackVars = am.apl(am.linkTrackVars, 'events', ',', 1)),
+              (am.linkTrackVars = am.apl(am.linkTrackVars, "events", ",", 1)),
               delete e.events;
           }
         }
@@ -10998,14 +11025,14 @@ require = (function () {
             Object.keys(e).forEach(function (r) {
               (am[r] = e[r]),
                 isMicroEvent(am) &&
-                  (am.linkTrackVars = am.apl(am.linkTrackVars, r, ',', 1));
+                  (am.linkTrackVars = am.apl(am.linkTrackVars, r, ",", 1));
             });
         }
         function isStorageAvailable(e) {
           try {
             var r = window[e],
-              a = 'acAnalyticsStorageTestItem';
-            return r.setItem(a, 'a'), r.removeItem(a), !0;
+              a = "acAnalyticsStorageTestItem";
+            return r.setItem(a, "a"), r.removeItem(a), !0;
           } catch (e) {
             return !1;
           }
@@ -11013,54 +11040,54 @@ require = (function () {
         module.exports = track;
       },
       {
-        '../../../constants': 121,
-        '../../../helpers/filterBeaconsByType': 129,
-        '../../../helpers/getPassiveTrackerData': 132,
-        '../../../helpers/mergePassiveTrackerData': 139,
-        '../helpers': 85,
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-merge-beacons': 6,
-        '@apple/analytics-omniture-collection': 7,
+        "../../../constants": 121,
+        "../../../helpers/filterBeaconsByType": 129,
+        "../../../helpers/getPassiveTrackerData": 132,
+        "../../../helpers/mergePassiveTrackerData": 139,
+        "../helpers": 85,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-merge-beacons": 6,
+        "@apple/analytics-omniture-collection": 7,
       },
     ],
     106: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad;
         function percentPageViewed(e) {
           var r;
           isPageLoad(e) &&
             (e.prop17 ||
-              ('function' == typeof e.getPercentPageViewed &&
+              ("function" == typeof e.getPercentPageViewed &&
                 (r = e.getPercentPageViewed()),
               r &&
                 r.length >= 4 &&
                 void 0 !== r[1] &&
-                ((e.prop17 = r[1] + ':' + r[2]),
+                ((e.prop17 = r[1] + ":" + r[2]),
                 (e.prop28 = 10 * Math.round(r[3] / 10)))));
         }
         module.exports = percentPageViewed;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     107: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad,
           isMicroEvent = _require.isMicroEvent,
           isTracking = _require.isTracking,
           appendList = _require.appendList,
           getReferrer = _require.getReferrer,
-          get = require('@apple/analytics-data-layer').get,
+          get = require("@apple/analytics-data-layer").get,
           dataLayerConfig =
-            require('../../../constants').dataLayer.configuration,
-          currentUrlProp = 'eVar54',
-          secondCurrentUrlProp = 'prop4',
-          referrerProp = 'eVar49',
-          currentUrlDynamicVariable = 'D=g',
-          referrerDynamicVariable = 'D=r';
+            require("../../../constants").dataLayer.configuration,
+          currentUrlProp = "eVar54",
+          secondCurrentUrlProp = "prop4",
+          referrerProp = "eVar49",
+          currentUrlDynamicVariable = "D=g",
+          referrerDynamicVariable = "D=r";
         function referrerAndCurrentUrl(r) {
           if (isTracking(r)) {
             var e = getReferrer();
@@ -11080,24 +11107,24 @@ require = (function () {
             }
             isMicroEvent(r) &&
               (e && (r[referrerProp] = e),
-              appendList(r, 'linkTrackVars', [currentUrlProp, referrerProp]));
+              appendList(r, "linkTrackVars", [currentUrlProp, referrerProp]));
           }
         }
         module.exports = referrerAndCurrentUrl;
       },
       {
-        '../../../constants': 121,
-        '../helpers': 85,
-        '@apple/analytics-data-layer': 4,
+        "../../../constants": 121,
+        "../helpers": 85,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     108: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad,
           setReferrer = _require.setReferrer,
-          queryParam = 'ref';
+          queryParam = "ref";
         function referrerQueryParam(e) {
           if (isPageLoad(e)) {
             var r = e.getQueryParam(queryParam);
@@ -11106,44 +11133,44 @@ require = (function () {
         }
         module.exports = referrerQueryParam;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     109: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isTracking = _require.isTracking;
         function removeSpacesInLinkTrackVars(r) {
           isTracking(r) &&
             r.linkTrackVars &&
             (r.linkTrackVars = r.linkTrackVars.replace(
-              new RegExp(' ', 'g'),
-              '',
+              new RegExp(" ", "g"),
+              "",
             ));
         }
         module.exports = removeSpacesInLinkTrackVars;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     110: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isPageLoad = _require.isPageLoad,
           appendList = _require.appendList,
-          eventName = 'event37';
+          eventName = "event37";
         function retailCookies(e) {
           isPageLoad(e) &&
-            (e.Util.cookieRead('rtsid') || e.Util.cookieRead('rtsidInt')) &&
-            appendList(e, 'events', eventName);
+            (e.Util.cookieRead("rtsid") || e.Util.cookieRead("rtsidInt")) &&
+            appendList(e, "events", eventName);
         }
         module.exports = retailCookies;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     111: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function setTcallToFalse(l) {
           l.tcall = !1;
         }
@@ -11153,35 +11180,35 @@ require = (function () {
     ],
     112: [
       function (require, module, exports) {
-        'use strict';
-        var appendList = require('../helpers.js').appendList,
-          trackingProp = 'prop16',
-          trackingVar = 'eVar16';
+        "use strict";
+        var appendList = require("../helpers.js").appendList,
+          trackingProp = "prop16",
+          trackingVar = "eVar16";
         function specialRssLinks(s) {
-          s.linkHandler('rss~rss.support.apple.com'),
+          s.linkHandler("rss~rss.support.apple.com"),
             s.linkURL &&
               s.linkURL.includes(
-                '/ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/',
+                "/ax.itunes.apple.com/WebObjects/MZStoreServices.woa/ws/RSS/",
               ) &&
               s.linkType &&
-              'e' === s.linkType &&
-              (s.linkName = 'rss'),
-            'rss' === s.linkName &&
-              ((s[trackingVar] = s[trackingProp] = 'sign ups'),
-              appendList(s, 'linkTrackVars', [trackingVar, trackingProp]));
+              "e" === s.linkType &&
+              (s.linkName = "rss"),
+            "rss" === s.linkName &&
+              ((s[trackingVar] = s[trackingProp] = "sign ups"),
+              appendList(s, "linkTrackVars", [trackingVar, trackingProp]));
         }
         module.exports = specialRssLinks;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     113: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isTracking = _require.isTracking,
-          get = require('@apple/analytics-data-layer').get,
-          set = require('@apple/analytics-data-layer').set,
-          dataLayerKeys = require('../../../constants').dataLayer,
+          get = require("@apple/analytics-data-layer").get,
+          set = require("@apple/analytics-data-layer").set,
+          dataLayerKeys = require("../../../constants").dataLayer,
           confKey = dataLayerKeys.configuration.key,
           confKeys = dataLayerKeys.configuration.keys,
           linkInteraction = [confKey, confKeys.trackingStateLinkInteraction];
@@ -11194,62 +11221,62 @@ require = (function () {
         module.exports = { begin: begin, end: end };
       },
       {
-        '../../../constants': 121,
-        '../helpers': 85,
-        '@apple/analytics-data-layer': 4,
+        "../../../constants": 121,
+        "../helpers": 85,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     114: [
       function (require, module, exports) {
-        'use strict';
-        var _require = require('../helpers.js'),
+        "use strict";
+        var _require = require("../helpers.js"),
           isMicroEvent = _require.isMicroEvent,
           isTracking = _require.isTracking,
           appendList = _require.appendList,
-          cookieName = 'as_cn',
-          eventName = 'event209';
+          cookieName = "as_cn",
+          eventName = "event209";
         function userSignInStatus(e) {
           isTracking(e) &&
             e.Util.cookieRead(cookieName) &&
-            (appendList(e, 'events', eventName),
+            (appendList(e, "events", eventName),
             isMicroEvent(e) &&
-              (appendList(e, 'linkTrackEvents', eventName),
-              appendList(e, 'linkTrackVars', 'events')));
+              (appendList(e, "linkTrackEvents", eventName),
+              appendList(e, "linkTrackVars", "events")));
         }
         module.exports = userSignInStatus;
       },
-      { '../helpers': 85 },
+      { "../helpers": 85 },
     ],
     115: [
       function (require, module, exports) {
-        'use strict';
-        var t = require('./t.js'),
-          tl = require('./tl.js');
+        "use strict";
+        var t = require("./t.js"),
+          tl = require("./tl.js");
         module.exports = { t: t, tl: tl };
       },
-      { './t': 116, './tl': 117 },
+      { "./t": 116, "./tl": 117 },
     ],
     116: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(t) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
                 }
               : function (t) {
                   return t &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     t.constructor === Symbol &&
                     t !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof t;
                 })(t);
         }
         function submit(t, o, e) {
-          'object' === _typeof(e) &&
-            'function' == typeof e.t &&
+          "object" === _typeof(e) &&
+            "function" == typeof e.t &&
             ((e.tcall = !0), e.t());
         }
         module.exports = submit;
@@ -11258,45 +11285,45 @@ require = (function () {
     ],
     117: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(t) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
                 }
               : function (t) {
                   return t &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     t.constructor === Symbol &&
                     t !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof t;
                 })(t);
         }
-        var errorHandler = require('../../ErrorHandler'),
-          moduleName = 'appMeasurementPluginSubmitMethodtl',
-          DOMHelper = require('../../helpers/DOM');
+        var errorHandler = require("../../ErrorHandler"),
+          moduleName = "appMeasurementPluginSubmitMethodtl",
+          DOMHelper = require("../../helpers/DOM");
         function submit(t, e, r) {
           var n, o;
-          if ('object' === _typeof(r) && 'function' == typeof r.tl) {
+          if ("object" === _typeof(r) && "function" == typeof r.tl) {
             if (
-              ('object' !== _typeof(t.beacon) &&
+              ("object" !== _typeof(t.beacon) &&
                 errorHandler.log(
                   moduleName,
-                  'submit',
-                  'trackingData param data ('.concat(
+                  "submit",
+                  "trackingData param data (".concat(
                     t.beacon,
-                    ') is not an object',
+                    ") is not an object",
                   ),
                 ),
-              'string' != typeof t.beacon.title &&
+              "string" != typeof t.beacon.title &&
                 errorHandler.log(
                   moduleName,
-                  'submit',
-                  'trackingData param title ('.concat(
+                  "submit",
+                  "trackingData param title (".concat(
                     t.beacon.title,
-                    ') is not a string',
+                    ") is not a string",
                   ),
                 ),
               errorHandler.exception)
@@ -11304,8 +11331,8 @@ require = (function () {
               return;
             t.linkTrackVars &&
               t.linkTrackVars.length > 0 &&
-              (r.linkTrackVars = t.linkTrackVars.join(',')),
-              (n = t.beacon.linkType || 'o'),
+              (r.linkTrackVars = t.linkTrackVars.join(",")),
+              (n = t.beacon.linkType || "o"),
               (o = _targetEl(t.data.targetEl)),
               (r.forcedLinkTrackingTimeout = _forcedLinkTrackingTimeout(t)),
               t.options.useBeacon && (r.useBeacon = !0),
@@ -11314,13 +11341,13 @@ require = (function () {
           }
         }
         function _clearTrackingData(t) {
-          (t.linkTrackVars = ''), (t.linkTrackEvents = '');
+          (t.linkTrackVars = ""), (t.linkTrackEvents = "");
         }
         function _forcedLinkTrackingTimeout(t) {
           var e = 0,
             r = t.data.targetEl;
           return (
-            ((t.type && 'link' === t.type) || 'click' === t.type) &&
+            ((t.type && "link" === t.type) || "click" === t.type) &&
               !0 === _isOutgoingLink(r) &&
               (e = 500),
             e
@@ -11334,21 +11361,21 @@ require = (function () {
         }
         module.exports = submit;
       },
-      { '../../ErrorHandler': 118, '../../helpers/DOM': 123 },
+      { "../../ErrorHandler": 118, "../../helpers/DOM": 123 },
     ],
     118: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _classCallCheck(e, r) {
           if (!(e instanceof r))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, r) {
           for (var t = 0; t < r.length; t++) {
             var a = r[t];
             (a.enumerable = a.enumerable || !1),
               (a.configurable = !0),
-              'value' in a && (a.writable = !0),
+              "value" in a && (a.writable = !0),
               Object.defineProperty(e, a.key, a);
           }
         }
@@ -11356,13 +11383,13 @@ require = (function () {
           return (
             r && _defineProperties(e.prototype, r),
             t && _defineProperties(e, t),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
-        var _log = require('@marcom/ac-console/log'),
-          trace = require('@marcom/ac-console/trace'),
-          messagePrefix = 'Analytics',
+        var _log = require("@marcom/ac-console/log"),
+          trace = require("@marcom/ac-console/trace"),
+          messagePrefix = "Analytics",
           ErrorHandler = (function () {
             function e() {
               _classCallCheck(this, e),
@@ -11372,7 +11399,7 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: 'log',
+                  key: "log",
                   value: function (e, r, t) {
                     var a = this._formatMessage(e, r, t);
                     (this.exception = !0),
@@ -11382,22 +11409,22 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'warn',
+                  key: "warn",
                   value: function (e, r, t) {
                     var a = this._formatMessage(e, r, t);
                     _log(a), trace();
                   },
                 },
                 {
-                  key: 'report',
+                  key: "report",
                   value: function (e) {
-                    var r = '';
+                    var r = "";
                     return (
-                      'number' == typeof e && this.errors[e]
+                      "number" == typeof e && this.errors[e]
                         ? ((r = this.errors[e].message),
                           _log(this.errors[e].message))
                         : (this.errors.forEach(function (e) {
-                            r += ''.concat(e.message, " '\r\n");
+                            r += "".concat(e.message, " '\r\n");
                           }),
                           _log(r)),
                       r
@@ -11405,19 +11432,19 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_formatMessage',
+                  key: "_formatMessage",
                   value: function (e, r, t) {
-                    var a = '';
+                    var a = "";
                     return (
                       (e || r) &&
                         (a =
-                          (e || '') + (e && r ? '.' : '') + (r || '') + ' : '),
-                      messagePrefix + ' : ' + a + t
+                          (e || "") + (e && r ? "." : "") + (r || "") + " : "),
+                      messagePrefix + " : " + a + t
                     );
                   },
                 },
                 {
-                  key: 'bailed',
+                  key: "bailed",
                   value: function () {
                     return this.errors.length > 0;
                   },
@@ -11428,21 +11455,21 @@ require = (function () {
           })();
         module.exports = new ErrorHandler();
       },
-      { '@marcom/ac-console/log': 15, '@marcom/ac-console/trace': 16 },
+      { "@marcom/ac-console/log": 15, "@marcom/ac-console/trace": 16 },
     ],
     119: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _classCallCheck(e, r) {
           if (!(e instanceof r))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, r) {
           for (var a = 0; a < r.length; a++) {
             var t = r[a];
             (t.enumerable = t.enumerable || !1),
               (t.configurable = !0),
-              'value' in t && (t.writable = !0),
+              "value" in t && (t.writable = !0),
               Object.defineProperty(e, t.key, t);
           }
         }
@@ -11450,17 +11477,17 @@ require = (function () {
           return (
             r && _defineProperties(e.prototype, r),
             a && _defineProperties(e, a),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
-        var jsonEncoder = require('@apple/analytics-utils').jsonEncoder,
-          errorHandler = require('./ErrorHandler.js'),
-          queueDataLayerKey = require('./constants.js').dataLayer.paths.queue,
-          get = require('@apple/analytics-data-layer').get,
-          set = require('@apple/analytics-data-layer').set,
-          remove = require('@apple/analytics-data-layer').remove,
-          isStorageAvailable = require('./helpers/isStorageAvailable.js'),
+        var jsonEncoder = require("@apple/analytics-utils").jsonEncoder,
+          errorHandler = require("./ErrorHandler.js"),
+          queueDataLayerKey = require("./constants.js").dataLayer.paths.queue,
+          get = require("@apple/analytics-data-layer").get,
+          set = require("@apple/analytics-data-layer").set,
+          remove = require("@apple/analytics-data-layer").remove,
+          isStorageAvailable = require("./helpers/isStorageAvailable.js"),
           Queue = (function () {
             function e() {
               _classCallCheck(this, e), (this._arr = []), (this._length = 0);
@@ -11468,51 +11495,51 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: 'add',
+                  key: "add",
                   value: function (e) {
                     e ||
                       errorHandler.log(
-                        'Queue',
-                        'add',
-                        e + ' is not a valid object',
+                        "Queue",
+                        "add",
+                        e + " is not a valid object",
                       ),
                       errorHandler.exception ||
                         (this._arr.push(e), this._updateQueueSize());
                   },
                 },
                 {
-                  key: 'remove',
+                  key: "remove",
                   value: function () {
                     this.size() > 0 &&
                       (this._arr.shift(), this._updateQueueSize());
                   },
                 },
                 {
-                  key: 'reset',
+                  key: "reset",
                   value: function () {
                     (this._arr = []), (this._length = 0);
                   },
                 },
                 {
-                  key: 'peek',
+                  key: "peek",
                   value: function () {
                     if (this.size() > 0) return this._arr[0];
                   },
                 },
                 {
-                  key: 'isEmpty',
+                  key: "isEmpty",
                   value: function () {
                     return 0 === this.size();
                   },
                 },
                 {
-                  key: 'size',
+                  key: "size",
                   value: function () {
                     return this._length;
                   },
                 },
                 {
-                  key: 'load',
+                  key: "load",
                   value: function () {
                     var e = get(queueDataLayerKey);
                     (e = jsonEncoder.decode(e)) &&
@@ -11524,14 +11551,14 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'save',
+                  key: "save",
                   value: function () {
                     set(queueDataLayerKey, jsonEncoder.encode(this._arr)),
                       this.reset();
                   },
                 },
                 {
-                  key: 'collect',
+                  key: "collect",
                   value: function () {
                     var e = this._arr,
                       r = jsonEncoder.decode(get(queueDataLayerKey));
@@ -11541,13 +11568,13 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'canSave',
+                  key: "canSave",
                   value: function () {
                     return isStorageAvailable();
                   },
                 },
                 {
-                  key: '_updateQueueSize',
+                  key: "_updateQueueSize",
                   value: function () {
                     this._length = this._arr.length;
                   },
@@ -11559,41 +11586,41 @@ require = (function () {
         module.exports = Queue;
       },
       {
-        './ErrorHandler': 118,
-        './constants': 121,
-        './helpers/isStorageAvailable': 137,
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-utils': 12,
+        "./ErrorHandler": 118,
+        "./constants": 121,
+        "./helpers/isStorageAvailable": 137,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-utils": 12,
       },
     ],
     120: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var r = 0; r < t.length; r++) {
             var n = t[r];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(e, n.key, n);
           }
         }
@@ -11601,19 +11628,19 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             r && _defineProperties(e, r),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
-        var Queue = require('./Queue.js'),
-          AppMeasurement = require('./Appmeasurement/AppMeasurement.js'),
-          passiveTracker = require('./passiveTracker.js'),
-          errorHandler = require('./ErrorHandler.js'),
-          moduleName = 'Tracker',
-          templateVarHelper = require('./helpers/templateVar.js'),
-          isEmptyObj = require('./helpers/isEmptyObj.js'),
-          trackerRegistry = require('./trackers/TrackerRegistry.js'),
-          mergeIntoDeferredBeacon = require('./helpers/mergeIntoDeferredBeacon.js');
+        var Queue = require("./Queue.js"),
+          AppMeasurement = require("./Appmeasurement/AppMeasurement.js"),
+          passiveTracker = require("./passiveTracker.js"),
+          errorHandler = require("./ErrorHandler.js"),
+          moduleName = "Tracker",
+          templateVarHelper = require("./helpers/templateVar.js"),
+          isEmptyObj = require("./helpers/isEmptyObj.js"),
+          trackerRegistry = require("./trackers/TrackerRegistry.js"),
+          mergeIntoDeferredBeacon = require("./helpers/mergeIntoDeferredBeacon.js");
         trackerRegistry.registerAllTrackers();
         var Tracker = (function () {
           function e() {
@@ -11627,28 +11654,28 @@ require = (function () {
           return (
             _createClass(e, [
               {
-                key: 'track',
+                key: "track",
                 value: function (e) {
                   if (
-                    ((e && 'object' === _typeof(e) && e.type) ||
+                    ((e && "object" === _typeof(e) && e.type) ||
                       errorHandler.log(
                         moduleName,
-                        'track',
-                        e + ' is not a valid request object',
+                        "track",
+                        e + " is not a valid request object",
                       ),
                     !errorHandler.exception)
                   ) {
                     var t = templateVarHelper.set();
                     if (
-                      ('page' === e.type
-                        ? ((e.submitMethod = 't'),
+                      ("page" === e.type
+                        ? ((e.submitMethod = "t"),
                           (e.beacon = JSON.parse(JSON.stringify(e.data))))
-                        : ((e.submitMethod = 'tl'), (e.beacon = {})),
+                        : ((e.submitMethod = "tl"), (e.beacon = {})),
                       trackerRegistry.processBeaconByType(e.type, e),
                       !isEmptyObj(e.beacon))
                     ) {
                       for (var r in e.beacon)
-                        'string' == typeof e.beacon[r] &&
+                        "string" == typeof e.beacon[r] &&
                           (e.beacon[r] = templateVarHelper.translate(
                             e.beacon[r],
                             t,
@@ -11657,26 +11684,27 @@ require = (function () {
                         ? (e.beacon.title && delete e.beacon.title,
                           void mergeIntoDeferredBeacon(e.beacon))
                         : e.options.usePassiveTracker
-                        ? (delete e.beacon.title, void passiveTracker(e.beacon))
-                        : void (
-                            !0 !== e.options.silent &&
-                            (this._queue.add(e),
-                            !0 !== this.paused
-                              ? this._run()
-                              : this._queue.collect())
-                          );
+                          ? (delete e.beacon.title,
+                            void passiveTracker(e.beacon))
+                          : void (
+                              !0 !== e.options.silent &&
+                              (this._queue.add(e),
+                              !0 !== this.paused
+                                ? this._run()
+                                : this._queue.collect())
+                            );
                     }
                   }
                 },
               },
               {
-                key: 'isPaused',
+                key: "isPaused",
                 value: function () {
                   return this.paused;
                 },
               },
               {
-                key: 'resume',
+                key: "resume",
                 value: function () {
                   this._queue.load(),
                     0 !== this._queue.size() &&
@@ -11684,7 +11712,7 @@ require = (function () {
                 },
               },
               {
-                key: '_run',
+                key: "_run",
                 value: function () {
                   if (0 !== this._queue.size()) {
                     var e = this._queue.peek().options || {};
@@ -11701,14 +11729,14 @@ require = (function () {
                 },
               },
               {
-                key: 'send',
+                key: "send",
                 value: function () {
                   if (
-                    ('function' != typeof this.AppMeasurement.submit &&
+                    ("function" != typeof this.AppMeasurement.submit &&
                       errorHandler.log(
                         moduleName,
-                        'send',
-                        'provided plugin does not contain a valid submit method',
+                        "send",
+                        "provided plugin does not contain a valid submit method",
                       ),
                     !errorHandler.exception && 0 !== this._queue.size())
                   ) {
@@ -11718,7 +11746,7 @@ require = (function () {
                 },
               },
               {
-                key: 'pause',
+                key: "pause",
                 value: function () {
                   !0 !== this.paused &&
                     this.canPause() &&
@@ -11727,19 +11755,19 @@ require = (function () {
                 },
               },
               {
-                key: 'canPause',
+                key: "canPause",
                 value: function () {
                   return this._queue.canSave();
                 },
               },
               {
-                key: 'async',
+                key: "async",
                 value: function (e) {
                   if (
-                    ((e && 'function' == typeof e) ||
+                    ((e && "function" == typeof e) ||
                       errorHandler.log(
                         moduleName,
-                        'async',
+                        "async",
                         'Provided callback "' + e + '" is not a function',
                       ),
                     !errorHandler.exception)
@@ -11752,13 +11780,13 @@ require = (function () {
                 },
               },
               {
-                key: 'sync',
+                key: "sync",
                 value: function (e) {
                   if (
-                    ((e && 'function' == typeof e) ||
+                    ((e && "function" == typeof e) ||
                       errorHandler.log(
                         moduleName,
-                        'sync',
+                        "sync",
                         'Provided callback "' + e + '" is not a function',
                       ),
                     !errorHandler.exception)
@@ -11769,9 +11797,9 @@ require = (function () {
                 },
               },
               {
-                key: 'trackGeneric',
+                key: "trackGeneric",
                 value: function (e, t) {
-                  var r = { data: e, type: 'custom', options: t || {} };
+                  var r = { data: e, type: "custom", options: t || {} };
                   this.track(r);
                 },
               },
@@ -11782,161 +11810,161 @@ require = (function () {
         module.exports = new Tracker();
       },
       {
-        './Appmeasurement/AppMeasurement': 71,
-        './ErrorHandler': 118,
-        './Queue': 119,
-        './helpers/isEmptyObj': 133,
-        './helpers/mergeIntoDeferredBeacon': 138,
-        './helpers/templateVar': 145,
-        './passiveTracker': 159,
-        './trackers/TrackerRegistry': 160,
+        "./Appmeasurement/AppMeasurement": 71,
+        "./ErrorHandler": 118,
+        "./Queue": 119,
+        "./helpers/isEmptyObj": 133,
+        "./helpers/mergeIntoDeferredBeacon": 138,
+        "./helpers/templateVar": 145,
+        "./passiveTracker": 159,
+        "./trackers/TrackerRegistry": 160,
       },
     ],
     121: [
       function (require, module, exports) {
-        'use strict';
-        var dataLayerKeys = require('@apple/analytics-data-layer').KEYS,
+        "use strict";
+        var dataLayerKeys = require("@apple/analytics-data-layer").KEYS,
           constants = {
-            acAnalyticsVersion: '2.19.0',
-            sessionStorage: 'sessionStorage',
-            primaryDomain: 'apple.com',
+            acAnalyticsVersion: "2.19.0",
+            sessionStorage: "sessionStorage",
+            primaryDomain: "apple.com",
             domainRegex: /apple.com.cn$/,
             performanceTimingEvents:
-              'event220,event221,event222,event223,event224,event225,event226,event227,event228,event229,event230,event231,event232',
+              "event220,event221,event222,event223,event224,event225,event226,event227,event228,event229,event230,event231,event232",
             dataLayer: {
               meta: {
                 key: dataLayerKeys.METADATA,
                 keys: {
-                  's-bucket-0': 's-bucket-0',
-                  's-bucket-1': 's-bucket-1',
-                  's-bucket-2': 's-bucket-2',
-                  's-campaign': 's-campaign',
-                  's-channel': 's-channel',
-                  's-page-tracking-data': 's-page-tracking-data',
-                  track: 'track',
+                  "s-bucket-0": "s-bucket-0",
+                  "s-bucket-1": "s-bucket-1",
+                  "s-bucket-2": "s-bucket-2",
+                  "s-campaign": "s-campaign",
+                  "s-channel": "s-channel",
+                  "s-page-tracking-data": "s-page-tracking-data",
+                  track: "track",
                 },
                 selector: 'meta[property^="analytics-"]',
-                keyAttribute: 'property',
-                valueAttribute: 'content',
-                keyPrefix: 'analytics-',
+                keyAttribute: "property",
+                valueAttribute: "content",
+                keyPrefix: "analytics-",
               },
               paths: {
                 deferred: [
                   dataLayerKeys.PERSISTED,
                   dataLayerKeys.DEFERRED_BEACON,
                 ],
-                passiveTracker: ['passiveTracker'],
-                queue: [dataLayerKeys.PERSISTED, 'acAnalyticsQueue'],
+                passiveTracker: ["passiveTracker"],
+                queue: [dataLayerKeys.PERSISTED, "acAnalyticsQueue"],
                 performancePage: [
                   dataLayerKeys.SESSION_STORE,
-                  'performanceTimingPage',
+                  "performanceTimingPage",
                 ],
                 performanceAssets: [
                   dataLayerKeys.SESSION_STORE,
-                  'performanceTimingAssets',
+                  "performanceTimingAssets",
                 ],
               },
               deferred: { key: dataLayerKeys.DEFERRED_BEACON },
               pageDataModel: {
                 key: dataLayerKeys.PAGE_DATA_MODEL,
-                selector: 'script#metrics',
+                selector: "script#metrics",
               },
               persisted: { key: dataLayerKeys.PERSISTED },
               sessionStore: { key: dataLayerKeys.SESSION_STORE },
               configuration: {
-                key: 'conf',
-                optionsKey: 'conf.options',
+                key: "conf",
+                optionsKey: "conf.options",
                 keys: {
-                  acAnalyticsVersion: 'acAnalyticsVersion',
-                  bucket: 'bucket',
-                  bucket0: 'bucket0',
-                  bucket1: 'bucket1',
-                  bucket2: 'bucket2',
-                  bucketstore: 'bucketstore',
-                  campaign: 'campaign',
-                  channel: 'channel',
-                  clickTimerCount: 'clickTimerCount',
-                  clickTimerLinkInteraction: 'clickTimerLinkInteraction',
-                  computedCampaign: 'computedCampaign',
-                  computedChannel: 'computedChannel',
-                  computedPageName: 'computedPageName',
-                  computedProductName: 'computedProductName',
-                  cookieLifetime: 'cookieLifetime',
-                  countryBuckets: 'countryBuckets',
-                  countryCodeFilter: 'countryCodeFilter',
-                  currencyCode: 'currencyCode',
-                  initialTimeStamp: 'initialTimeStamp',
-                  legacyCountryCode: 'legacyCountryCode',
-                  linkDownloadFileTypes: 'linkDownloadFileTypes',
-                  loadTiming: 'loadTiming',
-                  locale: 'locale',
-                  pageName: 'pageName',
-                  pageTrackingData: 'pageTrackingData',
-                  pageType: 'pageType',
-                  pageURL: 'pageURL',
-                  pageURLNoQueryString: 'pageURLNoQueryString',
-                  platform: 'platform',
-                  productName: 'productName',
-                  queryString: 'queryString',
-                  referrer: 'referrer',
-                  searchTerm: 'searchTerm',
-                  specialExitLinks: 'specialExitLinks',
-                  subdomains: 'subdomains',
-                  subdomainSupportedDomains: 'subdomainSupportedDomains',
-                  track: 'track',
-                  trackingDomain: 'trackingDomain',
-                  trackingServer: 'trackingServer',
-                  trackingServerSecure: 'trackingServerSecure',
-                  trackingStateLinkInteraction: 'trackingStateLinkInteraction',
+                  acAnalyticsVersion: "acAnalyticsVersion",
+                  bucket: "bucket",
+                  bucket0: "bucket0",
+                  bucket1: "bucket1",
+                  bucket2: "bucket2",
+                  bucketstore: "bucketstore",
+                  campaign: "campaign",
+                  channel: "channel",
+                  clickTimerCount: "clickTimerCount",
+                  clickTimerLinkInteraction: "clickTimerLinkInteraction",
+                  computedCampaign: "computedCampaign",
+                  computedChannel: "computedChannel",
+                  computedPageName: "computedPageName",
+                  computedProductName: "computedProductName",
+                  cookieLifetime: "cookieLifetime",
+                  countryBuckets: "countryBuckets",
+                  countryCodeFilter: "countryCodeFilter",
+                  currencyCode: "currencyCode",
+                  initialTimeStamp: "initialTimeStamp",
+                  legacyCountryCode: "legacyCountryCode",
+                  linkDownloadFileTypes: "linkDownloadFileTypes",
+                  loadTiming: "loadTiming",
+                  locale: "locale",
+                  pageName: "pageName",
+                  pageTrackingData: "pageTrackingData",
+                  pageType: "pageType",
+                  pageURL: "pageURL",
+                  pageURLNoQueryString: "pageURLNoQueryString",
+                  platform: "platform",
+                  productName: "productName",
+                  queryString: "queryString",
+                  referrer: "referrer",
+                  searchTerm: "searchTerm",
+                  specialExitLinks: "specialExitLinks",
+                  subdomains: "subdomains",
+                  subdomainSupportedDomains: "subdomainSupportedDomains",
+                  track: "track",
+                  trackingDomain: "trackingDomain",
+                  trackingServer: "trackingServer",
+                  trackingServerSecure: "trackingServerSecure",
+                  trackingStateLinkInteraction: "trackingStateLinkInteraction",
                 },
               },
             },
             countryBuckets: [
-              'us',
-              'au|ca|cn|de|es|fr|it|jp|uk',
-              'ap|at|bf|bl|br|ce|cr|dk|fi|hk|ie|in|kr|la|mx|nl|no|nz|pl|pt|ru|se|sg|th|tw|za',
+              "us",
+              "au|ca|cn|de|es|fr|it|jp|uk",
+              "ap|at|bf|bl|br|ce|cr|dk|fi|hk|ie|in|kr|la|mx|nl|no|nz|pl|pt|ru|se|sg|th|tw|za",
             ],
             subdomains: [
-              'www',
-              'images',
-              'movies',
-              'ssl',
-              'search',
-              'smb',
-              'nova',
-              'experience',
-              'partner-relay',
+              "www",
+              "images",
+              "movies",
+              "ssl",
+              "search",
+              "smb",
+              "nova",
+              "experience",
+              "partner-relay",
             ],
-            supportedSubdomains: ['apple.com', 'apple.com.cn'],
-            cookieLifetime: '1800',
+            supportedSubdomains: ["apple.com", "apple.com.cn"],
+            cookieLifetime: "1800",
             linkDownloadFileTypes: [
-              'ical',
-              'ics',
-              'zip',
-              'wav',
-              'mp3',
-              'doc',
-              'pdf',
-              'xls',
-              'dmg',
-              'sit',
-              'pkg',
-              'exe',
-              'm4a',
-              'rss',
-              'xml',
-              'extz',
-              'safariextz',
-              'ibooks',
-              'epub',
-              'pages',
-              'numbers',
-              'key',
-              'xlsx',
-              'pptx',
-              'docx',
-              'psd',
-              'aif',
+              "ical",
+              "ics",
+              "zip",
+              "wav",
+              "mp3",
+              "doc",
+              "pdf",
+              "xls",
+              "dmg",
+              "sit",
+              "pkg",
+              "exe",
+              "m4a",
+              "rss",
+              "xml",
+              "extz",
+              "safariextz",
+              "ibooks",
+              "epub",
+              "pages",
+              "numbers",
+              "key",
+              "xlsx",
+              "pptx",
+              "docx",
+              "psd",
+              "aif",
             ],
             regexp: {
               curlyBracePattern: new RegExp(/[{|}]/g),
@@ -11948,11 +11976,11 @@ require = (function () {
           };
         module.exports = Object.freeze(constants);
       },
-      { '@apple/analytics-data-layer': 4 },
+      { "@apple/analytics-data-layer": 4 },
     ],
     122: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function ownKeys(e, r) {
           var t = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -11973,14 +12001,17 @@ require = (function () {
                   _defineProperty(e, r, t[r]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-              : ownKeys(Object(t)).forEach(function (r) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    r,
-                    Object.getOwnPropertyDescriptor(t, r),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(t),
+                  )
+                : ownKeys(Object(t)).forEach(function (r) {
+                    Object.defineProperty(
+                      e,
+                      r,
+                      Object.getOwnPropertyDescriptor(t, r),
+                    );
+                  });
           }
           return e;
         }
@@ -11997,8 +12028,8 @@ require = (function () {
             e
           );
         }
-        var regions = require('./trackers/regions/regions.js'),
-          Tracker = require('./Tracker.js'),
+        var regions = require("./trackers/regions/regions.js"),
+          Tracker = require("./Tracker.js"),
           defaultOptions = { clearRegions: !0 };
         function destroy() {
           var e =
@@ -12009,51 +12040,51 @@ require = (function () {
         }
         module.exports = destroy;
       },
-      { './Tracker': 120, './trackers/regions/regions': 174 },
+      { "./Tracker": 120, "./trackers/regions/regions": 174 },
     ],
     123: [
       function (require, module, exports) {
-        'use strict';
-        var domNodes = require('@marcom/ac-dom-nodes'),
-          errorHandler = require('../ErrorHandler.js'),
-          storeUrlPattern = require('../constants.js').storeUrlPattern,
-          moduleName = 'appMeasurementPluginHelper-DOM';
+        "use strict";
+        var domNodes = require("@marcom/ac-dom-nodes"),
+          errorHandler = require("../ErrorHandler.js"),
+          storeUrlPattern = require("../constants.js").storeUrlPattern,
+          moduleName = "appMeasurementPluginHelper-DOM";
         function isIntraPageLink(e) {
           var t;
           return (
             !domNodes.isNodeType(e, domNodes.NODE_TYPES.ELEMENT) ||
             !e.href ||
-            '#' === (t = e.getAttribute('href').trim()).charAt(0) ||
-            0 === t.indexOf('javascript:') ||
-            0 === t.indexOf('mailto:') ||
-            0 === t.indexOf('tel:') ||
+            "#" === (t = e.getAttribute("href").trim()).charAt(0) ||
+            0 === t.indexOf("javascript:") ||
+            0 === t.indexOf("mailto:") ||
+            0 === t.indexOf("tel:") ||
             !!(
-              e.classList.contains('ac-gn-link-search') ||
-              e.classList.contains('ac-gn-link-bag') ||
-              e.classList.contains('globalnav-link-search') ||
-              e.classList.contains('globalnav-link-bag')
+              e.classList.contains("ac-gn-link-search") ||
+              e.classList.contains("ac-gn-link-bag") ||
+              e.classList.contains("globalnav-link-search") ||
+              e.classList.contains("globalnav-link-bag")
             ) ||
             !!(
-              e.hasAttribute('data-analytics-intrapage-link') ||
-              e.hasAttribute('data-analytics-id') ||
-              e.hasAttribute('data-analytics-video-id')
+              e.hasAttribute("data-analytics-intrapage-link") ||
+              e.hasAttribute("data-analytics-id") ||
+              e.hasAttribute("data-analytics-video-id")
             )
           );
         }
         function isStoreLink(e) {
           if (
-            ('string' != typeof e &&
+            ("string" != typeof e &&
               errorHandler.log(
                 moduleName,
-                'isStoreLink',
-                e + ' is not a valid string',
+                "isStoreLink",
+                e + " is not a valid string",
               ),
             !errorHandler.exception)
           )
             return storeUrlPattern.test(e);
         }
         function getLinkHref(e) {
-          return e.getAttribute('href') || '';
+          return e.getAttribute("href") || "";
         }
         module.exports = {
           isIntraPageLink: isIntraPageLink,
@@ -12062,20 +12093,20 @@ require = (function () {
         };
       },
       {
-        '../ErrorHandler': 118,
-        '../constants': 121,
-        '@marcom/ac-dom-nodes': 22,
+        "../ErrorHandler": 118,
+        "../constants": 121,
+        "@marcom/ac-dom-nodes": 22,
       },
     ],
     124: [
       function (require, module, exports) {
-        'use strict';
-        var utils = require('@apple/analytics-utils'),
+        "use strict";
+        var utils = require("@apple/analytics-utils"),
           cookieJson = utils.cookieJson,
           beaconHelpers = utils.beaconHelpers,
           toStr = utils.toStr,
-          cookieName = 'mk_epub',
-          cookieOpts = { path: '/', domain: 'apple.com', secure: !0 };
+          cookieName = "mk_epub",
+          cookieOpts = { path: "/", domain: "apple.com", secure: !0 };
         function getSharedCookie() {
           var e =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -12095,9 +12126,9 @@ require = (function () {
             Object.keys(e).forEach(function (o) {
               var i = o.substring(0, 4),
                 t = toStr(e[o]);
-              'prop' === i
+              "prop" === i
                 ? (e[o] = t.substring(0, 100))
-                : 'eVar' === i && (e[o] = t.substring(0, 250));
+                : "eVar" === i && (e[o] = t.substring(0, 250));
             }),
             e
           );
@@ -12112,14 +12143,14 @@ require = (function () {
           updateCookieOptions: updateCookieOptions,
         };
       },
-      { '@apple/analytics-utils': 12 },
+      { "@apple/analytics-utils": 12 },
     ],
     125: [
       function (require, module, exports) {
-        'use strict';
-        var dataLayer = require('@apple/analytics-data-layer'),
-          constants = require('../constants.js'),
-          errorHandler = require('../ErrorHandler.js'),
+        "use strict";
+        var dataLayer = require("@apple/analytics-data-layer"),
+          constants = require("../constants.js"),
+          errorHandler = require("../ErrorHandler.js"),
           init = dataLayer.init,
           set = dataLayer.set;
         function refresh(e) {
@@ -12130,19 +12161,19 @@ require = (function () {
             s = t.keyPrefix,
             n = t.valueAttribute;
           if ((init(constants.dataLayer), e.sourceData)) {
-            var o = e.sourceData['s-bucket-0'],
-              u = e.sourceData['s-bucket-1'],
-              i = e.sourceData['s-bucket-2'],
-              l = e.sourceData['s-channel'],
+            var o = e.sourceData["s-bucket-0"],
+              u = e.sourceData["s-bucket-1"],
+              i = e.sourceData["s-bucket-2"],
+              l = e.sourceData["s-channel"],
               d = e.sourceData.track;
             return o && u && i && l && d
               ? set(a, e.sourceData)
               : void errorHandler.log(
-                  'Missing page data passed - cannot initialize. |bucket0 - '
-                    .concat(o, '|bucket1 - ')
-                    .concat(u, '|bucket2 - ')
-                    .concat(i, '|channel - ')
-                    .concat(l, '|track - ')
+                  "Missing page data passed - cannot initialize. |bucket0 - "
+                    .concat(o, "|bucket1 - ")
+                    .concat(u, "|bucket2 - ")
+                    .concat(i, "|channel - ")
+                    .concat(l, "|track - ")
                     .concat(d),
                 );
           }
@@ -12151,40 +12182,40 @@ require = (function () {
             b < y.length;
             b++
           ) {
-            k[y[b].getAttribute(c).replace(s, '')] = y[b].getAttribute(n);
+            k[y[b].getAttribute(c).replace(s, "")] = y[b].getAttribute(n);
           }
           set(a, k);
         }
         module.exports = { refresh: refresh };
       },
       {
-        '../ErrorHandler': 118,
-        '../constants': 121,
-        '@apple/analytics-data-layer': 4,
+        "../ErrorHandler": 118,
+        "../constants": 121,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     126: [
       function (require, module, exports) {
-        'use strict';
-        var errorHandler = require('../ErrorHandler.js'),
-          moduleName = 'dataAttributeHelper',
-          methodName = 'dataStringToObject';
+        "use strict";
+        var errorHandler = require("../ErrorHandler.js"),
+          moduleName = "dataAttributeHelper",
+          methodName = "dataStringToObject";
         function dataStringToObject(r) {
           if (!r)
             return (
               errorHandler.log(
                 moduleName,
                 methodName,
-                '`str` must not be falsey',
+                "`str` must not be falsey",
               ),
               {}
             );
-          if ('string' != typeof r || 0 === r.length)
+          if ("string" != typeof r || 0 === r.length)
             return (
               errorHandler.log(
                 moduleName,
                 methodName,
-                '`str` must contain a value and be of type string',
+                "`str` must contain a value and be of type string",
               ),
               {}
             );
@@ -12194,19 +12225,19 @@ require = (function () {
           } catch (r) {}
           if (e) return e;
           var o = {};
-          t = r.split(',');
+          t = r.split(",");
           for (var n = 0; n < t.length; n++)
-            o[(a = t[n].split(':'))[0].trim()] = a[1] ? a[1].trim() : a[1];
+            o[(a = t[n].split(":"))[0].trim()] = a[1] ? a[1].trim() : a[1];
           return o;
         }
         module.exports = dataStringToObject;
       },
-      { '../ErrorHandler': 118 },
+      { "../ErrorHandler": 118 },
     ],
     127: [
       function (require, module, exports) {
-        'use strict';
-        var isEmptyString = require('./isEmptyString.js'),
+        "use strict";
+        var isEmptyString = require("./isEmptyString.js"),
           eventListeners = {},
           keyIncrementor = 0,
           dynamicEventBinder = function () {
@@ -12221,7 +12252,7 @@ require = (function () {
               s = e.exactMatch;
             if (
               !(
-                'function' != typeof i ||
+                "function" != typeof i ||
                 isEmptyString(n) ||
                 isEmptyString(t) ||
                 isEmptyString(r)
@@ -12279,13 +12310,13 @@ require = (function () {
           removeListeners: removeListeners,
         };
       },
-      { './isEmptyString': 134 },
+      { "./isEmptyString": 134 },
     ],
     128: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function eventsToString(t) {
-          return t && 'string' !== t && t.toString ? t.toString() : t;
+          return t && "string" !== t && t.toString ? t.toString() : t;
         }
         module.exports = eventsToString;
       },
@@ -12293,17 +12324,17 @@ require = (function () {
     ],
     129: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function filterBeaconsByType(t, e) {
           var r;
           switch (e) {
-            case 'page':
+            case "page":
               r = filterByPage;
               break;
-            case 'exit':
+            case "exit":
               r = filterByExit;
               break;
-            case 'micro-event':
+            case "micro-event":
               r = filterByMicroEvent;
               break;
             default:
@@ -12329,25 +12360,25 @@ require = (function () {
     ],
     130: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
-        var errorHandler = require('../ErrorHandler.js'),
-          moduleName = 'appMeasurementPluginFormatter',
-          separator = require('./separator.js');
+        var errorHandler = require("../ErrorHandler.js"),
+          moduleName = "appMeasurementPluginFormatter",
+          separator = require("./separator.js");
         function productName(e) {
           return lowerCaseString(e);
         }
@@ -12356,74 +12387,74 @@ require = (function () {
             (e ||
               errorHandler.log(
                 moduleName,
-                'channel',
-                'analytics-s-channel metadata tag must exist',
+                "channel",
+                "analytics-s-channel metadata tag must exist",
               ),
             !errorHandler.exception)
           ) {
-            e = e.toLowerCase().split(' ').join('.');
-            var n = 'www.',
-              t = { 'fr-ca': 'ca.fr' };
-            return (n += t[r] ? t[r] : legacyCountryCode(r)) + '.' + e;
+            e = e.toLowerCase().split(" ").join(".");
+            var n = "www.",
+              t = { "fr-ca": "ca.fr" };
+            return (n += t[r] ? t[r] : legacyCountryCode(r)) + "." + e;
           }
         }
         function pageName(e, r) {
-          var n = '',
-            t = { 'fr-ca': 'ca-fr' }[r];
+          var n = "",
+            t = { "fr-ca": "ca-fr" }[r];
           return (
-            (e = e || ''),
-            'string' == typeof r &&
+            (e = e || ""),
+            "string" == typeof r &&
               ((r = r.toLowerCase()),
               (n = _decorateCountryCode((n = t || legacyCountryCode(r))))),
             lowerCaseString(e) + n
           );
         }
         function eventString(e, r) {
-          return (r = r || ''), (e = e || '') ? e + '@' + r : r;
+          return (r = r || ""), (e = e || "") ? e + "@" + r : r;
         }
         function countryCodeFilter(e) {
           var r,
             n = {
-              'fr-ca': 'ca/fr',
-              'en-419': 'lae',
-              'es-419': 'la',
-              'en-ap': 'asia',
-              'en-gb': 'uk',
+              "fr-ca": "ca/fr",
+              "en-419": "lae",
+              "es-419": "la",
+              "en-ap": "asia",
+              "en-gb": "uk",
             };
           if (n[e]) r = n[e];
-          else if (['fr-be', 'nl-be', 'fr-ch', 'de-ch'].indexOf(e) >= 0) {
-            r = _transformLocale(e).reverse().join('-');
+          else if (["fr-be", "nl-be", "fr-ch", "de-ch"].indexOf(e) >= 0) {
+            r = _transformLocale(e).reverse().join("-");
           } else r = _getCountryCodeFromLocale(e);
           return r;
         }
         function legacyCountryCode(e) {
           var r = {
-            'fr-be': 'bf',
-            'nl-be': 'bl',
-            'fr-ch': 'cr',
-            'de-ch': 'ce',
-            'en-419': 'la',
-            'es-419': 'la',
-            'en-gb': 'uk',
+            "fr-be": "bf",
+            "nl-be": "bl",
+            "fr-ch": "cr",
+            "de-ch": "ce",
+            "en-419": "la",
+            "es-419": "la",
+            "en-gb": "uk",
           };
           return r[e] ? r[e] : _getCountryCodeFromLocale(e);
         }
         function cleanProps(e) {
           var r = {};
-          if ('object' === _typeof(e)) for (var n in e) r[n] = _sanitize(e[n]);
+          if ("object" === _typeof(e)) for (var n in e) r[n] = _sanitize(e[n]);
           return r;
         }
         function stringReplacer(e, r, n) {
           var t = e;
           return (
-            (r = 'string' == typeof r ? r : ''),
-            (n = 'string' == typeof n ? n : ''),
-            'string' == typeof t && (t = t.replace(new RegExp(r, 'gi'), n)),
+            (r = "string" == typeof r ? r : ""),
+            (n = "string" == typeof n ? n : ""),
+            "string" == typeof t && (t = t.replace(new RegExp(r, "gi"), n)),
             t
           );
         }
         function getRegionAncestry(e) {
-          var r = '';
+          var r = "";
           return (
             Array.isArray(e.regionAncestry) &&
               e.regionAncestry.forEach(function (e) {
@@ -12433,15 +12464,15 @@ require = (function () {
           );
         }
         function lowerCaseString(e) {
-          return 'string' == typeof e && (e = e.toLowerCase()), e;
+          return "string" == typeof e && (e = e.toLowerCase()), e;
         }
         function _getCountryCodeFromLocale(e) {
           if (
             (e ||
               errorHandler.log(
                 moduleName,
-                '_getCountryCodeFromLocale',
-                'locale should be a valid string',
+                "_getCountryCodeFromLocale",
+                "locale should be a valid string",
               ),
             !errorHandler.exception)
           ) {
@@ -12455,16 +12486,16 @@ require = (function () {
             (e ||
               errorHandler.log(
                 moduleName,
-                '_decorateCountryCode',
-                'countryCode should be a valid string',
+                "_decorateCountryCode",
+                "countryCode should be a valid string",
               ),
             !errorHandler.exception)
           )
-            return ' (' + lowerCaseString(e) + ')';
+            return " (" + lowerCaseString(e) + ")";
         }
         var whitelist = /[ìîëí]/g;
         function _sanitize(e) {
-          return 'string' == typeof e && (e = e.replace(whitelist, '')), e;
+          return "string" == typeof e && (e = e.replace(whitelist, "")), e;
         }
         function _transformLocale(e) {
           return e.split(/[-_]/);
@@ -12482,30 +12513,30 @@ require = (function () {
           getRegionAncestry: getRegionAncestry,
         };
       },
-      { '../ErrorHandler': 118, './separator': 142 },
+      { "../ErrorHandler": 118, "./separator": 142 },
     ],
     131: [
       function (require, module, exports) {
-        'use strict';
-        var get = require('@apple/analytics-data-layer').get,
-          dataLayerConfig = require('../constants.js').dataLayer.configuration,
-          constants = require('../constants.js'),
+        "use strict";
+        var get = require("@apple/analytics-data-layer").get,
+          dataLayerConfig = require("../constants.js").dataLayer.configuration,
+          constants = require("../constants.js"),
           specialExitLinkList = [
-            { name: 'deploy', url: 'deploy.apple.com' },
-            { name: 'ade', url: 'ade.apple.com' },
-            { name: 'appleteacher', url: 'appleteacher.apple.com' },
-            { name: 'ecommerce', url: 'ecommerce.apple.com' },
-            { name: 'school', url: 'school.apple.com' },
-            { name: 'help', url: 'help.apple.com' },
-            { name: 'survey', url: 'survey.apple.com' },
-            { name: 'itunespartner', url: 'itunespartner.apple.com' },
-            { name: 'investor', url: 'investor.apple.com' },
-            { name: 'consultants', url: 'consultants.apple.com' },
-            { name: 'itms', url: 'itms.apple.com' },
-            { name: 'artists', url: 'artists.apple.com' },
-            { name: 'itunes', url: 'itunes.apple.com' },
-            { name: 'tv', url: 'tv.apple.com' },
-            { name: 'contactretail', url: 'contactretail.apple.com' },
+            { name: "deploy", url: "deploy.apple.com" },
+            { name: "ade", url: "ade.apple.com" },
+            { name: "appleteacher", url: "appleteacher.apple.com" },
+            { name: "ecommerce", url: "ecommerce.apple.com" },
+            { name: "school", url: "school.apple.com" },
+            { name: "help", url: "help.apple.com" },
+            { name: "survey", url: "survey.apple.com" },
+            { name: "itunespartner", url: "itunespartner.apple.com" },
+            { name: "investor", url: "investor.apple.com" },
+            { name: "consultants", url: "consultants.apple.com" },
+            { name: "itms", url: "itms.apple.com" },
+            { name: "artists", url: "artists.apple.com" },
+            { name: "itunes", url: "itunes.apple.com" },
+            { name: "tv", url: "tv.apple.com" },
+            { name: "contactretail", url: "contactretail.apple.com" },
           ];
         function specialExitLinks() {
           var e = get([
@@ -12515,27 +12546,27 @@ require = (function () {
           e &&
             e === constants.primaryDomain &&
             specialExitLinkList.push({
-              name: 'apple.com.cn',
-              url: 'apple.com.cn',
+              name: "apple.com.cn",
+              url: "apple.com.cn",
             });
-          var a = '';
+          var a = "";
           return (
             specialExitLinkList.forEach(function (e) {
-              a += e.name + '~' + e.url + '|';
+              a += e.name + "~" + e.url + "|";
             }),
             (a = a.slice(0, -1))
           );
         }
         module.exports = specialExitLinks;
       },
-      { '../constants': 121, '@apple/analytics-data-layer': 4 },
+      { "../constants": 121, "@apple/analytics-data-layer": 4 },
     ],
     132: [
       function (require, module, exports) {
-        'use strict';
-        var get = require('@apple/analytics-data-layer').get,
+        "use strict";
+        var get = require("@apple/analytics-data-layer").get,
           passiveTrackerPath =
-            require('../constants.js').dataLayer.paths.passiveTracker;
+            require("../constants.js").dataLayer.paths.passiveTracker;
         function getPassiveTrackerData() {
           var a = get(passiveTrackerPath);
           if (a)
@@ -12547,11 +12578,11 @@ require = (function () {
         }
         module.exports = getPassiveTrackerData;
       },
-      { '../constants': 121, '@apple/analytics-data-layer': 4 },
+      { "../constants": 121, "@apple/analytics-data-layer": 4 },
     ],
     133: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         var isEmptyObj = function (t) {
           return 0 === Object.keys(t).length && t.constructor === Object;
         };
@@ -12561,18 +12592,18 @@ require = (function () {
     ],
     134: [
       function (require, module, exports) {
-        'use strict';
-        var toStr = require('@apple/analytics-utils').toStr,
+        "use strict";
+        var toStr = require("@apple/analytics-utils").toStr,
           isEmptyString = function (t) {
-            return '' === toStr(t).trim();
+            return "" === toStr(t).trim();
           };
         module.exports = isEmptyString;
       },
-      { '@apple/analytics-utils': 12 },
+      { "@apple/analytics-utils": 12 },
     ],
     135: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function isFirstPageView() {
           return (
             void 0 === window.sessionStorage.fpv &&
@@ -12588,7 +12619,7 @@ require = (function () {
     ],
     136: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function isNumeric(i) {
           return !isNaN(i);
         }
@@ -12598,12 +12629,12 @@ require = (function () {
     ],
     137: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function isStorageAvailable(e) {
           try {
             var t = window[e],
-              a = 'acAnalyticsStorageTestItem';
-            return t.setItem(a, 'a'), t.removeItem(a), !0;
+              a = "acAnalyticsStorageTestItem";
+            return t.setItem(a, "a"), t.removeItem(a), !0;
           } catch (e) {
             return !1;
           }
@@ -12614,13 +12645,13 @@ require = (function () {
     ],
     138: [
       function (require, module, exports) {
-        'use strict';
-        var get = require('@apple/analytics-data-layer').get,
-          set = require('@apple/analytics-data-layer').set,
-          deferredPath = require('../constants.js').dataLayer.paths.deferred,
-          merge = require('@apple/analytics-merge-beacons').merge,
-          biscuitTin = require('@apple/analytics-biscuit-tin'),
-          _require = require('@apple/analytics-omniture-collection'),
+        "use strict";
+        var get = require("@apple/analytics-data-layer").get,
+          set = require("@apple/analytics-data-layer").set,
+          deferredPath = require("../constants.js").dataLayer.paths.deferred,
+          merge = require("@apple/analytics-merge-beacons").merge,
+          biscuitTin = require("@apple/analytics-biscuit-tin"),
+          _require = require("@apple/analytics-omniture-collection"),
           parseEventCollectionString = _require.parseEventCollectionString;
         function mergeIntoDeferredBeacon(e) {
           var t = get(deferredPath);
@@ -12631,33 +12662,33 @@ require = (function () {
               target: { events: parseEventCollectionString(t.events) },
               source: { events: parseEventCollectionString(e.events) },
             });
-            'string' == typeof e.events && (e.events = r.events.toString()),
+            "string" == typeof e.events && (e.events = r.events.toString()),
               (e = merge({ target: t, source: e }));
           }
           set(deferredPath, e), biscuitTin.store();
         }
         function provideEventsString(e) {
           return e
-            ? 'string' == typeof e
+            ? "string" == typeof e
               ? e
               : e.toString
-              ? e.toString()
-              : ''
-            : '';
+                ? e.toString()
+                : ""
+            : "";
         }
         module.exports = mergeIntoDeferredBeacon;
       },
       {
-        '../constants': 121,
-        '@apple/analytics-biscuit-tin': 1,
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-merge-beacons': 6,
-        '@apple/analytics-omniture-collection': 7,
+        "../constants": 121,
+        "@apple/analytics-biscuit-tin": 1,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-merge-beacons": 6,
+        "@apple/analytics-omniture-collection": 7,
       },
     ],
     139: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function ownKeys(e, r) {
           var t = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -12678,14 +12709,17 @@ require = (function () {
                   _defineProperty(e, r, t[r]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(t))
-              : ownKeys(Object(t)).forEach(function (r) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    r,
-                    Object.getOwnPropertyDescriptor(t, r),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(t),
+                  )
+                : ownKeys(Object(t)).forEach(function (r) {
+                    Object.defineProperty(
+                      e,
+                      r,
+                      Object.getOwnPropertyDescriptor(t, r),
+                    );
+                  });
           }
           return e;
         }
@@ -12702,7 +12736,7 @@ require = (function () {
             e
           );
         }
-        var _require = require('@apple/analytics-omniture-collection'),
+        var _require = require("@apple/analytics-omniture-collection"),
           parseEventCollectionString = _require.parseEventCollectionString;
         function mergePassiveTrackerData(e) {
           return (
@@ -12735,17 +12769,17 @@ require = (function () {
         }
         module.exports = mergePassiveTrackerData;
       },
-      { '@apple/analytics-omniture-collection': 7 },
+      { "@apple/analytics-omniture-collection": 7 },
     ],
     140: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function onDocumentReady(e) {
-          'complete' === document.readyState
+          "complete" === document.readyState
             ? e()
-            : document.addEventListener('readystatechange', function t() {
-                'complete' === document.readyState &&
-                  (e(), document.removeEventListener('readystatechange', t));
+            : document.addEventListener("readystatechange", function t() {
+                "complete" === document.readyState &&
+                  (e(), document.removeEventListener("readystatechange", t));
               });
         }
         module.exports = onDocumentReady;
@@ -12754,10 +12788,10 @@ require = (function () {
     ],
     141: [
       function (require, module, exports) {
-        'use strict';
-        var tokenReplacer = require('./tokens/tokenReplacer.js'),
-          dataStringToObject = require('./dataStringToObject.js'),
-          isNode = require('@marcom/ac-dom-nodes/isNode');
+        "use strict";
+        var tokenReplacer = require("./tokens/tokenReplacer.js"),
+          dataStringToObject = require("./dataStringToObject.js"),
+          isNode = require("@marcom/ac-dom-nodes/isNode");
         function parseFromDataAttribute(e, t) {
           var r, a, o;
           return (r = tokenReplacer.parseTokens(e)) && 0 !== r.length
@@ -12780,39 +12814,39 @@ require = (function () {
         module.exports = parseFromDataAttribute;
       },
       {
-        './dataStringToObject': 126,
-        './tokens/tokenReplacer': 147,
-        '@marcom/ac-dom-nodes/isNode': 29,
+        "./dataStringToObject": 126,
+        "./tokens/tokenReplacer": 147,
+        "@marcom/ac-dom-nodes/isNode": 29,
       },
     ],
     142: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         module.exports = {
-          pipe: ' | ',
-          hyphen: ' - ',
-          colon: ': ',
-          dot: '.',
-          space: ' ',
+          pipe: " | ",
+          hyphen: " - ",
+          colon: ": ",
+          dot: ".",
+          space: " ",
         };
       },
       {},
     ],
     143: [
       function (require, module, exports) {
-        'use strict';
-        var DOMHelper = require('./DOM.js');
+        "use strict";
+        var DOMHelper = require("./DOM.js");
         function async(e) {
           var r = !0;
           return DOMHelper.isIntraPageLink(e.targetEl) || (r = !1), r;
         }
         module.exports = { async: async };
       },
-      { './DOM': 123 },
+      { "./DOM": 123 },
     ],
     144: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function setProperty(t, e, o) {
           void 0 === t[e] && void 0 !== o && (t[e] = o);
         }
@@ -12822,67 +12856,67 @@ require = (function () {
     ],
     145: [
       function (require, module, exports) {
-        'use strict';
-        var get = require('@apple/analytics-data-layer').get,
-          formatter = require('./formatter.js'),
-          dataLayerConfig = require('../constants.js').dataLayer.configuration;
+        "use strict";
+        var get = require("@apple/analytics-data-layer").get,
+          formatter = require("./formatter.js"),
+          dataLayerConfig = require("../constants.js").dataLayer.configuration;
         function set() {
           return [
             {
-              name: '{PAGE_NAME}',
+              name: "{PAGE_NAME}",
               value: get([
                 dataLayerConfig.key,
                 dataLayerConfig.keys.computedPageName,
               ]),
             },
             {
-              name: '{PAGE_NAME_NO_LOCALE}',
+              name: "{PAGE_NAME_NO_LOCALE}",
               value: get([dataLayerConfig.key, dataLayerConfig.keys.pageName]),
             },
             {
-              name: '{CHANNEL}',
+              name: "{CHANNEL}",
               value: get([dataLayerConfig.key, dataLayerConfig.keys.channel]),
             },
             {
-              name: '{CAMPAIGN}',
+              name: "{CAMPAIGN}",
               value: get([
                 dataLayerConfig.key,
                 dataLayerConfig.keys.computedCampaign,
               ]),
             },
             {
-              name: '{COUNTRY_CODE}',
+              name: "{COUNTRY_CODE}",
               value: get([
                 dataLayerConfig.key,
                 dataLayerConfig.keys.legacyCountryCode,
               ]),
             },
             {
-              name: '{COUNTRY_CODE_FILTER}',
+              name: "{COUNTRY_CODE_FILTER}",
               value: get([
                 dataLayerConfig.key,
                 dataLayerConfig.keys.countryCodeFilter,
               ]),
             },
             {
-              name: '{PRODUCT_NAME}',
+              name: "{PRODUCT_NAME}",
               value: get([
                 dataLayerConfig.key,
                 dataLayerConfig.keys.productName,
               ]),
             },
             {
-              name: '{PLATFORM}',
+              name: "{PLATFORM}",
               value: get([dataLayerConfig.key, dataLayerConfig.keys.platform]),
             },
           ];
         }
         function translate(e, a) {
           return (
-            'string' == typeof e &&
+            "string" == typeof e &&
               a.forEach(function (a) {
                 a.name &&
-                  'string' == typeof a.name &&
+                  "string" == typeof a.name &&
                   e.toLowerCase().indexOf(a.name.toLowerCase()) > -1 &&
                   (e = formatter.stringReplacer(e, a.name, a.value));
               }),
@@ -12892,24 +12926,24 @@ require = (function () {
         module.exports = { set: set, translate: translate };
       },
       {
-        '../constants': 121,
-        './formatter': 130,
-        '@apple/analytics-data-layer': 4,
+        "../constants": 121,
+        "./formatter": 130,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     146: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var r = 0; r < t.length; r++) {
             var n = t[r];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(e, n.key, n);
           }
         }
@@ -12917,12 +12951,12 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             r && _defineProperties(e, r),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
-        var moduleName = 'TokenRegistry',
-          errorHandler = require('../../ErrorHandler'),
+        var moduleName = "TokenRegistry",
+          errorHandler = require("../../ErrorHandler"),
           TokenRegistry = (function () {
             function e() {
               _classCallCheck(this, e), (this.tokens = {}), (this._size = 0);
@@ -12930,52 +12964,52 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: 'setToken',
+                  key: "setToken",
                   value: function (e, t) {
-                    'string' != typeof e &&
+                    "string" != typeof e &&
                       errorHandler.log(
                         moduleName,
-                        'setToken',
-                        ''.concat(e, ' is not a valid string'),
+                        "setToken",
+                        "".concat(e, " is not a valid string"),
                       ),
-                      'string' != typeof t &&
+                      "string" != typeof t &&
                         errorHandler.log(
                           moduleName,
-                          'setToken',
-                          ''.concat(t, ' is not a valid string'),
+                          "setToken",
+                          "".concat(t, " is not a valid string"),
                         ),
                       errorHandler.exception ||
                         ((this.tokens[e] = t), this._updateSize());
                   },
                 },
                 {
-                  key: 'removeToken',
+                  key: "removeToken",
                   value: function (e) {
-                    'string' != typeof e &&
+                    "string" != typeof e &&
                       errorHandler.log(
                         moduleName,
-                        'removeToken',
-                        e + ' is not a valid string',
+                        "removeToken",
+                        e + " is not a valid string",
                       ),
                       this.tokens[e] ||
                         errorHandler.log(
                           moduleName,
-                          'removeToken',
-                          e + ' doesnt exist',
+                          "removeToken",
+                          e + " doesnt exist",
                         ),
                       errorHandler.exception ||
                         (delete this.tokens[e], this._updateSize());
                   },
                 },
                 {
-                  key: 'getToken',
+                  key: "getToken",
                   value: function (e) {
                     if (
-                      ('string' != typeof e &&
+                      ("string" != typeof e &&
                         errorHandler.log(
                           moduleName,
-                          'getToken',
-                          e + ' is not a valid string',
+                          "getToken",
+                          e + " is not a valid string",
                         ),
                       !errorHandler.exception)
                     )
@@ -12983,19 +13017,19 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'size',
+                  key: "size",
                   value: function () {
                     return this._size;
                   },
                 },
                 {
-                  key: 'clear',
+                  key: "clear",
                   value: function () {
                     (this.tokens = {}), (this._size = 0);
                   },
                 },
                 {
-                  key: '_updateSize',
+                  key: "_updateSize",
                   value: function () {
                     this._size = Object.keys(this.tokens).length;
                   },
@@ -13006,36 +13040,36 @@ require = (function () {
           })();
         module.exports = new TokenRegistry();
       },
-      { '../../ErrorHandler': 118 },
+      { "../../ErrorHandler": 118 },
     ],
     147: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
         function _classCallCheck(e, r) {
           if (!(e instanceof r))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, r) {
           for (var t = 0; t < r.length; t++) {
             var n = r[t];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(e, n.key, n);
           }
         }
@@ -13043,15 +13077,15 @@ require = (function () {
           return (
             r && _defineProperties(e.prototype, r),
             t && _defineProperties(e, t),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
-        var moduleName = 'TokenReplacer',
-          tokenPattern = require('../../constants').tokenPattern,
-          curlysPattern = require('../../constants').curlysPattern,
-          tokenRegistry = require('./Registry.js'),
-          errorHandler = require('../../ErrorHandler'),
+        var moduleName = "TokenReplacer",
+          tokenPattern = require("../../constants").tokenPattern,
+          curlysPattern = require("../../constants").curlysPattern,
+          tokenRegistry = require("./Registry.js"),
+          errorHandler = require("../../ErrorHandler"),
           TokenReplacer = (function () {
             function e() {
               _classCallCheck(this, e), (this.registry = tokenRegistry);
@@ -13059,19 +13093,19 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: 'replace',
+                  key: "replace",
                   value: function (e, r) {
                     if (
-                      ('string' != typeof e &&
+                      ("string" != typeof e &&
                         errorHandler.log(
                           moduleName,
-                          'replace',
-                          e + ' is not a valid string',
+                          "replace",
+                          e + " is not a valid string",
                         ),
                       !errorHandler.exception)
                     )
                       return (
-                        'object' === _typeof(r) && (e = this._replace(e, r)),
+                        "object" === _typeof(r) && (e = this._replace(e, r)),
                         this.registry.size() > 0 &&
                           (e = this._replace(e, this.registry.tokens)),
                         e
@@ -13079,16 +13113,16 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'parseTokens',
+                  key: "parseTokens",
                   value: function (e) {
                     var r,
                       t = this;
                     if (
-                      ('string' != typeof e &&
+                      ("string" != typeof e &&
                         errorHandler.log(
                           moduleName,
-                          'parseTokens',
-                          e + ' is not a valid string',
+                          "parseTokens",
+                          e + " is not a valid string",
                         ),
                       !errorHandler.exception)
                     )
@@ -13100,20 +13134,20 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_replace',
+                  key: "_replace",
                   value: function (e, r) {
                     var t = this;
                     return e.replace(tokenPattern, function (e) {
-                      return 'string' == typeof r[t._removeCurlys(e)]
+                      return "string" == typeof r[t._removeCurlys(e)]
                         ? r[t._removeCurlys(e)]
                         : e;
                     });
                   },
                 },
                 {
-                  key: '_removeCurlys',
+                  key: "_removeCurlys",
                   value: function (e) {
-                    return (e = e.trim()).replace(curlysPattern, '');
+                    return (e = e.trim()).replace(curlysPattern, "");
                   },
                 },
               ]),
@@ -13122,11 +13156,11 @@ require = (function () {
           })();
         module.exports = new TokenReplacer();
       },
-      { '../../ErrorHandler': 118, '../../constants': 121, './Registry': 146 },
+      { "../../ErrorHandler": 118, "../../constants": 121, "./Registry": 146 },
     ],
     148: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function ownKeys(e, t) {
           var n = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -13147,14 +13181,17 @@ require = (function () {
                   _defineProperty(e, t, n[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : ownKeys(Object(n)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(n, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(n),
+                  )
+                : ownKeys(Object(n)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(n, t),
+                    );
+                  });
           }
           return e;
         }
@@ -13171,25 +13208,25 @@ require = (function () {
             e
           );
         }
-        var PageObserver = require('./observers/Page.js'),
-          LinkObserver = require('./observers/Link.js'),
-          ClickObserver = require('./observers/Click.js'),
-          SectionObserver = require('./observers/Section.js'),
-          ElementEngagementObserver = require('./observers/ElementEngagement.js'),
-          onDocumentReady = require('./helpers/onDocumentReady.js'),
-          AdobeTargetObserver = require('./observers/AdobeTarget.js'),
-          isNode = require('@marcom/ac-dom-nodes').isNode,
+        var PageObserver = require("./observers/Page.js"),
+          LinkObserver = require("./observers/Link.js"),
+          ClickObserver = require("./observers/Click.js"),
+          SectionObserver = require("./observers/Section.js"),
+          ElementEngagementObserver = require("./observers/ElementEngagement.js"),
+          onDocumentReady = require("./helpers/onDocumentReady.js"),
+          AdobeTargetObserver = require("./observers/AdobeTarget.js"),
+          isNode = require("@marcom/ac-dom-nodes").isNode,
           defaults = {
             onDOMContentLoadedOptions: {
               section: { autoEnable: !1 },
               globalNav: {
                 autoEnable: !1,
                 initListener: function () {
-                  var e = document.querySelector('#globalnav');
+                  var e = document.querySelector("#globalnav");
                   e
                     ? this.onEnableListenerCallback({ detail: { target: e } })
                     : addEventListener(
-                        'globalnav:mounted',
+                        "globalnav:mounted",
                         this.onEnableListenerCallback.bind(this),
                       );
                 },
@@ -13237,7 +13274,7 @@ require = (function () {
               : window.acAnalyticsSettings;
         }
         function getSettingsFromDOM() {
-          var e = document.getElementById('acAnalyticsSettings');
+          var e = document.getElementById("acAnalyticsSettings");
           if (e)
             try {
               return JSON.parse(e.innerHTML);
@@ -13247,10 +13284,10 @@ require = (function () {
           var t = getLegacyPageName(),
             n = getLocale(),
             a = {
-              's-bucket-0': 'applestoreww',
-              's-bucket-1': 'applestoreww',
-              's-bucket-2': 'applestoreww',
-              's-channel': getChannel(),
+              "s-bucket-0": "applestoreww",
+              "s-bucket-1": "applestoreww",
+              "s-bucket-2": "applestoreww",
+              "s-channel": getChannel(),
               track: t,
               locale: n,
             };
@@ -13270,12 +13307,12 @@ require = (function () {
         }
         function getLegacyPageName() {
           for (
-            var e, t = document.getElementsByTagName('meta'), n = 0;
+            var e, t = document.getElementsByTagName("meta"), n = 0;
             (e = t[n]);
             n++
           )
-            if ('omni_page' === e.getAttribute('name'))
-              return e.getAttribute('content').toLowerCase();
+            if ("omni_page" === e.getAttribute("name"))
+              return e.getAttribute("content").toLowerCase();
           var a = document.title,
             o = window.location.hostname,
             r = window.location.pathname,
@@ -13284,51 +13321,51 @@ require = (function () {
             /\s-\s/.test(i) &&
               (i = i.replace(
                 /\s*-?\s*(apple|アップル|애플컴퓨터코리아|蘋果|蘋果電腦|apple中国|苹果中国)\s+[^-]*-?\s*/,
-                '',
+                "",
               )),
             r.match(/^\/(ws|pr|g5|go|ta|wm)\//) ||
               (r = r.replace(
                 /^\/(\w{2}|befr|benl|chfr|chde|asia|lae)(?=\/)/,
-                '',
+                "",
               )),
             !(r.match(/\//g).length <= 2) ||
               r.match(/support/) ||
               o.match(/support/) ||
               o.match(/selfsolve/) ||
               (!r.match(/index\.html/) && r.match(/\.html/)) ||
-              (i += ' - index'),
-            /\/pr\//.test(r) && (i = 'pr - ' + i),
+              (i += " - index"),
+            /\/pr\//.test(r) && (i = "pr - " + i),
             i
           );
         }
         function getLocale() {
           if (document && document.documentElement) {
             var e =
-              document.documentElement.getAttribute('data-locale') ||
+              document.documentElement.getAttribute("data-locale") ||
               document.documentElement.lang;
             if (e) return e;
             var t =
-              document.getElementById('globalnav') ||
-              document.getElementById('ac-globalnav');
+              document.getElementById("globalnav") ||
+              document.getElementById("ac-globalnav");
             if (t) {
-              var n = t.getAttribute('lang');
+              var n = t.getAttribute("lang");
               if (n) return n;
             }
             var a =
-              document.getElementById('globalmessage-segment') ||
-              document.getElementById('ac-gn-segmentbar');
+              document.getElementById("globalmessage-segment") ||
+              document.getElementById("ac-gn-segmentbar");
             if (a) {
-              var o = a.getAttribute('lang');
+              var o = a.getAttribute("lang");
               if (o) return o;
             }
-            var r = document.getElementById('ac-globalfooter');
+            var r = document.getElementById("ac-globalfooter");
             if (r) {
-              var i = r.getAttribute('lang');
+              var i = r.getAttribute("lang");
               if (i) return i;
             }
             var c = document.querySelector('meta[property="og:locale"]');
             if (c) {
-              var s = c.getAttribute('content').split('_').join('-');
+              var s = c.getAttribute("content").split("_").join("-");
               if (s) return s;
             }
           }
@@ -13339,37 +13376,37 @@ require = (function () {
             window &&
               window.location &&
               window.location.pathname &&
-              (e = window.location.pathname.split('/')[1]),
-            '' === e && (e = 'root'),
+              (e = window.location.pathname.split("/")[1]),
+            "" === e && (e = "root"),
             e
           );
         }
         module.exports = initialize;
       },
       {
-        './helpers/onDocumentReady': 140,
-        './observers/AdobeTarget': 149,
-        './observers/Click': 150,
-        './observers/ElementEngagement': 151,
-        './observers/Link': 154,
-        './observers/Page': 155,
-        './observers/Section': 156,
-        '@marcom/ac-dom-nodes': 22,
+        "./helpers/onDocumentReady": 140,
+        "./observers/AdobeTarget": 149,
+        "./observers/Click": 150,
+        "./observers/ElementEngagement": 151,
+        "./observers/Link": 154,
+        "./observers/Page": 155,
+        "./observers/Section": 156,
+        "@marcom/ac-dom-nodes": 22,
       },
     ],
     149: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _classCallCheck(e, r) {
           if (!(e instanceof r))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, r) {
           for (var t = 0; t < r.length; t++) {
             var a = r[t];
             (a.enumerable = a.enumerable || !1),
               (a.configurable = !0),
-              'value' in a && (a.writable = !0),
+              "value" in a && (a.writable = !0),
               Object.defineProperty(e, a.key, a);
           }
         }
@@ -13377,20 +13414,20 @@ require = (function () {
           return (
             r && _defineProperties(e.prototype, r),
             t && _defineProperties(e, t),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
-        var Tracker = require('../Tracker.js'),
-          observerRegistry = require('./observerRegistry.js'),
-          isFirstPageView = require('../helpers/isFirstPageView.js'),
-          merge = require('@apple/analytics-passive-tracker').merge,
-          get = require('@apple/analytics-data-layer').get,
-          passiveTrack = require('../passiveTracker.js'),
+        var Tracker = require("../Tracker.js"),
+          observerRegistry = require("./observerRegistry.js"),
+          isFirstPageView = require("../helpers/isFirstPageView.js"),
+          merge = require("@apple/analytics-passive-tracker").merge,
+          get = require("@apple/analytics-data-layer").get,
+          passiveTrack = require("../passiveTracker.js"),
           AdobeTargetObserver = (function () {
             function e() {
               _classCallCheck(this, e),
-                (this.observerType = 'target'),
+                (this.observerType = "target"),
                 observerRegistry.add(this),
                 (this.tracker = Tracker),
                 (this.isEnabled = !0),
@@ -13400,37 +13437,37 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: 'listenForTargetEvent',
+                  key: "listenForTargetEvent",
                   value: function () {
                     document.addEventListener(
-                      'at-content-rendering-succeeded',
+                      "at-content-rendering-succeeded",
                       this.track.bind(this),
                     ),
                       window.ac_target && window.ac_target.data && this.track();
                   },
                 },
                 {
-                  key: 'track',
+                  key: "track",
                   value: function () {
                     var e = getTargetData(),
-                      r = get('conf.pageName') ? get('conf.pageName') : '';
+                      r = get("conf.pageName") ? get("conf.pageName") : "";
                     this.tracker &&
                       e &&
                       (this.isFirstPageView
                         ? this.passivelyTrack(e, r)
                         : this.tracker.trackGeneric({
-                            title: 'abtnnb',
-                            eVar57: ''.concat(e, ':').concat(r).toLowerCase(),
+                            title: "abtnnb",
+                            eVar57: "".concat(e, ":").concat(r).toLowerCase(),
                           }));
                   },
                 },
                 {
-                  key: 'passivelyTrack',
+                  key: "passivelyTrack",
                   value: function (e, r) {
                     var t = {
-                      eVar57: ''.concat(e, ':').concat(r).toLowerCase(),
+                      eVar57: "".concat(e, ":").concat(r).toLowerCase(),
                     };
-                    merge('beacon', t), passiveTrack(t);
+                    merge("beacon", t), passiveTrack(t);
                   },
                 },
               ]),
@@ -13447,29 +13484,29 @@ require = (function () {
         module.exports = AdobeTargetObserver;
       },
       {
-        '../Tracker': 120,
-        '../helpers/isFirstPageView': 135,
-        '../passiveTracker': 159,
-        './observerRegistry': 158,
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-passive-tracker': 9,
+        "../Tracker": 120,
+        "../helpers/isFirstPageView": 135,
+        "../passiveTracker": 159,
+        "./observerRegistry": 158,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-passive-tracker": 9,
       },
     ],
     150: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
@@ -13493,14 +13530,17 @@ require = (function () {
                   _defineProperty(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : ownKeys(Object(r)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(r, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(r),
+                  )
+                : ownKeys(Object(r)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(r, t),
+                    );
+                  });
           }
           return e;
         }
@@ -13519,14 +13559,14 @@ require = (function () {
         }
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var r = 0; r < t.length; r++) {
             var n = t[r];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(e, n.key, n);
           }
         }
@@ -13534,19 +13574,19 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             r && _defineProperties(e, r),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
         function _inherits(e, t) {
-          if ('function' != typeof t && null !== t)
+          if ("function" != typeof t && null !== t)
             throw new TypeError(
-              'Super expression must either be null or a function',
+              "Super expression must either be null or a function",
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             t && _setPrototypeOf(e, t);
         }
         function _setPrototypeOf(e, t) {
@@ -13569,11 +13609,11 @@ require = (function () {
           };
         }
         function _possibleConstructorReturn(e, t) {
-          if (t && ('object' === _typeof(t) || 'function' == typeof t))
+          if (t && ("object" === _typeof(t) || "function" == typeof t))
             return t;
           if (void 0 !== t)
             throw new TypeError(
-              'Derived constructors may only return object or undefined',
+              "Derived constructors may only return object or undefined",
             );
           return _assertThisInitialized(e);
         }
@@ -13585,9 +13625,9 @@ require = (function () {
           return e;
         }
         function _isNativeReflectConstruct() {
-          if ('undefined' == typeof Reflect || !Reflect.construct) return !1;
+          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
-          if ('function' == typeof Proxy) return !0;
+          if ("function" == typeof Proxy) return !0;
           try {
             return (
               Boolean.prototype.valueOf.call(
@@ -13606,19 +13646,19 @@ require = (function () {
                 return e.__proto__ || Object.getPrototypeOf(e);
               })(e);
         }
-        var ancestor = require('@marcom/dom-traversal/ancestor'),
-          acDomNodes = require('@marcom/ac-dom-nodes'),
-          Tracker = require('../Tracker.js'),
-          errorHandler = require('../ErrorHandler.js'),
+        var ancestor = require("@marcom/dom-traversal/ancestor"),
+          acDomNodes = require("@marcom/ac-dom-nodes"),
+          Tracker = require("../Tracker.js"),
+          errorHandler = require("../ErrorHandler.js"),
           EventEmitterMicro =
-            require('@marcom/ac-event-emitter-micro').EventEmitterMicro,
-          observerRegistry = require('./observerRegistry.js'),
+            require("@marcom/ac-event-emitter-micro").EventEmitterMicro,
+          observerRegistry = require("./observerRegistry.js"),
           defaultOptions = {
-            dataAttribute: 'analytics-click',
-            titleDataAttribute: 'analytics-title',
+            dataAttribute: "analytics-click",
+            titleDataAttribute: "analytics-title",
             autoEnable: !0,
           },
-          moduleName = 'ClickAnalyticsObserver',
+          moduleName = "ClickAnalyticsObserver",
           exitLinkPattern = /^https?:\/\/|^\/\//i,
           ClickAnalyticsObserver = (function (e) {
             _inherits(r, EventEmitterMicro);
@@ -13635,7 +13675,7 @@ require = (function () {
                   _objectSpread({}, defaultOptions),
                   n,
                 )),
-                (e.observerType = 'click'),
+                (e.observerType = "click"),
                 observerRegistry.add(_assertThisInitialized(e)),
                 (e.tracker = Tracker),
                 (e.isEnabled = !1),
@@ -13650,72 +13690,72 @@ require = (function () {
             return (
               _createClass(r, [
                 {
-                  key: 'enable',
+                  key: "enable",
                   value: function () {
                     errorHandler.exception ||
                       this.isEnabled ||
                       (this.addListener(),
                       (this.isEnabled = !0),
-                      this.trigger('enabled'));
+                      this.trigger("enabled"));
                   },
                 },
                 {
-                  key: 'addListener',
+                  key: "addListener",
                   value: function () {
                     document.body.addEventListener(
-                      'click',
+                      "click",
                       this._boundOnInteraction,
                     );
                   },
                 },
                 {
-                  key: 'removeListener',
+                  key: "removeListener",
                   value: function () {
                     document.body.removeEventListener(
-                      'click',
+                      "click",
                       this._boundOnInteraction,
                     );
                   },
                 },
                 {
-                  key: '_onInteraction',
+                  key: "_onInteraction",
                   value: function (e) {
                     var t,
                       r = e.target;
-                    r.getAttribute('data-' + this.options.dataAttribute) ||
+                    r.getAttribute("data-" + this.options.dataAttribute) ||
                       ((t = ancestor(
                         r,
-                        '[data-' + this.options.dataAttribute + ']',
+                        "[data-" + this.options.dataAttribute + "]",
                       )) &&
                         (r = t)),
-                      r.classList.contains('ac-gn-link-bag') ||
-                        r.classList.contains('globalnav-link-bag') ||
-                        'ac-gn-link-search' === r.id ||
-                        'ac-gn-link-search-small' === r.id ||
-                        'globalnav-menubutton-link-search' === r.id ||
-                        (r.hasAttribute('href') &&
-                          'A' === r.tagName &&
-                          !r.hasAttribute('data-analytics-intrapage-link') &&
-                          exitLinkPattern.test(r.getAttribute('href'))) ||
-                        (r.getAttribute('data-' + this.options.dataAttribute) &&
+                      r.classList.contains("ac-gn-link-bag") ||
+                        r.classList.contains("globalnav-link-bag") ||
+                        "ac-gn-link-search" === r.id ||
+                        "ac-gn-link-search-small" === r.id ||
+                        "globalnav-menubutton-link-search" === r.id ||
+                        (r.hasAttribute("href") &&
+                          "A" === r.tagName &&
+                          !r.hasAttribute("data-analytics-intrapage-link") &&
+                          exitLinkPattern.test(r.getAttribute("href"))) ||
+                        (r.getAttribute("data-" + this.options.dataAttribute) &&
                           this.track(e, r));
                   },
                 },
                 {
-                  key: 'track',
+                  key: "track",
                   value: function (e, t) {
                     if (this.tracker) {
                       var r = {};
                       acDomNodes.isNodeType(t, acDomNodes.NODE_TYPES.ELEMENT) ||
                         errorHandler.log(
                           moduleName,
-                          'track',
-                          t + ' is not a valid DOM element',
+                          "track",
+                          t + " is not a valid DOM element",
                         ),
                         errorHandler.exception ||
                           ((r.targetEl = t),
                           this.tracker.track({
-                            type: 'click',
+                            type: "click",
                             event: e,
                             data: r,
                             options: JSON.parse(JSON.stringify(this.options)),
@@ -13724,7 +13764,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'destroy',
+                  key: "destroy",
                   value: function () {
                     this.removeListener(),
                       (this.options = null),
@@ -13742,42 +13782,42 @@ require = (function () {
         module.exports = ClickAnalyticsObserver;
       },
       {
-        '../ErrorHandler': 118,
-        '../Tracker': 120,
-        './observerRegistry': 158,
-        '@marcom/ac-dom-nodes': 22,
-        '@marcom/ac-event-emitter-micro': 43,
-        '@marcom/dom-traversal/ancestor': 55,
+        "../ErrorHandler": 118,
+        "../Tracker": 120,
+        "./observerRegistry": 158,
+        "@marcom/ac-dom-nodes": 22,
+        "@marcom/ac-event-emitter-micro": 43,
+        "@marcom/dom-traversal/ancestor": 55,
       },
     ],
     151: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var r = 0; r < t.length; r++) {
             var n = t[r];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(e, n.key, n);
           }
         }
@@ -13785,19 +13825,19 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             r && _defineProperties(e, r),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
         function _inherits(e, t) {
-          if ('function' != typeof t && null !== t)
+          if ("function" != typeof t && null !== t)
             throw new TypeError(
-              'Super expression must either be null or a function',
+              "Super expression must either be null or a function",
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             t && _setPrototypeOf(e, t);
         }
         function _setPrototypeOf(e, t) {
@@ -13820,11 +13860,11 @@ require = (function () {
           };
         }
         function _possibleConstructorReturn(e, t) {
-          if (t && ('object' === _typeof(t) || 'function' == typeof t))
+          if (t && ("object" === _typeof(t) || "function" == typeof t))
             return t;
           if (void 0 !== t)
             throw new TypeError(
-              'Derived constructors may only return object or undefined',
+              "Derived constructors may only return object or undefined",
             );
           return _assertThisInitialized(e);
         }
@@ -13836,9 +13876,9 @@ require = (function () {
           return e;
         }
         function _isNativeReflectConstruct() {
-          if ('undefined' == typeof Reflect || !Reflect.construct) return !1;
+          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
-          if ('function' == typeof Proxy) return !0;
+          if ("function" == typeof Proxy) return !0;
           try {
             return (
               Boolean.prototype.valueOf.call(
@@ -13877,14 +13917,17 @@ require = (function () {
                   _defineProperty(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : ownKeys(Object(r)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(r, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(r),
+                  )
+                : ownKeys(Object(r)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(r, t),
+                    );
+                  });
           }
           return e;
         }
@@ -13902,9 +13945,9 @@ require = (function () {
           );
         }
         var EventEmitterMicro =
-            require('@marcom/ac-event-emitter-micro').EventEmitterMicro,
-          Tracker = require('../Tracker.js'),
-          _require = require('@marcom/element-engagement-observer'),
+            require("@marcom/ac-event-emitter-micro").EventEmitterMicro,
+          Tracker = require("../Tracker.js"),
+          _require = require("@marcom/element-engagement-observer"),
           eeoDefaultOptions = _require.defaultOptions,
           EEO = _require.ElementEngagementObserver,
           defaultOptions = _objectSpread(
@@ -13936,13 +13979,13 @@ require = (function () {
             return (
               _createClass(r, [
                 {
-                  key: 'enable',
+                  key: "enable",
                   value: function () {
                     this.options.initListener.call(this);
                   },
                 },
                 {
-                  key: 'onEnableListenerCallback',
+                  key: "onEnableListenerCallback",
                   value: function (e) {
                     var t = (e.detail || e).target;
                     (this.options.target = t),
@@ -13956,14 +13999,14 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'track',
+                  key: "track",
                   value: function (e) {
                     var t = e.engagementTitle,
                       r = e.target,
                       n = Object.assign({}, e);
                     (n.engagementTitle = t), (n.target = r);
                     var o = {
-                      type: 'elementEngagement',
+                      type: "elementEngagement",
                       observer: this,
                       options: this.options,
                       data: n,
@@ -13978,14 +14021,14 @@ require = (function () {
         module.exports = ElementEngagementObserver;
       },
       {
-        '../Tracker': 120,
-        '@marcom/ac-event-emitter-micro': 43,
-        '@marcom/element-engagement-observer': 58,
+        "../Tracker": 120,
+        "@marcom/ac-event-emitter-micro": 43,
+        "@marcom/element-engagement-observer": 58,
       },
     ],
     152: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function ownKeys(e, t) {
           var r = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -14006,14 +14049,17 @@ require = (function () {
                   _defineProperty(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : ownKeys(Object(r)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(r, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(r),
+                  )
+                : ownKeys(Object(r)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(r, t),
+                    );
+                  });
           }
           return e;
         }
@@ -14032,29 +14078,29 @@ require = (function () {
         }
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var r = 0; r < t.length; r++) {
             var n = t[r];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(e, n.key, n);
           }
         }
@@ -14062,18 +14108,18 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             r && _defineProperties(e, r),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
-        var errorHandler = require('../ErrorHandler.js'),
-          Tracker = require('../Tracker.js'),
-          observerRegistry = require('./observerRegistry.js'),
+        var errorHandler = require("../ErrorHandler.js"),
+          Tracker = require("../Tracker.js"),
+          observerRegistry = require("./observerRegistry.js"),
           defaultOptions = {
             interactionEvents: [],
             interactionEventCallbacks: {},
           },
-          moduleName = 'EventAnalyticsObserver',
+          moduleName = "EventAnalyticsObserver",
           EventAnalyticsObserver = (function () {
             function e(t) {
               var r =
@@ -14082,25 +14128,25 @@ require = (function () {
                   : {};
               _classCallCheck(this, e),
                 (t &&
-                  'object' === _typeof(t) &&
-                  'function' == typeof t.on &&
-                  'function' == typeof t.off) ||
+                  "object" === _typeof(t) &&
+                  "function" == typeof t.on &&
+                  "function" == typeof t.off) ||
                   errorHandler.log(
                     moduleName,
                     null,
-                    t + ' does not appear to be a valid EventEmitter',
+                    t + " does not appear to be a valid EventEmitter",
                   ),
                 (this.options = _objectSpread(
                   _objectSpread({}, defaultOptions),
                   r,
                 )),
-                (this.observerType = 'event'),
+                (this.observerType = "event"),
                 observerRegistry.add(this),
                 Array.isArray(this.options.interactionEvents) ||
                   errorHandler.log(
                     moduleName,
                     null,
-                    this.options.interactionEvents + ' is not an array',
+                    this.options.interactionEvents + " is not an array",
                   ),
                 (this.tracker = Tracker),
                 (this.targetObj = t),
@@ -14110,14 +14156,14 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: 'attachEvents',
+                  key: "attachEvents",
                   value: function () {
                     if (!errorHandler.exception) {
                       var e,
                         t = this.options;
                       t.interactionEvents.forEach(function (r) {
                         (e =
-                          'function' ==
+                          "function" ==
                           typeof (e = t.interactionEventCallbacks[r])
                             ? e
                             : this.track.bind(this)),
@@ -14128,7 +14174,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'detachEvents',
+                  key: "detachEvents",
                   value: function () {
                     Object.keys(this._callbacks).forEach(function (e) {
                       this.removeListener(e, this._callbacks[e]);
@@ -14136,30 +14182,30 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'addListener',
+                  key: "addListener",
                   value: function (e, t) {
                     this.targetObj.on(e, t);
                   },
                 },
                 {
-                  key: 'removeListener',
+                  key: "removeListener",
                   value: function (e, t) {
                     this.targetObj.off(e, t);
                   },
                 },
                 {
-                  key: 'track',
+                  key: "track",
                   value: function (e) {
                     this.tracker &&
                       this.tracker.track({
-                        type: 'custom',
+                        type: "custom",
                         data: e,
                         options: this.options,
                       });
                   },
                 },
                 {
-                  key: 'destroy',
+                  key: "destroy",
                   value: function () {
                     this.detachEvents(),
                       (this.options = null),
@@ -14175,11 +14221,11 @@ require = (function () {
           })();
         module.exports = EventAnalyticsObserver;
       },
-      { '../ErrorHandler': 118, '../Tracker': 120, './observerRegistry': 158 },
+      { "../ErrorHandler": 118, "../Tracker": 120, "./observerRegistry": 158 },
     ],
     153: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function ownKeys(e, t) {
           var n = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -14200,14 +14246,17 @@ require = (function () {
                   _defineProperty(e, t, n[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n))
-              : ownKeys(Object(n)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(n, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(n),
+                  )
+                : ownKeys(Object(n)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(n, t),
+                    );
+                  });
           }
           return e;
         }
@@ -14226,29 +14275,29 @@ require = (function () {
         }
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var n = 0; n < t.length; n++) {
             var r = t[n];
             (r.enumerable = r.enumerable || !1),
               (r.configurable = !0),
-              'value' in r && (r.writable = !0),
+              "value" in r && (r.writable = !0),
               Object.defineProperty(e, r.key, r);
           }
         }
@@ -14256,22 +14305,22 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             n && _defineProperties(e, n),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
-        var Tracker = require('../Tracker.js'),
-          get = require('@apple/analytics-data-layer').get,
-          errorHandler = require('../ErrorHandler.js'),
-          dataLayerConfig = require('../constants.js').dataLayer.configuration,
+        var Tracker = require("../Tracker.js"),
+          get = require("@apple/analytics-data-layer").get,
+          errorHandler = require("../ErrorHandler.js"),
+          dataLayerConfig = require("../constants.js").dataLayer.configuration,
           confKey = dataLayerConfig.key,
-          observerRegistry = require('./observerRegistry.js'),
+          observerRegistry = require("./observerRegistry.js"),
           defaultOptions = {
             trackAutoRotate: !1,
-            beforeUpdateEvent: 'willShow',
-            afterUpdateEvent: 'didShow',
+            beforeUpdateEvent: "willShow",
+            afterUpdateEvent: "didShow",
           },
-          moduleName = 'GalleryAnalyticsObserver',
+          moduleName = "GalleryAnalyticsObserver",
           GalleryAnalyticsObserver = (function () {
             function e(t) {
               var n =
@@ -14279,18 +14328,18 @@ require = (function () {
                   ? arguments[1]
                   : {};
               _classCallCheck(this, e),
-                (t && 'object' === _typeof(t)) ||
-                  errorHandler.log(moduleName, null, t + ' is not an object'),
+                (t && "object" === _typeof(t)) ||
+                  errorHandler.log(moduleName, null, t + " is not an object"),
                 (this.options = _objectSpread(
                   _objectSpread({}, defaultOptions),
                   n,
                 )),
-                (this.observerType = 'gallery'),
+                (this.observerType = "gallery"),
                 observerRegistry.add(this),
                 (this.gallery = t),
                 (this.tracker = Tracker),
                 (this.trackedInteractionTypes = []),
-                (this.outgoingSlideInteractionType = 'auto'),
+                (this.outgoingSlideInteractionType = "auto"),
                 (this.incomingSlideTimestamp = get([
                   confKey,
                   dataLayerConfig.keys.initialTimeStamp,
@@ -14302,7 +14351,7 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: 'addListener',
+                  key: "addListener",
                   value: function () {
                     errorHandler.exception ||
                       (this.options.beforeUpdateEvent &&
@@ -14318,7 +14367,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'removeListener',
+                  key: "removeListener",
                   value: function () {
                     this.options.beforeUpdateEvent &&
                       this.gallery.off(
@@ -14333,7 +14382,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_createInteractionEvent',
+                  key: "_createInteractionEvent",
                   value: function (e) {
                     var t =
                       e.interactionEvent.originalEvent || e.interactionEvent;
@@ -14347,7 +14396,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_onUpdate',
+                  key: "_onUpdate",
                   value: function (e) {
                     (this.interactionEvent = null),
                       e.interactionEvent &&
@@ -14356,29 +14405,29 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_getSlideId',
+                  key: "_getSlideId",
                   value: function (e) {
-                    var t = '',
+                    var t = "",
                       n = 0;
                     if (e && Array.isArray(e)) {
                       n = e.length;
                       for (var r = 0; r < n; r++)
                         if (
-                          'function' == typeof e[r].getElement &&
-                          'function' == typeof e[r].getElementId
+                          "function" == typeof e[r].getElement &&
+                          "function" == typeof e[r].getElementId
                         ) {
                           var i = e[r].getElement(),
                             o = i
-                              ? i.getAttribute('data-analytics-gallery-item-id')
+                              ? i.getAttribute("data-analytics-gallery-item-id")
                               : null;
-                          t += o ? o + '-' : e[r].getElementId() + '-';
+                          t += o ? o + "-" : e[r].getElementId() + "-";
                         }
                     }
                     return t.slice(0, t.length - 1);
                   },
                 },
                 {
-                  key: 'track',
+                  key: "track",
                   value: function (e) {
                     if (
                       this.tracker &&
@@ -14394,16 +14443,16 @@ require = (function () {
                         this.options.galleryName ||
                           errorHandler.log(
                             moduleName,
-                            'track',
+                            "track",
                             this.options.galleryName +
-                              ' is not a valid gallery name',
+                              " is not a valid gallery name",
                           ),
                         errorHandler.exception ||
                           (t.incoming &&
-                            'string' != typeof t.incoming.id &&
+                            "string" != typeof t.incoming.id &&
                             (t.incoming.id = this._getSlideId(t.incoming)),
                           t.outgoing &&
-                            'string' != typeof t.outgoing.id &&
+                            "string" != typeof t.outgoing.id &&
                             (t.outgoing.id = this._getSlideId(t.outgoing)),
                           (this.outgoingSlideTimestamp =
                             this.incomingSlideTimestamp),
@@ -14413,7 +14462,7 @@ require = (function () {
                           (t.outgoingSlideTimestamp =
                             this.outgoingSlideTimestamp),
                           this.tracker.track({
-                            type: 'gallery',
+                            type: "gallery",
                             data: t,
                             observer: this,
                             options: this.options,
@@ -14422,13 +14471,13 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'destroy',
+                  key: "destroy",
                   value: function () {
                     this.gallery ||
                       errorHandler.log(
                         moduleName,
-                        'destroy',
-                        this.gallery + ' is not an object',
+                        "destroy",
+                        this.gallery + " is not an object",
                       ),
                       errorHandler.exception ||
                         (this.removeListener(),
@@ -14447,28 +14496,28 @@ require = (function () {
         module.exports = GalleryAnalyticsObserver;
       },
       {
-        '../ErrorHandler': 118,
-        '../Tracker': 120,
-        '../constants': 121,
-        './observerRegistry': 158,
-        '@apple/analytics-data-layer': 4,
+        "../ErrorHandler": 118,
+        "../Tracker": 120,
+        "../constants": 121,
+        "./observerRegistry": 158,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     154: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
@@ -14492,14 +14541,17 @@ require = (function () {
                   _defineProperty(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : ownKeys(Object(r)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(r, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(r),
+                  )
+                : ownKeys(Object(r)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(r, t),
+                    );
+                  });
           }
           return e;
         }
@@ -14518,14 +14570,14 @@ require = (function () {
         }
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var r = 0; r < t.length; r++) {
             var n = t[r];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(e, n.key, n);
           }
         }
@@ -14533,19 +14585,19 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             r && _defineProperties(e, r),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
         function _inherits(e, t) {
-          if ('function' != typeof t && null !== t)
+          if ("function" != typeof t && null !== t)
             throw new TypeError(
-              'Super expression must either be null or a function',
+              "Super expression must either be null or a function",
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             t && _setPrototypeOf(e, t);
         }
         function _setPrototypeOf(e, t) {
@@ -14568,11 +14620,11 @@ require = (function () {
           };
         }
         function _possibleConstructorReturn(e, t) {
-          if (t && ('object' === _typeof(t) || 'function' == typeof t))
+          if (t && ("object" === _typeof(t) || "function" == typeof t))
             return t;
           if (void 0 !== t)
             throw new TypeError(
-              'Derived constructors may only return object or undefined',
+              "Derived constructors may only return object or undefined",
             );
           return _assertThisInitialized(e);
         }
@@ -14584,9 +14636,9 @@ require = (function () {
           return e;
         }
         function _isNativeReflectConstruct() {
-          if ('undefined' == typeof Reflect || !Reflect.construct) return !1;
+          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
-          if ('function' == typeof Proxy) return !0;
+          if ("function" == typeof Proxy) return !0;
           try {
             return (
               Boolean.prototype.valueOf.call(
@@ -14605,16 +14657,16 @@ require = (function () {
                 return e.__proto__ || Object.getPrototypeOf(e);
               })(e);
         }
-        var ancestor = require('@marcom/dom-traversal/ancestor'),
-          Tracker = require('../Tracker.js'),
-          errorHandler = require('../ErrorHandler.js'),
+        var ancestor = require("@marcom/dom-traversal/ancestor"),
+          Tracker = require("../Tracker.js"),
+          errorHandler = require("../ErrorHandler.js"),
           EventEmitterMicro =
-            require('@marcom/ac-event-emitter-micro').EventEmitterMicro,
-          isIntraPageLink = require('../helpers/DOM.js').isIntraPageLink,
-          observerRegistry = require('./observerRegistry.js'),
+            require("@marcom/ac-event-emitter-micro").EventEmitterMicro,
+          isIntraPageLink = require("../helpers/DOM.js").isIntraPageLink,
+          observerRegistry = require("./observerRegistry.js"),
           defaultOptions = {
-            dataAttribute: 'analytics-link',
-            titleDataAttribute: 'analytics-title',
+            dataAttribute: "analytics-link",
+            titleDataAttribute: "analytics-title",
             silent: !0,
             deferred: !0,
             autoEnable: !0,
@@ -14634,7 +14686,7 @@ require = (function () {
                   _objectSpread({}, defaultOptions),
                   n,
                 )),
-                (e.observerType = 'link'),
+                (e.observerType = "link"),
                 observerRegistry.add(_assertThisInitialized(e)),
                 (e.tracker = Tracker),
                 (e.isEnabled = !1),
@@ -14646,48 +14698,48 @@ require = (function () {
             return (
               _createClass(r, [
                 {
-                  key: 'enable',
+                  key: "enable",
                   value: function () {
                     errorHandler.exception ||
                       this.isEnabled ||
                       (this.addListener(),
                       (this.isEnabled = !0),
-                      this.trigger('enabled'));
+                      this.trigger("enabled"));
                   },
                 },
                 {
-                  key: 'addListener',
+                  key: "addListener",
                   value: function () {
                     document.body.addEventListener(
-                      'mouseup',
+                      "mouseup",
                       this.defaultTracking,
                     );
                   },
                 },
                 {
-                  key: 'removeListener',
+                  key: "removeListener",
                   value: function () {
                     document.body.removeEventListener(
-                      'mouseup',
+                      "mouseup",
                       this.defaultTracking,
                     );
                   },
                 },
                 {
-                  key: 'track',
+                  key: "track",
                   value: function (e) {
                     if (this.tracker) {
                       var t,
                         r,
                         n = {},
                         o = e.target;
-                      'a' === o.nodeName.toLowerCase() && (t = o),
-                        t || ((r = ancestor(o, 'a')) && (t = r)),
+                      "a" === o.nodeName.toLowerCase() && (t = o),
+                        t || ((r = ancestor(o, "a")) && (t = r)),
                         t &&
                           !isIntraPageLink(t) &&
                           ((n.targetEl = t),
                           this.tracker.track({
-                            type: 'link',
+                            type: "link",
                             event: e,
                             data: n,
                             options: this.options,
@@ -14696,7 +14748,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'destroy',
+                  key: "destroy",
                   value: function () {
                     this.removeListener(),
                       (this.options = null),
@@ -14713,29 +14765,29 @@ require = (function () {
         module.exports = LinkAnalyticsObserver;
       },
       {
-        '../ErrorHandler': 118,
-        '../Tracker': 120,
-        '../helpers/DOM': 123,
-        './observerRegistry': 158,
-        '@marcom/ac-event-emitter-micro': 43,
-        '@marcom/dom-traversal/ancestor': 55,
+        "../ErrorHandler": 118,
+        "../Tracker": 120,
+        "../helpers/DOM": 123,
+        "./observerRegistry": 158,
+        "@marcom/ac-event-emitter-micro": 43,
+        "@marcom/dom-traversal/ancestor": 55,
       },
     ],
     155: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
@@ -14759,14 +14811,17 @@ require = (function () {
                   _defineProperty(e, t, r[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(r))
-              : ownKeys(Object(r)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(r, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(r),
+                  )
+                : ownKeys(Object(r)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(r, t),
+                    );
+                  });
           }
           return e;
         }
@@ -14785,14 +14840,14 @@ require = (function () {
         }
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var r = 0; r < t.length; r++) {
             var n = t[r];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(e, n.key, n);
           }
         }
@@ -14800,19 +14855,19 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             r && _defineProperties(e, r),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
         function _inherits(e, t) {
-          if ('function' != typeof t && null !== t)
+          if ("function" != typeof t && null !== t)
             throw new TypeError(
-              'Super expression must either be null or a function',
+              "Super expression must either be null or a function",
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             t && _setPrototypeOf(e, t);
         }
         function _setPrototypeOf(e, t) {
@@ -14835,11 +14890,11 @@ require = (function () {
           };
         }
         function _possibleConstructorReturn(e, t) {
-          if (t && ('object' === _typeof(t) || 'function' == typeof t))
+          if (t && ("object" === _typeof(t) || "function" == typeof t))
             return t;
           if (void 0 !== t)
             throw new TypeError(
-              'Derived constructors may only return object or undefined',
+              "Derived constructors may only return object or undefined",
             );
           return _assertThisInitialized(e);
         }
@@ -14851,9 +14906,9 @@ require = (function () {
           return e;
         }
         function _isNativeReflectConstruct() {
-          if ('undefined' == typeof Reflect || !Reflect.construct) return !1;
+          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
-          if ('function' == typeof Proxy) return !0;
+          if ("function" == typeof Proxy) return !0;
           try {
             return (
               Boolean.prototype.valueOf.call(
@@ -14872,21 +14927,21 @@ require = (function () {
                 return e.__proto__ || Object.getPrototypeOf(e);
               })(e);
         }
-        var Tracker = require('../Tracker.js'),
-          errorHandler = require('../ErrorHandler.js'),
-          onDocumentReady = require('../helpers/onDocumentReady.js'),
+        var Tracker = require("../Tracker.js"),
+          errorHandler = require("../ErrorHandler.js"),
+          onDocumentReady = require("../helpers/onDocumentReady.js"),
           dynamicEventBinder =
-            require('../helpers/dynamicEventBinder.js').dynamicEventBinder,
+            require("../helpers/dynamicEventBinder.js").dynamicEventBinder,
           dynamicEventBinderRemoveListeners =
-            require('../helpers/dynamicEventBinder.js').removeListeners,
+            require("../helpers/dynamicEventBinder.js").removeListeners,
           EventEmitterMicro =
-            require('@marcom/ac-event-emitter-micro').EventEmitterMicro,
-          isIntraPageLink = require('../helpers/DOM.js').isIntraPageLink,
-          ancestor = require('@marcom/dom-traversal/ancestor'),
-          endOfPageTrack = require('@apple/analytics-end-of-page').endOfPage,
-          observerRegistry = require('./observerRegistry.js'),
+            require("@marcom/ac-event-emitter-micro").EventEmitterMicro,
+          isIntraPageLink = require("../helpers/DOM.js").isIntraPageLink,
+          ancestor = require("@marcom/dom-traversal/ancestor"),
+          endOfPageTrack = require("@apple/analytics-end-of-page").endOfPage,
+          observerRegistry = require("./observerRegistry.js"),
           defaultOptions = { autoEnable: !0 },
-          body = 'body',
+          body = "body",
           PageAnalyticsObserver = (function (e) {
             _inherits(r, EventEmitterMicro);
             var t = _createSuper(r);
@@ -14901,7 +14956,7 @@ require = (function () {
                   _objectSpread({}, defaultOptions),
                   n,
                 )),
-                (e.observerType = 'page'),
+                (e.observerType = "page"),
                 observerRegistry.add(_assertThisInitialized(e)),
                 (e.tracker = Tracker),
                 (e.initialized = !1),
@@ -14909,27 +14964,27 @@ require = (function () {
               return (
                 (e.onReadyTracking = e.track.bind(
                   _assertThisInitialized(e),
-                  'readyStateComplete',
+                  "readyStateComplete",
                   { silent: !0 },
                 )),
                 (e.onFocusIn = e.track.bind(
                   _assertThisInitialized(e),
-                  'focusin',
+                  "focusin",
                   {},
                 )),
                 (e.onEndOfPage = e.trackEndOfPage.bind(
                   _assertThisInitialized(e),
-                  'endOfPage',
+                  "endOfPage",
                   {},
                 )),
                 (e.onSubmit = e.track.bind(
                   _assertThisInitialized(e),
-                  'submit',
+                  "submit",
                   { deferred: !0 },
                 )),
                 (e.onLinkClick = e.track.bind(
                   _assertThisInitialized(e),
-                  'linkClick',
+                  "linkClick",
                   {},
                 )),
                 (e.onNavigationalLink = e.onNavigationalLink.bind(
@@ -14937,7 +14992,7 @@ require = (function () {
                 )),
                 (e.onPageHide = e.track.bind(
                   _assertThisInitialized(e),
-                  'pageHide',
+                  "pageHide",
                   { deferred: !0, beacon: {} },
                 )),
                 (e.onScroll = e.onScroll.bind(_assertThisInitialized(e))),
@@ -14948,78 +15003,78 @@ require = (function () {
             return (
               _createClass(r, [
                 {
-                  key: 'onScroll',
+                  key: "onScroll",
                   value: function () {
                     endOfPageTrack({
-                      element: document.querySelector('#ac-globalfooter'),
+                      element: document.querySelector("#ac-globalfooter"),
                       onPageEnd: this.onEndOfPage,
                     }),
-                      document.removeEventListener('scroll', this.onScroll);
+                      document.removeEventListener("scroll", this.onScroll);
                   },
                 },
                 {
-                  key: 'enable',
+                  key: "enable",
                   value: function () {
                     var e = this;
                     errorHandler.exception ||
                       this.enabled ||
                       (this.tracker.AppMeasurement.initialize(this.options),
-                      this.track('page'),
+                      this.track("page"),
                       (this.enabled = !0),
-                      this.trigger('enabled'),
+                      this.trigger("enabled"),
                       setTimeout(function () {
-                        e.track('storeAtPageLoad', { deferred: !0 }),
+                        e.track("storeAtPageLoad", { deferred: !0 }),
                           onDocumentReady(e.onReadyTracking),
                           dynamicEventBinder({
                             parentSelector: body,
-                            eventType: 'focusin',
-                            childSelector: 'input',
+                            eventType: "focusin",
+                            childSelector: "input",
                             callback: e.onFocusIn,
                           }),
                           dynamicEventBinder({
                             parentSelector: body,
-                            eventType: 'click',
-                            childSelector: 'a',
+                            eventType: "click",
+                            childSelector: "a",
                             callback: e.onLinkClick,
                           }),
                           dynamicEventBinder({
                             parentSelector: body,
-                            eventType: 'click',
-                            childSelector: 'a',
+                            eventType: "click",
+                            childSelector: "a",
                             callback: e.onNavigationalLink,
                           }),
                           dynamicEventBinder({
                             parentSelector: body,
-                            eventType: 'submit',
-                            childSelector: 'form',
+                            eventType: "submit",
+                            childSelector: "form",
                             callback: e.onSubmit,
                           }),
                           dynamicEventBinder({
                             parentSelector: window,
-                            eventType: 'pagehide',
+                            eventType: "pagehide",
                             callback: e.onPageHide,
                           });
                       }, 0),
                       setTimeout(function () {
-                        document.addEventListener('scroll', e.onScroll);
+                        document.addEventListener("scroll", e.onScroll);
                       }, 1e3));
                   },
                 },
                 {
-                  key: 'onNavigationalLink',
+                  key: "onNavigationalLink",
                   value: function (e) {
                     if (this.tracker) {
                       var t,
                         r,
                         n = {},
                         i = e.target;
-                      'a' === i.nodeName.toLowerCase() && (t = i),
-                        t || ((r = ancestor(i, 'a')) && (t = r)),
+                      "a" === i.nodeName.toLowerCase() && (t = i),
+                        t || ((r = ancestor(i, "a")) && (t = r)),
                         t &&
                           !isIntraPageLink(t) &&
                           ((n.targetEl = t),
                           this.tracker.track({
-                            type: 'navigationalLink',
+                            type: "navigationalLink",
                             event: e,
                             data: n,
                             options: JSON.parse(
@@ -15030,11 +15085,11 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'track',
+                  key: "track",
                   value: function (e, t, r) {
                     if (this.tracker) {
                       var n = {};
-                      'page' === e &&
+                      "page" === e &&
                         this.options &&
                         this.options.data &&
                         (n = this.options.data),
@@ -15049,7 +15104,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'trackEndOfPage',
+                  key: "trackEndOfPage",
                   value: function (e, t, r) {
                     this.tracker &&
                       this.tracker.track({
@@ -15060,13 +15115,13 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'destroy',
+                  key: "destroy",
                   value: function () {
                     (this.options = null),
                       (this.tracker = null),
                       (this.initialized = null),
                       dynamicEventBinderRemoveListeners(),
-                      document.removeEventListener('scroll', this.onScroll),
+                      document.removeEventListener("scroll", this.onScroll),
                       observerRegistry.remove(this);
                   },
                 },
@@ -15077,32 +15132,32 @@ require = (function () {
         module.exports = PageAnalyticsObserver;
       },
       {
-        '../ErrorHandler': 118,
-        '../Tracker': 120,
-        '../helpers/DOM': 123,
-        '../helpers/dynamicEventBinder': 127,
-        '../helpers/onDocumentReady': 140,
-        './observerRegistry': 158,
-        '@apple/analytics-end-of-page': 5,
-        '@marcom/ac-event-emitter-micro': 43,
-        '@marcom/dom-traversal/ancestor': 55,
+        "../ErrorHandler": 118,
+        "../Tracker": 120,
+        "../helpers/DOM": 123,
+        "../helpers/dynamicEventBinder": 127,
+        "../helpers/onDocumentReady": 140,
+        "./observerRegistry": 158,
+        "@apple/analytics-end-of-page": 5,
+        "@marcom/ac-event-emitter-micro": 43,
+        "@marcom/dom-traversal/ancestor": 55,
       },
     ],
     156: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
@@ -15116,28 +15171,28 @@ require = (function () {
         }
         function _nonIterableSpread() {
           throw new TypeError(
-            'Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.',
+            "Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
           );
         }
         function _unsupportedIterableToArray(e, t) {
           if (e) {
-            if ('string' == typeof e) return _arrayLikeToArray(e, t);
+            if ("string" == typeof e) return _arrayLikeToArray(e, t);
             var n = Object.prototype.toString.call(e).slice(8, -1);
             return (
-              'Object' === n && e.constructor && (n = e.constructor.name),
-              'Map' === n || 'Set' === n
+              "Object" === n && e.constructor && (n = e.constructor.name),
+              "Map" === n || "Set" === n
                 ? Array.from(e)
-                : 'Arguments' === n ||
-                  /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
-                ? _arrayLikeToArray(e, t)
-                : void 0
+                : "Arguments" === n ||
+                    /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)
+                  ? _arrayLikeToArray(e, t)
+                  : void 0
             );
           }
         }
         function _iterableToArray(e) {
           if (
-            ('undefined' != typeof Symbol && null != e[Symbol.iterator]) ||
-            null != e['@@iterator']
+            ("undefined" != typeof Symbol && null != e[Symbol.iterator]) ||
+            null != e["@@iterator"]
           )
             return Array.from(e);
         }
@@ -15151,14 +15206,14 @@ require = (function () {
         }
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var n = 0; n < t.length; n++) {
             var i = t[n];
             (i.enumerable = i.enumerable || !1),
               (i.configurable = !0),
-              'value' in i && (i.writable = !0),
+              "value" in i && (i.writable = !0),
               Object.defineProperty(e, i.key, i);
           }
         }
@@ -15166,19 +15221,19 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             n && _defineProperties(e, n),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
         function _inherits(e, t) {
-          if ('function' != typeof t && null !== t)
+          if ("function" != typeof t && null !== t)
             throw new TypeError(
-              'Super expression must either be null or a function',
+              "Super expression must either be null or a function",
             );
           (e.prototype = Object.create(t && t.prototype, {
             constructor: { value: e, writable: !0, configurable: !0 },
           })),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             t && _setPrototypeOf(e, t);
         }
         function _setPrototypeOf(e, t) {
@@ -15201,11 +15256,11 @@ require = (function () {
           };
         }
         function _possibleConstructorReturn(e, t) {
-          if (t && ('object' === _typeof(t) || 'function' == typeof t))
+          if (t && ("object" === _typeof(t) || "function" == typeof t))
             return t;
           if (void 0 !== t)
             throw new TypeError(
-              'Derived constructors may only return object or undefined',
+              "Derived constructors may only return object or undefined",
             );
           return _assertThisInitialized(e);
         }
@@ -15217,9 +15272,9 @@ require = (function () {
           return e;
         }
         function _isNativeReflectConstruct() {
-          if ('undefined' == typeof Reflect || !Reflect.construct) return !1;
+          if ("undefined" == typeof Reflect || !Reflect.construct) return !1;
           if (Reflect.construct.sham) return !1;
-          if ('function' == typeof Proxy) return !0;
+          if ("function" == typeof Proxy) return !0;
           try {
             return (
               Boolean.prototype.valueOf.call(
@@ -15238,16 +15293,16 @@ require = (function () {
                 return e.__proto__ || Object.getPrototypeOf(e);
               })(e);
         }
-        var ElementEngagement = require('@marcom/ac-element-engagement'),
-          Tracker = require('../Tracker.js'),
-          errorHandler = require('../ErrorHandler.js'),
-          dataStringToObject = require('../helpers/dataStringToObject.js'),
-          isNumeric = require('../helpers/isNumeric.js'),
+        var ElementEngagement = require("@marcom/ac-element-engagement"),
+          Tracker = require("../Tracker.js"),
+          errorHandler = require("../ErrorHandler.js"),
+          dataStringToObject = require("../helpers/dataStringToObject.js"),
+          isNumeric = require("../helpers/isNumeric.js"),
           EventEmitterMicro =
-            require('@marcom/ac-event-emitter-micro').EventEmitterMicro,
-          debounce = require('@marcom/function-utils/debounce'),
-          observerRegistry = require('./observerRegistry.js'),
-          moduleName = 'SectionAnalyticsObserver';
+            require("@marcom/ac-event-emitter-micro").EventEmitterMicro,
+          debounce = require("@marcom/function-utils/debounce"),
+          observerRegistry = require("./observerRegistry.js"),
+          moduleName = "SectionAnalyticsObserver";
         ElementEngagement._elementInViewPastThreshold = function (e) {
           return (
             (e.engaged
@@ -15257,7 +15312,7 @@ require = (function () {
           );
         };
         var defaultOptions = {
-            dataAttribute: 'analytics-section-engagement',
+            dataAttribute: "analytics-section-engagement",
             autoEnable: !0,
             customInitialization: !1,
           },
@@ -15278,11 +15333,11 @@ require = (function () {
                 ElementEngagement.elements.length > 0 &&
                   errorHandler.warn(
                     moduleName,
-                    'constructor',
-                    'element engagement was already tracking elements when a new section observer was created. This could lead to errors in tracking. Make sure to destroy section observer before creating a new one.',
+                    "constructor",
+                    "element engagement was already tracking elements when a new section observer was created. This could lead to errors in tracking. Make sure to destroy section observer before creating a new one.",
                   ),
                 (e.options = Object.assign({}, defaultOptions, i)),
-                (e.observerType = 'section'),
+                (e.observerType = "section"),
                 observerRegistry.add(_assertThisInitialized(e)),
                 (e.tracker = Tracker),
                 (e.elementEngagement = ElementEngagement),
@@ -15296,7 +15351,7 @@ require = (function () {
             return (
               _createClass(n, [
                 {
-                  key: 'enable',
+                  key: "enable",
                   value: function () {
                     errorHandler.exception ||
                       this.isEnabled ||
@@ -15306,7 +15361,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'initializeTracking',
+                  key: "initializeTracking",
                   value: function () {
                     this.sections && this.sections.length > 0
                       ? (this._setPosition(),
@@ -15314,16 +15369,16 @@ require = (function () {
                         this._addListeners(),
                         this.elementEngagement.start(),
                         (this.isEnabled = !0),
-                        this.trigger('enabled'))
+                        this.trigger("enabled"))
                       : errorHandler.warn(
                           moduleName,
-                          'initializeTracking',
-                          'initialization of Section Observer had no effect because no valid sections were queued before initialization.',
+                          "initializeTracking",
+                          "initialization of Section Observer had no effect because no valid sections were queued before initialization.",
                         );
                   },
                 },
                 {
-                  key: 'initializeSection',
+                  key: "initializeSection",
                   value: function (e) {
                     if (this.sections && 0 !== this.sections.length) {
                       var t = this._getTrackedElement(e);
@@ -15340,7 +15395,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'addSection',
+                  key: "addSection",
                   value: function (e) {
                     if (
                       e &&
@@ -15350,7 +15405,7 @@ require = (function () {
                       var t;
                       this.sections.push(e);
                       var n = e.getAttribute(
-                        'data-' + this.options.dataAttribute,
+                        "data-" + this.options.dataAttribute,
                       );
                       (t = dataStringToObject(n)),
                         (t = this._castDataAttributeOptions(t)),
@@ -15360,7 +15415,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'removeSection',
+                  key: "removeSection",
                   value: function (e) {
                     var t = this._getTrackedElement(e),
                       n = this.sections.indexOf(e);
@@ -15369,7 +15424,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'clearSections',
+                  key: "clearSections",
                   value: function () {
                     this.elementEngagement &&
                       this.elementEngagement.elements &&
@@ -15382,18 +15437,18 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'refreshMetrics',
+                  key: "refreshMetrics",
                   value: function () {
                     this.elementEngagement.refreshAllElementMetrics();
                   },
                 },
                 {
-                  key: 'startSectionEngagement',
+                  key: "startSectionEngagement",
                   value: function (e) {
                     var t = this._getTrackedElement(e);
                     t &&
-                      (t.trigger('thresholdenter', t),
-                      t.trigger('engaged', t),
+                      (t.trigger("thresholdenter", t),
+                      t.trigger("engaged", t),
                       this.elementEngagement._engaged.call(
                         this.elementEngagement,
                         t,
@@ -15401,7 +15456,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'endSectionEngagement',
+                  key: "endSectionEngagement",
                   value: function (e) {
                     var t = this._getTrackedElement(e);
                     t &&
@@ -15412,21 +15467,21 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'pauseElementTracking',
+                  key: "pauseElementTracking",
                   value: function (e) {
                     var t = this._getTrackedElement(e);
                     t && (t.isActive = !1);
                   },
                 },
                 {
-                  key: 'resumeElementTracking',
+                  key: "resumeElementTracking",
                   value: function (e) {
                     var t = this._getTrackedElement(e);
                     t && (t.isActive = !0);
                   },
                 },
                 {
-                  key: '_bindMethods',
+                  key: "_bindMethods",
                   value: function () {
                     (this._onThresholdExit = this._onThresholdExit.bind(this)),
                       (this._onScroll = this._onScroll.bind(this)),
@@ -15438,11 +15493,11 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_loadSections',
+                  key: "_loadSections",
                   value: function () {
                     _toConsumableArray(
                       document.querySelectorAll(
-                        '[data-' + this.options.dataAttribute + ']',
+                        "[data-" + this.options.dataAttribute + "]",
                       ),
                     ).forEach(function (e) {
                       this.addSection(e);
@@ -15450,7 +15505,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_setPosition',
+                  key: "_setPosition",
                   value: function () {
                     var e,
                       t = this.sections.length;
@@ -15459,7 +15514,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_castDataAttributeOptions',
+                  key: "_castDataAttributeOptions",
                   value: function (e) {
                     return (
                       (e = Object.assign({}, e)),
@@ -15467,7 +15522,7 @@ require = (function () {
                         var n,
                           i = e[t];
                         (n =
-                          'false' !== i && ('true' === i || (isNumeric(i), i))),
+                          "false" !== i && ("true" === i || (isNumeric(i), i))),
                           (e[t] = n);
                       }),
                       e
@@ -15475,42 +15530,42 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_addListeners',
+                  key: "_addListeners",
                   value: function () {
                     (this._listeners = !0),
                       this.elementEngagement.on(
-                        'thresholdexit',
+                        "thresholdexit",
                         this._onThresholdExit,
                       ),
-                      window.addEventListener('scroll', this._onScroll),
-                      window.addEventListener('resize', this._onResize),
+                      window.addEventListener("scroll", this._onScroll),
+                      window.addEventListener("resize", this._onResize),
                       window.addEventListener(
-                        'orientationchange',
+                        "orientationchange",
                         this._onResize,
                       );
                   },
                 },
                 {
-                  key: '_removeListeners',
+                  key: "_removeListeners",
                   value: function () {
                     (this._listeners = !1),
                       this.elementEngagement &&
                         this.elementEngagement.off &&
-                        'function' == typeof this.elementEngagement.off &&
+                        "function" == typeof this.elementEngagement.off &&
                         this.elementEngagement.off(
-                          'thresholdexit',
+                          "thresholdexit",
                           this._onThresholdExit,
                         ),
-                      window.removeEventListener('scroll', this._onScroll),
-                      window.removeEventListener('resize', this._onResize),
+                      window.removeEventListener("scroll", this._onScroll),
+                      window.removeEventListener("resize", this._onResize),
                       window.removeEventListener(
-                        'orientationchange',
+                        "orientationchange",
                         this._onResize,
                       );
                   },
                 },
                 {
-                  key: '_onThresholdExit',
+                  key: "_onThresholdExit",
                   value: function (e) {
                     if (e.engaged) {
                       var t = { element: e };
@@ -15519,7 +15574,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_onScroll',
+                  key: "_onScroll",
                   value: function () {
                     var e = this;
                     return debounce(
@@ -15532,7 +15587,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_onResize',
+                  key: "_onResize",
                   value: function () {
                     var e = this;
                     return debounce(
@@ -15545,7 +15600,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_checkForPageEnd',
+                  key: "_checkForPageEnd",
                   value: function () {
                     window.pageYOffset >=
                       document.body.scrollHeight - window.innerHeight &&
@@ -15553,7 +15608,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_pageEnd',
+                  key: "_pageEnd",
                   value: function () {
                     var e = [];
                     this.elementEngagement.elements.forEach(function (t) {
@@ -15566,24 +15621,24 @@ require = (function () {
                       e.forEach(function (e) {
                         e.engaged
                           ? this.endSectionEngagement(e)
-                          : !1 === e.has('engaged') &&
-                            e.once('engaged', this.endSectionEngagement);
+                          : !1 === e.has("engaged") &&
+                            e.once("engaged", this.endSectionEngagement);
                       }, this);
                   },
                 },
                 {
-                  key: 'track',
+                  key: "track",
                   value: function (e) {
                     this.tracker &&
                       this.tracker.track({
-                        type: 'section',
+                        type: "section",
                         data: e,
                         options: this.options,
                       });
                   },
                 },
                 {
-                  key: 'destroy',
+                  key: "destroy",
                   value: function () {
                     this.elementEngagement &&
                       (this.clearSections(), this.elementEngagement.stop()),
@@ -15596,15 +15651,15 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_getTrackedElement',
+                  key: "_getTrackedElement",
                   value: function (e) {
                     return (
                       e instanceof Element &&
-                        (e = this.elementEngagement.elements.filter(function (
-                          t,
-                        ) {
-                          return t.element === e;
-                        })[0]),
+                        (e = this.elementEngagement.elements.filter(
+                          function (t) {
+                            return t.element === e;
+                          },
+                        )[0]),
                       e instanceof EventEmitterMicro ? e : null
                     );
                   },
@@ -15616,19 +15671,19 @@ require = (function () {
         module.exports = SectionAnalyticsObserver;
       },
       {
-        '../ErrorHandler': 118,
-        '../Tracker': 120,
-        '../helpers/dataStringToObject': 126,
-        '../helpers/isNumeric': 136,
-        './observerRegistry': 158,
-        '@marcom/ac-element-engagement': 33,
-        '@marcom/ac-event-emitter-micro': 43,
-        '@marcom/function-utils/debounce': 65,
+        "../ErrorHandler": 118,
+        "../Tracker": 120,
+        "../helpers/dataStringToObject": 126,
+        "../helpers/isNumeric": 136,
+        "./observerRegistry": 158,
+        "@marcom/ac-element-engagement": 33,
+        "@marcom/ac-event-emitter-micro": 43,
+        "@marcom/function-utils/debounce": 65,
       },
     ],
     157: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function ownKeys(e, t) {
           var i = Object.keys(e);
           if (Object.getOwnPropertySymbols) {
@@ -15649,14 +15704,17 @@ require = (function () {
                   _defineProperty(e, t, i[t]);
                 })
               : Object.getOwnPropertyDescriptors
-              ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(i))
-              : ownKeys(Object(i)).forEach(function (t) {
-                  Object.defineProperty(
+                ? Object.defineProperties(
                     e,
-                    t,
-                    Object.getOwnPropertyDescriptor(i, t),
-                  );
-                });
+                    Object.getOwnPropertyDescriptors(i),
+                  )
+                : ownKeys(Object(i)).forEach(function (t) {
+                    Object.defineProperty(
+                      e,
+                      t,
+                      Object.getOwnPropertyDescriptor(i, t),
+                    );
+                  });
           }
           return e;
         }
@@ -15675,29 +15733,29 @@ require = (function () {
         }
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
         function _classCallCheck(e, t) {
           if (!(e instanceof t))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, t) {
           for (var i = 0; i < t.length; i++) {
             var s = t[i];
             (s.enumerable = s.enumerable || !1),
               (s.configurable = !0),
-              'value' in s && (s.writable = !0),
+              "value" in s && (s.writable = !0),
               Object.defineProperty(e, s.key, s);
           }
         }
@@ -15705,19 +15763,19 @@ require = (function () {
           return (
             t && _defineProperties(e.prototype, t),
             i && _defineProperties(e, i),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
-        var errorHandler = require('../ErrorHandler.js'),
-          Tracker = require('../Tracker.js'),
-          isNode = require('@marcom/ac-dom-nodes/isNode'),
-          debounce = require('@marcom/function-utils/debounce'),
-          isHandheld = require('@marcom/feature-detect/isHandheld')(),
-          acUserAgent = require('@marcom/useragent-detect'),
-          observerRegistry = require('./observerRegistry.js'),
-          dataAttributeAnalyticsId = 'analytics-id',
-          moduleName = 'VideoAnalyticsObserver',
+        var errorHandler = require("../ErrorHandler.js"),
+          Tracker = require("../Tracker.js"),
+          isNode = require("@marcom/ac-dom-nodes/isNode"),
+          debounce = require("@marcom/function-utils/debounce"),
+          isHandheld = require("@marcom/feature-detect/isHandheld")(),
+          acUserAgent = require("@marcom/useragent-detect"),
+          observerRegistry = require("./observerRegistry.js"),
+          dataAttributeAnalyticsId = "analytics-id",
+          moduleName = "VideoAnalyticsObserver",
           videoSegmentBoundries = [0, 0.1, 0.25, 0.5, 0.75, 0.9, 1],
           defaultOptions = {
             mediaEvents: [],
@@ -15730,7 +15788,7 @@ require = (function () {
             trackCurrentTime: !0,
             streamingVideo: !1,
           },
-          AC_VIDEO_SUPPORTS_CUSTOM_PLAY_VERSION = '3.6.1',
+          AC_VIDEO_SUPPORTS_CUSTOM_PLAY_VERSION = "3.6.1",
           IS_IE = acUserAgent.browser.ie,
           IS_MOBILE = acUserAgent.os.ios || acUserAgent.os.android,
           VideoAnalyticsObserver = (function () {
@@ -15740,13 +15798,13 @@ require = (function () {
                   ? arguments[1]
                   : {};
               _classCallCheck(this, e),
-                (t && 'object' === _typeof(t)) ||
-                  errorHandler.log(moduleName, null, t + ' is not an object'),
+                (t && "object" === _typeof(t)) ||
+                  errorHandler.log(moduleName, null, t + " is not an object"),
                 (this.options = _objectSpread(
                   _objectSpread({}, defaultOptions),
                   i,
                 )),
-                (this.observerType = 'video'),
+                (this.observerType = "video"),
                 observerRegistry.add(this),
                 !0 === this.options.streamingVideo &&
                   ((this.options.trackMilestones = !1),
@@ -15758,7 +15816,7 @@ require = (function () {
                     moduleName,
                     null,
                     this.options.mediaEvents +
-                      ' is not a valid media events array',
+                      " is not a valid media events array",
                   ),
                 (this.tracker = Tracker),
                 (this.video = t),
@@ -15766,15 +15824,15 @@ require = (function () {
                 (this.ttShowCount = 0),
                 (this._callbacks = {}),
                 (this._events = {
-                  play: 'play',
-                  playing: 'playing',
-                  pause: 'pause',
-                  timeupdate: 'timeupdate',
-                  seeking: 'seeking',
-                  seeked: 'seeked',
-                  ended: 'ended',
-                  texttrackshow: 'texttrackshow',
-                  PlayPromiseResolved: 'PlayPromiseResolved',
+                  play: "play",
+                  playing: "playing",
+                  pause: "pause",
+                  timeupdate: "timeupdate",
+                  seeking: "seeking",
+                  seeked: "seeked",
+                  ended: "ended",
+                  texttrackshow: "texttrackshow",
+                  PlayPromiseResolved: "PlayPromiseResolved",
                 }),
                 (this._onWebkitEndFullscreen =
                   this._onWebkitEndFullscreen.bind(this)),
@@ -15785,7 +15843,7 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: '_initializeInDOM',
+                  key: "_initializeInDOM",
                   value: function () {
                     errorHandler.exception ||
                       (this.options.videoElement
@@ -15798,7 +15856,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_setupMilestoneTracking',
+                  key: "_setupMilestoneTracking",
                   value: function () {
                     var e = this;
                     (this._milestoneTrackingTimeout = null),
@@ -15824,7 +15882,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_createVideoMilestones',
+                  key: "_createVideoMilestones",
                   value: function () {
                     var e = [];
                     return (
@@ -15837,14 +15895,14 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'attachEvents',
+                  key: "attachEvents",
                   value: function () {
                     var e,
                       t = this.options;
                     t.mediaEvents.forEach(
                       function (i) {
                         (e =
-                          'function' == typeof (e = t.mediaEventCallbacks[i])
+                          "function" == typeof (e = t.mediaEventCallbacks[i])
                             ? e
                             : this._defaultTracking.bind(this, i)),
                           (this._callbacks[i] = e),
@@ -15855,7 +15913,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_attachDefaultEvents',
+                  key: "_attachDefaultEvents",
                   value: function () {
                     this._prepareForPlayFromStart(),
                       this.video.on(this._events.ended, this._onEnded, this),
@@ -15873,7 +15931,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'detachEvents',
+                  key: "detachEvents",
                   value: function () {
                     this.options.mediaEvents.forEach(
                       function (e) {
@@ -15884,7 +15942,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_detachPrivateEvents',
+                  key: "_detachPrivateEvents",
                   value: function () {
                     this.video.off(
                       this._events.play,
@@ -15910,7 +15968,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_prepareForPlayFromStart',
+                  key: "_prepareForPlayFromStart",
                   value: function () {
                     this._playBound ||
                       ((this.options.trackMilestones ||
@@ -15922,21 +15980,21 @@ require = (function () {
                             this._onPlayingFromStart,
                           )
                         : IS_IE
-                        ? this.video.once(
-                            this._events.play,
-                            this._onPlayFromStart,
-                            this,
-                          )
-                        : this.video.once(
-                            this._getPlayEventName(),
-                            this._onPlayingFromStart,
-                            this,
-                          ),
+                          ? this.video.once(
+                              this._events.play,
+                              this._onPlayFromStart,
+                              this,
+                            )
+                          : this.video.once(
+                              this._getPlayEventName(),
+                              this._onPlayingFromStart,
+                              this,
+                            ),
                       (this._playBound = !0));
                   },
                 },
                 {
-                  key: '_onPlayFromStart',
+                  key: "_onPlayFromStart",
                   value: function (e) {
                     if (!this.started) {
                       (this.options.trackMilestones ||
@@ -15953,7 +16011,7 @@ require = (function () {
                           isHandheld &&
                             !this._isAcVideo() &&
                             this.videoElement.addEventListener(
-                              'webkitendfullscreen',
+                              "webkitendfullscreen",
                               this._onWebkitEndFullscreen,
                             )),
                         (this._hadSeeked = !1),
@@ -15969,19 +16027,19 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_onWebkitEndFullscreen',
+                  key: "_onWebkitEndFullscreen",
                   value: function () {
                     (this._started = !1),
                       this.videoElement &&
                         this.videoElement.removeEventListener(
-                          'webkitendfullscreen',
+                          "webkitendfullscreen",
                           this._prepareForPlayFromStart,
                         ),
                       this._prepareForPlayFromStart();
                   },
                 },
                 {
-                  key: '_onTimeupdate',
+                  key: "_onTimeupdate",
                   value: function (e) {
                     if (e.currentTime < 0.1) {
                       var t = !0;
@@ -15997,21 +16055,21 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_onEnded',
+                  key: "_onEnded",
                   value: function (e) {
                     (this.options.trackMilestones ||
                       this.options.trackSeeking) &&
                       (this._milestonesSeekedCancel(),
                       (this._hadJustEnded = !0)),
                       (this._started = !1);
-                    var t = this._bundleTrackingData('ended', e);
+                    var t = this._bundleTrackingData("ended", e);
                     (this.ended = !0),
                       this.track(t),
                       this._prepareForPlayFromStart();
                   },
                 },
                 {
-                  key: '_onTextTrackShow',
+                  key: "_onTextTrackShow",
                   value: function (e) {
                     var t = this.video._videoImpl.getMediaElement(),
                       i = this._bundleTrackingData(
@@ -16027,7 +16085,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_setVideoElement',
+                  key: "_setVideoElement",
                   value: function () {
                     this.video &&
                       (void 0 !== this.video.getMediaElement &&
@@ -16042,7 +16100,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_startTrackingMilestones',
+                  key: "_startTrackingMilestones",
                   value: function () {
                     this.videoElement &&
                       (this._setMilestoneEventListeners(),
@@ -16050,7 +16108,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_bindMilestoneHandlers',
+                  key: "_bindMilestoneHandlers",
                   value: function () {
                     (this._milestonesSeeking =
                       this._milestonesSeeking.bind(this)),
@@ -16062,7 +16120,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_setMilestoneEventListeners',
+                  key: "_setMilestoneEventListeners",
                   value: function () {
                     this.videoElement.addEventListener(
                       this._events.seeking,
@@ -16088,7 +16146,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_milestonesSeeking',
+                  key: "_milestonesSeeking",
                   value: function () {
                     if (
                       (this._hadSeeked && (this._hadSeeked = !1),
@@ -16101,20 +16159,20 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_milestonesPlay',
+                  key: "_milestonesPlay",
                   value: function () {
                     this._checkForMilestone();
                   },
                 },
                 {
-                  key: '_milestonesPause',
+                  key: "_milestonesPause",
                   value: function () {
                     clearTimeout(this._milestoneTrackingTimeout),
                       (this._milestoneTrackingTimeout = null);
                   },
                 },
                 {
-                  key: '_checkForMilestone',
+                  key: "_checkForMilestone",
                   value: function () {
                     this._milestoneTrackingTimeout &&
                       clearTimeout(this._milestoneTrackingTimeout),
@@ -16130,7 +16188,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_getElligibleMilestone',
+                  key: "_getElligibleMilestone",
                   value: function () {
                     var e;
                     if (
@@ -16158,11 +16216,11 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_trackMilestone',
+                  key: "_trackMilestone",
                   value: function (e) {
                     var t;
                     this._activeVideoMilestones.splice(e.index, 1),
-                      ((t = this._bundleTrackingData('milestone')).milestone =
+                      ((t = this._bundleTrackingData("milestone")).milestone =
                         e.name),
                       this._hadSeeked &&
                         ((t.seeked = !0), (this._hadSeeked = !1)),
@@ -16170,7 +16228,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_cleanUpMilestoneTracking',
+                  key: "_cleanUpMilestoneTracking",
                   value: function () {
                     (this._hadSeeked = !1),
                       this._refreshMilestones(),
@@ -16201,7 +16259,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_refreshMilestones',
+                  key: "_refreshMilestones",
                   value: function () {
                     this._hadSeeked
                       ? (this._activeVideoMilestones =
@@ -16211,19 +16269,19 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'addListener',
+                  key: "addListener",
                   value: function (e, t) {
                     this.video.on(e, t);
                   },
                 },
                 {
-                  key: 'removeListener',
+                  key: "removeListener",
                   value: function (e, t) {
                     this.video.off(e, t);
                   },
                 },
                 {
-                  key: '_getCommonVideoData',
+                  key: "_getCommonVideoData",
                   value: function (e) {
                     var t,
                       i = {};
@@ -16232,13 +16290,13 @@ require = (function () {
                       (t =
                         i.targetEl && isNode(i.targetEl)
                           ? i.targetEl.getAttribute(
-                              'data-' + dataAttributeAnalyticsId,
+                              "data-" + dataAttributeAnalyticsId,
                             )
-                          : ''),
+                          : ""),
                       (i.videoId = t || this.video.targetId),
                       (i.ended = this.ended),
                       (i.eventType = e),
-                      'playing' === i.eventType && (i.eventType = 'play'),
+                      "playing" === i.eventType && (i.eventType = "play"),
                       this.videoElement &&
                         ((i.duration = NaN),
                         (i.currentTime = NaN),
@@ -16262,7 +16320,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_getUniqueVideoId',
+                  key: "_getUniqueVideoId",
                   value: function (e) {
                     var t;
                     return (t = e.match(/[\w\d]{8}[\w\d-]+[\w\d\/]+\//g)) &&
@@ -16272,39 +16330,39 @@ require = (function () {
                   },
                 },
                 {
-                  key: '_bundleTrackingData',
+                  key: "_bundleTrackingData",
                   value: function (e, t) {
                     var i = this._getCommonVideoData(e);
                     return Object.assign({}, t, i);
                   },
                 },
                 {
-                  key: '_defaultTracking',
+                  key: "_defaultTracking",
                   value: function (e) {
                     var t = this._bundleTrackingData(e);
                     this.track(t);
                   },
                 },
                 {
-                  key: '_isAcVideo',
+                  key: "_isAcVideo",
                   value: function () {
-                    return 'function' == typeof this.video.play;
+                    return "function" == typeof this.video.play;
                   },
                 },
                 {
-                  key: '_getPlayEventName',
+                  key: "_getPlayEventName",
                   value: function () {
                     return this.video.VERSION &&
                       this._isVersionGreaterOrEqual(
                         this.video.VERSION.toArray(),
-                        AC_VIDEO_SUPPORTS_CUSTOM_PLAY_VERSION.split('.'),
+                        AC_VIDEO_SUPPORTS_CUSTOM_PLAY_VERSION.split("."),
                       )
                       ? this._events.PlayPromiseResolved
                       : this._events.play;
                   },
                 },
                 {
-                  key: '_isVersionGreaterOrEqual',
+                  key: "_isVersionGreaterOrEqual",
                   value: function (e, t) {
                     return (
                       (!e.length && !t.length) ||
@@ -16316,10 +16374,10 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'track',
+                  key: "track",
                   value: function (e) {
                     if (this.tracker) {
-                      if ('milestone' === e.eventType) {
+                      if ("milestone" === e.eventType) {
                         if (
                           !this.options.trackMilestones &&
                           void 0 === e.seeked
@@ -16329,7 +16387,7 @@ require = (function () {
                           return;
                       }
                       this.tracker.track({
-                        type: 'video',
+                        type: "video",
                         data: e,
                         options: this.options,
                       });
@@ -16337,7 +16395,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'destroy',
+                  key: "destroy",
                   value: function () {
                     this.detachEvents(),
                       (this.options = null),
@@ -16357,28 +16415,28 @@ require = (function () {
         module.exports = VideoAnalyticsObserver;
       },
       {
-        '../ErrorHandler': 118,
-        '../Tracker': 120,
-        './observerRegistry': 158,
-        '@marcom/ac-dom-nodes/isNode': 29,
-        '@marcom/feature-detect/isHandheld': 62,
-        '@marcom/function-utils/debounce': 65,
-        '@marcom/useragent-detect': 70,
+        "../ErrorHandler": 118,
+        "../Tracker": 120,
+        "./observerRegistry": 158,
+        "@marcom/ac-dom-nodes/isNode": 29,
+        "@marcom/feature-detect/isHandheld": 62,
+        "@marcom/function-utils/debounce": 65,
+        "@marcom/useragent-detect": 70,
       },
     ],
     158: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _classCallCheck(e, r) {
           if (!(e instanceof r))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, r) {
           for (var s = 0; s < r.length; s++) {
             var o = r[s];
             (o.enumerable = o.enumerable || !1),
               (o.configurable = !0),
-              'value' in o && (o.writable = !0),
+              "value" in o && (o.writable = !0),
               Object.defineProperty(e, o.key, o);
           }
         }
@@ -16386,7 +16444,7 @@ require = (function () {
           return (
             r && _defineProperties(e.prototype, r),
             s && _defineProperties(e, s),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
@@ -16398,7 +16456,7 @@ require = (function () {
             return (
               _createClass(e, [
                 {
-                  key: 'destroy',
+                  key: "destroy",
                   value: function () {
                     var e = this.observers;
                     Object.keys(this.observers).forEach(function (r) {
@@ -16411,7 +16469,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'add',
+                  key: "add",
                   value: function (e) {
                     this.observers[e.observerType] ||
                       (this.observers[e.observerType] = []),
@@ -16421,7 +16479,7 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'remove',
+                  key: "remove",
                   value: function (e) {
                     this.observers[e.observerType] &&
                       ((this.observers[e.observerType] = this.observers[
@@ -16443,32 +16501,32 @@ require = (function () {
     ],
     159: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
-        var errorHandler = require('./ErrorHandler.js'),
-          moduleName = 'PassiveTracker',
+        var errorHandler = require("./ErrorHandler.js"),
+          moduleName = "PassiveTracker",
           passiveTrackerPath =
-            require('./constants.js').dataLayer.paths.passiveTracker,
-          templateVarHelper = require('./helpers/templateVar.js'),
-          get = require('@apple/analytics-data-layer').get,
-          set = require('@apple/analytics-data-layer').set;
+            require("./constants.js").dataLayer.paths.passiveTracker,
+          templateVarHelper = require("./helpers/templateVar.js"),
+          get = require("@apple/analytics-data-layer").get,
+          set = require("@apple/analytics-data-layer").set;
         function track(e, t) {
           if (
-            ((t = t || {}), e && 'object' === _typeof(e) && !Array.isArray(e))
+            ((t = t || {}), e && "object" === _typeof(e) && !Array.isArray(e))
           ) {
             (t.priority = t.priority || 50),
               (t.trackOnPageLoad = !0 === t.trackOnPageLoad),
@@ -16487,14 +16545,14 @@ require = (function () {
                 storeTrackingData(JSON.parse(r), t))
               : errorHandler.warn(
                   moduleName,
-                  'track',
-                  'data was invalid because it could not be stringified',
+                  "track",
+                  "data was invalid because it could not be stringified",
                 );
           } else
             errorHandler.warn(
               moduleName,
-              'track',
-              'data must be a valid object',
+              "track",
+              "data must be a valid object",
             );
         }
         function storeTrackingData(e, t) {
@@ -16508,7 +16566,7 @@ require = (function () {
           if (e.overwriteStorageItem) return null;
           var t = get(passiveTrackerPath);
           return t
-            ? 'object' !== _typeof((t = JSON.parse(t)))
+            ? "object" !== _typeof((t = JSON.parse(t)))
               ? null
               : t
             : void 0;
@@ -16517,31 +16575,31 @@ require = (function () {
           return t.push(e), t;
         }
         function storeData(e) {
-          'object' === _typeof(e) && (e = JSON.stringify(e)),
+          "object" === _typeof(e) && (e = JSON.stringify(e)),
             set(passiveTrackerPath, e);
         }
         module.exports = track;
       },
       {
-        './ErrorHandler': 118,
-        './constants': 121,
-        './helpers/templateVar': 145,
-        '@apple/analytics-data-layer': 4,
+        "./ErrorHandler": 118,
+        "./constants": 121,
+        "./helpers/templateVar": 145,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     160: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _classCallCheck(e, r) {
           if (!(e instanceof r))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(e, r) {
           for (var i = 0; i < r.length; i++) {
             var t = r[i];
             (t.enumerable = t.enumerable || !1),
               (t.configurable = !0),
-              'value' in t && (t.writable = !0),
+              "value" in t && (t.writable = !0),
               Object.defineProperty(e, t.key, t);
           }
         }
@@ -16549,7 +16607,7 @@ require = (function () {
           return (
             r && _defineProperties(e.prototype, r),
             i && _defineProperties(e, i),
-            Object.defineProperty(e, 'prototype', { writable: !1 }),
+            Object.defineProperty(e, "prototype", { writable: !1 }),
             e
           );
         }
@@ -16560,13 +16618,13 @@ require = (function () {
           return (
             _createClass(e, [
               {
-                key: 'addEntry',
+                key: "addEntry",
                 value: function (e, r, i, t) {
                   this.registry[r] = { type: e, name: r, order: i, track: t };
                 },
               },
               {
-                key: 'processBeaconByType',
+                key: "processBeaconByType",
                 value: function (e, r) {
                   var i = Object.values(this.registry).filter(function (r) {
                     return r.type === e;
@@ -16580,26 +16638,26 @@ require = (function () {
                 },
               },
               {
-                key: 'registerAllTrackers',
+                key: "registerAllTrackers",
                 value: function () {
                   [
-                    require('./pageHide.js'),
-                    require('./endOfPage.js'),
-                    require('./pageLoad.js'),
-                    require('./storeDeferredBeaconAtPageLoad.js'),
-                    require('./customPageLoad.js'),
-                    require('./deferredToPageLoad.js'),
-                    require('./sectionEngagement.js'),
-                    require('./click.js'),
-                    require('./link.js'),
-                    require('./navigationalLink.js'),
-                    require('./gallery.js'),
-                    require('./video.js'),
-                    require('./event.js'),
-                    require('./elementEngagement.js'),
-                    require('./performance.js'),
-                    require('./search/begin.js'),
-                    require('./search/perform.js'),
+                    require("./pageHide.js"),
+                    require("./endOfPage.js"),
+                    require("./pageLoad.js"),
+                    require("./storeDeferredBeaconAtPageLoad.js"),
+                    require("./customPageLoad.js"),
+                    require("./deferredToPageLoad.js"),
+                    require("./sectionEngagement.js"),
+                    require("./click.js"),
+                    require("./link.js"),
+                    require("./navigationalLink.js"),
+                    require("./gallery.js"),
+                    require("./video.js"),
+                    require("./event.js"),
+                    require("./elementEngagement.js"),
+                    require("./performance.js"),
+                    require("./search/begin.js"),
+                    require("./search/perform.js"),
                   ].forEach(function (e) {
                     e.initialize();
                   });
@@ -16612,56 +16670,56 @@ require = (function () {
         module.exports = new TrackerRegistry();
       },
       {
-        './click': 161,
-        './customPageLoad': 162,
-        './deferredToPageLoad': 163,
-        './elementEngagement': 164,
-        './endOfPage': 165,
-        './event': 166,
-        './gallery': 167,
-        './link': 168,
-        './navigationalLink': 169,
-        './pageHide': 170,
-        './pageLoad': 171,
-        './performance': 172,
-        './search/begin': 175,
-        './search/perform': 176,
-        './sectionEngagement': 177,
-        './storeDeferredBeaconAtPageLoad': 178,
-        './video': 179,
+        "./click": 161,
+        "./customPageLoad": 162,
+        "./deferredToPageLoad": 163,
+        "./elementEngagement": 164,
+        "./endOfPage": 165,
+        "./event": 166,
+        "./gallery": 167,
+        "./link": 168,
+        "./navigationalLink": 169,
+        "./pageHide": 170,
+        "./pageLoad": 171,
+        "./performance": 172,
+        "./search/begin": 175,
+        "./search/perform": 176,
+        "./sectionEngagement": 177,
+        "./storeDeferredBeaconAtPageLoad": 178,
+        "./video": 179,
       },
     ],
     161: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(t) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
                 }
               : function (t) {
                   return t &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     t.constructor === Symbol &&
                     t !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof t;
                 })(t);
         }
-        var registry = require('./TrackerRegistry.js'),
-          regions = require('./regions/regions.js'),
-          parseFromDataAttribute = require('../helpers/parseFromDataAttribute.js'),
-          get = require('@apple/analytics-data-layer').get,
-          setOptions = require('../helpers/setOptions.js'),
-          separator = require('../helpers/separator.js'),
-          formatter = require('../helpers/formatter.js'),
-          dataLayerConfig = require('../constants.js').dataLayer.configuration,
+        var registry = require("./TrackerRegistry.js"),
+          regions = require("./regions/regions.js"),
+          parseFromDataAttribute = require("../helpers/parseFromDataAttribute.js"),
+          get = require("@apple/analytics-data-layer").get,
+          setOptions = require("../helpers/setOptions.js"),
+          separator = require("../helpers/separator.js"),
+          formatter = require("../helpers/formatter.js"),
+          dataLayerConfig = require("../constants.js").dataLayer.configuration,
           confKey = dataLayerConfig.key,
           confKeys = dataLayerConfig.keys,
-          moduleName = 'clickTracker';
+          moduleName = "clickTracker";
         function initialize() {
-          registry.addEntry('click', moduleName, 50, track);
+          registry.addEntry("click", moduleName, 50, track);
         }
         function track(t) {
           var e = generateSourceData(t);
@@ -16682,7 +16740,7 @@ require = (function () {
           var e,
             r = {},
             a = t.data.targetEl.getAttribute(
-              'data-' + t.options.titleDataAttribute,
+              "data-" + t.options.titleDataAttribute,
             );
           return (
             (e = (e =
@@ -16690,8 +16748,8 @@ require = (function () {
               (t.data.targetEl.textContent
                 ? t.data.targetEl.textContent.trim()
                 : t.data.targetEl.innerText
-                ? t.data.targetEl.innerText.trim()
-                : 'no title available')).toLowerCase()),
+                  ? t.data.targetEl.innerText.trim()
+                  : "no title available")).toLowerCase()),
             (r.title = e),
             (r.formattedTitle =
               get([confKey, confKeys.pageName]) + separator.hyphen + e),
@@ -16704,57 +16762,57 @@ require = (function () {
         }
         function _setCustomTrackingProps(t) {
           var e = t.data.targetEl.getAttribute(
-              'data-' + t.options.dataAttribute,
+              "data-" + t.options.dataAttribute,
             ),
-            r = e ? parseFromDataAttribute(e, t.data.targetEl) : '';
-          if (r || 'object' === _typeof(r))
+            r = e ? parseFromDataAttribute(e, t.data.targetEl) : "";
+          if (r || "object" === _typeof(r))
             for (var a in r)
-              'usePassiveTracker' === a
-                ? 'true' === r[a] && (t.options.usePassiveTracker = !0)
-                : 'useBeacon' === a
-                ? 'true' === r[a] && (t.options.useBeacon = !0)
-                : (t.beacon[a] = r[a]);
+              "usePassiveTracker" === a
+                ? "true" === r[a] && (t.options.usePassiveTracker = !0)
+                : "useBeacon" === a
+                  ? "true" === r[a] && (t.options.useBeacon = !0)
+                  : (t.beacon[a] = r[a]);
         }
         module.exports = { initialize: initialize, track: track };
       },
       {
-        '../constants': 121,
-        '../helpers/formatter': 130,
-        '../helpers/parseFromDataAttribute': 141,
-        '../helpers/separator': 142,
-        '../helpers/setOptions': 143,
-        './TrackerRegistry': 160,
-        './regions/regions': 174,
-        '@apple/analytics-data-layer': 4,
+        "../constants": 121,
+        "../helpers/formatter": 130,
+        "../helpers/parseFromDataAttribute": 141,
+        "../helpers/separator": 142,
+        "../helpers/setOptions": 143,
+        "./TrackerRegistry": 160,
+        "./regions/regions": 174,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     162: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(r) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (r) {
                   return typeof r;
                 }
               : function (r) {
                   return r &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     r.constructor === Symbol &&
                     r !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof r;
                 })(r);
         }
-        var registry = require('./TrackerRegistry.js'),
-          get = require('@apple/analytics-data-layer').get,
-          errorHandler = require('../ErrorHandler.js'),
-          moduleName = 'customPageLoad',
-          dataLayerKeys = require('../constants.js').dataLayer,
+        var registry = require("./TrackerRegistry.js"),
+          get = require("@apple/analytics-data-layer").get,
+          errorHandler = require("../ErrorHandler.js"),
+          moduleName = "customPageLoad",
+          dataLayerKeys = require("../constants.js").dataLayer,
           confKey = dataLayerKeys.configuration.key,
           confKeys = dataLayerKeys.configuration.keys;
         function initialize() {
-          registry.addEntry('page', moduleName, 100, track);
+          registry.addEntry("page", moduleName, 100, track);
         }
         function track(r) {
           var e = get([confKey, confKeys.pageTrackingData]);
@@ -16764,38 +16822,38 @@ require = (function () {
           } catch (r) {
             errorHandler.warn(
               moduleName,
-              '_setCustomProps',
-              'JSON.parse had an error with the input of: \n\n' +
+              "_setCustomProps",
+              "JSON.parse had an error with the input of: \n\n" +
                 e +
-                '\n\nIs it in proper JSON format? \n\nOriginal error:\n' +
+                "\n\nIs it in proper JSON format? \n\nOriginal error:\n" +
                 r,
             );
           }
-          if (!e || 'object' !== _typeof(e) || Array.isArray(e)) return r;
+          if (!e || "object" !== _typeof(e) || Array.isArray(e)) return r;
           for (var t in e) e.hasOwnProperty(t) && (r.beacon[t] = e[t]);
           return r;
         }
         module.exports = { initialize: initialize, track: track };
       },
       {
-        '../ErrorHandler': 118,
-        '../constants': 121,
-        './TrackerRegistry': 160,
-        '@apple/analytics-data-layer': 4,
+        "../ErrorHandler": 118,
+        "../constants": 121,
+        "./TrackerRegistry": 160,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     163: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          get = require('@apple/analytics-data-layer').get,
-          remove = require('@apple/analytics-data-layer').remove,
-          dataLayerKeys = require('../constants.js').dataLayer,
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          get = require("@apple/analytics-data-layer").get,
+          remove = require("@apple/analytics-data-layer").remove,
+          dataLayerKeys = require("../constants.js").dataLayer,
           deferredPath = dataLayerKeys.paths.deferred,
-          setProperty = require('../helpers/setProperty.js'),
-          moduleName = 'deferredToPageLoad';
+          setProperty = require("../helpers/setProperty.js"),
+          moduleName = "deferredToPageLoad";
         function initialize() {
-          registry.addEntry('page', moduleName, 50, track);
+          registry.addEntry("page", moduleName, 50, track);
         }
         function track(e) {
           var r = _getDeferredData() || {};
@@ -16805,7 +16863,7 @@ require = (function () {
             }),
             !e.beacon.prop57 &&
               r.hier1 &&
-              setProperty(e.beacon, 'prop57', r.hier1),
+              setProperty(e.beacon, "prop57", r.hier1),
             e
           );
         }
@@ -16816,65 +16874,65 @@ require = (function () {
         module.exports = { initialize: initialize, track: track };
       },
       {
-        '../constants': 121,
-        '../helpers/setProperty': 144,
-        './TrackerRegistry': 160,
-        '@apple/analytics-data-layer': 4,
+        "../constants": 121,
+        "../helpers/setProperty": 144,
+        "./TrackerRegistry": 160,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     164: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          moduleName = 'elementEngagementTracker';
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          moduleName = "elementEngagementTracker";
         function initialize() {
-          registry.addEntry('elementEngagement', moduleName, 50, track);
+          registry.addEntry("elementEngagement", moduleName, 50, track);
         }
         function track(e) {
           var t, n, i;
           return (
-            (e.beacon.title = 'element engagement'),
-            (e.beacon.events = 'event316'),
+            (e.beacon.title = "element engagement"),
+            (e.beacon.events = "event316"),
             (e.beacon.prop3 = e.data.engagementTitle),
             (e.beacon.eVar30 =
               (null === (t = e.options) || void 0 === t
                 ? void 0
                 : null === (n = t.target) || void 0 === n
-                ? void 0
-                : null === (i = n.dataset) || void 0 === i
-                ? void 0
-                : i.analyticsRegion) || 'missing region'),
+                  ? void 0
+                  : null === (i = n.dataset) || void 0 === i
+                    ? void 0
+                    : i.analyticsRegion) || "missing region"),
             e
           );
         }
         module.exports = { track: track, initialize: initialize };
       },
-      { './TrackerRegistry': 160 },
+      { "./TrackerRegistry": 160 },
     ],
     165: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          moduleName = 'endOfPageTracker';
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          moduleName = "endOfPageTracker";
         function initialize() {
-          registry.addEntry('endOfPage', moduleName, 50, track);
+          registry.addEntry("endOfPage", moduleName, 50, track);
         }
         function track(e) {
           return (
-            (e.beacon = { title: 'end of page', events: e.data.events }), e
+            (e.beacon = { title: "end of page", events: e.data.events }), e
           );
         }
         module.exports = { initialize: initialize, track: track };
       },
-      { './TrackerRegistry': 160 },
+      { "./TrackerRegistry": 160 },
     ],
     166: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          moduleName = 'customTracker';
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          moduleName = "customTracker";
         function initialize() {
-          registry.addEntry('custom', moduleName, 50, track);
+          registry.addEntry("custom", moduleName, 50, track);
         }
         function track(r) {
           for (var t in r.data) r.beacon[t] = r.data[t];
@@ -16882,50 +16940,50 @@ require = (function () {
         }
         module.exports = { track: track, initialize: initialize };
       },
-      { './TrackerRegistry': 160 },
+      { "./TrackerRegistry": 160 },
     ],
     167: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          ancestor = require('@marcom/dom-traversal/ancestor'),
-          get = require('@apple/analytics-data-layer').get,
-          formatter = require('../helpers/formatter.js'),
-          separator = require('../helpers/separator.js'),
-          dataLayerConfig = require('../constants.js').dataLayer.configuration,
-          moduleName = 'galleryTracker',
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          ancestor = require("@marcom/dom-traversal/ancestor"),
+          get = require("@apple/analytics-data-layer").get,
+          formatter = require("../helpers/formatter.js"),
+          separator = require("../helpers/separator.js"),
+          dataLayerConfig = require("../constants.js").dataLayer.configuration,
+          moduleName = "galleryTracker",
           interactionTypes = {
             click: function (e) {
-              return _triggerNavType(e) || 'click';
+              return _triggerNavType(e) || "click";
             },
             auto: function () {
-              return 'auto';
+              return "auto";
             },
             keydown: function () {
-              return 'keydown';
+              return "keydown";
             },
             touchend: function () {
-              return 'swipe';
+              return "swipe";
             },
             touchstart: function () {
-              return 'swipe';
+              return "swipe";
             },
             touchmove: function () {
-              return 'swipe';
+              return "swipe";
             },
           },
           interactionTypeMap = {
-            click: 'ci',
-            keydown: 'ki',
-            swipe: 'si',
-            dotnav: 'bi',
-            thumbnav: 'ci',
-            tabnav: 'ci',
-            paddlenav: 'pi',
-            auto: 'ai',
+            click: "ci",
+            keydown: "ki",
+            swipe: "si",
+            dotnav: "bi",
+            thumbnav: "ci",
+            tabnav: "ci",
+            paddlenav: "pi",
+            auto: "ai",
           };
         function initialize() {
-          registry.addEntry('gallery', moduleName, 50, track);
+          registry.addEntry("gallery", moduleName, 50, track);
         }
         function track(e) {
           var t,
@@ -16942,10 +17000,10 @@ require = (function () {
             (e.observer.outgoingSlideInteractionType = i),
             interactionTypeMap[e.data.incomingInteractionType] &&
               (a = interactionTypeMap[e.data.incomingInteractionType]),
-            void 0 === a && (a = 'ci'),
+            void 0 === a && (a = "ci"),
             interactionTypeMap[e.data.outgoingInteractionType] &&
               (t = interactionTypeMap[e.data.outgoingInteractionType]),
-            void 0 === t && (t = 'ci');
+            void 0 === t && (t = "ci");
           var r =
             get([dataLayerConfig.key, dataLayerConfig.keys.pageName]) +
             separator.hyphen +
@@ -16953,15 +17011,15 @@ require = (function () {
             separator.hyphen;
           return (
             (e.beacon.prop2 =
-              formatter.eventString(t, '') + r + e.data.outgoing.id),
+              formatter.eventString(t, "") + r + e.data.outgoing.id),
             (e.beacon.prop3 = e.beacon.title =
-              formatter.eventString(a, '') + r + e.data.incoming.id),
+              formatter.eventString(a, "") + r + e.data.incoming.id),
             !0 === e.data.galleryFirstTimeTrigger &&
-              ((e.beacon.prop16 = 'gallery interaction'),
+              ((e.beacon.prop16 = "gallery interaction"),
               (e.beacon.eVar16 =
-                (e.options.galleryName ? e.options.galleryName + ' ' : '') +
-                'gallery interaction'),
-              (e.beacon.events = 'event1')),
+                (e.options.galleryName ? e.options.galleryName + " " : "") +
+                "gallery interaction"),
+              (e.beacon.events = "event1")),
             e
           );
         }
@@ -16974,14 +17032,14 @@ require = (function () {
           var t,
             a,
             n = null,
-            i = ['dotnav', 'thumbnav', 'paddlenav', 'tabnav'],
+            i = ["dotnav", "thumbnav", "paddlenav", "tabnav"],
             r = ancestor(
               e,
-              '.dotnav, .thumbnav, .paddlenav, .tabnav, [data-analytics-gallery-interaction-type]',
+              ".dotnav, .thumbnav, .paddlenav, .tabnav, [data-analytics-gallery-interaction-type]",
             );
           if (r)
-            if (r.hasAttribute('data-analytics-gallery-interaction-type'))
-              n = r.getAttribute('data-analytics-gallery-interaction-type');
+            if (r.hasAttribute("data-analytics-gallery-interaction-type"))
+              n = r.getAttribute("data-analytics-gallery-interaction-type");
             else
               for (t = r.className, a = 0; a < i.length; a++)
                 if (-1 !== t.indexOf(i[a])) {
@@ -17003,7 +17061,7 @@ require = (function () {
             a = e.observer,
             n = !1;
           return (
-            'auto' !== t &&
+            "auto" !== t &&
               -1 === a.trackedInteractionTypes.indexOf(t) &&
               ((n = !0), a.trackedInteractionTypes.push(t)),
             n
@@ -17011,7 +17069,7 @@ require = (function () {
         }
         function _interactionEventType(e) {
           var t = e.data,
-            a = 'auto';
+            a = "auto";
           return (
             t.interactionEvent &&
               t.interactionEvent.type &&
@@ -17022,60 +17080,60 @@ require = (function () {
         module.exports = { track: track, initialize: initialize };
       },
       {
-        '../constants': 121,
-        '../helpers/formatter': 130,
-        '../helpers/separator': 142,
-        './TrackerRegistry': 160,
-        '@apple/analytics-data-layer': 4,
-        '@marcom/dom-traversal/ancestor': 55,
+        "../constants": 121,
+        "../helpers/formatter": 130,
+        "../helpers/separator": 142,
+        "./TrackerRegistry": 160,
+        "@apple/analytics-data-layer": 4,
+        "@marcom/dom-traversal/ancestor": 55,
       },
     ],
     168: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(t) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (t) {
                   return typeof t;
                 }
               : function (t) {
                   return t &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     t.constructor === Symbol &&
                     t !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof t;
                 })(t);
         }
-        var registry = require('./TrackerRegistry.js'),
-          regions = require('./regions/regions.js'),
-          separator = require('../helpers/separator.js'),
-          formatter = require('../helpers/formatter.js'),
-          dataLayerConfig = require('../constants.js').dataLayer.configuration,
-          get = require('@apple/analytics-data-layer').get,
-          moduleName = 'linkTracker';
+        var registry = require("./TrackerRegistry.js"),
+          regions = require("./regions/regions.js"),
+          separator = require("../helpers/separator.js"),
+          formatter = require("../helpers/formatter.js"),
+          dataLayerConfig = require("../constants.js").dataLayer.configuration,
+          get = require("@apple/analytics-data-layer").get,
+          moduleName = "linkTracker";
         function initialize() {
-          registry.addEntry('link', moduleName, 50, track);
+          registry.addEntry("link", moduleName, 50, track);
         }
         function track(t) {
           var e = regions.getRegionByElement(t.data.targetEl),
             a = t.data.targetEl.getAttribute(
-              'data-' + t.options.titleDataAttribute,
+              "data-" + t.options.titleDataAttribute,
             );
           return (
             a
               ? (t.data.linkText = a)
               : t.data.targetEl.textContent
-              ? (t.data.linkText = t.data.targetEl.textContent.trim())
-              : t.data.targetEl.innerText
-              ? (t.data.linkText = t.data.targetEl.innerText.trim())
-              : (t.data.linkText = 'no title available'),
+                ? (t.data.linkText = t.data.targetEl.textContent.trim())
+                : t.data.targetEl.innerText
+                  ? (t.data.linkText = t.data.targetEl.innerText.trim())
+                  : (t.data.linkText = "no title available"),
             (t.data.regionAncestry = regions.getRegionAncestryByElement(
               t.data.targetEl,
             )),
             t.data.targetEl.id && (t.data.linkId = t.data.targetEl.id),
-            'object' === _typeof(e) && (t.data.region = e.name),
+            "object" === _typeof(e) && (t.data.region = e.name),
             setNavigationSrc(t),
             t
           );
@@ -17089,62 +17147,62 @@ require = (function () {
               get([
                 dataLayerConfig.key,
                 dataLayerConfig.keys.computedPageName,
-              ]) || '',
-            o = e.linkText || '';
+              ]) || "",
+            o = e.linkText || "";
           (r.eVar1 = a.eVar1 = n + separator.pipe + i + o),
             (r.prop57 = a.prop57 =
               get([
                 dataLayerConfig.key,
                 dataLayerConfig.keys.computedChannel,
-              ]) || ''),
+              ]) || ""),
             (t.beacon = r);
         }
         module.exports = { track: track, initialize: initialize };
       },
       {
-        '../constants': 121,
-        '../helpers/formatter': 130,
-        '../helpers/separator': 142,
-        './TrackerRegistry': 160,
-        './regions/regions': 174,
-        '@apple/analytics-data-layer': 4,
+        "../constants": 121,
+        "../helpers/formatter": 130,
+        "../helpers/separator": 142,
+        "./TrackerRegistry": 160,
+        "./regions/regions": 174,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     169: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          pageHide = require('./pageHide.js'),
-          moduleName = 'navigationalLinkTracker';
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          pageHide = require("./pageHide.js"),
+          moduleName = "navigationalLinkTracker";
         function initialize() {
-          registry.addEntry('navigationalLink', moduleName, 50, track);
+          registry.addEntry("navigationalLink", moduleName, 50, track);
         }
         function track(i) {
           return pageHide.track(i);
         }
         module.exports = { track: track, initialize: initialize };
       },
-      { './TrackerRegistry': 160, './pageHide': 170 },
+      { "./TrackerRegistry": 160, "./pageHide": 170 },
     ],
     170: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          moduleName = 'beforeUnload',
-          getPassiveTrackerData = require('../helpers/getPassiveTrackerData.js'),
-          filterBeaconsByType = require('../helpers/filterBeaconsByType.js'),
-          mergePassiveTrackerData = require('../helpers/mergePassiveTrackerData.js'),
-          remove = require('@apple/analytics-data-layer').remove,
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          moduleName = "beforeUnload",
+          getPassiveTrackerData = require("../helpers/getPassiveTrackerData.js"),
+          filterBeaconsByType = require("../helpers/filterBeaconsByType.js"),
+          mergePassiveTrackerData = require("../helpers/mergePassiveTrackerData.js"),
+          remove = require("@apple/analytics-data-layer").remove,
           passiveTrackerPath =
-            require('../constants.js').dataLayer.paths.passiveTracker,
-          _require = require('@apple/analytics-merge-beacons'),
+            require("../constants.js").dataLayer.paths.passiveTracker,
+          _require = require("@apple/analytics-merge-beacons"),
           merge = _require.merge;
         function initialize() {
-          registry.addEntry('pageHide', moduleName, 50, track);
+          registry.addEntry("pageHide", moduleName, 50, track);
         }
         function track(e) {
           var r = getPassiveTrackerData();
-          return r && (r = filterBeaconsByType(r, 'page')).length
+          return r && (r = filterBeaconsByType(r, "page")).length
             ? ((r = mergePassiveTrackerData(r)),
               (e.beacon = merge({ target: e.beacon, source: r })),
               remove(passiveTrackerPath),
@@ -17154,77 +17212,77 @@ require = (function () {
         module.exports = { initialize: initialize, track: track };
       },
       {
-        '../constants': 121,
-        '../helpers/filterBeaconsByType': 129,
-        '../helpers/getPassiveTrackerData': 132,
-        '../helpers/mergePassiveTrackerData': 139,
-        './TrackerRegistry': 160,
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-merge-beacons': 6,
+        "../constants": 121,
+        "../helpers/filterBeaconsByType": 129,
+        "../helpers/getPassiveTrackerData": 132,
+        "../helpers/mergePassiveTrackerData": 139,
+        "./TrackerRegistry": 160,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-merge-beacons": 6,
       },
     ],
     171: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          get = require('@apple/analytics-data-layer').get,
-          separator = require('../helpers/separator.js'),
-          moduleName = 'pageLoad',
-          dataLayerKeys = require('../constants.js').dataLayer,
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          get = require("@apple/analytics-data-layer").get,
+          separator = require("../helpers/separator.js"),
+          moduleName = "pageLoad",
+          dataLayerKeys = require("../constants.js").dataLayer,
           confKey = dataLayerKeys.configuration.key,
           confKeys = dataLayerKeys.configuration.keys,
-          setProperty = require('../helpers/setProperty.js');
+          setProperty = require("../helpers/setProperty.js");
         function initialize() {
-          registry.addEntry('page', moduleName, 1, track);
+          registry.addEntry("page", moduleName, 1, track);
         }
         function track(e) {
           var a;
           return (
             setProperty(
               e.beacon,
-              'prop20',
-              'AOS'.concat(separator.colon, '{COUNTRY_CODE}'),
+              "prop20",
+              "AOS".concat(separator.colon, "{COUNTRY_CODE}"),
             ),
             setProperty(
               e.beacon,
-              'pageName',
+              "pageName",
               get([confKey, confKeys.computedPageName]),
             ),
             setProperty(
               e.beacon,
-              'channel',
+              "channel",
               get([confKey, confKeys.computedChannel]),
             ),
-            setProperty(e.beacon, 'eVar3', e.beacon.prop20),
+            setProperty(e.beacon, "eVar3", e.beacon.prop20),
             null !== (a = window.ac_target) &&
               void 0 !== a &&
               a.ssdata &&
-              setProperty(e.beacon, 'eVar57', window.ac_target.ssdata),
+              setProperty(e.beacon, "eVar57", window.ac_target.ssdata),
             e
           );
         }
         module.exports = { initialize: initialize, track: track };
       },
       {
-        '../constants': 121,
-        '../helpers/separator': 142,
-        '../helpers/setProperty': 144,
-        './TrackerRegistry': 160,
-        '@apple/analytics-data-layer': 4,
+        "../constants": 121,
+        "../helpers/separator": 142,
+        "../helpers/setProperty": 144,
+        "./TrackerRegistry": 160,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     172: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          passiveTracker = require('../passiveTracker.js'),
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          passiveTracker = require("../passiveTracker.js"),
           performanceTimingEvents =
-            require('../constants.js').performanceTimingEvents,
+            require("../constants.js").performanceTimingEvents,
           passiveTrackerOptions = { trackOnPageLoad: !0, trackOnExitLink: !0 },
-          moduleName = 'performanceTracker',
+          moduleName = "performanceTracker",
           hasTracked = !1;
         function initialize() {
-          registry.addEntry('readyStateComplete', moduleName, 50, track);
+          registry.addEntry("readyStateComplete", moduleName, 50, track);
         }
         function track(e) {
           if (
@@ -17243,12 +17301,12 @@ require = (function () {
               }, 200);
         }
         function trackFirstContentfulPaint(e) {
-          var n = e.getEntriesByName('first-contentful-paint');
+          var n = e.getEntriesByName("first-contentful-paint");
           if (n && n.length && n[0].startTime && n[0].startTime.toFixed(2)) {
             var r = {
-              events: 'event419='.concat(
+              events: "event419=".concat(
                 (n[0].startTime / 1e3).toFixed(3),
-                ',event420',
+                ",event420",
               ),
             };
             passiveTracker(r, passiveTrackerOptions);
@@ -17260,9 +17318,9 @@ require = (function () {
             if (!window || !window.performance || !window.performance) return;
             e = window.performance.now();
           }
-          if ('number' == typeof e) {
+          if ("number" == typeof e) {
             var n = {
-              events: 'event421='.concat((e / 1e3).toFixed(3), ',event422'),
+              events: "event421=".concat((e / 1e3).toFixed(3), ",event422"),
             };
             passiveTracker(n, passiveTrackerOptions);
           }
@@ -17284,12 +17342,12 @@ require = (function () {
             r.push(performanceCheck(n.loadEventStart, n.domLoading)),
             r.push(performanceCheck(n.loadEventEnd, n.loadEventStart)),
             r.push(performanceCheck(n.loadEventEnd, n.navigationStart));
-          var t = performanceTimingEvents.split(','),
-            a = '';
+          var t = performanceTimingEvents.split(","),
+            a = "";
           t.forEach(function (e, n) {
             void 0 !== r[n]
-              ? (a += ''.concat(e, '=').concat(r[n], ','))
-              : (a += ''.concat(e, ','));
+              ? (a += "".concat(e, "=").concat(r[n], ","))
+              : (a += "".concat(e, ","));
           }),
             (a = a.substring(0, a.length - 1)),
             passiveTracker({ events: a }, passiveTrackerOptions);
@@ -17304,24 +17362,24 @@ require = (function () {
         };
       },
       {
-        '../constants': 121,
-        '../passiveTracker': 159,
-        './TrackerRegistry': 160,
+        "../constants": 121,
+        "../passiveTracker": 159,
+        "./TrackerRegistry": 160,
       },
     ],
     173: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _classCallCheck(t, e) {
           if (!(t instanceof e))
-            throw new TypeError('Cannot call a class as a function');
+            throw new TypeError("Cannot call a class as a function");
         }
         function _defineProperties(t, e) {
           for (var i = 0; i < e.length; i++) {
             var n = e[i];
             (n.enumerable = n.enumerable || !1),
               (n.configurable = !0),
-              'value' in n && (n.writable = !0),
+              "value" in n && (n.writable = !0),
               Object.defineProperty(t, n.key, n);
           }
         }
@@ -17329,30 +17387,30 @@ require = (function () {
           return (
             e && _defineProperties(t.prototype, e),
             i && _defineProperties(t, i),
-            Object.defineProperty(t, 'prototype', { writable: !1 }),
+            Object.defineProperty(t, "prototype", { writable: !1 }),
             t
           );
         }
-        var dataAttribute = 'analytics-region',
-          optionsAttribute = 'analytics-options',
+        var dataAttribute = "analytics-region",
+          optionsAttribute = "analytics-options",
           validJSONPattern = /(?:\w+:\w+)(?:,(?=(?:\w+:\w+))|$)/,
           singleValuePattern = /[\w\s]+/,
-          dataStringToObject = require('../../helpers/dataStringToObject'),
+          dataStringToObject = require("../../helpers/dataStringToObject"),
           Region = (function () {
             function t(e) {
               _classCallCheck(this, t),
                 (this.element = e),
                 (this.childRegions = {}),
-                (this.parentRegion = ''),
+                (this.parentRegion = ""),
                 (this.options = this.getDataOptions()),
                 (this.name = this.setName());
             }
             return (
               _createClass(t, [
                 {
-                  key: 'setName',
+                  key: "setName",
                   value: function () {
-                    var t = '';
+                    var t = "";
                     return (
                       this.options.name && (t = this.options.name),
                       !this.options.name &&
@@ -17363,11 +17421,11 @@ require = (function () {
                   },
                 },
                 {
-                  key: 'getDataOptions',
+                  key: "getDataOptions",
                   value: function () {
                     var t = {},
-                      e = this.element.getAttribute('data-' + dataAttribute),
-                      i = this.element.getAttribute('data-' + optionsAttribute);
+                      e = this.element.getAttribute("data-" + dataAttribute),
+                      i = this.element.getAttribute("data-" + optionsAttribute);
                     for (var n in ((e = this._removeTrailingCommas(e)),
                     (i = this._removeTrailingCommas(i)),
                     this._isJSONable(e)
@@ -17378,29 +17436,29 @@ require = (function () {
                       (t = Object.assign({}, t, dataStringToObject(i))),
                     t))
                       t.hasOwnProperty(n) &&
-                        ('false' === t[n]
+                        ("false" === t[n]
                           ? (t[n] = !1)
-                          : 'true' === t[n] && (t[n] = !0));
+                          : "true" === t[n] && (t[n] = !0));
                     return t;
                   },
                 },
                 {
-                  key: '_isJSONable',
+                  key: "_isJSONable",
                   value: function (t) {
                     return validJSONPattern.test(t);
                   },
                 },
                 {
-                  key: '_isSingleValue',
+                  key: "_isSingleValue",
                   value: function (t) {
                     return singleValuePattern.test(t);
                   },
                 },
                 {
-                  key: '_removeTrailingCommas',
+                  key: "_removeTrailingCommas",
                   value: function (t) {
-                    if (t && 'string' == typeof t)
-                      return ',' === t.charAt(t.length - 1)
+                    if (t && "string" == typeof t)
+                      return "," === t.charAt(t.length - 1)
                         ? t.substr(0, t.length - 1)
                         : t;
                   },
@@ -17411,35 +17469,35 @@ require = (function () {
           })();
         module.exports = { Region: Region, dataAttribute: dataAttribute };
       },
-      { '../../helpers/dataStringToObject': 126 },
+      { "../../helpers/dataStringToObject": 126 },
     ],
     174: [
       function (require, module, exports) {
-        'use strict';
+        "use strict";
         function _typeof(e) {
           return (_typeof =
-            'function' == typeof Symbol && 'symbol' == typeof Symbol.iterator
+            "function" == typeof Symbol && "symbol" == typeof Symbol.iterator
               ? function (e) {
                   return typeof e;
                 }
               : function (e) {
                   return e &&
-                    'function' == typeof Symbol &&
+                    "function" == typeof Symbol &&
                     e.constructor === Symbol &&
                     e !== Symbol.prototype
-                    ? 'symbol'
+                    ? "symbol"
                     : typeof e;
                 })(e);
         }
-        var domNodes = require('@marcom/ac-dom-nodes'),
-          Region = require('./Region.js').Region,
-          dataAttribute = require('./Region.js').dataAttribute,
+        var domNodes = require("@marcom/ac-dom-nodes"),
+          Region = require("./Region.js").Region,
+          dataAttribute = require("./Region.js").dataAttribute,
           allRegions = [],
           tree = {};
         function getAllRegions() {
           if (allRegions.length > 0) return allRegions;
           var e,
-            n = document.querySelectorAll('[data-' + dataAttribute + ']'),
+            n = document.querySelectorAll("[data-" + dataAttribute + "]"),
             o = n.length,
             t = 0;
           function i(e) {
@@ -17481,7 +17539,7 @@ require = (function () {
         }
         function getRegionByName(e) {
           var n = getAllRegions();
-          if ('string' == typeof e)
+          if ("string" == typeof e)
             return n.filter(function (n) {
               return _refreshDynamicRegion(n), n.name === e;
             });
@@ -17493,7 +17551,7 @@ require = (function () {
           var n = e;
           domNodes.isNodeType(e, domNodes.NODE_TYPES.ELEMENT) &&
             (n = getRegionByElement(e)),
-            'object' === _typeof(n) &&
+            "object" === _typeof(n) &&
               allRegions.forEach(function (e) {
                 e.element === n.element &&
                   ((e.options = e.getDataOptions()), (e.name = e.setName()));
@@ -17512,29 +17570,29 @@ require = (function () {
           clearRegions: clearRegions,
         };
       },
-      { './Region': 173, '@marcom/ac-dom-nodes': 22 },
+      { "./Region": 173, "@marcom/ac-dom-nodes": 22 },
     ],
     175: [
       function (require, module, exports) {
-        'use strict';
-        var getBeginBeacon = require('@apple/analytics-search').begin,
-          merge = require('@apple/analytics-merge-beacons').merge,
-          registry = require('../TrackerRegistry.js'),
-          get = require('@apple/analytics-data-layer').get,
-          dataLayerConfig = require('../../constants').dataLayer.configuration,
+        "use strict";
+        var getBeginBeacon = require("@apple/analytics-search").begin,
+          merge = require("@apple/analytics-merge-beacons").merge,
+          registry = require("../TrackerRegistry.js"),
+          get = require("@apple/analytics-data-layer").get,
+          dataLayerConfig = require("../../constants").dataLayer.configuration,
           confKey = dataLayerConfig.key,
           confKeys = dataLayerConfig.keys,
           pageTypeKey = [confKey, confKeys.pageType],
-          moduleName = 'beginSearchTracker',
+          moduleName = "beginSearchTracker",
           config = {
-            action: { OPEN: 'open', CLOSE: 'close', ENGAGE: 'engage' },
-            errorPage: { pageType: 'errorPage', id: 'searchform-input' },
-            trackEvents: ['linkClick', 'focusin'],
-            globalNav: '.ac-gn-link-search, #globalnav-menubutton-link-search',
+            action: { OPEN: "open", CLOSE: "close", ENGAGE: "engage" },
+            errorPage: { pageType: "errorPage", id: "searchform-input" },
+            trackEvents: ["linkClick", "focusin"],
+            globalNav: ".ac-gn-link-search, #globalnav-menubutton-link-search",
           };
         function initialize() {
-          registry.addEntry('linkClick', moduleName + 'LinkClick', 50, track),
-            registry.addEntry('focusin', moduleName + 'FocusIn', 50, track);
+          registry.addEntry("linkClick", moduleName + "LinkClick", 50, track),
+            registry.addEntry("focusin", moduleName + "FocusIn", 50, track);
         }
         function track(e) {
           var a = getSearchObj(e);
@@ -17553,53 +17611,53 @@ require = (function () {
             a.id === config.errorPage.id
             ? { action: config.action.ENGAGE }
             : a.matches(config.globalNav)
-            ? {
-                action: Boolean(a.dataset.analyticsTitle)
-                  ? config.action.OPEN
-                  : config.action.CLOSE,
-              }
-            : null;
+              ? {
+                  action: Boolean(a.dataset.analyticsTitle)
+                    ? config.action.OPEN
+                    : config.action.CLOSE,
+                }
+              : null;
         }
         module.exports = { track: track, initialize: initialize };
       },
       {
-        '../../constants': 121,
-        '../TrackerRegistry': 160,
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-merge-beacons': 6,
-        '@apple/analytics-search': 11,
+        "../../constants": 121,
+        "../TrackerRegistry": 160,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-merge-beacons": 6,
+        "@apple/analytics-search": 11,
       },
     ],
     176: [
       function (require, module, exports) {
-        'use strict';
-        var getPerformBeacon = require('@apple/analytics-search').perform,
-          merge = require('@apple/analytics-merge-beacons').merge,
-          registry = require('../TrackerRegistry.js'),
-          get = require('@apple/analytics-data-layer').get,
-          dataLayerConfig = require('../../constants').dataLayer.configuration,
+        "use strict";
+        var getPerformBeacon = require("@apple/analytics-search").perform,
+          merge = require("@apple/analytics-merge-beacons").merge,
+          registry = require("../TrackerRegistry.js"),
+          get = require("@apple/analytics-data-layer").get,
+          dataLayerConfig = require("../../constants").dataLayer.configuration,
           confKey = dataLayerConfig.key,
           confKeys = dataLayerConfig.keys,
           pageTypeKey = [confKey, confKeys.pageType],
-          moduleName = 'performSearchTracker',
+          moduleName = "performSearchTracker",
           config = {
-            errorPage: { pageType: 'errorPage', id: 'searchform-form' },
-            searchPage: { pageType: 'search' },
-            trackEvents: ['submit', 'linkClick'],
-            globalNav: '#ac-gn-searchform, .globalnav-searchfield',
+            errorPage: { pageType: "errorPage", id: "searchform-form" },
+            searchPage: { pageType: "search" },
+            trackEvents: ["submit", "linkClick"],
+            globalNav: "#ac-gn-searchform, .globalnav-searchfield",
             globalNavLink:
-              '.ac-gn-searchresults-link, .globalnav-searchresults-list-link',
-            searchSource: { ERROR: 'error', SEARCH: 'search', MARCOM: 'www' },
-            searchMethod: { TYPED: 'typed', DEFAULT: 'default' },
+              ".ac-gn-searchresults-link, .globalnav-searchresults-list-link",
+            searchSource: { ERROR: "error", SEARCH: "search", MARCOM: "www" },
+            searchMethod: { TYPED: "typed", DEFAULT: "default" },
             keywordSelectors: {
               globalNav:
-                '#ac-gn-searchform-input, .globalnav-searchfield-input',
-              errorPage: '#searchform-input',
+                "#ac-gn-searchform-input, .globalnav-searchfield-input",
+              errorPage: "#searchform-input",
             },
           };
         function initialize() {
-          registry.addEntry('linkClick', moduleName + 'LinkClick', 50, track),
-            registry.addEntry('submit', moduleName + 'FocusIn', 50, track);
+          registry.addEntry("linkClick", moduleName + "LinkClick", 50, track),
+            registry.addEntry("submit", moduleName + "FocusIn", 50, track);
         }
         function track(e) {
           var r = getSearchObj(e);
@@ -17624,14 +17682,14 @@ require = (function () {
         function clickLink(e) {
           var r = e.el;
           if (!r.matches(config.globalNavLink)) return null;
-          var a = getElementDataSet(r, 'section');
+          var a = getElementDataSet(r, "section");
           return {
-            keyword: getElementDataSet(r, 'query'),
+            keyword: getElementDataSet(r, "query"),
             method: a,
-            position: getElementDataSet(r, 'index'),
-            results: getElementDataSet(r, 'items'),
+            position: getElementDataSet(r, "index"),
+            results: getElementDataSet(r, "items"),
             source: getSearchSource(r),
-            suggestedValue: getElementDataSet(r, 'label'),
+            suggestedValue: getElementDataSet(r, "label"),
             type: a,
           };
         }
@@ -17642,8 +17700,8 @@ require = (function () {
           return get(pageTypeKey) === config.errorPage.pageType
             ? config.searchSource.ERROR
             : get(pageTypeKey) === config.searchPage.pageType
-            ? config.searchSource.SEARCH
-            : config.searchSource.MARCOM;
+              ? config.searchSource.SEARCH
+              : config.searchSource.MARCOM;
         }
         function getInputValue(e) {
           var r, a;
@@ -17674,66 +17732,66 @@ require = (function () {
         module.exports = { track: track, initialize: initialize };
       },
       {
-        '../../constants': 121,
-        '../TrackerRegistry': 160,
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-merge-beacons': 6,
-        '@apple/analytics-search': 11,
+        "../../constants": 121,
+        "../TrackerRegistry": 160,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-merge-beacons": 6,
+        "@apple/analytics-search": 11,
       },
     ],
     177: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          get = require('@apple/analytics-data-layer').get,
-          separator = require('../helpers/separator.js'),
-          dataLayerConfig = require('../constants.js').dataLayer.configuration,
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          get = require("@apple/analytics-data-layer").get,
+          separator = require("../helpers/separator.js"),
+          dataLayerConfig = require("../constants.js").dataLayer.configuration,
           confKey = dataLayerConfig.key,
-          moduleName = 'sectionEngagement';
+          moduleName = "sectionEngagement";
         function initialize() {
-          registry.addEntry('section', moduleName, 50, track);
+          registry.addEntry("section", moduleName, 50, track);
         }
         function track(e) {
           var t = e.data.element,
-            a = t.name || t.id || '',
+            a = t.name || t.id || "",
             r = t.thresholdExitTime - t.thresholdEnterTime;
           if (
             (t.element &&
               t.element.position &&
               (t.element.position + separator.dot + separator.space,
               separator.space + separator.dot + t.element.position),
-            (e.beacon.title = 'section engagement'),
+            (e.beacon.title = "section engagement"),
             (e.beacon.prop34 = a),
             (e.beacon.prop35 = (r / 1e3).toFixed(2)),
             (e.beacon.prop36 = t.element.position),
             e.beacon.prop35)
           ) {
-            var n = 'event243=' + e.beacon.prop35;
-            e.beacon.events = n + ',event244';
+            var n = "event243=" + e.beacon.prop35;
+            e.beacon.events = n + ",event244";
           }
           return e;
         }
         module.exports = { initialize: initialize, track: track };
       },
       {
-        '../constants': 121,
-        '../helpers/separator': 142,
-        './TrackerRegistry': 160,
-        '@apple/analytics-data-layer': 4,
+        "../constants": 121,
+        "../helpers/separator": 142,
+        "./TrackerRegistry": 160,
+        "@apple/analytics-data-layer": 4,
       },
     ],
     178: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          dataLayerConfig = require('../constants.js').dataLayer.configuration,
-          get = require('@apple/analytics-data-layer').get,
-          _require = require('@apple/analytics-passive-tracker'),
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          dataLayerConfig = require("../constants.js").dataLayer.configuration,
+          get = require("@apple/analytics-data-layer").get,
+          _require = require("@apple/analytics-passive-tracker"),
           merge = _require.merge,
           set = _require.set,
-          moduleName = 'storeForNextPageTracker';
+          moduleName = "storeForNextPageTracker";
         function initialize() {
-          registry.addEntry('storeAtPageLoad', moduleName, 50, track);
+          registry.addEntry("storeAtPageLoad", moduleName, 50, track);
         }
         function track(e) {
           var a = get([
@@ -17743,42 +17801,42 @@ require = (function () {
             r = {};
           (e.beacon.prop57 = r.prop57 =
             get([dataLayerConfig.key, dataLayerConfig.keys.computedChannel]) ||
-            ''),
-            set('pageName', a, { type: 'page' }),
-            merge('beacon', r, { type: 'page' });
+            ""),
+            set("pageName", a, { type: "page" }),
+            merge("beacon", r, { type: "page" });
         }
         module.exports = { track: track, initialize: initialize };
       },
       {
-        '../constants': 121,
-        './TrackerRegistry': 160,
-        '@apple/analytics-data-layer': 4,
-        '@apple/analytics-passive-tracker': 9,
+        "../constants": 121,
+        "./TrackerRegistry": 160,
+        "@apple/analytics-data-layer": 4,
+        "@apple/analytics-passive-tracker": 9,
       },
     ],
     179: [
       function (require, module, exports) {
-        'use strict';
-        var registry = require('./TrackerRegistry.js'),
-          get = require('@apple/analytics-data-layer').get,
-          formatter = require('../helpers/formatter.js'),
-          separator = require('../helpers/separator.js'),
-          dataLayerConfig = require('../constants.js').dataLayer.configuration,
-          moduleName = 'videoTracker',
+        "use strict";
+        var registry = require("./TrackerRegistry.js"),
+          get = require("@apple/analytics-data-layer").get,
+          formatter = require("../helpers/formatter.js"),
+          separator = require("../helpers/separator.js"),
+          dataLayerConfig = require("../constants.js").dataLayer.configuration,
+          moduleName = "videoTracker",
           eventTypes = {
             play: function () {
-              return 'started';
+              return "started";
             },
             ended: function () {
-              return 'ended';
+              return "ended";
             },
             texttrackshow: function (e) {
               return 0 === e.data.ttShowCount
-                ? 'texttrackshow'
-                : 'texttrackshown';
+                ? "texttrackshow"
+                : "texttrackshown";
             },
             milestone: function (e) {
-              return e.data.seeked ? 'seeked' : 'milestone';
+              return e.data.seeked ? "seeked" : "milestone";
             },
           },
           interactionTypes = {
@@ -17787,22 +17845,22 @@ require = (function () {
             },
           },
           milestoneEvents = {
-            0: { play: null, seek: 'event214' },
-            0.1: { play: 'event73', seek: 'event215' },
-            0.25: { play: 'event74', seek: 'event216' },
-            0.5: { play: 'event75', seek: 'event217' },
-            0.75: { play: 'event76', seek: 'event218' },
-            0.9: { play: 'event77', seek: 'event219' },
+            0: { play: null, seek: "event214" },
+            0.1: { play: "event73", seek: "event215" },
+            0.25: { play: "event74", seek: "event216" },
+            0.5: { play: "event75", seek: "event217" },
+            0.75: { play: "event76", seek: "event218" },
+            0.9: { play: "event77", seek: "event219" },
           },
           eventTypeMap = {
-            started: 's',
-            ended: 'e',
-            texttrackshow: 'ce',
-            seeked: 'sk',
-            milestone: 'm',
+            started: "s",
+            ended: "e",
+            texttrackshow: "ce",
+            seeked: "sk",
+            milestone: "m",
           };
         function initialize() {
-          registry.addEntry('video', moduleName, 50, track);
+          registry.addEntry("video", moduleName, 50, track);
         }
         function track(e) {
           var t = e.data;
@@ -17813,10 +17871,10 @@ require = (function () {
               interactionTypes[t.event.type] &&
               (t.interactionType = interactionTypes[t.event.type](e)),
             isNaN(t.duration)
-              ? (t.duration = 'unavailable')
+              ? (t.duration = "unavailable")
               : (t.duration = Math.round(t.duration).toString()),
             isNaN(t.currentTime)
-              ? (t.currentTime = 'unavailable')
+              ? (t.currentTime = "unavailable")
               : (t.currentTime = Math.round(t.currentTime).toString()),
             eventTypeMap[t.eventType]
               ? (e.options.silent = !1)
@@ -17839,36 +17897,36 @@ require = (function () {
             void 0 !== t.duration &&
               e.options.trackDuration &&
               ((a.eVar91 = t.duration),
-              _setEvents(a, 'event233=' + t.duration)),
+              _setEvents(a, "event233=" + t.duration)),
             void 0 !== t.currentTime &&
-              'ended' !== t.eventType &&
+              "ended" !== t.eventType &&
               e.options.trackCurrentTime &&
               ((a.eVar92 = t.currentTime),
-              _setEvents(a, 'event69=' + t.currentTime)),
+              _setEvents(a, "event69=" + t.currentTime)),
             t.src && (a.eVar95 = t.src),
-            'started' === t.eventType &&
-              ((a.prop16 = a.eVar16 = 'video plays'), _setEvents(a, 'event2')),
-            'ended' === t.eventType &&
-              ((a.prop16 = a.eVar16 = 'video ends'),
-              _setEvents(a, 'event72'),
+            "started" === t.eventType &&
+              ((a.prop16 = a.eVar16 = "video plays"), _setEvents(a, "event2")),
+            "ended" === t.eventType &&
+              ((a.prop16 = a.eVar16 = "video ends"),
+              _setEvents(a, "event72"),
               void 0 !== t.duration &&
                 e.options.trackCurrentTime &&
                 ((a.eVar92 = t.duration),
-                _setEvents(a, 'event69=' + t.duration))),
-            'texttrackshow' === t.eventType &&
-              ((a.title = a.prop2 = n + separator.hyphen + 'cc'),
-              (a.prop13 = '')),
-            ('milestone' !== t.eventType && 'seeked' !== t.eventType) ||
+                _setEvents(a, "event69=" + t.duration))),
+            "texttrackshow" === t.eventType &&
+              ((a.title = a.prop2 = n + separator.hyphen + "cc"),
+              (a.prop13 = "")),
+            ("milestone" !== t.eventType && "seeked" !== t.eventType) ||
               (_setMilestoneEventValues(milestoneEvents, t, a),
-              (a.prop13 = '')),
-            'milestone' === t.eventType &&
-              (a.prop16 = a.eVar16 = 'video milestone'),
-            'seeked' === t.eventType &&
-              ((a.eVar96 = '' + 100 * t.milestone),
-              (a.prop16 = a.eVar16 = 'video seek')),
+              (a.prop13 = "")),
+            "milestone" === t.eventType &&
+              (a.prop16 = a.eVar16 = "video milestone"),
+            "seeked" === t.eventType &&
+              ((a.eVar96 = "" + 100 * t.milestone),
+              (a.prop16 = a.eVar16 = "video seek")),
             t.videoType &&
               t.playerType &&
-              (a.prop18 = t.videoType + ' via ' + t.playerType),
+              (a.prop18 = t.videoType + " via " + t.playerType),
             (e.beacon = a),
             e
           );
@@ -17877,64 +17935,64 @@ require = (function () {
           _setEvents(n, t.seeked ? e[t.milestone].seek : e[t.milestone].play);
         }
         function _setEvents(e, t) {
-          e.events ? (e.events += ',' + t) : (e.events = t);
+          e.events ? (e.events += "," + t) : (e.events = t);
         }
         function _setTitle(e, t, n) {
-          var r = formatter.eventString('v', n),
+          var r = formatter.eventString("v", n),
             a = null;
           return (
-            e.hasOwnProperty('milestone') &&
+            e.hasOwnProperty("milestone") &&
               !isNaN(e.milestone) &&
               (a = 100 * e.milestone),
             null !== a && (r += a),
-            (r += ': ' + t)
+            (r += ": " + t)
           );
         }
         module.exports = { track: track, initialize: initialize };
       },
       {
-        '../constants': 121,
-        '../helpers/formatter': 130,
-        '../helpers/separator': 142,
-        './TrackerRegistry': 160,
-        '@apple/analytics-data-layer': 4,
+        "../constants": 121,
+        "../helpers/formatter": 130,
+        "../helpers/separator": 142,
+        "./TrackerRegistry": 160,
+        "@apple/analytics-data-layer": 4,
       },
     ],
-    '@marcom/ac-analytics': [
+    "@marcom/ac-analytics": [
       function (require, module, exports) {
-        'use strict';
-        var _get = require('@apple/analytics-data-layer').get,
-          set = require('@apple/analytics-data-layer').set,
-          dataLayer = require('./ac-analytics/constants.js').dataLayer,
+        "use strict";
+        var _get = require("@apple/analytics-data-layer").get,
+          set = require("@apple/analytics-data-layer").set,
+          dataLayer = require("./ac-analytics/constants.js").dataLayer,
           configuration = dataLayer.configuration,
           meta = dataLayer.meta;
         module.exports = {
-          createBasicObserverSuite: require('./ac-analytics/initialize.js'),
-          initialize: require('./ac-analytics/initialize.js'),
+          createBasicObserverSuite: require("./ac-analytics/initialize.js"),
+          initialize: require("./ac-analytics/initialize.js"),
           observer: {
-            Click: require('./ac-analytics/observers/Click.js'),
-            Event: require('./ac-analytics/observers/Event.js'),
-            Gallery: require('./ac-analytics/observers/gallery.js'),
-            Link: require('./ac-analytics/observers/Link.js'),
-            Page: require('./ac-analytics/observers/Page.js'),
-            Section: require('./ac-analytics/observers/Section.js'),
-            Video: require('./ac-analytics/observers/Video.js'),
-            Registry: require('./ac-analytics/observers/observerRegistry.js'),
+            Click: require("./ac-analytics/observers/Click.js"),
+            Event: require("./ac-analytics/observers/Event.js"),
+            Gallery: require("./ac-analytics/observers/gallery.js"),
+            Link: require("./ac-analytics/observers/Link.js"),
+            Page: require("./ac-analytics/observers/Page.js"),
+            Section: require("./ac-analytics/observers/Section.js"),
+            Video: require("./ac-analytics/observers/Video.js"),
+            Registry: require("./ac-analytics/observers/observerRegistry.js"),
           },
-          track: require('./ac-analytics/Tracker.js').trackGeneric,
-          passiveTracker: require('./ac-analytics/passiveTracker.js'),
-          regions: require('./ac-analytics/trackers/regions/regions.js'),
-          reset: require('./ac-analytics/destroy.js'),
-          destroy: require('./ac-analytics/destroy.js'),
+          track: require("./ac-analytics/Tracker.js").trackGeneric,
+          passiveTracker: require("./ac-analytics/passiveTracker.js"),
+          regions: require("./ac-analytics/trackers/regions/regions.js"),
+          reset: require("./ac-analytics/destroy.js"),
+          destroy: require("./ac-analytics/destroy.js"),
           resetActivityMap:
-            require('./ac-analytics/Appmeasurement/appMeasurementPlugins/activitymap/ActivityMapCollection.js')
+            require("./ac-analytics/Appmeasurement/appMeasurementPlugins/activitymap/ActivityMapCollection.js")
               .createActivityMapCollection,
           addActivityMapItem:
-            require('./ac-analytics/Appmeasurement/appMeasurementPlugins/activitymap/ActivityMapCollection.js')
+            require("./ac-analytics/Appmeasurement/appMeasurementPlugins/activitymap/ActivityMapCollection.js")
               .addElToCollection,
-          errorHandler: require('./ac-analytics/ErrorHandler.js'),
+          errorHandler: require("./ac-analytics/ErrorHandler.js"),
           trackFirstMeaningfulPaint:
-            require('./ac-analytics/trackers/performance.js')
+            require("./ac-analytics/trackers/performance.js")
               .trackFirstMeaningfulPaint,
           dataLayer: {
             get: _get,
@@ -17957,34 +18015,34 @@ require = (function () {
         };
       },
       {
-        './ac-analytics/Appmeasurement/appMeasurementPlugins/activitymap/ActivityMapCollection': 74,
-        './ac-analytics/ErrorHandler': 118,
-        './ac-analytics/Tracker': 120,
-        './ac-analytics/constants': 121,
-        './ac-analytics/destroy': 122,
-        './ac-analytics/initialize': 148,
-        './ac-analytics/observers/Click': 150,
-        './ac-analytics/observers/Event': 152,
-        './ac-analytics/observers/gallery': 153,
-        './ac-analytics/observers/Link': 154,
-        './ac-analytics/observers/Page': 155,
-        './ac-analytics/observers/Section': 156,
-        './ac-analytics/observers/Video': 157,
-        './ac-analytics/observers/observerRegistry': 158,
-        './ac-analytics/passiveTracker': 159,
-        './ac-analytics/trackers/performance': 172,
-        './ac-analytics/trackers/regions/regions': 174,
-        '@apple/analytics-data-layer': 4,
+        "./ac-analytics/Appmeasurement/appMeasurementPlugins/activitymap/ActivityMapCollection": 74,
+        "./ac-analytics/ErrorHandler": 118,
+        "./ac-analytics/Tracker": 120,
+        "./ac-analytics/constants": 121,
+        "./ac-analytics/destroy": 122,
+        "./ac-analytics/initialize": 148,
+        "./ac-analytics/observers/Click": 150,
+        "./ac-analytics/observers/Event": 152,
+        "./ac-analytics/observers/gallery": 153,
+        "./ac-analytics/observers/Link": 154,
+        "./ac-analytics/observers/Page": 155,
+        "./ac-analytics/observers/Section": 156,
+        "./ac-analytics/observers/Video": 157,
+        "./ac-analytics/observers/observerRegistry": 158,
+        "./ac-analytics/passiveTracker": 159,
+        "./ac-analytics/trackers/performance": 172,
+        "./ac-analytics/trackers/regions/regions": 174,
+        "@apple/analytics-data-layer": 4,
       },
     ],
-    'ac-analytics': [
+    "ac-analytics": [
       function (require, module, exports) {
-        'use strict';
-        module.exports = require('../ac-analytics.js');
+        "use strict";
+        module.exports = require("../ac-analytics.js");
       },
-      { '../ac-analytics': '@marcom/ac-analytics' },
+      { "../ac-analytics": "@marcom/ac-analytics" },
     ],
   },
   {},
-  ['@marcom/ac-analytics'],
+  ["@marcom/ac-analytics"],
 );

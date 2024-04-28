@@ -1,7 +1,7 @@
-import { useLayoutEffect, useState } from 'react';
-import database from '../Datebase.json';
-import { motion } from 'framer-motion';
-import { useLanguage } from '../help/helpFunction';
+import { useLayoutEffect, useState } from "react";
+import database from "../Database.json";
+import { motion } from "framer-motion";
+import { useLanguage } from "../help/helpFunction";
 
 const Lifes = database.PersonalInfo.Lifes;
 
@@ -15,23 +15,23 @@ export default function Life() {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <section className='p-[20px] my-[20px]'>
-      <div className=''>
+    <section className="p-[20px] my-[20px]">
+      <div className="">
         <div
           style={{
-            display: 'grid',
+            display: "grid",
             gridTemplateColumns: `repeat(auto-fit, minmax(${
-              windowWidth < 786 ? '50%' : windowWidth < 1024 ? '30%' : '23%'
+              windowWidth < 786 ? "50%" : windowWidth < 1024 ? "30%" : "23%"
             }, 1fr))`,
-            justifyContent: 'center',
-            gap: '20px',
+            justifyContent: "center",
+            gap: "20px",
           }}
           className={`animate__animated animate__fadeIn`}
         >
@@ -45,40 +45,40 @@ export default function Life() {
                 setIndex(index);
               }}
               onMouseLeave={() => setHoverColor(false)}
-              className='welcomeanimation w-full duration-500 smoothchange pt-[120px] text-center rounded-[12px] overflow-visible'
+              className="welcomeanimation w-full duration-500 smoothchange pt-[120px] text-center rounded-[12px] overflow-visible"
               style={{
                 backgroundImage: `url(${life.pic})`,
-                backgroundSize: '70% auto',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'left bottom',
+                backgroundSize: "70% auto",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "left bottom",
                 animationDelay: `${index * 0.15}s`,
               }}
             >
               <div
                 className={`relative transition-all duration-500 flex flex-col min-w-0 break-words  ${
                   HoverColor && Index == index
-                    ? 'bg-gray-950/70'
-                    : ' bg-white/50'
+                    ? "bg-gray-950/70"
+                    : " bg-white/50"
                 }  w-full rounded-[12px] overflow-visible`}
                 style={{
                   backgroundImage: `url(${life.pic})`,
-                  backgroundSize: '70% auto',
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'left bottom',
+                  backgroundSize: "70% auto",
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "left bottom",
                 }}
               >
-                <div className='px-6 py-6 flex-auto text-gray-750 hover:text-white/50'>
-                  <div className='flex justify-end'>
-                    <div className='flex flex-col'>
-                      <div className='flex-shrink-0 '>
+                <div className="px-6 py-6 flex-auto text-gray-750 hover:text-white/50">
+                  <div className="flex justify-end">
+                    <div className="flex flex-col">
+                      <div className="flex-shrink-0 ">
                         <div
                           className={`flex justify-end w-18 h-18 rounded-full items-center `}
                         >
                           <i
                             className={`fi text-[25px] ${
                               HoverColor && Index == index
-                                ? 'text-white/50'
-                                : 'text-gray-750'
+                                ? "text-white/50"
+                                : "text-gray-750"
                             } fi-sr-${life.icon}`}
                           />
                         </div>
@@ -86,8 +86,8 @@ export default function Life() {
                       <h6
                         className={`text-3xl ${
                           HoverColor && Index == index
-                            ? 'text-white/50'
-                            : 'text-gray-750'
+                            ? "text-white/50"
+                            : "text-gray-750"
                         } font-semibold text-right`}
                       >
                         {life.label[lang]}

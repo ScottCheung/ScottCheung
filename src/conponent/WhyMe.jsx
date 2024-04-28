@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import ReactDOM from 'react-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import Database from '../Datebase.json';
-import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
-import More from './More';
-import { Link, useNavigate } from 'react-router-dom';
-import CtButton from './ctButton';
-import { useAppContext } from '../help/ContextManager';
+import React, { useState, useEffect } from "react";
+import ReactDOM from "react-dom";
+import { motion, AnimatePresence } from "framer-motion";
+import Database from "../Database.json";
+import { hideRow, bgPic, useLanguage, SelectText } from "../help/helpFunction";
+import More from "./More";
+import { Link, useNavigate } from "react-router-dom";
+import CtButton from "./ctButton";
+import { useAppContext } from "../help/ContextManager";
 
 const Welcomevisblecontainer =
   Database.Animation.Variant.Welcomevisblecontainer;
@@ -26,9 +26,9 @@ function WhyMe({ hideTittle }) {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -40,15 +40,15 @@ function WhyMe({ hideTittle }) {
 
   const BanScroll = () => {
     const scrollbarWidth = adjustPaddingForScrollbar(); // 获取滚动条宽度
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
     document.body.style.paddingRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
     // document.getElementById('navbar').style.marginRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
     // document.getElementById('navbar').style.opacity = 0;
   };
 
   const UnBanScroll = () => {
-    document.body.style.overflow = 'auto';
-    document.body.style.paddingRight = '0px'; // 重置paddingRight
+    document.body.style.overflow = "auto";
+    document.body.style.paddingRight = "0px"; // 重置paddingRight
     // document.getElementById('navbar').style.marginRight = '0px'; // 重置paddingRight
     // document.getElementById('navbar').style.opacity = 1;
   };
@@ -58,8 +58,8 @@ function WhyMe({ hideTittle }) {
     BanScroll();
     setComponents((prevComponents) => ({
       ...prevComponents,
-      NavBar: 'hide',
-      whymeCard: 'visible',
+      NavBar: "hide",
+      whymeCard: "visible",
     }));
   };
 
@@ -68,14 +68,14 @@ function WhyMe({ hideTittle }) {
     UnBanScroll();
     setComponents((prevComponents) => ({
       ...prevComponents,
-      NavBar: 'visible',
-      whymeCard: 'hide',
+      NavBar: "visible",
+      whymeCard: "hide",
     }));
   };
 
   const WhyMe = (
-    <div className='w-full h-full  mb-[10vh] relative flex'>
-      <div className='w-full h-full '>
+    <div className="w-full h-full  mb-[10vh] relative flex">
+      <div className="w-full h-full ">
         {/* 引导按钮 */}
         <motion.div
           whileTap={{ scale: 0.9 }}
@@ -85,12 +85,12 @@ function WhyMe({ hideTittle }) {
             duration: 0.7,
             ease: [0.455, 0.03, 0.515, 0.955],
           }}
-          className=''
+          className=""
         ></motion.div>
         {/* 一级标题 */}
         <div
-          id='whyme'
-          className={`${hideTittle ? 'hidden' : ''} flex justify-center pt-36`}
+          id="whyme"
+          className={`${hideTittle ? "hidden" : ""} flex justify-center pt-36`}
         >
           <motion.div
             initial={{ opacity: 0 }}
@@ -99,32 +99,31 @@ function WhyMe({ hideTittle }) {
               ease: [0.455, 0.03, 0.515, 0.955],
               duration: 1,
             }}
-            className='animate__animated animate__fadeInUp items-center flex justify-center'
+            className="flex justify-center items-center animate__animated animate__fadeInUp"
           >
-            <div className='animate__animated animate__zoomIn'>
-              <i className=' fi text-5xl lg:text-8xl  fi-rr-lightbulb-on mr-3 pt-3 '></i>
+            <div className="animate__animated animate__zoomIn">
+              <i className="text-5xl fi lg:text-8xl fi-rr-lightbulb-on mr-3 pt-3"></i>
             </div>
-            <h2 className='animate__animated animate__zoomIn text-5xl lg:text-8xl font-bold font-mono'>
-              {lang == 0 && 'Why me?'}
-              {lang == 1 && '优势'}
+            <h2 className="text-5xl font-mono animate__animated animate__zoomIn lg:text-8xl font-bold">
+              {lang == 0 && "Why me?"}
+              {lang == 1 && "优势"}
             </h2>
           </motion.div>
         </div>
         {/* Item 容器 */}
         <AnimatePresence>
-          <section className='section section-incentive background-alt staggered-end'>
-            <div className='gallery gallery-align-start gallery-icon-cards'>
-              <div className='scroll-visblecontainer'>
-                <div className='item-visblecontainer'>
+          <section className="section section-incentive background-alt staggered-end">
+            <div className="gallery gallery-align-start gallery-icon-cards">
+              <div className="scroll-visblecontainer">
+                <div className="item-visblecontainer">
                   <motion.ul
                     variants={Welcomevisblecontainer}
-                    initial='hidden'
-                    whileInView='visible'
-                    // viewport={{ once: true }}
+                    initial="hidden"
+                    whileInView="visible"
                     exit={{ opacity: 0 }}
-                    viewport={{ margin: '-30%' }}
-                    className='card-set p-[20px] overflow-hidden scroll-smooth '
-                    role='list'
+                    viewport={{ once: true, margin: "-30%" }}
+                    className="card-set p-[20px] overflow-hidden scroll-smooth "
+                    role="list"
                   >
                     {keyfeature.map((feature, index) => (
                       <motion.div
@@ -139,41 +138,41 @@ function WhyMe({ hideTittle }) {
                         transition={StagerFadeInUp}
                         whileHover={{ scale: 1.001 }}
                         whileTap={{ scale: 0.99 }}
-                        className='gallery-item grid-item current '
+                        className="gallery-item grid-item current "
                       >
-                        <div className='icon-card card-visblecontainer'>
-                          <div className='card '>
+                        <div className="icon-card card-visblecontainer">
+                          <div className="card ">
                             <motion.span
-                              className='absolute top-0 left-0 right-0  bottom-0 -z-20 overflow-hidden rounded-[28px] first-letter:'
+                              className="absolute top-0 left-0 right-0  bottom-0 -z-20 overflow-hidden rounded-[28px] first-letter:"
                               style={{
                                 ...(!hideTittle
                                   ? bgPic(
                                       feature.pic[0],
-                                      '100% auto',
-                                      'center bottom',
+                                      "100% auto",
+                                      "center bottom",
                                     )
                                   : {}),
                               }}
                             ></motion.span>
                             <motion.div
-                              style={{ willChange: 'transform' }}
+                              style={{ willChange: "transform" }}
                               layout
                               layoutId={feature.advantage}
                               className={`${
                                 hideTittle
                                   ? `${
                                       windowWidth > 768
-                                        ? 'bg-gray-100'
-                                        : 'bg-gray-900/80'
+                                        ? "bg-gray-100"
+                                        : "bg-gray-900/80"
                                     }  `
-                                  : 'bg-white/40 -z-30'
+                                  : "bg-white/40 -z-30"
                               }  card-modifier  fixed-width bg-button card-padding has-trigger-button`}
                             >
-                              <motion.div className='card-viewport-content'>
-                                <div className='icon-card-content'>
-                                  <div className=''>
+                              <motion.div className="card-viewport-content">
+                                <div className="icon-card-content">
+                                  <div className="">
                                     <motion.div>
-                                      <motion.div className='items-center flex justify-start'>
+                                      <motion.div className="flex justify-start items-center">
                                         <i
                                           style={{
                                             animationDelay: `${index * 0.2}s`,
@@ -182,20 +181,20 @@ function WhyMe({ hideTittle }) {
                                             feature.icon
                                           } fi animate__animated animate__delay-3s  animate__zoomIn  text-6xl ${
                                             feature.color1 +
-                                            ' ' +
+                                            " " +
                                             feature.color2
                                           } flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
                                         ></i>
                                       </motion.div>
-                                      <div className='py-6 sm:py-3 flex justify-start'>
+                                      <div className="flex justify-start py-6 sm:py-3">
                                         <motion.div
-                                          layoutId={feature.advantage + 'title'}
+                                          layoutId={feature.advantage + "title"}
                                           style={{
                                             animationDelay: `${index * 0.2}s`,
                                           }}
                                           className={`animate__animated  animate__delay-3s animate__zoomIn animate__slow typography-card-headline ${
                                             feature.color1 +
-                                            ' ' +
+                                            " " +
                                             feature.color2
                                           } flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
                                         >
@@ -206,7 +205,7 @@ function WhyMe({ hideTittle }) {
                                   </div>
                                   <div
                                     className={`${
-                                      hideTittle ? 'hidden' : ''
+                                      hideTittle ? "hidden" : ""
                                     } copy-visblecontainer md:h-[450px] h-[290px]`}
                                   >
                                     <div
@@ -220,7 +219,7 @@ function WhyMe({ hideTittle }) {
                                     </div>
                                     <More
                                       color={`  ${
-                                        feature.color1 + ' ' + feature.color2
+                                        feature.color1 + " " + feature.color2
                                       } bg-gradient-to-br text-transparent bg-clip-text `}
                                     />
                                   </div>
@@ -233,30 +232,30 @@ function WhyMe({ hideTittle }) {
                             (hideTittle && (
                               <a
                                 href={feature.href}
-                                className='anz-card-modal-link z-50 '
+                                className="anz-card-modal-link z-50 "
                               >
                                 <button
-                                  className='card-modal-trigger modal-trigger card-cta-modal-button'
-                                  type='link'
+                                  className="card-modal-trigger modal-trigger card-cta-modal-button"
+                                  type="link"
                                 >
-                                  <div className='modal-trigger-visblecontainer'>
+                                  <div className="modal-trigger-visblecontainer">
                                     <span
                                       className={`${
                                         hideTittle
                                           ? `${
                                               feature.color1 +
-                                              ' ' +
+                                              " " +
                                               feature.color2
                                             } bg-gradient-to-br card-cta-modal-button-icon opacity-80`
-                                          : 'card-cta-modal-button-icon'
+                                          : "card-cta-modal-button-icon"
                                       }  `}
                                     >
                                       <svg
-                                        xmlns='http://www.w3.org/2000/svg'
-                                        viewBox='8 8 20 20'
-                                        className='card-cta-modal-button-small-icon card-modal-button-small-icon'
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="8 8 20 20"
+                                        className="card-cta-modal-button-small-icon card-modal-button-small-icon"
                                       >
-                                        <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
+                                        <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
                                       </svg>
                                     </span>
                                   </div>

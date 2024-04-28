@@ -12,9 +12,14 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
+    "apexcharts": "^3.49.0",
     "eslint": "8.57.0",
     "flowbite": "^2.3.0",
     "framer-motion": "^10.18.0",
+    "html2pdf": "^0.0.11",
+    "html2pdf.js": "^0.10.1",
+    "prettier": "^3.2.5",
+    "prettier-plugin-tailwindcss": "^0.5.14",
     "react": "^18.2.0",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
@@ -47,8 +52,10 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "autoprefixer": "^10.4.19",
     "gh-pages": "^6.1.1",
-    "tailwindcss": "^3.3.5"
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.3"
   },
   "plugins": [
     "@babel/plugin-syntax-dynamic-import"

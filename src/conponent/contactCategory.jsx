@@ -1,7 +1,7 @@
-import { useLayoutEffect, useState } from 'react';
-import Database from '../Datebase.json';
-import { motion } from 'framer-motion';
-import { useLanguage } from '../help/helpFunction';
+import { useLayoutEffect, useState } from "react";
+import Database from "../Database.json";
+import { motion } from "framer-motion";
+import { useLanguage } from "../help/helpFunction";
 
 const data = Database.PersonalInfo.Contacts;
 
@@ -15,19 +15,19 @@ export default function Life() {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <div className='p-[20px] my-[20px]'>
+    <div className="p-[20px] my-[20px]">
       <motion.ul
-        initial='hidden'
-        whileInView='visible'
+        initial="hidden"
+        whileInView="visible"
         viewport={{ once: true }}
-        className=' flex justify-between items-center px-20'
+        className=" flex justify-between items-center px-20"
       >
         {data.items.map((type, index) => (
           <motion.li
@@ -39,12 +39,12 @@ export default function Life() {
           >
             <a
               href={type.link}
-              className='flex-shrink-0 welcomeanimation hover:text-sky-700'
+              className="flex-shrink-0 welcomeanimation hover:text-sky-700"
               style={{
                 animationDelay: `${index * 0.1}s`,
               }}
             >
-              <div className='items-center flex justify-center flex-col '>
+              <div className="items-center flex justify-center flex-col ">
                 <i
                   style={{
                     animationDelay: `${index * 0.1}s`,
@@ -57,7 +57,7 @@ export default function Life() {
                   style={{
                     animationDelay: `${index * 0.1}s`,
                   }}
-                  className='lg:text-[15px]  text-center animate__animated  animate__zoomIn  '
+                  className="lg:text-[15px]  text-center animate__animated  animate__zoomIn  "
                 >
                   {type.type[lang]}
                 </p>

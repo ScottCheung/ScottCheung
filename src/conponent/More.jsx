@@ -1,6 +1,6 @@
-import React from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { hideRow, useLanguage } from '../help/helpFunction';
+import React from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { hideRow, useLanguage } from "../help/helpFunction";
 
 export function more({ color }) {
   const lang = useLanguage();
@@ -10,8 +10,8 @@ export function more({ color }) {
       whileTap={{ scale: 0.9 }}
       className={`text-${color}-500 hover:text-${color}-700 text-${color} hover:text-${color}`}
     >
-      [ {lang == 1 && '更多'}
-      {lang == 0 && 'more'} ]
+      [ {lang == 1 && "更多"}
+      {lang == 0 && "more"} ]
     </motion.div>
   );
 }

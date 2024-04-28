@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import Navbar from '../conponent/Navbar';
-import { motion, AnimatePresence } from 'framer-motion';
-import database from '../Datebase.json';
-import Contact from '../conponent/Contact';
-import { useLanguage } from '../help/helpFunction';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from "react";
+import Navbar from "../conponent/Navbar";
+import { motion, AnimatePresence } from "framer-motion";
+import database from "../Database.json";
+import Contact from "../conponent/Contact";
+import { useLanguage } from "../help/helpFunction";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
-  document.body.style.overflowX = 'hidden';
+  document.body.style.overflowX = "hidden";
   const lang = useLanguage();
   const infos = database.PersonalInfo.Infos[lang];
   const visblecontainer = database.Animation.Variant.fastWelcomevisblecontainer;
@@ -19,98 +19,98 @@ export default function Profile() {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
   return (
-    <div className='profile-page overflow-hidden'>
+    <div className="profile-page overflow-hidden">
       <Navbar topTextColor={true} />
-      <main className='profile-page overflow-hidden'>
+      <main className="profile-page overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, y: '-60px', scale: 0.95 }}
+          initial={{ opacity: 0, y: "-60px", scale: 0.95 }}
           transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 0.9 }}
           viewport={{ once: true }}
-          whileInView={{ opacity: 1, y: '0px', scale: 1 }}
-          className='relative block'
-          style={{ height: '400px' }}
+          whileInView={{ opacity: 1, y: "0px", scale: 1 }}
+          className="block relative"
+          style={{ height: "400px" }}
         >
           <div
-            className='absolute top-0 w-full h-full bgrid-colsenter bgrid-colsover'
+            className="absolute w-full h-full top-0 bgrid-colsenter bgrid-colsover"
             style={{
               backgroundImage:
                 "url('https://3o.hk/images/2024/01/22/profilebg.jpg')",
             }}
           >
             <span
-              id='blackOverlay'
-              className='w-full h-full absolute opacity-50 bg-black'
+              id="blackOverlay"
+              className="absolute w-full h-full bg-black opacity-50"
             ></span>
           </div>
           <div
-            className='top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden'
-            style={{ height: '700px' }}
+            className="absolute w-full top-auto bottom-0 left-0 right-0 pointer-events-none overflow-hidden"
+            style={{ height: "700px" }}
           >
             <svg
-              className='absolute bottom-0 overflow-hidden'
-              xmlns='http://www.w3.org/2000/svg'
-              preserveAspectRatio='none'
-              version='1.1'
-              viewBox='0 0 2560 100'
-              x='0'
-              y='0'
+              className="absolute bottom-0 overflow-hidden "
+              xmlns="http://www.w3.org/2000/svg"
+              preserveAspectRatio="none"
+              version="1.1"
+              viewBox="0 0 2560 100"
+              x="0"
+              y="0"
             >
               <polygon
-                className='text-[#e5e5e5] fill-current'
-                points='2560 0 2560 100 0 100'
+                className="fill-[#f5f5f7]"
+                points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>
           </div>
         </motion.div>
-        <section className='relative py-16 '>
-          <div className='visblecontainer  '>
-            <div className='relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp '>
-              <div className='px-6'>
-                <div className='flex  justify-center mb-64'>
-                  <div className='w-full flex justify-center'>
-                    <div className=''>
+        <section className="relative py-16 ">
+          <div className="visblecontainer ">
+            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp ">
+              <div className="px-6">
+                <div className="flex justify-center mb-64">
+                  <div className="flex justify-center w-full">
+                    <div className="">
                       <img
-                        alt='...'
-                        src='/Graphs/home/avatar.jpg'
-                        className='shadow-xl rounded-full h-auto align-middle border-none absolute -m-[75px] animate__animated animate__zoomIn'
-                        style={{ maxWidth: '150px' }}
+                        alt="..."
+                        src="/Graphs/home/avatar.jpg"
+                        className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-[75px] animate__animated animate__zoomIn"
+                        style={{ maxWidth: "150px" }}
                       />
                     </div>
                   </div>
                 </div>
-                <div className='text-center mt-12'>
-                  <h3 className='text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2 animate__animated animate__zoomIn'>
+                <div className="text-center mt-12">
+                  <h3 className="text-4xl text-gray-800 font-semibold leading-normal mb-2 animate__animated animate__zoomIn">
                     张贤哲 | Scott Zhang
                   </h3>
                   <a
-                    href='https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7'
-                    className='text-xl leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase'
+                    href="https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7"
+                    className="text-xl text-gray-500 leading-normal mt-0 mb-2 font-bold uppercase"
                   >
-                    <i className='fi fi-rr-marker mr-2  text-gray-500'></i>
+                    <i className="text-gray-500 fi fi-rr-marker mr-2"></i>
 
-                    {lang == 0 && 'Sydney, Australia'}
-                    {lang == 1 && '澳大利亚，悉尼'}
+                    {lang == 0 && "Sydney, Australia"}
+                    {lang == 1 && "澳大利亚，悉尼"}
                   </a>
-                  <div className='mb-2 text-gray-700 mt-10'></div>
+                  <div className="text-gray-700 mb-2 mt-10"></div>
                 </div>
-                <div className='mt-10 py-10 border-t  text-center'>
-                  <div className='flex flex-wrap justify-center'>
-                    <div className='w-full lg:w-9/12 px-4'>
-                      <p className='mb-4 text-xl leading-relaxed text-gray-800 '>
+                <div className="text-center border-t mt-10 py-10">
+                  <div className="flex flex-wrap justify-center">
+                    <div className="w-full lg:w-9/12 px-4">
+                      <p className="text-xl text-gray-800 mb-4 leading-relaxed ">
                         {lang == 0 &&
-                          'Please note that all these informations is private. Please respect privacy and please do not spread it.'}
+                          "Please note that all these informations is private. Please respect privacy and please do not spread it."}
                         {lang == 1 &&
-                          '请不要随意传播个人信息，请尊重他人隐私，谢谢。'}
+                          "请不要随意传播个人信息，请尊重他人隐私，谢谢。"}
                       </p>
                       <button
-                        className='font-normal text-pink-500 animate__animated animate__zoomIn'
+                        className="font-normal text-pink-500 animate__animated animate__zoomIn"
                         onClick={(e) =>
                           e.preventDefault() & setIsExpanded(!isExpanded)
                         }
@@ -119,21 +119,21 @@ export default function Profile() {
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           className={`animate__animated animate__zoomIn ${
-                            isExpanded ? 'hidden' : ''
+                            isExpanded ? "hidden" : ""
                           }`}
                         >
-                          {lang == 0 && 'Show QA Info'}
-                          {lang == 1 && '展开QA问答'}
+                          {lang == 0 && "Show QA Info"}
+                          {lang == 1 && "展开QA问答"}
                         </motion.div>
                         <motion.div
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
                           className={`animate__animated animate__zoomIn ${
-                            !isExpanded ? 'hidden' : ''
+                            !isExpanded ? "hidden" : ""
                           }`}
                         >
-                          {lang == 0 && 'Show Basic Information'}
-                          {lang == 1 && '展开基本信息'}
+                          {lang == 0 && "Show Basic Information"}
+                          {lang == 1 && "展开基本信息"}
                         </motion.div>
                       </button>
                     </div>
@@ -144,34 +144,34 @@ export default function Profile() {
           </div>
         </section>
       </main>
-      <div className='grid visblecontainer section-sapphire pb-24 mb-[15vh]'>
-        <div className='grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers '>
-          <div className='tile tile-rounded '>
+      <div className="grid visblecontainer section-sapphire pb-24 mb-[15vh]">
+        <div className="grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers ">
+          <div className="tile tile-rounded ">
             <motion.div
               variants={visblecontainer}
-              initial='hidden'
-              whileInView='visible'
+              initial="hidden"
+              whileInView="visible"
               viewport={{ once: true }}
-              className='tile-content bg-white '
+              className="bg-white tile-content "
             >
               {isExpanded ? (
                 <>
-                  {' '}
+                  {" "}
                   {/* Further Information */}
-                  <div className='tile-header '>
-                    <div className='flex justify-between'>
-                      <h3 className='tile-headline typography-subsection-headline mx-8 py-16 animate__animated animate__zoomIn'>
-                        {lang == 0 && 'QA Info'}
-                        {lang == 1 && 'QA信息'}
+                  <div className="tile-header ">
+                    <div className="flex justify-between">
+                      <h3 className="tile-headline typography-subsection-headline mx-8 py-16 animate__animated animate__zoomIn">
+                        {lang == 0 && "QA Info"}
+                        {lang == 1 && "QA信息"}
                       </h3>
                       <motion.div
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className='tile-headline py-16  animate__animated animate__zoomIn'
+                        className="tile-headline py-16 animate__animated animate__zoomIn"
                       >
-                        <a href='/'>
-                          {lang == 0 && 'more >'}
-                          {lang == 1 && '更多  >>'}
+                        <a href="/">
+                          {lang == 0 && "more >"}
+                          {lang == 1 && "更多  >>"}
                         </a>
                       </motion.div>
                     </div>
@@ -179,21 +179,21 @@ export default function Profile() {
                 </>
               ) : (
                 <>
-                  {' '}
+                  {" "}
                   {/* Basic Information */}
-                  <div className='tile-header '>
-                    <h3 className='tile-headline typography-subsection-headline mx-8 py-16 animate__animated animate__zoomIn'>
-                      {lang == 0 && 'Basic Information'}
-                      {lang == 1 && '基本信息'}
+                  <div className="tile-header ">
+                    <h3 className="tile-headline typography-subsection-headline mx-8 py-16 animate__animated animate__zoomIn">
+                      {lang == 0 && "Basic Information"}
+                      {lang == 1 && "基本信息"}
                     </h3>
                     <div
                       className={`grid ${
-                        windowWidth > 786 ? 'grid-cols-2' : 'grid-cols-1'
+                        windowWidth > 786 ? "grid-cols-2" : "grid-cols-1"
                       } `}
                     >
                       {infos.map((info, index) => {
                         // 判断是否为 "Age"
-                        if (info.cont === 'Age' || info.cont === '年龄') {
+                        if (info.cont === "Age" || info.cont === "年龄") {
                           // 计算年份，这里假设 birthYear 是存储出生年份的变量
                           const currentYear = new Date().getFullYear();
                           const age = currentYear - 1997 - 1;
@@ -209,20 +209,20 @@ export default function Profile() {
                             whileTap={{ scale: 0.99 }}
                             layout
                             style={{ animationDelay: `${0.05 * index}s` }}
-                            className='py-3 sm:py-4 border-b mx-8 animate__animated animate__fadeInRight'
+                            className="py-3 sm:py-4 border-b mx-8 animate__animated animate__fadeInRight"
                           >
-                            <div className='flex items-center'>
-                              <div className='flex-shrink-0'>
+                            <div className="flex items-center">
+                              <div className="flex-shrink-0">
                                 <i
                                   className={`text-[17px] text-gray-900 fi ${info.label}`}
                                 ></i>
                               </div>
-                              <div className='flex-1 min-w-0 ms-4'>
-                                <p className='text-3xl font-medium text-gray-900 font-semibold truncate dark:text-white'>
+                              <div className="flex-1 min-w-0 ms-4">
+                                <p className="text-3xl text-gray-900 font-medium font-semibold truncate dark:text-white">
                                   {info.cont}
                                 </p>
                               </div>
-                              <div className='inline-flex text-2xl items-center  text-gray-900 dark:text-white'>
+                              <div className="items-center text-2xl text-gray-900 inline-flex dark:text-white">
                                 {info.icon}
                               </div>
                             </div>
@@ -235,7 +235,7 @@ export default function Profile() {
               )}
             </motion.div>
           </div>
-          <div className='min-h-[20vh]'></div>
+          <div className="min-h-[20vh]"></div>
         </div>
       </div>
       <Contact isTopOut={true} />

@@ -1,13 +1,16 @@
-@import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
-@import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css');
-@import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
-@import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css');
-@import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
-@import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-straight/css/uicons-solid-straight.css');
-@import url('https://rsms.me/inter/inter.css');
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css");
+@import url("https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css");
+@import url("https://cdn-uicons.flaticon.com/2.0.0/uicons-solid-straight/css/uicons-solid-straight.css");
+@import url("https://rsms.me/inter/inter.css");
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
 
 :root {
   --global-staggered-delay: 0.15;
@@ -96,7 +99,7 @@ span.text {
 }
 span.text::before {
   /* content: attr(data-text); */
-  content: 'HELLO!';
+  content: "HELLO!";
   position: absolute;
   /* 设置混合模式为：差别 */
   mix-blend-mode: difference;
@@ -274,7 +277,9 @@ span.shine {
   border: 0;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 100ms linear, color 100ms linear;
+  transition:
+    background-color 100ms linear,
+    color 100ms linear;
   background-color: var(--scrim-background-color);
   color: var(--icon-color);
 }
@@ -300,7 +305,9 @@ span.shine {
   border: 0;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 100ms linear, color 100ms linear;
+  transition:
+    background-color 100ms linear,
+    color 100ms linear;
   background-color: var(--scrim-background-color);
   color: var(--icon-color);
 }
@@ -320,7 +327,7 @@ span.shine {
 }
 
 .background-overlay {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   left: 0;
@@ -865,7 +872,11 @@ img.emoji {
 }
 
 .transition {
-  transition: width 2s, height 2s, background-color 0.5s, rotate 1s;
+  transition:
+    width 2s,
+    height 2s,
+    background-color 0.5s,
+    rotate 1s;
 }
 
 .bg-yellow {
@@ -1092,7 +1103,7 @@ img.emoji {
     }
 
     &:before {
-      content: '';
+      content: "";
       display: inline-block;
       height: 50%;
       width: 1px;
@@ -1230,7 +1241,7 @@ img.emoji {
       &:last-child {
         &:after {
           position: absolute;
-          content: '';
+          content: "";
           display: inline-block;
           height: 0.4rem;
           width: 0.4rem;
@@ -1265,7 +1276,7 @@ img.emoji {
       }
 
       &:before {
-        content: '';
+        content: "";
         display: inline-block;
         height: 0.3rem;
         width: 100%;
@@ -1291,7 +1302,7 @@ img.emoji {
         &:first-child,
         &:last-child {
           &:after {
-            content: '';
+            content: "";
             display: inline-block;
             height: 2rem;
             width: 0.1rem;
@@ -1340,7 +1351,7 @@ img.emoji {
     text-align: center;
 
     &:before {
-      content: '';
+      content: "";
       display: inline-block;
       height: 50%;
       width: 1px;
@@ -1361,7 +1372,7 @@ img.emoji {
 
         &:before,
         &:after {
-          content: '';
+          content: "";
           position: absolute;
           height: 2rem;
           width: 0.12rem;
@@ -1396,7 +1407,7 @@ img.emoji {
 
       &:before,
       &:after {
-        content: '';
+        content: "";
         display: block;
         position: absolute;
         height: 1.6rem;
@@ -1422,7 +1433,7 @@ img.emoji {
 
     &:before,
     &:after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       width: 100%;
@@ -1493,7 +1504,7 @@ img.emoji {
 
     &:before,
     &:after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       height: 2.4rem;
@@ -1531,8 +1542,11 @@ img.emoji {
   padding: 1em;
   overflow-y: hidden;
   background: #fff;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.075), 0 1px 2px rgba(0, 0, 0, 0.075),
-    1px 2px 4px rgba(0, 0, 0, 0.075), 1px 3px 8px rgba(0, 0, 0, 0.075),
+  box-shadow:
+    0 0 1px rgba(0, 0, 0, 0.075),
+    0 1px 2px rgba(0, 0, 0, 0.075),
+    1px 2px 4px rgba(0, 0, 0, 0.075),
+    1px 3px 8px rgba(0, 0, 0, 0.075),
     2px 4px 16px rgba(0, 0, 0, 0.075);
   pointer-events: all;
 }
@@ -1621,20 +1635,20 @@ img.emoji {
   height: 2em;
 }
 
-.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^="swal2-x-mark-line"] {
   top: 0.875em;
   width: 1.375em;
 }
 
 .swal2-popup.swal2-toast
   .swal2-icon.swal2-error
-  [class^='swal2-x-mark-line'][class$='left'] {
+  [class^="swal2-x-mark-line"][class$="left"] {
   left: 0.3125em;
 }
 
 .swal2-popup.swal2-toast
   .swal2-icon.swal2-error
-  [class^='swal2-x-mark-line'][class$='right'] {
+  [class^="swal2-x-mark-line"][class$="right"] {
   right: 0.3125em;
 }
 
@@ -1656,7 +1670,7 @@ img.emoji {
   border-color: #a5dc86;
 }
 
-.swal2-popup.swal2-toast .swal2-success [class^='swal2-success-circular-line'] {
+.swal2-popup.swal2-toast .swal2-success [class^="swal2-success-circular-line"] {
   position: absolute;
   width: 1.6em;
   height: 3em;
@@ -1666,7 +1680,7 @@ img.emoji {
 
 .swal2-popup.swal2-toast
   .swal2-success
-  [class^='swal2-success-circular-line'][class$='left'] {
+  [class^="swal2-success-circular-line"][class$="left"] {
   top: -0.8em;
   left: -0.5em;
   transform: rotate(-45deg);
@@ -1676,7 +1690,7 @@ img.emoji {
 
 .swal2-popup.swal2-toast
   .swal2-success
-  [class^='swal2-success-circular-line'][class$='right'] {
+  [class^="swal2-success-circular-line"][class$="right"] {
   top: -0.25em;
   left: 0.9375em;
   transform-origin: 0 1.5em;
@@ -1695,13 +1709,13 @@ img.emoji {
   height: 2.6875em;
 }
 
-.swal2-popup.swal2-toast .swal2-success [class^='swal2-success-line'] {
+.swal2-popup.swal2-toast .swal2-success [class^="swal2-success-line"] {
   height: 0.3125em;
 }
 
 .swal2-popup.swal2-toast
   .swal2-success
-  [class^='swal2-success-line'][class$='tip'] {
+  [class^="swal2-success-line"][class$="tip"] {
   top: 1.125em;
   left: 0.1875em;
   width: 0.75em;
@@ -1709,7 +1723,7 @@ img.emoji {
 
 .swal2-popup.swal2-toast
   .swal2-success
-  [class^='swal2-success-line'][class$='long'] {
+  [class^="swal2-success-line"][class$="long"] {
   top: 0.9375em;
   right: 0.1875em;
   width: 1.375em;
@@ -1744,7 +1758,7 @@ img.emoji {
   bottom: 0;
   left: 0;
   box-sizing: border-box;
-  grid-template-areas: 'top-start     top            top-end' 'center-start  center         center-end' 'bottom-start  bottom-center  bottom-end';
+  grid-template-areas: "top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";
   grid-template-rows: minmax(min-content, auto) minmax(min-content, auto) minmax(
       min-content,
       auto
@@ -2039,7 +2053,9 @@ img.emoji {
   margin-bottom: -1.2em;
   padding: 0;
   overflow: hidden;
-  transition: color 0.1s, box-shadow 0.1s;
+  transition:
+    color 0.1s,
+    box-shadow 0.1s;
   border: none;
   border-radius: 5px;
   background: rgba(0, 0, 0, 0);
@@ -2095,11 +2111,15 @@ img.emoji {
 .swal2-textarea {
   box-sizing: border-box;
   width: auto;
-  transition: border-color 0.1s, box-shadow 0.1s;
+  transition:
+    border-color 0.1s,
+    box-shadow 0.1s;
   border: 1px solid #d9d9d9;
   border-radius: 0.1875em;
   background: rgba(0, 0, 0, 0);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06), 0 0 0 3px rgba(0, 0, 0, 0);
+  box-shadow:
+    inset 0 1px 1px rgba(0, 0, 0, 0.06),
+    0 0 0 3px rgba(0, 0, 0, 0);
   color: inherit;
   font-size: 1.125em;
 }
@@ -2116,7 +2136,8 @@ img.emoji {
 .swal2-textarea:focus {
   border: 1px solid #b4dbed;
   outline: none;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.06),
+  box-shadow:
+    inset 0 1px 1px rgba(0, 0, 0, 0.06),
     0 0 0 3px rgba(100, 150, 200, 0.5);
 }
 
@@ -2216,7 +2237,7 @@ img.emoji {
 }
 
 .swal2-validation-message::before {
-  content: '!';
+  content: "!";
   display: inline-block;
   width: 1.5em;
   min-width: 1.5em;
@@ -2262,7 +2283,7 @@ img.emoji {
   flex-grow: 1;
 }
 
-.swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+.swal2-icon.swal2-error [class^="swal2-x-mark-line"] {
   display: block;
   position: absolute;
   top: 2.3125em;
@@ -2272,12 +2293,12 @@ img.emoji {
   background-color: #f27474;
 }
 
-.swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='left'] {
+.swal2-icon.swal2-error [class^="swal2-x-mark-line"][class$="left"] {
   left: 1.0625em;
   transform: rotate(45deg);
 }
 
-.swal2-icon.swal2-error [class^='swal2-x-mark-line'][class$='right'] {
+.swal2-icon.swal2-error [class^="swal2-x-mark-line"][class$="right"] {
   right: 1em;
   transform: rotate(-45deg);
 }
@@ -2334,7 +2355,7 @@ img.emoji {
   color: #a5dc86;
 }
 
-.swal2-icon.swal2-success [class^='swal2-success-circular-line'] {
+.swal2-icon.swal2-success [class^="swal2-success-circular-line"] {
   position: absolute;
   width: 3.75em;
   height: 7.5em;
@@ -2343,7 +2364,7 @@ img.emoji {
 }
 
 .swal2-icon.swal2-success
-  [class^='swal2-success-circular-line'][class$='left'] {
+  [class^="swal2-success-circular-line"][class$="left"] {
   top: -0.4375em;
   left: -2.0635em;
   transform: rotate(-45deg);
@@ -2352,7 +2373,7 @@ img.emoji {
 }
 
 .swal2-icon.swal2-success
-  [class^='swal2-success-circular-line'][class$='right'] {
+  [class^="swal2-success-circular-line"][class$="right"] {
   top: -0.6875em;
   left: 1.875em;
   transform: rotate(-45deg);
@@ -2382,7 +2403,7 @@ img.emoji {
   transform: rotate(-45deg);
 }
 
-.swal2-icon.swal2-success [class^='swal2-success-line'] {
+.swal2-icon.swal2-success [class^="swal2-success-line"] {
   display: block;
   position: absolute;
   z-index: 2;
@@ -2391,14 +2412,14 @@ img.emoji {
   background-color: #a5dc86;
 }
 
-.swal2-icon.swal2-success [class^='swal2-success-line'][class$='tip'] {
+.swal2-icon.swal2-success [class^="swal2-success-line"][class$="tip"] {
   top: 2.875em;
   left: 0.8125em;
   width: 1.5625em;
   transform: rotate(45deg);
 }
 
-.swal2-icon.swal2-success [class^='swal2-success-line'][class$='long'] {
+.swal2-icon.swal2-success [class^="swal2-success-line"][class$="long"] {
   top: 2.375em;
   right: 0.5em;
   width: 2.9375em;
@@ -2470,7 +2491,7 @@ img.emoji {
   background: #2778c4;
 }
 
-[class^='swal2'] {
+[class^="swal2"] {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -2804,7 +2825,7 @@ body.swal2-no-backdrop .swal2-visblecontainer .swal2-modal {
   }
 
   body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)
-    > [aria-hidden='true'] {
+    > [aria-hidden="true"] {
     display: none;
   }
 
@@ -2903,44 +2924,44 @@ div.wpforms-visblecontainer-full
   border: none;
 }
 
-div.wpforms-visblecontainer .wpforms-form input[type='date'],
-div.wpforms-visblecontainer .wpforms-form input[type='datetime'],
-div.wpforms-visblecontainer .wpforms-form input[type='datetime-local'],
-div.wpforms-visblecontainer .wpforms-form input[type='email'],
-div.wpforms-visblecontainer .wpforms-form input[type='month'],
-div.wpforms-visblecontainer .wpforms-form input[type='number'],
-div.wpforms-visblecontainer .wpforms-form input[type='password'],
-div.wpforms-visblecontainer .wpforms-form input[type='range'],
-div.wpforms-visblecontainer .wpforms-form input[type='search'],
-div.wpforms-visblecontainer .wpforms-form input[type='tel'],
-div.wpforms-visblecontainer .wpforms-form input[type='text'],
-div.wpforms-visblecontainer .wpforms-form input[type='time'],
-div.wpforms-visblecontainer .wpforms-form input[type='url'],
-div.wpforms-visblecontainer .wpforms-form input[type='week'],
+div.wpforms-visblecontainer .wpforms-form input[type="date"],
+div.wpforms-visblecontainer .wpforms-form input[type="datetime"],
+div.wpforms-visblecontainer .wpforms-form input[type="datetime-local"],
+div.wpforms-visblecontainer .wpforms-form input[type="email"],
+div.wpforms-visblecontainer .wpforms-form input[type="month"],
+div.wpforms-visblecontainer .wpforms-form input[type="number"],
+div.wpforms-visblecontainer .wpforms-form input[type="password"],
+div.wpforms-visblecontainer .wpforms-form input[type="range"],
+div.wpforms-visblecontainer .wpforms-form input[type="search"],
+div.wpforms-visblecontainer .wpforms-form input[type="tel"],
+div.wpforms-visblecontainer .wpforms-form input[type="text"],
+div.wpforms-visblecontainer .wpforms-form input[type="time"],
+div.wpforms-visblecontainer .wpforms-form input[type="url"],
+div.wpforms-visblecontainer .wpforms-form input[type="week"],
 div.wpforms-visblecontainer .wpforms-form select,
 div.wpforms-visblecontainer .wpforms-form textarea,
-.nf-form-cont input:not([type='button']),
+.nf-form-cont input:not([type="button"]),
 div.wpforms-visblecontainer .wpforms-form .form-group.is-focused .form-control {
   box-shadow: none;
 }
 
-div.wpforms-visblecontainer .wpforms-form input[type='date'],
-div.wpforms-visblecontainer .wpforms-form input[type='datetime'],
-div.wpforms-visblecontainer .wpforms-form input[type='datetime-local'],
-div.wpforms-visblecontainer .wpforms-form input[type='email'],
-div.wpforms-visblecontainer .wpforms-form input[type='month'],
-div.wpforms-visblecontainer .wpforms-form input[type='number'],
-div.wpforms-visblecontainer .wpforms-form input[type='password'],
-div.wpforms-visblecontainer .wpforms-form input[type='range'],
-div.wpforms-visblecontainer .wpforms-form input[type='search'],
-div.wpforms-visblecontainer .wpforms-form input[type='tel'],
-div.wpforms-visblecontainer .wpforms-form input[type='text'],
-div.wpforms-visblecontainer .wpforms-form input[type='time'],
-div.wpforms-visblecontainer .wpforms-form input[type='url'],
-div.wpforms-visblecontainer .wpforms-form input[type='week'],
+div.wpforms-visblecontainer .wpforms-form input[type="date"],
+div.wpforms-visblecontainer .wpforms-form input[type="datetime"],
+div.wpforms-visblecontainer .wpforms-form input[type="datetime-local"],
+div.wpforms-visblecontainer .wpforms-form input[type="email"],
+div.wpforms-visblecontainer .wpforms-form input[type="month"],
+div.wpforms-visblecontainer .wpforms-form input[type="number"],
+div.wpforms-visblecontainer .wpforms-form input[type="password"],
+div.wpforms-visblecontainer .wpforms-form input[type="range"],
+div.wpforms-visblecontainer .wpforms-form input[type="search"],
+div.wpforms-visblecontainer .wpforms-form input[type="tel"],
+div.wpforms-visblecontainer .wpforms-form input[type="text"],
+div.wpforms-visblecontainer .wpforms-form input[type="time"],
+div.wpforms-visblecontainer .wpforms-form input[type="url"],
+div.wpforms-visblecontainer .wpforms-form input[type="week"],
 div.wpforms-visblecontainer .wpforms-form select,
 div.wpforms-visblecontainer .wpforms-form textarea,
-.nf-form-cont input:not([type='button']) {
+.nf-form-cont input:not([type="button"]) {
   background-image: linear-gradient(#9c27b0, #9c27b0),
     linear-gradient(#d2d2d2, #d2d2d2);
   float: none;
@@ -2948,34 +2969,40 @@ div.wpforms-visblecontainer .wpforms-form textarea,
   border-radius: 0;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: center bottom, center calc(100% - 1px);
-  background-size: 0 2px, 100% 1px;
+  background-position:
+    center bottom,
+    center calc(100% - 1px);
+  background-size:
+    0 2px,
+    100% 1px;
   font-weight: 400;
   transition: background 0s ease-out;
 }
 
 div.wpforms-visblecontainer .wpforms-form .form-group.is-focused .form-control {
   outline: none;
-  background-size: 100% 2px, 100% 1px;
+  background-size:
+    100% 2px,
+    100% 1px;
   transition-duration: 0.3s;
 }
 
-div.wpforms-visblecontainer .wpforms-form input[type='date'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='datetime'].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="date"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="datetime"].form-control,
 div.wpforms-visblecontainer
   .wpforms-form
-  input[type='datetime-local'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='email'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='month'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='number'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='password'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='range'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='search'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='tel'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='text'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='time'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='url'].form-control,
-div.wpforms-visblecontainer .wpforms-form input[type='week'].form-control,
+  input[type="datetime-local"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="email"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="month"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="number"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="password"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="range"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="search"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="tel"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="text"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="time"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="url"].form-control,
+div.wpforms-visblecontainer .wpforms-form input[type="week"].form-control,
 div.wpforms-visblecontainer .wpforms-form select.form-control,
 div.wpforms-visblecontainer .wpforms-form textarea.form-control {
   border: none;
@@ -2990,15 +3017,15 @@ div.wpforms-visblecontainer .wpforms-form .wpforms-field-select select {
 div.wpforms-visblecontainer
   .wpforms-form
   .wpforms-field-number
-  input[type='number'] {
+  input[type="number"] {
   background-image: none;
   border-radius: 3px;
 }
 
-div.wpforms-visblecontainer .wpforms-form button[type='submit'].wpforms-submit,
+div.wpforms-visblecontainer .wpforms-form button[type="submit"].wpforms-submit,
 div.wpforms-visblecontainer
   .wpforms-form
-  button[type='submit'].wpforms-submit:hover {
+  button[type="submit"].wpforms-submit:hover {
   color: #fff;
   border: none;
 }
@@ -3036,8 +3063,12 @@ div.wpforms-visblecontainer-full .wpforms-form textarea:focus {
     linear-gradient(#d2d2d2, #d2d2d2);
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: center bottom, center calc(100% - 1px);
-  background-size: 0 2px, 100% 1px;
+  background-position:
+    center bottom,
+    center calc(100% - 1px);
+  background-size:
+    0 2px,
+    100% 1px;
 }
 
 @media only screen and(max-width:768px) {
@@ -3083,7 +3114,7 @@ div.wpforms-visblecontainer .wpforms-form select:focus {
   color: #1e73be;
 }
 
-.has-header-gradient-background-color[class*='has-background'] {
+.has-header-gradient-background-color[class*="has-background"] {
   background-color: #1e73be;
 }
 
@@ -3091,7 +3122,7 @@ div.wpforms-visblecontainer .wpforms-form select:focus {
   color: #000;
 }
 
-.has-background-color-background-color[class*='has-background'] {
+.has-background-color-background-color[class*="has-background"] {
   background-color: #000;
 }
 
