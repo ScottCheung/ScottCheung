@@ -76,84 +76,56 @@ function Home() {
     }
   }, []);
   const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["0 ", "7% "],
-  });
 
-  // 根据滚动进度计算位移
-  const borderRadius = useTransform(scrollYProgress, [0, 1], [150, 0]);
-  const width = useTransform(scrollYProgress, [0, 1], ["20vw", "100vw"], {
-    ease: easeInOut,
-  });
-  const targetValue = useTransform(scrollYProgress, [0, 1], [0, 70]);
-  const opacity = useTransform(targetValue, [0, 70], [0, 2]);
-  const margin = useTransform(scrollYProgress, [0, 1], ["20%", "0%"]);
   return (
-    <div className="relative overflow-hidden transition-all ">
+    <div className="relative overflow-hidden transition-all bg-gray-200">
       <Navbar topTextColor={true} />
-      <div className="w-full ref={ref}  overflow-hidden transition-all duration-0  fixed">
-        <Carousel interval={3000}>
-          {HomeCarousel.map((media, index) => (
-            <a
-              key={index}
-              href={media.href}
-              className="w-full h-full object-cover overflow-hidden "
-              style={{
-                backgroundImage: `url(${media.src})`,
-                backgroundRepeat: "repeat",
-              }}
-            >
-              <Welcome />
-              <span className="absolute w-full h-full bg-black/30 object-cover z-20"></span>
-              {media.type === "image" ? (
-                <img
-                  className="w-full h-full object-cover object-left"
-                  src={media.src}
-                  alt=""
-                />
-              ) : (
-                <iframe
-                  width="1920px"
-                  height="1080px"
-                  src="https://www.youtube.com/embed/HAnw168huqA?si=e-ptNjN-B9h_TxdH"
-                  //   title='YouTube video player'
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerpolicy="strict-origin-when-cross-origin"
-                  allowfullscreen
-                ></iframe>
-              )}
-            </a>
-          ))}
-        </Carousel>
-      </div>
-      <div className="w-full h-[100vh]   -z-50"></div>
-      <div className="relative z-40 -mt-[85px] w-full flex justify-center  ">
+
+      <Carousel interval={3000}>
+        {HomeCarousel.map((media, index) => (
+          <a
+            key={index}
+            href={media.href}
+            className="z-50 object-cover w-full h-full overflow-hidden"
+            style={{
+              backgroundImage: `url(${media.src})`,
+              backgroundRepeat: "repeat",
+            }}
+          >
+            <Welcome />
+            <span className="absolute z-20 object-cover w-full h-full bg-black/30"></span>
+            {media.type === "image" ? (
+              <img
+                className="object-cover object-left w-full h-full"
+                src={media.src}
+                alt=""
+              />
+            ) : (
+              <iframe
+                width="1920px"
+                height="1080px"
+                src="https://www.youtube.com/embed/HAnw168huqA?si=e-ptNjN-B9h_TxdH"
+                //   title='YouTube video player'
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            )}
+          </a>
+        ))}
+      </Carousel>
+
+      <div className="relative z-40 -mt-[105px] w-full flex justify-center min-h-[100px] ">
         <SubNav />
       </div>
-      <motion.div
-        style={{
-          width,
-          borderRadius,
-          opacity,
-          marginLeft: margin,
-          marginRight: margin,
-        }}
-        className="relative rounded-[35px] overflow-hidden backdrop-blur-[15px] bg-white/70 dark:bg-sky-950/20  z-30 shadow-[15px] "
-      >
-        {/* <div className='-mt-[70px] absolute min-h-[100px] w-full flex justify-center '> */}
-
-        {/* </div> */}
-        <Education />
-        <KeyFeature />
-        <Capability />
-        <SelfDescribing />
-        <WorkExperience />
-        <WhyMe />
-        <Contact />
-      </motion.div>
-
+      <Education />
+      <KeyFeature />
+      <Capability />
+      <SelfDescribing />
+      <WorkExperience />
+      <WhyMe />
+      <Contact />
       <WhyMeCard />
     </div>
   );

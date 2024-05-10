@@ -13,7 +13,7 @@ export function more() {
 
   useEffect(() => {
     function handleScroll() {
-      if (window.scrollY < 1) {
+      if (window.scrollY < 700) {
         setIsTop(true);
         setTimeout(() => {
           setBgStyle("bg-white/10 backdrop-blur-[40px] ");
@@ -43,7 +43,7 @@ export function more() {
     <AnimatePresence>
       {isTop && (
         <motion.div
-          initial={{ opacity: 0, scale: 0, y: 600 }}
+          initial={{ opacity: 0, scale: 0, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0 }}
           transition={{ type: "spring", duration: 1 }}
@@ -52,7 +52,7 @@ export function more() {
           <motion.div
             // layout
             // transition={{ type: 'spring', duration: 0.3 }}
-            className={`w-full  animate__animated flex justify-between md:rounded-full rounded-[12px] items-center  shadow-xl animate__slideInUp transition-all  ${bgStyle}`}
+            className={`w-full  animate__animated flex justify-between md:rounded-full rounded-[12px] items-center  shadow-xl transition-all  ${bgStyle}`}
           >
             {navLocation.map((item, index) => (
               <a
@@ -80,7 +80,7 @@ export function more() {
                   whileFocus={{ scale: 1 }}
                   className="w-full"
                 >
-                  <div className="text-center content-center py-2 my-3">
+                  <div className="content-center py-2 my-3 text-center">
                     {isTop ? (
                       <i
                         className={` flex fi justify-center  py-1 text-[15px]  ${item.logo}`}

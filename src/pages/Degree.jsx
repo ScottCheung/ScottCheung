@@ -9,9 +9,9 @@ export default function Example() {
   return (
     <div className="bg-gradient-to-br from-pink-100 from-10% via-pink-50 via-50% to-white/0 ">
       <Navbar />
-      <div className="flex flex-col justify-center w-fullpt-[70px]">
+      <div className="flex flex-col w-full px-0 justify-center overflow-hidden md:px-[50px]">
         <motion.div
-          className="h-[130vh] w-full bg-sky-200 animate__animated animate__zoomIn rounded-[28px] relative flex flex-col mb-[100vh] mx-[50px] mt-[100px]"
+          className="flex flex-col bg-sky-200 rounded-[28px] h-[130vh]  mt-[100px] mb-[100vh] w-full animate__animated animate__zoomIn relative"
           style={{
             ...bgPic(
               "https://3o.hk/images/2024/01/19/LearningAbility.png",
@@ -20,15 +20,17 @@ export default function Example() {
             ),
           }}
         >
-          <div className=" h-[60vh] flex justify-center items-center text-[30px] md:text-[70px] lg:text-[150px] font-black animate__animated animate__fadeInUp">
-            I have 4 majors
+          <div className="h-[50vh] ">
+            {" "}
+            <div className=" flex font-black h-[60vh] text-[30px] justify-center items-center animate__animated animate__fadeInUp md:text-[70px] lg:text-[150px]">
+              I have 4 majors
+            </div>
           </div>
-          <div className="h-[50vh] "></div>
-          <Education hideTittle="ture" className="h-[100vh] fixed bottom-0" />
+          <Education hideTittle={true} simpleVer={true} />
         </motion.div>
-        <KeyFeature className="mt-[50vh] rounded-[28px] overflow-hidden p-[28px] " />
-        <Contact className="mt-[50vh] rounded-[28px] overflow-hidden p-[28px] " />
       </div>
+      <KeyFeature className="rounded-[28px] mt-[50vh] p-[28px] overflow-hidden " />
+      <Contact className="rounded-[28px] mt-[50vh] p-[28px] overflow-hidden " />
     </div>
   );
 }

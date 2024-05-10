@@ -93,15 +93,15 @@ const Carousel = ({ interval, children }) => {
 
   return (
     <motion.div
-      className="flex relative w-full h-[100vh]  overflow-hidden -z-30"
+      className="flex relative w-full h-[100vh]  overflow-hidden z-30"
       onKeyDown={(e) => {
         if (e.key === "ArrowRight") nextSlide();
         if (e.key === "ArrowLeft") prevSlide();
       }}
       tabIndex="0"
     >
-      {/* <span className='bg-black/50 w-full h-full absolute z-20'></span> */}
-      <div className="w-full h-full bg-black ">
+      {/* <span className='absolute z-20 w-full h-full bg-black/50'></span> */}
+      <div className="w-full h-full ">
         {React.Children.map(children, (child, index) => (
           <div
             className={`w-full h-full ${
@@ -235,7 +235,7 @@ const Carousel = ({ interval, children }) => {
               onMouseLeave={() => {
                 setIsPaused(false);
               }}
-              className="bg-black/20 p-[15px]  backdrop-blur-[5px] flex rounded-full gap-x-[20px]  justify-center items-center transition-all"
+              className="bg-black/20 p-[15px]  backdrop-blur-[5px] flex rounded-full gap-x-[20px] justify-center items-center transition-all"
             >
               {React.Children.map(children, (_, index) => (
                 <div>
@@ -244,7 +244,7 @@ const Carousel = ({ interval, children }) => {
                       goToSlide(index);
                     }}
                     style={{ animationDelay: `${(index + 3) * 0.25}s` }}
-                    className={`bg-gray-200/50 hover:bg-gray-50/50 animate__animated animate__zoomIn  cursor-pointer h-[15px] overflow-hidden transition-all duration-500 rounded-full ${
+                    className={`bg-gray-200/50 hover:bg-gray-50/50 animate__animated animate__zoomIn cursor-pointer h-[15px] overflow-hidden transition-all duration-500 rounded-full ${
                       index === activeIndex ? "w-[50px]" : "w-[15px]"
                     }`}
                   >
@@ -252,7 +252,7 @@ const Carousel = ({ interval, children }) => {
                       progress >= 0 &&
                       isPaused === false && (
                         <div
-                          className={`bg-gradient-to-br from-sky-500 to-emerald-500 h-[15px] rounded-full`}
+                          className={`bg-gradient-to-brfrom-sky-500 to-emerald-500 bg-white h-[15px] rounded-full`}
                           style={{ width: `${progress}%` }}
                         />
                       )}

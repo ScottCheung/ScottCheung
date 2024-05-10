@@ -97,7 +97,7 @@ function Highquality() {
             transition={{
               ease: [0.455, 0.03, 0.515, 0.955],
               duration: 1.3,
-              delay: 0.4,
+              // delay: 0.4,
             }}
             className="tile-header"
           >

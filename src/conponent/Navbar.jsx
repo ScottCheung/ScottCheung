@@ -168,10 +168,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
               }`
         }`}
           >
-            <div className="flex justify-center items-center w-full ">
+            <div className="flex items-center justify-center w-full ">
               <div className="container lg:px-[10%] relative">
                 {/* 最主要的内容 */}
-                <div className="flex justify-between items-center w-full h-full ">
+                <div className="flex items-center justify-between w-full h-full ">
                   <motion.button
                     whileHover={{ scale: 1.03, transition: { duration: 1 } }}
                     whileTap={{ scale: 0.99 }}
@@ -184,7 +184,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     // onMouseLeave={() => {
                     //   setShowProfile(false);
                     // }}
-                    className="flex z-50"
+                    className="z-50 flex"
                   >
                     <Link
                       to="/info"
@@ -192,7 +192,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                       classname="animate__animated animate__fadeInRight animate_slow"
                     >
                       <div className="flex item-center ">
-                        <div className="flex relative justify-center items-center">
+                        <div className="relative flex items-center justify-center">
                           <img
                             className={`smoothchange animate__animated animate__zoomIn  ${
                               isTop ? "w-20" : "w-16"
@@ -218,8 +218,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             </motion.span>
                           )}
                         </div>
-                        {/* <span className="flex relative h-7 w-7">
-                                <span className="absolute w-full h-full opacity-75 animate-ping inline-flex rounded-full bg-sky-400"></span>
+                        {/* <span className="relative flex h-7 w-7">
+                                <span className="absolute inline-flex w-full h-full rounded-full opacity-75 animate-ping bg-sky-400"></span>
                                 <span className="relative inline-flex rounded-full h-7 w-7 bg-sky-500"></span>
                               </span> */}
                         <div className="flex flex-col ml-6">
@@ -284,7 +284,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           >
                             <a
                               href="/info"
-                              className="flex justify-between items-center"
+                              className="flex items-center justify-between"
                             >
                               <img
                                 className="w-24 h-24 rounded-full"
@@ -297,7 +297,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             <div>
                               <a
                                 href="/info"
-                                className="text-gray-900 text-base font-semibold leading-none dark:text-white"
+                                className="text-base font-semibold leading-none text-gray-900 dark:text-white"
                               >
                                 <div className="text-3xl">
                                   {lang == "0" &&
@@ -305,10 +305,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                   {lang == "1" && "点击头像了解更多资料"}
                                 </div>
                               </a>
-                              <p className="text-sm mb-3 font-normal">
+                              <p className="mb-3 text-sm font-normal">
                                 <a
                                   href="/info"
-                                  className="text-2xl hover:underline duration-300"
+                                  className="text-2xl duration-300 hover:underline"
                                 >
                                   @Scottt1110
                                   <span class="inline-flex items-center justify-center w-7 h-7 ml-2 text-sm font-semibold text-blue-800 bg-sky-100 rounded-full dark:bg-sky-700 dark:text-sky-400">
@@ -474,75 +474,70 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           //     'linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%)',
                           // }}
                         >
-                          {navbarItem.map(
-                            (item, index) =>
-                              currentPage !== item.href && (
-                                <motion.button
-                                  layout
-                                  key={item.name}
-                                  whileHover={{
-                                    scale: 1.05,
-                                    transition: { duration: 0.7 },
-                                  }}
-                                  whileTap={{ scale: 0.95 }}
-                                  transition={{ duration: 0.3 }}
-                                  onClick={() => {
-                                    document.documentElement.style.zoom = 1;
-                                  }}
-                                  onMouseEnter={() =>
-                                    setSelectedTab(item.name[0])
-                                  }
-                                >
-                                  <Link
-                                    to={item.href}
-                                    key={index}
-                                    style={{
-                                      animationDelay: `${index * 0.2}s`,
-                                    }}
-                                    data-popover-target={`nav-des-${item.name[0]}`}
-                                    type="button"
-                                    className={`rounded-[5px] smoothchange items-center  ${
-                                      isTop
-                                        ? `${
-                                            index === navbarItem.length - 1
-                                              ? `ml-4`
-                                              : `mx-4`
-                                          }`
-                                        : ` ${
-                                            index === navbarItem.length - 1
-                                              ? `ml-1`
-                                              : `mx-1`
-                                          }`
-                                    } animate__animated animate__fadeInUp relative inline-flex items-center  px-6 py-3 text-[20px] font-medium text-center ${
-                                      isTopTextColorWhite & isTop
-                                        ? "text-white"
-                                        : ""
-                                    } rounded-lg hover:bg-gray-900/20  `}
-                                  >
-                                    <div className="items-center w-11 h-11 mr-3">
-                                      <div className="flex-shrink-0">
-                                        <i
-                                          className={`${
-                                            isTopTextColorWhite & isTop
-                                              ? "text-white text-[20px]"
-                                              : "text-gray-900 text-[17px]"
-                                          }  fi ${item.icon} `}
-                                        ></i>
-                                      </div>
-                                    </div>
-                                    <div
+                          {navbarItem.map((item, index) => (
+                            <motion.button
+                              layout
+                              key={item.name}
+                              whileHover={{
+                                scale: 1.05,
+                                transition: { duration: 0.7 },
+                              }}
+                              whileTap={{ scale: 0.95 }}
+                              transition={{ duration: 0.3 }}
+                              onClick={() => {
+                                document.documentElement.style.zoom = 1;
+                              }}
+                              onMouseEnter={() => setSelectedTab(item.name[0])}
+                            >
+                              <Link
+                                to={item.href}
+                                key={index}
+                                style={{
+                                  animationDelay: `${index * 0.2}s`,
+                                }}
+                                data-popover-target={`nav-des-${item.name[0]}`}
+                                type="button"
+                                className={`rounded-[5px] smoothchange items-center  ${
+                                  isTop
+                                    ? `${
+                                        index === navbarItem.length - 1
+                                          ? `ml-4`
+                                          : `mx-4`
+                                      }`
+                                    : ` ${
+                                        index === navbarItem.length - 1
+                                          ? `ml-1`
+                                          : `mx-1`
+                                      }`
+                                } animate__animated animate__fadeInUp relative inline-flex items-center  px-6 py-3 text-[20px] font-medium text-center ${
+                                  isTopTextColorWhite & isTop
+                                    ? "text-white"
+                                    : ""
+                                } rounded-lg hover:bg-gray-900/20  `}
+                              >
+                                <div className="items-center mr-3 w-11 h-11">
+                                  <div className="flex-shrink-0">
+                                    <i
                                       className={`${
                                         isTopTextColorWhite & isTop
                                           ? "text-white text-[20px]"
-                                          : "text-gray-900 text-[15px]"
-                                      } md:hidden lg:flex `}
-                                    >
-                                      {item.name[lang]}
-                                    </div>
-                                  </Link>
-                                </motion.button>
-                              ),
-                          )}
+                                          : "text-gray-900 text-[17px]"
+                                      }  fi ${item.icon} `}
+                                    ></i>
+                                  </div>
+                                </div>
+                                <div
+                                  className={`${
+                                    isTopTextColorWhite & isTop
+                                      ? "text-white text-[20px]"
+                                      : "text-gray-900 text-[15px]"
+                                  } md:hidden lg:flex `}
+                                >
+                                  {item.name[lang]}
+                                </div>
+                              </Link>
+                            </motion.button>
+                          ))}
                         </motion.div>
                       )}
                     </AnimatePresence>
@@ -627,9 +622,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         >
                           <i
                             style={{
-                              animationDelay: `${
-                                (navbarItem.length + 2) * 0.2
-                              }s`,
+                              animationDelay: isTop
+                                ? `${(navbarItem.length + 2) * 0.2}s`
+                                : null,
                             }}
                             className={`animate__animated animate__fadeInUp smoothchange mt-1 ${
                               windowWidth < 768
@@ -646,7 +641,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     {windowWidth < 1024 && (
                       <button
                         style={{
-                          animationDelay: `${(navbarItem.length + 3) * 0.2}s`,
+                          animationDelay: `${navbarItem.length * 0.2}s`,
                         }}
                         type="button"
                         className={`mx-[10px] transition-none animate__animated animate__fadeInUp `}
@@ -703,7 +698,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 {/* menu button */}
                 {windowWidth <= 1024 && isOpened && (
                   <div className={`w-full mx-[10px]`}>
-                    <div className="w-full rounded-lg shadow z-20 "></div>
+                    <div className="z-20 w-full rounded-lg shadow "></div>
                     <div
                       className={`rounded-2xl pt-[30px] ${isTop ? " " : ""}`}
                     >
@@ -735,7 +730,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               }`}
                             >
                               <div className="flex-shrink-0">
-                                <div className="flex justify-center items-center w-24 h-24 rounded-full">
+                                <div className="flex items-center justify-center w-24 h-24 rounded-full">
                                   <i
                                     className={`${
                                       isTopTextColorWhite & isTop
@@ -821,7 +816,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             whileFocus={{ scale: 1 }}
                             className="w-full"
                           >
-                            <div className="text-center icon content-center py-2 my-3">
+                            <div className="content-center py-2 my-3 text-center icon">
                               {isTop ? (
                                 <i
                                   className={` flex fi justify-center  py-1 text-[15px]  ${item.logo}`}
@@ -900,10 +895,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           {item.expression}{" "}
                         </span>
                         <div className="group relative my-2.5 hidden">
-                          <div className="flex absolute justify-center items-center w-full h-full rounded-lg opacity-0 bg-gray-900/50 group-hover:opacity-100 transition-opacity duration-300">
+                          <div className="absolute flex items-center justify-center w-full h-full transition-opacity duration-300 rounded-lg opacity-0 bg-gray-900/50 group-hover:opacity-100">
                             <button
                               data-tooltip-target="download-image"
-                              className="justify-center items-center w-10 h-10 inline-flex rounded-full bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50"
+                              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50"
                             >
                               <svg
                                 className="w-5 h-5 text-white"
@@ -952,7 +947,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           onClick={() => window.scrollTo(0, 0)}
           className={` anz-card-modal-link fixed bottom-10 lg:right-20 right-10 z-50 drop-shadow-2xl `}
         >
-          <div className="text-white card-modal-trigger modal-trigger card-cta-modal-button px-4 py-2 rounded-full lg:scale-150">
+          <div className="px-4 py-2 text-white rounded-full card-modal-trigger modal-trigger card-cta-modal-button lg:scale-150">
             <div className="modal-trigger-visblecontainer ">
               <motion.span
                 initial={{ rotate: 90 }}
@@ -976,7 +971,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
       <div className="relative z-50 ">
         <div
           id="toast-root"
-          className="flex fixed flex-col top-40 right-20 "
+          className="fixed flex flex-col top-40 right-20 "
         ></div>
       </div>
       <AnimatePresence>

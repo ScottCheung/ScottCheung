@@ -77,8 +77,8 @@ export default function Resume() {
         icon: <i class="fi fi-sr-star-shooting"></i>,
         highlights: [
           {
-            no: 4,
-            keyfeature: "Majors",
+            no: 3,
+            keyfeature: "Degrees",
             href: "https://xianzhe.site/Degrees",
             icon: "fi-rr-graduation-cap",
           },
@@ -151,14 +151,7 @@ export default function Resume() {
             school: "UNSW",
             link: "https://xianzhe.site/major/ArtificalInteliigence",
             major: "Artificial Intelligence",
-            period: "Sep 2017 - May 2022",
-          },
-          {
-            degree: "Master of IT",
-            school: "UNSW",
-            link: "https://xianzhe.site/major/DataScience",
-            major: "Data Science",
-            period: "Sep 2017 - May 2022",
+            period: "Sep 2022 - May 2024",
           },
         ],
       },
@@ -350,7 +343,7 @@ export default function Resume() {
     ],
   };
 
-  const h1 = `font-sans text-${EmphasizeColorLists[forceColor]}-${colorDepth} text-[50px] font-bold  transition-all duration-1000`;
+  const h1 = `font-sans text-${EmphasizeColorLists[forceColor]}-${colorDepth} text-[30px] md:text-[50px]  font-bold  transition-all duration-1000`;
   const normaltext = "text-[15px] text-jusify transition-all duration-1000";
   const h2 = `flex text-[30px]  font-black text-${
     EmphasizeColorLists[forceColor]
@@ -381,12 +374,12 @@ export default function Resume() {
       <motion.div
         layout
         id="pdf-content"
-        className={`bg-white flex relative justify-center ${printMode ? "" : "py-[5%] px-[5%]"} pb-[30vh] `}
+        className={`bg-white flex relative justify-center ${printMode ? "" : "py-[5%] pt-[15%] md:pt-[10%] px-[5%]"} pb-[30vh] `}
       >
         <div
           className={`${printMode ? "max-w-[1000px]" : "visblecontainer mx-auto"} min-h-[100vh] flex flex-col `}
         >
-          <div className="text-center py-4">
+          <div className="py-4 text-center">
             <h1 className={h1}>{cvData.header.name}</h1>
             <div className="flex justify-center items-center gap-x-[15px] flex-wrap mt-[25px] ">
               {cvData.header.contacts.map((contact, index) => (
@@ -489,7 +482,7 @@ export default function Resume() {
                               d={printMode ? 0.000000001 : 2}
                             />
                           </div>
-                          <div className="flex justify-center items-center w-full">
+                          <div className="flex items-center justify-center w-full">
                             <div className={whymelable}>
                               <p>{KeyFeature.keyfeature}</p>
                             </div>
@@ -522,7 +515,7 @@ export default function Resume() {
                       }
                     >
                       <div className={contentContainer}>
-                        <div className="flex-col justify-start items-center md:flex md:flex-row md:justify-between">
+                        <div className="flex-col items-center justify-start md:flex md:flex-row md:justify-between">
                           <h3
                             className={h3 + `cursor-pointer group-hover:bold `}
                           >
@@ -592,7 +585,7 @@ export default function Resume() {
                     }
                   >
                     <div className={contentContainer}>
-                      <div className="flex-col justify-start items-center md:flex md:flex-row md:justify-between">
+                      <div className="flex-col items-center justify-start md:flex md:flex-row md:justify-between">
                         <h3 className={h3}>
                           {project.name}
                           {project.link && (
@@ -624,10 +617,10 @@ export default function Resume() {
                       <div className={normaltext + " pl-[20px]"}>
                         <p> Skill: {project.skill.join(", ")}</p>
                         <p> Contribution: </p>
-                        <ul className=" pl-5">
+                        <ul className="pl-5 ">
                           {project.contribution.map((item, index) => (
-                            <li key={index} className="text-justify mb-2">
-                              <strong className="block font-semibold mr-2">
+                            <li key={index} className="mb-2 text-justify">
+                              <strong className="block mr-2 font-semibold">
                                 ▸ {item.title} :
                               </strong>
                               {item.description}

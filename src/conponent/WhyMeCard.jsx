@@ -9,12 +9,7 @@ import CtButton from "./ctButton";
 import { useAppContext } from "../help/ContextManager";
 import Loading from "./Loading";
 
-const Welcomevisblecontainer =
-  Database.Animation.Variant.Welcomevisblecontainer;
-const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
-const WelcomeItem = Database.Animation.Variant.WelcomeItem;
-const EnterDuration = 0.3;
-const delayDuration = 600;
+const delayDuration = 200;
 
 function WhymeCard() {
   const [show, setShow] = useState(false);
@@ -118,14 +113,13 @@ function WhymeCard() {
         onClick={() => {
           closeCard();
         }}
-        className={`absolute top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] ESC justify-center animate__animated animate__zoomIn items-center z-30 ${
+        className={`absolute top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] ESC justify-center animate__animated animate__fadeIn items-center z-30 ${
           whymeCard.color1 + "/50" + " " + whymeCard.color2 + "/50"
         } bg-gradient-to-br  backdrop-blur-[20px]  justify-center items-center z-40`}
       >
         <motion.span
-          layout
           // layoutId={whymeCard.pic[0]}
-          className="fixed  right-0 bottom-0 w-[100vw] h-[100vh] -z-50  animate__animated   animate__fadeIn"
+          className="fixed  right-0 bottom-0 w-[100vw] h-[100vh] -z-50  animate__animated  animate__fadeIn "
           style={
             {
               ...bgPic(whymeCard.pic[0], "40% auto", "bottom right"),
@@ -177,7 +171,7 @@ function WhymeCard() {
                       feature.color1 + " " + feature.color2
                     } `}
                   >
-                    <div className="flex flex-col items-center justify-center text-l text-white ">
+                    <div className="flex flex-col items-center justify-center text-white text-l ">
                       <i
                         className={`${feature.icon} fi  text-5xl text-white flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
                       ></i>
@@ -186,7 +180,7 @@ function WhymeCard() {
                   </motion.button>
                 ))}
               </motion.div>
-              <div className="flex flex-col z-50">
+              <div className="z-50 flex flex-col">
                 <CtButton
                   type={"x"}
                   key={"close"}
@@ -204,7 +198,7 @@ function WhymeCard() {
                 <div className="flex justify-start items-center gap-x-[10px]">
                   <motion.div
                     style={{ willChange: "transform" }}
-                    className="flex-shrink-0   "
+                    className="flex-shrink-0 "
                   >
                     <div
                       className={`flex justify-center items-center ${
@@ -268,7 +262,7 @@ function WhymeCard() {
             </div>
           )}
           {!show && (
-            <div className="flex justify-center items-center">
+            <div className="flex items-center justify-center">
               <Loading cursor={`w-[50px] h-[50px] `} />
             </div>
           )}

@@ -44,7 +44,7 @@ function Education({ hideTittle, simpleVer }) {
             whileTap={{ scale: 0.9 }}
             initial={{ opacity: 0, rotate: 180 }}
             whileInView={{ opacity: 1, rotate: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: true, margin: "-30%" }}
             transition={{
               duration: 0.7,
               ease: [0.455, 0.03, 0.515, 0.955],
@@ -57,7 +57,7 @@ function Education({ hideTittle, simpleVer }) {
                   href="#Education"
                   id="Education"
                   style={{ animationDelay: `${0.4}s` }}
-                  className="flex justify-center items-center w-24 h-24 text-center rounded-full bg-gray-200/20 hover:text-white shadow-none hover:bg-sky-900 z-50"
+                  className="z-50 flex items-center justify-center w-24 h-24 text-center rounded-full shadow-none bg-gray-200/20 hover:text-white hover:bg-sky-900"
                 >
                   <i className="text-3xl fi fi-br-angle-up "></i>
                 </a>
@@ -73,12 +73,12 @@ function Education({ hideTittle, simpleVer }) {
                 ease: [0.455, 0.03, 0.515, 0.955],
                 duration: 1,
               }}
-              className="flex justify-center items-center "
+              className="flex items-center justify-center "
             >
               <div className="animate__animated animate__zoomIn">
                 <i className=" fi text-5xl lg:text-8xl fi-rr-circle-book-open mr-[20px] pt-3 "></i>
               </div>
-              <h2 className="text-5xl font-mono animate__animated animate__zoomIn lg:text-8xl font-bold">
+              <h2 className="font-mono text-5xl font-bold animate__animated animate__zoomIn lg:text-8xl">
                 {lang == "1" && "教育"}
                 {lang == "0" && "Education"}
               </h2>
@@ -150,12 +150,12 @@ function Education({ hideTittle, simpleVer }) {
                                       style={{
                                         animationDelay: `${index * 0.2}s`,
                                       }}
-                                      className="text-white rounded-3xl inline-flex animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category font-medium py-1 px-5"
+                                      className="inline-flex px-5 py-1 font-medium text-white rounded-3xl animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category"
                                     >
                                       {Experience.tag[lang][0]}
                                     </div>
                                     {Experience.tag[lang][1] && (
-                                      <div className="text-white rounded-3xl inline-flex animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-emerald-500 to-sky-500 font-medium py-1 px-5 ">
+                                      <div className="inline-flex px-5 py-1 font-medium text-white rounded-3xl animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-emerald-500 to-sky-500 ">
                                         {Experience.tag[lang][1]}
                                       </div>
                                     )}
@@ -167,7 +167,7 @@ function Education({ hideTittle, simpleVer }) {
                                   style={{
                                     animationDelay: `${index * 0.2}s`,
                                   }}
-                                  className="flex flex-col justify-start items-start animate__animated animate__zoomIn mb-3"
+                                  className="flex flex-col items-start justify-start mb-3 animate__animated animate__zoomIn"
                                 >
                                   <div className="typography-card-headline">
                                     {`${Experience.major[lang][0]}`}
@@ -183,7 +183,7 @@ function Education({ hideTittle, simpleVer }) {
                                     style={{
                                       animationDelay: `${index * 0.3}s`,
                                     }}
-                                    className="text-center text-white rounded-3xl text-justify-between animate__animated card-description animate__zoomIn category bg-sky-900 py-1 font-medium px-5 ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700"
+                                    className="px-5 py-1 font-medium text-center text-white rounded-3xl text-justify-between animate__animated card-description animate__zoomIn category bg-sky-900 ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700"
                                   >
                                     {Experience.time[lang]}
                                   </span>

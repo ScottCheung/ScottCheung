@@ -37,27 +37,13 @@ function SelfDescribing() {
   });
 
   // 根据滚动进度计算位移
-  const x = useTransform(scrollYProgress, [0, 1], ["30vw", "0vw"], {
-    ease: easeInOut,
-  });
-  const y = useTransform(scrollYProgress, [0, 1], ["-30vh", "0vh"], {
-    ease: easeInOut,
-  });
-  const width = useTransform(scrollYProgress, [0, 1], ["0vw", "100vw"], {
-    ease: easeInOut,
-  });
-  const target = useTransform(scrollYProgress, [0, 1], ["-30vw", "0vw"], {
-    ease: easeInOut,
-  });
-  const borderTopRightRadius = useTransform(scrollYProgress, [0, 1], [200, 0], {
-    ease: easeInOut,
-  });
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1], {
-    ease: easeInOut,
-  });
-  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1], {
-    ease: easeInOut,
-  });
+  const x = useTransform(scrollYProgress, [0, 1], ["30vw", "0vw"]);
+  const y = useTransform(scrollYProgress, [0, 1], ["-30vh", "0vh"]);
+  const width = useTransform(scrollYProgress, [0, 1], ["0vw", "100vw"]);
+  const target = useTransform(scrollYProgress, [0, 1], ["-30vw", "0vw"]);
+  const borderTopRightRadius = useTransform(scrollYProgress, [0, 1], [200, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
 
   const SelfDescribing = (
     <section
@@ -78,13 +64,13 @@ function SelfDescribing() {
             ease: [0.455, 0.03, 0.515, 0.955],
             duration: 1,
           }}
-          className="text-white font-mono z-10 text-8xl font-bold my-12 py-24"
+          className="z-10 py-24 my-12 font-mono font-bold text-white text-8xl"
         >
           <i className="fi fi-rr-comment-heart text-5xl lg:text-8xl mr-[20px] pt-3 "></i>
           {lang == 0 && "Self Describing"}
           {lang == 1 && "自述"}
         </motion.div>
-        <div className=" pb-48">
+        <div className="pb-48 ">
           <motion.blockquote ref={ref} className="">
             <motion.div
               style={{ x, y, borderTopRightRadius, opacity, scale }}

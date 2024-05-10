@@ -93,7 +93,7 @@ function Capability() {
   const Capability = (
     <motion.div
       id="Capability"
-      className="z-50 grid py-48 visblecontainer section-sapphire"
+      className="z-20 grid py-48 visblecontainer section-sapphire"
     >
       {/* stack */}
       <Skill />

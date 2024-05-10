@@ -28,15 +28,11 @@ function KeyFeature() {
     offset: ["-100%", "0%"],
   });
 
-  const width = useTransform(scrollYProgress, [0, 1], ["10vw", "100vw"], {
-    ease: easeInOut,
-  });
+  const width = useTransform(scrollYProgress, [0, 1], ["50vw", "100vw"]);
   // const y = useTransform(scrollYProgress, [0, 1], ["10vh", "0vh"], {
   //   ease: easeInOut,
   // });
-  const borderRadius = useTransform(scrollYProgress, [0, 1], [200, 0], {
-    ease: easeInOut,
-  });
+  const borderRadius = useTransform(scrollYProgress, [0, 1], [200, 0]);
 
   const KeyFeature = (
     <motion.div

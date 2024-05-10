@@ -85,7 +85,7 @@ function Skill() {
       // whileInView={{ opacity: 1 }}
       // transition={{ duration: 2 }}
       // viewport={{ once: true }}
-      className="transition-all   grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers  z-50 -mt-[20vh] "
+      className="transition-all   grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers  z-20 -mt-[20vh] "
     >
       <motion.div
         id="Capability"
@@ -450,7 +450,7 @@ function Skill() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="grid justify-center items-center w-full h-full content-center"
+                        className="grid items-center content-center justify-center w-full h-full"
                       >
                         {BackendEnd.map((app, index) => (
                           <motion.div
@@ -603,7 +603,7 @@ function Skill() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="grid justify-center items-center w-full h-full content-center"
+                        className="grid items-center content-center justify-center w-full h-full"
                       >
                         {database.map((app, index) => (
                           <motion.div
@@ -744,7 +744,7 @@ function Skill() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="grid justify-center items-center w-full h-full content-center"
+                        className="grid items-center content-center justify-center w-full h-full"
                       >
                         {algorithm.map((app, index) => (
                           <motion.div
@@ -881,7 +881,7 @@ function Skill() {
                         initial="hidden"
                         whileInView="visible"
                         viewport={{ once: true }}
-                        className="grid justify-between items-center w-full h-full content-center mb-24 "
+                        className="grid items-center content-center justify-between w-full h-full mb-24 "
                       >
                         {other.map((app, index) => (
                           <motion.div

@@ -89,7 +89,7 @@ function WhyMe({ hideTittle }) {
         ></motion.div>
         {/* 一级标题 */}
         <div
-          id="whyme"
+          id="WhyMe"
           className={`${hideTittle ? "hidden" : ""} flex justify-center pt-36`}
         >
           <motion.div
@@ -128,6 +128,8 @@ function WhyMe({ hideTittle }) {
                     {keyfeature.map((feature, index) => (
                       <motion.div
                         // href={feature.href}
+                        layout
+                        layoutId={feature.advantage}
                         onClick={() => {
                           if (windowWidth > 1024) {
                             openCard(feature);
@@ -155,8 +157,6 @@ function WhyMe({ hideTittle }) {
                               }}
                             ></motion.span>
                             <motion.div
-                              layout
-                              layoutId={feature.advantage}
                               className={`${
                                 hideTittle
                                   ? `${
