@@ -9,7 +9,7 @@ import CtButton from "./ctButton";
 import { useAppContext } from "../help/ContextManager";
 import Loading from "./Loading";
 
-const delayDuration = 200;
+const delayDuration = 300;
 
 function WhymeCard() {
   const [show, setShow] = useState(false);
@@ -107,7 +107,7 @@ function WhymeCard() {
     setShow(false);
   };
 
-  const WhymeCard = Components.whymeCard === "visible" && (
+  const WhymeCard = (
     <div className="w-full h-[100vh] fixed top-0 bottom-0 left-0 right-0 z-50 ">
       <motion.span
         onClick={() => {
@@ -119,7 +119,7 @@ function WhymeCard() {
       >
         <motion.span
           // layoutId={whymeCard.pic[0]}
-          className="fixed  right-0 bottom-0 w-[100vw] h-[100vh] -z-50  animate__animated  animate__fadeIn "
+          className="fixed  right-0 bottom-0 w-[100vw] h-[100vh] -z-50  animate__animatedanimate__fadeIn "
           style={
             {
               ...bgPic(whymeCard.pic[0], "40% auto", "bottom right"),

@@ -126,7 +126,7 @@ function Home() {
       <WorkExperience />
       <WhyMe />
       <Contact />
-      <WhyMeCard />
+      {Components.whymeCard === "visible" && <WhyMeCard />}
     </div>
   );
 }

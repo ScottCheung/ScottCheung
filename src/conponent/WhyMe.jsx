@@ -128,8 +128,7 @@ function WhyMe({ hideTittle }) {
                     {keyfeature.map((feature, index) => (
                       <motion.div
                         // href={feature.href}
-                        layout
-                        layoutId={feature.advantage}
+
                         onClick={() => {
                           if (windowWidth > 1024) {
                             openCard(feature);
@@ -144,19 +143,8 @@ function WhyMe({ hideTittle }) {
                       >
                         <div className="icon-card card-visblecontainer ">
                           <div className="card ">
-                            <motion.span
-                              className="absolute top-0 left-0 right-0  bottom-0 -z-20 overflow-hidden rounded-[28px] first-letter:"
-                              style={{
-                                ...(!hideTittle
-                                  ? bgPic(
-                                      feature.pic[0],
-                                      "100% auto",
-                                      "center bottom",
-                                    )
-                                  : {}),
-                              }}
-                            ></motion.span>
                             <motion.div
+                              layoutId={feature.advantage}
                               className={`${
                                 hideTittle
                                   ? `${
@@ -224,7 +212,19 @@ function WhyMe({ hideTittle }) {
                                   </div>
                                 </div>
                               </motion.div>
-                              <div></div>
+                              <motion.span
+                                layoutId={feature.pic[0]}
+                                className="absolute top-0 left-0 right-0  bottom-0 -z-20 overflow-hidden rounded-[28px] first-letter:"
+                                style={{
+                                  ...(!hideTittle
+                                    ? bgPic(
+                                        feature.pic[0],
+                                        "100% auto",
+                                        "center bottom",
+                                      )
+                                    : {}),
+                                }}
+                              ></motion.span>
                             </motion.div>
                           </div>
                           {(windowWidth < 1024 || hideTittle) && (
