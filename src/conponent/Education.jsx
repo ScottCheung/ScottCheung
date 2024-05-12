@@ -99,7 +99,7 @@ function Education({ hideTittle, simpleVer }) {
                 variants={Welcomevisblecontainer}
                 initial="hidden"
                 whileInView="visible"
-                viewport={{ once: true, margin: "-30%" }}
+                viewport={{ once: false, margin: "-30%" }}
                 className={`card-set p-[20px] `}
                 role="list"
               >
@@ -115,7 +115,6 @@ function Education({ hideTittle, simpleVer }) {
                     transition={StagerFadeInUp}
                     whileHover={{ scale: 1.001 }}
                     whileTap={{ scale: 0.99 }}
-                    style={{ animationDelay: `${0.15 * index + 0.4}s` }}
                     className={`gallery-item grid-item current snap-start`}
                   >
                     <div className="icon-card card-visblecontainer ">
