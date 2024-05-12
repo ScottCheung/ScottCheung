@@ -2838,28 +2838,28 @@
         "icon": "music-alt",
         "label": ["Music", "音 乐"],
         "link": "/life/music",
-        "pic": "/Graphs/whyme/EmotionalStable.png",
+        "pic": "https://3o.hk/images/2024/01/19/EmotionalStable.md.png",
         "des": "It collect musics I recommend ~"
       },
       {
         "icon": "user-music",
         "label": ["Perform", "表 演"],
         "link": "/life/perform",
-        "pic": "/Graphs/whyme/EmotionalStable.png",
+        "pic": "https://3o.hk/images/2024/01/19/ProblemSolving.png",
         "des": "It collect musics I perform ~"
       },
       {
         "icon": "picture",
         "label": ["Gallery", "图 库"],
         "link": "/life/gallery",
-        "pic": "/Graphs/whyme/AestheticAttitude.png",
+        "pic": "https://3o.hk/images/2024/01/19/AestheticAttitude.md.png",
         "des": "It collect picture I take ~"
       },
       {
         "icon": "followcollection",
         "label": ["Story", "故 事"],
         "link": "/life/story",
-        "pic": "/Graphs/whyme/Leadership.png",
+        "pic": "https://3o.hk/images/2024/01/19/Leadership.md.png",
         "des": "It collect stories I undergo ~"
       }
     ],
@@ -3495,7 +3495,6 @@
           "award": "表彰文件"
         }
       ],
-
       "pictureNotify": ["Record beauty", "记录美好"]
     }
   },
