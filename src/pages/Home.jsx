@@ -122,8 +122,8 @@ function Home() {
       <Education />
       <KeyFeature />
       <Capability />
-      <SelfDescribing />
       <WorkExperience />
+      <SelfDescribing />
       <WhyMe />
       <Contact />
       {Components.whymeCard === "visible" && <WhyMeCard />}

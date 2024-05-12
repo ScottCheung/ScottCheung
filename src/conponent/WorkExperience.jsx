@@ -37,7 +37,7 @@ function WorkExperience() {
       <div>
         <div className="">
           {/* 一级标题 */}
-          <div className="flex justify-center mt-[20vh] ">
+          <div className="flex justify-center ">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -45,12 +45,12 @@ function WorkExperience() {
                 ease: [0.455, 0.03, 0.515, 0.955],
                 duration: 1,
               }}
-              className="animate__animated animate__fadeInUp items-center flex justify-center"
+              className="flex items-center justify-center animate__animated animate__fadeInUp"
             >
               <div className="animate__animated animate__zoomIn">
                 <i className=" fi fi-rr-tool-box text-5xl lg:text-8xl mr-[20px] pt-3 "></i>
               </div>
-              <h2 className="animate__animated animate__zoomIn text-5xl lg:text-8xl font-bold font-mono">
+              <h2 className="font-mono text-5xl font-bold animate__animated animate__zoomIn lg:text-8xl">
                 {lang == 0 && "Work Experience"}
                 {lang == 1 && "工作经历"}
               </h2>
@@ -105,7 +105,7 @@ function WorkExperience() {
                                           className={`rounded-[10px] animate__animated  animate__zoomIn animate__fast `}
                                         ></img>
                                       </div>
-                                      <div className="py-10 flex justify-start ">
+                                      <div className="flex justify-start py-10 ">
                                         <div
                                           style={{
                                             animationDelay: `${index * 0.2}s`,
@@ -139,16 +139,16 @@ function WorkExperience() {
                                       style={{
                                         animationDelay: `${index * 0.2}s`,
                                       }}
-                                      className="flex flex-wrap items-start animate__animated animate__zoomIn  justify-start flex "
+                                      className="flex flex-wrap items-start justify-start animate__animated animate__zoomIn "
                                     >
-                                      <div className="typography-card-headline text-left">
+                                      <div className="text-left typography-card-headline">
                                         {`${Experience.tittle[0]}`}
                                         {"-"}
                                         {Experience.tittle[1]}
                                       </div>
                                     </div>
                                   ) : (
-                                    <div className="justify-between flex">
+                                    <div className="flex justify-between">
                                       <div>
                                         <div className="text-white bg-gray-700 rounded-[14px] my-3 text-center animate__animated  animate__zoomIn animate__slow font-semibold  text-[50px]">
                                           {Experience.tittle[0].charAt(0)}
@@ -216,7 +216,7 @@ function WorkExperience() {
                                       style={{
                                         animationDelay: `${index * 0.3}s`,
                                       }}
-                                      className="w-full text-center  animate__animated  animate__zoomIn  category text-white rounded-3xl bg-sky-900 py-1 font-medium px-5  ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700"
+                                      className="w-full px-5 py-1 font-medium text-center text-white animate__animated animate__zoomIn category rounded-3xl bg-sky-900 ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700"
                                     >
                                       {Experience.time}
                                     </span>
@@ -226,13 +226,13 @@ function WorkExperience() {
                                     style={{
                                       animationDelay: `${index * 0.3}s`,
                                     }}
-                                    className="w-full animate__animated  animate__fadeInUp  card-description text-left font-semibold text-gray-700"
+                                    className="w-full font-semibold text-left text-gray-700 animate__animated animate__fadeInUp card-description"
                                   >
                                     {Experience.company}
                                   </p>
                                   <div
                                     style={{ ...hideRow(2) }}
-                                    className="w-full animate__animated  animate__fadeInUp  card-description text-justify "
+                                    className="w-full text-justify animate__animated animate__fadeInUp card-description "
                                   >
                                     {Experience.description}{" "}
                                   </div>

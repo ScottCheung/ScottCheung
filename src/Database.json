@@ -1,5 +1,13 @@
 {
   "Navbar": {
+    "Avatar": {
+      "Webname": ["Xianzhe ( Scott )  Zhang", "张贤哲Scott"],
+      "helloword": ["Keep Enthusiasm", "保持热爱"]
+    },
+    "Hero": {
+      "hello": ["Welcome! I'm Scott.", "好久不见，我是贤哲"],
+      "word": ["Sidere mens eadem mutato", "繁星纵变，智慧永存"]
+    },
     "navbarItem": [
       {
         "name": ["Home", "主页"],
@@ -47,18 +55,18 @@
         "color2": "to-amber-500"
       },
       {
-        "id": "/#SelfDescribing",
-        "label": ["Describe", "自述"],
-        "logo": "fi-rr-comment-heart",
-        "color1": "from-sky-500",
-        "color2": "to-emerald-500"
-      },
-      {
         "id": "/#WorkExperience",
         "label": ["Work", "工作"],
         "logo": "fi-rr-tool-box",
         "color1": "from-cyan-500",
         "color2": "to-blue-500"
+      },
+      {
+        "id": "/#SelfDescribing",
+        "label": ["Describe", "自述"],
+        "logo": "fi-rr-comment-heart",
+        "color1": "from-sky-500",
+        "color2": "to-emerald-500"
       },
       {
         "id": "/#WhyMe",
@@ -68,14 +76,7 @@
         "color2": "to-pink-500"
       }
     ],
-    "Avatar": {
-      "Webname": ["Scott's Profile", "贤哲的个人资料"],
-      "helloword": ["I love you ❤ Keep Enthusiasm", "要爱自己 ❤ 保持热爱"]
-    },
-    "Hero": {
-      "hello": ["Welcome! I'm Scott.", "好久不见，我是贤哲"],
-      "word": ["Sidere mens eadem mutato", "繁星纵变，智慧永存"]
-    },
+
     "UpdateLog": [
       {
         "version": "7.1.4",
@@ -284,18 +285,9 @@
   "PersonalInfo": {
     "Welcomebg": ["https://3o.hk/images/2024/01/14/welcomebg.jpg"],
     "KeyFeaturebg": ["https://3o.hk/images/2024/01/14/keyfeaturebg.jpg"],
-    "selfdesbg": [
-      "/Graphs/home/keyfeaturebg.jpg",
-      "https://3o.hk/images/2024/01/14/selfdesbg.jpg"
-    ],
-    "welcomebg": [
-      "/Graphs/home/welcomebg.jpg",
-      "https://3o.hk/images/2024/01/14/welcomebg.jpg"
-    ],
-    "contactbg": [
-      "/Graphs/home/contactbg.jpeg",
-      "https://3o.hk/images/2024/01/14/contactbg.jpg"
-    ],
+    "selfdesbg": ["https://3o.hk/images/2024/01/14/selfdesbg.jpg"],
+    "welcomebg": ["https://3o.hk/images/2024/01/14/welcomebg.jpg"],
+    "contactbg": ["https://3o.hk/images/2024/01/14/contactbg.jpg"],
     "Avatar": ["https://3o.hk/images/2024/04/10/avater.png"],
     "Education": [
       {
@@ -1259,7 +1251,7 @@
           ],
           "pic2": "/Graphs/whyme/Leadership2.jpg",
           "icon": "fi-rr-users-alt",
-          "description": "The candidate demonstrates outstanding leadership.\n1. Diverse leadership roles. The candidate held key positions in the university's study department, technology and entrepreneurship guidance station, and debate team. Additionally, they served as class president, study committee member, and life committee member, leading the class to stand out in various competitions, winning all awards and honors with top-ranking results.\n2. Rich experience as a competition leader. As a manager, the candidate led over 100 competitions, achieving numerous first prizes at the provincial and district levels, totaling over 60 awards.\n3. The candidate led a team in entrepreneurship, expanding business in a new area, involving crucial tasks such as leasing company space, purchasing corporate supplies, recruiting personnel, planning marketing activities, and managing finances.",
+          "description": "The candidate demonstrates outstanding leadership.\n1. Diverse leadership roles. The candidate held key positions in the university's study department, technology and entrepreneurship guidance station, and debate team. Additionally, they served as class president, study committee member, and life committee member, leading the class to stand out in various competitions, winning all awards and honors with top-ranking results.\n2. Rich experience as a competition leader. As a manager, the candidate led over 100 competitions, achieving numerous first prizes at the provincial and district levels, totaling over 58 awards.\n3. The candidate led a team in entrepreneurship, expanding business in a new area, involving crucial tasks such as leasing company space, purchasing corporate supplies, recruiting personnel, planning marketing activities, and managing finances.",
           "color1": "from-orange-500",
           "color2": "to-amber-500"
         },
@@ -1345,7 +1337,7 @@
           ],
           "pic2": "/Graphs/whyme/Leadership2.jpg",
           "icon": "fi-rr-users-alt",
-          "description": "候选人具有卓越的领导力。\n1.多元的领导角色。候选人曾在大学学习部、科技和创业指导站、辩论队担任关键角色。并在班级担任过班长、学习委员和生活委员等职位。带领班级在各级评优中脱颖而出，不仅赢得所有的奖项和荣誉，且均是第一名的成绩。\n2.丰富的竞赛领导者经历。候选人作为管理者领导了超过100次比赛，获得多个省赛一等奖，市区一等奖等，总计60多项奖项。\n3.候选人曾经带领团队创业，候选人带领一个团队到一个新地区扩展业务。涉及租赁公司场地，购置企业物资，招聘企业人员，策划营销活动，计划和管理财务等关键任务。",
+          "description": "候选人具有卓越的领导力。\n1.多元的领导角色。候选人曾在大学学习部、科技和创业指导站、辩论队担任关键角色。并在班级担任过班长、学习委员和生活委员等职位。带领班级在各级评优中脱颖而出，不仅赢得所有的奖项和荣誉，且均是第一名的成绩。\n2.丰富的竞赛领导者经历。候选人作为管理者领导了超过100次比赛，获得多个省赛一等奖，市区一等奖等，总计58项奖项。\n3.候选人曾经带领团队创业，候选人带领一个团队到一个新地区扩展业务。涉及租赁公司场地，购置企业物资，招聘企业人员，策划营销活动，计划和管理财务等关键任务。",
           "color1": "from-orange-500",
           "color2": "to-amber-500"
         },
@@ -1436,25 +1428,25 @@
         ]
       },
       {
-        "no": 60,
+        "no": 58,
         "keyfeature": [" Certificates", "荣誉"],
         "href": ["Certificates"],
         "icon": "fi-rr-diploma",
         "description": [
-          "Actively advancing, achieved over 60 honors.",
-          "积极奋进，获得过60多项荣誉。"
+          "Actively advancing, achieved over 58 honors.",
+          "积极奋进，获得过58项荣誉。"
         ]
       }
     ],
     "KeyFeature2": [
       {
-        "no": 59,
+        "no": 58,
         "href": ["Degrees"],
         "keyfeature": ["Skills", "技能"],
         "icon": "fi-rr-tool-box",
         "description": [
-          "Actively advancing, achieved over 60 honors.",
-          "积极奋进，获得过60多项荣誉。"
+          "Actively advancing, achieved over 58 honors.",
+          "积极奋进，获得过58多项荣誉。"
         ]
       },
       {
@@ -1463,8 +1455,8 @@
         "keyfeature": ["Applications", "软件"],
         "icon": "fi-sr-window-alt",
         "description": [
-          "Actively advancing, achieved over 60 honors.",
-          "积极奋进，获得过60多项荣誉。"
+          "Actively advancing, achieved over 58 honors.",
+          "积极奋进，获得过58多项荣誉。"
         ]
       },
       {
@@ -1473,8 +1465,8 @@
         "keyfeature": ["HD courses", "HD课程"],
         "icon": "fi-rr-circle-a",
         "description": [
-          "Actively advancing, achieved over 60 honors.",
-          "积极奋进，获得过60多项荣誉。"
+          "Actively advancing, achieved over 58 honors.",
+          "积极奋进，获得过58多项荣誉。"
         ]
       }
     ],
@@ -1870,266 +1862,702 @@
     "Certificates": [
       [
         {
-          "CourseName": "11",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/0DDCECF1-5FFB-467E-BCDE-1DC7C7FA1242-45114-00001D06D7EA5874.jpg",
+          "type": "Entrepreneurship",
+          "activity": "The 5th \"Internet +\" College Students' Innovation and Entrepreneurship Competition",
+          "award": "Third Prize"
         },
         {
-          "CourseName": "Organic Chemistry",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/0E4B8618-A778-4A0B-BC21-6F6DDDFF58F7-45114-00001D072CEB0D9C.jpg",
+          "type": "Knowledge",
+          "activity": "The 3rd National College Students' Environmental Protection Knowledge Competition",
+          "award": "Excellence Award"
         },
         {
-          "CourseName": "Fundamentals of Mechanical Design",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/2DECE824-29D0-43FD-A341-AF99D2C97CE0-45114-00001D06A33838C7.jpg",
+          "type": "honor",
+          "activity": "2018-2019 \"Power of Role Models\"",
+          "award": "Excellent monitor"
         },
         {
-          "CourseName": "Course design of Fundamentals of Mechanical Design",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/2E3F1DF6-ACE1-419A-B2DD-58FDC43D9191-45114-00001D05E493426E.jpg",
+          "type": "scholarship",
+          "activity": "Southwest University of Science and Technology Scholarship 2019-2020",
+          "award": "Artistic Talent Award"
         },
         {
-          "CourseName": "Physical Chemistry",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/2EAE6603-858F-44B5-B196-E866F74842E0-45114-00001D0663AA379F.jpg",
+          "type": "science and technology",
+          "activity": "\"Jinneng Cup\" Photovoltaic Product Design Competition Finals",
+          "award": "second prize"
         },
         {
-          "CourseName": "Fundamentals of Material Science",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/03AAA681-6765-41AA-8020-A42DC71162A7-45114-00001D06E508A18F.jpg",
+          "type": "science and technology",
+          "activity": "The 4th Southwest University of Science and Technology College Student Entrepreneurship Competition",
+          "award": "Bronze"
         },
         {
-          "CourseName": "Solid State Physics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/5BEF2DF4-09AD-4BEF-ABA8-357E4C3B252A-45114-00001D068BD72133.jpg",
+          "type": "Art",
+          "activity": "2019 Freshman Admission Letter Design Competition",
+          "award": "First Prize"
         },
         {
-          "CourseName": "Semiconductor Physics Experiment",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/5FF0E884-7D14-4A5E-A579-826930F18C7C-45114-00001D071C6E8A0D.jpg",
+          "type": "physical education",
+          "activity": "2019 College Games Go Event",
+          "award": "Second Place"
         },
         {
-          "CourseName": "Model Analysis and Testing Technology",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/51F92EA6-4FA9-4E3E-9EB4-38B15AE06F2D-45114-00001D05DCDFC7C5.jpg",
+          "type": "scholarship",
+          "activity": "Southwest University of Science and Technology 2018-2019 Scholarship",
+          "award": "Entrepreneurship Disability Award"
         },
         {
-          "CourseName": "New Building Materials",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/59C72B82-C522-4E6B-AEF3-7D549787675E-45114-00001D062A66B3B5.jpg",
+          "type": "Entrepreneurship",
+          "activity": "The 14th iCAN International Innovation and Entrepreneurship Competition China Finals",
+          "award": "Third Prize"
         },
         {
-          "CourseName": "Poly Flame Retardant Material",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/69DA8251-003D-4587-B73E-8CDA71972A6B-45114-00001D05D900AA8E.jpg",
+          "type": "scholarship",
+          "activity": "Southwest University of Science and Technology Scholarship 2019-2020",
+          "award": "Entrepreneurship Disability Award"
         },
         {
-          "CourseName": "Special Cement",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/86F95023-670D-4D49-A501-24ABC48F9D4C-45114-00001D0632E1AA4E.jpg",
+          "type": "honor",
+          "activity": "Entrepreneurship training student certificate",
+          "award": "Certificate of Competence"
         },
         {
-          "CourseName": "Compound Material",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/95A0A467-F6A4-48A4-A0D3-A562CD1DCBB0-45114-00001D064AFEAA6E.jpg",
+          "type": "honor",
+          "activity": "The College's 2019-2020 \"May 4th\" Excellence Evaluation",
+          "award": "Outstanding members"
         },
         {
-          "CourseName": "Electrical and Electronic Technology",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/587C6C4F-B46A-450D-A39D-5FAFF3F54991-45114-00001D06260FB642.jpg",
+          "type": "honor",
+          "activity": "In 2018-2019, the five-four awards for virtue, wisdom and sports were",
+          "award": "Outstanding members"
         },
         {
-          "CourseName": "Fundamentals of Circuit Analysis",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/880D0E87-D929-44AD-9336-FBCC492B4C8B-45114-00001D05E0F14BA0.jpg",
+          "type": "scholarship",
+          "activity": "Southwest University of Science and Technology 2018-2019 Scholarship",
+          "award": "Artistic Talent Award"
         },
         {
-          "CourseName": "Engineering Mechanics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/977D096F-FBFB-4C25-A711-35E23E82D4BF-45114-00001D0722FCF496.jpg",
+          "type": "Knowledge",
+          "activity": "The 2nd National College Students' Knowledge Competition on AIDS Prevention",
+          "award": "Excellence Award"
         },
         {
-          "CourseName": "Semiconductor Physics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/9642B465-4F83-4262-9BB5-688849F3B22C-45114-00001D067473899F.jpg",
+          "type": "science and technology",
+          "activity": "The 11th Comprehensive Chemistry Competition",
+          "award": "First Prize"
         },
         {
-          "CourseName": "Physical Technology and Thin Film",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/35768A3B-D574-481B-889E-C206E50EF4B5-45114-00001D06847F4823.jpg",
+          "type": "Knowledge",
+          "activity": "The 6th Home Teaching Competition",
+          "award": "First Prize"
         },
         {
-          "CourseName": "Dielectric Physics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/63153EB6-F91B-4E8A-9A12-8CA143C04B66-45114-00001D06F3FE4DAB.jpg",
+          "type": "honor",
+          "activity": "The 17th Executive Training",
+          "award": "Graduation certificate"
         },
         {
-          "CourseName": "Electrical Ceramic Technology",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/581135B0-BD2E-4017-947D-61F8766711DA-45114-00001D067C795B4E.jpg",
+          "type": "Art",
+          "activity": "Image Wall Design Competition",
+          "award": "second prize"
         },
         {
-          "CourseName": "Magnetic Physics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/4300261E-9EB4-4ED0-8528-909AED6A3069-45114-00001D069065EC56.jpg",
+          "type": "scholarship",
+          "activity": "Southwest University of Science and Technology Scholarship 2020 in Science, Technology, Culture and Sports",
+          "award": "Advanced Individual"
         },
         {
-          "CourseName": "Special Ceramics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/4721622D-2855-42E4-95C0-720DEC9DDB19-45114-00001D06C5F62431.jpg",
+          "type": "Entrepreneurship",
+          "activity": "L'Oréal Paris 2019 Brainstorm Business Competition",
+          "award": "Race Certificate"
         },
         {
-          "CourseName": "Nanomaterials and Nanotechnology",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/BF66EB74-B02D-420C-B25F-F09BAD48DF03-45114-00001D064F9C18F4.jpg",
+          "type": "honor",
+          "activity": "2019-2020 \"May 4th\" Excellence Awards",
+          "award": "Outstanding student leaders"
         },
         {
-          "CourseName": "Model Analysis and Testing Technology Experiment",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/BF68AE98-2B4F-4CAE-A624-FFEC07958E95-45114-00001D06D3590E22.jpg",
+          "type": "Art",
+          "activity": "The 9th National College Students' E-Commerce \"Innovation, Creativity and Entrepreneurship\" Competition",
+          "award": "First Prize"
         },
         {
-          "CourseName": "Comprehensive Experiment of Functional Materials",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/CF6CDC2D-8151-4A4D-841A-8DA12621D949-45114-00001D06E916B7EC.jpg",
+          "type": "science and technology",
+          "activity": "The 4th Safety Science and Engineering Professional Practice and Innovation Competition",
+          "award": "Second Place"
         },
         {
-          "CourseName": "Surface Engineering Technology",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/E1B6297D-A9D5-4DF1-8C09-B8B4E694FBFF-45114-00001D05CCA417D1.jpg",
+          "type": "public welfare",
+          "activity": "LGBT Care Volunteer Activities",
+          "award": "excellent volunteer"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/E32396B4-89BC-4744-A9D2-1CFF07E2A359-45114-00001D070EB105E5.jpg",
+          "type": "science and technology",
+          "activity": "The 9th Concrete Design Competition",
+          "award": "Third Prize"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/EAFE88F5-E5DD-4FC6-BD8C-98AA6D9F80C4-45114-00001D069D3ABD72.jpg",
+          "type": "honor",
+          "activity": "Class Construction Management 2018-2019",
+          "award": "Excellent monitor"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/EE7B77BA-9FA2-4BFD-AC73-EBF1CED192CF-45114-00001D07048DBDB3.jpg",
+          "type": "science and technology",
+          "activity": "The first \"Jinneng Cup\" Photovoltaic Product Design Competition in 2018",
+          "award": "second prize"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/EF1B4F2F-45BC-4722-B2F3-B9381001BF05-45114-00001D06E0A46BBE.jpg",
+          "type": "Entrepreneurship",
+          "activity": "The 4th \"China Innovation Wing\" Entrepreneurship and Innovation Dazhai",
+          "award": "Excellence Award"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/2DB618D3-DE8D-4CB7-8010-6DC84C38F44D-45114-00001D05D53BA170.png",
+          "type": "honor",
+          "activity": "Member of the Student Union Learning Department",
+          "award": "Proof of employment"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/7B41B493-2C7F-4A91-91DD-2E41CB01144E-45114-00001D0694AB4A53.png",
+          "type": "honor",
+          "activity": "2017 New and Old Students Exchange Meeting",
+          "award": "Outstanding individual title"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/7B93C3D8-4194-4D3E-BAF6-F643B53B5C93-45114-00001D0688447623.png",
+          "type": "honor",
+          "activity": "The 16th Student Cadre Training",
+          "award": "Graduation certificate"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/9A7C5A7C-7AAC-4E50-A3CB-1D23EC264182-45114-00001D06542385A0.png",
+          "type": "honor",
+          "activity": "2018-2019 \"Role Model Power\" Selection",
+          "award": "Excellent monitor"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/11A64271-B780-4679-849E-5E552DB05F6D-45114-00001D0698D217E8.png",
+          "type": "Entrepreneurship",
+          "activity": "College Student Innovation and Entrepreneurship Club",
+          "award": "Best Organization Award"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/31BFA708-E0D2-4A45-B576-DBA6DB0C5CA3-45114-00001D072733BE02.png",
+          "type": "Knowledge",
+          "activity": "The 3rd National College Students' AIDS Prevention Knowledge Contest",
+          "award": "Excellence Award"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/47D78420-6151-4730-98BB-11AB1D8DCE43-45114-00001D066C580F56.png",
+          "type": "honor",
+          "activity": "Science and Technology Entrepreneurship Guidance Station from 2017 to 2018",
+          "award": "Star Officer Award"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/99B7D052-D658-4B68-95A7-71BC3EFC7344-45114-00001D062052A691.png",
+          "type": "honor",
+          "activity": "2017-2018 May 4th Awards",
+          "award": "Outstanding members"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/5867CC60-9359-4FD9-AA66-A43FB4DB45CE-45114-00001D063B8DE659.png",
+          "type": "Compulsory",
+          "activity": "\"Caizi Cup\" Freshman Debate Competition",
+          "award": "Best debater"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/7245C317-B439-40F4-B630-D9A971B9245F-45114-00001D0670712E97.png",
+          "type": "Compulsory",
+          "activity": "2017-2018 College Students Innovation and Entrepreneurship Practice Training Course",
+          "award": "Outstanding Member Award"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/8158C929-45E2-41FC-B1DA-2E999384CD12-45114-00001D06CF024FB5.png",
+          "type": "Compulsory",
+          "activity": "The 2nd National College Students' Environmental Protection Knowledge Competition",
+          "award": "Excellence Award"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/93977CA8-0E2A-43E4-89D7-78D125DBF2EA-45114-00001D06DC75F4DB.png",
+          "type": "Compulsory",
+          "activity": "The 15th Structural Design Competition",
+          "award": "Third Prize"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/4673492C-C8BE-48EA-B655-78E01C6A7251-45114-00001D062EA478A2.png",
+          "type": "Compulsory",
+          "activity": "The 14th iCAN International Innovation and Entrepreneurship Competition",
+          "award": "second prize"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/17219480-B6C1-4313-8956-E38FA755708A-45114-00001D05D11ACF60.png",
+          "type": "Compulsory",
+          "activity": "Member of the College Students' Science and Technology Entrepreneurship Guidance Station",
+          "award": "Proof of employment"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/D8CC147E-2022-4DB0-A755-542F058BF9B3-45114-00001D0658BC820F.png",
+          "type": "Compulsory",
+          "activity": "2018 \"Excellent Class Notes Selection Activity\"",
+          "award": "Outstanding individual title"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/D29DF7E7-9314-4E87-B128-274770D7CBF5-45114-00001D06807F831E.png",
+          "type": "Compulsory",
+          "activity": "Laboratory Safety Knowledge Assessment at Southwest University of Science and Technology",
+          "award": "Certificate of Competence"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/D38B3678-9676-4C6D-9673-CDD0A0D0DC37-45114-00001D0640A4D08C.png",
+          "type": "Compulsory",
+          "activity": "The 9th Third Eye Photography Contest Camera Category",
+          "award": "Excellence Award"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/DA813F49-B59A-4EC6-97D4-73169EDBB2AA-45114-00001D063729EFB9.png",
+          "type": "Compulsory",
+          "activity": "\"Caizi Cup\" Freshman Debate Competition",
+          "award": "champion"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/317FCB5E-8252-4628-A671-89DEE0611691-45114-00001D067878950F.jpg",
+          "type": "Compulsory",
+          "activity": "2019 Sichuan University Students' Environmental Science Popularization Creative Competition",
+          "award": "First Prize"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/1C6B1B18-A81F-4E54-9A0F-7EF8BB574659-45114-00001D065CF5ED3D.png",
+          "type": "Compulsory",
+          "activity": "Mega Education Enterprise Evaluation",
+          "award": "Excellent staff"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/93031B6B-CC7A-4D9B-AA09-4C8973B5AABF-45114-00001D0714D32558.jpg",
+          "type": "Compulsory",
+          "activity": "Chinese Taekwondo Association Level Certificate",
+          "award": "Level 8"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/274DA9EE-0C5F-496A-AF90-737CE53FBA85-45114-00001D06F83794C2.png",
+          "type": "Compulsory",
+          "activity": "\"Yucai Cup\" Teacher Teaching Competition",
+          "award": "First Prize"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/AAF71A73-4186-476B-968C-A2754CED26B4-45114-00001D06036AD13F.jpg",
+          "type": "Compulsory",
+          "activity": "2018-2019 May 4th Award Nomination",
+          "award": "Top Ten Class Monitors"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/C1D3054A-0AE2-48F8-8C20-67316F3B28D3-45114-00001D05F07E5120.jpg",
+          "type": "Compulsory",
+          "activity": "The 4th College Student Entrepreneurship Competition",
+          "award": "First Prize"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/E60BE89D-B482-482F-8E52-24296D35E58D-45114-00001D05ECA25FEE.jpg",
+          "type": "Compulsory",
+          "activity": "One Foundation Warmth Package Project",
+          "award": "Volunteer Certificate"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/EB3D48DA-847E-442B-B63F-7ADEEB3C5842-45114-00001D061BCECD33.jpg",
+          "type": "Compulsory",
+          "activity": "Project Certification",
+          "award": "Project Certification"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/53241757-26D6-42AB-8CDF-ED5F1F85291A-45114-00001D06CA52034C.png",
+          "type": "Compulsory",
+          "activity": "The 10th anniversary commemoration of the Wenchuan earthquake relief",
+          "award": "Volunteer Certificate"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/A7FBAD97-1B4F-4D91-A93D-64BB7C8A49B5-45114-00001D05E842F244.png",
+          "type": "Compulsory",
+          "activity": "Image wall painting design commendation (won 2 second prizes and 2 third prizes)",
+          "award": "Commendation Documents"
         }
       ],
       [
         {
-          "CourseName": "中文",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/0DDCECF1-5FFB-467E-BCDE-1DC7C7FA1242-45114-00001D06D7EA5874.jpg",
+          "type": "创业",
+          "activity": "第五届“互联网＋”大学生创新创业大赛",
+          "award": "三等奖"
         },
         {
-          "CourseName": "Organic Chemistry",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/0E4B8618-A778-4A0B-BC21-6F6DDDFF58F7-45114-00001D072CEB0D9C.jpg",
+          "type": "知识",
+          "activity": "第三届全国大学生环保知识竞赛",
+          "award": "优秀奖"
         },
         {
-          "CourseName": "Fundamentals of Mechanical Design",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/2DECE824-29D0-43FD-A341-AF99D2C97CE0-45114-00001D06A33838C7.jpg",
+          "type": "荣誉",
+          "activity": "2018-2019年度“榜样力量”",
+          "award": "优秀班长"
         },
         {
-          "CourseName": "Course design of Fundamentals of Mechanical Design",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/2E3F1DF6-ACE1-419A-B2DD-58FDC43D9191-45114-00001D05E493426E.jpg",
+          "type": "奖学金",
+          "activity": "西南科技大学2019-2020奖学金",
+          "award": "艺术特长奖"
         },
         {
-          "CourseName": "Physical Chemistry",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/2EAE6603-858F-44B5-B196-E866F74842E0-45114-00001D0663AA379F.jpg",
+          "type": "科技",
+          "activity": "“金能杯”光伏产品设计大赛决赛",
+          "award": "二等奖"
         },
         {
-          "CourseName": "Fundamentals of Material Science",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/03AAA681-6765-41AA-8020-A42DC71162A7-45114-00001D06E508A18F.jpg",
+          "type": "科技",
+          "activity": "西南科技大学第四届大学生创业大赛",
+          "award": "铜奖"
         },
         {
-          "CourseName": "Solid State Physics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/5BEF2DF4-09AD-4BEF-ABA8-357E4C3B252A-45114-00001D068BD72133.jpg",
+          "type": "艺术",
+          "activity": "2019 年新生录取通知书设计大赛",
+          "award": "一等奖"
         },
         {
-          "CourseName": "Semiconductor Physics Experiment",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/5FF0E884-7D14-4A5E-A579-826930F18C7C-45114-00001D071C6E8A0D.jpg",
+          "type": "体育",
+          "activity": "2019学院运动会围棋项目",
+          "award": "第二名"
         },
         {
-          "CourseName": "Model Analysis and Testing Technology",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/51F92EA6-4FA9-4E3E-9EB4-38B15AE06F2D-45114-00001D05DCDFC7C5.jpg",
+          "type": "奖学金",
+          "activity": "西南科技大学2018-2019奖学金",
+          "award": "创业实残奖"
         },
         {
-          "CourseName": "New Building Materials",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/59C72B82-C522-4E6B-AEF3-7D549787675E-45114-00001D062A66B3B5.jpg",
+          "type": "创业",
+          "activity": "第十四届iCAN国际创新创业大赛中国总决赛",
+          "award": "三等奖"
         },
         {
-          "CourseName": "Poly Flame Retardant Material",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/69DA8251-003D-4587-B73E-8CDA71972A6B-45114-00001D05D900AA8E.jpg",
+          "type": "奖学金",
+          "activity": "西南科技大学2019-2020奖学金",
+          "award": "创业实残奖"
         },
         {
-          "CourseName": "Special Cement",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/86F95023-670D-4D49-A501-24ABC48F9D4C-45114-00001D0632E1AA4E.jpg",
+          "type": "荣誉",
+          "activity": "创业培训学员合格证书",
+          "award": "合格证书"
         },
         {
-          "CourseName": "Compound Material",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/95A0A467-F6A4-48A4-A0D3-A562CD1DCBB0-45114-00001D064AFEAA6E.jpg",
+          "type": "荣誉",
+          "activity": "学院2019-2020年度“五•四”评优",
+          "award": "优秀团员"
         },
         {
-          "CourseName": "Electrical and Electronic Technology",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/587C6C4F-B46A-450D-A39D-5FAFF3F54991-45114-00001D06260FB642.jpg",
+          "type": "荣誉",
+          "activity": "2018-2019年度中，德行、智慧、体育五四评优",
+          "award": "优秀团员"
         },
         {
-          "CourseName": "Fundamentals of Circuit Analysis",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/880D0E87-D929-44AD-9336-FBCC492B4C8B-45114-00001D05E0F14BA0.jpg",
+          "type": "奖学金",
+          "activity": "西南科技大学2018-2019奖学金",
+          "award": "艺术特长奖"
         },
         {
-          "CourseName": "Engineering Mechanics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/977D096F-FBFB-4C25-A711-35E23E82D4BF-45114-00001D0722FCF496.jpg",
+          "type": "知识",
+          "activity": "第二届全国大学生预防艾激病知识竞赛",
+          "award": "优秀奖"
         },
         {
-          "CourseName": "Semiconductor Physics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/9642B465-4F83-4262-9BB5-688849F3B22C-45114-00001D067473899F.jpg",
+          "type": "科技",
+          "activity": "第十一届化学综合涉及大赛",
+          "award": "一等奖"
         },
         {
-          "CourseName": "Physical Technology and Thin Film",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/35768A3B-D574-481B-889E-C206E50EF4B5-45114-00001D06847F4823.jpg",
+          "type": "知识",
+          "activity": "第六届家教授课大赛",
+          "award": "一等奖"
         },
         {
-          "CourseName": "Dielectric Physics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/63153EB6-F91B-4E8A-9A12-8CA143C04B66-45114-00001D06F3FE4DAB.jpg",
+          "type": "荣誉",
+          "activity": "第17届干部培训",
+          "award": "结业证"
         },
         {
-          "CourseName": "Electrical Ceramic Technology",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/581135B0-BD2E-4017-947D-61F8766711DA-45114-00001D067C795B4E.jpg",
+          "type": "艺术",
+          "activity": "形象墙设计大赛",
+          "award": "二等奖"
         },
         {
-          "CourseName": "Magnetic Physics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/4300261E-9EB4-4ED0-8528-909AED6A3069-45114-00001D069065EC56.jpg",
+          "type": "奖学金",
+          "activity": "西南科技大学2020奖学金",
+          "award": "科技文体先进个人"
         },
         {
-          "CourseName": "Special Ceramics",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/4721622D-2855-42E4-95C0-720DEC9DDB19-45114-00001D06C5F62431.jpg",
+          "type": "创业",
+          "activity": "巴黎欧莱雅2019头脑风暴商业赛",
+          "award": "结赛证"
         },
         {
-          "CourseName": "Nanomaterials and Nanotechnology",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/BF66EB74-B02D-420C-B25F-F09BAD48DF03-45114-00001D064F9C18F4.jpg",
+          "type": "荣誉",
+          "activity": "2019-2020年度“五•四”评优",
+          "award": "优秀学生干部"
         },
         {
-          "CourseName": "Model Analysis and Testing Technology Experiment",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/BF68AE98-2B4F-4CAE-A624-FFEC07958E95-45114-00001D06D3590E22.jpg",
+          "type": "艺术",
+          "activity": "第九届全国大学生电子商务“创新、创意及创业“赛",
+          "award": "一等奖"
         },
         {
-          "CourseName": "Comprehensive Experiment of Functional Materials",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/CF6CDC2D-8151-4A4D-841A-8DA12621D949-45114-00001D06E916B7EC.jpg",
+          "type": "科技",
+          "activity": "第四届安全科学与工程类专业实践与创新作品大赛",
+          "award": "第二名"
         },
         {
-          "CourseName": "Surface Engineering Technology",
-          "Type": "Compulsory",
-          "Description": "-"
+          "src": "https://3o.hk/images/2024/04/29/E1B6297D-A9D5-4DF1-8C09-B8B4E694FBFF-45114-00001D05CCA417D1.jpg",
+          "type": "公益",
+          "activity": "LGBT关爱志愿活动",
+          "award": "优秀志愿者"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/E32396B4-89BC-4744-A9D2-1CFF07E2A359-45114-00001D070EB105E5.jpg",
+          "type": "科技",
+          "activity": "第九届混凝土设计大赛",
+          "award": "三等奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/EAFE88F5-E5DD-4FC6-BD8C-98AA6D9F80C4-45114-00001D069D3ABD72.jpg",
+          "type": "荣誉",
+          "activity": "2018-2019年度班级建设管理",
+          "award": "优秀班长"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/EE7B77BA-9FA2-4BFD-AC73-EBF1CED192CF-45114-00001D07048DBDB3.jpg",
+          "type": "科技",
+          "activity": "2018年首届“金能杯”光伏产品设计大赛",
+          "award": "二等奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/EF1B4F2F-45BC-4722-B2F3-B9381001BF05-45114-00001D06E0A46BBE.jpg",
+          "type": "创业",
+          "activity": "第四届“中国创翼” 创业创新大寨",
+          "award": "优秀奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/2DB618D3-DE8D-4CB7-8010-6DC84C38F44D-45114-00001D05D53BA170.png",
+          "type": "荣誉",
+          "activity": "校学生会学习部成员",
+          "award": "任职证明"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/7B41B493-2C7F-4A91-91DD-2E41CB01144E-45114-00001D0694AB4A53.png",
+          "type": "荣誉",
+          "activity": "2017级新老生交流会",
+          "award": "优秀个人称号"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/7B93C3D8-4194-4D3E-BAF6-F643B53B5C93-45114-00001D0688447623.png",
+          "type": "荣誉",
+          "activity": "第十六届学生干部培训",
+          "award": "结业证"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/9A7C5A7C-7AAC-4E50-A3CB-1D23EC264182-45114-00001D06542385A0.png",
+          "type": "荣誉",
+          "activity": "2018-2019年度“榜样力量” 评选",
+          "award": "优秀班长"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/11A64271-B780-4679-849E-5E552DB05F6D-45114-00001D0698D217E8.png",
+          "type": "创业",
+          "activity": "大学生创新创业俱乐部",
+          "award": "最佳组织奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/31BFA708-E0D2-4A45-B576-DBA6DB0C5CA3-45114-00001D072733BE02.png",
+          "type": "知识",
+          "activity": "第三届全国大学生预防艾滋病知识竞赛",
+          "award": "优秀奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/47D78420-6151-4730-98BB-11AB1D8DCE43-45114-00001D066C580F56.png",
+          "type": "荣誉",
+          "activity": "2017至2018年科技创业指导站",
+          "award": "明星干事奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/99B7D052-D658-4B68-95A7-71BC3EFC7344-45114-00001D062052A691.png",
+          "type": "荣誉",
+          "activity": "2017-2018年度五四评优",
+          "award": "优秀团员"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/5867CC60-9359-4FD9-AA66-A43FB4DB45CE-45114-00001D063B8DE659.png",
+          "type": "Compulsory",
+          "activity": "“材子杯”新生辩论赛",
+          "award": "最佳辩手"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/7245C317-B439-40F4-B630-D9A971B9245F-45114-00001D0670712E97.png",
+          "type": "Compulsory",
+          "activity": "2017-2018年大学生创新创业实践训练班",
+          "award": "优秀会员奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/8158C929-45E2-41FC-B1DA-2E999384CD12-45114-00001D06CF024FB5.png",
+          "type": "Compulsory",
+          "activity": "第二届全国大学生环保知识竞赛",
+          "award": "优秀奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/93977CA8-0E2A-43E4-89D7-78D125DBF2EA-45114-00001D06DC75F4DB.png",
+          "type": "Compulsory",
+          "activity": "第十五届结构设计竞赛",
+          "award": "三等奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/4673492C-C8BE-48EA-B655-78E01C6A7251-45114-00001D062EA478A2.png",
+          "type": "Compulsory",
+          "activity": "第十四届iCAN国际创新创业大赛",
+          "award": "二等奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/17219480-B6C1-4313-8956-E38FA755708A-45114-00001D05D11ACF60.png",
+          "type": "Compulsory",
+          "activity": "大学生科技创业指导站成员",
+          "award": "任职证明"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/D8CC147E-2022-4DB0-A755-542F058BF9B3-45114-00001D0658BC820F.png",
+          "type": "Compulsory",
+          "activity": "2018年度“优秀课堂笔记评选活动”",
+          "award": "优秀个人称号"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/D29DF7E7-9314-4E87-B128-274770D7CBF5-45114-00001D06807F831E.png",
+          "type": "Compulsory",
+          "activity": "西南科技大学实验室安全知识考核",
+          "award": "合格证书"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/D38B3678-9676-4C6D-9673-CDD0A0D0DC37-45114-00001D0640A4D08C.png",
+          "type": "Compulsory",
+          "activity": "第 9 届第三只眼摄影大赛相机组",
+          "award": "优秀奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/DA813F49-B59A-4EC6-97D4-73169EDBB2AA-45114-00001D063729EFB9.png",
+          "type": "Compulsory",
+          "activity": "“材子杯”新生辩论赛活动",
+          "award": "冠军"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/317FCB5E-8252-4628-A671-89DEE0611691-45114-00001D067878950F.jpg",
+          "type": "Compulsory",
+          "activity": "2019年四川省大学生环保科普创意大赛",
+          "award": "一等奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/1C6B1B18-A81F-4E54-9A0F-7EF8BB574659-45114-00001D065CF5ED3D.png",
+          "type": "Compulsory",
+          "activity": "兆式教育企业评优",
+          "award": "优秀员工"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/93031B6B-CC7A-4D9B-AA09-4C8973B5AABF-45114-00001D0714D32558.jpg",
+          "type": "Compulsory",
+          "activity": "中国跆拳道协会级位证书",
+          "award": "八级"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/274DA9EE-0C5F-496A-AF90-737CE53FBA85-45114-00001D06F83794C2.png",
+          "type": "Compulsory",
+          "activity": "育才杯”教师授课比赛",
+          "award": "一等奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/AAF71A73-4186-476B-968C-A2754CED26B4-45114-00001D06036AD13F.jpg",
+          "type": "Compulsory",
+          "activity": "2018-2019 年度五 四评优提名",
+          "award": "十佳班长"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/C1D3054A-0AE2-48F8-8C20-67316F3B28D3-45114-00001D05F07E5120.jpg",
+          "type": "Compulsory",
+          "activity": "第四届大学生创业大赛",
+          "award": "一等奖"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/E60BE89D-B482-482F-8E52-24296D35E58D-45114-00001D05ECA25FEE.jpg",
+          "type": "Compulsory",
+          "activity": "壹基金温暖包项目",
+          "award": "志愿者证明"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/EB3D48DA-847E-442B-B63F-7ADEEB3C5842-45114-00001D061BCECD33.jpg",
+          "type": "Compulsory",
+          "activity": "项目认证",
+          "award": "项目认证"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/53241757-26D6-42AB-8CDF-ED5F1F85291A-45114-00001D06CA52034C.png",
+          "type": "Compulsory",
+          "activity": "汶川抗震救灾十周年纪念活动",
+          "award": "志愿者证明"
+        },
+        {
+          "src": "https://3o.hk/images/2024/04/29/A7FBAD97-1B4F-4D91-A93D-64BB7C8A49B5-45114-00001D05E842F244.png",
+          "type": "Compulsory",
+          "activity": "形象墻墻绘设计表彰（荣获2个二等奖，2个三等奖）",
+          "award": "表彰文件"
         }
       ]
     ],
@@ -2524,469 +2952,6 @@
       ]
     ],
     "Picture": {
-      "AllPicture": [
-        "https://3o.hk/images/2024/01/21/IMG_1040.png",
-        "https://3o.hk/images/2024/01/21/IMG_1039.png",
-        "https://3o.hk/images/2024/01/21/IMG_1037.png",
-        "https://3o.hk/images/2024/01/21/IMG_1036.png",
-        "https://3o.hk/images/2024/01/21/IMG_1035.png",
-        "https://3o.hk/images/2024/01/21/IMG_1034.png",
-        "https://3o.hk/images/2024/01/21/IMG_1033.png",
-        "https://3o.hk/images/2024/01/21/IMG_1032.png",
-        "https://3o.hk/images/2024/01/21/IMG_1031.png",
-        "https://3o.hk/images/2024/01/21/IMG_1030.png",
-        "https://3o.hk/images/2024/01/21/IMG_1029.png",
-        "https://3o.hk/images/2024/01/21/IMG_1028.png",
-        "https://3o.hk/images/2024/01/21/IMG_1027.png",
-        "https://3o.hk/images/2024/01/21/IMG_1026.png",
-        "https://3o.hk/images/2024/01/21/IMG_1025.png",
-        "https://3o.hk/images/2024/01/21/IMG_1023.png",
-        "https://3o.hk/images/2024/01/21/IMG_1024.png",
-        "https://3o.hk/images/2024/01/21/IMG_1022.png",
-        "https://3o.hk/images/2024/01/21/IMG_1021.png",
-        "https://3o.hk/images/2024/01/21/IMG_1020.png",
-        "https://3o.hk/images/2024/01/21/IMG_1019.png",
-        "https://3o.hk/images/2024/01/21/IMG_1018.png",
-        "https://3o.hk/images/2024/01/21/IMG_1017.png",
-        "https://3o.hk/images/2024/01/21/IMG_1016.png",
-        "https://3o.hk/images/2024/01/21/IMG_1015.png",
-        "https://3o.hk/images/2024/01/21/IMG_1014.png",
-        "https://3o.hk/images/2024/01/21/IMG_1013.png",
-        "https://3o.hk/images/2024/01/21/IMG_1012.png",
-        "https://3o.hk/images/2024/01/21/IMG_1011.png",
-        "https://3o.hk/images/2024/01/21/IMG_1010.png",
-        "https://3o.hk/images/2024/01/21/IMG_1009.png",
-        "https://3o.hk/images/2024/01/21/IMG_1008.png",
-        "https://3o.hk/images/2024/01/21/IMG_1007.png",
-        "https://3o.hk/images/2024/01/21/IMG_1006.png",
-        "https://3o.hk/images/2024/01/21/IMG_1005.png",
-        "https://3o.hk/images/2024/01/21/IMG_1004.png",
-        "https://3o.hk/images/2024/01/21/IMG_1003.png",
-        "https://3o.hk/images/2024/01/21/IMG_1002.png",
-        "https://3o.hk/images/2024/01/21/IMG_1001.png",
-        "https://3o.hk/images/2024/01/21/IMG_0999.png",
-        "https://3o.hk/images/2024/01/21/IMG_0998.png",
-        "https://3o.hk/images/2024/01/21/IMG_0997.png",
-        "https://3o.hk/images/2024/01/21/IMG_0995.png",
-        "https://3o.hk/images/2024/01/21/IMG_0994.png",
-        "https://3o.hk/images/2024/01/21/IMG_0992.png",
-        "https://3o.hk/images/2024/01/21/IMG_0991.png",
-        "https://3o.hk/images/2024/01/21/IMG_0990.png",
-        "https://3o.hk/images/2024/01/21/IMG_0988.png",
-        "https://3o.hk/images/2024/01/21/IMG_0987.png",
-        "https://3o.hk/images/2024/01/21/IMG_0986.png",
-        "https://3o.hk/images/2024/01/21/IMG_0985.png",
-        "https://3o.hk/images/2024/01/21/IMG_0984.png",
-        "https://3o.hk/images/2024/01/21/IMG_0983.png",
-        "https://3o.hk/images/2024/01/21/IMG_0982.png",
-        "https://3o.hk/images/2024/01/21/IMG_0980.png",
-        "https://3o.hk/images/2024/01/21/IMG_0979.png",
-        "https://3o.hk/images/2024/01/21/IMG_0978.png",
-        "https://3o.hk/images/2024/01/21/IMG_0977.png",
-        "https://3o.hk/images/2024/01/21/IMG_0976.png",
-        "https://3o.hk/images/2024/01/21/IMG_0974.png",
-        "https://3o.hk/images/2024/01/21/IMG_0971.png",
-        "https://3o.hk/images/2024/01/21/IMG_0973.png",
-        "https://3o.hk/images/2024/01/21/IMG_0972.png",
-        "https://3o.hk/images/2024/01/21/IMG_0970.png",
-        "https://3o.hk/images/2024/01/21/IMG_0969.png",
-        "https://3o.hk/images/2024/01/21/IMG_0967.png",
-        "https://3o.hk/images/2024/01/21/IMG_0968.png",
-        "https://3o.hk/images/2024/01/21/IMG_0965.png",
-        "https://3o.hk/images/2024/01/21/IMG_0966.png",
-        "https://3o.hk/images/2024/01/21/IMG_0963.png",
-        "https://3o.hk/images/2024/01/21/IMG_0964.png",
-        "https://3o.hk/images/2024/01/21/IMG_0962.png",
-        "https://3o.hk/images/2024/01/21/IMG_0961.png",
-        "https://3o.hk/images/2024/01/21/IMG_0960.png",
-        "https://3o.hk/images/2024/01/21/IMG_0959.png",
-        "https://3o.hk/images/2024/01/21/IMG_0958.png",
-        "https://3o.hk/images/2024/01/21/IMG_0957.png",
-        "https://3o.hk/images/2024/01/21/IMG_0956.png",
-        "https://3o.hk/images/2024/01/21/IMG_0955.png",
-        "https://3o.hk/images/2024/01/21/IMG_0954.png",
-        "https://3o.hk/images/2024/01/21/IMG_0953.png",
-        "https://3o.hk/images/2024/01/21/IMG_0952.png",
-        "https://3o.hk/images/2024/01/21/IMG_0951.png",
-        "https://3o.hk/images/2024/01/21/IMG_0950.png",
-        "https://3o.hk/images/2024/01/21/IMG_0949.png",
-        "https://3o.hk/images/2024/01/21/IMG_0948.png",
-        "https://3o.hk/images/2024/01/21/IMG_0947.png",
-        "https://3o.hk/images/2024/01/21/IMG_0946.png",
-        "https://3o.hk/images/2024/01/21/IMG_0945.png",
-        "https://3o.hk/images/2024/01/21/IMG_0944.png",
-        "https://3o.hk/images/2024/01/21/IMG_0943.png",
-        "https://3o.hk/images/2024/01/21/IMG_0942.png",
-        "https://3o.hk/images/2024/01/21/IMG_0941.png",
-        "https://3o.hk/images/2024/01/21/IMG_0940.png",
-        "https://3o.hk/images/2024/01/21/IMG_0939.png",
-        "https://3o.hk/images/2024/01/21/IMG_0938.png",
-        "https://3o.hk/images/2024/01/21/IMG_0937.png",
-        "https://3o.hk/images/2024/01/21/IMG_0936.png",
-        "https://3o.hk/images/2024/01/21/IMG_0935.png",
-        "https://3o.hk/images/2024/01/21/IMG_0934.png",
-        "https://3o.hk/images/2024/01/21/IMG_0933.png",
-        "https://3o.hk/images/2024/01/21/IMG_0931.png",
-        "https://3o.hk/images/2024/01/21/IMG_0932.png",
-        "https://3o.hk/images/2024/01/21/IMG_0930.png",
-        "https://3o.hk/images/2024/01/21/IMG_0929.png",
-        "https://3o.hk/images/2024/01/21/IMG_0928.png",
-        "https://3o.hk/images/2024/01/21/IMG_0927.png",
-        "https://3o.hk/images/2024/01/21/IMG_0926.png",
-        "https://3o.hk/images/2024/01/21/IMG_0925.png",
-        "https://3o.hk/images/2024/01/21/IMG_0924.png",
-        "https://3o.hk/images/2024/01/21/IMG_0923.png",
-        "https://3o.hk/images/2024/01/21/IMG_0922.png",
-        "https://3o.hk/images/2024/01/21/IMG_0921.png",
-        "https://3o.hk/images/2024/01/21/IMG_0920.png",
-        "https://3o.hk/images/2024/01/21/IMG_0919.png",
-        "https://3o.hk/images/2024/01/21/IMG_0918.png",
-        "https://3o.hk/images/2024/01/21/IMG_0917.png",
-        "https://3o.hk/images/2024/01/21/IMG_0916.png",
-        "https://3o.hk/images/2024/01/21/IMG_0915.png",
-        "https://3o.hk/images/2024/01/21/IMG_0914.png",
-        "https://3o.hk/images/2024/01/21/IMG_0913.png",
-        "https://3o.hk/images/2024/01/21/IMG_0912.png",
-        "https://3o.hk/images/2024/01/21/IMG_0911.png",
-        "https://3o.hk/images/2024/01/21/IMG_0910.png",
-        "https://3o.hk/images/2024/01/21/IMG_0909.png",
-        "https://3o.hk/images/2024/01/21/IMG_0908.png",
-        "https://3o.hk/images/2024/01/21/IMG_0907.png",
-        "https://3o.hk/images/2024/01/21/IMG_0906.png",
-        "https://3o.hk/images/2024/01/21/IMG_0905.png",
-        "https://3o.hk/images/2024/01/21/IMG_0904.png",
-        "https://3o.hk/images/2024/01/21/IMG_0903.png",
-        "https://3o.hk/images/2024/01/21/IMG_0902.png",
-        "https://3o.hk/images/2024/01/21/IMG_0900.png",
-        "https://3o.hk/images/2024/01/21/IMG_0899.png",
-        "https://3o.hk/images/2024/01/21/IMG_0896.png",
-        "https://3o.hk/images/2024/01/21/IMG_0895.png",
-        "https://3o.hk/images/2024/01/21/IMG_0894.png",
-        "https://3o.hk/images/2024/01/21/IMG_0893.png",
-        "https://3o.hk/images/2024/01/21/IMG_0891.png",
-        "https://3o.hk/images/2024/01/21/IMG_0890.png",
-        "https://3o.hk/images/2024/01/21/IMG_0889.png",
-        "https://3o.hk/images/2024/01/21/IMG_0888.png",
-        "https://3o.hk/images/2024/01/21/IMG_0887.png",
-        "https://3o.hk/images/2024/01/21/IMG_0886.png",
-        "https://3o.hk/images/2024/01/21/IMG_0885.png",
-        "https://3o.hk/images/2024/01/21/IMG_0884.png",
-        "https://3o.hk/images/2024/01/21/IMG_0883.png",
-        "https://3o.hk/images/2024/01/21/IMG_0882.png",
-        "https://3o.hk/images/2024/01/21/IMG_0881.png",
-        "https://3o.hk/images/2024/01/21/IMG_0879.png",
-        "https://3o.hk/images/2024/01/21/IMG_0878.png",
-        "https://3o.hk/images/2024/01/21/IMG_0877.png",
-        "https://3o.hk/images/2024/01/21/IMG_0876.png",
-        "https://3o.hk/images/2024/01/21/IMG_0875.png",
-        "https://3o.hk/images/2024/01/21/IMG_0874.png",
-        "https://3o.hk/images/2024/01/21/IMG_0872.png",
-        "https://3o.hk/images/2024/01/21/IMG_0873.png",
-        "https://3o.hk/images/2024/01/21/IMG_0871.png",
-        "https://3o.hk/images/2024/01/21/IMG_0870.png",
-        "https://3o.hk/images/2024/01/21/IMG_0869.png",
-        "https://3o.hk/images/2024/01/21/IMG_0867.png",
-        "https://3o.hk/images/2024/01/21/IMG_0866.png",
-        "https://3o.hk/images/2024/01/21/IMG_0865.png",
-        "https://3o.hk/images/2024/01/21/IMG_0864.png",
-        "https://3o.hk/images/2024/01/21/IMG_0862.png",
-        "https://3o.hk/images/2024/01/21/IMG_0863.png",
-        "https://3o.hk/images/2024/01/21/IMG_0861.png",
-        "https://3o.hk/images/2024/01/21/IMG_0860.png",
-        "https://3o.hk/images/2024/01/21/IMG_0859.png",
-        "https://3o.hk/images/2024/01/21/IMG_0857.png",
-        "https://3o.hk/images/2024/01/21/IMG_0856.png",
-        "https://3o.hk/images/2024/01/21/IMG_0854.png",
-        "https://3o.hk/images/2024/01/21/IMG_0853.png",
-        "https://3o.hk/images/2024/01/21/IMG_0852.png",
-        "https://3o.hk/images/2024/01/21/IMG_0851.png",
-        "https://3o.hk/images/2024/01/21/IMG_0850.png",
-        "https://3o.hk/images/2024/01/21/IMG_0849.png",
-        "https://3o.hk/images/2024/01/21/IMG_0848.png",
-        "https://3o.hk/images/2024/01/21/IMG_0847.png",
-        "https://3o.hk/images/2024/01/21/IMG_0846.png",
-        "https://3o.hk/images/2024/01/21/IMG_0845.png",
-        "https://3o.hk/images/2024/01/21/IMG_0844.png",
-        "https://3o.hk/images/2024/01/21/IMG_0843.png",
-        "https://3o.hk/images/2024/01/21/IMG_0842.png",
-        "https://3o.hk/images/2024/01/21/IMG_0841.png",
-        "https://3o.hk/images/2024/01/21/IMG_0840.png",
-        "https://3o.hk/images/2024/01/21/IMG_0839.png",
-        "https://3o.hk/images/2024/01/21/IMG_0838.png",
-        "https://3o.hk/images/2024/01/21/IMG_0837.png",
-        "https://3o.hk/images/2024/01/21/IMG_0836.png",
-        "https://3o.hk/images/2024/01/21/IMG_0835.png",
-        "https://3o.hk/images/2024/01/21/IMG_0833.png",
-        "https://3o.hk/images/2024/01/21/IMG_0832.png",
-        "https://3o.hk/images/2024/01/21/IMG_0830.png",
-        "https://3o.hk/images/2024/01/21/IMG_0831.png",
-        "https://3o.hk/images/2024/01/21/IMG_0829.png",
-        "https://3o.hk/images/2024/01/21/IMG_0828.png",
-        "https://3o.hk/images/2024/01/21/IMG_0827.png",
-        "https://3o.hk/images/2024/01/21/IMG_0826.png",
-        "https://3o.hk/images/2024/01/21/IMG_0825.png",
-        "https://3o.hk/images/2024/01/21/IMG_0823.png",
-        "https://3o.hk/images/2024/01/21/IMG_0824.png",
-        "https://3o.hk/images/2024/01/21/IMG_0822.png",
-        "https://3o.hk/images/2024/01/21/IMG_0821.png",
-        "https://3o.hk/images/2024/01/21/IMG_0820.png",
-        "https://3o.hk/images/2024/01/21/IMG_0819.png",
-        "https://3o.hk/images/2024/01/21/IMG_0818.png",
-        "https://3o.hk/images/2024/01/21/IMG_0817.png",
-        "https://3o.hk/images/2024/01/21/IMG_0816.png",
-        "https://3o.hk/images/2024/01/21/IMG_0815.png",
-        "https://3o.hk/images/2024/01/21/IMG_0814.png",
-        "https://3o.hk/images/2024/01/21/IMG_0813.png",
-        "https://3o.hk/images/2024/01/21/IMG_0812.png",
-        "https://3o.hk/images/2024/01/21/IMG_0811.png",
-        "https://3o.hk/images/2024/01/21/IMG_0810.png",
-        "https://3o.hk/images/2024/01/21/IMG_0809.png",
-        "https://3o.hk/images/2024/01/21/IMG_0808.png",
-        "https://3o.hk/images/2024/01/21/IMG_0807.png",
-        "https://3o.hk/images/2024/01/21/IMG_0806.png",
-        "https://3o.hk/images/2024/01/21/IMG_0805.png",
-        "https://3o.hk/images/2024/01/21/IMG_0804.png",
-        "https://3o.hk/images/2024/01/21/IMG_0803.png",
-        "https://3o.hk/images/2024/01/21/IMG_0802.png",
-        "https://3o.hk/images/2024/01/21/IMG_0801.png",
-        "https://3o.hk/images/2024/01/21/IMG_0800.png",
-        "https://3o.hk/images/2024/01/21/IMG_0799.png",
-        "https://3o.hk/images/2024/01/21/IMG_0798.png",
-        "https://3o.hk/images/2024/01/21/IMG_0797.png",
-        "https://3o.hk/images/2024/01/21/IMG_0796.png",
-        "https://3o.hk/images/2024/01/21/IMG_0795.png",
-        "https://3o.hk/images/2024/01/21/IMG_0794.png",
-        "https://3o.hk/images/2024/01/21/IMG_0793.png",
-        "https://3o.hk/images/2024/01/21/IMG_0792.png",
-        "https://3o.hk/images/2024/01/21/IMG_0791.png",
-        "https://3o.hk/images/2024/01/21/IMG_0790.png",
-        "https://3o.hk/images/2024/01/21/IMG_0789.png",
-        "https://3o.hk/images/2024/01/21/IMG_0788.png",
-        "https://3o.hk/images/2024/01/21/IMG_0786.png",
-        "https://3o.hk/images/2024/01/21/IMG_0785.png",
-        "https://3o.hk/images/2024/01/21/IMG_0784.png",
-        "https://3o.hk/images/2024/01/21/IMG_0783.png",
-        "https://3o.hk/images/2024/01/21/IMG_0782.png",
-        "https://3o.hk/images/2024/01/21/IMG_0781.png",
-        "https://3o.hk/images/2024/01/21/IMG_0780.png",
-        "https://3o.hk/images/2024/01/21/IMG_0779.png",
-        "https://3o.hk/images/2024/01/21/IMG_0778.png",
-        "https://3o.hk/images/2024/01/21/IMG_0777.png",
-        "https://3o.hk/images/2024/01/21/IMG_0776.png",
-        "https://3o.hk/images/2024/01/21/IMG_0775.png",
-        "https://3o.hk/images/2024/01/21/IMG_0774.png",
-        "https://3o.hk/images/2024/01/21/IMG_0773.png",
-        "https://3o.hk/images/2024/01/21/IMG_0772.png",
-        "https://3o.hk/images/2024/01/21/IMG_0771.png",
-        "https://3o.hk/images/2024/01/21/IMG_0770.png",
-        "https://3o.hk/images/2024/01/21/IMG_0769.png",
-        "https://3o.hk/images/2024/01/21/IMG_0768.png",
-        "https://3o.hk/images/2024/01/21/IMG_0767.png",
-        "https://3o.hk/images/2024/01/21/IMG_0766.png",
-        "https://3o.hk/images/2024/01/21/IMG_0765.png",
-        "https://3o.hk/images/2024/01/21/IMG_0764.png",
-        "https://3o.hk/images/2024/01/21/IMG_0763.png",
-        "https://3o.hk/images/2024/01/21/IMG_0762.png",
-        "https://3o.hk/images/2024/01/21/IMG_0761.png",
-        "https://3o.hk/images/2024/01/21/IMG_0760.png",
-        "https://3o.hk/images/2024/01/21/IMG_0759.png",
-        "https://3o.hk/images/2024/01/21/IMG_0758.png",
-        "https://3o.hk/images/2024/01/21/IMG_0757.png",
-        "https://3o.hk/images/2024/01/21/IMG_0756.png",
-        "https://3o.hk/images/2024/01/21/IMG_0755.png",
-        "https://3o.hk/images/2024/01/21/IMG_0754.png",
-        "https://3o.hk/images/2024/01/21/IMG_0753.png",
-        "https://3o.hk/images/2024/01/21/IMG_0752.png",
-        "https://3o.hk/images/2024/01/21/IMG_0751.png",
-        "https://3o.hk/images/2024/01/21/IMG_0750.png",
-        "https://3o.hk/images/2024/01/21/IMG_0749.png",
-        "https://3o.hk/images/2024/01/21/IMG_0748.png",
-        "https://3o.hk/images/2024/01/21/IMG_0747.png",
-        "https://3o.hk/images/2024/01/21/IMG_0746.png",
-        "https://3o.hk/images/2024/01/21/IMG_0744.png",
-        "https://3o.hk/images/2024/01/21/IMG_0743.png",
-        "https://3o.hk/images/2024/01/21/IMG_0742.png",
-        "https://3o.hk/images/2024/01/21/IMG_0741.png",
-        "https://3o.hk/images/2024/01/21/IMG_0740.png",
-        "https://3o.hk/images/2024/01/21/IMG_0739.png",
-        "https://3o.hk/images/2024/01/21/IMG_0738.png",
-        "https://3o.hk/images/2024/01/21/IMG_0737.png",
-        "https://3o.hk/images/2024/01/21/IMG_0736.png",
-        "https://3o.hk/images/2024/01/21/IMG_0735.png",
-        "https://3o.hk/images/2024/01/21/IMG_0734.png",
-        "https://3o.hk/images/2024/01/21/IMG_0733.png",
-        "https://3o.hk/images/2024/01/21/IMG_0732.png",
-        "https://3o.hk/images/2024/01/21/IMG_0731.png",
-        "https://3o.hk/images/2024/01/21/IMG_0729.png",
-        "https://3o.hk/images/2024/01/21/IMG_0728.png",
-        "https://3o.hk/images/2024/01/21/IMG_0727.png",
-        "https://3o.hk/images/2024/01/21/IMG_0726.png",
-        "https://3o.hk/images/2024/01/21/IMG_0725.png",
-        "https://3o.hk/images/2024/01/21/IMG_0723.png",
-        "https://3o.hk/images/2024/01/21/IMG_0722.png",
-        "https://3o.hk/images/2024/01/21/IMG_0721.png",
-        "https://3o.hk/images/2024/01/21/IMG_0720.png",
-        "https://3o.hk/images/2024/01/20/IMG_0878.png",
-        "https://3o.hk/images/2024/01/20/IMG_0877.png",
-        "https://3o.hk/images/2024/01/20/IMG_0876.png",
-        "https://3o.hk/images/2024/01/20/IMG_0875.png",
-        "https://3o.hk/images/2024/01/20/IMG_0874.png",
-        "https://3o.hk/images/2024/01/20/IMG_0873.png",
-        "https://3o.hk/images/2024/01/20/IMG_0872.png",
-        "https://3o.hk/images/2024/01/20/IMG_0871.png",
-        "https://3o.hk/images/2024/01/20/IMG_0870.png",
-        "https://3o.hk/images/2024/01/20/IMG_0869.png",
-        "https://3o.hk/images/2024/01/20/IMG_0867.png",
-        "https://3o.hk/images/2024/01/20/IMG_0866.png",
-        "https://3o.hk/images/2024/01/20/IMG_0865.png",
-        "https://3o.hk/images/2024/01/20/IMG_0864.png",
-        "https://3o.hk/images/2024/01/20/IMG_0862.png",
-        "https://3o.hk/images/2024/01/20/IMG_0863.png",
-        "https://3o.hk/images/2024/01/20/IMG_0860.png",
-        "https://3o.hk/images/2024/01/20/IMG_0861.png",
-        "https://3o.hk/images/2024/01/20/IMG_0859.png",
-        "https://3o.hk/images/2024/01/20/IMG_0857.png",
-        "https://3o.hk/images/2024/01/20/IMG_0856.png",
-        "https://3o.hk/images/2024/01/20/IMG_0854.png",
-        "https://3o.hk/images/2024/01/20/IMG_0853.png",
-        "https://3o.hk/images/2024/01/20/IMG_0852.png",
-        "https://3o.hk/images/2024/01/20/IMG_0851.png",
-        "https://3o.hk/images/2024/01/20/IMG_0850.png",
-        "https://3o.hk/images/2024/01/20/IMG_0849.png",
-        "https://3o.hk/images/2024/01/20/IMG_0848.png",
-        "https://3o.hk/images/2024/01/20/IMG_0847.png",
-        "https://3o.hk/images/2024/01/20/IMG_0846.png",
-        "https://3o.hk/images/2024/01/20/IMG_0845.png",
-        "https://3o.hk/images/2024/01/20/IMG_0844.png",
-        "https://3o.hk/images/2024/01/20/IMG_0843.png",
-        "https://3o.hk/images/2024/01/20/IMG_0842.png",
-        "https://3o.hk/images/2024/01/20/IMG_0841.png",
-        "https://3o.hk/images/2024/01/20/IMG_0840.png",
-        "https://3o.hk/images/2024/01/20/IMG_0839.png",
-        "https://3o.hk/images/2024/01/20/IMG_0837.png",
-        "https://3o.hk/images/2024/01/20/IMG_0838.png",
-        "https://3o.hk/images/2024/01/20/IMG_0836.png",
-        "https://3o.hk/images/2024/01/20/IMG_0835.png",
-        "https://3o.hk/images/2024/01/20/IMG_0834.png",
-        "https://3o.hk/images/2024/01/20/IMG_0833.png",
-        "https://3o.hk/images/2024/01/20/IMG_0832.png",
-        "https://3o.hk/images/2024/01/20/IMG_0831.png",
-        "https://3o.hk/images/2024/01/20/IMG_0830.png",
-        "https://3o.hk/images/2024/01/20/IMG_0829.png",
-        "https://3o.hk/images/2024/01/20/IMG_0828.png",
-        "https://3o.hk/images/2024/01/20/IMG_0827.png",
-        "https://3o.hk/images/2024/01/20/IMG_0826.png",
-        "https://3o.hk/images/2024/01/20/IMG_0825.png",
-        "https://3o.hk/images/2024/01/20/IMG_0824.png",
-        "https://3o.hk/images/2024/01/20/IMG_0823.png",
-        "https://3o.hk/images/2024/01/20/IMG_0822.png",
-        "https://3o.hk/images/2024/01/20/IMG_0821.png",
-        "https://3o.hk/images/2024/01/20/IMG_0820.png",
-        "https://3o.hk/images/2024/01/20/IMG_0819.png",
-        "https://3o.hk/images/2024/01/20/IMG_0818.png",
-        "https://3o.hk/images/2024/01/20/IMG_0817.png",
-        "https://3o.hk/images/2024/01/20/IMG_0816.png",
-        "https://3o.hk/images/2024/01/20/IMG_0815.png",
-        "https://3o.hk/images/2024/01/20/IMG_0814.png",
-        "https://3o.hk/images/2024/01/20/IMG_0813.png",
-        "https://3o.hk/images/2024/01/20/IMG_0812.png",
-        "https://3o.hk/images/2024/01/20/IMG_0811.png",
-        "https://3o.hk/images/2024/01/20/IMG_0810.png",
-        "https://3o.hk/images/2024/01/20/IMG_0809.png",
-        "https://3o.hk/images/2024/01/20/IMG_0808.png",
-        "https://3o.hk/images/2024/01/20/IMG_0807.png",
-        "https://3o.hk/images/2024/01/20/IMG_0806.png",
-        "https://3o.hk/images/2024/01/20/IMG_0805.png",
-        "https://3o.hk/images/2024/01/20/IMG_0804.png",
-        "https://3o.hk/images/2024/01/20/IMG_0803.png",
-        "https://3o.hk/images/2024/01/20/IMG_0802.png",
-        "https://3o.hk/images/2024/01/20/IMG_0801.png",
-        "https://3o.hk/images/2024/01/20/IMG_0800.png",
-        "https://3o.hk/images/2024/01/20/IMG_0799.png",
-        "https://3o.hk/images/2024/01/20/IMG_0798.png",
-        "https://3o.hk/images/2024/01/20/IMG_0797.png",
-        "https://3o.hk/images/2024/01/20/IMG_0796.png",
-        "https://3o.hk/images/2024/01/20/IMG_0795.png",
-        "https://3o.hk/images/2024/01/20/IMG_0794.png",
-        "https://3o.hk/images/2024/01/20/IMG_0793.png",
-        "https://3o.hk/images/2024/01/20/IMG_0792.png",
-        "https://3o.hk/images/2024/01/20/IMG_0791.png",
-        "https://3o.hk/images/2024/01/20/IMG_0790.png",
-        "https://3o.hk/images/2024/01/20/IMG_0789.png",
-        "https://3o.hk/images/2024/01/20/IMG_0788.png",
-        "https://3o.hk/images/2024/01/20/IMG_0786.png",
-        "https://3o.hk/images/2024/01/20/IMG_0785.png",
-        "https://3o.hk/images/2024/01/20/IMG_0784.png",
-        "https://3o.hk/images/2024/01/20/IMG_0783.png",
-        "https://3o.hk/images/2024/01/20/IMG_0782.png",
-        "https://3o.hk/images/2024/01/20/IMG_0781.png",
-        "https://3o.hk/images/2024/01/20/IMG_0780.png",
-        "https://3o.hk/images/2024/01/20/IMG_0779.png",
-        "https://3o.hk/images/2024/01/20/IMG_0778.png",
-        "https://3o.hk/images/2024/01/20/IMG_0777.png",
-        "https://3o.hk/images/2024/01/20/IMG_0776.png",
-        "https://3o.hk/images/2024/01/20/IMG_0775.png",
-        "https://3o.hk/images/2024/01/20/IMG_0774.png",
-        "https://3o.hk/images/2024/01/20/IMG_0772.png",
-        "https://3o.hk/images/2024/01/20/IMG_0773.png",
-        "https://3o.hk/images/2024/01/20/IMG_0771.png",
-        "https://3o.hk/images/2024/01/20/IMG_0770.png",
-        "https://3o.hk/images/2024/01/20/IMG_0768.png",
-        "https://3o.hk/images/2024/01/20/IMG_0769.png",
-        "https://3o.hk/images/2024/01/20/IMG_0767.png",
-        "https://3o.hk/images/2024/01/20/IMG_0766.png",
-        "https://3o.hk/images/2024/01/20/IMG_0765.png",
-        "https://3o.hk/images/2024/01/20/IMG_0764.png",
-        "https://3o.hk/images/2024/01/20/IMG_0763.png",
-        "https://3o.hk/images/2024/01/20/IMG_0762.png",
-        "https://3o.hk/images/2024/01/20/IMG_0761.png",
-        "https://3o.hk/images/2024/01/20/IMG_0760.png",
-        "https://3o.hk/images/2024/01/20/IMG_0759.png",
-        "https://3o.hk/images/2024/01/20/IMG_0758.png",
-        "https://3o.hk/images/2024/01/20/IMG_0756.png",
-        "https://3o.hk/images/2024/01/20/IMG_0757.png",
-        "https://3o.hk/images/2024/01/20/IMG_0755.png",
-        "https://3o.hk/images/2024/01/20/IMG_0754.png",
-        "https://3o.hk/images/2024/01/20/IMG_0753.png",
-        "https://3o.hk/images/2024/01/20/IMG_0752.png",
-        "https://3o.hk/images/2024/01/20/IMG_0751.png",
-        "https://3o.hk/images/2024/01/20/IMG_0750.png",
-        "https://3o.hk/images/2024/01/20/IMG_0749.png",
-        "https://3o.hk/images/2024/01/20/IMG_0748.png",
-        "https://3o.hk/images/2024/01/20/IMG_0747.png",
-        "https://3o.hk/images/2024/01/20/IMG_0746.png",
-        "https://3o.hk/images/2024/01/20/IMG_0744.png",
-        "https://3o.hk/images/2024/01/20/IMG_0745.png",
-        "https://3o.hk/images/2024/01/20/IMG_0743.png",
-        "https://3o.hk/images/2024/01/20/IMG_0742.png",
-        "https://3o.hk/images/2024/01/20/IMG_0741.png",
-        "https://3o.hk/images/2024/01/20/IMG_0740.png",
-        "https://3o.hk/images/2024/01/20/IMG_0739.png",
-        "https://3o.hk/images/2024/01/20/IMG_0738.png",
-        "https://3o.hk/images/2024/01/20/IMG_0737.png",
-        "https://3o.hk/images/2024/01/20/IMG_0736.png",
-        "https://3o.hk/images/2024/01/20/IMG_0735.png",
-        "https://3o.hk/images/2024/01/20/IMG_0734.png",
-        "https://3o.hk/images/2024/01/20/IMG_0733.png",
-        "https://3o.hk/images/2024/01/20/IMG_0732.png",
-        "https://3o.hk/images/2024/01/20/IMG_0731.png",
-        "https://3o.hk/images/2024/01/20/IMG_0730.png",
-        "https://3o.hk/images/2024/01/20/IMG_0729.png",
-        "https://3o.hk/images/2024/01/20/IMG_0727.png",
-        "https://3o.hk/images/2024/01/20/IMG_0726.png",
-        "https://3o.hk/images/2024/01/20/IMG_0725.png",
-        "https://3o.hk/images/2024/01/20/IMG_0724.png",
-        "https://3o.hk/images/2024/01/20/IMG_0723.png",
-        "https://3o.hk/images/2024/01/20/IMG_0719.png",
-        "https://3o.hk/images/2024/02/03/IMG_1183.jpg",
-        "https://3o.hk/images/2024/02/03/IMG_1185.jpg",
-        "https://3o.hk/images/2024/02/03/IMG_1189.jpg",
-        "https://3o.hk/images/2024/02/03/IMG_1191.jpg",
-        "https://3o.hk/images/2024/02/03/IMG_1192.jpg",
-        "https://3o.hk/images/2024/02/03/IMG_1193.jpg",
-        "https://3o.hk/images/2024/02/03/IMG_1194.jpg",
-        "https://3o.hk/images/2024/02/03/IMG_1196.jpg"
-      ],
       "Favorite": [
         "https://3o.hk/images/2024/01/21/IMG_1040.png",
         "https://3o.hk/images/2024/01/21/IMG_1039.png",
@@ -3183,309 +3148,351 @@
       "Certificates": [
         {
           "src": "https://3o.hk/images/2024/04/29/0DDCECF1-5FFB-467E-BCDE-1DC7C7FA1242-45114-00001D06D7EA5874.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "创业",
+          "activity": "第五届“互联网＋”大学生创新创业大赛",
+          "award": "三等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/0E4B8618-A778-4A0B-BC21-6F6DDDFF58F7-45114-00001D072CEB0D9C.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "知识",
+          "activity": "第三届全国大学生环保知识竞赛",
+          "award": "优秀奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/2DECE824-29D0-43FD-A341-AF99D2C97CE0-45114-00001D06A33838C7.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "2018-2019年度“榜样力量”",
+          "award": "优秀班长"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/2E3F1DF6-ACE1-419A-B2DD-58FDC43D9191-45114-00001D05E493426E.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "奖学金",
+          "activity": "西南科技大学2019-2020奖学金",
+          "award": "艺术特长奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/2EAE6603-858F-44B5-B196-E866F74842E0-45114-00001D0663AA379F.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "科技",
+          "activity": "“金能杯”光伏产品设计大赛决赛",
+          "award": "二等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/03AAA681-6765-41AA-8020-A42DC71162A7-45114-00001D06E508A18F.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "科技",
+          "activity": "西南科技大学第四届大学生创业大赛",
+          "award": "铜奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/5BEF2DF4-09AD-4BEF-ABA8-357E4C3B252A-45114-00001D068BD72133.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "艺术",
+          "activity": "2019 年新生录取通知书设计大赛",
+          "award": "一等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/5FF0E884-7D14-4A5E-A579-826930F18C7C-45114-00001D071C6E8A0D.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "体育",
+          "activity": "2019学院运动会围棋项目",
+          "award": "第二名"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/51F92EA6-4FA9-4E3E-9EB4-38B15AE06F2D-45114-00001D05DCDFC7C5.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "奖学金",
+          "activity": "西南科技大学2018-2019奖学金",
+          "award": "创业实残奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/59C72B82-C522-4E6B-AEF3-7D549787675E-45114-00001D062A66B3B5.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "创业",
+          "activity": "第十四届iCAN国际创新创业大赛中国总决赛",
+          "award": "三等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/69DA8251-003D-4587-B73E-8CDA71972A6B-45114-00001D05D900AA8E.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "奖学金",
+          "activity": "西南科技大学2019-2020奖学金",
+          "award": "创业实残奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/86F95023-670D-4D49-A501-24ABC48F9D4C-45114-00001D0632E1AA4E.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "创业培训学员合格证书",
+          "award": "合格证书"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/95A0A467-F6A4-48A4-A0D3-A562CD1DCBB0-45114-00001D064AFEAA6E.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "学院2019-2020年度“五•四”评优",
+          "award": "优秀团员"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/587C6C4F-B46A-450D-A39D-5FAFF3F54991-45114-00001D06260FB642.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "2018-2019年度中，德行、智慧、体育五四评优",
+          "award": "优秀团员"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/880D0E87-D929-44AD-9336-FBCC492B4C8B-45114-00001D05E0F14BA0.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "奖学金",
+          "activity": "西南科技大学2018-2019奖学金",
+          "award": "艺术特长奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/977D096F-FBFB-4C25-A711-35E23E82D4BF-45114-00001D0722FCF496.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "知识",
+          "activity": "第二届全国大学生预防艾激病知识竞赛",
+          "award": "优秀奖"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/9642B465-4F83-4262-9BB5-688849F3B22C-45114-00001D067473899F.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "科技",
+          "activity": "第十一届化学综合涉及大赛",
+          "award": "一等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/35768A3B-D574-481B-889E-C206E50EF4B5-45114-00001D06847F4823.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "知识",
+          "activity": "第六届家教授课大赛",
+          "award": "一等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/63153EB6-F91B-4E8A-9A12-8CA143C04B66-45114-00001D06F3FE4DAB.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "第17届干部培训",
+          "award": "结业证"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/581135B0-BD2E-4017-947D-61F8766711DA-45114-00001D067C795B4E.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "艺术",
+          "activity": "形象墙设计大赛",
+          "award": "二等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/4300261E-9EB4-4ED0-8528-909AED6A3069-45114-00001D069065EC56.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "奖学金",
+          "activity": "西南科技大学2020奖学金",
+          "award": "科技文体先进个人"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/4721622D-2855-42E4-95C0-720DEC9DDB19-45114-00001D06C5F62431.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "创业",
+          "activity": "巴黎欧莱雅2019头脑风暴商业赛",
+          "award": "结赛证"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/BF66EB74-B02D-420C-B25F-F09BAD48DF03-45114-00001D064F9C18F4.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "2019-2020年度“五•四”评优",
+          "award": "优秀学生干部"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/BF68AE98-2B4F-4CAE-A624-FFEC07958E95-45114-00001D06D3590E22.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "艺术",
+          "activity": "第九届全国大学生电子商务“创新、创意及创业“赛",
+          "award": "一等奖"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/CF6CDC2D-8151-4A4D-841A-8DA12621D949-45114-00001D06E916B7EC.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "科技",
+          "activity": "第四届安全科学与工程类专业实践与创新作品大赛",
+          "award": "第二名"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/E1B6297D-A9D5-4DF1-8C09-B8B4E694FBFF-45114-00001D05CCA417D1.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "公益",
+          "activity": "LGBT关爱志愿活动",
+          "award": "优秀志愿者"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/E32396B4-89BC-4744-A9D2-1CFF07E2A359-45114-00001D070EB105E5.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "科技",
+          "activity": "第九届混凝土设计大赛",
+          "award": "三等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/EAFE88F5-E5DD-4FC6-BD8C-98AA6D9F80C4-45114-00001D069D3ABD72.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "2018-2019年度班级建设管理",
+          "award": "优秀班长"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/EE7B77BA-9FA2-4BFD-AC73-EBF1CED192CF-45114-00001D07048DBDB3.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "科技",
+          "activity": "2018年首届“金能杯”光伏产品设计大赛",
+          "award": "二等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/EF1B4F2F-45BC-4722-B2F3-B9381001BF05-45114-00001D06E0A46BBE.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "创业",
+          "activity": "第四届“中国创翼” 创业创新大寨",
+          "award": "优秀奖"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/2DB618D3-DE8D-4CB7-8010-6DC84C38F44D-45114-00001D05D53BA170.png",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "校学生会学习部成员",
+          "award": "任职证明"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/7B41B493-2C7F-4A91-91DD-2E41CB01144E-45114-00001D0694AB4A53.png",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "2017级新老生交流会",
+          "award": "优秀个人称号"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/7B93C3D8-4194-4D3E-BAF6-F643B53B5C93-45114-00001D0688447623.png",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "第十六届学生干部培训",
+          "award": "结业证"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/9A7C5A7C-7AAC-4E50-A3CB-1D23EC264182-45114-00001D06542385A0.png",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "2018-2019年度“榜样力量” 评选",
+          "award": "优秀班长"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/11A64271-B780-4679-849E-5E552DB05F6D-45114-00001D0698D217E8.png",
-          "name": "1",
-          "type": "1"
+          "type": "创业",
+          "activity": "大学生创新创业俱乐部",
+          "award": "最佳组织奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/31BFA708-E0D2-4A45-B576-DBA6DB0C5CA3-45114-00001D072733BE02.png",
-          "name": "1",
-          "type": "1"
+          "type": "知识",
+          "activity": "第三届全国大学生预防艾滋病知识竞赛",
+          "award": "优秀奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/47D78420-6151-4730-98BB-11AB1D8DCE43-45114-00001D066C580F56.png",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "2017至2018年科技创业指导站",
+          "award": "明星干事奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/99B7D052-D658-4B68-95A7-71BC3EFC7344-45114-00001D062052A691.png",
-          "name": "1",
-          "type": "1"
+          "type": "荣誉",
+          "activity": "2017-2018年度五四评优",
+          "award": "优秀团员"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/5867CC60-9359-4FD9-AA66-A43FB4DB45CE-45114-00001D063B8DE659.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "“材子杯”新生辩论赛",
+          "award": "最佳辩手"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/7245C317-B439-40F4-B630-D9A971B9245F-45114-00001D0670712E97.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "2017-2018年大学生创新创业实践训练班",
+          "award": "优秀会员奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/8158C929-45E2-41FC-B1DA-2E999384CD12-45114-00001D06CF024FB5.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "第二届全国大学生环保知识竞赛",
+          "award": "优秀奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/93977CA8-0E2A-43E4-89D7-78D125DBF2EA-45114-00001D06DC75F4DB.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "第十五届结构设计竞赛",
+          "award": "三等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/4673492C-C8BE-48EA-B655-78E01C6A7251-45114-00001D062EA478A2.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "第十四届iCAN国际创新创业大赛",
+          "award": "二等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/17219480-B6C1-4313-8956-E38FA755708A-45114-00001D05D11ACF60.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "大学生科技创业指导站成员",
+          "award": "任职证明"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/D8CC147E-2022-4DB0-A755-542F058BF9B3-45114-00001D0658BC820F.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "2018年度“优秀课堂笔记评选活动”",
+          "award": "优秀个人称号"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/D29DF7E7-9314-4E87-B128-274770D7CBF5-45114-00001D06807F831E.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "西南科技大学实验室安全知识考核",
+          "award": "合格证书"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/D38B3678-9676-4C6D-9673-CDD0A0D0DC37-45114-00001D0640A4D08C.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "第 9 届第三只眼摄影大赛相机组",
+          "award": "优秀奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/DA813F49-B59A-4EC6-97D4-73169EDBB2AA-45114-00001D063729EFB9.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "“材子杯”新生辩论赛活动",
+          "award": "冠军"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/317FCB5E-8252-4628-A671-89DEE0611691-45114-00001D067878950F.jpg",
-          "name": "1",
-          "type": "1"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/4127BCFD-8313-4D61-83AD-6297CBCE8156-45114-00001D05F4332D8A.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "2019年四川省大学生环保科普创意大赛",
+          "award": "一等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/1C6B1B18-A81F-4E54-9A0F-7EF8BB574659-45114-00001D065CF5ED3D.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "兆式教育企业评优",
+          "award": "优秀员工"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/93031B6B-CC7A-4D9B-AA09-4C8973B5AABF-45114-00001D0714D32558.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "中国跆拳道协会级位证书",
+          "award": "八级"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/274DA9EE-0C5F-496A-AF90-737CE53FBA85-45114-00001D06F83794C2.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "育才杯”教师授课比赛",
+          "award": "一等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/AAF71A73-4186-476B-968C-A2754CED26B4-45114-00001D06036AD13F.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "2018-2019 年度五 四评优提名",
+          "award": "十佳班长"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/C1D3054A-0AE2-48F8-8C20-67316F3B28D3-45114-00001D05F07E5120.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "第四届大学生创业大赛",
+          "award": "一等奖"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/E60BE89D-B482-482F-8E52-24296D35E58D-45114-00001D05ECA25FEE.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "壹基金温暖包项目",
+          "award": "志愿者证明"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/EB3D48DA-847E-442B-B63F-7ADEEB3C5842-45114-00001D061BCECD33.jpg",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "项目认证",
+          "award": "项目认证"
         },
-
         {
           "src": "https://3o.hk/images/2024/04/29/53241757-26D6-42AB-8CDF-ED5F1F85291A-45114-00001D06CA52034C.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "汶川抗震救灾十周年纪念活动",
+          "award": "志愿者证明"
         },
         {
           "src": "https://3o.hk/images/2024/04/29/A7FBAD97-1B4F-4D91-A93D-64BB7C8A49B5-45114-00001D05E842F244.png",
-          "name": "1",
-          "type": "1"
+          "type": "Compulsory",
+          "activity": "形象墻墻绘设计表彰（荣获2个二等奖，2个三等奖）",
+          "award": "表彰文件"
         }
       ],
 
@@ -3614,11 +3621,6 @@
     }
   },
   "preloadImages": [
-    "public/Graphs/home/welcomebg.JPG",
-    "public/Graphs/home/avatar.jpg",
-    "public/Graphs/home/keyfeaturebg.JPG",
-    "public/Graphs/home/selfdesbg.JPG",
-    "public/Graphs/home/contactbg.jpeg",
     "https://3o.hk/images/2024/01/14/welcomebg.jpg",
     "https://3o.hk/images/2024/01/14/keyfeaturebg.jpg",
     "https://3o.hk/images/2024/01/14/selfdesbg.jpg",

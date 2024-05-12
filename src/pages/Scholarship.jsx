@@ -8,7 +8,7 @@ import { hideRow, useLanguage } from "../help/helpFunction";
 export default function Scholarship() {
   const lang = useLanguage();
   return (
-    <div className="bg-white overflow-hidden">
+    <div className="overflow-hidden bg-white">
       <div
         className="page-overview "
         data-component-list="PageXpController"
@@ -18,7 +18,7 @@ export default function Scholarship() {
 
         <main id="main" className="main" role="main">
           <section className="section section-welcome no-pad-bottom">
-            <div className="section-content-responsive mt-24">
+            <div className="mt-24 section-content-responsive">
               <header className="section-header">
                 <h1 className=" welcomeanimation section-header-headline">
                   {lang == 1 && "奖学金"}
@@ -34,23 +34,25 @@ export default function Scholarship() {
             </div>
           </section>
           <section className="section section-welcome no-pad-bottom">
-            <div className="h-auto welcome-video-wall-visblecontainer visblecontainer space-y-6 ">
+            <div className="h-auto space-y-6 welcome-video-wall-visblecontainer visblecontainer ">
               <div className=" text-gray-500  pb-4 sticky top-0 z-50 bg-gradient-to-br from-white from-10% via-white via-90% to-white/0 ">
                 <h2 className="typography-section-intro-headline section-intro-headline pt-[100px]">
                   {lang == 1 && "奖学金"}
                   {lang == 0 && "Scholorship"}
                 </h2>
-                <p className=" text-justify pb-[30px]">
-                  {lang == 1 && "所有的奖学金都真实。"}
-                  {lang == 0 && "All scholorships are real."}
+                <p className=" text-justify py-[30px]">
+                  {lang == 1 &&
+                    "所有奖学金真实有效。请注意，所有证书均为真实有效，并已在 2024 年 5 月 13 日进行更新。未经授权，请不要复制或保存。"}
+                  {lang == 0 &&
+                    "All scholorships are authentic. Please note that all scholorships are authentic and valid and have been renewed as of 5/13/2024.Do not copy or save without authorization."}
                 </p>
               </div>
               <div className="relative pb-48 overflow-x-auto">
-                <table className="w-full text-left text-gray-500 rtl:text-right dark:text-gray-40 ">
+                <table className="w-full text-left text-gray-500 rtl:text-right dark:text-gray-40">
                   {lang == 1 && (
-                    <thead className="text-xs text-gray-700 bg-gray-50 uppercase dark:bg-gray-700 dark:text-gray-400">
+                    <thead className=" text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400  text-[20px]">
                       <tr>
-                        <th scope="col" className="px-6 py-3">
+                        <th scope="col" className="px-6 py-3 w-[5%]">
                           序列
                         </th>
                         <th scope="col" className="px-6 py-3">
@@ -59,16 +61,16 @@ export default function Scholarship() {
                         <th scope="col" className="px-6 py-3">
                           类型
                         </th>
-                        <th scope="col" className="px-6 py-3">
+                        <th scope="col" className="px-6 py-3 w-[40%]">
                           补充描述
                         </th>
                       </tr>
                     </thead>
                   )}
                   {lang == 0 && (
-                    <thead className="text-xs text-gray-700 bg-gray-50 uppercase dark:bg-gray-700 dark:text-gray-400">
+                    <thead className=" text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400  text-[20px]">
                       <tr>
-                        <th scope="col" className="px-6 py-3">
+                        <th scope="col" className="px-6 py-3 w-[5%]">
                           Serial
                         </th>
                         <th scope="col" className="px-6 py-3">
@@ -77,7 +79,7 @@ export default function Scholarship() {
                         <th scope="col" className="px-6 py-3">
                           Type
                         </th>
-                        <th scope="col" className="px-6 py-3">
+                        <th scope="col" className="px-6 py-3 w-[40%]">
                           descrition
                         </th>
                       </tr>
@@ -85,16 +87,16 @@ export default function Scholarship() {
                   )}
                   {Scholarships[lang].map((Scholarship, index) => (
                     <tbody>
-                      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 ">
                         <th
                           scope="row"
-                          className="text-gray-900 px-6 py-4 font-medium whitespace-nowrap dark:text-white"
+                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white w-[5%]"
                         >
                           {index + 1}
                         </th>
                         <td
                           scope="row"
-                          className="text-gray-900 px-6 py-4 font-medium whitespace-nowrap dark:text-white"
+                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                         >
                           {Scholarship.CourseName}
                         </td>
@@ -107,7 +109,7 @@ export default function Scholarship() {
                     <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                       <th
                         scope="row"
-                        className="text-gray-900 px-6 py-4 font-medium whitespace-nowrap dark:text-white"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                       >
                         {lang == 1 && "总计 17项奖学金"}
                         {lang == 0 && "Totally 17 scholarships"}
@@ -119,8 +121,8 @@ export default function Scholarship() {
               </div>
             </div>
           </section>
-          {/* <div className='h-auto welcome-video-wall-visblecontainer visblecontainer space-y-6 '>
-                <div className="sticky text-gray-500 bg-white  pb-4 top-0 z-50" >
+          {/* <div className='h-auto space-y-6 welcome-video-wall-visblecontainer visblecontainer '>
+                <div className="sticky top-0 z-50 pb-4 text-gray-500 bg-white" >
                   <h2 className="typography-section-intro-headline section-intro-headline">
                   proof material
                   </h2>

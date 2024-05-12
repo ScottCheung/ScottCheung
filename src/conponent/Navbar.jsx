@@ -15,7 +15,12 @@ import ContactCate from "./contactCategory";
 
 import Toast from "./toast";
 
-// import { Trans } from "@lingui/macro";
+const updateMonth = 5;
+const updateDay = 13;
+const updateTime = [
+  `${updateDay} ${new Date(2000, updateMonth - 1, 1).toLocaleString("en-US", { month: "long" })}`,
+  `${updateMonth} 月 ${updateDay} 日`,
+];
 
 const navbarItem = data.Navbar.navbarItem;
 const navLocation = data.Navbar.Location;
@@ -252,6 +257,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           >
                             {" "}
                             {data.Navbar.Avatar.helloword[lang]}
+                            {` | ${updateTime[lang]} ${[lang] == 0 ? "Updates" : "更新"}`}
                           </motion.div>
                         </div>
                       </div>

@@ -90,7 +90,7 @@ function WhyMe({ hideTittle }) {
         {/* 一级标题 */}
         <div
           id="WhyMe"
-          className={`${hideTittle ? "hidden" : ""} flex justify-center pt-36`}
+          className={`${hideTittle ? "hidden" : "mt-[20vh]"} flex justify-center `}
         >
           <motion.div
             initial={{ opacity: 0 }}
@@ -99,12 +99,12 @@ function WhyMe({ hideTittle }) {
               ease: [0.455, 0.03, 0.515, 0.955],
               duration: 1,
             }}
-            className="flex items-center justify-center animate__animated animate__fadeInUp"
+            className="flex items-center justify-center "
           >
-            <div className="animate__animated animate__zoomIn">
+            <div className="">
               <i className="pt-3 mr-3 text-5xl fi lg:text-8xl fi-rr-lightbulb-on"></i>
             </div>
-            <h2 className="font-mono text-5xl font-bold animate__animated animate__zoomIn lg:text-8xl">
+            <h2 className="font-mono text-5xl font-bold lg:text-8xl">
               {lang == 0 && "Why me?"}
               {lang == 1 && "优势"}
             </h2>
