@@ -589,6 +589,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     <div
                       data-popover
                       role="tooltip"
+                      id="lang"
                       className="absolute z-10 invisible justify-center flex w-auto text-gray-500 text-center transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
                     >
                       <div className="flex flex-col items-center px-6 py-4">
