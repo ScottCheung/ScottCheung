@@ -1,4 +1,4 @@
-import { useLayoutEffect, useState } from "react";
+import { useLayoutEffect, useEffect, useState } from "react";
 import database from "../Database.json";
 import { motion } from "framer-motion";
 import { useLanguage } from "../help/helpFunction";
@@ -9,32 +9,11 @@ export default function Life() {
   const lang = useLanguage();
   const [HoverColor, setHoverColor] = useState(false);
   const [Index, setIndex] = useState(null);
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-  useLayoutEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
 
   return (
     <section className="p-[20px] my-[20px]">
       <div className="">
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: `repeat(auto-fit, minmax(${
-              windowWidth < 786 ? "50%" : windowWidth < 1024 ? "30%" : "23%"
-            }, 1fr))`,
-            justifyContent: "center",
-            gap: "20px",
-          }}
-          className={`animate__animated animate__fadeIn`}
-        >
+        <div className={`animate__animated animate__fadeIn grid w-full`}>
           {Lifes.map((life, index) => (
             <motion.a
               whileHover={{ scale: 1.02 }}
@@ -45,7 +24,7 @@ export default function Life() {
                 setIndex(index);
               }}
               onMouseLeave={() => setHoverColor(false)}
-              className="welcomeanimation w-full duration-500 smoothchange pt-[120px] text-center rounded-[12px] overflow-visible"
+              className="welcomeanimation grid-item large-span-3 medium-span-6 small-span-12 w-full duration-500 smoothchange pt-[200px] text-center rounded-[12px] overflow-visible"
               style={{
                 backgroundImage: `url(${life.pic})`,
                 backgroundSize: "70% auto",
@@ -67,7 +46,7 @@ export default function Life() {
                   backgroundPosition: "left bottom",
                 }}
               >
-                <div className="px-6 py-6 flex-auto text-gray-750 hover:text-white/50">
+                <div className="flex-auto px-6 py-6 text-gray-750 hover:text-white/50">
                   <div className="flex justify-end">
                     <div className="flex flex-col">
                       <div className="flex-shrink-0 ">

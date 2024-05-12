@@ -40,7 +40,7 @@ export default function Life() {
       <Navbar topTextColor={true} />
       <main>
         <div
-          className="relative pt-16 pb-32 flex content-center items-center justify-center"
+          className="relative flex items-center content-center justify-center pt-16 pb-32"
           style={{
             minHeight: "100vh",
           }}
@@ -59,11 +59,11 @@ export default function Life() {
           >
             <span
               id="blackOverlay"
-              className="w-full h-full absolute opacity-60 bg-black"
+              className="absolute w-full h-full bg-black opacity-60"
             ></span>
           </motion.div>
-          <div className=" relative mx-auto">
-            <div className="items-center flex justify-between">
+          <div className="relative mx-auto ">
+            <div className="flex items-center justify-between">
               <div className="w-full px-4 ml-auto mr-auto text-right">
                 <div className="container">
                   <div className="lg:w-12/4 md:w-12/6 flex justify-end lg:mt-[500px] mt-[-40px]">
@@ -81,8 +81,8 @@ export default function Life() {
         </div>
 
         <section className="pt-20 bg-gray-300 ">
+          <LifeCategory />
           <div className="visblecontainer">
-            <LifeCategory />
             <div className="text-center text-[30px]">
               {" "}
               PAGE is developing...Looking forward to seeing you with more
@@ -92,20 +92,20 @@ export default function Life() {
               {" "}
               网页正在开发中...期待更多内容与您见面!{" "}
             </div>
-            <div className="flex hidden justify-between items-center mt-32">
-              <div className="w-full md:w-5/12 px-4 mr-auto ml-auto">
-                <div className="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
-                  <i className="fas fa-user-friends text-xl"></i>
+            <div className="flex items-center justify-between hidden mt-32">
+              <div className="w-full px-4 ml-auto mr-auto md:w-5/12">
+                <div className="inline-flex items-center justify-center w-16 h-16 p-3 mb-6 text-center text-gray-600 bg-gray-100 rounded-full shadow-lg">
+                  <i className="text-xl fas fa-user-friends"></i>
                 </div>
-                <h3 className="text-3xl mb-2 font-semibold leading-normal">
+                <h3 className="mb-2 text-3xl font-semibold leading-normal">
                   Working with us is a pleasure
                 </h3>
-                <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
+                <p className="mt-4 mb-4 text-lg font-light leading-relaxed text-gray-700">
                   Don't let your uses guess by attaching tooltips and popoves to
                   any element. Just make sure you enable them first via
                   JavaScript.
                 </p>
-                <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-700">
+                <p className="mt-0 mb-4 text-lg font-light leading-relaxed text-gray-700">
                   The kit comes with three pre-built pages to help you get
                   started faster. You can change the text and images and you're
                   good to go. Just make sure you enable them first via
@@ -113,14 +113,14 @@ export default function Life() {
                 </p>
                 <a
                   href="https://www.creative-tim.com/learning-lab/tailwind-starter-kit#/presentation"
-                  className="font-bold text-gray-800 mt-8"
+                  className="mt-8 font-bold text-gray-800"
                 >
                   Check Tailwind Starter Kit!
                 </a>
               </div>
 
-              <div className="w-full md:w-4/12 px-4 mr-auto ml-auto">
-                <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600">
+              <div className="w-full px-4 ml-auto mr-auto md:w-4/12">
+                <div className="relative flex flex-col w-full min-w-0 mb-6 break-words bg-white bg-pink-600 rounded-lg shadow-lg">
                   <img
                     alt="..."
                     src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auhref=format&fit=crop&w=1051&q=80"
@@ -131,7 +131,7 @@ export default function Life() {
                       preserveAspectRatio="none"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 583 95"
-                      className="absolute left-0 w-full block"
+                      className="absolute left-0 block w-full"
                       style={{
                         height: "95px",
                         top: "-94px",
@@ -145,7 +145,7 @@ export default function Life() {
                     <h4 className="text-xl font-bold text-white">
                       Top Notch Services
                     </h4>
-                    <p className="text-md font-light mt-2 text-white">
+                    <p className="mt-2 font-light text-white text-md">
                       The Arctic Ocean freezes every winter and much of the
                       sea-ice then thaws every summer, and that process will
                       continue whatever happens.
@@ -158,14 +158,14 @@ export default function Life() {
         </section>
 
         {/* 
-        <section className=" pt-20 pb-48">
-          <div className="visblecontainer mx-auto px-4">
-            <div className="flex justify-between justify-center text-center mb-24">
-              <div className="w-full lg:w-6/12 px-4">
+        <section className="pt-20 pb-48 ">
+          <div className="px-4 mx-auto visblecontainer">
+            <div className="flex justify-center justify-between mb-24 text-center">
+              <div className="w-full px-4 lg:w-6/12">
                 <h2 className="text-4xl font-semibold">
                   Here are our heroes
                 </h2>
-                <p className="text-lg leading-relaxed m-4 text-gray-600">
+                <p className="m-4 text-lg leading-relaxed text-gray-600">
                   According to the National Oceanic and Atmospheric
                   Administration, Ted, Scambos, NSIDClead scentist, puts the
                   potentially record maximum.
@@ -173,36 +173,36 @@ export default function Life() {
               </div>
             </div>
             <div className="flex justify-between">
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div className="w-full px-4 mb-12 md:w-6/12 lg:w-3/12 lg:mb-0">
                 <div className="px-6">
                   <img
                     alt="..."
                     src={"/Graphs/home/bg.jpg"}
-                    className="shadow-lg rounded-full max-w-full mx-auto"
+                    className="max-w-full mx-auto rounded-full shadow-lg"
                     style={{ maxWidth: "120px" }}
                   />
                   <div className="pt-6 text-center">
                     <h5 className="text-xl font-bold">
                       Ryan Tompson
                     </h5>
-                    <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    <p className="mt-1 text-sm font-semibold text-gray-500 uppercase">
                       Web Developer
                     </p>
                     <div className="mt-6">
                       <button
-                        className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-blue-400 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
                       </button>
                       <button
-                        className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-blue-600 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-facebook-f"></i>
                       </button>
                       <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-pink-500 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-dribbble"></i>
@@ -211,30 +211,30 @@ export default function Life() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div className="w-full px-4 mb-12 md:w-6/12 lg:w-3/12 lg:mb-0">
                 <div className="px-6">
                   <img
                     alt="..."
                     src={"/Graphs/home/bg.jpg"}
-                    className="shadow-lg rounded-full max-w-full mx-auto"
+                    className="max-w-full mx-auto rounded-full shadow-lg"
                     style={{ maxWidth: "120px" }}
                   />
                   <div className="pt-6 text-center">
                     <h5 className="text-xl font-bold">
                       Romina Hadid
                     </h5>
-                    <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    <p className="mt-1 text-sm font-semibold text-gray-500 uppercase">
                       Marketing Specialist
                     </p>
                     <div className="mt-6">
                       <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-red-600 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-google"></i>
                       </button>
                       <button
-                        className="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-blue-600 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-facebook-f"></i>
@@ -243,36 +243,36 @@ export default function Life() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div className="w-full px-4 mb-12 md:w-6/12 lg:w-3/12 lg:mb-0">
                 <div className="px-6">
                   <img
                     alt="..."
                     src={"/Graphs/home/bg.jpg"}
-                    className="shadow-lg rounded-full max-w-full mx-auto"
+                    className="max-w-full mx-auto rounded-full shadow-lg"
                     style={{ maxWidth: "120px" }}
                   />
                   <div className="pt-6 text-center">
                     <h5 className="text-xl font-bold">
                       Alexa Smith
                     </h5>
-                    <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    <p className="mt-1 text-sm font-semibold text-gray-500 uppercase">
                       UI/UX Designer
                     </p>
                     <div className="mt-6">
                       <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-red-600 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-google"></i>
                       </button>
                       <button
-                        className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-blue-400 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
                       </button>
                       <button
-                        className="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-gray-800 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-instagram"></i>
@@ -281,42 +281,42 @@ export default function Life() {
                   </div>
                 </div>
               </div>
-              <div className="w-full md:w-6/12 lg:w-3/12 lg:mb-0 mb-12 px-4">
+              <div className="w-full px-4 mb-12 md:w-6/12 lg:w-3/12 lg:mb-0">
                 <div className="px-6">
                   <img
                     alt="..."
                     src={"/Graphs/home/bg.jpg"}
-                    className="shadow-lg rounded-full max-w-full mx-auto"
+                    className="max-w-full mx-auto rounded-full shadow-lg"
                     style={{ maxWidth: "120px" }}
                   />
                   <div className="pt-6 text-center">
                     <h5 className="text-xl font-bold">
                       Jenna Kardi
                     </h5>
-                    <p className="mt-1 text-sm text-gray-500 uppercase font-semibold">
+                    <p className="mt-1 text-sm font-semibold text-gray-500 uppercase">
                       Founder and CEO
                     </p>
                     <div className="mt-6">
                       <button
-                        className="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-pink-500 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-dribbble"></i>
                       </button>
                       <button
-                        className="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-red-600 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-google"></i>
                       </button>
                       <button
-                        className="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-blue-400 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-twitter"></i>
                       </button>
                       <button
-                        className="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
+                        className="w-8 h-8 mb-1 mr-1 text-white bg-gray-800 rounded-full outline-none focus:outline-none"
                         type="button"
                       >
                         <i className="fab fa-instagram"></i>
@@ -329,9 +329,9 @@ export default function Life() {
           </div>
         </section> */}
 
-        {/* <section className="pb-20 relative block bg-gray-900">
+        {/* <section className="relative block pb-20 bg-gray-900">
           <div
-            className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
+            className="absolute top-0 left-0 right-0 bottom-auto w-full -mt-20 overflow-hidden pointer-events-none"
             style={{ height: "80px" }}
           >
             <svg
@@ -350,24 +350,24 @@ export default function Life() {
             </svg>
           </div>
 
-          <div className="visblecontainer mx-auto px-4 lg:pt-24 lg:pb-64">
-            <div className="flex justify-between text-center justify-center">
-              <div className="w-full lg:w-6/12 px-4">
+          <div className="px-4 mx-auto visblecontainer lg:pt-24 lg:pb-64">
+            <div className="flex justify-center justify-between text-center">
+              <div className="w-full px-4 lg:w-6/12">
                 <h2 className="text-4xl font-semibold text-white">
                   Build something
                 </h2>
-                <p className="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
+                <p className="mt-4 mb-4 text-lg leading-relaxed text-gray-500">
                   Put the potentially record low maximum sea ice extent tihs year down to low ice.
                   According to the National Oceanic and Atmospheric Administration, Ted, Scambos.
                 </p>
               </div>
             </div>
-            <div className="flex justify-between mt-12 justify-center">
-              <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-medal text-xl"></i>
+            <div className="flex justify-center justify-between mt-12">
+              <div className="w-full px-4 text-center lg:w-3/12">
+                <div className="inline-flex items-center justify-center w-12 h-12 p-3 text-gray-900 bg-white rounded-full shadow-lg">
+                  <i className="text-xl fas fa-medal"></i>
                 </div>
-                <h6 className="text-xl mt-5 font-semibold text-white">
+                <h6 className="mt-5 text-xl font-semibold text-white">
                   Excelent Services
                 </h6>
                 <p className="mt-2 mb-4 text-gray-500">
@@ -375,11 +375,11 @@ export default function Life() {
                   the bulk of the card's content.
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-poll text-xl"></i>
+              <div className="w-full px-4 text-center lg:w-3/12">
+                <div className="inline-flex items-center justify-center w-12 h-12 p-3 text-gray-900 bg-white rounded-full shadow-lg">
+                  <i className="text-xl fas fa-poll"></i>
                 </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
+                <h5 className="mt-5 text-xl font-semibold text-white">
                   Grow your market
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">
@@ -387,11 +387,11 @@ export default function Life() {
                   the bulk of the card's content.
                 </p>
               </div>
-              <div className="w-full lg:w-3/12 px-4 text-center">
-                <div className="text-gray-900 p-3 w-12 h-12 shadow-lg rounded-full bg-white inline-flex items-center justify-center">
-                  <i className="fas fa-lightbulb text-xl"></i>
+              <div className="w-full px-4 text-center lg:w-3/12">
+                <div className="inline-flex items-center justify-center w-12 h-12 p-3 text-gray-900 bg-white rounded-full shadow-lg">
+                  <i className="text-xl fas fa-lightbulb"></i>
                 </div>
-                <h5 className="text-xl mt-5 font-semibold text-white">
+                <h5 className="mt-5 text-xl font-semibold text-white">
                   Launch time
                 </h5>
                 <p className="mt-2 mb-4 text-gray-500">

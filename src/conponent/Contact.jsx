@@ -47,7 +47,7 @@ function Contact({ isTopOut }) {
                 <div className="blackoverlay">
                   <div
                     className={`gallery gallery-align-start gallery-icon-cards ${
-                      isOut ? "-mt-[29vh]" : ""
+                      isOut ? "-mt-[40vh]" : ""
                     } `}
                   >
                     <div className="scroll-visblecontainer">

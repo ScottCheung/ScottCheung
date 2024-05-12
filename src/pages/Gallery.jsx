@@ -1,13 +1,13 @@
 import React, { useState, useRef, useEffect } from "react";
-import Navbar from "./Navbar";
+import Navbar from "../conponent/Navbar";
 import Database from "../Database.json";
 import { useLanguage } from "../help/helpFunction";
 import { useParams, useNavigate } from "react-router-dom";
 
 import { useInView } from "react-intersection-observer";
 import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
-import N from "./Num";
-import CtButton from "./ctButton";
+import N from "../conponent/Num";
+import CtButton from "../conponent/ctButton";
 import { useAppContext } from "../help/ContextManager";
 
 function GridHouseCard() {

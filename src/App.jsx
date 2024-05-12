@@ -11,7 +11,7 @@ import Scholarship from "./pages/Scholarship.jsx";
 import Life from "./pages/life.jsx";
 import SingleWhyme from "./pages/SingleWhyme.jsx";
 import SingleWork from "./pages/SingleWork.jsx";
-import Gallery from "./conponent/Gallery.jsx";
+import Gallery from "./pages/Gallery.jsx";
 import { AppContextProvider } from "./help/ContextManager";
 import Resume from "./pages/Resume.jsx";
 
