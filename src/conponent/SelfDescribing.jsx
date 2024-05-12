@@ -48,7 +48,7 @@ function SelfDescribing() {
   const SelfDescribing = (
     <section
       id="SelfDescribing"
-      className={`smoothchange items-center bg-fixed bg-center relative flex flex-col justify-center w-full h-[150vh] `}
+      className={`smoothchange items-center bg-fixed bg-center relative flex flex-col justify-center w-full  `}
       style={{
         backgroundImage: `url(${data.pic})`,
         backgroundSize: "cover",
@@ -57,7 +57,7 @@ function SelfDescribing() {
       }}
     >
       <span className="absolute w-full h-full bg-black opacity-70 "></span>
-      <div className="visblecontainer   h-[100vh] sticky top-0 pt-[20vh]">
+      <div className="visblecontainer    sticky top-0 pt-[20vh]">
         <motion.div
           style={{ opacity, scale, y: target }}
           transition={{
