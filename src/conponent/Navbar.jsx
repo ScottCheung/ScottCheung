@@ -666,14 +666,21 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           viewBox="0 0 18 18"
                           transition={{ duration: 0.5 }}
                           style={{
-                            color: isTop
-                              ? "fill-white text-bold"
-                              : "fill-gray-700 ",
+                            color:
+                              isTopTextColorWhite & isTop
+                                ? "fill-white text-bold"
+                                : "fill-gray-700 ",
                           }}
                         >
                           <motion.polyline
-                            fill={isTop ? "white" : "gray"}
-                            stroke={isTop ? "white" : "currentColor"}
+                            fill={
+                              isTopTextColorWhite & isTop ? "white" : "gray"
+                            }
+                            stroke={
+                              isTopTextColorWhite & isTop
+                                ? "white"
+                                : "currentColor"
+                            }
                             strokeWidth="3"
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -686,8 +693,14 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             transition={{ duration: 0.5 }}
                           />
                           <motion.polyline
-                            fill={isTop ? "white" : "gray"}
-                            stroke={isTop ? "white" : "currentColor"}
+                            fill={
+                              isTopTextColorWhite & isTop ? "white" : "gray"
+                            }
+                            stroke={
+                              isTopTextColorWhite & isTop
+                                ? "white"
+                                : "currentColor"
+                            }
                             strokeWidth="3"
                             strokeLinecap="round"
                             strokeLinejoin="round"

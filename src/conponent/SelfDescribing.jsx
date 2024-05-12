@@ -33,7 +33,7 @@ function SelfDescribing() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["-90vh ", "-40vh"],
+    offset: ["-100vh ", "-40vh"],
   });
 
   // 根据滚动进度计算位移
@@ -48,7 +48,7 @@ function SelfDescribing() {
   const SelfDescribing = (
     <section
       id="SelfDescribing"
-      className={`smoothchange items-center bg-fixed bg-center relative flex justify-center w-full`}
+      className={`smoothchange items-start bg-fixed bg-center relative flex flex-col justify-start w-full h-[100vh] `}
       style={{
         backgroundImage: `url(${data.pic})`,
         backgroundSize: "cover",
@@ -57,7 +57,7 @@ function SelfDescribing() {
       }}
     >
       <span className="absolute w-full h-full bg-black opacity-70 "></span>
-      <div className="visblecontainer py-[20vh]">
+      <div className="visblecontainer py-[20vh]  h-[100vh] sticky top-0">
         <motion.div
           style={{ opacity, scale, y: target }}
           transition={{

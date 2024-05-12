@@ -89,7 +89,7 @@ export default function Resume() {
             icon: "fi-rr-trophy-star",
           },
           {
-            no: 60,
+            no: 58,
             keyfeature: " Certificates",
             href: "https://xianzhe.site/Certificates",
             icon: "fi-rr-diploma",

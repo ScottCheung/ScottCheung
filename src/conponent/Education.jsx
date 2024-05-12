@@ -49,10 +49,10 @@ function Education({ hideTittle, simpleVer }) {
               duration: 0.7,
               ease: [0.455, 0.03, 0.515, 0.955],
             }}
-            className="z-50"
+            className="z-40 pt-[10vh]"
           >
             <div className="animate__animated animate__rotateIn ">
-              <div className="flex justify-center py-12">
+              <div className="flex justify-center py-12 ">
                 <a
                   href="#Education"
                   id="Education"

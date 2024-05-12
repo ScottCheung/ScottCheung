@@ -56,7 +56,12 @@ function DockerBar(props) {
       name: "Home",
       icon: "fi fi-sr-home pt-[5px] ",
       onClick: () => {
-        (document.documentElement.style.zoom = 1), navigate("/");
+        (document.documentElement.style.zoom = 1),
+          navigate("/"),
+          setComponents((prevComponents) => ({
+            ...prevComponents,
+            NavBar: "visible",
+          }));
       },
     },
 
@@ -475,6 +480,10 @@ function DockerBar(props) {
               setHidebutton(false);
               if (DockerBarPosition !== "center") {
                 setDockerBarPosition("center");
+                setComponents((prevComponents) => ({
+                  ...prevComponents,
+                  NavBar: "visible",
+                }));
               }
             }
           }}
