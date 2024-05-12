@@ -197,7 +197,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             className={`smoothchange animate__animated animate__zoomIn  ${
                               isTop ? "w-20" : "w-16"
                             }  rounded-md shadow-lg`}
-                            src={"https://3o.hk/images/2024/01/14/avatar.jpg"}
+                            src={
+                              "https://3o.hk/images/2024/01/14/avatar.th.jpg"
+                            }
                             alt="Xianzhe's Page"
                             width="100"
                             height="100"
