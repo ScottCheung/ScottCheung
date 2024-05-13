@@ -1,7 +1,7 @@
 {
   "Navbar": {
     "Avatar": {
-      "Webname": ["Xianzhe ( Scott )  Zhang", "张贤哲Scott"],
+      "Webname": ["Xianzhe Zhang", "张贤哲Scott"],
       "helloword": ["Keep Enthusiasm", "保持热爱"]
     },
     "Hero": {
@@ -1675,7 +1675,7 @@
         },
         {
           "alt": "AI",
-          "src": "https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc-icon.svg"
+          "src": "https://www.adobe.com/content/dam/cc/icons/illustrator.svg"
         },
         {
           "alt": "LR",
