@@ -48,7 +48,7 @@ function KeyFeature() {
         //   ? "linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)"
         //   : null,
       }}
-      className={`w-full flex h-[100vh]  md:h-[150vh]   overflow-hidden transform-gpu `}
+      className={`w-full flex h-[100vh]  md:h-[150vh]   overflow-hidden transform-gpu  mt-[50vh]`}
     >
       <motion.section className="w-full h-[150vh] relative overflow-hidden bg-gradient-to-r   from-lime-500/20  to-emerald-500/30 ">
         <img
