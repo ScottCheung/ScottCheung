@@ -144,21 +144,6 @@ function Education({ hideTittle, simpleVer }) {
                                       className={`rounded-xl animate__animated  animate__zoomIn animate__fast `}
                                     ></img>
                                   </div>
-                                  <div className="flex justify-start py-10 space-x-3">
-                                    <div
-                                      style={{
-                                        animationDelay: `${index * 0.2}s`,
-                                      }}
-                                      className="inline-flex px-5 py-1 font-medium text-white rounded-3xl animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category"
-                                    >
-                                      {Experience.tag[lang][0]}
-                                    </div>
-                                    {Experience.tag[lang][1] && (
-                                      <div className="inline-flex px-5 py-1 font-medium text-white rounded-3xl animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-emerald-500 to-sky-500 ">
-                                        {Experience.tag[lang][1]}
-                                      </div>
-                                    )}
-                                  </div>
                                 </div>
                               </div>
                               <div className="copy-visblecontainer">
@@ -166,7 +151,7 @@ function Education({ hideTittle, simpleVer }) {
                                   style={{
                                     animationDelay: `${index * 0.2}s`,
                                   }}
-                                  className="flex flex-col items-start justify-start mb-3 animate__animated animate__zoomIn"
+                                  className="flex flex-col items-start justify-start py-10 mb-3 animate__animated animate__zoomIn"
                                 >
                                   <div className="typography-card-headline">
                                     {`${Experience.major[lang][0]}`}
@@ -175,14 +160,32 @@ function Education({ hideTittle, simpleVer }) {
                                   </div>
                                   <div className="typography-card-headline">
                                     {lang == 0 && Experience.major[lang][1]}
+                                    {}
                                   </div>
                                 </div>
+                                {/* Tag */}
+                                <div className="flex justify-start py-5 space-x-3 text-[15px]">
+                                  <div
+                                    style={{
+                                      animationDelay: `${index * 0.2}s`,
+                                    }}
+                                    className="inline-flex justify-center items-center  py-1 font-medium text-white rounded-full px-[20px]  animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category"
+                                  >
+                                    {Experience.tag[lang][0]}
+                                  </div>
+                                  {Experience.tag[lang][1] && (
+                                    <div className="inline-flex justify-center items-center py-1 font-medium text-white rounded-full px-[20px]  animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-emerald-500 to-sky-500 ">
+                                      {Experience.tag[lang][1]}
+                                    </div>
+                                  )}
+                                </div>
                                 <div className={`${simpleVer ? "hidden" : ""}`}>
+                                  {/* Duration */}
                                   <span
                                     style={{
                                       animationDelay: `${index * 0.3}s`,
                                     }}
-                                    className="px-5 py-1 font-medium text-center text-white rounded-3xl text-justify-between animate__animated card-description animate__zoomIn category bg-sky-900 ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700"
+                                    className="flex justify-center items-center w-full py-1 font-medium text-center text-white rounded-full px-[20px] text-justify-between animate__animated card-description animate__zoomIn category bg-sky-900 ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700"
                                   >
                                     {Experience.time[lang]}
                                   </span>
@@ -191,7 +194,7 @@ function Education({ hideTittle, simpleVer }) {
                                       ...hideRow(3),
                                       animationDelay: `${index * 0.3}s`,
                                     }}
-                                    className="text-justify text-gray-600 mt-7 animate__animated animate__fadeInUp card-description dark:text-gray-50"
+                                    className="mt-10 text-justify text-gray-600 animate__animated animate__fadeInUp card-description dark:text-gray-50"
                                   >
                                     {Experience.description[lang]}
                                   </p>{" "}
