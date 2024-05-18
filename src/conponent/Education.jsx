@@ -153,12 +153,12 @@ function Education({ hideTittle, simpleVer }) {
                                   }}
                                   className="flex items-start justify-start py-10 mb-3 gap-x-4 md:flex-col animate__animated animate__zoomIn"
                                 >
-                                  <div className="typography-card-headline">
+                                  <div className="typography-card-headline ">
                                     {`${Experience.major[lang][0]}`}
                                     {lang == 1 &&
                                       Experience.major[lang][1]}{" "}
                                   </div>
-                                  <div className="typography-card-headline">
+                                  <div className="typography-card-headline ">
                                     {lang == 0 && Experience.major[lang][1]}
                                     {}
                                   </div>
@@ -181,9 +181,7 @@ function Education({ hideTittle, simpleVer }) {
                                     </div>
                                   )}
                                 </div>
-                                <div
-                                  className={`${simpleVer || windowWidth < 1024 ? "hidden" : ""}`}
-                                >
+                                <div>
                                   {/* Duration */}
                                   <span
                                     style={{
@@ -198,7 +196,7 @@ function Education({ hideTittle, simpleVer }) {
                                       ...hideRow(3),
                                       animationDelay: `${index * 0.3}s`,
                                     }}
-                                    className="mt-10 text-justify text-gray-600 animate__animated animate__fadeInUp card-description dark:text-gray-50"
+                                    className={`${simpleVer || windowWidth < 1024 ? "hidden" : ""} mt-10  text-gray-600 animate__animated animate__fadeInUp card-description dark:text-gray-50`}
                                   >
                                     {Experience.description[lang]}
                                   </p>{" "}

@@ -91,10 +91,7 @@ function Capability() {
   }, []);
 
   const Capability = (
-    <motion.div
-      id="Capability"
-      className="z-20 grid py-48 visblecontainer section-sapphire"
-    >
+    <motion.div id="Capability" className="z-20 grid py-48 section-sapphire ">
       {/* stack */}
       <Skill />
       {/* <Keyfeature2 />
@@ -102,11 +99,11 @@ function Capability() {
 
       {/* High Quality */}
       <Highquality />
-      {/* good user */}
-      <Gooduser />
 
       {/* row2-left */}
       <Otherability />
+      {/* good user */}
+      <Gooduser />
 
       <PersonalityandLanguage />
       {/* INFJ instruction hover */}
@@ -137,7 +134,9 @@ function Capability() {
     </motion.div>
   );
 
-  return <motion.div className="z-50 -mt-[250px]">{Capability}</motion.div>;
+  return (
+    <motion.div className="z-50 -mt-[250px] w-full ">{Capability}</motion.div>
+  );
 }
 
 export default Capability;

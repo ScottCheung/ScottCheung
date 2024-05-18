@@ -81,7 +81,7 @@ function Highquality() {
   const Highquality = (
     <motion.div className="grid-item large-span-4 medium-span-6 small-span-12 grid-item-check-in will-change carnival-item-in-view min-h-[650px]">
       {/* 半透明要改 */}
-      <motion.div className="tile tile-rounded tile-with-overlay bg-white/30">
+      <motion.div className="tile tile-rounded tile-with-overlay bg-gradient-to-br from-blue-500 to-green-500">
         <div
           className="tile-content"
           style={{
@@ -101,22 +101,22 @@ function Highquality() {
             }}
             className="tile-header"
           >
-            <h3 className="tile-headline typography-subsection-headline">
+            <h3 className="text-white tile-headline typography-subsection-headline text-[30px]">
               {lang == 0 && "High Quality for evertthing"}
               {lang == 1 && "完美方方面面"}
             </h3>
             {/* 完美主义 内容 */}
-            <p className="tile-copy typography-subsection-copy">
+            <p className="text-white/50 tile-copy typography-subsection-copy">
               {lang == 0 &&
                 SelectText(
                   "As a perfectionist, I approach every project I handle with a commitment to high quality, ensuring that every aspect is flawless. I meticulously consider details such as [code quality], [user usability], [aesthetics], and more. Perfection, for me, extends across all facets of the project and life.",
-                  "blue-700",
+                  "yellow-300",
                   "\t ",
                 )}
               {lang == 1 &&
                 SelectText(
                   "作为追求卓越之人，我在交付每个项目时都致力于确保各个方面都无可挑剔。这包括[代码质量]、[用户可用性]、[美感]等各个方面。对我而言，追求完美不仅体现在项目中，也延伸至生活的方方面面。这种执着于高质量的态度通常能够带来更好的结果和用户体验。在工作中，不断追求卓越有助于提高产品的竞争力，并确保用户对我的工作产生积极的体验和印象。",
-                  "blue-700",
+                  "yellow-300",
                 )}
             </p>
           </motion.div>
@@ -124,18 +124,7 @@ function Highquality() {
             <motion.div className="overview-messages-image-visblecontainer large-centered">
               <figure role="img" className="overview-messages-check-in" />
               <span aria-hidden="true">
-                <motion.div className="inline-video-visblecontainer inline-video-check-in inline-video-is-webm loaded ended">
-                  <figure
-                    className="start-frame"
-                    aria-hidden="true"
-                    data-anim-lazy-image-download-complete=""
-                  />
-                  <figure
-                    className="static-frame end-frame"
-                    aria-hidden="true"
-                    data-anim-lazy-image-download-complete=""
-                  />
-                </motion.div>
+                <motion.div className="inline-video-visblecontainer inline-video-check-in inline-video-is-webm loaded ended"></motion.div>
               </span>
             </motion.div>
           </motion.div>

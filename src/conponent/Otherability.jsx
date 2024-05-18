@@ -22,33 +22,6 @@ const Skill = {
       "Organizational Behavioral Analysis",
       "strategic management",
     ],
-    Frontend: [
-      "HTML",
-      "CSS",
-      "☆ JavaScript",
-      "☆ React",
-      "Redux",
-      "☆ Tailwind",
-      "☆ Framer",
-      "Main UI",
-      "Animation libs",
-    ],
-    Backend: ["MySQL", "☆ PostgreSQL", "☆ NodeJS", "☆ Json", "TablePlus"],
-    Database: [
-      "MySQL",
-      "☆ PostgreSQL",
-      "Tableau",
-      "☆ Python",
-      "☆ Neo4j",
-      "☆ Pandas",
-    ],
-    AI: [
-      "Machine Learning",
-      "☆ Deep Learning",
-      "Natural Language",
-      "☆ Recommender System",
-    ],
-    "IT-Tool": ["☆ Github", "☆ SSH", "Docker", "☆ Zsh", "Vim"],
     Text: ["☆ Markdown", "LaTeX", "☆ Word", "☆ Pages", "HTML"],
     Slides: ["☆ PowerPoint", "☆ Keynotes", "Google Slides"],
     Video: [
@@ -86,40 +59,39 @@ function Otherability() {
   }, []);
 
   const Otherability = (
-    <motion.div
-      className="h-auto grid-item large-span-8 medium-span-6 small-span-12 grid-item-swipe-reply carnival-item-in-view"
-      data-component-list="CarnivalInlineVideo"
-      data-analytics-section-engagement="name:catch up and swipe to reply"
-      data-tile-name="swipe-reply"
-    >
-      <motion.div className="tile tile-rounded">
+    <motion.div className="h-auto grid-item large-span-8 medium-span-6 small-span-12 grid-item-swipe-reply carnival-item-in-view ">
+      <motion.div className="tile ">
         {/* 半透明要改 */}
         <motion.div
-          // style={{
-          //   background:
-          //     "linear-gradient(0deg, rgba(26, 131, 144, 1), rgba(109, 255, 232, 0.3))",
-          //   // 'linear-gradient(0deg, rgba(33, 33, 150, 1), rgba(149, 95, 233, 1))',
-          // }}
-          className="tile-content bg-white/40"
+          className="bg-black "
+          style={{
+            backgroundImage: `url(https://3o.hk/images/2024/05/19/bg.jpg)`,
+            backgroundSize: "60% auto",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "right bottom",
+          }}
         >
           {/* Skill */}
-          <motion.div className="px-[28px] py-[48px]">
-            <h3 className="tile-headline typography-subsection-headline ">
-              Skills
-            </h3>
+          <motion.div className="px-[36px] py-[36px]  backdrop-contrast-125 pb-[30%]">
             {Object.entries(Skill.skills).map(([category, list], index) => (
-              <div
-                key={index}
-                className="flex flex-col gap-[5px] py-[15px] md:py-[15px] "
+              <motion.div
+                key={index + "skill"}
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: index * 0.1, duration: 0.9 }}
+                className="flex flex-col gap-[5px] py-[15px] md:pb-[45px] text-gradient"
               >
-                <h2 className="font-[500] min-[20%]"> {category}</h2>
+                <h2 className="text-gray-200 typography-subsection-headline text-[30px]">
+                  {" "}
+                  {category}
+                </h2>
 
-                <p className="text-left text-[15px] text-gray-600 ">
+                <p className="text-left text-[20px] text-gray-400 ">
                   {/* <a href={`https://www.google.com/search?q=${list}`}> */}
                   {list.join("  ｜  ")}
                   {/* </a> */}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
         </motion.div>

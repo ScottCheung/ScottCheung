@@ -86,12 +86,19 @@ function Gooduser() {
       data-analytics-section-engagement="name:let your friend know when you arrive safely"
       data-tile-name="check-in"
     >
-      <motion.div className="tile tile-with-overlay">
+      <motion.div className="tile tile-with-overlay bg-gradient-to-br to-[30%] hover:to-[25%] transition-all from-blue-900 to-black">
         <motion.div
+          className="pb-[30%] tile-content tile-rounded z-0 "
           style={{
-            background: `linear-gradient(45deg, rgba(118, 118, 118, 0.4), rgba(29, 29, 31, 1))`,
+            backgroundImage: `url(https://3o.hk/images/2024/05/19/bgg.png)`,
+            backgroundSize: "100% auto",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "bottom center ",
           }}
-          className="tile-content tile-rounded "
+          // style={{
+
+          //   background: `linear-gradient(45deg, rgba(118, 118, 118, 0.4), rgba(29, 29, 31, 1))`,
+          // }}
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: "10px" }}
@@ -101,9 +108,9 @@ function Gooduser() {
               ease: [0.455, 0.03, 0.515, 0.955],
               duration: 1.3,
             }}
-            className="tile-header pb-[30px] tile-rounded "
+            className="tile-header pb-[30px] tile-rounded   "
           >
-            <motion.div className="tile-headline typography-subsection-headline text-white">
+            <motion.div className="text-white tile-headline typography-subsection-headline text-[30px]">
               {lang == 0 && "Good User"}
               {lang == 1 && "绝对的能手"}
             </motion.div>
@@ -130,7 +137,7 @@ function Gooduser() {
               whileInView="visible"
               // viewport={{ once: true }}
 
-              className=" justify-center items-center w-full h-full grid  content-center    "
+              className="grid items-center content-center justify-center w-full h-full "
             >
               {apps.map((app, index) => (
                 <motion.div
@@ -150,7 +157,7 @@ function Gooduser() {
                   whileTap={{ scale: 0.98, transition: { duration: 0.5 } }}
                   className="grid-item large-span-3 medium-span-4 small-span-4"
                 >
-                  <motion.div className="flex-shrink-0 flex justify-center">
+                  <motion.div className="flex justify-center flex-shrink-0">
                     <img
                       key={index}
                       className="w-[50px] h-[50px] md:w-[60px] md:h-[60px]   p-2  rounded-[9px]"
@@ -210,13 +217,13 @@ function Gooduser() {
               className="tile-overlay-header"
               id="content-toggle-check-in"
             >
-              <h3 className="tile-overlay-headline typography-subsection-headline">
+              <h3 className="tile-overlay-headline typography-subsection-headline text-[50px]">
                 {lang == 0 && "Good User"}
                 {lang == 1 && "绝对的能手"}
               </h3>
             </motion.div>
             <motion.div className="tile-overlay-body">
-              <p className="tile-overlay-copy typography-subsection-copy">
+              <p className="tile-overlay typography-subsection text-[20px] lg:text-[25px] text-white">
                 {lang == 0 &&
                   "I have accumulated extensive experience in the IT field, proficiently mastering a variety of professional software. For example, I am well-versed in the Microsoft Office suite, including Word, Excel, and PowerPoint, allowing me to efficiently handle document editing, data analysis, and presentation creation. Additionally, I possess expertise in Adobe's suite of software, such as Photoshop, Illustrator, and After Effects, enabling me to craft exquisite designs and animated effects. Regarding development, I excel in utilizing tools like Visual Studio Code, PyCharm, and other IDEs, along with version control tools like GitHub. In past projects, I have successfully leveraged these software tools to accomplish a diverse range of tasks, showcasing my professional skills and demonstrating a high level of proficiency. I have a strong passion for learning new technologies, consistently staying updated on the latest industry trends to uphold my competitiveness."}
                 {lang == 1 &&

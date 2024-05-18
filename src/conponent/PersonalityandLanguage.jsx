@@ -92,7 +92,7 @@ function PersonalityandLanguage() {
           className="tile-header  rounded-[28px]  "
         >
           <div
-            className="pb-[100%] "
+            className="pb-[70%] "
             style={{
               backgroundImage: `url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNTAgMTUwIj48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0iI0REREREQyIgZD0iTTQ3Ljg5NCA1NC45MDFsMzIuMjUtNi4wN0w2OC4xNjggMCAwIDE1LjI2Mmw5LjUzMiA1MS4xODEgMjAuNDYtNi4wNDcgMjEuMjk4IDkuMTgxeiIvPjxjaXJjbGUgZmlsbD0iIzc3NyIgY3g9IjI3LjYzNCIgY3k9IjMxLjQ3IiByPSIyLjk5NiIvPjxjaXJjbGUgZmlsbD0iIzc3NyIgY3g9IjM4LjI3MiIgY3k9IjMxLjQ3IiByPSIyLjk5NiIvPjxjaXJjbGUgZmlsbD0iIzc3NyIgY3g9IjQ4LjkwNyIgY3k9IjMxLjQ3IiByPSIyLjk5NiIvPjwvZz48ZyBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCI+PHBhdGggZmlsbD0iI0VCQkVBNyIgZD0iTTQzLjAxOSAxMDYuODMzbC0yLjQ0Ny0xNy40NjYtNS45MDUtMi4wMDEtMS45NyAxMi45Njd6Ii8+PHBhdGggZmlsbD0iIzcyQzlBNiIgZD0iTTExNi45MjQgMTExLjIyMWwyNC4xODIgMTAuMDI0TDE0MyAxNDIuNzcybC0xNS4wNTUgNC41MTRMMTAyLjQ5OSAxNTBsLTM5LjMzNC03LjEzOUw1NyAxMzZsNi4xOC0yOC4wNDcgMjEuOTYyLTIuMDN6Ii8+PHBhdGggZmlsbD0iIzU0QjA4QiIgZD0iTTE0MS4xMDYgMTIxLjI0NWwtMTMuMTUxIDI2LjEzMSAxOS44NzctMi4yMTJ6Ii8+PHBhdGggZmlsbD0iIzNGOEY2RiIgZD0iTTYzLjE4IDEwNy45NTN2MzQuODE5bC0xNS4yODYtMi42ODJ6Ii8+PHBhdGggZmlsbD0iIzU0QjA4QiIgZD0iTTYzLjE4IDE0Mi43NzJsLTE3LjAxNi0yOC40MzktOS4wNi4yNDYtNy45MTEgMi4wODggNS4xNCAyNC42NjZ6Ii8+PHBhdGggZmlsbD0iIzNGOEY2RiIgZD0iTTExNi45MjQgMTExLjIyMUwxMTMuODEyIDEzNGwtMjguMjcxLTYuMDM5LS4zOTktMjIuMDM4eiIvPjxwYXRoIGZpbGw9IiNGQ0RBQzciIGQ9Ik02Ny4yNCAzMS44MzZsNTcuOTQgMTYuMTAzLTE1LjM2OCA1OS4zNzhMNTEuMjkgOTEuMzE2eiIvPjxwYXRoIGZpbGw9IiNFQkJFQTciIGQ9Ik0xMDQuODAyIDYwLjM2OWwtOC42MDkgMy4zNDgtNy45NTkgOS41OTMtNC4yNzUtMy4xNTEtNS41MTMuODE1LS43NTUtMTEuOTA5LTYuMjY2LTguMDQ4IDExLjI0OSAzLjEwNSA5Ljk2MiAyLjg1N3oiLz48cGF0aCBmaWxsPSIjRkRFOUUwIiBkPSJNOTIuNjM2IDU2Ljk3OUw4OC4yMzQgNzMuMzFsLTkuNzg4LTIuMzM2IDQuMjI4LTE2Ljg1MnoiLz48cGF0aCBmaWxsPSIjQkZEQjhFIiBkPSJNNjcuMjQgMzEuODM2bDM3LjEyOS0xMy41NzItMTEuNDY3IDIwLjcwNXoiLz48cGF0aCBmaWxsPSIjOTlDMjZEIiBkPSJNMTA0LjM2OSAxOC4yNjRsNDUuMzA2IDI2LjMyMi0yNC40OTUgMy4zNTMtMzIuMjc4LTguOTd6Ii8+PHBhdGggZmlsbD0iI0VCQkVBNyIgZD0iTTEyNS4xOCA0Ny45MzlsNC40MTMgMjcuMDA0IDcuMDAzLTMuMzI4IDguODc3IDguNzg4LTQyLjk3NCA0Ni4zOTEgNy4zMTMtMTkuNDc3eiIvPjxwYXRoIGZpbGw9IiM3MDlENTMiIGQ9Ik0xMjUuMTggNDcuOTM5bDI0LjQ5NS0zLjM1My00LjIwMiAzNS44MTctOC44NzctOC43ODgtNy4wMDMgMy4zMjh6Ii8+PHBhdGggZmlsbD0iI0MyOTI3RCIgZD0iTTc5LjM4MSA5OC45OTVsMjMuMTE4IDI3Ljc5OSA3LjMxMy0xOS40Nzd6TTEzNS4wNzEgOTEuNjI5bC03LjExNi00LjI2NHYxMS42M3oiLz48cGF0aCBmaWxsPSIjNzA5RDUzIiBkPSJNMTA0LjgwMiA2MC4zNjlsLTEwLjkzOC03LjU2My0xLjIyOCA0LjE3M3pNODMuOTU5IDUwLjA2OWwtMS4yODUgNC4wNTMtMTEuMjQ5LTMuMTA1eiIvPjxwYXRoIGZpbGw9IiNDMjkyN0QiIGQ9Ik04OC4yMzQgNzMuMzFsLTUuNDY3IDIuODAzLTQuMzIxLTUuMTM5eiIvPjxwYXRoIGZpbGw9IiM0OTQ5NDkiIGQ9Ik0xMDAuNjMgNjUuMDIyYzAgMS43MzktMS40MTEgMy4xNTMtMy4xNTMgMy4xNTMtMS43MzkgMC0zLjE1NS0xLjQxNC0zLjE1NS0zLjE1MyAwLTEuNzQyIDEuNDE2LTMuMTUzIDMuMTU1LTMuMTUzIDEuNzQzIDAgMy4xNTMgMS40MTEgMy4xNTMgMy4xNTN6Ii8+PGNpcmNsZSBmaWxsPSIjNDk0OTQ5IiBjeD0iNzUuNTI3IiBjeT0iNTkuNjQ4IiByPSIzLjE1MiIvPjxwYXRoIGZpbGw9IiNDMjkyN0QiIGQ9Ik02OC4xNjggNzUuODgxbDMxLjUyOSA3Ljk0MS0xMS40MTEgNy40NC0xNC45OC0zLjkzN3oiLz48cGF0aCBmaWxsPSIjRkZGIiBkPSJNOTMuMTQ4IDg0LjQyNWwtMTkuODQyLTUuMjIgMS43MzkgNi40NzEgMTIuNDUgMy4yMDd6Ii8+PHBhdGggZmlsbD0iI0MyOTI3RCIgZD0iTTE0MS4xMDYgODAuNzg5bC02LjA4OC0zLjU5Ny0zLjU5NSA4LjAyM3oiLz48cGF0aCBmaWxsPSIjRUJCRUE3IiBkPSJNNDYuMTY0IDExNC4zMzNsLTMuMTQ1LTcuNS0xMy4wMzQtMS41NzQtMTAuNzU2LjUyNiA5Ljk2NCAxMC44ODJ6Ii8+PHBhdGggZmlsbD0iI0ZDREFDNyIgZD0iTTQzLjAxOSAxMDYuODMzbC0zMC4zNTItMjQuNjMtMS41MDMgMTIuNjggOC4wNjUgMTAuOTAyeiIvPjwvZz48L3N2Zz4=)`,
               backgroundSize: "50% auto",
@@ -110,7 +110,7 @@ function PersonalityandLanguage() {
               }}
               className="flex justify-between"
             >
-              <h3 className="py-4 text-gray-600 tile-headline typography-subsection-headline">
+              <h3 className="py-4 text-gray-600 tile-headline typography-subsection-headline text-[30px]">
                 {lang == 0 && "Personality"}
                 {lang == 1 && "人格类型"}
               </h3>
@@ -141,16 +141,16 @@ function PersonalityandLanguage() {
                     key={index}
                     className={`${
                       per.color1 + " " + per.color2
-                    } flex justify-between bg-gradient-to-r text-transparent bg-clip-text`}
+                    } flex justify-between bg-gradient-to-r text-transparent bg-clip-text pb-[10px]`}
                   >
-                    <motion.div className="text-[15px] font-[500]">
+                    <motion.div className="text-[18px] font-[500]">
                       {per.name}
                     </motion.div>
                     <motion.div className="flex typography-subsection-copy">
                       <N className="" n={per.label} d={3} /> %
                     </motion.div>
                   </motion.div>
-                  <motion.div className="w-full h-4 mb-4 rounded-full bg-white/20 dark:bg-gray-700">
+                  <motion.div className="w-full h-[15px] mb-4 rounded-full bg-white/20 dark:bg-gray-700">
                     <motion.div
                       key={index}
                       variants={{
@@ -164,7 +164,7 @@ function PersonalityandLanguage() {
                       viewport={{ once: true }}
                       className={`${
                         per.color1 + " " + per.color2
-                      } bg-gradient-to-br  h-4 rounded-full`}
+                      } bg-gradient-to-r  h-[15px] rounded-full`}
                       style={{ width: `0%` }}
                     ></motion.div>
                   </motion.div>
@@ -184,7 +184,7 @@ function PersonalityandLanguage() {
           }}
         >
           <div
-            className=" h-full w-full pb-[40vh] md:pb-[20vh]"
+            className=" h-full w-full pb-[40vh] md:pb-[40vh] "
             style={{
               backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj[0]})`,
               backgroundSize: "100% auto",
@@ -202,7 +202,7 @@ function PersonalityandLanguage() {
               }}
               className="flex justify-between"
             >
-              <h3 className="py-4 text-gray-600 tile-headline typography-subsection-headline">
+              <h3 className="py-4 text-gray-600 tile-headline typography-subsection-headline text-[30px]">
                 {lang == 0 && "Language"}
                 {lang == 1 && "语言能力"}
               </h3>
@@ -221,16 +221,16 @@ function PersonalityandLanguage() {
                     key={index}
                     className={`${
                       personality.color1 + " " + personality.color2
-                    } flex justify-between bg-gradient-to-r text-transparent bg-clip-text`}
+                    } flex justify-between bg-gradient-to-r text-transparent bg-clip-text pb-[10px]`}
                   >
-                    <motion.div className="text-[15px] font-[500]">
+                    <motion.div className="text-[18px] font-[500]">
                       {personality.name}
                     </motion.div>
                     <motion.div className="flex typography-subsection-copy">
                       <N n={personality.label} d={3} />
                     </motion.div>
                   </motion.div>
-                  <motion.div className="w-full h-4 mb-4 rounded-full bg-white/20 dark:bg-gray-700">
+                  <motion.div className="w-full h-[15px] mb-4 rounded-full bg-white/20 dark:bg-gray-700">
                     <motion.div
                       key={index}
                       variants={{
@@ -243,7 +243,7 @@ function PersonalityandLanguage() {
                       transition={{ duration: 1, delay: (index + 4) * 0.1 }}
                       className={`${
                         personality.color1 + " " + personality.color2
-                      } bg-gradient-to-r  h-4 rounded-full`}
+                      } bg-gradient-to-r  h-[15px] rounded-full`}
                       style={{ width: `0%` }}
                     ></motion.div>
                   </motion.div>
