@@ -103,21 +103,21 @@ function Otherability() {
           className="tile-content bg-white/40"
         >
           {/* Skill */}
-          <motion.div className="tile-header">
+          <motion.div className="px-[28px] py-[48px]">
             <h3 className="tile-headline typography-subsection-headline ">
               Skills
             </h3>
             {Object.entries(Skill.skills).map(([category, list], index) => (
               <div
                 key={index}
-                className="flex justify-between items-start md:items-center gap-x-[30px] py-[15px] md:py-[15px] "
+                className="flex flex-col gap-[5px] py-[15px] md:py-[15px] "
               >
-                <h2 className="font-[500] min-[20%]">{category}</h2>
+                <h2 className="font-[500] min-[20%]"> {category}</h2>
 
-                <span className={division}></span>
-
-                <p className="text-right text-[15px] text-gray-600">
-                  {list.join("、")}
+                <p className="text-left text-[15px] text-gray-600 ">
+                  {/* <a href={`https://www.google.com/search?q=${list}`}> */}
+                  {list.join("  ｜  ")}
+                  {/* </a> */}
                 </p>
               </div>
             ))}

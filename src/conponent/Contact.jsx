@@ -69,10 +69,10 @@ function Contact({ isTopOut }) {
                               layout
                               className=" snap-end gallery-item grid-item current"
                             >
-                              <div className="icon-card card-visblecontainer">
+                              <div className=" icon-card card-visblecontainer">
                                 <div className="card">
                                   <div
-                                    className={`card-modifier card-padding has-trigger-button fixed-width  ${
+                                    className={`card-modifier card-padding has-trigger-button fixed-width ${
                                       isOut
                                         ? "bg-black/50 backdrop-blur-[80px] shadow-xl"
                                         : "backdrop-blur-lg bg-white/20"
@@ -255,7 +255,7 @@ function Contact({ isTopOut }) {
                           initial={{ opacity: 0 }}
                           whileInView={{ opacity: 1 }}
                           transition={{ duration: 2, delay: 0.6 }}
-                          className=" flex justify-center  items-center space-x-[90px]"
+                          className=" flex justify-center hidden items-center space-x-[90px]"
                         >
                           {codes.map((code, index) => (
                             <motion.div
