@@ -12,38 +12,72 @@ const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full
 const laptopMode = window.innerWidth > 1024;
 const Skill = {
   icon: <i class="fi fi-rr-tool-box"></i>,
-  skills: {
-    Management: [
-      "☆ Jira",
-      "☆ SWOT",
-      "☆ PEST",
-      "☆ Boston Matrix",
-      "Gantt Chart",
-      "Organizational Behavioral Analysis",
-      "strategic management",
-    ],
-    Text: ["☆ Markdown", "LaTeX", "☆ Word", "☆ Pages", "HTML"],
-    Slides: ["☆ PowerPoint", "☆ Keynotes", "Google Slides"],
-    Video: [
-      "☆ Final Cut Pro",
-      "Premiere",
-      "After Effects",
-      "☆ DaVinci",
-      "iMovie",
-      "☆ JianYing",
-    ],
-    Graph: [
-      "☆ Photoshop",
-      "☆ Lightroom",
-      "Illustrator",
-      "☆ InDesign",
-      "XD",
-      "3D Max",
-      "☆ Sharp 3D",
-    ],
-    Language: ["English", "☆ Chinese", "☆ SiChuan Dialect"],
-    Music: ["Guitar", "☆ Piano"],
-  },
+  skills: [
+    {
+      Management: [
+        "☆ Jira",
+        "☆ SWOT",
+        "☆ PEST",
+        "☆ Boston Matrix",
+        "Gantt Chart",
+        "Organizational Behavioral Analysis",
+        "strategic management",
+      ],
+      Text: ["☆ Markdown", "LaTeX", "☆ Word", "☆ Pages", "HTML"],
+      Slides: ["☆ PowerPoint", "☆ Keynotes", "Google Slides"],
+      Video: [
+        "☆ Final Cut Pro",
+        "Premiere",
+        "After Effects",
+        "☆ DaVinci",
+        "iMovie",
+        "☆ JianYing",
+      ],
+      Graph: [
+        "☆ Photoshop",
+        "☆ Lightroom",
+        "Illustrator",
+        "☆ InDesign",
+        "XD",
+        "3D Max",
+        "☆ Sharp 3D",
+      ],
+      Language: ["English", "☆ Chinese(mother tongue)", "☆ SiChuan Dialect"],
+      Music: ["Guitar", "☆ Piano"],
+    },
+    {
+      管理: [
+        "☆ Jira",
+        "☆ SWOT",
+        "☆ PEST",
+        "☆ 波士顿矩阵",
+        "甘特图",
+        "组织行为分析",
+        "战略管理",
+      ],
+      文本: ["☆ Markdown", "LaTeX", "☆ Word", "☆ Pages", "HTML"],
+      幻灯片: ["☆ PowerPoint", "☆ Keynotes", "Google Slides"],
+      视频: [
+        "☆ Final Cut Pro",
+        "Premiere",
+        "After Effects",
+        "☆ DaVinci",
+        "iMovie",
+        "☆ 剪映",
+      ],
+      图像: [
+        "☆ Photoshop",
+        "☆ Lightroom",
+        "Illustrator",
+        "☆ InDesign",
+        "XD",
+        "3D Max",
+        "☆ Sharp 3D",
+      ],
+      语言: ["英语", "☆ 中文（母语）", "☆ 四川方言"],
+      音乐: ["吉他", "☆ 钢琴"],
+    },
+  ],
 };
 function Otherability() {
   const lang = useLanguage();
@@ -72,27 +106,29 @@ function Otherability() {
           }}
         >
           {/* Skill */}
-          <motion.div className="px-[36px] py-[36px]  backdrop-contrast-125 pb-[30%]">
-            {Object.entries(Skill.skills).map(([category, list], index) => (
-              <motion.div
-                key={index + "skill"}
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ delay: index * 0.1, duration: 0.9 }}
-                className="flex flex-col gap-[5px] py-[15px] md:pb-[45px] text-gradient"
-              >
-                <h2 className="text-gray-200 typography-subsection-headline text-[30px]">
-                  {" "}
-                  {category}
-                </h2>
+          <motion.div className="px-[36px] py-[36px]  backdrop-contrast-125 pb-[40%]">
+            {Object.entries(Skill.skills[lang]).map(
+              ([category, list], index) => (
+                <motion.div
+                  key={index + "skill"}
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ delay: index * 0.1, duration: 0.9 }}
+                  className="flex flex-col gap-[5px] py-[15px] md:pb-[45px] text-gradient"
+                >
+                  <h2 className="text-gray-200 typography-subsection-headline text-[30px]">
+                    {" "}
+                    {category}
+                  </h2>
 
-                <p className="text-left text-[20px] text-gray-400 ">
-                  {/* <a href={`https://www.google.com/search?q=${list}`}> */}
-                  {list.join("  ｜  ")}
-                  {/* </a> */}
-                </p>
-              </motion.div>
-            ))}
+                  <p className="text-left text-[20px] text-gray-400 ">
+                    {/* <a href={`https://www.google.com/search?q=${list}`}> */}
+                    {list.join("  ｜  ")}
+                    {/* </a> */}
+                  </p>
+                </motion.div>
+              ),
+            )}
           </motion.div>
         </motion.div>
       </motion.div>

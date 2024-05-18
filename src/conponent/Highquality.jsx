@@ -102,8 +102,8 @@ function Highquality() {
             className="tile-header"
           >
             <h3 className="text-white tile-headline typography-subsection-headline text-[30px]">
-              {lang == 0 && "High Quality for evertthing"}
-              {lang == 1 && "完美方方面面"}
+              {lang == 0 && "Perfect? for evertthing"}
+              {lang == 1 && "完美? 方方面面"}
             </h3>
             {/* 完美主义 内容 */}
             <p className="text-white/50 tile-copy typography-subsection-copy">
