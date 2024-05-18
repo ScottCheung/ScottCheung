@@ -97,8 +97,8 @@ function Capability() {
     >
       {/* stack */}
       <Skill />
-      {/* <Keyfeature2 /> */}
-      {/* <Highlight /> */}
+      {/* <Keyfeature2 />
+      <Highlight /> */}
 
       {/* High Quality */}
       <Highquality />
@@ -137,11 +137,7 @@ function Capability() {
     </motion.div>
   );
 
-  return (
-    <motion.div className="z-50 -mt-[20vh] md:-mt-[30vh]">
-      {Capability}
-    </motion.div>
-  );
+  return <motion.div className="z-50 -mt-[250px]">{Capability}</motion.div>;
 }
 
 export default Capability;

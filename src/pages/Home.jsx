@@ -28,7 +28,7 @@ const HomeCarousel = [
     href: "/life",
     type: "image",
     duration: null,
-    src: bg,
+    src: "https://3o.hk/images/2024/01/14/welcomebg.jpg",
   },
   {
     href: "/life",
@@ -86,14 +86,13 @@ function Home() {
           <a
             key={index}
             href={media.href}
-            className="z-50 object-cover w-full h-full overflow-hidden"
+            className="z-50 flex w-full h-full bg-cover Carousel-item"
             style={{
               backgroundImage: `url(${media.src})`,
-              backgroundRepeat: "repeat",
             }}
           >
             <Welcome />
-            <span className="absolute z-20 object-cover w-full h-full bg-black/30"></span>
+            {/* 
             {media.type === "image" ? (
               <img
                 className="object-cover object-left w-full h-full"
@@ -111,15 +110,23 @@ function Home() {
                 referrerpolicy="strict-origin-when-cross-origin"
                 allowfullscreen
               ></iframe>
-            )}
+            )} */}
           </a>
         ))}
       </Carousel>
-
-      <div className="relative z-40 -mt-[105px] w-full flex justify-center min-h-[100px] ">
-        <SubNav />
+      <div
+        className="bg-center bg-no-repeat bg-cover "
+        style={
+          {
+            // backgroundImage: `url(${HomeCarousel[0].src})`,
+          }
+        }
+      >
+        <div className="backdrop-blur-[10px] bg-white/20 ">
+          <Education />
+        </div>
       </div>
-      <Education />
+
       <KeyFeature />
       <Capability />
       <WorkExperience />

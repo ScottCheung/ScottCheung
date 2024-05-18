@@ -12,7 +12,7 @@ const Carousel = ({ interval, children }) => {
   const [showToast, setshowToast] = useState(false);
   const timeoutRef = useRef(null);
   const [progress, setProgress] = useState(0);
-  const [animate, setAnimate] = useState("animate__fadeIn");
+  const [animate, setAnimate] = useState("animate__fadeInRight");
   const [showleftbutton, setshowleftbutton] = useState(false);
   const [showrightbutton, setshowrightbutton] = useState(false);
   const [isTop, setIsTop] = useState(true);
@@ -66,14 +66,14 @@ const Carousel = ({ interval, children }) => {
   }, [activeIndex, interval]);
 
   const nextSlide = () => {
-    setAnimate("animate__fadeIn");
+    setAnimate("animate__fadeInRight");
     setActiveIndex((prevIndex) =>
       prevIndex === children.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const prevSlide = () => {
-    setAnimate("animate__fadeIn");
+    setAnimate("animate__fadeInLeft");
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? children.length - 1 : prevIndex - 1,
     );
@@ -81,7 +81,7 @@ const Carousel = ({ interval, children }) => {
 
   const goToSlide = (index) => {
     const newAnimate =
-      index > activeIndex ? "animate__fadeIn" : "animate__fadeIn";
+      index > activeIndex ? "animate__fadeInRight" : "animate__fadeInLeft";
     setAnimate(newAnimate);
     setActiveIndex(index);
   };
@@ -106,13 +106,13 @@ const Carousel = ({ interval, children }) => {
       <div className="carousel-container">
         {React.Children.map(children, (child, index) => (
           <div
-            className={`w-full h-full  ${
-              index === activeIndex
-                ? `absolute cursor-pointer animate__animated ${animate} `
-                : "absolute animate__animated animate__fadeOut"
-            }`}
+            // className={`w-full h-full ${
+            //   index === activeIndex
+            //     ? `absolute cursor-pointer animate__animated ${animate} `
+            //     : "absolute animate__animated animate__fadeOut"
+            // }`}
             key={index}
-            style={{ zIndex: index * 1, animationDuration: "1s" }}
+            style={{ zIndex: index * 1 }}
           >
             {child}
           </div>
@@ -178,8 +178,7 @@ const Carousel = ({ interval, children }) => {
         {isTop && (
           <motion.div
             layout
-            exit={{ opacity: 0, width: 0 }}
-            className="w-full h-[30px]  rounded-lg absolute bottom-[120px] gap-y-[30px] flex flex-col justify-center items-center z-50  transition-all"
+            className="w-full h-[30px] opacity-70 hover:opacity-100  rounded-lg absolute bottom-[120px] gap-y-[30px] flex flex-col justify-center items-center z-50  transition-all"
           >
             <motion.div className="w-auto flex gap-x-[20px]">
               <div
@@ -217,7 +216,7 @@ const Carousel = ({ interval, children }) => {
                     setIsPaused(false);
                   }}
                   onClick={nextSlide}
-                  className={`bg-black/20 backdrop-blur-[5px] w-[45px] h-[45px] animate__animated animate__zoomIn  flex rounded-full justify-center items-center transition-all  duration-1000`}
+                  className={`bg-black/20 backdrop-blur-[5px] w-[45px] h-[45px] animate__animated animate__zoomIn  flex rounded-full justify-center items-center transition-all transform duration-1000`}
                 >
                   <svg
                     className="hover:fill-white fill-gray-200 w-[20px] h-[20px]"

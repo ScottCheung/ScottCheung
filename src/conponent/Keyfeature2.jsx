@@ -47,7 +47,7 @@ export default function Keyfeature2() {
           transition={StagerFadeInUp}
           viewport={{ margin: "-30%" }}
           layout
-          className=" px-[20px] rounded-[28px]  bg-gradient-to-t   from-lime-500/20  to-emerald-500/20  hover:backdrop-blur-md  hover:shadow-2xl focus:shadow-2xl  grid-item large-span-4 medium-span-4 small-span-4 grid-item-search h-[230px]"
+          className=" px-[20px] rounded-[28px]  bg-gradient-to-t   from-lime-500/20  to-emerald-500/20  hover:backdrop-blur-md   grid-item large-span-4 medium-span-4 small-span-4 grid-item-search h-[230px]"
         >
           <a
             href={`${KeyFeature.href ? KeyFeature.href : "#"}`}

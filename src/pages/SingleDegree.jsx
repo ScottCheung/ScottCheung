@@ -50,7 +50,7 @@ export default function Example() {
     };
   }, []);
   return (
-    <div className="bg-white overflow-hidden">
+    <div className="overflow-hidden bg-white">
       <AnimatePresence>
         <motion.div
           layout
@@ -90,7 +90,7 @@ export default function Example() {
           />
           <main id="main" className="main" role="main">
             <section className="section section-welcome no-pad-bottom">
-              <div className="section-content-responsive mt-24">
+              <div className="mt-24 section-content-responsive">
                 <header className="section-header row">
                   <h1 className=" welcomeanimation section-header-headline">
                     {data[0].major[lang][0]}
@@ -108,7 +108,7 @@ export default function Example() {
                   className={`welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky z-30 shadow-2xl`}
                   style={{ top: `calc(${navbarHeight}px + 10px)` }}
                 >
-                  <div className="flex flex-row justify-center items-center">
+                  <div className="flex flex-row items-center justify-center">
                     <img
                       className="w-[130px] px-7"
                       src="https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/817d5684-7ac9-491b-8752-60cfa0809adc.png"
@@ -133,7 +133,7 @@ export default function Example() {
                       "url(https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png)",
                   }}
                 >
-                  <div className="flex flex-row justify-center items-center">
+                  <div className="flex flex-row items-center justify-center">
                     <img
                       className="w-[110px] h-auto"
                       src="https://www.edigitalagency.com.au/wp-content/uploads/new-UNSW-logo-png-vertical-crest.png"
@@ -142,8 +142,8 @@ export default function Example() {
                   </div>
                 </a>
               )}
-              <div className="h-auto welcome-video-wall-visblecontainer visblecontainer space-y-6">
-                <div className="text-gray-500 pt-24 pb-4">
+              <div className="h-auto space-y-6 welcome-video-wall-visblecontainer visblecontainer">
+                <div className="pt-24 pb-4 text-gray-500">
                   <h2 className="typography-section-intro-headline section-intro-headline">
                     {lang == 0 && "University Status"}
                     {lang == 1 && "学校信息"}
@@ -158,7 +158,7 @@ export default function Example() {
                     {lang == 1 && "官网"} ]
                   </a>
                 </p>
-                <div className="text-gray-500 pt-24 pb-4">
+                <div className="pt-24 pb-4 text-gray-500">
                   <h2 className="typography-section-intro-headline section-intro-headline">
                     {data[0].major[lang][0]}
                     {lang == 0 && " "}
@@ -176,9 +176,9 @@ export default function Example() {
                 </p>
               </div>
             </section>
-            <section className="section section-welcome no-pad-bottom visblecontainer overflow-hidden">
+            <section className="overflow-hidden section section-welcome no-pad-bottom visblecontainer">
               <div className="welcome-video-wall-visblecontainer  space-y-6 h-auto w-[100%]">
-                <div className="w-[100%] text-gray-500 pt-24 pb-4  bg-gradient-to-br from-white from-10% via-white via-90% to-white/0  sticky top-[25px] z-50">
+                <div className="w-[100%] text-gray-500 pt-24 pb-4  bg-gradient-to-br from-white from-10% via-white via-90% to-white/0 z-50">
                   <h2 className="typography-section-intro-headline section-intro-headline ">
                     {lang == 1 && "主要课程"}
                     {lang == 0 && "Main Course"}
@@ -231,16 +231,16 @@ export default function Example() {
                         } text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 `}
                       >
                         <tr>
-                          <th scope="col" className="text-center px-6 py-3">
+                          <th scope="col" className="px-6 py-3 text-center">
                             Serial
                           </th>
                           <th scope="col" className="px-6 py-3">
                             Course
                           </th>
-                          <th scope="col" className="text-center px-6 py-3">
+                          <th scope="col" className="px-6 py-3 text-center">
                             Type
                           </th>
-                          <th scope="col" className="text-center px-6 py-3">
+                          <th scope="col" className="px-6 py-3 text-center">
                             descrition
                           </th>
                         </tr>
@@ -274,23 +274,23 @@ export default function Example() {
                         layout
                         className=""
                       >
-                        <tr className="text-center bg-white max-w-full border-b dark:bg-gray-800 dark:border-gray-700 ">
+                        <tr className="max-w-full text-center bg-white border-b dark:bg-gray-800 dark:border-gray-700 ">
                           <th
                             scope="row"
-                            className="text-center text-gray-900 px-6 py-4 font-medium whitespace-nowrap dark:text-white"
+                            className="px-6 py-4 font-medium text-center text-gray-900 whitespace-nowrap dark:text-white"
                           >
                             {index + 1}
                           </th>
                           <td
                             scope="row"
-                            className="text-gray-900 px-6 py-4 font-medium whitespace-nowrap dark:text-white"
+                            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                           >
                             {subject.CourseName}
                           </td>
-                          <td className="text-center px-6 py-4">
+                          <td className="px-6 py-4 text-center">
                             {subject.Type}
                           </td>
-                          <td className="text-center px-6 py-4">
+                          <td className="px-6 py-4 text-center">
                             {subject.Description}
                           </td>
                         </tr>

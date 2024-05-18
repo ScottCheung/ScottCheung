@@ -93,7 +93,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     // }
 
     function handleScroll1() {
-      if (window.scrollY < 1) {
+      if (window.scrollY < 0.0001) {
         setIsExpanded(true);
         setIsTop(true);
       } else {
@@ -219,7 +219,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 isTop
                                   ? "-top-3 -right-4 w-10 h-10"
                                   : "-top-3 -right-3 w-7 h-7 text-[10px]"
-                              } absolute bg-sky-400 border-2 border-white dark:border-gray-800 rounded-full flex justify-center items-center text-white font-black p-2`}
+                              } absolute hidden bg-sky-400 border-2 border-white dark:border-gray-800 rounded-full flex justify-center items-center text-white font-black p-2`}
                             >
                               {updateLog[0].opints[0].length}
                             </motion.span>

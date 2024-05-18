@@ -36,7 +36,7 @@ function Education({ hideTittle, simpleVer }) {
   });
 
   const Education = (
-    <div className="z-50">
+    <div className="z-50 ">
       {!isTittle ? (
         <div>
           {/* 引导按钮 */}
@@ -52,7 +52,7 @@ function Education({ hideTittle, simpleVer }) {
             className="z-40 pt-[10vh]"
           >
             <div className="animate__animated animate__rotateIn ">
-              <div className="flex justify-center py-12 ">
+              <div className="flex justify-center py-6 ">
                 <a
                   href="#Education"
                   id="Education"
@@ -65,7 +65,7 @@ function Education({ hideTittle, simpleVer }) {
             </div>
           </motion.div>
           {/* 一级标题 */}
-          <div className=" flex justify-center py-12 min-h-[100px] max-h-[100px]">
+          <div className="flex justify-center py-12 ">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -90,7 +90,7 @@ function Education({ hideTittle, simpleVer }) {
       )}
 
       {/* Item 容器 */}
-      <section className=" section section-incentive background-alt staggered-end">
+      <div className=" section-incentive py-[100px]">
         <div className="gallery gallery-align-center gallery-icon-cards">
           <div className="scroll-visblecontainer">
             <div className="item-visblecontainer ">
@@ -120,8 +120,8 @@ function Education({ hideTittle, simpleVer }) {
                     <div className="icon-card card-visblecontainer ">
                       <motion.div className="card " tabIndex={index}>
                         <div
-                          className={`card-modifier card-padding has-trigger-button fixed-width ${
-                            hideTittle ? "bg-gray-50" : "bg-white/30"
+                          className={`card-modifier card-padding has-trigger-button fixed-width transition-all duration-500 ${
+                            hideTittle ? "bg-gray-50" : "bg-white/80"
                           }`}
                         >
                           <div className="card-viewport-content">
@@ -151,7 +151,7 @@ function Education({ hideTittle, simpleVer }) {
                                   style={{
                                     animationDelay: `${index * 0.2}s`,
                                   }}
-                                  className="flex flex-col items-start justify-start py-10 mb-3 animate__animated animate__zoomIn"
+                                  className="flex items-start justify-start py-10 mb-3 gap-x-4 md:flex-col animate__animated animate__zoomIn"
                                 >
                                   <div className="typography-card-headline">
                                     {`${Experience.major[lang][0]}`}
@@ -164,7 +164,9 @@ function Education({ hideTittle, simpleVer }) {
                                   </div>
                                 </div>
                                 {/* Tag */}
-                                <div className="flex justify-start py-5 space-x-3 text-[15px]">
+                                <div
+                                  className={`${simpleVer || windowWidth < 1024 ? "hidden" : "flex justify-start py-5 space-x-3 text-[15px]"}`}
+                                >
                                   <div
                                     style={{
                                       animationDelay: `${index * 0.2}s`,
@@ -179,7 +181,9 @@ function Education({ hideTittle, simpleVer }) {
                                     </div>
                                   )}
                                 </div>
-                                <div className={`${simpleVer ? "hidden" : ""}`}>
+                                <div
+                                  className={`${simpleVer || windowWidth < 1024 ? "hidden" : ""}`}
+                                >
                                   {/* Duration */}
                                   <span
                                     style={{
@@ -235,7 +239,7 @@ function Education({ hideTittle, simpleVer }) {
             </div>
           </div>
         </div>
-      </section>
+      </div>
     </div>
   );
 

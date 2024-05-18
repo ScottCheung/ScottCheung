@@ -50,7 +50,7 @@ function KeyFeature() {
       }}
       className={`w-full flex h-[100vh]  md:h-[150vh]   overflow-hidden transform-gpu  mt-[50vh]`}
     >
-      <motion.section className="w-full h-[150vh] relative overflow-hidden bg-gradient-to-r   from-lime-500/20  to-emerald-500/30 ">
+      <motion.section className="w-full md:h-[150vh] relative overflow-hidden bg-gradient-to-r   from-lime-500  to-emerald-500 ">
         <img
           // style={{
           //   maskImage: gradient

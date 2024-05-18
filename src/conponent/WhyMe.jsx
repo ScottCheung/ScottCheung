@@ -200,7 +200,7 @@ function WhyMe({ hideTittle }) {
                                         ...hideRow(3),
                                         animationDelay: `${index * 0.3}s`,
                                       }}
-                                      className={`text-full  my-7 animate__animated  animate__fadeInUp text-gray-600  card-description text-justify `}
+                                      className={`text-full  my-7 animate__animated  animate__fadeInUp text-gray-600  card-description `}
                                     >
                                       {feature.description}
                                     </div>
