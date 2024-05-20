@@ -18,7 +18,7 @@ const EmphasizeColorLists = [
 ];
 
 export default function Resume() {
-  const printMode = true;
+  const printMode = false;
   let { resume } = useParams();
   const { ResumeView } = useAppContext();
 
