@@ -228,7 +228,7 @@ function DockerBar(props) {
     <Transition.Root show={isColorDepthPanelOpen} as={Fragment}>
       <Dialog
         as="div"
-        className="relative z-10"
+        className="relative z-10 "
         initialFocus={cancelButtonRef}
         onClose={() => {
           setIsColorDepthPanelOpen(false);
@@ -247,8 +247,8 @@ function DockerBar(props) {
           <div className="fixed inset-0 bg-black/30 transition-opacity backdrop-blur-[20px]" />
         </Transition.Child>
 
-        <div className="fixed inset-0 z-10 w-screen overflow-y-auto">
-          <div className="flex items-start justify-center min-h-full p-4 text-center md:items-center sm:p-0">
+        <div className="fixed inset-0 z-10 w-screen scrollbar-hide">
+          <div className="flex items-start justify-center min-h-full p-4 text-center md:items-center sm:p-0 ">
             <Transition.Child
               as={Fragment}
               enter="transition ease-out duration-500"
@@ -458,20 +458,20 @@ function DockerBar(props) {
         animate={{ y: 0, opacity: 1, transition: { duration: 1.2 } }}
         exit={{ y: 30, opacity: 0, transition: { duration: 0.3 } }}
         className={`flex  justify-center items-center fixed z-40  
-        ${
-          DockerBarPosition === "left" &&
-          " left-[50px] right-[400px]  bottom-[45px] "
-        }
-        ${DockerBarPosition === "center" && " left-0 right-0  bottom-[45px] "}
-        ${
-          DockerBarPosition === "right" &&
-          " left-[400px] right-[50px]  bottom-[45px] "
-        }
-        ${
-          DockerBarPosition === "hide" &&
-          "scale-0 left-0 right-0 -bottom-[100px] opacity-0"
-        }
-        }   `}
+      ${
+        DockerBarPosition === "left" &&
+        " left-[50px] right-[400px]  bottom-[45px] "
+      }
+      ${DockerBarPosition === "center" && " left-0 right-0  bottom-[45px] "}
+      ${
+        DockerBarPosition === "right" &&
+        " left-[400px] right-[50px]  bottom-[45px] "
+      }
+      ${
+        DockerBarPosition === "hide" &&
+        "scale-0 left-0 right-0 -bottom-[100px] opacity-0"
+      }
+      }   `}
       >
         <motion.div
           layout
@@ -746,10 +746,10 @@ function DockerBar(props) {
                         ),
                       }}
                       className={`
-                  ${hasEntered ? "rounded-full" : ""}
-                   
-                   ${DockerButtonStyle}                  
-                      `}
+                ${hasEntered ? "rounded-full" : ""}
+                 
+                 ${DockerButtonStyle}                  
+                    `}
                     >
                       <motion.div
                         className={` ${
@@ -763,10 +763,10 @@ function DockerBar(props) {
                                   : "blur-[5px] "
                               } rounded-full   w-[20px] h-[20px] `
                         } 
-                        
-                        cursor-pointer rounded-full text-gray-500 dark:text-white duration-300 transition-all bg-${label}-${
-                          ResumeView.colorDepth
-                        } dark:bg-${label}-900/50`}
+                      
+                      cursor-pointer rounded-full text-gray-500 dark:text-white duration-300 transition-all bg-${label}-${
+                        ResumeView.colorDepth
+                      } dark:bg-${label}-900/50`}
                       ></motion.div>
                     </motion.div>
                   </motion.div>
@@ -810,7 +810,7 @@ function DockerBar(props) {
     </AnimatePresence>
   );
 
-  return <div className="">{DockerBar}</div>;
+  return <div>{DockerBar}</div>;
 }
 
 export default DockerBar;

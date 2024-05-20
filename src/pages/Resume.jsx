@@ -18,7 +18,7 @@ const EmphasizeColorLists = [
 ];
 
 export default function Resume() {
-  const printMode = false;
+  const printMode = true;
   let { resume } = useParams();
   const { ResumeView } = useAppContext();
 
@@ -30,6 +30,11 @@ export default function Resume() {
     header: {
       name: "Xianzhe(Scott) Zhang",
       contacts: [
+        {
+          name: "Front-end Developer",
+          icon: <i class="fi fi-rr-briefcase"></i>,
+          // link: "tel:+61 434344292",
+        },
         {
           name: "+61 434344292",
           icon: <i class="fi fi-rr-mobile-notch"></i>,
@@ -70,7 +75,7 @@ export default function Resume() {
         title: "Summary",
         icon: <i class="fi fi-rr-user"></i>,
         content:
-          "Hello, I am Xianzhe, and just graduated from UNSW in May. I'm a full-stack developer with a strong computer science and engineering background. I am obsessed with front-end development and often stay up all night to develop websites (staying up late is not healthy, I am correcting it). I have a strong learning ability, can always quickly adapt to new technologies and new environments, and have a good team spirit. I'm looking for a software development job. Looking forward to your reply. This resume is rich in links. If you want to explore further, please click to explore more of my world.",
+          "Passionate front-end developer with over 2 years of development experience and 7 years of design experience, specializing in JavaScript, Tailwind, and Framer Motion. Proven expertise in front-end development, proficient in creating great user experiences, and adept at improving user interaction and satisfaction. Experienced in designing and deploying beautiful, reliable, and fluid software systems. (More details at https://xianzhe.site). ",
       },
       {
         title: "Highlights",
@@ -97,7 +102,7 @@ export default function Resume() {
           {
             no: 59,
             keyfeature: " Skills",
-            icon: "fi-rr-tool-box",
+            icon: "fi fi-rr-tools",
           },
           {
             no: 23,
@@ -177,7 +182,7 @@ export default function Resume() {
               {
                 title: "Interface and Interaction Design",
                 description:
-                  "Independently designed and implemented 2 complex interfaces, 5 medium inferfaces and over 20 interaction logics, using Figma to enhance design efficiency by 30%, ensuring intuitive and smooth user experiences.",
+                  "Individually designed and implemented 2 complex interfaces, 5 medium inferfaces and over 20 interaction logics, using Figma to enhance design efficiency by 30%, ensuring intuitive and smooth user experiences.",
               },
               {
                 title: "Data Visualization Component Development",
@@ -187,7 +192,7 @@ export default function Resume() {
               {
                 title: "Animation and Visual Effects Design",
                 description:
-                  "Designed and implemented over 40 UI animations and visual effects using Framer Motion and other animation libraries, boosting user interaction satisfaction by 80% and enhancing visual appeal. Optimized animation performance by 30% using Google performance analysis tools.",
+                  "Individually Designed and implemented over 40 UI animations and visual effects using Framer Motion and other animation libraries, boosting user interaction satisfaction by 80% and enhancing visual appeal. Optimized animation performance by 30% using Google performance analysis tools.",
               },
               {
                 title: "Frontend-Backend Integration",
@@ -198,35 +203,66 @@ export default function Resume() {
             period: "Feb 2024 - May 2024",
           },
           {
-            name: "Advanced Explosive Materials Research",
-            // link: "http://example.com/",
+            name: "Personal website ( Portfolio )",
+            link: "https://xianzhe.site/",
             skill: [
-              "Experimental Design",
-              "Theoretical Analysis",
-              "Laboratory Safety",
-              "Chemical Synthesis",
-              "Data Analysis",
-              "Project Management",
+              "Neo4j",
+              "JavaScript",
+              "React",
+              "Tailwind",
+              "Framer Motion",
+              "Chrome DevTools",
+              "Photoshop",
             ],
             contribution: [
               {
-                title: "Innovative Research and Development",
+                title: "User Interface and Interactive Animation Design",
                 description:
-                  "Independently conducted high-risk experiments with high energy and low sensitivity explosives (HMX / CL-20 / FOX-7) as part of a secretive national defense project. Demonstrated strong practical abilities from theoretical verification to experimental execution, ensuring innovative solutions under stringent safety protocols.",
+                  "Designed and implemented visually appealing user interfaces and over 40 interactive animations using Framer Motion and other animation libraries. Used Google Performance Analytics to optimize performance and improve site performance by 50% animation. Improved user experience and satisfaction through intuitive and engaging animations.",
               },
               {
-                title: "Early Laboratory Engagement",
+                title: "Web Development",
                 description:
-                  "Proactively contacted and collaborated with mentors and research facilities, securing early access to the laboratory as a freshman—a privilege typically reserved for junior-level students. This early involvement highlights exceptional initiative and capability in handling complex scientific tasks.",
+                  "Developed entire websites from scratch using JavaScript, React, Tailwind, and more. Created 36 adaptive components for data visualization in React, adapted to both desktop, mobile, and tablet to better showcase individuals.",
               },
               {
-                title: "Design and Safety Optimization",
+                title: "Server Deployment",
                 description:
-                  "Designed and successfully executed several high-stakes experiments, significantly advancing the project's goals. Implemented rigorous safety measures to mitigate risks associated with explosive materials, enhancing overall lab safety and project deliverables.",
+                  "Deployed the website to a server with domain mapping set up to ensure high availability and accessibility. Regularly maintained the web pages with missing elements and fixed unanticipated bugs on a regular basis.",
               },
             ],
-            period: "Sept 2017 - June 2021",
+            period: "Oct 2023 - Now",
           },
+          // {
+          //   name: "Advanced Explosive Materials Research",
+          //   // link: "http://example.com/",
+          //   skill: [
+          //     "Experimental Design",
+          //     "Theoretical Analysis",
+          //     "Laboratory Safety",
+          //     "Chemical Synthesis",
+          //     "Data Analysis",
+          //     "Project Management",
+          //   ],
+          //   contribution: [
+          //     {
+          //       title: "Innovative Research and Development",
+          //       description:
+          //         "Independently conducted high-risk experiments with high energy and low sensitivity explosives (HMX / CL-20 / FOX-7) as part of a secretive national defense project. Demonstrated strong practical abilities from theoretical verification to experimental execution, ensuring innovative solutions under stringent safety protocols.",
+          //     },
+          //     {
+          //       title: "Early Laboratory Engagement",
+          //       description:
+          //         "Proactively contacted and collaborated with mentors and research facilities, securing early access to the laboratory as a freshman—a privilege typically reserved for junior-level students. This early involvement highlights exceptional initiative and capability in handling complex scientific tasks.",
+          //     },
+          //     {
+          //       title: "Design and Safety Optimization",
+          //       description:
+          //         "Designed and successfully executed several high-stakes experiments, significantly advancing the project's goals. Implemented rigorous safety measures to mitigate risks associated with explosive materials, enhancing overall lab safety and project deliverables.",
+          //     },
+          //   ],
+          //   period: "Sept 2017 - June 2021",
+          // },
         ],
       },
       {
@@ -352,6 +388,7 @@ export default function Resume() {
   }-${Math.max(
     colorDepth - 200 || 100,
   )} gap-x-[15px] items-center transition-all duration-1000`;
+  const printWidth = "max-w-[1300px] mt-[50px]";
   const icon = `w-[15px] text-[15px] mr-[5px] mt-[2px]  transition-all duration-1000`;
   const divisionline = ` flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-50  transition-all duration-1000`;
   const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-10  transition-all duration-1000`;
@@ -374,10 +411,10 @@ export default function Resume() {
       <motion.div
         layout
         id="pdf-content"
-        className={`bg-white flex relative justify-center ${printMode ? "" : "py-[5%] pt-[15%] md:pt-[10%] px-[5%]"} pb-[30vh] `}
+        className={`bg-white flex relative justify-center ${printMode ? "" : "py-[5%] pt-[15%] md:pt-[10%] px-[5%] pb-[30vh]"}  `}
       >
         <div
-          className={`${printMode ? "max-w-[1000px]" : "visblecontainer mx-auto"} min-h-[100vh] flex flex-col `}
+          className={`${printMode ? printWidth : "visblecontainer mx-auto"} min-h-[100vh] flex flex-col `}
         >
           <div className="py-4 text-center">
             <h1 className={h1}>{cvData.header.name}</h1>
@@ -440,9 +477,10 @@ export default function Resume() {
                 </h2>
                 <span className={divisionline}></span>
               </a>
+
               {/* Summary */}
               {section.content && (
-                <p
+                <div
                   style={{
                     textAlign: "justify",
                     textJustify: "inter-word",
@@ -450,8 +488,8 @@ export default function Resume() {
                   }}
                   className={normaltext}
                 >
-                  {section.content}
-                </p>
+                  <p>{section.content}</p>
+                </div>
               )}
               {/* Highlights*/}
               <div className="flex flex-wrap w-full justify-center md:justify-between gap-[30px]">
@@ -473,7 +511,7 @@ export default function Resume() {
                           }
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`flex flex-col justify-start w-full item-center md:justify-center ${KeyFeature.href ? `group` : "cursor-default"} transition-all`}
+                          className={`flex flex-col w-full item-center justify-center ${KeyFeature.href ? `group` : "cursor-default"} transition-all`}
                         >
                           <div className={whymeIcon}>
                             <i className={`mr-2 ${KeyFeature.icon} `}></i>
@@ -500,7 +538,7 @@ export default function Resume() {
 
               {/* Education */}
               {section.edus && (
-                <div className="grid  -mx-[20px] gap-x-[20px]">
+                <div className="w-full grid   gap-x-[20px]">
                   {section.edus.map((edu, index) => (
                     <a
                       href={edu.link}
@@ -511,7 +549,7 @@ export default function Resume() {
                         edu.link &&
                         "group cursor-pointer " +
                           " mt-3 flex justify-between items-start " +
-                          `large-span-6 medium-span-6 small-span-12 grid-item `
+                          `large-span-4 medium-span-6 small-span-12 grid-item `
                       }
                     >
                       <div className={contentContainer}>
