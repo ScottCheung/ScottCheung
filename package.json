@@ -34,7 +34,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -rf docs && react-scripts build && mv build docs",
-    "publish": "rm -rf docs && react-scripts build && mv build docs && git add .&& git commit -m 'deploy' && git push",
+    "publish": "rm -rf docs && react-scripts build && mv build docs && echo 'xianzhe.site' > docs/CNAME && git add . && git commit -m 'deploy' && git push",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "TW": "tailwindcss build public/style/style.css -o output.css"
