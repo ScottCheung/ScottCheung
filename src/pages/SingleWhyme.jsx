@@ -187,12 +187,12 @@ export default function WhyM() {
                             .map((paragraph, index) => (
                               <motion.div key={index}>
                                 <p
-                                  style={{
-                                    textAlign: "justify",
-                                    textJustify: "inter-word",
-                                    width: "100%",
-                                  }}
-                                  className={`  mb-2 text-jusify bg-clip-text text-transparent bg-gradient-to-br   animate__animated animate__fadeInUp`}
+                                  // style={{
+                                  //   textAlign: "justify",
+                                  //   textJustify: "inter-word",
+                                  //   width: "100%",
+                                  // }}
+                                  className={`  mb-2 text-left  bg-clip-text text-transparent bg-gradient-to-br   animate__animated animate__fadeInUp`}
                                 >
                                   {SelectText(paragraph)}
                                 </p>
