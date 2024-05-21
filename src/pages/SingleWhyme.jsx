@@ -73,7 +73,7 @@ export default function WhyM() {
             }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: "0px", scale: 1 }}
-            className="absolute w-full h-full top-0 bgrid-colsenter bgrid-colsover"
+            className="absolute top-0 w-full h-full bgrid-colsenter bgrid-colsover"
             style={{
               backgroundImage:
                 "url('https://3o.hk/images/2024/01/22/profilebg.jpg')",
@@ -152,60 +152,54 @@ export default function WhyM() {
                 }}
                 whileInView={{ opacity: 1, y: "0px" }}
                 viewport={{ once: true }}
-                className="text-center mt-12"
+                className="mt-12 text-center"
               >
                 <h3
-                  className={`text-[32px] font-semibold leading-normal mb-2 ${
+                  className={`text-[32px] md:text-[42px] lg:text-[50px] font-semibold leading-normal mb-2 ${
                     selectedWhyMeItem.color1 + " " + selectedWhyMeItem.color2
                   } bg-clip-text text-transparent bg-gradient-to-br mb-2 animate__animated animate__zoomIn`}
                 >
                   {selectedWhyMeItem.advantage}
                 </h3>
               </motion.div>
-              <div className="text-center py-10 mt-10">
+              <div className="py-10 mt-10 text-center">
                 <div className="flex flex-wrap justify-center">
                   <div className={`grid `}>
                     {/* row1-right-with-button */}
                     <div className="grid-item large-span-12 small-span-12 ">
-                      <div className="tile ">
-                        <div className="tile-content">
-                          <div className="content-between">
-                            <div className="">
-                              <motion.div
-                                // initial={{ opacity: 0, y: 300 }}
-                                transition={{
-                                  ease: [0.455, 0.03, 0.515, 0.955],
-                                  duration: 1.2,
-                                }}
-                                // whileInView={{ opacity: 1, y: 0 }}
-                                // viewport={{ once: true }}
-                                className={`tile-headline typography-subsection-headline   text-[15px] md:text-[28px] h-auto pb-[400px]`}
-                              >
-                                {selectedWhyMeItem.description
-                                  .split("\n")
-                                  .map((paragraph, index) => (
-                                    <motion.div key={index}>
-                                      <p
-                                        style={{
-                                          textAlign: "justify",
-                                          textJustify: "inter-word",
-                                          width: "100%",
-                                        }}
-                                        className={`${
-                                          selectedWhyMeItem.color1 +
-                                          " " +
-                                          selectedWhyMeItem.color2
-                                        } bg-clip-text text-transparent bg-gradient-to-br mb-2 text-jusify   animate__animated animate__fadeInUp`}
-                                      >
-                                        {SelectText(paragraph)}
-                                      </p>
-                                      <br className="border-b" />
-                                    </motion.div>
-                                  ))}
+                      <div className="content-between">
+                        <motion.div
+                          // initial={{ opacity: 0, y: 300 }}
+                          transition={{
+                            ease: [0.455, 0.03, 0.515, 0.955],
+                            duration: 1.2,
+                          }}
+                          // whileInView={{ opacity: 1, y: 0 }}
+                          // viewport={{ once: true }}
+                          className={`${
+                            selectedWhyMeItem.color1 +
+                            " " +
+                            selectedWhyMeItem.color2
+                          } tile-headline typography-subsection-headline bg-clip-text text-transparent bg-gradient-to-br  text-[15px] md:text-[28px] h-auto pb-[400px]`}
+                        >
+                          {selectedWhyMeItem.description
+                            .split("\n")
+                            .map((paragraph, index) => (
+                              <motion.div key={index}>
+                                <p
+                                  style={{
+                                    textAlign: "justify",
+                                    textJustify: "inter-word",
+                                    width: "100%",
+                                  }}
+                                  className={`  mb-2 text-jusify bg-clip-text text-transparent bg-gradient-to-br   animate__animated animate__fadeInUp`}
+                                >
+                                  {SelectText(paragraph)}
+                                </p>
+                                <br className="border-b" />
                               </motion.div>
-                            </div>
-                          </div>
-                        </div>
+                            ))}
+                        </motion.div>
                       </div>
                     </div>
                   </div>
