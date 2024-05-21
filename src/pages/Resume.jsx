@@ -18,8 +18,8 @@ const EmphasizeColorLists = [
 ];
 
 export default function Resume() {
-  const printMode = false;
-  // const printMode = true;
+  // const printMode = false;
+  const printMode = true;
   let { resume } = useParams();
   const { ResumeView } = useAppContext();
 
@@ -29,7 +29,7 @@ export default function Resume() {
 
   const cvData = {
     header: {
-      name: "Xianzhe(Scott) Zhang",
+      name: "Xianzhe(Scott)    Zhang",
       contacts: [
         {
           name: "Front-end Developer",
@@ -128,6 +128,21 @@ export default function Resume() {
         icon: <i class="fi fi-rr-graduation-cap"></i>,
         edus: [
           {
+            degree: "Master of IT",
+            school: "UNSW",
+            link: "https://xianzhe.site/major/ArtificalInteliigence",
+            major: "Artificial Intelligence",
+            period: "Sep 2022 - May 2024",
+          },
+          {
+            degree: "Bachelor of Management",
+            school: "SWUST",
+            link: "https://xianzhe.site/major/BusinessAdministration",
+            major: "Administration Management",
+
+            period: "Sep 2021 - May 2022",
+          },
+          {
             degree: "Bachelor of Engineer",
             school: "SWUST",
             link: "https://xianzhe.site/major/FunctionalMaterial",
@@ -143,21 +158,6 @@ export default function Resume() {
             //   'Polymer Chemistry',
             // ],
             period: "Sep 2017 - May 2022",
-          },
-          {
-            degree: "Bachelor of Management",
-            school: "SWUST",
-            link: "https://xianzhe.site/major/BusinessAdministration",
-            major: "Administration Management",
-
-            period: "Sep 2021 - May 2022",
-          },
-          {
-            degree: "Master of IT",
-            school: "UNSW",
-            link: "https://xianzhe.site/major/ArtificalInteliigence",
-            major: "Artificial Intelligence",
-            period: "Sep 2022 - May 2024",
           },
         ],
       },
@@ -380,7 +380,7 @@ export default function Resume() {
     ],
   };
 
-  const h1 = `font-sans text-${EmphasizeColorLists[forceColor]}-${colorDepth} text-[30px] md:text-[50px]  font-bold  transition-all duration-1000`;
+  const h1 = `font-sans tracking-wide text-${EmphasizeColorLists[forceColor]}-${colorDepth} text-[30px] md:text-[50px]  font-bold  transition-all duration-1000`;
   const normaltext = "text-[15px] text-jusify transition-all duration-1000";
   const h2 = `flex text-[30px]  font-black text-${
     EmphasizeColorLists[forceColor]
@@ -539,7 +539,7 @@ export default function Resume() {
 
               {/* Education */}
               {section.edus && (
-                <div className="w-full grid   gap-x-[20px]">
+                <div className="w-full grid   gap-x-[40px]">
                   {section.edus.map((edu, index) => (
                     <a
                       href={edu.link}
@@ -550,57 +550,58 @@ export default function Resume() {
                         edu.link &&
                         "group cursor-pointer " +
                           " mt-3 flex justify-between items-start " +
-                          `large-span-4 medium-span-6 small-span-12 grid-item `
+                          `large-span-4 medium-span-6 small-span-12  `
                       }
                     >
                       <div className={contentContainer}>
-                        <div className="flex-col items-center justify-start md:flex md:flex-row md:justify-between">
-                          <h3
-                            className={h3 + `cursor-pointer group-hover:bold `}
+                        <div className="flex justify-between w-full">
+                          <p
+                            className={
+                              h3 +
+                              `cursor-pointer group-hover:bold flex  justify-start`
+                            }
                           >
-                            <div>
-                              {edu.degree} - {edu.school}
-                            </div>
-                            {edu.link && (
-                              <div>
-                                <svg
-                                  class="w-4 h-4 mx-2  -rotate-45"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  fill="none"
-                                  viewBox="0 0 14 10"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M1 5h12m0 0L9 1m4 4L9 9"
-                                  />
-                                </svg>
-                              </div>
-                            )}
-                          </h3>
-                          {/* duration */}
+                            {edu.school}
+                          </p>
 
-                          <div className="flex flex-col justify-end ">
-                            <p className={timetext}>{edu.period}</p>
-                          </div>
+                          {/* duration */}
+                          <p className={timetext}>{edu.period}</p>
+                        </div>
+
+                        <div className="flex items-center justify-start ">
+                          <div className="">{edu.degree}</div>
+                          {edu.link && (
+                            <div>
+                              <svg
+                                class="w-4 h-4 mx-2  -rotate-45"
+                                aria-hidden="true"
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 14 10"
+                              >
+                                <path
+                                  stroke="currentColor"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  stroke-width="2"
+                                  d="M1 5h12m0 0L9 1m4 4L9 9"
+                                />
+                              </svg>
+                            </div>
+                          )}
                         </div>
 
                         <div
                           className={
                             normaltext +
-                            `  group-hover:text-${
+                            `duration-300  group-hover:text-${
                               EmphasizeColorLists[forceColor]
                             }-${colorDepth - 100}`
                           }
                         >
-                          <p className="mt-1 group-hover:underline ">
+                          <p className="tracking-widest group-hover:underline">
                             {edu.major}
                           </p>
-                          {/* <p>{edu.gpa}</p> */}
-                          {/* <p>{edu.coursework.join(', ')}</p> */}
                         </div>
                       </div>
                     </a>
