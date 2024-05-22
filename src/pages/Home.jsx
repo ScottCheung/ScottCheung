@@ -104,7 +104,7 @@ function Home() {
           <a
             key={index}
             href={media.href}
-            className="z-50 flex w-[100vw] h-[100vh] bg-cover Carousel-item"
+            className="z-50 flex w-[100vw] h-[100vh] bg-cover bg-center Carousel-item"
             style={{
               backgroundImage: `url(${windowWidth < 768 ? media.minisrc : media.src})`,
             }}
