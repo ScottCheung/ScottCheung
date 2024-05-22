@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   motion,
   AnimatePresence,
@@ -28,30 +28,35 @@ const HomeCarousel = [
     href: "/life",
     type: "image",
     duration: null,
+    minisrc: "https://3o.hk/images/2024/05/22/welcomebg2.jpg",
     src: "https://3o.hk/images/2024/01/14/welcomebg.jpg",
   },
   {
     href: "/life",
     type: "image",
     duration: null,
-    src: "https://3o.hk/images/2024/01/21/IMG_0958.png",
+    minisrc: "https://3o.hk/images/2024/05/22/IMG_2951-2.jpg",
+    src: "https://3o.hk/images/2024/05/22/IMG_2951.jpg",
   },
   {
     href: "/life",
     type: "image",
     duration: null,
+    minisrc: "https://3o.hk/images/2024/05/22/IMG_08952.png",
     src: "https://3o.hk/images/2024/01/21/IMG_0895.png",
   },
   {
     href: "/life",
     type: "image",
     duration: null,
+    minisrc: "https://3o.hk/images/2024/01/21/IMG_0875.png",
     src: "https://3o.hk/images/2024/01/21/IMG_0875.png",
   },
   {
     href: "/life",
     type: "image",
     duration: null,
+    minisrc: "https://3o.hk/images/2024/05/22/IMG_08432.png",
     src: "https://3o.hk/images/2024/01/21/IMG_0843.png",
   },
   //   {
@@ -67,9 +72,22 @@ function Home() {
     useAppContext();
   const videoRef = useRef(null);
   const lang = useLanguage();
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const keyfeature = Database.PersonalInfo.WhyMe[lang];
 
   // 页面加载完成后自动播放视频
+  useEffect(() => {
+    function handleResize() {
+      setWindowWidth(window.innerWidth);
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     if (videoRef.current) {
       videoRef.current.play();
@@ -81,36 +99,17 @@ function Home() {
     <div className="relative overflow-hidden transition-all bg-gray-200">
       <Navbar topTextColor={true} />
 
-      <Carousel interval={3000}>
+      <Carousel interval={5000}>
         {HomeCarousel.map((media, index) => (
           <a
             key={index}
             href={media.href}
-            className="z-50 flex w-full h-full bg-cover Carousel-item"
+            className="z-50 flex w-[100vw] h-[100vh] bg-cover Carousel-item"
             style={{
-              backgroundImage: `url(${media.src})`,
+              backgroundImage: `url(${windowWidth < 768 ? media.minisrc : media.src})`,
             }}
           >
-            <Welcome />
-            {/* 
-            {media.type === "image" ? (
-              <img
-                className="object-cover object-left w-full h-full"
-                src={media.src}
-                alt=""
-              />
-            ) : (
-              <iframe
-                width="1920px"
-                height="1080px"
-                src="https://www.youtube.com/embed/HAnw168huqA?si=e-ptNjN-B9h_TxdH"
-                //   title='YouTube video player'
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen
-              ></iframe>
-            )} */}
+            {/* <Welcome /> */}
           </a>
         ))}
       </Carousel>

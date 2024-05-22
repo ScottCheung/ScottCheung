@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 import { hideRow, bgPic, useLanguage } from "../help/helpFunction";
 import More from "./More";
 import { useInView } from "react-intersection-observer";
+import CtButton from "./ctButton";
+import { useAppContext } from "../help/ContextManager";
 
 const WorkExperiences = Database.PersonalInfo.WorkExperience;
 const visblecontainer = Database.Animation.Variant.Welcomevisblecontainer;
@@ -15,8 +17,121 @@ const Welcomevisblecontainer =
   Database.Animation.Variant.Welcomevisblecontainer;
 const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 
+const cardData = [
+  {
+    id: 0,
+    title: "JOB TITTLE",
+    image:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg",
+    backgroundColor: "bg-red-500",
+    skill: [
+      "Neo4j",
+      "JavaScript",
+      "React",
+      "D3",
+      "Tailwind",
+      "Framer Motion",
+      "Chrome DevTools",
+      "Figma",
+    ],
+    points: [
+      {
+        point: "Interface and Interaction Design",
+        description:
+          "Individually designed and implemented 2 complex interfaces, 5 medium inferfaces and over 20 interaction logics, using Figma to enhance design efficiency by 30%, ensuring intuitive and smooth user experiences.",
+      },
+      {
+        title: "Data Visualization Component Development",
+        description:
+          "Developed 25 fully customized React and D3.js data visualization components from scratch, enabling real-time graphical representation of complex data relationships.",
+      },
+      {
+        title: "Animation and Visual Effects Design",
+        description:
+          "Individually Designed and implemented over 40 UI animations and visual effects using Framer Motion and other animation libraries, boosting user interaction satisfaction by 80% and enhancing visual appeal. Optimized animation performance by 30% using Google performance analysis tools.",
+      },
+      {
+        title: "Frontend-Backend Integration",
+        description:
+          "Led frontend operations, successfully conducted over 10 large-scale data integration tests with backend services, ensuring 99% system stability and data accuracy.",
+      },
+    ],
+    period: "Feb 2024 - May 2024",
+  },
+  {
+    id: 1,
+    title: "Get your game on, go play",
+    image:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-01.jpg",
+    backgroundColor: "bg-purple-700",
+    description: "Some long text about getting your game on...",
+  },
+  {
+    id: 2,
+    title: "Hey now, you're a rock star",
+    image:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg",
+    backgroundColor: "bg-green-400",
+    description: "Some long text about being a rock star...",
+  },
+  {
+    id: 3,
+    title: "Get the show on, get paid",
+    image:
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg",
+    backgroundColor: "bg-blue-400",
+    description:
+      "Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...Some long text about getting the show on...",
+  },
+];
+
+function Card({ card, onClick }) {
+  return (
+    <motion.div
+      key={card.id}
+      variants={WelcomeItem}
+      transition={StagerFadeInUp}
+      whileHover={{ scale: 1.001 }}
+      whileTap={{ scale: 0.99 }}
+      // className="large-span-4 medium-span-6 small-span-12"
+      className="flex-shrink-0 "
+    >
+      <div className="relative flex w-full ">
+        <motion.div
+          layoutId={`card-container-${card.id}`}
+          // transition={{ duration: 0.7, easing: "easeInOut" }}
+          className={`relative bg-white cursor-pointer w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
+          onClick={() => onClick(card.id)}
+        >
+          <div className="absolute  -left-[30px] -top-[30px] right-[60px]  ">
+            <motion.img
+              src={card.image}
+              layoutId={`card-img-${card.id}`}
+              // transition={{ duration: 0.7, easing: "easeInOut" }}
+              className=" rounded-[28px] shadow-lg w-full overflow-hidden  "
+            />
+          </div>
+
+          <div className="flex flex-col mt-[60%]  items-start justify-start h-[200px] ">
+            <h1 className="font-bold  text-[17px] md:text-[20px] lg:text-[25px] text-gray">
+              {card.title}
+            </h1>
+            <h1 className="flex  text-[17px] md:text-[20px] lg:text-[25px] text-gray">
+              {card.title}
+            </h1>
+            <h1 className="flex  text-[17px] md:text-[20px] lg:text-[25px] text-gray">
+              {card.title}
+            </h1>
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+  );
+}
+
 function WorkExperience() {
   const lang = useLanguage();
+  const { Components, setComponents } = useAppContext();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
@@ -31,252 +146,130 @@ function WorkExperience() {
     triggerOnce: true,
     // threshold: 0.75,
   });
+  const [selectedCard, setSelectedCard] = useState(null);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const WorkExperience = (
-    <div id="WorkExperience" className="h-min-[100vh]">
-      <div>
-        <div className="">
-          {/* 一级标题 */}
-          <div className="flex justify-center ">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                ease: [0.455, 0.03, 0.515, 0.955],
-                duration: 1,
-              }}
-              className="flex items-center justify-center animate__animated animate__fadeInUp"
-            >
-              <div className="animate__animated animate__zoomIn">
-                <i className=" fi fi-rr-tool-box text-5xl lg:text-8xl mr-[20px] pt-3 "></i>
-              </div>
-              <h2 className="font-mono text-5xl font-bold animate__animated animate__zoomIn lg:text-8xl">
-                {lang == 0 && "Work Experience"}
-                {lang == 1 && "工作经历"}
-              </h2>
-            </motion.div>
+  const handleCardClick = (id) => {
+    const card = cardData.find((card) => card.id === id);
+    setSelectedCard(card);
+    BanScroll();
+    setIsOpen(true);
+    setComponents((prevComponents) => ({
+      ...prevComponents,
+      NavBar: "hide",
+    }));
+  };
+
+  const handleClose = () => {
+    setSelectedCard(null);
+    UnBanScroll();
+    setIsOpen(false);
+    setComponents((prevComponents) => ({
+      ...prevComponents,
+      NavBar: "visible",
+    }));
+  };
+  const adjustPaddingForScrollbar = () => {
+    const scrollbarWidth =
+      window.innerWidth - document.documentElement.clientWidth;
+    return scrollbarWidth;
+  };
+
+  const BanScroll = () => {
+    const scrollbarWidth = adjustPaddingForScrollbar(); // 获取滚动条宽度
+    document.body.style.overflow = "hidden";
+    document.body.style.paddingRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
+    // document.getElementById('navbar').style.marginRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
+    // document.getElementById('navbar').style.opacity = 0;
+  };
+
+  const UnBanScroll = () => {
+    document.body.style.overflow = "auto";
+    document.body.style.paddingRight = "0px"; // 重置paddingRight
+    // document.getElementById('navbar').style.marginRight = '0px'; // 重置paddingRight
+    // document.getElementById('navbar').style.opacity = 1;
+  };
+
+  return (
+    <section className="flex flex-col justify-center w-full ">
+      {/* 一级标题 */}
+      <div id="WorkExperience" className={`flex justify-center `}>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{
+            ease: [0.455, 0.03, 0.515, 0.955],
+            duration: 1,
+          }}
+          className="flex items-center justify-center "
+        >
+          <div className="">
+            <i className="pt-3 mr-3 text-5xl fi lg:text-8xl fi-rr-tool-box"></i>
           </div>
-          {/* Item 容器 */}
-          <AnimatePresence>
-            <section className="section section-incentive background-alt staggered-end">
-              <div className="gallery gallery-align-start gallery-icon-cards">
-                <div className="scroll-visblecontainer">
-                  <div className="item-visblecontainer">
-                    <motion.ul
-                      layout
-                      className="card-set p-[20px] overflow-hidden"
-                      role="list"
-                    >
-                      {WorkExperiences[0].map((Experience, index) => (
-                        <motion.div
-                          // href={Experience.href}
-                          key={index}
-                          variants={item}
-                          transition={StagerFadeInUp}
-                          whileHover={{ scale: 1.01 }}
-                          whileTap={{ scale: 0.99 }}
-                          layout
-                          ref={ref}
-                          style={{ animationDelay: `${0.15 * index + 0.4}s` }}
-                          className={`gallery-item grid-item current  ${
-                            windowWidth > 700
-                              ? inView
-                                ? "welcomeanimation"
-                                : "Exitanimation"
-                              : null
-                          }`}
-                        >
-                          <div className="icon-card card-visblecontainer">
-                            <div className="card ">
-                              <div className="bg-white/20 card-modifier card-padding has-trigger-button fixed-width bg-button">
-                                {windowWidth > 1024 ? (
-                                  <a
-                                    // href={`${Experience.web}`}
-                                    className="flex-none"
-                                  >
-                                    <div className="flex-shrink-0">
-                                      <div className="rounded-[10px] max-w-[120px] h-auto items-center flex justify-center">
-                                        <img
-                                          style={{
-                                            animationDelay: `${index * 0.3}s`,
-                                          }}
-                                          src={Experience.logo}
-                                          alt={Experience.university}
-                                          className={`rounded-[10px] animate__animated  animate__zoomIn animate__fast `}
-                                        ></img>
-                                      </div>
-                                      <div className="flex justify-start py-10 ">
-                                        <div
-                                          style={{
-                                            animationDelay: `${index * 0.2}s`,
-                                          }}
-                                          className={`inline-flex animate__animated animate__zoomIn bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium py-1 px-5 ${
-                                            Experience.tag[0] ? "" : "hidden"
-                                          }`}
-                                        >
-                                          {Experience.tag[0]}
-                                        </div>
-
-                                        <div
-                                          style={{
-                                            animationDelay: `${index * 0.2}s`,
-                                          }}
-                                          className={`inline-flex animate__animated animate__zoomIn text-white rounded-3xl bg-gradient-to-br from-emerald-500 to-sky-500 font-medium py-1 px-5 ${
-                                            Experience.tag[1] ? "" : "hidden"
-                                          }`}
-                                        >
-                                          {Experience.tag[1]}
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </a>
-                                ) : (
-                                  <></>
-                                )}
-                                <div className="flex flex-col">
-                                  {windowWidth > 1024 ? (
-                                    <div
-                                      style={{
-                                        animationDelay: `${index * 0.2}s`,
-                                      }}
-                                      className="flex flex-wrap items-start justify-start animate__animated animate__zoomIn "
-                                    >
-                                      <div className="text-left typography-card-headline">
-                                        {`${Experience.tittle[0]}`}
-                                        {"-"}
-                                        {Experience.tittle[1]}
-                                      </div>
-                                    </div>
-                                  ) : (
-                                    <div className="flex justify-between">
-                                      <div>
-                                        <div className="text-white bg-gray-700 rounded-[14px] my-3 text-center animate__animated  animate__zoomIn animate__slow font-semibold  text-[50px]">
-                                          {Experience.tittle[0].charAt(0)}
-                                          {Experience.tittle[1].charAt(0)}
-                                        </div>
-                                        <div className="ml-2 animate__animated  animate__zoomIn animate__slow text-left text-[12px]">
-                                          {Experience.tittle[0]}-
-                                          {Experience.tittle[1]}
-                                        </div>
-                                      </div>
-
-                                      <a href={`/`}>
-                                        <div className="flex-shrink-0">
-                                          <div className="rounded-[10px] max-w-[70px] h-auto items-center flex justify-end">
-                                            <img
-                                              src={Experience.logo}
-                                              alt={Experience.university}
-                                              style={{
-                                                animationDelay: `${
-                                                  index * 0.3
-                                                }s`,
-                                              }}
-                                              className={`animate__animated  animate__zoomIn rounded-[10px] animate__animated  animate__zoomIn`}
-                                            ></img>
-                                          </div>
-                                          <div className="animate__animated  animate__zoomIn  py-4 flex justify-center text-[10px]">
-                                            <div
-                                              style={{
-                                                animationDelay: `${
-                                                  index * 0.2
-                                                }s`,
-                                              }}
-                                              className={`inline-flex animate__animated animate__zoomIn bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category text-white rounded-3xl font-medium  px-3 ${
-                                                Experience.tag[0]
-                                                  ? ""
-                                                  : "hidden"
-                                              }`}
-                                            >
-                                              {Experience.tag[0]}
-                                            </div>
-                                            <div
-                                              style={{
-                                                animationDelay: `${
-                                                  index * 0.2
-                                                }s`,
-                                              }}
-                                              className={`inline-flex animate__animated animate__zoomIn text-white rounded-3xl bg-gradient-to-br from-emerald-500 to-sky-500 font-medium  px-3 ${
-                                                Experience.tag[1]
-                                                  ? ""
-                                                  : "hidden"
-                                              }`}
-                                            >
-                                              {Experience.tag[1]}
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </a>
-                                    </div>
-                                  )}
-
-                                  <div
-                                    className={` justify-start flex  flex-col mt-8 mb-4 `}
-                                  >
-                                    <span
-                                      style={{
-                                        animationDelay: `${index * 0.3}s`,
-                                      }}
-                                      className="w-full px-5 py-1 font-medium text-center text-white animate__animated animate__zoomIn category rounded-3xl bg-sky-900 ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700"
-                                    >
-                                      {Experience.time}
-                                    </span>
-                                  </div>
-
-                                  <p
-                                    style={{
-                                      animationDelay: `${index * 0.3}s`,
-                                    }}
-                                    className="w-full font-semibold text-left text-gray-700 animate__animated animate__fadeInUp card-description"
-                                  >
-                                    {Experience.company}
-                                  </p>
-                                  <div
-                                    style={{ ...hideRow(2) }}
-                                    className="w-full text-justify animate__animated animate__fadeInUp card-description "
-                                  >
-                                    {Experience.description}{" "}
-                                  </div>
-                                  <More color={"blue"} />
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <a
-                            className="anz-card-modal-link"
-                            // href={Experience.href}
-                            aria-label=""
-                          >
-                            <button
-                              className="card-modal-trigger modal-trigger card-cta-modal-button"
-                              type="link"
-                            >
-                              <div className="modal-trigger-visblecontainer">
-                                <span className="card-cta-modal-button-icon">
-                                  <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="8 8 20 20"
-                                    className="card-cta-modal-button-small-icon card-modal-button-small-icon"
-                                  >
-                                    <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
-                                  </svg>
-                                </span>
-                              </div>
-                            </button>
-                          </a>
-                        </motion.div>
-                      ))}
-                    </motion.ul>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </AnimatePresence>
-        </div>
+          <h2 className="font-mono text-5xl font-bold lg:text-8xl">
+            {lang == 0 && "WorkExperience"}
+            {lang == 1 && "工作经验"}
+          </h2>
+        </motion.div>
       </div>
-    </div>
+      <motion.ul
+        variants={Welcomevisblecontainer}
+        initial="hidden"
+        whileInView="visible"
+        exit={{ opacity: 0 }}
+        viewport={{ once: false, margin: "-60%" }}
+        style={{
+          paddingLeft:
+            "calc(50vw - min(1680px, var(--global-viewport-content-responsive)) / 2)",
+        }}
+        className="flex w-full space-x-[80px] overflow-x-auto py-[20vh]  scroll-smooth  scrollbar-hide"
+      >
+        {cardData.map((card) => (
+          <Card card={card} onClick={handleCardClick} />
+        ))}
+      </motion.ul>
+      {isOpen && (
+        <AnimatePresence>
+          <motion.div
+            onClick={handleClose}
+            className="fixed  inset-0  w-full h-full z-50  bg-gray-900/75 backdrop-blur-[20px]"
+          >
+            <div className="relative flex items-center justify-center w-full h-full ">
+              <button
+                onClick={handleClose}
+                className="absolute text-[100px] text-gray-800  top-[30px] right-[30px] z-50"
+              >
+                &times;
+              </button>
+              <motion.div onClick={(e) => e.stopPropagation()}>
+                <motion.div
+                  layoutId={`card-container-${selectedCard.id}`}
+                  // transition={{ duration: 0.7, easing: "easeInOut" }}
+                  className="relative p-[20px] gap-x-[40px] md:flex w-full   bg-white shadow-lg "
+                >
+                  <motion.img
+                    layoutId={`card-img-${selectedCard.id}`}
+                    src={selectedCard.image}
+                    // transition={{ duration: 0.7, easing: "easeInOut" }}
+                    alt="detail"
+                    className="w-full max-w-[800px] flex"
+                  />
+                  <div className="flex flex-col p-4 w-full max-w-[800px]">
+                    <h1 className="pb-8 font-bold text-7xl">
+                      {selectedCard.title}
+                    </h1>
+                    <p className="text-[20px] overflow-auto h-[300px] scrollbar-hide">
+                      {selectedCard.description}
+                    </p>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      )}
+    </section>
   );
-
-  return <div className="">{WorkExperience}</div>;
 }
 
 export default WorkExperience;

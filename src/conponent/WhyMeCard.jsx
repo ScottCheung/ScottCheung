@@ -75,15 +75,11 @@ function WhymeCard() {
     const scrollbarWidth = adjustPaddingForScrollbar(); // 获取滚动条宽度
     document.body.style.overflow = "hidden";
     document.body.style.paddingRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
-    // document.getElementById('navbar').style.marginRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
-    // document.getElementById('navbar').style.opacity = 0;
   };
 
   const UnBanScroll = () => {
     document.body.style.overflow = "auto";
     document.body.style.paddingRight = "0px"; // 重置paddingRight
-    // document.getElementById('navbar').style.marginRight = '0px'; // 重置paddingRight
-    // document.getElementById('navbar').style.opacity = 1;
   };
 
   const openCard = (feature) => {

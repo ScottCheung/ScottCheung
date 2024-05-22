@@ -92,7 +92,7 @@ function KeyFeature() {
                 className="flex justify-start w-full item-center md:justify-center"
               >
                 <div className="absolute text-[50px] right-20 top-20 font-semibold  text-white ">
-                  <N n={KeyFeature.no} d={3} />
+                  <N n={KeyFeature.no} d={1.5} />
                 </div>
                 <div className="flex justify-start w-full item-center md:justify-center my-[30px]">
                   <div className="flex flex-col items-center text-transparent typography-card-headline bg-gradient-to-br bg-clip-text from-lime-500 to-emerald-500">
