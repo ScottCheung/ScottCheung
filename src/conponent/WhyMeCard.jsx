@@ -180,9 +180,7 @@ function WhymeCard() {
                 <CtButton
                   type={"x"}
                   key={"close"}
-                  position={
-                    "top-0 -right-[120px] ESC animate__animated animate__zoomIn "
-                  }
+                  position={"top-0 -right-[120px] ESC  "}
                   btnsize={"60px"}
                   icon={"w-[20px] h-[20px] rotate-0"}
                   className="z-50"

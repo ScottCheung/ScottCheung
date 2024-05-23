@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Database from "../Database.json";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { hideRow, bgPic, useLanguage } from "../help/helpFunction";
 import More from "./More";
 import { useInView } from "react-intersection-observer";
@@ -21,7 +21,7 @@ const icon = `w-[15px] text-[15px] mr-[5px] mt-[2px]  transition-all duration-10
 const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-sky-700 opacity-10  transition-all duration-1000`;
 
 const h3 = `text-[15px] font-black flex items-center `;
-const timetext = `text-2xl font-[500] text-gray-400  transition-all duration-1000`;
+const timetext = `text-2xl font-[500] text-gray-400 items-start transition-all duration-1000`;
 const whymeIcon = `text-[20px] flex justify-center items-center text-gray-400 group-hover:text-sky-700`;
 const whymelable = `text-[15px] text-gray-400 group-hover:text-sky-700`;
 const contentContainer = `flex-1 flex flex-col justify-between `;
@@ -30,170 +30,276 @@ const Welcomevisblecontainer =
   Database.Animation.Variant.Welcomevisblecontainer;
 const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 const divisionline = `flex duration-0 flex flex-1 h-[5px]  rounded-full bg-sky-700  transition-all duration-1000`;
+
+const s = [
+  [
+    {
+      id: "FA-swust",
+      title: ["Financial", "Assistant"],
+      href: "/work/work=FA-swust",
+      type: "Part-time",
+      logoRound: "rounded",
+      logo: "/Graphs/study/swust.png",
+      tag: [null, "Part-time"],
+      web: "http://www.english.swust.edu.cn/main.htm",
+      time: "Mar 1, 2021 - Feb 1, 2022",
+      company:
+        "Southwest University of Science and Technology Analytical Testing Centre",
+      description: [
+        "Responsible for auditing the invoices of the business office up to RMB1,000,000, drawing up contracts up to RMB100,000, compliance review and signing. The business is responsible for the assessment and audit of the business system and occasional audits of the accounts flow according to the monthly and annual reports of the business. During the course of the work, it was found that the business progress audit was a single simple and time-consuming task, and with the help of office automation software, the business audit workload of this position for a year was completed in half a day, receiving high praise and commendation from the Business Office Director.",
+      ],
+    },
+    {
+      id: "FA-swust2",
+      title: ["Product", "Operation"],
+      href: "/work/work=FA-swust2",
+      type: "Part-time",
+      logoRound: "rounded",
+      logo: "/Graphs/study/swust.png",
+      tag: [null, "Part-time"],
+      web: "http://www.english.swust.edu.cn/main.htm",
+      time: "Aug 1, 2018 - Feb 1, 2019",
+      company: "Domi Group Buying",
+      description: ["Responsible for the backend "],
+    },
+    {
+      id: "PL-swust3",
+      title: ["Project", "Launcher"],
+      href: "/work/work=PL-swust3",
+      type: "Part-time",
+      logoRound: "nonrounded",
+      logo: "/Graphs/study/unsw.png",
+      tag: ["Full-time", null],
+      web: "http://www.english.swust.edu.cn/main.htm",
+      time: "Aug 1, 2018 - Feb 1, 2019",
+      company: "Domi Group Buying",
+      description: ["Responsible "],
+    },
+  ],
+  [
+    {
+      id: "FA-swust",
+      title: ["财务", "助理"],
+      href: "/work/work=FA-swust",
+      type: "兼职",
+      logoRound: "rounded",
+      logo: "/Graphs/study/swust.png",
+      tag: [null, "兼职"],
+      web: "http://www.english.swust.edu.cn/main.htm",
+      time: "2021年3月1日 - 2022年2月1日",
+      company: "西南科技大学分析测试中心",
+      description: [
+        "负责审计业务办公室发票高达人民币1,000,000，起草合同高达人民币100,000，合规审查和签署。该业务负责根据业务的月度和年度报告对业务系统进行评估和审计，并偶尔对账户流动进行审计。在工作过程中，发现业务进展审计是一项单一、简单且耗时的任务，借助办公自动化软件，该职位一年的业务审计工作在半天内完成，得到了业务办公室主任的高度赞扬和表扬。",
+      ],
+    },
+    {
+      id: "FA-swust2",
+      title: ["产品", "运营"],
+      href: "/work/work=FA-swust2",
+      type: "兼职",
+      logoRound: "rounded",
+      logo: "/Graphs/study/swust.png",
+      tag: [null, "兼职"],
+      web: "http://www.english.swust.edu.cn/main.htm",
+      time: "2018年8月1日 - 2019年2月1日",
+      company: "多米团购",
+      description: ["负责后台"],
+    },
+    {
+      id: "PL-swust3",
+      title: ["项目", "发起人"],
+      href: "/work/work=PL-swust3",
+      type: "兼职",
+      logoRound: "nonrounded",
+      logo: "/Graphs/study/unsw.png",
+      tag: ["全职", null],
+      web: "http://www.english.swust.edu.cn/main.htm",
+      time: "2018年8月1日 - 2019年2月1日",
+      company: "多米团购",
+      description: ["负责"],
+    },
+  ],
+];
 const cardData = [
   {
     id: 0,
-    title: "JOB TITTLE",
-    company: "JOB company",
+    title: "Uber Eats Delivery Driver",
+    type: "Part Time",
+    company: "Uber Eats",
+    startTime: "Dec 2022",
+    endTime: "July 2023",
     image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg",
-    backgroundColor: "bg-red-500",
+      "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_1116,h_1116/v1670495515/assets/69/2878ac-8a8e-48fe-8e9a-cdcd73a3e263/original/Courier_With_Bags_v2.png",
+    backgroundColor: "bg-blue-300",
     skill: [
-      "Neo4j",
-      "JavaScript",
-      "React",
-      "D3",
-      "Tailwind",
-      "Framer Motion",
-      "Chrome DevTools",
-      "Figma",
+      "Time Management",
+      "Customer Service",
+      "Navigation and Route Planning",
+      "Problem-Solving Skills",
+      "Attention to Detail",
+      "Communication Skills",
+      "Physical Stamina",
+      "Safety Awareness",
     ],
     points: [
       {
-        point: "Interface and Interaction Design",
+        point: "Efficient Delivery Management",
         description:
-          "Individually designed and implemented 2 complex interfaces, 5 medium inferfaces and over 20 interaction logics, using Figma to enhance design efficiency by 30%, ensuring intuitive and smooth user experiences.",
+          "Completed over 500 deliveries with an average delivery time of under 30 minutes, ensuring timely and accurate service to customers.",
       },
       {
-        title: "Data Visualization Component Development",
+        point: "Customer Interaction",
         description:
-          "Developed 25 fully customized React and D3.js data visualization components from scratch, enabling real-time graphical representation of complex data relationships.",
+          "Maintained high customer satisfaction through professional and courteous communication, resolving any issues promptly to ensure positive experiences.By editing some messages in advance, it improves the response time of interaction with customers and significantly increases user satisfaction.",
       },
       {
-        title: "Animation and Visual Effects Design",
+        point: "Route Optimization",
         description:
-          "Individually Designed and implemented over 40 UI animations and visual effects using Framer Motion and other animation libraries, boosting user interaction satisfaction by 80% and enhancing visual appeal. Optimized animation performance by 30% using Google performance analysis tools.",
+          "Utilized navigation tools and local knowledge to optimize delivery routes, reducing costs and improving delivery efficiency.",
       },
       {
-        title: "Frontend-Backend Integration",
+        point: "Safety and Compliance",
         description:
-          "Led frontend operations, successfully conducted over 10 large-scale data integration tests with backend services, ensuring 99% system stability and data accuracy.",
+          "Strictly adhered to traffic laws and safety guidelines, achieving a record of zero accidents or violations during the entire tenure.",
       },
     ],
-    period: "Feb 2024 - May 2024",
   },
   {
     id: 1,
-    title: "JOB TITTLE",
-    company: "JOB company",
+    title: "Financial Assistant",
+    type: "Part Time",
+    company:
+      "Southwest University of Science and Technology Analytical Testing Centre",
+    startTime: "Mar 2021",
+    endTime: "Feb 2022",
     image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg",
-    backgroundColor: "bg-red-500",
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg",
+    backgroundColor: "bg-blue-300",
     skill: [
-      "Neo4j",
-      "JavaScript",
-      "React",
-      "D3",
-      "Tailwind",
-      "Framer Motion",
-      "Chrome DevTools",
-      "Figma",
+      "Financial Auditing",
+      "Contract Management",
+      "Compliance Review",
+      "Business Process Automation",
+      "Report Analysis",
+      "Time Management",
+      "Attention to Detail",
+      "Communication Skills",
+      "Problem-Solving Skills",
+      "Office Automation Software Proficiency",
     ],
     points: [
       {
-        point: "Interface and Interaction Design",
+        point: "Achieving Excellence in Business Audits",
         description:
-          "Individually designed and implemented 2 complex interfaces, 5 medium inferfaces and over 20 interaction logics, using Figma to enhance design efficiency by 30%, ensuring intuitive and smooth user experiences.",
+          "Responsible for auditing the invoices of the business office up to RMB1,000,000, drawing up contracts up to RMB100,000, compliance review and signing. ",
       },
       {
-        title: "Data Visualization Component Development",
+        point: "Streamlined Business Audit Processes",
         description:
-          "Developed 25 fully customized React and D3.js data visualization components from scratch, enabling real-time graphical representation of complex data relationships.",
+          "The business is responsible for the assessment and audit of the business system and occasional audits of the accounts flow according to the monthly and annual reports of the business. ",
       },
       {
-        title: "Animation and Visual Effects Design",
+        point: "Efficiency Improvement through Office Automation Software",
         description:
-          "Individually Designed and implemented over 40 UI animations and visual effects using Framer Motion and other animation libraries, boosting user interaction satisfaction by 80% and enhancing visual appeal. Optimized animation performance by 30% using Google performance analysis tools.",
-      },
-      {
-        title: "Frontend-Backend Integration",
-        description:
-          "Led frontend operations, successfully conducted over 10 large-scale data integration tests with backend services, ensuring 99% system stability and data accuracy.",
+          "During the course of the work, it was found that the business progress audit was a single simple and time-consuming task, and with the help of office automation software, the business audit workload of this position for a year was completed in half a day, receiving high praise and commendation from the Business Office Director.",
       },
     ],
-    period: "Feb 2024 - May 2024",
   },
   {
     id: 2,
-    title: "JOB TITTLE",
-    company: "JOB company",
+    title: "Operation / Data Analysis",
+    type: "Part Time",
+    company: "Domi Group Buying",
+    startTime: "Aug 2018",
+    endTime: "Nov 2018",
     image:
       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg",
-    backgroundColor: "bg-red-500",
+    backgroundColor: "bg-blue-300",
     skill: [
-      "Neo4j",
-      "JavaScript",
-      "React",
-      "D3",
-      "Tailwind",
-      "Framer Motion",
-      "Chrome DevTools",
-      "Figma",
+      "Data Analysis",
+      "Operational Management",
+      "Excel",
+      "SQL",
+      "Communication Skills",
+      "Problem-Solving Skills",
+      "Time Management",
+      "Attention to Detail",
     ],
     points: [
       {
-        point: "Interface and Interaction Design",
+        point: "Sales Data Analysis",
         description:
-          "Individually designed and implemented 2 complex interfaces, 5 medium inferfaces and over 20 interaction logics, using Figma to enhance design efficiency by 30%, ensuring intuitive and smooth user experiences.",
+          "Analyzed daily sales data using Excel and SQL, identifying trends and insights that led to a 15% increase in overall sales.",
       },
       {
-        title: "Data Visualization Component Development",
+        point: "Operational Efficiency Improvement",
         description:
-          "Developed 25 fully customized React and D3.js data visualization components from scratch, enabling real-time graphical representation of complex data relationships.",
+          "Streamlined order processing and inventory management systems, reducing order fulfillment time by 20%.",
       },
       {
-        title: "Animation and Visual Effects Design",
+        point: "Customer Behavior Insights",
         description:
-          "Individually Designed and implemented over 40 UI animations and visual effects using Framer Motion and other animation libraries, boosting user interaction satisfaction by 80% and enhancing visual appeal. Optimized animation performance by 30% using Google performance analysis tools.",
+          "Conducted customer behavior analysis to understand buying patterns, which informed targeted marketing strategies and improved customer retention by 10%.",
       },
       {
-        title: "Frontend-Backend Integration",
+        point: "Performance Reporting",
         description:
-          "Led frontend operations, successfully conducted over 10 large-scale data integration tests with backend services, ensuring 99% system stability and data accuracy.",
+          "Developed comprehensive performance reports for management, providing actionable insights and data-driven recommendations to support strategic decision-making.",
       },
     ],
-    period: "Feb 2024 - May 2024",
   },
   {
     id: 3,
-    title: "JOB TITTLE",
-    company: "JOB company",
+    title: "Project Manager",
+    type: "Full Time",
+    company: "Zhaoshi Education",
+    startTime: "July 2018",
+    endTime: "May 2019",
     image:
       "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg",
-    backgroundColor: "bg-red-500",
+    backgroundColor: "bg-blue-300",
     skill: [
-      "Neo4j",
-      "JavaScript",
-      "React",
-      "D3",
-      "Tailwind",
-      "Framer Motion",
-      "Chrome DevTools",
-      "Figma",
+      "Student Recruitment",
+      "Teacher Interviewing",
+      "Customer Complaint Handling",
+      "Procurement Management",
+      "Staff Management",
+      "Scheduling",
+      "Time Management",
+      "Communication Skills",
     ],
     points: [
       {
-        point: "Interface and Interaction Design",
+        point: "Student Recruitment",
         description:
-          "Individually designed and implemented 2 complex interfaces, 5 medium inferfaces and over 20 interaction logics, using Figma to enhance design efficiency by 30%, ensuring intuitive and smooth user experiences.",
+          "Successfully recruited over 100 students, enhancing enrollment numbers and contributing to the growth of the institution.",
       },
       {
-        title: "Data Visualization Component Development",
+        point: "Teacher Interviewing",
         description:
-          "Developed 25 fully customized React and D3.js data visualization components from scratch, enabling real-time graphical representation of complex data relationships.",
+          "Conducted interviews and evaluations for potential teachers, ensuring the hiring of qualified and competent staff.",
       },
       {
-        title: "Animation and Visual Effects Design",
+        point: "Customer Complaint Handling",
         description:
-          "Individually Designed and implemented over 40 UI animations and visual effects using Framer Motion and other animation libraries, boosting user interaction satisfaction by 80% and enhancing visual appeal. Optimized animation performance by 30% using Google performance analysis tools.",
+          "Efficiently resolved over 50 customer complaints, improving overall customer satisfaction and retention rates.",
       },
       {
-        title: "Frontend-Backend Integration",
+        point: "Procurement Management",
         description:
-          "Led frontend operations, successfully conducted over 10 large-scale data integration tests with backend services, ensuring 99% system stability and data accuracy.",
+          "Managed the procurement of desks, chairs, and other classroom necessities, ensuring timely and cost-effective acquisitions.",
+      },
+      {
+        point: "Staff Management",
+        description:
+          "Oversaw daily management of teachers, including meal coordination, sleep schedules, and shift planning, ensuring smooth operations and staff well-being.",
+      },
+      {
+        point: "Scheduling",
+        description:
+          "Developed and maintained teacher schedules, optimizing resource allocation and minimizing conflicts.",
       },
     ],
-    period: "Feb 2024 - May 2024",
   },
 ];
 
@@ -210,37 +316,52 @@ function Card({ card, onClick }) {
         <motion.div
           layout
           layoutId={`card-container-${card.id}`}
-          transition={{ easing: "easeInOut" }}
+          transition={{ duration: 0.4, easing: "easeInOut" }}
           initial={{ scale: 1, y: 0 }}
           whileHover={{ scale: 1.001, y: -5 }}
           whileTap={{ scale: 0.99 }}
           className={`relative bg-white  cursor-pointer w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
           onClick={() => onClick(card.id)}
         >
-          <div className="absolute  -left-[30px] -top-[30px] right-[60px]  ">
+          <div className="absolute  -left-[30px] -top-[30px] right-[60px] rounded-[28px]  overflow-hidden aspect-[16/10] ">
             <motion.img
               layout
               src={card.image}
               layoutId={`card-img-${card.id}`}
-              transition={{ easing: "easeInOut" }}
-              className=" rounded-[28px] shadow-lg w-full overflow-hidden  "
+              transition={{ duration: 0.4, easing: "easeInOut" }}
+              className="object-cover object-bottom w-full shadow-lg"
             />
+            <motion.kbd
+              layoutId={"card-type" + card.type + card.company}
+              class=" absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full dark:bg-sky-600 dark:text-sky-100 dark:border-sky-500"
+            >
+              {card.type[0]}
+            </motion.kbd>
           </div>
 
-          <div className="flex flex-col mt-[60%]  items-start justify-start h-[200px] ">
-            <h1 className="font-bold  text-[17px] md:text-[20px] lg:text-[25px] text-gray">
+          <motion.div
+            layout
+            layoutId={`card-context-${card.id}`}
+            transition={{ duration: 0.7, easing: "easeInOut" }}
+            className="flex flex-col mt-[60%]  items-start justify-start h-[130px] "
+          >
+            <h1 className="font-bold  text-[20px] md:text-[25px] lg:text-[28px] text-gray">
               {card.title}
             </h1>
-            <h1 className="flex  text-[17px] md:text-[20px] lg:text-[25px] text-gray">
+            <h2 className="flex  text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
               {card.company}
-            </h1>
+            </h2>
             {/* <h1 className="flex  text-[17px] md:text-[20px] lg:text-[25px] text-gray">
               {card.title}
             </h1> */}
-          </div>
+          </motion.div>
         </motion.div>
       </div>
-      <div className="-mx-[12%] mt-[10vh]  relative flex items-center justify-between">
+      <div className="-mx-[12%] mt-[10vh]  relative flex  items-center justify-between">
+        <div className="absolute -mt-[50px] flex w-full justify-between items-center py-[20px] px-[40px] text-[20px] text-gray-500 font-serif">
+          <div>{card.startTime}</div>
+          <div>{card.endTime}</div>
+        </div>
         <span className={divisionline}></span>
         <div className="absolute right-0 bg-sky-700 rounded-full w-[30px] h-[30px]"></div>
       </div>
@@ -250,6 +371,7 @@ function Card({ card, onClick }) {
 
 function WorkExperience() {
   const lang = useLanguage();
+  const navigate = useNavigate();
   const { Components, setComponents } = useAppContext();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -331,110 +453,119 @@ function WorkExperience() {
           </h2>
         </motion.div>
       </div>
-      <motion.ul
+      <motion.div
         variants={Welcomevisblecontainer}
         initial="hidden"
         whileInView="visible"
         exit={{ opacity: 0 }}
-        viewport={{ once: false, margin: "-60%" }}
+        viewport={{ once: false, margin: "-30%" }}
         style={{
           paddingLeft:
-            "calc(50vw - min(1680px, var(--global-viewport-content-responsive)) / 2)",
+            "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)",
         }}
         className="flex w-full space-x-[80px] overflow-x-auto py-[20vh]  scroll-smooth  scrollbar-hide"
       >
         {cardData.map((card) => (
           <Card card={card} onClick={handleCardClick} />
         ))}
-      </motion.ul>
+      </motion.div>
       {isOpen && (
         <AnimatePresence>
           <motion.div
             onClick={handleClose}
-            className="fixed  inset-0  w-full h-full z-50  bg-gray-900/75 backdrop-blur-[20px]"
+            className="fixed  inset-0 top-0 bottom-0  w-full h-full z-50  bg-gray-900/75 backdrop-blur-[20px]"
           >
             <div className="relative flex items-center justify-center w-full h-full ">
-              <button
-                onClick={handleClose}
-                className="absolute text-[100px] text-gray-800  top-[30px] right-[30px] z-50"
-              >
-                &times;
-              </button>
+              <CtButton
+                type={"x"}
+                key={"close"}
+                position={"top-[30px] right-[30px] ESC  "}
+                btnsize={"60px"}
+                icon={"w-[20px] h-[20px] rotate-0"}
+                className="z-50"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  handleClose();
+                }}
+              />
               <motion.div onClick={(e) => e.stopPropagation()}>
                 <motion.div
+                  layout
                   layoutId={`card-container-${selectedCard.id}`}
-                  // transition={{ duration: 0.7, easing: "easeInOut" }}
-                  className="relative p-[20px] gap-x-[40px] flex-wrap lg:flex w-full gap-y-[30px]  justify-center items-start bg-white shadow-lg  "
+                  transition={{ duration: 0.5, easing: "easeInOut" }}
+                  className="relative p-[20px] md:gap-x-[40px] flex-wrap lg:flex w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-y-auto "
                 >
-                  <motion.img
-                    layoutId={`card-img-${selectedCard.id}`}
-                    src={selectedCard.image}
-                    // transition={{ duration: 0.7, easing: "easeInOut" }}
-                    alt="detail"
-                    className="w-full max-w-[800px] flex "
-                  />
-                  <div className="flex flex-col p-4 w-full max-w-[800px]">
-                    <h1 className="pb-8 font-bold text-7xl">
-                      {selectedCard.title}
-                    </h1>
-                    <a
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      href={selectedCard.link}
-                      className={
-                        selectedCard.link &&
-                        "group cursor-pointer " +
-                          " mt-3 flex justify-between items-start " +
-                          ` `
-                      }
-                    >
-                      <div className={contentContainer}>
-                        <div className="flex-col items-center justify-start md:flex md:flex-row md:justify-between overflow-y-auto scrollbar-hide h-[30%]">
-                          <h3 className={h3}>
-                            {selectedCard.name}
-                            {selectedCard.link && (
-                              <div>
-                                <svg
-                                  class="w-4 h-4 mx-2  -rotate-45"
-                                  aria-hidden="true"
-                                  xmlns="http://www.w3.org/2000/svg"
-                                  fill="none"
-                                  viewBox="0 0 14 10"
-                                >
-                                  <path
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                    stroke-width="2"
-                                    d="M1 5h12m0 0L9 1m4 4L9 9"
-                                  />
-                                </svg>
-                              </div>
-                            )}
-                          </h3>
-                          {/* duration */}
-                          <div className="flex flex-col justify-end overflow-y-auto ">
-                            <p className={timetext}>{selectedCard.period}</p>
-                          </div>
-                        </div>
+                  <div className="w-full max-w-[800px] flex md:p-0 aspect-[4/3] ">
+                    <motion.img
+                      layout
+                      layoutId={`card-img-${selectedCard.id}`}
+                      src={selectedCard.image}
+                      transition={{ duration: 0.7, easing: "easeInOut" }}
+                      alt="detail"
+                      className="object-cover object-bottom w-full"
+                    />
+                  </div>
 
-                        <div className={normaltext + " pl-[20px]"}>
-                          <p> Skill: {selectedCard.skill.join(", ")}</p>
-                          <p> Contribution: </p>
-                          <ul className="pl-5 ">
-                            {selectedCard.points.map((item, index) => (
-                              <li key={index} className="mb-2 text-justify">
-                                <strong className="block mr-2 font-semibold">
-                                  ▸ {item.title} :
-                                </strong>
-                                {item.description}
-                              </li>
-                            ))}
-                          </ul>
+                  <motion.div
+                    layout
+                    layoutId={`card-context-${selectedCard.id}`}
+                    transition={{ duration: 0.7, easing: "easeInOut" }}
+                    className="flex flex-col w-full max-w-[800px] pt-[30px] lg:pt-0"
+                  >
+                    <div className="flex flex-col gap-y-8 ">
+                      <div className="flex flex-wrap items-center gap-8">
+                        <h1 className="font-bold text-7xl">
+                          {selectedCard.title}
+                        </h1>
+                        <motion.kbd
+                          layoutId={
+                            "card-type" +
+                            selectedCard.type +
+                            selectedCard.company
+                          }
+                          class="flex items-center justify-center px-[20px] py-[5px] text-xl font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full dark:bg-sky-600 dark:text-sky-100 dark:border-sky-500"
+                        >
+                          {selectedCard.type}
+                        </motion.kbd>
+                      </div>
+
+                      <div className="flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-y-auto  h-[30%]  pb-8">
+                        <h2 className="flex w-[70%] text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
+                          {selectedCard.company}
+                        </h2>
+                        {/* duration */}
+                        <div className="flex justify-end ">
+                          <p className={timetext}>
+                            {selectedCard.startTime +
+                              " - " +
+                              selectedCard.endTime}
+                          </p>
                         </div>
                       </div>
-                    </a>
-                  </div>
+                    </div>
+
+                    <div className={contentContainer}>
+                      <div className={normaltext}>
+                        <p>
+                          <h3 className="text-[20px] font-black">Skill:</h3>{" "}
+                          {selectedCard.skill.join(",  ")}
+                        </p>
+                        <h3 className="text-[20px] font-black">
+                          Achievements:
+                        </h3>
+                        <ul className="pl-5 ">
+                          {selectedCard.points.map((item, index) => (
+                            <li key={index} className="mb-2 text-justify">
+                              <strong className="block mr-2 font-semibold">
+                                ▸ {item.point}
+                              </strong>
+                              {item.description}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </motion.div>
                 </motion.div>
               </motion.div>
             </div>

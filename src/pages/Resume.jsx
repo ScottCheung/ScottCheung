@@ -42,9 +42,9 @@ export default function Resume() {
           link: "tel:+61 434344292",
         },
         {
-          name: "xianzhe.zhang@student.unsw.edu.au",
+          name: "xianzhe.site@gmail.com",
           icon: <i class="fi fi-rr-envelope"></i>,
-          link: "mailto:xianzhe.zhang@student.unsw.edu.au",
+          link: "mailto:xianzhe.site@gmail.com",
         },
         {
           name: "xianzhe.site",

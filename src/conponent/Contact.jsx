@@ -304,7 +304,7 @@ function Contact({ isTopOut }) {
                     </div>
                     <footer className="flex justify-center my-12 text-white text-base-content">
                       <p>
-                        Copyright © 2023-2024 - All right reserved by Xianzhe
+                        Copyright © 2023-2024 - All rights reserved by Xianzhe
                       </p>
                     </footer>
                   </div>

@@ -53,14 +53,14 @@ function Education({ hideTittle, simpleVer }) {
           >
             <div className="animate__animated animate__rotateIn ">
               <div className="flex justify-center py-6 ">
-                <a
-                  href="#Education"
+                <Link
+                  to="#Education"
                   id="Education"
                   style={{ animationDelay: `${0.4}s` }}
                   className="z-50 flex items-center justify-center w-24 h-24 text-center rounded-full shadow-none bg-gray-200/20 hover:text-white hover:bg-sky-900"
                 >
                   <i className="text-3xl fi fi-br-angle-up "></i>
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>

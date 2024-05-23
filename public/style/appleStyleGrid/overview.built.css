@@ -17286,7 +17286,7 @@ html.text-zoom .card {
 
 .grid-item .essential-card .card-modifier {
   --gallery-side-padding: calc(
-    50vw - min(1680px, var(--global-viewport-content-responsive)) / 2
+    60vw - min(1680px, var(--global-viewport-content-responsive)) / 2
   );
   width: calc(
     50vw - var(--gallery-column-gap) * 0.5 - var(--gallery-side-padding)
@@ -18532,7 +18532,7 @@ html[dir="rtl"] .tabnav-link:after {
 
 .select-gallery-visblecontainer {
   --gallery-side-padding: calc(
-    50vw - min(1680px, var(--global-viewport-content-responsive)) / 2
+    60vw - min(1680px, var(--global-viewport-content-responsive)) / 2
   );
   margin-top: 0px;
   margin-bottom: 0px;
@@ -19023,7 +19023,7 @@ html.reduced-motion
   position: relative;
   margin-top: 0;
   --gallery-side-padding: calc(
-    50vw - min(1680px, var(--global-viewport-content-responsive)) / 2
+    60vw - min(1680px, var(--global-viewport-content-responsive)) / 2
   );
 }
 

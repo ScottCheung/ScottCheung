@@ -29,7 +29,7 @@ const Buttons = ({
     border: 0,
     justifyContent: "center",
     cursor: "pointer",
-    transition: "background-color 100ms linear, color 100ms linear",
+    // transition: "background-color 100ms linear, color 100ms linear",
     backgroundColor: "var(--scrim-background-color)",
     color: "var(--icon-color)",
   };
@@ -47,7 +47,7 @@ const Buttons = ({
           : { opacity: 0.7, transition: { duration: 0.5 } }),
       }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.3, delay: 0.5 }}
+      transition={{ duration: 0.3 }}
       whileTap={{
         ...(disabled ? {} : { scale: 0.9, opacity: 0.5 }),
         transition: { duration: 0.2 },
@@ -66,7 +66,7 @@ const Buttons = ({
       style={buttonStyles}
       disabled={disabled}
     >
-      <div className="text-white px-4 py-2 rounded-full lg:scale-150">
+      <div className="px-4 py-2 text-white rounded-full lg:scale-150">
         <div className="">
           <motion.span
             initial={{ rotate: 90 }}

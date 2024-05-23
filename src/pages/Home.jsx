@@ -20,7 +20,6 @@ import Carousel from "../conponent/Carousel";
 import Database from "../Database.json";
 import { useAppContext } from "../help/ContextManager";
 import { hideRow, bgPic, useLanguage, SelectText } from "../help/helpFunction";
-import WhyMeCard from "../conponent/WhyMeCard";
 
 const bg = Database.PersonalInfo.Welcomebg[0];
 const HomeCarousel = [
@@ -104,7 +103,7 @@ function Home() {
           <a
             key={index}
             href={media.href}
-            className="z-50 flex w-[100vw] h-[100vh] bg-cover bg-center bg-left Carousel-item"
+            className="z-50 flex w-[100vw] h-[100vh] bg-cover bg-center Carousel-item"
             style={{
               backgroundImage: `url(${windowWidth < 768 ? media.minisrc : media.src})`,
             }}
@@ -132,7 +131,6 @@ function Home() {
       <SelfDescribing />
       <WhyMe />
       <Contact />
-      {Components.whymeCard === "visible" && <WhyMeCard />}
     </div>
   );
 }

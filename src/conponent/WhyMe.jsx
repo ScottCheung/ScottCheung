@@ -7,6 +7,7 @@ import More from "./More";
 import { Link, useNavigate } from "react-router-dom";
 import CtButton from "./ctButton";
 import { useAppContext } from "../help/ContextManager";
+import WhyMeCard from "../conponent/WhyMeCard";
 
 const Welcomevisblecontainer =
   Database.Animation.Variant.Welcomevisblecontainer;
@@ -144,6 +145,7 @@ function WhyMe({ hideTittle }) {
                         <div className="icon-card card-visblecontainer ">
                           <div className="card ">
                             <motion.div
+                              layout
                               layoutId={feature.advantage}
                               className={`${
                                 hideTittle
@@ -153,7 +155,7 @@ function WhyMe({ hideTittle }) {
                                         : "bg-gray-900/80"
                                     }  `
                                   : "bg-white/40  -z-30"
-                              }  card-modifier  fixed-width bg-button card-padding has-trigger-button`}
+                              }  card-modifier fixed-width bg-button card-padding has-trigger-button`}
                             >
                               <motion.div className="card-viewport-content">
                                 <div className="icon-card-content">
@@ -270,6 +272,7 @@ function WhyMe({ hideTittle }) {
           </section>
         </AnimatePresence>
       </div>
+      {Components.whymeCard === "visible" && <WhyMeCard />}
     </div>
   );
 
