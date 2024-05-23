@@ -16,7 +16,7 @@ import ContactCate from "./contactCategory";
 import Toast from "./toast";
 
 const updateMonth = 5;
-const updateDay = 19;
+const updateDay = 24;
 const updateTime = [
   `${updateDay} ${new Date(2000, updateMonth - 1, 1).toLocaleString("en-US", { month: "long" })}`,
   `${updateMonth} 月 ${updateDay} 日`,
