@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Database from "../Database.json";
 import { Link, useNavigate } from "react-router-dom";
@@ -122,86 +122,55 @@ const s = [
 ];
 const cardData = [
   {
-    id: 0,
-    title: "Uber Eats Delivery Driver",
-    type: "Part Time",
-    company: "Uber Eats",
-    startTime: "Dec 2022",
-    endTime: "July 2023",
+    id: 3,
+    title: "Project Manager",
+    type: "Full Time",
+    company: "Zhaoshi Education",
+    startTime: "July 2018",
+    endTime: "May 2018",
     image:
-      "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_1116,h_1116/v1670495515/assets/69/2878ac-8a8e-48fe-8e9a-cdcd73a3e263/original/Courier_With_Bags_v2.png",
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg",
     backgroundColor: "bg-blue-300",
     skill: [
+      "Student Recruitment",
+      "Teacher Interviewing",
+      "Customer Complaint Handling",
+      "Procurement Management",
+      "Staff Management",
+      "Scheduling",
       "Time Management",
-      "Customer Service",
-      "Navigation and Route Planning",
-      "Problem-Solving Skills",
-      "Attention to Detail",
       "Communication Skills",
-      "Physical Stamina",
-      "Safety Awareness",
     ],
     points: [
       {
-        point: "Efficient Delivery Management",
+        point: "Student Recruitment",
         description:
-          "Completed over 500 deliveries with an average delivery time of under 30 minutes, ensuring timely and accurate service to customers.",
+          "Successfully recruited over 100 students, enhancing enrollment numbers and contributing to the growth of the institution.",
       },
       {
-        point: "Customer Interaction",
+        point: "Teacher Interviewing",
         description:
-          "Maintained high customer satisfaction through professional and courteous communication, resolving any issues promptly to ensure positive experiences.By editing some messages in advance, it improves the response time of interaction with customers and significantly increases user satisfaction.",
+          "Conducted interviews and evaluations for potential teachers, ensuring the hiring of qualified and competent staff.",
       },
       {
-        point: "Route Optimization",
+        point: "Customer Complaint Handling",
         description:
-          "Utilized navigation tools and local knowledge to optimize delivery routes, reducing costs and improving delivery efficiency.",
+          "Efficiently resolved over 50 customer complaints, improving overall customer satisfaction and retention rates.",
       },
       {
-        point: "Safety and Compliance",
+        point: "Procurement Management",
         description:
-          "Strictly adhered to traffic laws and safety guidelines, achieving a record of zero accidents or violations during the entire tenure.",
-      },
-    ],
-  },
-  {
-    id: 1,
-    title: "Financial Assistant",
-    type: "Part Time",
-    company:
-      "Southwest University of Science and Technology Analytical Testing Centre",
-    startTime: "Mar 2021",
-    endTime: "Feb 2022",
-    image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg",
-    backgroundColor: "bg-blue-300",
-    skill: [
-      "Financial Auditing",
-      "Contract Management",
-      "Compliance Review",
-      "Business Process Automation",
-      "Report Analysis",
-      "Time Management",
-      "Attention to Detail",
-      "Communication Skills",
-      "Problem-Solving Skills",
-      "Office Automation Software Proficiency",
-    ],
-    points: [
-      {
-        point: "Achieving Excellence in Business Audits",
-        description:
-          "Responsible for auditing the invoices of the business office up to RMB1,000,000, drawing up contracts up to RMB100,000, compliance review and signing. ",
+          "Managed the procurement of desks, chairs, and other classroom necessities, ensuring timely and cost-effective acquisitions.",
       },
       {
-        point: "Streamlined Business Audit Processes",
+        point: "Staff Management",
         description:
-          "The business is responsible for the assessment and audit of the business system and occasional audits of the accounts flow according to the monthly and annual reports of the business. ",
+          "Oversaw daily management of teachers, including meal coordination, sleep schedules, and shift planning, ensuring smooth operations and staff well-being.",
       },
       {
-        point: "Efficiency Improvement through Office Automation Software",
+        point: "Scheduling",
         description:
-          "During the course of the work, it was found that the business progress audit was a single simple and time-consuming task, and with the help of office automation software, the business audit workload of this position for a year was completed in half a day, receiving high praise and commendation from the Business Office Director.",
+          "Developed and maintained teacher schedules, optimizing resource allocation and minimizing conflicts.",
       },
     ],
   },
@@ -249,55 +218,86 @@ const cardData = [
     ],
   },
   {
-    id: 3,
-    title: "Project Manager",
-    type: "Full Time",
-    company: "Zhaoshi Education",
-    startTime: "July 2018",
-    endTime: "May 2019",
+    id: 1,
+    title: "Financial Assistant",
+    type: "Part Time",
+    company:
+      "Southwest University of Science and Technology Analytical Testing Centre",
+    startTime: "Mar 2021",
+    endTime: "Feb 2022",
     image:
-      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg",
+      "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg",
     backgroundColor: "bg-blue-300",
     skill: [
-      "Student Recruitment",
-      "Teacher Interviewing",
-      "Customer Complaint Handling",
-      "Procurement Management",
-      "Staff Management",
-      "Scheduling",
+      "Financial Auditing",
+      "Contract Management",
+      "Compliance Review",
+      "Business Process Automation",
+      "Report Analysis",
       "Time Management",
+      "Attention to Detail",
       "Communication Skills",
+      "Problem-Solving Skills",
+      "Office Automation Software Proficiency",
     ],
     points: [
       {
-        point: "Student Recruitment",
+        point: "Achieving Excellence in Business Audits",
         description:
-          "Successfully recruited over 100 students, enhancing enrollment numbers and contributing to the growth of the institution.",
+          "Responsible for auditing the invoices of the business office up to RMB1,000,000, drawing up contracts up to RMB100,000, compliance review and signing. ",
       },
       {
-        point: "Teacher Interviewing",
+        point: "Streamlined Business Audit Processes",
         description:
-          "Conducted interviews and evaluations for potential teachers, ensuring the hiring of qualified and competent staff.",
+          "The business is responsible for the assessment and audit of the business system and occasional audits of the accounts flow according to the monthly and annual reports of the business. ",
       },
       {
-        point: "Customer Complaint Handling",
+        point: "Efficiency Improvement through Office Automation Software",
         description:
-          "Efficiently resolved over 50 customer complaints, improving overall customer satisfaction and retention rates.",
+          "During the course of the work, it was found that the business progress audit was a single simple and time-consuming task, and with the help of office automation software, the business audit workload of this position for a year was completed in half a day, receiving high praise and commendation from the Business Office Director.",
+      },
+    ],
+  },
+  {
+    id: 0,
+    title: "Uber Eats Delivery Driver",
+    type: "Part Time",
+    company: "Uber Eats",
+    startTime: "Dec 2022",
+    endTime: "July 2023",
+    image:
+      "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_1116,h_1116/v1670495515/assets/69/2878ac-8a8e-48fe-8e9a-cdcd73a3e263/original/Courier_With_Bags_v2.png",
+    backgroundColor: "bg-blue-300",
+    skill: [
+      "Time Management",
+      "Customer Service",
+      "Navigation and Route Planning",
+      "Problem-Solving Skills",
+      "Attention to Detail",
+      "Communication Skills",
+      "Physical Stamina",
+      "Safety Awareness",
+    ],
+    points: [
+      {
+        point: "Efficient Delivery Management",
+        description:
+          "Completed over 500 deliveries with an average delivery time of under 30 minutes, ensuring timely and accurate service to customers.",
       },
       {
-        point: "Procurement Management",
+        point: "Customer Interaction",
         description:
-          "Managed the procurement of desks, chairs, and other classroom necessities, ensuring timely and cost-effective acquisitions.",
+          "Maintained high customer satisfaction through professional and courteous communication, resolving any issues promptly to ensure positive experiences.By editing some messages in advance, it improves the response time of interaction with customers and significantly increases user satisfaction.",
       },
       {
-        point: "Staff Management",
+        point: "Route Optimization",
         description:
-          "Oversaw daily management of teachers, including meal coordination, sleep schedules, and shift planning, ensuring smooth operations and staff well-being.",
+          "Utilized navigation tools and local knowledge to optimize delivery routes, reducing costs and improving delivery efficiency.",
       },
       {
-        point: "Scheduling",
+        point: "Safety and Compliance",
         description:
-          "Developed and maintained teacher schedules, optimizing resource allocation and minimizing conflicts.",
+          "Strictly adhered to traffic laws and safety guidelines, achieving a record of zero accidents or violations during the entire tenure.",
       },
     ],
   },
@@ -383,10 +383,14 @@ function WorkExperience() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-    // threshold: 0.75,
-  });
+  const containerRef = useRef(null);
+
+  const scrollToRight = () => {
+    if (containerRef.current) {
+      containerRef.current.scrollLeft = containerRef.current.scrollWidth;
+    }
+  };
+
   const [selectedCard, setSelectedCard] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -454,19 +458,21 @@ function WorkExperience() {
         </motion.div>
       </div>
       <motion.div
+        ref={containerRef}
         variants={Welcomevisblecontainer}
         initial="hidden"
         whileInView="visible"
         exit={{ opacity: 0 }}
         viewport={{ once: false, margin: "-30%" }}
+        onAnimationComplete={scrollToRight}
         style={{
-          paddingLeft:
+          paddingRight:
             "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)",
         }}
-        className="flex w-full space-x-[80px] overflow-x-auto py-[20vh]  scroll-smooth  scrollbar-hide"
+        className="flex w-full space-x-[80px] overflow-x-auto py-[20vh] pl-[200px] scroll-smooth scrollbar-hide"
       >
         {cardData.map((card) => (
-          <Card card={card} onClick={handleCardClick} />
+          <Card key={card.id} card={card} onClick={handleCardClick} />
         ))}
       </motion.div>
       {isOpen && (

@@ -115,7 +115,7 @@ function Education({ hideTittle, simpleVer }) {
                     transition={StagerFadeInUp}
                     whileHover={{ scale: 1.001 }}
                     whileTap={{ scale: 0.99 }}
-                    className={`gallery-item grid-item current snap-start`}
+                    className={`gallery-item grid-item current snap-start rounded-[28px]`}
                   >
                     <div className="icon-card card-visblecontainer ">
                       <motion.div className="card " tabIndex={index}>

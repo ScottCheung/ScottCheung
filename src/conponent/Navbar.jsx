@@ -191,8 +191,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     // }}
                     className="z-50 flex"
                   >
-                    <Link
-                      to="/info"
+                    <a
+                      href="/info"
                       style={{ animationDelay: `${0.5}s` }}
                       classname="animate__animated animate__fadeInRight animate_slow"
                     >
@@ -261,7 +261,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           </motion.div>
                         </div>
                       </div>
-                    </Link>
+                    </a>
                   </motion.button>
                   <AnimatePresence>
                     {ShowProfile && (
@@ -497,8 +497,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               }}
                               onMouseEnter={() => setSelectedTab(item.name[0])}
                             >
-                              <Link
-                                to={item.href}
+                              <a
+                                href={item.href}
                                 key={index}
                                 style={{
                                   animationDelay: `${index * 0.2}s`,
@@ -543,7 +543,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 >
                                   {item.name[lang]}
                                 </div>
-                              </Link>
+                              </a>
                             </motion.button>
                           ))}
                         </motion.div>
