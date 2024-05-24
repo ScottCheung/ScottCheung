@@ -320,10 +320,10 @@ function Card({ card, onClick }) {
           initial={{ scale: 1, y: 0 }}
           whileHover={{ scale: 1.001, y: -5 }}
           whileTap={{ scale: 0.99 }}
-          className={`relative bg-white  cursor-pointer w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
+          className={`relative bg-white  cursor-pointer w-[250px] md:w-[300px] lg:w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
           onClick={() => onClick(card.id)}
         >
-          <div className="absolute  -left-[30px] -top-[30px] right-[60px] rounded-[28px]  overflow-hidden aspect-[16/10] ">
+          <div className="absolute  -left-[30px] -top-[30px] right-[60px] rounded-[28px]  overflow-hidden aspect-[16/9] ">
             <motion.img
               layout
               src={card.image}
@@ -357,7 +357,7 @@ function Card({ card, onClick }) {
           </motion.div>
         </motion.div>
       </div>
-      <div className="-mx-[12%] mt-[10vh]  relative flex  items-center justify-between">
+      <div className="-mx-[18%] mt-[10vh]  relative flex  items-center justify-between">
         <div className="absolute -mt-[50px] flex w-full justify-between items-center py-[20px] px-[40px] text-[20px] text-gray-500 font-serif">
           <div>{card.startTime}</div>
           <div>{card.endTime}</div>
