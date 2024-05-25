@@ -14,6 +14,7 @@ import SingleWork from "./pages/SingleWork.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import { AppContextProvider } from "./help/ContextManager";
 import Resume from "./pages/Resume.jsx";
+import AutoText from "./pages/AutoText/AutoText.jsx";
 
 const router = createBrowserRouter([
   {
@@ -84,6 +85,10 @@ const router = createBrowserRouter([
   {
     path: "/resume/:resume",
     element: <Resume />,
+  },
+  {
+    path: "/autotext",
+    element: <AutoText />,
   },
 ]);
 
