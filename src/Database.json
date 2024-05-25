@@ -299,7 +299,7 @@
         "href": "/major/ArtificalInteliigence",
         "type": ["Master degree", "硕士学位"],
         "logo": "/Graphs/study/unsw.png",
-        "banner": "https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png",
+        "banner": "https://3o.hk/images/2024/05/25/unsw-students-banner.png",
         "unides": [
           [
             "UNSW Sydney is Australia’s best university for career outcomes and second overall according to a new ranking published by The Australian Financial Review (AFR) today. UNSW ranked first for ‘career outcomes’, second for ‘research’ and for ‘global reputation’ and second university overall in Australia.",
@@ -719,7 +719,7 @@
           ["Bachelor", "Key university"],
           ["学士", "重点大学"]
         ],
-        "web": "http://www.english.swust.edu.cn/main.htm",
+        "web": "https://english.swust.edu.cn/",
         "majorweb": "https://en.wikipedia.org/wiki/Functional_materials",
         "time": ["Sep 4, 2017 - Sep 6, 2021", "2017.09.04 - 2021.09.04"],
         "description": [
@@ -1040,7 +1040,7 @@
           ["Bachelor", "Key university"],
           ["学士", "重点大学"]
         ],
-        "web": "http://www.english.swust.edu.cn/main.htm",
+        "web": "http://www.english.swust.edu.cn",
         "majorweb": "https://en.wikipedia.org/wiki/Business_administration",
         "time": ["Sep 4, 2019 - Sep 6, 2021", "2019.09.04 - 2021.09.06"],
         "description": [

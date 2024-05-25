@@ -111,13 +111,13 @@ export default function Example() {
                   <div className="flex flex-row items-center justify-center">
                     <img
                       className="w-[130px] px-7"
-                      src="https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/817d5684-7ac9-491b-8752-60cfa0809adc.png"
-                      alt=""
+                      src="https://3o.hk/images/2024/05/25/817d5684-7ac9-491b-8752-60cfa0809adc.png"
+                      alt="swustPng"
                     />
                     <img
                       className="w-[400px] h-[130px] py-12 px-7"
-                      src="https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/ea60b2ce-3079-4e5f-ad4d-440410ae50af.png"
-                      alt=""
+                      src="https://3o.hk/images/2024/05/25/ea60b2ce-3079-4e5f-ad4d-440410ae50af.png"
+                      alt="swustName"
                     />
                   </div>
                 </a>
@@ -130,14 +130,14 @@ export default function Example() {
                   style={{
                     top: `calc(${navbarHeight}px + 10px)`,
                     backgroundImage:
-                      "url(https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png)",
+                      "url(https://3o.hk/images/2024/05/25/unsw-students-banner.png)",
                   }}
                 >
                   <div className="flex flex-row items-center justify-center">
                     <img
                       className="w-[110px] h-auto"
-                      src="https://www.edigitalagency.com.au/wp-content/uploads/new-UNSW-logo-png-vertical-crest.png"
-                      alt=""
+                      src="https://3o.hk/images/2024/05/25/logo.png"
+                      alt="UNSW"
                     />
                   </div>
                 </a>

@@ -48,7 +48,7 @@ const HomeCarousel = [
     href: "/life",
     type: "image",
     duration: null,
-    minisrc: "https://3o.hk/images/2024/01/21/IMG_0875.png",
+    minisrc: "https://3o.hk/images/2024/05/25/IMG_08752.png",
     src: "https://3o.hk/images/2024/01/21/IMG_0875.png",
   },
   {
