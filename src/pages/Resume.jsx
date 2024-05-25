@@ -406,7 +406,7 @@ export default function Resume() {
   }
 
   return (
-    <div className="flex bg-white">
+    <div className="flex w-full bg-white md:justify-center">
       {!printMode && <Navbar />}
       {!printMode && <DockerBar />}
       <motion.div
