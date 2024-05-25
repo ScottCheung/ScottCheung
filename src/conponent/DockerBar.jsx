@@ -248,7 +248,7 @@ function DockerBar(props) {
         </Transition.Child>
 
         <div className="fixed inset-0 z-10 w-screen scrollbar-hide">
-          <div className="flex items-start justify-center min-h-full p-4 text-center md:items-center sm:p-0 ">
+          <div className="flex items-start justify-center w-full min-h-full p-4 text-center md:items-center sm:p-0 ">
             <Transition.Child
               as={Fragment}
               enter="transition ease-out duration-500"
@@ -258,10 +258,10 @@ function DockerBar(props) {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-0"
             >
-              <Dialog.Panel className="animate__animated animate__zoomIn relative transform overflow-hidden rounded-[28px] bg-white text-left shadow-xl transition-all my-8 w-full md:w-auto md:max-w-[50%]">
+              <Dialog.Panel className="animate__animated animate__zoomIn relative transform overflow-hidden rounded-[28px] bg-white text-left shadow-xl transition-all my-8 w-full  md:max-w-[800px]">
                 <div className=" p-[14px] md:p-[40px]">
-                  <div className="sm:flex sm:items-start ">
-                    <div className="text-center sm:ml-4 sm:mt-0 md:text-left">
+                  <div className="flex items-start">
+                    <div className="text-center sm:ml-4 sm:mt-0 md:text-left w-full max-h-[100vh] overflow-y-auto">
                       <div className="flex justify-between w-full ">
                         <Dialog.Title
                           as="h3"
@@ -387,7 +387,7 @@ function DockerBar(props) {
                           />
                         </>
                         <div className="flex flex-wrap items-center justify-start md:justify-between">
-                          <p className="flex ">
+                          <p className="flex text-left">
                             Your Final Color is{" "}
                             {" " +
                               EmphasizeColorLists[ResumeView.forceColor] +
