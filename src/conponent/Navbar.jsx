@@ -910,9 +910,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           key={index}
                           href={item.id}
                           style={{ animationDelay: `${index * 0.17}s` }}
-                          className={`flex  w-full h-full  justify-center animate__zoomIn ${
-                            isTop ? "text-black  " : "text-gray-900  "
-                          } ${index === 0 ? "rounded-s-[14px]" : ""} ${
+                          className={`flex  w-full h-full  justify-center animate__zoomIn ${index === 0 ? "rounded-s-[14px]" : ""} ${
                             index === Workbench.length - 1
                               ? "rounded-e-[14px]"
                               : ""
@@ -929,16 +927,25 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             <div className="content-center py-2 my-3 text-center icon">
                               {isTop ? (
                                 <i
-                                  className={` flex fi justify-center  py-1 text-[15px]  ${item.logo}`}
+                                  className={` flex fi justify-center  py-1 ${
+                                    isTop &&
+                                    " pt-[20px] text-[14px]  md:text-[17px] lg:text-[25px]"
+                                  }  ${item.logo}`}
                                 ></i>
                               ) : (
                                 <></>
                               )}
-                              <div className="w-full h-full flex text-center justify-center lg:text-full text-[15px]">
+                              <div
+                                className={`flex justify-center w-full h-full text-center lg:text-full ${
+                                  isTop
+                                    ? "  pb-[20px] text-[14px]  md:text-[17px] lg:text-[20px]"
+                                    : "  "
+                                } `}
+                              >
                                 {!isTop ? (
                                   windowWidth > 784 && (
                                     <i
-                                      className={` flex fi justify-center mt-1 text-[10px] sm:text-[10px] md:text-[15px] lg:text-[18px] mr-2 ${item.logo}`}
+                                      className={` flex fi justify-center mt-1  mr-2 ${item.logo}`}
                                     ></i>
                                   )
                                 ) : (
