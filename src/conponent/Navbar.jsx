@@ -901,8 +901,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         isExpanded ? "my-8" : ``
                       }  ${
                         isTop
-                          ? "backdrop-blur-md  bg-sky-200/30  shadow-xl animate__slideInUp mt-[50px] rounded-[14px]"
-                          : `border divide-x  border-gray-900  divide-gray-900 animate__zoomIn rounded-full `
+                          ? "backdrop-blur-md   bg-white/70   shadow-xl animate__slideInUp mt-[50px] rounded-[14px]"
+                          : `border divide-x  bg-sky-200/30  divide-gray-900 animate__zoomIn rounded-full `
                       }`}
                     >
                       {Workbench.map((item, index) => (
