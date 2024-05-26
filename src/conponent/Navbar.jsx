@@ -897,12 +897,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     }`}
                   >
                     <motion.div
-                      className={`w-full animate__animated   justify-between flex rounded-full items-center ${
+                      className={`w-full animate__animated   justify-between flex items-center ${
                         isExpanded ? "my-8" : ``
                       }  ${
                         isTop
-                          ? "backdrop-blur-md bg-white/50 shadow-xl animate__slideInUp"
-                          : `border divide-x  border-gray-900  divide-gray-900 animate__zoomIn`
+                          ? "backdrop-blur-md  bg-sky-200/30  shadow-xl animate__slideInUp mt-[50px] rounded-[14px]"
+                          : `border divide-x  border-gray-900  divide-gray-900 animate__zoomIn rounded-full `
                       }`}
                     >
                       {Workbench.map((item, index) => (
@@ -912,9 +912,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           style={{ animationDelay: `${index * 0.17}s` }}
                           className={`flex  w-full h-full  justify-center animate__zoomIn ${
                             isTop ? "text-black  " : "text-gray-900  "
-                          } ${index === 0 ? "rounded-s-full" : ""} ${
+                          } ${index === 0 ? "rounded-s-[14px]" : ""} ${
                             index === Workbench.length - 1
-                              ? "rounded-e-full"
+                              ? "rounded-e-[14px]"
                               : ""
                           } animate__animated  opacity-80 hover:opacity-100 font-medium hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}
                         >
