@@ -794,7 +794,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 {/* 二级NavbarLocation */}
                 {(selectedTab == "Home" || isExpanded == true) && (
                   <motion.div
-                    onMouseLeave={() => setSelectedTab(null)}
                     key={"isExpanded"}
                     layoutId="isExp"
                     // transition={{ type: 'spring', duration: 1 }}
@@ -874,7 +873,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     transition={{ duration: 0.5 }}
                     layout
                     layoutId="isExp"
-                    onMouseLeave={() => setSelectedTab(null)}
                     className={`${
                       isTop ? "backdrop-blur-md bg-white/70" : " bg-sky-200/20 "
                     } rounded-[28px]  `}
@@ -884,7 +882,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 )}
                 {selectedTab == "Workbench" && (
                   <motion.div
-                    onMouseLeave={() => setSelectedTab(null)}
                     key={"isExpanded"}
                     layoutId="isExp"
                     initial={{ opacity: 0, scale: 0 }}
@@ -901,8 +898,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         isExpanded ? "my-8" : ``
                       }  ${
                         isTop
-                          ? "backdrop-blur-md   bg-white/70   shadow-xl animate__slideInUp mt-[50px] rounded-[14px]"
-                          : `border divide-x  bg-sky-200/30  divide-gray-900 animate__zoomIn rounded-full `
+                          ? "backdrop-blur-md   bg-white/70   shadow-xl animate__slideInUp mt-[50px] rounded-full"
+                          : `border divide-x  bg-sky-200/30 mt-[50px]  divide-gray-900 animate__zoomIn rounded-full border-gray-700 `
                       }`}
                     >
                       {Workbench.map((item, index) => (
@@ -910,11 +907,11 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           key={index}
                           href={item.id}
                           style={{ animationDelay: `${index * 0.17}s` }}
-                          className={`flex  w-full h-full  justify-center animate__zoomIn ${index === 0 ? "rounded-s-[14px]" : ""} ${
+                          className={`flex  w-full h-full  justify-center animate__zoomIn ${index === 0 ? "rounded-s-full" : ""} ${
                             index === Workbench.length - 1
-                              ? "rounded-e-[14px]"
+                              ? "rounded-e-full"
                               : ""
-                          } animate__animated  opacity-80 hover:opacity-100 font-medium hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}
+                          } animate__animated  opacity-80 hover:opacity-100 font-medium hover:bg-sky-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}
                         >
                           <motion.div
                             layout
