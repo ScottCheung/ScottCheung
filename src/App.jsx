@@ -15,6 +15,7 @@ import Gallery from "./pages/Gallery.jsx";
 import { AppContextProvider } from "./help/ContextManager";
 import Resume from "./pages/Resume.jsx";
 import AutoText from "./pages/AutoText/AutoText.jsx";
+import Login from "./pages/AutoText/Login.jsx";
 
 const router = createBrowserRouter([
   {

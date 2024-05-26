@@ -809,7 +809,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     }`}
                   >
                     <motion.div
-                      className={`w-full animate__animated   justify-between flex rounded-full items-center ${
+                      className={`w-full animate__animated   justify-between flex rounded-[28px] items-center ${
                         isExpanded ? "my-8" : ``
                       }  ${
                         isTop
@@ -824,9 +824,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           style={{ animationDelay: `${index * 0.17}s` }}
                           className={`flex  w-full h-full  justify-center animate__zoomIn ${
                             isTop ? "text-black  " : "text-gray-900  "
-                          } ${index === 0 ? "rounded-s-full" : ""} ${
+                          } ${index === 0 ? "rounded-s-[28px]" : ""} ${
                             index === navLocation.length - 1
-                              ? "rounded-e-full"
+                              ? "rounded-e-[28px]"
                               : ""
                           } animate__animated  opacity-80 hover:opacity-100 font-medium hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}
                         >
@@ -898,7 +898,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         isExpanded ? "my-8" : ``
                       }  ${
                         isTop
-                          ? "backdrop-blur-md   bg-white/70   shadow-xl animate__slideInUp mt-[50px] rounded-full"
+                          ? "backdrop-blur-md   bg-white/70   shadow-xl animate__slideInUp mt-[50px] rounded-[28px]"
                           : `border divide-x  bg-sky-200/30 mt-[50px]  divide-gray-900 animate__zoomIn rounded-full border-gray-700 `
                       }`}
                     >
@@ -907,9 +907,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           key={index}
                           href={item.id}
                           style={{ animationDelay: `${index * 0.17}s` }}
-                          className={`flex  w-full h-full  justify-center animate__zoomIn ${index === 0 ? "rounded-s-full" : ""} ${
+                          className={`flex  w-full h-full  justify-center animate__zoomIn ${index === 0 ? "rounded-s-[28px]" : ""} ${
                             index === Workbench.length - 1
-                              ? "rounded-e-full"
+                              ? "rounded-e-[28px]"
                               : ""
                           } animate__animated  opacity-80 hover:opacity-100 font-medium hover:bg-sky-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}
                         >
@@ -935,7 +935,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               <div
                                 className={`flex justify-center w-full h-full text-center lg:text-full ${
                                   isTop
-                                    ? "  pb-[20px] text-[14px]  md:text-[17px] lg:text-[20px]"
+                                    ? "  pb-[20px] text-[14px]  md:text-[15px] lg:text-[18px]"
                                     : "  "
                                 } `}
                               >
