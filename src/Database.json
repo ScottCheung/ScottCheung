@@ -14,7 +14,7 @@
         "href": "/",
         "icon": "fi-rr-home-heart",
         "des": ["Key information here ~", "主要信息都在这里 ~"],
-        "expression": "❤٩ (◕‿◕｡)۶"
+        "expression": "❤٩ (◕‿◕｡)۶ 🏠"
       },
 
       {
@@ -22,21 +22,28 @@
         "href": "/resume",
         "icon": "fi-rr-memo-pad",
         "des": ["Here is my resume ~", "这里是我的简历~"],
-        "expression": "(｡◕‿◕｡)"
+        "expression": "(｡◕‿◕｡) 📧"
       },
       {
         "name": ["Life", "生活"],
         "href": "/life",
         "icon": "fi-rr-mountains",
         "des": ["It records my wonderful life ~", "我的精彩生活 ~"],
-        "expression": "(＾◡＾)"
+        "expression": "(＾◡＾) 🌄"
+      },
+      {
+        "name": ["Workbench", "工作台"],
+        "href": "/login",
+        "icon": "fi fi-sr-lock",
+        "des": [" Personal Workbench  ~ ", " 个人工作台 ~ "],
+        "expression": "(⌐■_■) 💻"
       },
       {
         "name": ["Contact", "联络"],
         "href": "/Contact",
         "icon": "fi-rr-following",
         "des": [" You can contact me by these ways ~ ", " 您可以这样找到我 ~ "],
-        "expression": "(｡♥‿♥｡)"
+        "expression": "(｡♥‿♥｡) ☎️"
       }
     ],
     "Location": [
@@ -74,6 +81,23 @@
         "logo": "fi-rr-lightbulb-on",
         "color1": "from-indigo-500",
         "color2": "to-pink-500"
+      }
+    ],
+    "workbench": [
+      {
+        "id": "/Coverletters",
+        "label": ["Coverletters", "求职信"],
+        "logo": "fi-rr-book"
+      },
+      {
+        "id": "/rentmsg",
+        "label": ["House Rental Message", "租房讯息"],
+        "logo": "fi-rr-user"
+      },
+      {
+        "id": "/networkingmsg",
+        "label": ["NetWorking", "互联"],
+        "logo": "fi-rr-tool-box"
       }
     ],
 

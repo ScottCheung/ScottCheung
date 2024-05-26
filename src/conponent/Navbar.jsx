@@ -24,6 +24,7 @@ const updateTime = [
 
 const navbarItem = data.Navbar.navbarItem;
 const navLocation = data.Navbar.Location;
+const Workbench = data.Navbar.workbench;
 const updateLog = data.Navbar.UpdateLog;
 
 function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
@@ -879,6 +880,77 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     } rounded-[28px]  `}
                   >
                     <LifeCate />
+                  </motion.div>
+                )}
+                {selectedTab == "Workbench" && (
+                  <motion.div
+                    onMouseLeave={() => setSelectedTab(null)}
+                    key={"isExpanded"}
+                    layoutId="isExp"
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0 }}
+                    className={`w-full my-[20px] ${
+                      !isExpanded && !selectedTab == "Workbench"
+                        ? "hidden items-center justify-center"
+                        : ` items-center justify-center `
+                    }`}
+                  >
+                    <motion.div
+                      className={`w-full animate__animated   justify-between flex rounded-full items-center ${
+                        isExpanded ? "my-8" : ``
+                      }  ${
+                        isTop
+                          ? "backdrop-blur-md bg-white/50 shadow-xl animate__slideInUp"
+                          : `border divide-x  border-gray-900  divide-gray-900 animate__zoomIn`
+                      }`}
+                    >
+                      {Workbench.map((item, index) => (
+                        <a
+                          key={index}
+                          href={item.id}
+                          style={{ animationDelay: `${index * 0.17}s` }}
+                          className={`flex  w-full h-full  justify-center animate__zoomIn ${
+                            isTop ? "text-black  " : "text-gray-900  "
+                          } ${index === 0 ? "rounded-s-full" : ""} ${
+                            index === Workbench.length - 1
+                              ? "rounded-e-full"
+                              : ""
+                          } animate__animated  opacity-80 hover:opacity-100 font-medium hover:bg-gray-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}
+                        >
+                          <motion.div
+                            layout
+                            style={{ borderRadius: 20 }}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            whileFocus={{ scale: 1 }}
+                            className="w-full"
+                          >
+                            <div className="content-center py-2 my-3 text-center icon">
+                              {isTop ? (
+                                <i
+                                  className={` flex fi justify-center  py-1 text-[15px]  ${item.logo}`}
+                                ></i>
+                              ) : (
+                                <></>
+                              )}
+                              <div className="w-full h-full flex text-center justify-center lg:text-full text-[15px]">
+                                {!isTop ? (
+                                  windowWidth > 784 && (
+                                    <i
+                                      className={` flex fi justify-center mt-1 text-[10px] sm:text-[10px] md:text-[15px] lg:text-[18px] mr-2 ${item.logo}`}
+                                    ></i>
+                                  )
+                                ) : (
+                                  <></>
+                                )}{" "}
+                                {item.label[lang]}
+                              </div>
+                            </div>
+                          </motion.div>
+                        </a>
+                      ))}
+                    </motion.div>
                   </motion.div>
                 )}
                 {selectedTab == "Contact" && (
