@@ -16,7 +16,7 @@ import ContactCate from "./contactCategory";
 import Toast from "./toast";
 
 const updateMonth = 5;
-const updateDay = 24;
+const updateDay = 27;
 const updateTime = [
   `${updateDay} ${new Date(2000, updateMonth - 1, 1).toLocaleString("en-US", { month: "long" })}`,
   `${updateMonth} 月 ${updateDay} 日`,
@@ -949,6 +949,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                   <></>
                                 )}{" "}
                                 {item.label[lang]}
+                                <i className="mt-1 ml-2 text-[10px] fi fi-sr-lock"></i>
                               </div>
                             </div>
                           </motion.div>

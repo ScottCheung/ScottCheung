@@ -34,7 +34,7 @@
       {
         "name": ["Workbench", "工作台"],
         "href": "/login",
-        "icon": "fi fi-sr-lock",
+        "icon": "fi fi-rr-corporate-alt",
         "des": [" Personal Workbench  ~ ", " 个人工作台 ~ "],
         "expression": "(⌐■_■) 💻"
       },
