@@ -949,7 +949,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                   <></>
                                 )}{" "}
                                 {item.label[lang]}
-                                <i className="mt-1 ml-2 text-[10px] fi fi-sr-lock"></i>
+                                <i
+                                  className={`mt-1 ml-2 text-[15px] ${item.status} `}
+                                ></i>
                               </div>
                             </div>
                           </motion.div>

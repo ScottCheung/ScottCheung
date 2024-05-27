@@ -87,17 +87,20 @@
       {
         "id": "/coverletters",
         "label": ["Coverletters", "求职信"],
-        "logo": "fi-rr-book"
+        "logo": "fi-rr-book",
+        "status": "fi fi-sr-lock"
       },
       {
         "id": "/rentmsg",
         "label": ["House Rental Message", "租房讯息"],
-        "logo": "fi-rr-user"
+        "logo": "fi-rr-user",
+        "status": "fi fi-sr-unlock"
       },
       {
         "id": "/networkingmsg",
         "label": ["NetWorking", "互联"],
-        "logo": "fi-rr-tool-box"
+        "logo": "fi-rr-tool-box",
+        "status": "fi fi-sr-eye-crossed"
       }
     ],
 
