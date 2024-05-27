@@ -186,13 +186,7 @@ function Skill() {
                         {lang == 0 && "Front-end"}
                         {lang == 1 && "前端"}
                       </h3>
-                      <p
-                        style={{
-                          background:
-                            "linear-gradient(135deg, rgba(0, 100, 0, 1), rgba(0, 0, 100, 1))",
-                        }}
-                        className="text-transparent tile-copy from-green-700 to-purple-500 bg-gradient-to-br bg-clip-text"
-                      >
+                      <p className="text-transparent tile-copy from-red-500 to-red-700 bg-gradient-to-br bg-clip-text">
                         {lang == 0 && (
                           <motion.div>
                             <p className="py-10  text-[17px] ">
