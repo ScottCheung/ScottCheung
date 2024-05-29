@@ -85,6 +85,12 @@
     ],
     "workbench": [
       {
+        "id": "/networkingmsg",
+        "label": ["NetWorking", "互联"],
+        "logo": "fi-rr-tool-box",
+        "status": "fi fi-sr-eye-crossed"
+      },
+      {
         "id": "/coverletters",
         "label": ["Coverletters", "求职信"],
         "logo": "fi-rr-book",
@@ -93,17 +99,16 @@
       {
         "id": "/rentmsg",
         "label": ["House Rental Message", "租房讯息"],
-        "logo": "fi-rr-user",
-        "status": "fi fi-sr-unlock"
+        "logo": "fi fi-rr-house-building",
+        "status": "fi fi-sr-lock"
       },
       {
-        "id": "/networkingmsg",
-        "label": ["NetWorking", "互联"],
-        "logo": "fi-rr-tool-box",
-        "status": "fi fi-sr-eye-crossed"
+        "id": "/table2json",
+        "label": ["Data converter", "数据转换"],
+        "logo": "fi fi-rr-database",
+        "status": "fi fi-sr-unlock"
       }
     ],
-
     "UpdateLog": [
       {
         "version": "7.1.4",
@@ -2688,88 +2693,88 @@
       [
         {
           "label": "fi-sr-id-card-clip-alt",
-          "icon": "Xianzhe Zhang",
-          "cont": "Official Name"
+          "cont": "Official Name",
+          "icon": "Xianzhe Zhang"
         },
         {
           "label": "fi-sr-id-card-clip-alt",
-          "icon": "Scott Zhang",
-          "cont": "Preferred Name"
+          "cont": "Preferred Name",
+          "icon": "Scott Zhang"
         },
         {
           "label": "fi-sr-cake-birthday",
-          "icon": "1997-11-10",
-          "cont": "Birth"
+          "cont": "Birth",
+          "icon": "1997-11-10"
         },
         {
           "label": "fi-sr-street-view",
-          "icon": "11-10-1997",
-          "cont": "Age"
+          "cont": "Age",
+          "icon": "11-10-1997"
         },
         {
           "label": "fi-br-ruler-vertical",
-          "icon": "173 cm | 5.8 inch",
-          "cont": "Height"
+          "cont": "Height",
+          "icon": "173 cm | 5.8 inch"
         },
         {
           "label": "fi-sr-bottle",
-          "icon": "B+",
-          "cont": "Blood"
+          "cont": "Blood",
+          "icon": "B+"
         },
         {
           "label": "fi-sr-scale",
-          "icon": "74 KG",
-          "cont": "Weight"
+          "cont": "Weight",
+          "icon": "74 KG"
         },
         {
           "label": "fi-sr-person-circle-question",
-          "icon": "infj",
-          "cont": "MBTI"
+          "cont": "MBTI",
+          "icon": "infj"
         },
         {
           "label": "fi-sr-star-shooting",
-          "icon": "Scorpio",
-          "cont": "Constellation"
+          "cont": "Constellation",
+          "icon": "Scorpio"
         },
         {
           "label": "fi-sr-palette",
-          "icon": "Sky blue | Line green | Gray",
-          "cont": "Favorite color"
+          "cont": "Favorite color",
+          "icon": "Sky blue | Line green | Gray"
         },
         {
           "label": "fi-sr-cursor-finger",
-          "icon": "Ring finger [22]   |   Index finger [23]",
-          "cont": "Fingers size"
+          "cont": "Fingers size",
+          "icon": "Ring finger [22]   |   Index finger [23]"
         },
         {
           "label": "fi-sr-shoe-prints",
-          "icon": "43 EU | 9 UK",
-          "cont": "Shoe size"
+          "cont": "Shoe size",
+          "icon": "43 EU | 9 UK"
         },
         {
           "label": "fi-br-biking-mountain",
-          "icon": "Swim | Gym",
-          "cont": "Exercise habits"
+          "cont": "Exercise habits",
+          "icon": "Swim | Gym"
         },
         {
           "label": "fi-sr-hamburger-soda",
-          "icon": "Spicy | Low fat",
-          "cont": "Eating habits"
+          "cont": "Eating habits",
+          "icon": "Spicy | Low fat"
         },
         {
           "label": "fi-sr-puzzle-alt",
-          "icon": "Piano | Song | Sleep",
-          "cont": "Habit"
+          "cont": "Habit",
+          "icon": "Piano | Song | Sleep"
         },
         {
           "label": "fi-sr-dog",
-          "icon": "None but wish to have",
-          "cont": "Pet"
+          "cont": "Pet",
+          "icon": "None but wish to have"
         },
         {
           "label": "fi-br-male-couple",
-          "icon": "Single",
-          "cont": "Relationship"
+          "cont": "Relationship",
+          "icon": "Single"
         }
       ],
       [
@@ -3988,7 +3993,6 @@
       "pictureNotify": ["Record beauty", "记录美好"]
     }
   },
-
   "Animation": {
     "Variant": {
       "Welcomevisblecontainer": {
