@@ -924,7 +924,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             <div className="content-center py-2 my-3 text-center icon">
                               {isTop ? (
                                 <i
-                                  className={` flex fi justify-center  py-1 ${
+                                  className={`flex fi justify-center  py-1 ${
                                     isTop &&
                                     " pt-[20px] text-[14px]  md:text-[17px] lg:text-[25px]"
                                   }  ${item.logo}`}
@@ -939,15 +939,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                     : "  "
                                 } `}
                               >
-                                {!isTop ? (
-                                  windowWidth > 784 && (
-                                    <i
-                                      className={` flex fi justify-center mt-1  mr-2 ${item.logo}`}
-                                    ></i>
-                                  )
-                                ) : (
-                                  <></>
-                                )}{" "}
+                                {!isTop && windowWidth > 784 && (
+                                  <i
+                                    className={`flex fi justify-center mt-2  mr-4 ${item.logo}`}
+                                  ></i>
+                                )}
+
                                 {item.label[lang]}
                                 <i
                                   className={`mt-1 ml-2 text-[15px] ${item.status} `}

@@ -86,7 +86,7 @@
     "workbench": [
       {
         "id": "/networkingmsg",
-        "label": ["NetWorking", "互联"],
+        "label": ["NetWorking", "互联社交"],
         "logo": "fi-rr-tool-box",
         "status": "fi fi-sr-eye-crossed"
       },
@@ -98,7 +98,7 @@
       },
       {
         "id": "/rentmsg",
-        "label": ["House Rental Message", "租房讯息"],
+        "label": ["House Rental", "租房系统"],
         "logo": "fi fi-rr-house-building",
         "status": "fi fi-sr-lock"
       },
