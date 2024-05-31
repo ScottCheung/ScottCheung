@@ -86,13 +86,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   };
 
   useEffect(() => {
-    // if (isExpanded === false) {
-    //   setSelectedTab(null);
-    // }
-    // if (selectedTab === "Home"||"Life") {
-    //   setIsExpanded(true);
-    // }
-
     function handleScroll1() {
       if (window.scrollY < 0.0001) {
         setIsExpanded(true);
@@ -1079,11 +1072,24 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             layout
-            // transition={{ duration: 0.5 }}
             className="fixed top-0 left-0 z-40 w-full h-full backdrop-blur-[20px] bg-black/40"
           ></motion.div>
         )}
-      </AnimatePresence>{" "}
+      </AnimatePresence>
+
+      <noscript>
+        <a href="https://www.livechat.com/chat-with/18034224/" rel="nofollow">
+          Chat with us
+        </a>
+        , powered by{" "}
+        <a
+          href="https://www.livechat.com/?welcome"
+          rel="noopener nofollow"
+          target="_blank"
+        >
+          LiveChat
+        </a>
+      </noscript>
     </AnimatePresence>
   );
 
