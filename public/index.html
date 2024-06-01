@@ -39,11 +39,15 @@
 
     <title>Xianzhe's Page</title>
   </head>
+  <script>
+    (function () {
+      const redir = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redir && redir !== location.href) {
+        history.replaceState(null, null, redir);
+      }
+    })();
+  </script>
 
-  <body id="root" data-anim-scroll-group="body" class="scroll-smooth">
-    <script
-      src="//code.tidio.co/aczqsyuvgbcuveupnh1riccoptcctelz.js"
-      async
-    ></script>
-  </body>
+  <body id="root" data-anim-scroll-group="body" class="scroll-smooth"></body>
 </html>
