@@ -802,19 +802,19 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     }`}
                   >
                     <motion.div
-                      className={`w-full animate__animated   justify-between flex rounded-[28px] items-center ${
+                      className={`w-full  justify-between flex rounded-[28px] items-center ${
                         isExpanded ? "my-8" : ``
                       }  ${
                         isTop
-                          ? "backdrop-blur-md bg-white/50 shadow-xl animate__slideInUp"
-                          : `border divide-x  border-gray-900  divide-gray-900 animate__zoomIn`
+                          ? "backdrop-blur-md bg-white/50 shadow-xl "
+                          : `border divide-x  border-gray-900  divide-gray-900 `
                       }`}
                     >
                       {navLocation.map((item, index) => (
                         <a
                           key={index}
                           href={item.id}
-                          style={{ animationDelay: `${index * 0.17}s` }}
+                          style={{ animationDelay: `${index * 0.07}s` }}
                           className={`flex  w-full h-full  justify-center animate__zoomIn ${
                             isTop ? "text-black  " : "text-gray-900  "
                           } ${index === 0 ? "rounded-s-[28px]" : ""} ${
@@ -843,7 +843,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 {!isTop ? (
                                   windowWidth > 784 && (
                                     <i
-                                      className={` flex fi justify-center mt-1 text-[10px] sm:text-[10px] md:text-[15px] lg:text-[18px] mr-2 ${item.logo}`}
+                                      className={` flex fi justify-center mt-1 text-[10px]  md:text-[15px] lg:text-[18px] mr-2 ${item.logo}`}
                                     ></i>
                                   )
                                 ) : (
@@ -861,16 +861,80 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 {/* lifeCategory */}
                 {selectedTab == "Life" && (
                   <motion.div
-                    initial={{ scaleY: 0 }}
-                    animate={{ scaleY: 1 }}
-                    transition={{ duration: 0.5 }}
-                    layout
+                    key={"isExpanded"}
                     layoutId="isExp"
-                    className={`${
-                      isTop ? "backdrop-blur-md bg-white/70" : " bg-sky-200/20 "
-                    } rounded-[28px]  `}
+                    initial={{ opacity: 0, scale: 0 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    exit={{ opacity: 0, scale: 0 }}
+                    className={`w-full my-[20px] ${
+                      !isExpanded && !selectedTab == "Workbench"
+                        ? "hidden items-center justify-center"
+                        : ` items-center justify-center `
+                    }`}
                   >
-                    <LifeCate />
+                    <motion.div
+                      layout
+                      className={`w-full    justify-between flex items-center ${
+                        isExpanded ? "my-8" : ``
+                      }  ${
+                        isTop
+                          ? "backdrop-blur-md   bg-white/70   shadow-xl  mt-[50px] rounded-[28px]"
+                          : `border divide-x  bg-sky-200/30 mt-[50px]  divide-gray-900  rounded-full border-gray-700 `
+                      }`}
+                    >
+                      {data.PersonalInfo.Lifes.map((item, index) => (
+                        <a
+                          key={index + item.label}
+                          href={item.link}
+                          style={{ animationDelay: `${index * 0.1}s` }}
+                          className={`flex  w-full h-full  justify-center animate__zoomIn ${index === 0 ? "rounded-s-[28px]" : ""} ${
+                            index === Workbench.length - 1
+                              ? "rounded-e-[28px]"
+                              : ""
+                          } animate__animated  opacity-80 hover:opacity-100 font-medium hover:bg-sky-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white :border-white `}
+                        >
+                          <motion.div
+                            layout
+                            style={{ borderRadius: 20 }}
+                            whileHover={{ scale: 1.05 }}
+                            whileTap={{ scale: 0.95 }}
+                            whileFocus={{ scale: 1 }}
+                            className="w-full"
+                          >
+                            <div className="content-center py-2 my-3 text-center icon">
+                              {isTop ? (
+                                <i
+                                  className={`flex fi justify-center  py-1 ${
+                                    isTop &&
+                                    " pt-[20px] text-[14px]  md:text-[17px] lg:text-[25px]"
+                                  }  ${item.icon}`}
+                                ></i>
+                              ) : (
+                                <></>
+                              )}
+                              <div
+                                className={`flex justify-center w-full h-full text-center lg:text-full ${
+                                  isTop
+                                    ? "  pb-[20px] text-[14px]  md:text-[15px] lg:text-[18px]"
+                                    : "  "
+                                } `}
+                              >
+                                {!isTop && windowWidth > 784 && (
+                                  <i
+                                    className={`flex fi justify-center mt-2  mr-4 ${item.icon}`}
+                                  ></i>
+                                )}
+
+                                {item.label[lang]}
+                                <i
+                                  className={`mt-1 ml-2 text-[15px] ${item.status} `}
+                                ></i>
+                              </div>
+                            </div>
+                          </motion.div>
+                        </a>
+                      ))}
+                    </motion.div>
                   </motion.div>
                 )}
                 {selectedTab == "Workbench" && (
@@ -887,19 +951,19 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     }`}
                   >
                     <motion.div
-                      className={`w-full animate__animated   justify-between flex items-center ${
+                      className={`w-full    justify-between flex items-center ${
                         isExpanded ? "my-8" : ``
                       }  ${
                         isTop
-                          ? "backdrop-blur-md   bg-white/70   shadow-xl animate__slideInUp mt-[50px] rounded-[28px]"
-                          : `border divide-x  bg-sky-200/30 mt-[50px]  divide-gray-900 animate__zoomIn rounded-full border-gray-700 `
+                          ? "backdrop-blur-md   bg-white/70   shadow-xl  mt-[50px] rounded-[28px]"
+                          : `border divide-x  bg-sky-200/30 mt-[50px]  divide-gray-900  rounded-full border-gray-700 `
                       }`}
                     >
                       {Workbench.map((item, index) => (
                         <a
                           key={index}
                           href={item.id}
-                          style={{ animationDelay: `${index * 0.17}s` }}
+                          style={{ animationDelay: `${index * 0.07}s` }}
                           className={`flex  w-full h-full  justify-center animate__zoomIn ${index === 0 ? "rounded-s-[28px]" : ""} ${
                             index === Workbench.length - 1
                               ? "rounded-e-[28px]"
@@ -975,9 +1039,13 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 selectedTab == item.name[0] && (
                   <motion.div
                     key={item.name[0] + index + "introduction"}
-                    className="md:mx-[10%] mt-[30px] flex flex-col gap-1 my-[5px] transition-all duration-200 "
+                    className="md:mx-[10%] mt-[30px] flex relative gap-x-[20px]  duration-200 "
                   >
-                    <div className="bg-sky-900 flex rounded-e-[28px] rounded-es-[28px] max-w-[320px] overflow-hidden  backdrop-blur-[20px] ">
+                    <img
+                      className=" max-w-[320px] absolute top-0 left-0 transition-all"
+                      src={data.PersonalInfo.Capability.graphs.infj[0]}
+                    ></img>
+                    <div className="absolute top-0 left-[320px] bg-sky-900 transition-all inline-flex h-auto rounded-r-[35px] rounded-tl-[35px] max-w-[320px] overflow-hidden  ">
                       <div className="p-[28px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    dark:bg-gray-700/20">
                         <p className="text-[25px] font-normal dark:text-gray-900 text-white  ">
                           {item.des[lang]}

@@ -81,7 +81,12 @@ function Highquality() {
   const Highquality = (
     <motion.div className="grid-item large-span-4 medium-span-6 small-span-12 grid-item-check-in will-change carnival-item-in-view min-h-[650px]">
       {/* 半透明要改 */}
-      <motion.div className="tile tile-rounded tile-with-overlay bg-gradient-to-br from-blue-500 to-green-500">
+      <motion.div
+        style={{
+          backgroundImage: "linear-gradient(135deg, #330867 0%, #30cfd0 100%)",
+        }}
+        className="tile tile-rounded tile-with-overlay "
+      >
         <div
           className="tile-content"
           style={{

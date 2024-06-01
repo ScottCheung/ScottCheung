@@ -179,16 +179,17 @@ function PersonalityandLanguage() {
           variants={ProgressBarvisblecontainer}
           initial="hidden"
           whileInView="visible"
-          className="tile-header rounded-[28px]  h-full bg-gray-900 "
+          className="tile-header rounded-[28px]  h-full "
           style={{
             background:
-              "linear-gradient(135deg, rgba(0, 100, 0, 1), rgba(0, 0, 100, 1))",
+              "linear-gradient(to top left, #9795f0 0%, #fbc8d4 120%)",
+            // background-image: ;
           }}
         >
           <div
             className=" h-full w-full pb-[40vh] md:pb-[40vh] "
             style={{
-              backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj[0]})`,
+              // backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj[0]})`,
               backgroundSize: "100% auto",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center bottom",

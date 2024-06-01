@@ -58,7 +58,7 @@ export default function Life() {
                               HoverColor && Index == index
                                 ? "text-white/50"
                                 : "text-gray-750"
-                            } fi-sr-${life.icon}`}
+                            } ${life.icon}`}
                           />
                         </div>
                       </div>

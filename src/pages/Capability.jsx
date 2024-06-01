@@ -97,13 +97,13 @@ function Capability() {
       {/* <Keyfeature2 />
       <Highlight /> */}
 
-      <PersonalityandLanguage />
+      {/* High Quality */}
+      <Highquality />
       {/* row2-left */}
       <Otherability />
       {/* good user */}
       <Gooduser />
-      {/* High Quality */}
-      <Highquality />
+      <PersonalityandLanguage />
 
       {/* INFJ instruction hover */}
       <motion.div

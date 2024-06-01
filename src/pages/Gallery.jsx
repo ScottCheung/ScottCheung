@@ -64,7 +64,7 @@ function GridHouseCard() {
   const toolbarButtons = [
     <button
       key="originalButton"
-      className="text-white border-white px-4 hover:bg-gray-700 hover:text-white"
+      className="px-4 text-white border-white hover:bg-gray-700 hover:text-white"
       onClick={handleOriginalImageClick}
     >
       {lang === "0" ? "Raw picture" : lang === "1" ? "原图 " : ""}
@@ -161,16 +161,19 @@ function GridHouseCard() {
   return (
     <div>
       <Navbar />
-      <link
+
+      {/* <link
         rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+        href="../style/uicons/css/all/all.css"
+        type="text/"
       />
+      <link rel="stylesheet" href="../style/animation.css" /> */}
 
       <div className={`flex justify-between w-[100%]`}>
         <div className="mt-24 px-[20px] w-[100%]">
           <AnimatePresence>
             <header className="py-12 animate__animated animate__fadeIn w-[100%] px-auto">
-              <div className="justify-between items-end lg:flex">
+              <div className="items-end justify-between lg:flex">
                 <div className="flex-col justify-start">
                   <h1 className="text-[40px] font-[500]  animate__animated animate__fadeInLeft">
                     {lang == "0" && "Life Gallery"}
@@ -187,7 +190,7 @@ function GridHouseCard() {
                     {lang == "1" && (FavSecMode ? "精选图片" : "全部图片")}
                   </h1>
                   <p className="animate__animated animate__fadeInLeft text-[20px] flex justify-end">
-                    <i className="fi fi-sr-picture mr-3 pt-1"></i>
+                    <i className="pt-1 mr-3 fi fi-sr-picture"></i>
                     <N className="w-[200px]" n={totalPictures} d={1} />
                   </p>
                 </div>
@@ -199,10 +202,10 @@ function GridHouseCard() {
             >
               <motion.label
                 layout
-                className="relative flex-col inline-flex cursor-pointer mb-12 lg:z-50"
+                className="relative inline-flex flex-col mb-12 cursor-pointer lg:z-50"
               >
                 {!lightboxIsOpen && Components.NavBar === "visible" && (
-                  <div className="items-center inline-flex">
+                  <div className="inline-flex items-center">
                     {/* {con} */}
                     <div
                       className={`animate__animated animate__fadeInLeft w-20 h-12   flex  items-center rounded-full p-2 cursor-pointer ${
@@ -229,10 +232,10 @@ function GridHouseCard() {
               </motion.label>
               <motion.label
                 layout
-                className="relative flex-col inline-flex cursor-pointer mb-12 lg:z-50"
+                className="relative inline-flex flex-col mb-12 cursor-pointer lg:z-50"
               >
                 {!lightboxIsOpen && Components.NavBar === "visible" && (
-                  <div className="items-center inline-flex">
+                  <div className="inline-flex items-center">
                     <span className="animate__animated animate__fadeInLeft mr-3 text-[15px] font-medium text-gray-900 dark:text-gray-200">
                       {lang == "0" ? "Favorite" : "精选"}
                     </span>
@@ -309,7 +312,7 @@ function GridHouseCard() {
 
                           setLightboxIsOpen(true);
                           navigate(
-                            `/life/gallery/${
+                            `/gallery/${
                               reverseOrder ? totalPictures - index : index + 1
                             }`,
                           );
@@ -321,7 +324,7 @@ function GridHouseCard() {
                           animationDelay: `${0.05 * (index % 36)}s`,
                           zIndex: zIndexes[index],
                         }}
-                        className="flex absolute justify-center items-center inset-0 animate__animated animate__fadeIn"
+                        className="absolute inset-0 flex items-center justify-center animate__animated animate__fadeIn"
 
                         // target="_blank" rel="noopener noreferrer"
                       >
@@ -332,7 +335,7 @@ function GridHouseCard() {
                             opacity: 1,
                             transition: { duration: 0.6 },
                           }}
-                          className="absolute w-full h-full object-cover -z-1"
+                          className="absolute object-cover w-full h-full -z-1"
                           src={item.replace(
                             /\.(png|jpg|jpeg|gif|bmp|svg|webp)$/,
                             ".md.$1",
@@ -342,7 +345,7 @@ function GridHouseCard() {
                       </motion.div>
                       <div
                         role="status"
-                        className="flex justify-center items-center w-full h-full rounded-lg -z-10 bg-gray-300/30 animate__faster dark:bg-gray-700/30"
+                        className="flex items-center justify-center w-full h-full rounded-lg -z-10 bg-gray-300/30 animate__faster dark:bg-gray-700/30"
                         style={{
                           imageBackground: `url(${item.replace(
                             /\.(png|jpg|jpeg|gif|bmp|svg|webp)$/,
@@ -395,7 +398,7 @@ function GridHouseCard() {
                         transform: `scale(${zoomLevel})`,
                       }}
                       onClick={() => {
-                        navigate(`/life/gallery`);
+                        navigate(`/gallery`);
                         setLightboxIsOpen(false);
                         document.body.style.overflow = "auto";
                         resetZoom();
@@ -404,7 +407,7 @@ function GridHouseCard() {
                     {/* <motion.img 
                       layout 
           layoutId={selectedImage}
-            className='fixed w-full h-full top-0 left-0 transition-all object-contain z-10'
+            className='fixed top-0 left-0 z-10 object-contain w-full h-full transition-all'
             src={item} alt={item.replace(/\.(png|jpg|jpeg|gif|bmp|svg|webp)$/, ".md.$1")} /> */}
 
                     {/* left picture */}
@@ -418,7 +421,7 @@ function GridHouseCard() {
                       onClick={() => {
                         setLightboxIsOpen(true);
                         resetZoom();
-                        navigate(`/life/gallery/${prevIndex}`);
+                        navigate(`/gallery/${prevIndex}`);
                       }}
                     />
                     {/* right picture */}
@@ -432,7 +435,7 @@ function GridHouseCard() {
                       onClick={() => {
                         setLightboxIsOpen(true);
                         resetZoom();
-                        navigate(`/life/gallery/${nextIndex}`);
+                        navigate(`/gallery/${nextIndex}`);
                       }}
                     />
                     {/* close button */}
@@ -444,7 +447,7 @@ function GridHouseCard() {
                       icon={"w-[10px] h-[10px] rotate-0"}
                       className="z-50"
                       onClick={() => {
-                        navigate(`/life/gallery`);
+                        navigate(`/gallery`);
                         setLightboxIsOpen(false);
                         document.body.style.overflow = "auto";
                         resetZoom();
@@ -486,7 +489,7 @@ function GridHouseCard() {
 
                     {/* <Lightbox
 
-            className='animate__animated animate__zoomIn duration-300 hidden'
+            className='hidden duration-300 animate__animated animate__zoomIn'
             mainSrc={item}
             nextSrc={nextItem}
             prevSrc={preItem}
@@ -494,14 +497,14 @@ function GridHouseCard() {
             nextSrcThumbnail={nextItem.replace(/\.(png|jpg|jpeg|gif|bmp|svg|webp)$/, ".md.$1")}
             prevSrcThumbnail={preItem.replace(/\.(png|jpg|jpeg|gif|bmp|svg|webp)$/, ".md.$1")}
             animationDisabled={true}
-            onCloseRequest={() => {navigate(`/life/gallery`);setLightboxIsOpen(false);document.body.style.overflow = 'auto';}}
+            onCloseRequest={() => {navigate(`/gallery`);setLightboxIsOpen(false);document.body.style.overflow = 'auto';}}
             onMovePrevRequest={() => {
               setLightboxIsOpen(true);
-              navigate(`/life/gallery/${prevIndex}`);
+              navigate(`/gallery/${prevIndex}`);
             }}
             onMoveNextRequest={() => {
               setLightboxIsOpen(true);
-              navigate(`/life/gallery/${nextIndex}`);
+              navigate(`/gallery/${nextIndex}`);
             }}
             animationOnKeyInput={true}
             imageTitle={(lang == "0" && (FavSecMode==true? "Favorite Pictures":"All Pictures"))+(lang == "1" && (FavSecMode? "精选图片":"全部图片")) +" [ " + gallery +" / " +totalPictures+" ]"}

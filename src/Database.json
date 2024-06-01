@@ -16,7 +16,6 @@
         "des": ["Key information here ~", "主要信息都在这里 ~"],
         "expression": "❤٩ (◕‿◕｡)۶ 🏠"
       },
-
       {
         "name": ["Resume", "简历"],
         "href": "/resume",
@@ -25,19 +24,20 @@
         "expression": "(｡◕‿◕｡) 📧"
       },
       {
-        "name": ["Life", "生活"],
-        "href": "/life",
-        "icon": "fi-rr-mountains",
-        "des": ["It records my wonderful life ~", "我的精彩生活 ~"],
-        "expression": "(＾◡＾) 🌄"
-      },
-      {
         "name": ["Workbench", "工作台"],
         "href": "/login",
         "icon": "fi fi-rr-corporate-alt",
         "des": [" Personal Workbench  ~ ", " 个人工作台 ~ "],
         "expression": "(⌐■_■) 💻"
       },
+      {
+        "name": ["Life", "生活"],
+        "href": "/life",
+        "icon": "fi-rr-mountains",
+        "des": ["It records my wonderful life ~", "我的精彩生活 ~"],
+        "expression": "(＾◡＾) 🌄"
+      },
+
       {
         "name": ["Contact", "联络"],
         "href": "/Contact",
@@ -2867,32 +2867,36 @@
     ],
     "Lifes": [
       {
-        "icon": "music-alt",
+        "icon": "fi-sr-music-alt",
         "label": ["Music", "音 乐"],
-        "link": "/life/music",
+        "link": "/music",
         "pic": "https://3o.hk/images/2024/01/19/EmotionalStable.md.png",
-        "des": "It collect musics I recommend ~"
+        "des": "It collect musics I recommend ~",
+        "status": "fi fi-sr-eye-crossed"
       },
       {
-        "icon": "user-music",
+        "icon": "fi-sr-user-music",
         "label": ["Perform", "表 演"],
-        "link": "/life/perform",
+        "link": "/perform",
         "pic": "https://3o.hk/images/2024/01/19/ProblemSolving.png",
-        "des": "It collect musics I perform ~"
+        "des": "It collect musics I perform ~",
+        "status": "fi fi-sr-eye-crossed"
       },
       {
-        "icon": "picture",
+        "icon": "fi-sr-picture",
         "label": ["Gallery", "图 库"],
-        "link": "/life/gallery",
+        "link": "/gallery",
         "pic": "https://3o.hk/images/2024/01/19/AestheticAttitude.md.png",
-        "des": "It collect picture I take ~"
+        "des": "It collect picture I take ~",
+        "status": "fi fi-sr-unlock"
       },
       {
-        "icon": "followcollection",
+        "icon": "fi-sr-followcollection",
         "label": ["Story", "故 事"],
-        "link": "/life/story",
+        "link": "/story",
         "pic": "https://3o.hk/images/2024/01/19/Leadership.md.png",
-        "des": "It collect stories I undergo ~"
+        "des": "It collect stories I undergo ~",
+        "status": "fi fi-sr-eye-crossed"
       }
     ],
     "WorkExperience": [

@@ -34,32 +34,32 @@ const item = Database.Animation.Variant.WelcomeItem;
 const tabs = [
   {
     label: ["Frontend", "前端"],
-    color1: "red-500",
-    color2: "red-700",
+    color1: "[#fda085]",
+    color2: "[#f9f586]",
     content: "Content for Frontend Tab",
   },
   {
     label: ["Backend", "后端"],
-    color1: "orange-500",
-    color2: "amber-500",
+    color1: "[#f9f586]",
+    color2: "[#43e97b]",
     content: "Content for Backend Tab",
   },
   {
     label: ["DataBase", "数据库"],
-    color1: "sky-500",
-    color2: "emerald-500",
+    color1: "[#43e97b]",
+    color2: "[#38f9d7]",
     content: "Content for Data Tab",
   },
   {
     label: ["Algorithm", "算法"],
-    color1: "cyan-500",
-    color2: "blue-500",
+    color1: "[#2af598]",
+    color2: "[#009efd]",
     content: "Content for Algorithm Tab",
   },
   {
     label: ["Other", "其他"],
-    color1: "indigo-500",
-    color2: "pink-500",
+    color1: "[#00f2fe] ",
+    color2: "[#b721ff] ",
     content: "Content for Other Tab",
   },
 ];
@@ -114,7 +114,7 @@ function Skill() {
               ease: [0.455, 0.03, 0.515, 0.955],
               duration: 2,
             }}
-            className={`transition-all   pb-24 tile-header z-40 typography-section-intro-headline section-intro-headline from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-r text-transparent bg-clip-text text-center pt-[70px] `}
+            className={`transition-all   pb-24 tile-header z-40 typography-section-intro-headline section-intro-headline from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br text-transparent bg-clip-text text-center pt-[70px] `}
           >
             <i className=" fi text-5xl lg:text-8xl fi-rr-circle-user mr-[20px] pt-3 "></i>
             {lang == 0 && "Capability"}
@@ -156,7 +156,7 @@ function Skill() {
                     </h3>
                     {tab === selectedTab ? (
                       <motion.div
-                        className={`from-${tab.color1} to-${tab.color2} bg-gradient-to-br w-full   h-[6px]  rounded-full z-50`}
+                        className={`from-${tab.color1} to-${tab.color2} bg-gradient-to-r w-full   h-[6px]  rounded-full z-50`}
                         layoutId="underline"
                       />
                     ) : null}
@@ -178,15 +178,15 @@ function Skill() {
                   selectedTab.label[lang] == "前端") && (
                   <motion.div
                     layoutId="abilitiy"
-                    className="flex flex-col w-full"
+                    className={`flex flex-col w-full bg-clip-text bg-gradient-to-r from-${tabs[0].color1} to-${tabs[0].color2} `}
                   >
                     {/* Front-end */}
                     <motion.div className="mt-[20px]">
-                      <h3 className="text-transparent tile-headline typography-subsection-headline from-red-500 to-red-700 bg-gradient-to-br bg-clip-text">
+                      <h3 className="text-transparent tile-headline typography-subsection-headline bg-clip-text">
                         {lang == 0 && "Front-end"}
                         {lang == 1 && "前端"}
                       </h3>
-                      <p className="text-transparent tile-copy from-red-500 to-red-700 bg-gradient-to-br bg-clip-text">
+                      <p className="text-transparent tile-copy bg-clip-text">
                         {lang == 0 && (
                           <motion.div>
                             <p className="py-10  text-[17px] ">
@@ -324,15 +324,18 @@ function Skill() {
                             whileTap={{ scale: 0.95, duration: 0.2 }}
                             className="h-full grid-item large-span-2 medium-span-3 small-span-4"
                           >
-                            <motion.div className="flex justify-center flex-shrink-0">
-                              <img
-                                key={index}
-                                className="w-[50px] h-[50px]     from-red-500 to-red-700 bg-gradient-to-br p-2 rounded-[9px]"
-                                src={app.image}
-                                alt={app.name}
-                              />
+                            <motion.div className="flex justify-center flex-shrink-0 items-cente">
+                              <div className="flex justify-center items-center w-[60px] h-[60px] p-[10px] bg-gradient-to-br rounded-[9px]">
+                                <img
+                                  key={index}
+                                  src={app.image}
+                                  alt={app.name}
+                                />
+                              </div>
                             </motion.div>
-                            <motion.div className="text-[18px] lg:text-[20px] font-semibold md:text-[20px] text-center pt-[20px] from-red-500 to-red-700 bg-gradient-to-br text-transparent bg-clip-text">
+                            <motion.div
+                              className={`text-[18px] lg:text-[20px]  font-semibold md:text-[20px] text-center pt-[20px]  bg-gradient-to-br text-transparent bg-clip-text`}
+                            >
                               {app.name}
                             </motion.div>
                           </motion.div>
@@ -345,15 +348,19 @@ function Skill() {
                   selectedTab.label[lang] == "后端") && (
                   <motion.div
                     layoutId="abilitiy"
-                    className="flex flex-col w-full"
+                    className={`flex flex-col w-full bg-clip-text bg-gradient-to-r from-${tabs[1].color1} to-${tabs[1].color2} `}
                   >
                     {/* Back-end */}
                     <motion.div className=" mt-[20px] ">
-                      <h3 className="text-transparent transition-all tile-headline typography-subsection-headline from-orange-500 to-amber-500 bg-gradient-to-br bg-clip-text ">
+                      <h3
+                        className={`text-transparent transition-all tile-headline typography-subsection-headline from-${tabs[1].color1} to-${tabs[1].color2} bg-gradient-to-br bg-clip-text `}
+                      >
                         {lang == 0 && "Backend"}
                         {lang == 1 && "后端"}
                       </h3>
-                      <p className="text-transparent tile-copy from-orange-500 to-amber-500 bg-gradient-to-br bg-clip-text">
+                      <p
+                        className={`text-transparent tile-copy from-${tabs[1].color1} to-${tabs[1].color2} bg-gradient-to-br bg-clip-text`}
+                      >
                         {lang == 0 && (
                           <motion.div>
                             <p className="py-10  text-[17px]  ">
@@ -461,15 +468,18 @@ function Skill() {
                             whileTap={{ scale: 0.95, duration: 0.2 }}
                             className="h-full grid-item large-span-2 medium-span-3 small-span-4"
                           >
-                            <motion.div className="flex justify-center flex-shrink-0">
-                              <img
-                                key={index}
-                                className="w-[50px] h-[50px]      from-orange-500 to-amber-500  bg-gradient-to-br p-2 rounded-[9px]"
-                                src={app.image}
-                                alt={app.name}
-                              />
+                            <motion.div className="flex justify-center flex-shrink-0 items-cente">
+                              <div className="flex justify-center items-center w-[60px] h-[60px] p-[10px] bg-gradient-to-br rounded-[9px]">
+                                <img
+                                  key={index}
+                                  src={app.image}
+                                  alt={app.name}
+                                />
+                              </div>
                             </motion.div>
-                            <motion.div className="text-[18px] lg:text-[20px]  font-semibold md:text-[20px] text-center pt-[20px] from-orange-500 to-amber-500  bg-gradient-to-br text-transparent bg-clip-text">
+                            <motion.div
+                              className={`text-[18px] lg:text-[20px]  font-semibold md:text-[20px] text-center pt-[20px]  bg-gradient-to-br text-transparent bg-clip-text`}
+                            >
                               {app.name}
                             </motion.div>
                           </motion.div>
@@ -482,15 +492,19 @@ function Skill() {
                   selectedTab.label[lang] == "数据库") && (
                   <motion.div
                     layoutId="abilitiy"
-                    className="flex flex-col w-full"
+                    className={`flex flex-col w-full bg-clip-text bg-gradient-to-r from-${tabs[2].color1} to-${tabs[2].color2} `}
                   >
                     {/* Database */}
                     <motion.div className=" mt-[20px] w-full">
-                      <h3 className="text-transparent tile-headline typography-subsection-headline from-sky-500 to-emerald-500 bg-gradient-to-br bg-clip-text">
+                      <h3
+                        className={`text-transparent tile-headline typography-subsection-headline from-${tabs[2].color1} to-${tabs[2].color2} bg-gradient-to-br bg-clip-text`}
+                      >
                         {lang == 0 && "Database"}
                         {lang == 1 && "数据库"}
                       </h3>
-                      <p className="text-transparent tile-copy from-sky-500 to-emerald-500 bg-gradient-to-br bg-clip-text">
+                      <p
+                        className={`text-transparent tile-copy from-${tabs[2].color1} to-${tabs[2].color2} bg-gradient-to-br bg-clip-text`}
+                      >
                         {lang == 0 && (
                           <motion.div>
                             <p className="py-10  text-[17px] ">
@@ -614,15 +628,18 @@ function Skill() {
                             whileTap={{ scale: 0.95, duration: 0.2 }}
                             className="h-full grid-item large-span-2 medium-span-3 small-span-4"
                           >
-                            <motion.div className="flex justify-center flex-shrink-0">
-                              <img
-                                key={index}
-                                className="w-[50px] h-[50px]      from-sky-500 to-emerald-500 bg-gradient-to-br p-2 rounded-[9px]"
-                                src={app.image}
-                                alt={app.name}
-                              />
+                            <motion.div className="flex justify-center flex-shrink-0 items-cente">
+                              <div className="flex justify-center items-center w-[60px] h-[60px] p-[10px] bg-gradient-to-br rounded-[9px]">
+                                <img
+                                  key={index}
+                                  src={app.image}
+                                  alt={app.name}
+                                />
+                              </div>
                             </motion.div>
-                            <motion.div className="text-[18px] lg:text-[20px]  font-semibold md:text-[20px] text-center pt-[20px] from-sky-500 to-emerald-500 bg-gradient-to-br text-transparent bg-clip-text">
+                            <motion.div
+                              className={`text-[18px] lg:text-[20px]  font-semibold md:text-[20px] text-center pt-[20px]  bg-gradient-to-br text-transparent bg-clip-text`}
+                            >
                               {app.name}
                             </motion.div>
                           </motion.div>
@@ -635,15 +652,19 @@ function Skill() {
                   selectedTab.label[lang] == "算法") && (
                   <motion.div
                     layoutId="abilitiy"
-                    className="flex flex-col w-full"
+                    className={`flex flex-col w-full bg-clip-text bg-gradient-to-r from-${tabs[3].color1} to-${tabs[3].color2} `}
                   >
                     {/* Algorithm */}
                     <motion.div className=" mt-[20px]">
-                      <h3 className="text-transparent tile-headline typography-subsection-headline from-cyan-500 to-blue-500 bg-gradient-to-br bg-clip-text">
+                      <h3
+                        className={`text-transparent tile-headline typography-subsection-headline from-${tabs[3].color1} to-${tabs[3].color2} bg-gradient-to-br bg-clip-text`}
+                      >
                         {lang == 0 && "Algorithm"}
                         {lang == 1 && "算法"}
                       </h3>
-                      <p className="text-transparent tile-copy from-cyan-500 to-blue-500 bg-gradient-to-br bg-clip-text">
+                      <p
+                        className={`text-transparent tile-copy from-${tabs[3].color1} to-${tabs[3].color2} bg-gradient-to-br bg-clip-text`}
+                      >
                         {lang == 0 && (
                           <motion.div>
                             <p className="py-10  text-[17px] ">
@@ -755,15 +776,18 @@ function Skill() {
                             whileTap={{ scale: 0.95, duration: 0.2 }}
                             className="h-full grid-item large-span-2 medium-span-3 small-span-4"
                           >
-                            <motion.div className="flex justify-center flex-shrink-0">
-                              <img
-                                key={index}
-                                className="w-[50px] h-[50px] from-cyan-500 bg-gradient-to-br to-blue-500  p-2 rounded-[9px]"
-                                src={app.image}
-                                alt={app.name}
-                              />
+                            <motion.div className="flex justify-center flex-shrink-0 items-cente">
+                              <div className="flex justify-center items-center w-[60px] h-[60px] p-[10px] bg-gradient-to-br rounded-[9px]">
+                                <img
+                                  key={index}
+                                  src={app.image}
+                                  alt={app.name}
+                                />
+                              </div>
                             </motion.div>
-                            <motion.div className="text-[18px] lg:text-[20px] font-semibold md:text-[20px] text-center pt-[20px] from-cyan-500 bg-gradient-to-br to-blue-500 text-transparent bg-clip-text">
+                            <motion.div
+                              className={`text-[18px] lg:text-[20px]  font-semibold md:text-[20px] text-center pt-[20px]  bg-gradient-to-br text-transparent bg-clip-text`}
+                            >
                               {app.name}
                             </motion.div>
                           </motion.div>
@@ -776,15 +800,19 @@ function Skill() {
                   selectedTab.label[lang] == "其他") && (
                   <motion.div
                     layoutId="abilitiy"
-                    className="flex flex-col w-full"
+                    className={`flex flex-col w-full bg-clip-text bg-gradient-to-r from-${tabs[4].color1} to-${tabs[4].color2} `}
                   >
                     {/* Other */}
                     <motion.div className=" mt-[20px]">
-                      <h3 className="text-transparent tile-headline typography-subsection-headline from-indigo-500 to-pink-500 bg-gradient-to-br bg-clip-text">
+                      <h3
+                        className={`text-transparent tile-headline typography-subsection-headline from-${tabs[4].color1} to-${tabs[4].color2} bg-gradient-to-br bg-clip-text`}
+                      >
                         {lang == 0 && "Other"}
                         {lang == 1 && "其他"}
                       </h3>
-                      <p className="text-transparent tile-copy from-indigo-500 to-pink-500 bg-gradient-to-br bg-clip-text">
+                      <p
+                        className={`text-transparent tile-copy  bg-gradient-to-br bg-clip-text`}
+                      >
                         {lang == 0 && (
                           <motion.div>
                             <p className="py-10  text-[17px] ">
@@ -893,16 +921,18 @@ function Skill() {
                             className="h-full grid-item large-span-2 medium-span-3 small-span-4"
                           >
                             <motion.div
-                              className={` flex-shrink-0 flex justify-center `}
+                              className={` flex items-cente justify-center flex-shrink-0`}
                             >
                               <img
                                 key={index}
-                                className="w-[50px] h-[50px]   from-indigo-500 to-pink-500 bg-gradient-to-br  p-2 rounded-[9px]"
+                                className={` w-[60px] h-[60px]   from-${tabs[4].color1} to-${tabs[4].color2} bg-gradient-to-br  p-2 rounded-[9px]`}
                                 src={app.image}
                                 alt={app.name}
                               />
                             </motion.div>
-                            <motion.div className="text-[18px]  font-semibold md:text-[20px] text-center pt-[20px] lg:text-[20px]  from-indigo-500 to-pink-500 bg-gradient-to-br text-transparent bg-clip-text">
+                            <motion.div
+                              className={`text-[18px]  font-semibold md:text-[20px] text-center pt-[20px] lg:text-[20px]  from-${tabs[4].color1} to-${tabs[4].color2} bg-gradient-to-br text-transparent bg-clip-text`}
+                            >
                               {app.name}
                             </motion.div>
                           </motion.div>
