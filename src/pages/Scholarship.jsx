@@ -48,9 +48,9 @@ export default function Scholarship() {
                 </p>
               </div>
               <div className="relative pb-48 overflow-x-auto">
-                <table className="w-full text-left text-gray-500 rtl:text-right dark:text-gray-40">
+                <table className="w-full text-left text-gray-500 rtl:text-right darrk:text-gray-40">
                   {lang == 1 && (
-                    <thead className=" text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400  text-[20px]">
+                    <thead className=" text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400  text-[20px]">
                       <tr>
                         <th scope="col" className="px-6 py-3 w-[5%]">
                           序列
@@ -68,7 +68,7 @@ export default function Scholarship() {
                     </thead>
                   )}
                   {lang == 0 && (
-                    <thead className=" text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400  text-[20px]">
+                    <thead className=" text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400  text-[20px]">
                       <tr>
                         <th scope="col" className="px-6 py-3 w-[5%]">
                           Serial
@@ -87,16 +87,16 @@ export default function Scholarship() {
                   )}
                   {Scholarships[lang].map((Scholarship, index) => (
                     <tbody>
-                      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 ">
+                      <tr className="bg-white border-b darrk:bg-gray-800 darrk:border-gray-700 ">
                         <th
                           scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white w-[5%]"
+                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white w-[5%]"
                         >
                           {index + 1}
                         </th>
                         <td
                           scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white"
                         >
                           {Scholarship.CourseName}
                         </td>
@@ -106,10 +106,10 @@ export default function Scholarship() {
                     </tbody>
                   ))}
                   <tbody>
-                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <tr className="bg-white border-b darrk:bg-gray-800 darrk:border-gray-700">
                       <th
                         scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white"
                       >
                         {lang == 1 && "总计 17项奖学金"}
                         {lang == 0 && "Totally 17 scholarships"}

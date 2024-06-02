@@ -224,7 +224,7 @@ function GridHouseCard() {
                         transition={spring}
                       />
                     </div>
-                    <span className="animate__animated animate__fadeInRight ms-3 text-[15px] font-medium text-gray-900 dark:text-gray-200">
+                    <span className="animate__animated animate__fadeInRight ms-3 text-[15px] font-medium text-gray-900 darrk:text-gray-200">
                       {lang == "0" ? "Sequential" : "时间正序"}
                     </span>
                   </div>
@@ -236,7 +236,7 @@ function GridHouseCard() {
               >
                 {!lightboxIsOpen && Components.NavBar === "visible" && (
                   <div className="inline-flex items-center">
-                    <span className="animate__animated animate__fadeInLeft mr-3 text-[15px] font-medium text-gray-900 dark:text-gray-200">
+                    <span className="animate__animated animate__fadeInLeft mr-3 text-[15px] font-medium text-gray-900 darrk:text-gray-200">
                       {lang == "0" ? "Favorite" : "精选"}
                     </span>
                     <div
@@ -288,7 +288,7 @@ function GridHouseCard() {
                         animationDelay: `${0.04 * (index % 12)}s`,
                         zIndex: zIndexes[index],
                       }}
-                      className="transition-all duration-500 flex w-full  aspect-square justify-center items-center  overflow-hidden bg-gray-500/90  rounded-[14px] shadow-lg animate__animated animate__zoomIn dark:bg-gray-700 "
+                      className="transition-all duration-500 flex w-full  aspect-square justify-center items-center  overflow-hidden bg-gray-500/90  rounded-[14px] shadow-lg animate__animated animate__zoomIn darrk:bg-gray-700 "
                     >
                       <motion.div
                         initial={{ scale: 1.2 }}
@@ -345,7 +345,7 @@ function GridHouseCard() {
                       </motion.div>
                       <div
                         role="status"
-                        className="flex items-center justify-center w-full h-full rounded-lg -z-10 bg-gray-300/30 animate__faster dark:bg-gray-700/30"
+                        className="flex items-center justify-center w-full h-full rounded-lg -z-10 bg-gray-300/30 animate__faster darrk:bg-gray-700/30"
                         style={{
                           imageBackground: `url(${item.replace(
                             /\.(png|jpg|jpeg|gif|bmp|svg|webp)$/,
@@ -354,7 +354,7 @@ function GridHouseCard() {
                         }}
                       >
                         <svg
-                          className="text-gray-200 animate-pulse w-36 h-36 dark:text-gray-600"
+                          className="text-gray-200 animate-pulse w-36 h-36 darrk:text-gray-600"
                           aria-hidden="true"
                           xmlns="http://www.w3.org/2000/svg"
                           fill="currentColor"

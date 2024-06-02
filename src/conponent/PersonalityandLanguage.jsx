@@ -151,7 +151,7 @@ function PersonalityandLanguage() {
                       <N className="" n={per.label} d={3} /> %
                     </motion.div>
                   </motion.div>
-                  <motion.div className="w-full h-[15px] mb-4 rounded-full bg-white/20 dark:bg-gray-700">
+                  <motion.div className="w-full h-[15px] mb-4 rounded-full bg-white/20 darrk:bg-gray-700">
                     <motion.div
                       key={index}
                       variants={{
@@ -232,7 +232,7 @@ function PersonalityandLanguage() {
                       <N n={personality.label} d={3} />
                     </motion.div>
                   </motion.div>
-                  <motion.div className="w-full h-[15px] mb-4 rounded-full bg-white/20 dark:bg-gray-700">
+                  <motion.div className="w-full h-[15px] mb-4 rounded-full bg-white/20 darrk:bg-gray-700">
                     <motion.div
                       key={index}
                       variants={{

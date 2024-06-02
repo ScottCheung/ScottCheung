@@ -353,7 +353,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                       data-popover
                       role="tooltip"
                       id="lang"
-                      className="fixed z-10 invisible justify-center flex w-auto text-gray-500 text-center transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+                      className="fixed z-10 invisible justify-center flex w-auto text-gray-500 text-center transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
                     >
                       <div className="flex flex-col items-center px-6 py-4">
                         <span className="text-center text-[15px] font-semibold">
@@ -669,18 +669,18 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                       src={data.dialog}
                     ></img>
                     <div className="absolute top-0 left-[320px] bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[320px] overflow-hidden  ">
-                      <div className="p-[28px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    dark:bg-gray-700/20">
-                        <p className="text-[25px] font-normal dark:text-gray-900 text-white  ">
+                      <div className="p-[28px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20">
+                        <p className="text-[25px] font-normal darrk:text-gray-900 text-white  ">
                           {item.des[lang]}
                         </p>
-                        <span className="text-center text-[30px] dark:text-gray-900 text-white ">
+                        <span className="text-center text-[30px] darrk:text-gray-900 text-white ">
                           {item.expression}{" "}
                         </span>
                         <div className="group relative my-2.5 hidden">
                           <div className="absolute flex items-center justify-center w-full transition-opacity duration-300 rounded-lg opacity-0 bg-gray-900/50 group-hover:opacity-100">
                             <button
                               data-tooltip-target="download-image"
-                              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50"
+                              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none darrk:text-white focus:ring-gray-50"
                             >
                               <svg
                                 className="w-5 h-5 text-white"

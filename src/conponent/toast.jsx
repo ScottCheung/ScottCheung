@@ -45,7 +45,7 @@ const Toast = ({ type, message, duration = 5000 }) => {
         >
           <div className="flex flex-col">
             <div
-              className={`flex justify-between text-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-500 bg-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-100 rounded-lg dark:bg-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-800 dark:text-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-200`}
+              className={`flex justify-between text-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-500 bg-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-100 rounded-lg darrk:bg-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-800 darrk:text-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-200`}
             >
               <div className="flex items-start flex-col">
                 {/* success */}
@@ -113,7 +113,7 @@ const Toast = ({ type, message, duration = 5000 }) => {
                 whileHover={{ scale: 1.3 }}
                 whileTap={{ scale: 0.8 }}
                 type="button"
-                className={`ms-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5  inline-flex items-center justify-center h-8 w-8 text-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-500 bg-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-100 rounded-lg dark:bg-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-800 dark:text-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-200`}
+                className={`ms-auto -mx-1.5 -my-1.5 rounded-lg focus:ring-2 focus:ring-gray-300 p-1.5  inline-flex items-center justify-center h-8 w-8 text-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-500 bg-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-100 rounded-lg darrk:bg-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-800 darrk:text-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-200`}
                 onClick={handleDismiss}
                 aria-label="Close"
               >

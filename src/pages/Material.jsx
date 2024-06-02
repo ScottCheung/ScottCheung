@@ -141,9 +141,9 @@ export default function material() {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true }}
-                  className="w-full  text-left rtl:text-right text-gray-500 dark:text-gray-40 "
+                  className="w-full  text-left rtl:text-right text-gray-500 darrk:text-gray-40 "
                 >
-                  <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                  <thead className="text-xs text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400">
                     <tr>
                       <th scope="col" className="px-6 py-3 text-center">
                         Serial
@@ -168,16 +168,16 @@ export default function material() {
                       whileTap={{ scale: 0.99 }}
                       layout
                     >
-                      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                      <tr className="bg-white border-b darrk:bg-gray-800 darrk:border-gray-700">
                         <th
                           scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white text-center"
+                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white text-center"
                         >
                           {index + 1}
                         </th>
                         <td
                           scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white"
                         >
                           {subject.CourseName}
                         </td>

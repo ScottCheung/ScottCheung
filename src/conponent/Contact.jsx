@@ -185,7 +185,7 @@ function Contact({ isTopOut }) {
                                 data-popover
                                 id={`copy-${index}`}
                                 role="tooltip"
-                                className="absolute z-50 flex justify-center invisible w-full text-white transition-opacity duration-300 rounded-full shadow-2xl opacity-0 backdrop-blur-md bg-black/50 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+                                className="absolute z-50 flex justify-center invisible w-full text-white transition-opacity duration-300 rounded-full shadow-2xl opacity-0 backdrop-blur-md bg-black/50 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
                               >
                                 <p className="px-6 py-4 text-center">
                                   {lang == 0 && "Copy the info of "}
@@ -233,7 +233,7 @@ function Contact({ isTopOut }) {
                                   data-popover
                                   id={`way-${index}`}
                                   role="tooltip"
-                                  className="absolute z-10 flex justify-center invisible w-64 text-white transition-opacity duration-300 rounded-full shadow-2xl opacity-0 backdrop-blur-md bg-black/50 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+                                  className="absolute z-10 flex justify-center invisible w-64 text-white transition-opacity duration-300 rounded-full shadow-2xl opacity-0 backdrop-blur-md bg-black/50 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
                                 >
                                   <p className="px-6 py-4 text-center">
                                     {lang == 0 && "Go to "}
@@ -285,7 +285,7 @@ function Contact({ isTopOut }) {
                                 data-popover
                                 id={`code-${index}`}
                                 role="tooltip"
-                                className="absolute z-10 invisible rounded-[14px] inline-flex w-64 text-white transition-opacity duration-300 backdrop-blur-md bg-black/20 shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+                                className="absolute z-10 invisible rounded-[14px] inline-flex w-64 text-white transition-opacity duration-300 backdrop-blur-md bg-black/20 shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
                               >
                                 <div className="px-6 py-4">
                                   <p className="text-[13px] text-center font-mono">

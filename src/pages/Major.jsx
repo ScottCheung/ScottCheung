@@ -54,7 +54,7 @@ function Home() {
 
         <div className="  rounded-[44px] overflow-hidden">
           <div
-            className="bg-[#fafafa] dark:bg-gray-950 rounded-[44px] overflow-hidden"
+            className="bg-[#fafafa] darrk:bg-gray-950 rounded-[44px] overflow-hidden"
             id="subscribe"
           >
             <Education className="overflow-hidden" />

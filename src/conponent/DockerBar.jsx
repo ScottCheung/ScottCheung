@@ -214,15 +214,15 @@ function DockerBar(props) {
   // === Animation Feature of DockerBar Component ===
   // === Please do not modify the following numbers without Xianzhe‘s permission ===
   const dockerbarContainer =
-    "inline-flex justify-center items-center bg-gray-200/95 dark:bg-gray-600/80 backdrop-blur-[25px]   rounded-[20px] ";
+    "inline-flex justify-center items-center bg-gray-200/95 darrk:bg-gray-600/80 backdrop-blur-[25px]   rounded-[20px] ";
   const DockerButtonStyle =
-    "flex transition-all duration-50 justify-center items-center w-[45px] h-[45px]   bg-gray-400  dark:bg-gray-100/50  backdrop-blur-[5px] rounded-[10px] ";
+    "flex transition-all duration-50 justify-center items-center w-[45px] h-[45px]   bg-gray-400  darrk:bg-gray-100/50  backdrop-blur-[5px] rounded-[10px] ";
   const PanelButtonStyle =
-    "flex transition-all duration-50 justify-center items-center w-[45px] h-[45px]  bg-gray-200 overflow-hidden    dark:bg-gray-100/50  backdrop-blur-[5px] rounded-[10px] ";
-  const iconStyle = "text-[20px] text-center text-gray-700 dark:text-gray-500";
+    "flex transition-all duration-50 justify-center items-center w-[45px] h-[45px]  bg-gray-200 overflow-hidden    darrk:bg-gray-100/50  backdrop-blur-[5px] rounded-[10px] ";
+  const iconStyle = "text-[20px] text-center text-gray-700 darrk:text-gray-500";
 
   const Keyboard =
-    "flex p-[10px] justify-center items-center  w-[40px] h-[40px] text-[12px] font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg dark:bg-gray-600 dark:text-gray-100 dark:border-gray-500 ";
+    "flex p-[10px] justify-center items-center  w-[40px] h-[40px] text-[12px] font-semibold text-gray-800 bg-gray-100 border border-gray-200 rounded-lg darrk:bg-gray-600 darrk:text-gray-100 darrk:border-gray-500 ";
 
   const settingModal = isColorDepthPanelOpen && (
     <Transition.Root show={isColorDepthPanelOpen} as={Fragment}>
@@ -271,7 +271,7 @@ function DockerBar(props) {
                         </Dialog.Title>
 
                         <button
-                          className="D p-[7px] flex justify-center items-center rounded-full w-[30px] h-[30px] bg-gray-200 dark:bg-gray-800/50 hover:bg-gray-300 dark:hover:bg-gray-700 transition-all duration-300"
+                          className="D p-[7px] flex justify-center items-center rounded-full w-[30px] h-[30px] bg-gray-200 darrk:bg-gray-800/50 hover:bg-gray-300 darrk:hover:bg-gray-700 transition-all duration-300"
                           onClick={() => {
                             setIsColorDepthPanelOpen(false);
                             handleButtonClick(".V");
@@ -285,7 +285,7 @@ function DockerBar(props) {
                         <div className="flex justify-between w-full ">
                           <label
                             htmlFor="steps-range"
-                            className="block mb-2 text-[20px] font-medium text-gray-900 dark:text-white "
+                            className="block mb-2 text-[20px] font-medium text-gray-900 darrk:text-white "
                           >
                             Emphasize Color
                           </label>
@@ -339,7 +339,7 @@ function DockerBar(props) {
                                     ] === label
                                       ? ` w-[45px] h-[45px] rounded-[10px]`
                                       : `w-[30px] h-[30px] rounded-full`
-                                  }    cursor-pointer  text-gray-500 dark:text-white  bg-${label}-${ResumeView.colorDepth} dark:bg-${label}-900/50`}
+                                  }    cursor-pointer  text-gray-500 darrk:text-white  bg-${label}-${ResumeView.colorDepth} darrk:bg-${label}-900/50`}
                                 ></motion.div>
                               </motion.div>
                             </motion.div>
@@ -349,13 +349,13 @@ function DockerBar(props) {
                           <div className="flex justify-between w-full ">
                             <label
                               htmlFor="steps-range"
-                              className=" mb-2 text-[20px] font-medium block text-gray-900 dark:text-white"
+                              className=" mb-2 text-[20px] font-medium block text-gray-900 darrk:text-white"
                             >
                               Color Depth
                             </label>
                             <label
                               htmlFor="steps-range"
-                              className=" mb-2 text-[20px] block font-medium text-gray-900 dark:text-white"
+                              className=" mb-2 text-[20px] block font-medium text-gray-900 darrk:text-white"
                             >
                               <N n={ResumeView.colorDepth} d={1} />
                             </label>
@@ -383,7 +383,7 @@ function DockerBar(props) {
                               });
                             }}
                             step="100"
-                            className="w-full h-8 bg-gray-200 appearance-none cursor-pointer dark:bg-gray-700 my-[20px] rounded-full overflow-hidden"
+                            className="w-full h-8 bg-gray-200 appearance-none cursor-pointer darrk:bg-gray-700 my-[20px] rounded-full overflow-hidden"
                           />
                         </>
                         <div className="flex flex-wrap items-center justify-start md:justify-between">
@@ -594,12 +594,12 @@ function DockerBar(props) {
                               <motion.div
                                 layoutId="Query"
                                 layout="position"
-                                className={`p-[7px] bg-gray-900/10  dark:bg-gray-100/50 backdrop-blur-[5px]   w-full h-full  flex justify-center items-center rounded-[10px]`}
+                                className={`p-[7px] bg-gray-900/10  darrk:bg-gray-100/50 backdrop-blur-[5px]   w-full h-full  flex justify-center items-center rounded-[10px]`}
                               >
                                 <motion.img
                                   layoutId="QueryComponentCaptureAnimation"
                                   layout
-                                  className="dark:invert"
+                                  className="darrk:invert"
                                   src={tool.img}
                                 ></motion.img>
                               </motion.div>
@@ -638,7 +638,7 @@ function DockerBar(props) {
                                 transition: { duration: 0.3 },
                               }}
                               id={tool.name}
-                              className="flex z-10 -mt-[53px]  px-[7px] py-[2px] text-[12px] font-medium text-white bg-gray-900/60 rounded-full shadow-lg dark:bg-gray-700"
+                              className="flex z-10 -mt-[53px]  px-[7px] py-[2px] text-[12px] font-medium text-white bg-gray-900/60 rounded-full shadow-lg darrk:bg-gray-700"
                             >
                               {tool.name}
                             </motion.div>
@@ -677,7 +677,7 @@ function DockerBar(props) {
                     hasEntered === 0
                       ? "animate__animated animate__fadeInUp"
                       : ""
-                  } w-[2px] h-[35px] border-[1px] dark:border-gray-500  border-gray-300 mx-[10px] transition-all duration-50`}
+                  } w-[2px] h-[35px] border-[1px] darrk:border-gray-500  border-gray-300 mx-[10px] transition-all duration-50`}
                 ></motion.div>
               )}
             </AnimatePresence>
@@ -764,9 +764,9 @@ function DockerBar(props) {
                               } rounded-full   w-[20px] h-[20px] `
                         } 
                       
-                      cursor-pointer rounded-full text-gray-500 dark:text-white duration-300 transition-all bg-${label}-${
+                      cursor-pointer rounded-full text-gray-500 darrk:text-white duration-300 transition-all bg-${label}-${
                         ResumeView.colorDepth
-                      } dark:bg-${label}-900/50`}
+                      } darrk:bg-${label}-900/50`}
                       ></motion.div>
                     </motion.div>
                   </motion.div>
@@ -795,7 +795,7 @@ function DockerBar(props) {
                           transition: { duration: 0.3 },
                         }}
                         id={label}
-                        className="  z-10 -mt-[53px] flex px-[7px] py-[2px] text-[12px] font-medium text-white  bg-gray-900/60 rounded-full shadow-sm   dark:bg-gray-700"
+                        className="  z-10 -mt-[53px] flex px-[7px] py-[2px] text-[12px] font-medium text-white  bg-gray-900/60 rounded-full shadow-sm   darrk:bg-gray-700"
                       >
                         {label}
                       </motion.div>

@@ -10,13 +10,13 @@ const Loading = ({ bg, context, textsize, cursor }) => {
       layout
       transition={{ duration: 0.7 }}
       className={`inline-flex  justify-center items-center  ${
-        BG ? "bg-gray-400/95 dark:bg-gray-600/80" : null
+        BG ? "bg-gray-400/95 darrk:bg-gray-600/80" : null
       }`}
     >
       <div role="status">
         <svg
           aria-hidden="true"
-          className={`fill-green-500  text-white/30 animate-spin animate__animated  animate__faster dark:text-gray-600 ${
+          className={`fill-green-500  text-white/30 animate-spin animate__animated  animate__faster darrk:text-gray-600 ${
             cursor || " w-16 h-16 p-[5px]"
           } `}
           viewBox="0 0 100 101"

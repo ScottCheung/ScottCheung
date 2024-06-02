@@ -218,11 +218,11 @@ export default function Profile() {
                                 ></i>
                               </div>
                               <div className="flex-1 min-w-0 ms-4">
-                                <p className="text-3xl font-medium font-semibold text-gray-900 truncate dark:text-white">
+                                <p className="text-3xl font-medium font-semibold text-gray-900 truncate darrk:text-white">
                                   {info.cont}
                                 </p>
                               </div>
-                              <div className="inline-flex items-center text-2xl text-gray-900 dark:text-white">
+                              <div className="inline-flex items-center text-2xl text-gray-900 darrk:text-white">
                                 {info.icon}
                               </div>
                             </div>

@@ -14,15 +14,15 @@ export function more({ color }) {
       >
         <div className="relative w-full p-4 ">
           {/* <!-- Modal content --> */}
-          <div className="relative bg-white rounded-lg shadow dark:bg-gray-700">
+          <div className="relative bg-white rounded-lg shadow darrk:bg-gray-700">
             {/* <!-- Modal header --> */}
-            <div className="flex justify-between items-center p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-              <h3 className="text-lg text-gray-900  font-semibold dark:text-white">
+            <div className="flex justify-between items-center p-4 md:p-5 border-b rounded-t darrk:border-gray-600">
+              <h3 className="text-lg text-gray-900  font-semibold darrk:text-white">
                 Changelog
               </h3>
               <button
                 type="button"
-                className="justify-center items-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 ms-auto inline-flex dark:hover:bg-gray-600 dark:hover:text-white"
+                className="justify-center items-center w-8 h-8 text-sm text-gray-400 bg-transparent rounded-lg hover:bg-gray-200 hover:text-gray-900 ms-auto inline-flex darrk:hover:bg-gray-600 darrk:hover:text-white"
                 data-modal-toggle="timeline-modal"
               >
                 <svg
@@ -45,11 +45,11 @@ export function more({ color }) {
             </div>
             {/* <!-- Modal body --> */}
             <div className="p-4 md:p-5">
-              <ol className="relative border-s border-gray-200 dark:border-gray-600 ms-3.5 mb-4 md:mb-5">
+              <ol className="relative border-s border-gray-200 darrk:border-gray-600 ms-3.5 mb-4 md:mb-5">
                 <li className="mb-10 ms-8">
-                  <span className="absolute flex items-center justify-center w-6 h-6 bg-gray-100 rounded-full -start-3.5 ring-8 ring-white dark:ring-gray-700 dark:bg-gray-600">
+                  <span className="absolute flex items-center justify-center w-6 h-6 bg-gray-100 rounded-full -start-3.5 ring-8 ring-white darrk:ring-gray-700 darrk:bg-gray-600">
                     <svg
-                      className="w-2.5 h-2.5 text-gray-500 dark:text-gray-400"
+                      className="w-2.5 h-2.5 text-gray-500 darrk:text-gray-400"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -61,18 +61,18 @@ export function more({ color }) {
                       />
                     </svg>
                   </span>
-                  <h3 className="flex items-start text-lg text-gray-900 mb-1 font-semibold dark:text-white">
+                  <h3 className="flex items-start text-lg text-gray-900 mb-1 font-semibold darrk:text-white">
                     Flowbite Application UI v2.0.0{" "}
-                    <span className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">
+                    <span className="bg-blue-100 text-blue-800 text-sm font-medium mr-2 px-2.5 py-0.5 rounded darrk:bg-blue-900 darrk:text-blue-300 ms-3">
                       Latest
                     </span>
                   </h3>
-                  <time className="block text-sm text-gray-500 mb-3 font-normal leading-none dark:text-gray-400">
+                  <time className="block text-sm text-gray-500 mb-3 font-normal leading-none darrk:text-gray-400">
                     Released on Nov 10th, 2023
                   </time>
                   <button
                     type="button"
-                    className="items-center text-sm text-gray-900 bg-white border rounded-lg inline-flex py-2 px-3 font-medium focus:outline-none border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-600"
+                    className="items-center text-sm text-gray-900 bg-white border rounded-lg inline-flex py-2 px-3 font-medium focus:outline-none border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 darrk:focus:ring-gray-700 darrk:bg-gray-700 darrk:text-gray-400 darrk:border-gray-600 darrk:hover:text-white darrk:hover:bg-gray-600"
                   >
                     <svg
                       className="w-3 h-3 me-1.5"
@@ -88,9 +88,9 @@ export function more({ color }) {
                   </button>
                 </li>
                 <li className="mb-10 ms-8">
-                  <span className="absolute flex items-center justify-center w-6 h-6 bg-gray-100 rounded-full -start-3.5 ring-8 ring-white dark:ring-gray-700 dark:bg-gray-600">
+                  <span className="absolute flex items-center justify-center w-6 h-6 bg-gray-100 rounded-full -start-3.5 ring-8 ring-white darrk:ring-gray-700 darrk:bg-gray-600">
                     <svg
-                      className="w-2.5 h-2.5 text-gray-500 dark:text-gray-400"
+                      className="w-2.5 h-2.5 text-gray-500 darrk:text-gray-400"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -102,15 +102,15 @@ export function more({ color }) {
                       />
                     </svg>
                   </span>
-                  <h3 className="text-lg text-gray-900 mb-1 font-semibold dark:text-white">
+                  <h3 className="text-lg text-gray-900 mb-1 font-semibold darrk:text-white">
                     Flowbite Figma v2.8.0
                   </h3>
-                  <time className="block text-sm text-gray-500 mb-3 font-normal leading-none dark:text-gray-400">
+                  <time className="block text-sm text-gray-500 mb-3 font-normal leading-none darrk:text-gray-400">
                     Released on Oct 7th, 2023
                   </time>
                   <button
                     type="button"
-                    className="items-center text-sm text-gray-900 bg-white border rounded-lg inline-flex py-2 px-3 font-medium focus:outline-none border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-700 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-600"
+                    className="items-center text-sm text-gray-900 bg-white border rounded-lg inline-flex py-2 px-3 font-medium focus:outline-none border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 darrk:focus:ring-gray-700 darrk:bg-gray-700 darrk:text-gray-400 darrk:border-gray-600 darrk:hover:text-white darrk:hover:bg-gray-600"
                   >
                     <svg
                       className="w-3 h-3 me-1.5"
@@ -144,9 +144,9 @@ export function more({ color }) {
                   </button>
                 </li>
                 <li className="ms-8">
-                  <span className="absolute flex items-center justify-center w-6 h-6 bg-gray-100 rounded-full -start-3.5 ring-8 ring-white dark:ring-gray-700 dark:bg-gray-600">
+                  <span className="absolute flex items-center justify-center w-6 h-6 bg-gray-100 rounded-full -start-3.5 ring-8 ring-white darrk:ring-gray-700 darrk:bg-gray-600">
                     <svg
-                      className="w-2.5 h-2.5 text-gray-500 dark:text-gray-400"
+                      className="w-2.5 h-2.5 text-gray-500 darrk:text-gray-400"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
@@ -158,15 +158,15 @@ export function more({ color }) {
                       />
                     </svg>
                   </span>
-                  <h3 className="text-lg text-gray-900 mb-1 font-semibold dark:text-white">
+                  <h3 className="text-lg text-gray-900 mb-1 font-semibold darrk:text-white">
                     Flowbite Library v1.2.2
                   </h3>
-                  <time className="block text-sm text-gray-500 mb-3 font-normal leading-none dark:text-gray-400">
+                  <time className="block text-sm text-gray-500 mb-3 font-normal leading-none darrk:text-gray-400">
                     Released on December 2nd, 2021
                   </time>
                 </li>
               </ol>
-              <button className="text-white inline-flex w-full justify-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+              <button className="text-white inline-flex w-full justify-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center darrk:bg-blue-600 darrk:hover:bg-blue-700 darrk:focus:ring-blue-800">
                 My Downloads
               </button>
             </div>

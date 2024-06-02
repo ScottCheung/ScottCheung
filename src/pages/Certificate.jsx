@@ -58,10 +58,10 @@ export default function material() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true }}
-                className="w-full text-left text-gray-500 rtl:text-right dark:text-gray-40 "
+                className="w-full text-left text-gray-500 rtl:text-right darrk:text-gray-40 "
               >
                 {lang == 1 && (
-                  <thead className="text-text-[20px] text-gray-700 bg-gray-50 uppercase dark:bg-gray-700 dark:text-gray-400">
+                  <thead className="text-text-[20px] text-gray-700 bg-gray-50 uppercase darrk:bg-gray-700 darrk:text-gray-400">
                     <tr>
                       <th scope="col" className="px-6 py-3">
                         序
@@ -79,7 +79,7 @@ export default function material() {
                   </thead>
                 )}
                 {lang == 0 && (
-                  <thead className="text-[20px] text-gray-700 bg-gray-50 uppercase dark:bg-gray-700 dark:text-gray-400">
+                  <thead className="text-[20px] text-gray-700 bg-gray-50 uppercase darrk:bg-gray-700 darrk:text-gray-400">
                     <tr>
                       <th scope="col" className="px-6 py-3">
                         Serial
@@ -105,16 +105,16 @@ export default function material() {
                     whileTap={{ scale: 0.99 }}
                     layout
                   >
-                    <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <tr className="bg-white border-b darrk:bg-gray-800 darrk:border-gray-700">
                       <th
                         scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white"
                       >
                         {index + 1}
                       </th>
                       <td
                         scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white"
                       >
                         {Certificate.activity}
                       </td>
@@ -124,7 +124,7 @@ export default function material() {
                           target="_blank"
                           rel="noopener noreferrer"
                           href={Certificate.src}
-                          className="hover:text-sky-700 hover:underline dark:text-sky-400 dark:hover:text-sky-700"
+                          className="hover:text-sky-700 hover:underline darrk:text-sky-400 darrk:hover:text-sky-700"
                         >
                           {lang == 0 ? "Link " : "链接"}
                         </a>

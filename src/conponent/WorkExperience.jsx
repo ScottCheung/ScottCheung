@@ -333,7 +333,7 @@ function Card({ card, onClick }) {
             />
             <motion.kbd
               layoutId={"card-type" + card.type + card.company}
-              class=" absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full dark:bg-sky-600 dark:text-sky-100 dark:border-sky-500"
+              class=" absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
             >
               {card.type[0]}
             </motion.kbd>
@@ -529,7 +529,7 @@ function WorkExperience() {
                             selectedCard.type +
                             selectedCard.company
                           }
-                          class="flex items-center justify-center px-[20px] py-[5px] text-xl font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full dark:bg-sky-600 dark:text-sky-100 dark:border-sky-500"
+                          class="flex items-center justify-center px-[20px] py-[5px] text-xl font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
                         >
                           {selectedCard.type}
                         </motion.kbd>

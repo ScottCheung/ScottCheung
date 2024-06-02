@@ -68,7 +68,7 @@ export default function Keyfeature2() {
             data-popover
             id={`keyFeatureDes-${index}`}
             role="tooltip"
-            className="absolute z-10 invisible inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+            className="absolute z-10 invisible inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
           >
             <div className="px-6 py-4">
               <p className="text-[13px] text-left font-mono">

@@ -183,7 +183,7 @@ function Education({ hideTittle, simpleVer }) {
                                       ...hideRow(3),
                                       animationDelay: `${index * 0.3}s`,
                                     }}
-                                    className={`${simpleVer || windowWidth < 1024 ? "hidden" : ""} mt-10  text-gray-600 animate__animated animate__fadeInUp card-description dark:text-gray-50`}
+                                    className={`${simpleVer || windowWidth < 1024 ? "hidden" : ""} mt-10  text-gray-600 animate__animated animate__fadeInUp card-description darrk:text-gray-50`}
                                   >
                                     {Experience.description[lang]}
                                   </p>{" "}

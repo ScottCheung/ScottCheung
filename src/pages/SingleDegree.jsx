@@ -192,7 +192,7 @@ export default function Example() {
                     <thead
                       className={`${
                         windowWidth > 786 ? "" : "hidden"
-                      } pb-[15px] w-[100%] flex justify-between text-gray-700 uppercase  dark:bg-gray-700 dark:text-gray-400`}
+                      } pb-[15px] w-[100%] flex justify-between text-gray-700 uppercase  darrk:bg-gray-700 darrk:text-gray-400`}
                     >
                       <th className="pl-[2%] py-3 text-center w-[5%]">
                         Serial
@@ -208,7 +208,7 @@ export default function Example() {
                     <thead
                       className={`${
                         windowWidth > 786 ? "" : "hidden"
-                      } pb-[15px] w-[100%] flex justify-between text-gray-700 uppercase  dark:bg-gray-700 dark:text-gray-400`}
+                      } pb-[15px] w-[100%] flex justify-between text-gray-700 uppercase  darrk:bg-gray-700 darrk:text-gray-400`}
                     >
                       <th className="pl-[2%] py-3 text-center w-[10%]">序号</th>
                       <th className="pl-[4%] py-3 w-[34%]">课程</th>
@@ -227,13 +227,13 @@ export default function Example() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true }}
-                    className="w-full text-left text-gray-500 rtl:text-right dark:text-gray-40 "
+                    className="w-full text-left text-gray-500 rtl:text-right darrk:text-gray-40 "
                   >
                     {lang == 0 && (
                       <thead
                         className={`${
                           windowWidth <= 786 ? "" : "hidden"
-                        } text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 `}
+                        } text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400 `}
                       >
                         <tr>
                           <th scope="col" className="px-6 py-3 text-center">
@@ -255,7 +255,7 @@ export default function Example() {
                       <thead
                         className={`${
                           windowWidth <= 786 ? "" : "hidden"
-                        } text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400 `}
+                        } text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400 `}
                       >
                         <th className="pl-[2%] py-3 text-center w-[10%]">
                           序号
@@ -279,16 +279,16 @@ export default function Example() {
                         layout
                         className=""
                       >
-                        <tr className="max-w-full text-center bg-white border-b dark:bg-gray-800 dark:border-gray-700 ">
+                        <tr className="max-w-full text-center bg-white border-b darrk:bg-gray-800 darrk:border-gray-700 ">
                           <th
                             scope="row"
-                            className="px-6 py-4 font-medium text-center text-gray-900 whitespace-nowrap dark:text-white"
+                            className="px-6 py-4 font-medium text-center text-gray-900 whitespace-nowrap darrk:text-white"
                           >
                             {index + 1}
                           </th>
                           <td
                             scope="row"
-                            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                            className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white"
                           >
                             {subject.CourseName}
                           </td>
