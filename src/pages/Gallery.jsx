@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/NavBar/Navbar";
 import Database from "../Database.json";
 import { useLanguage } from "../help/helpFunction";
 import { useParams, useNavigate } from "react-router-dom";

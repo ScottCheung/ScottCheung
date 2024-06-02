@@ -1,4 +1,4 @@
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/Navbar/Navbar";
 import { useState } from "react";
 
 const product = {

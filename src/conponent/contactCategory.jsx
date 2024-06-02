@@ -49,7 +49,7 @@ export default function Life() {
                   style={{
                     animationDelay: `${index * 0.1}s`,
                   }}
-                  className={`${type.icon}  text-5xl animate__animated  animate__zoomIn  `}
+                  className={`${type.icon}  text-5xl   `}
                 ></i>
               </div>
               {
@@ -57,7 +57,7 @@ export default function Life() {
                   style={{
                     animationDelay: `${index * 0.1}s`,
                   }}
-                  className="lg:text-[15px]  text-center animate__animated  animate__zoomIn  "
+                  className="lg:text-[15px]  text-center   "
                 >
                   {type.type[lang]}
                 </p>

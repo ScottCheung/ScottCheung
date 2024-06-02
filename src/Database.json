@@ -1,51 +1,5 @@
 {
   "Navbar": {
-    "Avatar": {
-      "Webname": ["Xianzhe Zhang", "张贤哲Scott"],
-      "helloword": ["Keep Enthusiasm", "保持热爱"]
-    },
-    "Hero": {
-      "hello": ["Welcome! I'm Scott.", "好久不见，我是贤哲"],
-      "word": ["Sidere mens eadem mutato", "繁星纵变，智慧永存"]
-    },
-    "navbarItem": [
-      {
-        "name": ["Home", "主页"],
-        "href": "/",
-        "icon": "fi-rr-home-heart",
-        "des": ["Key information here ~", "主要信息都在这里 ~"],
-        "expression": "❤٩ (◕‿◕｡)۶ 🏠"
-      },
-      {
-        "name": ["Resume", "简历"],
-        "href": "/resume",
-        "icon": "fi-rr-memo-pad",
-        "des": ["Here is my resume ~", "这里是我的简历~"],
-        "expression": "(｡◕‿◕｡) 📧"
-      },
-      {
-        "name": ["Workbench", "工作台"],
-        "href": "/workbench",
-        "icon": "fi fi-rr-corporate-alt",
-        "des": [" Personal Workbench  ~ ", " 个人工作台 ~ "],
-        "expression": "(⌐■_■) 💻"
-      },
-      {
-        "name": ["Life", "生活"],
-        "href": "/life",
-        "icon": "fi-rr-mountains",
-        "des": ["It records my wonderful life ~", "我的精彩生活 ~"],
-        "expression": "(＾◡＾) 🌄"
-      },
-
-      {
-        "name": ["Contact", "联络"],
-        "href": "/Contact",
-        "icon": "fi-rr-following",
-        "des": [" You can contact me by these ways ~ ", " 您可以这样找到我 ~ "],
-        "expression": "(｡♥‿♥｡) ☎️"
-      }
-    ],
     "Location": [
       {
         "id": "/#Education",
@@ -81,32 +35,6 @@
         "logo": "fi-rr-lightbulb-on",
         "color1": "from-indigo-500",
         "color2": "to-pink-500"
-      }
-    ],
-    "workbench": [
-      {
-        "id": "/networkingmsg",
-        "label": ["NetWorking", "互联社交"],
-        "logo": "fi-rr-tool-box",
-        "status": "fi fi-sr-eye-crossed"
-      },
-      {
-        "id": "/coverletters",
-        "label": ["Coverletters", "求职信"],
-        "logo": "fi-rr-book",
-        "status": "fi fi-sr-lock"
-      },
-      {
-        "id": "/rentmsg",
-        "label": ["House Rental", "租房系统"],
-        "logo": "fi fi-rr-house-building",
-        "status": "fi fi-sr-lock"
-      },
-      {
-        "id": "/table2json",
-        "label": ["Data converter", "数据转换"],
-        "logo": "fi fi-rr-database",
-        "status": "fi fi-sr-unlock"
       }
     ],
     "UpdateLog": [
@@ -1884,9 +1812,6 @@
         }
       ],
       "graphs": {
-        "gallerybg": [
-          "https://cdn.pixabay.com/photo/2019/08/19/11/59/milky-way-4416194_1280.jpg"
-        ],
         "code": ["https://3o.hk/images/2024/04/21/code.png"],
         "infj": ["https://3o.hk/images/2024/04/21/infj.png"]
       }

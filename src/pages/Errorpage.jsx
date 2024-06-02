@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/NavBar/Navbar";
 import { hideRow, bgPic, useLanguage, SelectText } from "../help/helpFunction";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -71,7 +71,7 @@ export default function Errorpage() {
           >
             {Message.Status[lang]}
           </motion.p>
-          <div className="mt-10 flex items-center place-items-center justify-center gap-x-24">
+          <div className="flex items-center justify-center mt-10 place-items-center gap-x-24">
             <motion.div
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

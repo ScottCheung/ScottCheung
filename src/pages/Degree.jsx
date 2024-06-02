@@ -1,5 +1,5 @@
 import Contact from "../conponent/Contact";
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/NavBar/Navbar";
 import Education from "../conponent/Education";
 import { hideRow, bgPic, useLanguage } from "../help/helpFunction";
 import { motion } from "framer-motion";

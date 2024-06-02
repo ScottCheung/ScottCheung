@@ -1,4 +1,4 @@
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/NavBar/Navbar";
 import database from "../Database.json";
 import KeyFeature from "../conponent/KeyFeature";
 import Contact from "../conponent/Contact";

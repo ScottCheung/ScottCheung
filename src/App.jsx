@@ -1,4 +1,5 @@
 import React from "react";
+import "./App.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import Certificate from "./pages/Certificate.jsx";
@@ -15,7 +16,7 @@ import Gallery from "./pages/Gallery.jsx";
 import { AppContextProvider } from "./help/ContextManager";
 import Resume from "./pages/Resume.jsx";
 import AutoText from "./pages/AutoText/AutoText.jsx";
-import Login from "./pages/AutoText/Login.jsx";
+import Navbar from "./conponent/NavBar/Navbar.jsx";
 
 const router = createBrowserRouter([
   {
@@ -88,6 +89,10 @@ const router = createBrowserRouter([
     element: <Resume />,
   },
   { path: "/at", element: <AutoText /> },
+  {
+    path: "/test",
+    element: <Navbar />,
+  },
 ]);
 
 function Router() {

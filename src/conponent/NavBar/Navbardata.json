@@ -1,0 +1,228 @@
+{
+  "navbarItem": [
+    {
+      "name": ["Home", "主页"],
+      "href": "/",
+      "icon": "fi-rr-home-heart",
+      "des": ["Key information here ~", "主要信息都在这里 ~"],
+      "expression": "❤٩ (◕‿◕｡)۶ 🏠",
+      "isTopShow": false,
+      "scondMenu": [
+        {
+          "link": "/#Education",
+          "name": ["Education", "教育"],
+          "icon": "fi-rr-book"
+        },
+        {
+          "link": "/#Capability",
+          "name": ["Capability", "能力"],
+          "icon": "fi-rr-user"
+        },
+        {
+          "link": "/#WorkExperience",
+          "name": ["Work", "工作"],
+          "icon": "fi-rr-tool-box"
+        },
+        {
+          "link": "/#SelfDescribing",
+          "name": ["Describe", "自述"],
+          "icon": "fi-rr-comment-heart"
+        },
+        {
+          "link": "/#WhyMe",
+          "name": ["Why me", "优势"],
+          "icon": "fi-rr-lightbulb-on"
+        }
+      ]
+    },
+    {
+      "name": ["Resume", "简历"],
+      "href": "/resume",
+      "icon": "fi-rr-memo-pad",
+      "des": ["Here is my resume ~", "这里是我的简历~"],
+      "expression": "(｡◕‿◕｡) 📧"
+    },
+    {
+      "name": ["Workbench", "工作台"],
+      "href": "/workbench",
+      "icon": "fi fi-rr-corporate-alt",
+      "des": [" Personal Workbench  ~ ", " 个人工作台 ~ "],
+      "expression": "(⌐■_■) 💻",
+      "isTopShow": true,
+      "scondMenu": [
+        {
+          "link": "/networkingmsg",
+          "name": ["NetWorking", "互联社交"],
+          "icon": "fi-rr-tool-box",
+          "status": "fi fi-sr-eye-crossed"
+        },
+        {
+          "link": "/coverletters",
+          "name": ["Coverletters", "求职信"],
+          "icon": "fi-rr-book",
+          "status": "fi fi-sr-lock"
+        },
+        {
+          "link": "/rentmsg",
+          "name": ["House Rental", "租房系统"],
+          "icon": "fi fi-rr-house-building",
+          "status": "fi fi-sr-lock"
+        },
+        {
+          "link": "/table2json",
+          "name": ["Data converter", "数据转换"],
+          "icon": "fi fi-rr-database",
+          "status": "fi fi-sr-unlock"
+        }
+      ]
+    },
+    {
+      "name": ["Life", "生活"],
+      "href": "/life",
+      "icon": "fi-rr-mountains",
+      "des": ["It records my wonderful life ~", "我的精彩生活 ~"],
+      "expression": "(＾◡＾) 🌄",
+      "isTopShow": true,
+      "scondMenu": [
+        {
+          "icon": "fi-sr-music-alt",
+          "name": ["Music", "音 乐"],
+          "link": "/music",
+          "status": "fi fi-sr-eye-crossed"
+        },
+        {
+          "icon": "fi-sr-user-music",
+          "name": ["Perform", "表 演"],
+          "link": "/perform",
+          "status": "fi fi-sr-eye-crossed"
+        },
+        {
+          "icon": "fi-sr-picture",
+          "name": ["Gallery", "图 库"],
+          "link": "/gallery",
+          "status": "fi fi-sr-unlock"
+        },
+        {
+          "icon": "fi-sr-followcollection",
+          "name": ["Story", "故 事"],
+          "link": "/story",
+          "status": "fi fi-sr-eye-crossed"
+        }
+      ]
+    },
+    {
+      "name": ["Contact", "联络"],
+      "href": "/Contact",
+      "icon": "fi-rr-following",
+      "des": [" You can contact me by these ways ~ ", " 您可以这样找到我 ~ "],
+      "expression": "(｡♥‿♥｡) ☎️",
+      "isTopShow": true
+    }
+  ],
+  "Location": [
+    {
+      "id": "/#Education",
+      "label": ["Education", "教育"],
+      "logo": "fi-rr-book",
+      "color1": "from-red-500",
+      "color2": "to-red-700"
+    },
+    {
+      "id": "/#Capability",
+      "label": ["Capability", "能力"],
+      "logo": "fi-rr-user",
+      "color1": "from-orange-500",
+      "color2": "to-amber-500"
+    },
+    {
+      "id": "/#WorkExperience",
+      "label": ["Work", "工作"],
+      "logo": "fi-rr-tool-box",
+      "color1": "from-cyan-500",
+      "color2": "to-blue-500"
+    },
+    {
+      "id": "/#SelfDescribing",
+      "label": ["Describe", "自述"],
+      "logo": "fi-rr-comment-heart",
+      "color1": "from-sky-500",
+      "color2": "to-emerald-500"
+    },
+    {
+      "id": "/#WhyMe",
+      "label": ["Why me", "优势"],
+      "logo": "fi-rr-lightbulb-on",
+      "color1": "from-indigo-500",
+      "color2": "to-pink-500"
+    }
+  ],
+  "workbench": [
+    {
+      "id": "/networkingmsg",
+      "label": ["NetWorking", "互联社交"],
+      "logo": "fi-rr-tool-box",
+      "status": "fi fi-sr-eye-crossed"
+    },
+    {
+      "id": "/coverletters",
+      "label": ["Coverletters", "求职信"],
+      "logo": "fi-rr-book",
+      "status": "fi fi-sr-lock"
+    },
+    {
+      "id": "/rentmsg",
+      "label": ["House Rental", "租房系统"],
+      "logo": "fi fi-rr-house-building",
+      "status": "fi fi-sr-lock"
+    },
+    {
+      "id": "/table2json",
+      "label": ["Data converter", "数据转换"],
+      "logo": "fi fi-rr-database",
+      "status": "fi fi-sr-unlock"
+    }
+  ],
+  "Lifes": [
+    {
+      "icon": "fi-sr-music-alt",
+      "label": ["Music", "音 乐"],
+      "link": "/music",
+      "pic": "3o.hk/images/2024/01/19/EmotionalStable.md.png",
+      "des": "It collect musics I recommend ~",
+      "status": "fi fi-sr-eye-crossed"
+    },
+    {
+      "icon": "fi-sr-user-music",
+      "label": ["Perform", "表 演"],
+      "link": "/perform",
+      "pic": "3o.hk/images/2024/01/19/ProblemSolving.png",
+      "des": "It collect musics I perform ~",
+      "status": "fi fi-sr-eye-crossed"
+    },
+    {
+      "icon": "fi-sr-picture",
+      "label": ["Gallery", "图 库"],
+      "link": "/gallery",
+      "pic": "3o.hk/images/2024/01/19/AestheticAttitude.md.png",
+      "des": "It collect picture I take ~",
+      "status": "fi fi-sr-unlock"
+    },
+    {
+      "icon": "fi-sr-followcollection",
+      "label": ["Story", "故 事"],
+      "link": "/story",
+      "pic": "3o.hk/images/2024/01/19/Leadership.md.png",
+      "des": "It collect stories I undergo ~",
+      "status": "fi fi-sr-eye-crossed"
+    }
+  ],
+  "Avatar": {
+    "Webname": ["Xianzhe Zhang", "张贤哲Scott"],
+    "helloword": ["Keep Enthusiasm", "保持热爱"]
+  },
+  "Hero": {
+    "hello": ["Welcome! I'm Scott.", "好久不见，我是贤哲"],
+    "word": ["Sidere mens eadem mutato", "繁星纵变，智慧永存"]
+  },
+  "dialog": "http://3o.hk/images/2024/04/21/infj.png"
+}

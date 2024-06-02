@@ -4,7 +4,7 @@ import DockerBar from "../conponent/DockerBar";
 import { useAppContext } from "../help/ContextManager";
 import { motion } from "framer-motion";
 import N from "../conponent/Num";
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/NavBar/Navbar";
 import { useParams, useNavigate } from "react-router-dom";
 
 const EmphasizeColorLists = [

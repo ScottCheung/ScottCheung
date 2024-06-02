@@ -1,4 +1,4 @@
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/NavBar/Navbar.jsx";
 import Education from "../conponent/Education";
 import database from "../Database.json";
 import React, { useState, useEffect } from "react";
@@ -51,6 +51,11 @@ export default function Example() {
   }, []);
   return (
     <div className="overflow-hidden bg-white">
+      <link
+        rel="stylesheet"
+        href="../style/uicons/css/all/all.css"
+        type="text/css"
+      />
       <AnimatePresence>
         <motion.div
           layout

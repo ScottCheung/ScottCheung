@@ -29,37 +29,21 @@ function KeyFeature() {
   });
 
   const width = useTransform(scrollYProgress, [0, 1], ["50vw", "100vw"]);
-  // const y = useTransform(scrollYProgress, [0, 1], ["10vh", "0vh"], {
-  //   ease: easeInOut,
-  // });
-  const borderRadius = useTransform(scrollYProgress, [0, 1], [200, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], ["50vh", "0vh"]);
+  const borderRadius = useTransform(scrollYProgress, [0, 1], [500, 0]);
 
   const KeyFeature = (
     <motion.div
       ref={ref}
       style={{
         width,
-
+        y,
         borderRadius,
-        // maskImage: gradient
-        //   ? "linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)"
-        //   : null,
-        // WebkitMaskImage: gradient
-        //   ? "linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)"
-        //   : null,
       }}
-      className={`w-full flex h-[100vh]  md:h-[150vh]   overflow-hidden transform-gpu  mt-[50vh]`}
+      className={`w-full flex h-[100vh]  md:h-[150vh]   overflow-hidden transform-gpu  `}
     >
       <motion.section className="w-full md:h-[150vh] relative overflow-hidden bg-gradient-to-r   from-lime-500  to-emerald-500 ">
         <img
-          // style={{
-          //   maskImage: gradient
-          //     ? "linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)"
-          //     : null,
-          //   WebkitMaskImage: gradient
-          //     ? "linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)"
-          //     : null,
-          // }}
           className="w-full md:h-[150vh] object-cover absolute object-bottom"
           src={bg[0]}
         />

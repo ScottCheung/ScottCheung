@@ -1,4 +1,4 @@
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/Navbar/Navbar";
 import Database from "../Database.json";
 import { motion, AnimatePresence } from "framer-motion";
 import Education from "../conponent/Education";

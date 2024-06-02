@@ -182,14 +182,13 @@ function PersonalityandLanguage() {
           className="tile-header rounded-[28px]  h-full "
           style={{
             background:
-              "linear-gradient(to top left, #9795f0 0%, #fbc8d4 120%)",
-            // background-image: ;
+              "linear-gradient(to top left, #9795f0 0%, #fbc8d4 100%)",
           }}
         >
           <div
             className=" h-full w-full pb-[40vh] md:pb-[40vh] "
             style={{
-              // backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj[0]})`,
+              backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj[0]})`,
               backgroundSize: "100% auto",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center bottom",

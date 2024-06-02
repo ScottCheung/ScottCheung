@@ -1,6 +1,6 @@
 import "../LazyLoad";
 import React, { useEffect } from "react";
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/Navbar/Navbar";
 import Education from "../conponent/Education";
 import WhyMe from "../conponent/WhyMe";
 import SelfDescribing from "../conponent/SelfDescribing";

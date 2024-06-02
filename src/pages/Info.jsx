@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/NavBar/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
 import database from "../Database.json";
 import Contact from "../conponent/Contact";
@@ -26,19 +26,19 @@ export default function Profile() {
   }, []);
 
   return (
-    <div className="profile-page overflow-hidden">
+    <div className="overflow-hidden profile-page">
       <Navbar topTextColor={true} />
-      <main className="profile-page overflow-hidden">
+      <main className="overflow-hidden profile-page">
         <motion.div
           initial={{ opacity: 0, y: "-60px", scale: 0.95 }}
           transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 0.9 }}
           viewport={{ once: true }}
           whileInView={{ opacity: 1, y: "0px", scale: 1 }}
-          className="block relative"
+          className="relative block"
           style={{ height: "400px" }}
         >
           <div
-            className="absolute w-full h-full top-0 bgrid-colsenter bgrid-colsover"
+            className="absolute top-0 w-full h-full bgrid-colsenter bgrid-colsover"
             style={{
               backgroundImage:
                 "url('https://3o.hk/images/2024/01/22/profilebg.jpg')",
@@ -50,7 +50,7 @@ export default function Profile() {
             ></span>
           </div>
           <div
-            className="absolute w-full top-auto bottom-0 left-0 right-0 pointer-events-none overflow-hidden"
+            className="absolute bottom-0 left-0 right-0 top-auto w-full overflow-hidden pointer-events-none"
             style={{ height: "700px" }}
           >
             <svg
@@ -78,32 +78,32 @@ export default function Profile() {
                     <div className="">
                       <img
                         alt="..."
-                        src="/Graphs/home/avatar.jpg"
+                        src="https://3o.hk/images/2024/01/14/avatar.md.jpg"
                         className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-[75px] animate__animated animate__zoomIn"
                         style={{ maxWidth: "150px" }}
                       />
                     </div>
                   </div>
                 </div>
-                <div className="text-center mt-12">
-                  <h3 className="text-4xl text-gray-800 font-semibold leading-normal mb-2 animate__animated animate__zoomIn">
+                <div className="mt-12 text-center">
+                  <h3 className="mb-2 text-4xl font-semibold leading-normal text-gray-800 animate__animated animate__zoomIn">
                     张贤哲 | Scott Zhang
                   </h3>
                   <a
                     href="https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7"
-                    className="text-xl text-gray-500 leading-normal mt-0 mb-2 font-bold uppercase"
+                    className="mt-0 mb-2 text-xl font-bold leading-normal text-gray-500 uppercase"
                   >
-                    <i className="text-gray-500 fi fi-rr-marker mr-2"></i>
+                    <i className="mr-2 text-gray-500 fi fi-rr-marker"></i>
 
                     {lang == 0 && "Sydney, Australia"}
                     {lang == 1 && "澳大利亚，悉尼"}
                   </a>
-                  <div className="text-gray-700 mb-2 mt-10"></div>
+                  <div className="mt-10 mb-2 text-gray-700"></div>
                 </div>
-                <div className="text-center border-t mt-10 py-10">
+                <div className="py-10 mt-10 text-center border-t">
                   <div className="flex flex-wrap justify-center">
-                    <div className="w-full lg:w-9/12 px-4">
-                      <p className="text-xl text-gray-800 mb-4 leading-relaxed ">
+                    <div className="w-full px-4 lg:w-9/12">
+                      <p className="mb-4 text-xl leading-relaxed text-gray-800 ">
                         {lang == 0 &&
                           "Please note that all these informations is private. Please respect privacy and please do not spread it."}
                         {lang == 1 &&
@@ -160,14 +160,14 @@ export default function Profile() {
                   {/* Further Information */}
                   <div className="tile-header ">
                     <div className="flex justify-between">
-                      <h3 className="tile-headline typography-subsection-headline mx-8 py-16 animate__animated animate__zoomIn">
+                      <h3 className="py-16 mx-8 tile-headline typography-subsection-headline animate__animated animate__zoomIn">
                         {lang == 0 && "QA Info"}
                         {lang == 1 && "QA信息"}
                       </h3>
                       <motion.div
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        className="tile-headline py-16 animate__animated animate__zoomIn"
+                        className="py-16 tile-headline animate__animated animate__zoomIn"
                       >
                         <a href="/">
                           {lang == 0 && "more >"}
@@ -182,7 +182,7 @@ export default function Profile() {
                   {" "}
                   {/* Basic Information */}
                   <div className="tile-header ">
-                    <h3 className="tile-headline typography-subsection-headline mx-8 py-16 animate__animated animate__zoomIn">
+                    <h3 className="py-16 mx-8 tile-headline typography-subsection-headline animate__animated animate__zoomIn">
                       {lang == 0 && "Basic Information"}
                       {lang == 1 && "基本信息"}
                     </h3>
@@ -209,7 +209,7 @@ export default function Profile() {
                             whileTap={{ scale: 0.99 }}
                             layout
                             style={{ animationDelay: `${0.05 * index}s` }}
-                            className="py-3 sm:py-4 border-b mx-8 animate__animated animate__fadeInRight"
+                            className="py-3 mx-8 border-b sm:py-4 animate__animated animate__fadeInRight"
                           >
                             <div className="flex items-center">
                               <div className="flex-shrink-0">
@@ -218,11 +218,11 @@ export default function Profile() {
                                 ></i>
                               </div>
                               <div className="flex-1 min-w-0 ms-4">
-                                <p className="text-3xl text-gray-900 font-medium font-semibold truncate dark:text-white">
+                                <p className="text-3xl font-medium font-semibold text-gray-900 truncate dark:text-white">
                                   {info.cont}
                                 </p>
                               </div>
-                              <div className="items-center text-2xl text-gray-900 inline-flex dark:text-white">
+                              <div className="inline-flex items-center text-2xl text-gray-900 dark:text-white">
                                 {info.icon}
                               </div>
                             </div>

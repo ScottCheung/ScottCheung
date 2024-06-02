@@ -1,8 +1,7 @@
-import Navbar from "../conponent/Navbar";
+import Navbar from "../conponent/NavBar/Navbar";
 import database from "../Database.json";
 import KeyFeature from "../conponent/KeyFeature";
 import { motion, AnimatePresence } from "framer-motion";
-import Contact from "../conponent/Contact";
 import { hideRow, useLanguage, ScrollToTop } from "../help/helpFunction";
 import CertificateGallery from "../conponent/CertificateGallery";
 

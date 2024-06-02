@@ -39,33 +39,8 @@ function Education({ hideTittle, simpleVer }) {
     <div className="z-50 ">
       {!isTittle ? (
         <div>
-          {/* 引导按钮 */}
-          <motion.div
-            whileTap={{ scale: 0.9 }}
-            initial={{ opacity: 0, rotate: 180 }}
-            whileInView={{ opacity: 1, rotate: 0 }}
-            viewport={{ once: true, margin: "-30%" }}
-            transition={{
-              duration: 0.7,
-              ease: [0.455, 0.03, 0.515, 0.955],
-            }}
-            className="z-40 pt-[10vh]"
-          >
-            <div className="animate__animated animate__rotateIn ">
-              <div className="flex justify-center py-6 ">
-                <Link
-                  to="#Education"
-                  id="Education"
-                  style={{ animationDelay: `${0.4}s` }}
-                  className="z-50 flex items-center justify-center w-24 h-24 text-center rounded-full shadow-none bg-gray-200/20 hover:text-white hover:bg-sky-900"
-                >
-                  <i className="text-3xl fi fi-br-angle-up "></i>
-                </Link>
-              </div>
-            </div>
-          </motion.div>
           {/* 一级标题 */}
-          <div className="flex justify-center py-12 ">
+          <div className="flex justify-center py-12 pt-[10vh] items-center">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -73,15 +48,27 @@ function Education({ hideTittle, simpleVer }) {
                 ease: [0.455, 0.03, 0.515, 0.955],
                 duration: 1,
               }}
-              className="flex items-center justify-center "
+              className="flex items-center justify-center gap-x-[20px]"
             >
-              <div className="animate__animated animate__zoomIn">
+              <div className="flex-initial animate__animated animate__zoomIn">
                 <i className=" fi text-5xl lg:text-8xl fi-rr-circle-book-open mr-[20px] pt-3 "></i>
               </div>
               <h2 className="font-mono text-5xl font-bold animate__animated animate__zoomIn lg:text-8xl">
                 {lang == "1" && "教育"}
                 {lang == "0" && "Education"}
               </h2>
+              <div className="flex animate__animated animate__rotateIn">
+                <div className="flex justify-center">
+                  <Link
+                    to="#Education"
+                    id="Education"
+                    style={{ animationDelay: `${0.4}s` }}
+                    className="z-50 flex items-center justify-center w-24 h-24 text-center rounded-full shadow-none bg-gray-200/20 hover:text-white hover:bg-sky-900"
+                  >
+                    <i className="text-3xl fi fi-br-angle-up "></i>
+                  </Link>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>

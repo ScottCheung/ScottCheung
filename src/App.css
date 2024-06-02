@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .normal-text {
+    @apply text-[17px] md:text-[23px] py-2;
+  }
+}

@@ -182,14 +182,10 @@ function Skill() {
                   >
                     {/* Front-end */}
                     <motion.div className="mt-[20px]">
-                      <h3 className="text-transparent tile-headline typography-subsection-headline bg-clip-text">
-                        {lang == 0 && "Front-end"}
-                        {lang == 1 && "前端"}
-                      </h3>
-                      <p className="text-transparent tile-copy bg-clip-text">
+                      <p className="text-transparent tile-copy bg-clip-text normal-text">
                         {lang == 0 && (
                           <motion.div>
-                            <p className="py-10  text-[17px] ">
+                            <p className="py-10 ">
                               I am capable of designing and implementing
                               frontend interfaces that are attractive, highly
                               interactive, ensuring users have an outstanding
@@ -200,7 +196,7 @@ function Skill() {
                               are not only visually appealing and elegant but
                               also powerful in functionality.
                             </p>
-                            <ul className=" text-[17px] ">
+                            <ul className="">
                               <li>
                                 <strong className="py-4 font-black">
                                   HTML / CSS / JavaScript:
@@ -255,10 +251,10 @@ function Skill() {
                         )}
                         {lang == 1 && (
                           <motion.div>
-                            <p className="py-10  text-[17px]">
+                            <p className="py-10 ">
                               我能够设计并实现具有吸引力、高度交互性的前端界面，确保用户获得出色的使用体验。我的前端能力不仅体现在技术广度上，同时注重界面设计和用户体验，致力于打造既美观优雅又功能强大的现代化应用程序。
                             </p>
-                            <ul className=" text-[17px] ">
+                            <ul className="">
                               <li>
                                 <strong className="py-4 font-black">
                                   HTML / CSS / JavaScript:
@@ -351,106 +347,89 @@ function Skill() {
                     className={`flex flex-col w-full bg-clip-text bg-gradient-to-r from-${tabs[1].color1} to-${tabs[1].color2} `}
                   >
                     {/* Back-end */}
-                    <motion.div className=" mt-[20px] ">
-                      <h3
-                        className={`text-transparent transition-all tile-headline typography-subsection-headline from-${tabs[1].color1} to-${tabs[1].color2} bg-gradient-to-br bg-clip-text `}
-                      >
-                        {lang == 0 && "Backend"}
-                        {lang == 1 && "后端"}
-                      </h3>
-                      <p
-                        className={`text-transparent tile-copy from-${tabs[1].color1} to-${tabs[1].color2} bg-gradient-to-br bg-clip-text`}
-                      >
-                        {lang == 0 && (
-                          <motion.div>
-                            <p className="py-10  text-[17px]  ">
-                              I specialize in backend technologies and
-                              demonstrate proficiency in the following areas
-                              MySQL / PostgreSQL / JSON.
-                            </p>
-                            <ul className=" text-[17px]">
-                              <li>
-                                <strong className="py-4 font-black">
-                                  MySQL:
-                                </strong>{" "}
-                                I am experienced in working with{" "}
-                                <strong className="py-4 font-black">
-                                  MySQL
-                                </strong>
-                                , utilizing it for various backend development
-                                tasks.
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  PostgreSQL:
-                                </strong>{" "}
-                                I have proficiency in{" "}
-                                <strong className="py-4 font-black">
-                                  PostgreSQL
-                                </strong>
-                                , applying it to build robust and efficient
-                                database solutions.
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  JSON:
-                                </strong>{" "}
-                                I am adept at working with{" "}
-                                <strong className="py-4 font-black">
-                                  JSON
-                                </strong>
-                                , ensuring seamless data interchange between the
-                                frontend and backend.
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  TablePlus:
-                                </strong>{" "}
-                                I am proficient in using{" "}
-                                <strong className="py-4 font-black">
-                                  TablePlus
-                                </strong>{" "}
-                                for efficient database management and
-                                development.
-                              </li>
-                            </ul>
-                          </motion.div>
-                        )}
-                        {lang == 1 && (
-                          <motion.div>
-                            <p className="py-10  text-[17px]  ">
-                              我在后端技术方面拥有专业的技能，展示出对以下领域的熟练掌握：
-                            </p>
-                            <ul className=" text-[17px]">
-                              <li>
-                                <strong className="py-4 font-black">
-                                  MySQL:
-                                </strong>{" "}
-                                我熟练运用MySQL，将其应用于各种后端开发任务。我的技能包括常见操作，如查询表、创建表、构建视图，并执行基于条件的过滤和排序等操作。我熟练掌握CRUD操作等数据库基本操作。
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  PostgreSQL:
-                                </strong>{" "}
-                                我精通PostgreSQL，将其应用于构建强大而高效的数据库解决方案。我的专业知识涵盖了高级PostgreSQL功能，确保在数据库管理中实现最佳性能和可靠性。
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  JSON:
-                                </strong>{" "}
-                                我熟练处理JSON，确保前后端之间无缝的数据交换。
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  TablePlus:
-                                </strong>{" "}
-                                我熟练使用TablePlus进行高效的数据库管理和开发。我了解设计结构良好且优化的数据库架构，以满足不同应用程序的特定要求。
-                              </li>
-                            </ul>
-                          </motion.div>
-                        )}
-                      </p>
-                    </motion.div>
+                    <p
+                      className={`text-transparent tile-copy from-${tabs[1].color1} to-${tabs[1].color2} bg-gradient-to-br bg-clip-text normal-text`}
+                    >
+                      {lang == 0 && (
+                        <motion.div>
+                          <p className="py-10 ">
+                            I specialize in backend technologies and demonstrate
+                            proficiency in the following areas MySQL /
+                            PostgreSQL / JSON.
+                          </p>
+                          <ul className="">
+                            <li>
+                              <strong className="py-4 font-black">
+                                MySQL:
+                              </strong>{" "}
+                              I am experienced in working with{" "}
+                              <strong className="py-4 font-black">MySQL</strong>
+                              , utilizing it for various backend development
+                              tasks.
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                PostgreSQL:
+                              </strong>{" "}
+                              I have proficiency in{" "}
+                              <strong className="py-4 font-black">
+                                PostgreSQL
+                              </strong>
+                              , applying it to build robust and efficient
+                              database solutions.
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">JSON:</strong>{" "}
+                              I am adept at working with{" "}
+                              <strong className="py-4 font-black">JSON</strong>,
+                              ensuring seamless data interchange between the
+                              frontend and backend.
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                TablePlus:
+                              </strong>{" "}
+                              I am proficient in using{" "}
+                              <strong className="py-4 font-black">
+                                TablePlus
+                              </strong>{" "}
+                              for efficient database management and development.
+                            </li>
+                          </ul>
+                        </motion.div>
+                      )}
+                      {lang == 1 && (
+                        <motion.div>
+                          <p className="py-10  text-[17px]  ">
+                            我在后端技术方面拥有专业的技能，展示出对以下领域的熟练掌握：
+                          </p>
+                          <ul className=" text-[17px]">
+                            <li>
+                              <strong className="py-4 font-black">
+                                MySQL:
+                              </strong>{" "}
+                              我熟练运用MySQL，将其应用于各种后端开发任务。我的技能包括常见操作，如查询表、创建表、构建视图，并执行基于条件的过滤和排序等操作。我熟练掌握CRUD操作等数据库基本操作。
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                PostgreSQL:
+                              </strong>{" "}
+                              我精通PostgreSQL，将其应用于构建强大而高效的数据库解决方案。我的专业知识涵盖了高级PostgreSQL功能，确保在数据库管理中实现最佳性能和可靠性。
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">JSON:</strong>{" "}
+                              我熟练处理JSON，确保前后端之间无缝的数据交换。
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                TablePlus:
+                              </strong>{" "}
+                              我熟练使用TablePlus进行高效的数据库管理和开发。我了解设计结构良好且优化的数据库架构，以满足不同应用程序的特定要求。
+                            </li>
+                          </ul>
+                        </motion.div>
+                      )}
+                    </p>
                     <motion.div className="pt-[70px] pb-[140px]">
                       <motion.div
                         variants={fastWelcomevisblecontainer}
@@ -488,129 +467,118 @@ function Skill() {
                     </motion.div>
                   </motion.div>
                 )}
-                {(selectedTab.label[lang] == "DataBase" ||
-                  selectedTab.label[lang] == "数据库") && (
+                {selectedTab.label[0] == "DataBase" && (
                   <motion.div
                     layoutId="abilitiy"
                     className={`flex flex-col w-full bg-clip-text bg-gradient-to-r from-${tabs[2].color1} to-${tabs[2].color2} `}
                   >
                     {/* Database */}
-                    <motion.div className=" mt-[20px] w-full">
-                      <h3
-                        className={`text-transparent tile-headline typography-subsection-headline from-${tabs[2].color1} to-${tabs[2].color2} bg-gradient-to-br bg-clip-text`}
-                      >
-                        {lang == 0 && "Database"}
-                        {lang == 1 && "数据库"}
-                      </h3>
-                      <p
-                        className={`text-transparent tile-copy from-${tabs[2].color1} to-${tabs[2].color2} bg-gradient-to-br bg-clip-text`}
-                      >
-                        {lang == 0 && (
-                          <motion.div>
-                            <p className="py-10  text-[17px] ">
-                              In the realm of database management, I bring forth
-                              a wealth of expertise, showcasing proficiency in
-                              various key areas:
-                            </p>
-                            <ul className=" text-[17px] ">
-                              <li>
-                                <strong className="py-4 font-black">
-                                  MySQL:
-                                </strong>{" "}
-                                I am well-versed in MySQL, leveraging its
-                                capabilities for efficient and reliable database
-                                operations. My skills encompass common
-                                operations such as querying tables, creating
-                                tables, building views, and performing
-                                operations like filtering and sorting based on
-                                conditions. I am proficient in CRUD operations
-                                and other essential database manipulations.
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  PostgreSQL:
-                                </strong>{" "}
-                                I have comprehensive knowledge of PostgreSQL,
-                                utilizing it to construct robust and scalable
-                                database solutions. My expertise extends to
-                                advanced PostgreSQL functionalities, ensuring
-                                optimal performance and reliability in database
-                                management.
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  Database Design:
-                                </strong>{" "}
-                                I excel in designing well-structured and
-                                optimized database architectures tailored to the
-                                specific requirements of diverse applications.
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  Python Data Processing:
-                                </strong>{" "}
-                                Proficient in Python, I leverage popular
-                                libraries like Pandas for efficient data
-                                processing. I am adept at using data
-                                visualization tools, including Tableau, to
-                                create insightful graphs and charts, enhancing
-                                the interpretability of processed data.
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  Data Analysis:
-                                </strong>{" "}
-                                Proficient in algorithmic data analysis, I
-                                leverage statistical methods, data mining, and
-                                machine learning techniques to extract valuable
-                                insights from complex datasets. This aids in
-                                informed decision-making and strategy
-                                development.
-                              </li>
-                            </ul>
-                          </motion.div>
-                        )}
-                        {lang == 1 && (
-                          <motion.div>
-                            <p className="py-10  text-[17px]  ">
-                              在数据库管理领域，我拥有丰富的专业知识，展示出对以下关键领域的熟练掌握：
-                            </p>
-                            <ul className=" text-[17px] ">
-                              <li>
-                                <strong className="py-4 font-black">
-                                  MySQL:
-                                </strong>{" "}
-                                我精通MySQL，充分发挥其在高效可靠数据库操作方面的能力。我的技能包括常见操作，如查询表、创建表、构建视图，并执行基于条件的过滤和排序等操作。我熟练掌握CRUD操作等数据库基本操作。
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  PostgreSQL:
-                                </strong>{" "}
-                                我全面了解PostgreSQL，将其用于构建强大而可扩展的数据库解决方案。我的专业知识涵盖了高级PostgreSQL功能，确保在数据库管理中实现最佳性能和可靠性。
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  数据库设计:
-                                </strong>{" "}
-                                我了解设计结构良好且优化的数据库架构，以满足不同应用程序的特定要求。
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  Python数据处理:
-                                </strong>{" "}
-                                精通Python，我利用流行的库如Pandas进行高效的数据处理。我擅长使用数据可视化工具，包括Tableau等，创建深入的图表，增强对处理后数据的解释性。
-                              </li>
-                              <li>
-                                <strong className="py-4 font-black">
-                                  数据分析:
-                                </strong>{" "}
-                                在算法数据分析方面，我运用统计方法、数据挖掘和机器学习技术，从复杂数据集中提取有价值的见解。这有助于明智的决策和战略制定。
-                              </li>
-                            </ul>
-                          </motion.div>
-                        )}
-                      </p>
-                    </motion.div>
+                    <p
+                      className={`text-transparent tile-copy from-${tabs[2].color1} to-${tabs[2].color2} bg-gradient-to-br bg-clip-text normal-text`}
+                    >
+                      {lang == 0 && (
+                        <motion.div>
+                          <p className="py-10 ">
+                            In the realm of database management, I bring forth a
+                            wealth of expertise, showcasing proficiency in
+                            various key areas:
+                          </p>
+                          <ul className="">
+                            <li>
+                              <strong className="py-4 font-black">
+                                MySQL:
+                              </strong>{" "}
+                              I am well-versed in MySQL, leveraging its
+                              capabilities for efficient and reliable database
+                              operations. My skills encompass common operations
+                              such as querying tables, creating tables, building
+                              views, and performing operations like filtering
+                              and sorting based on conditions. I am proficient
+                              in CRUD operations and other essential database
+                              manipulations.
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                PostgreSQL:
+                              </strong>{" "}
+                              I have comprehensive knowledge of PostgreSQL,
+                              utilizing it to construct robust and scalable
+                              database solutions. My expertise extends to
+                              advanced PostgreSQL functionalities, ensuring
+                              optimal performance and reliability in database
+                              management.
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                Database Design:
+                              </strong>{" "}
+                              I excel in designing well-structured and optimized
+                              database architectures tailored to the specific
+                              requirements of diverse applications.
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                Python Data Processing:
+                              </strong>{" "}
+                              Proficient in Python, I leverage popular libraries
+                              like Pandas for efficient data processing. I am
+                              adept at using data visualization tools, including
+                              Tableau, to create insightful graphs and charts,
+                              enhancing the interpretability of processed data.
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                Data Analysis:
+                              </strong>{" "}
+                              Proficient in algorithmic data analysis, I
+                              leverage statistical methods, data mining, and
+                              machine learning techniques to extract valuable
+                              insights from complex datasets. This aids in
+                              informed decision-making and strategy development.
+                            </li>
+                          </ul>
+                        </motion.div>
+                      )}
+                      {lang == 1 && (
+                        <motion.div>
+                          <p className="py-10 ">
+                            在数据库管理领域，我拥有丰富的专业知识，展示出对以下关键领域的熟练掌握：
+                          </p>
+                          <ul className="">
+                            <li>
+                              <strong className="py-4 font-black">
+                                MySQL:
+                              </strong>{" "}
+                              我精通MySQL，充分发挥其在高效可靠数据库操作方面的能力。我的技能包括常见操作，如查询表、创建表、构建视图，并执行基于条件的过滤和排序等操作。我熟练掌握CRUD操作等数据库基本操作。
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                PostgreSQL:
+                              </strong>{" "}
+                              我全面了解PostgreSQL，将其用于构建强大而可扩展的数据库解决方案。我的专业知识涵盖了高级PostgreSQL功能，确保在数据库管理中实现最佳性能和可靠性。
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                数据库设计:
+                              </strong>{" "}
+                              我了解设计结构良好且优化的数据库架构，以满足不同应用程序的特定要求。
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                Python数据处理:
+                              </strong>{" "}
+                              精通Python，我利用流行的库如Pandas进行高效的数据处理。我擅长使用数据可视化工具，包括Tableau等，创建深入的图表，增强对处理后数据的解释性。
+                            </li>
+                            <li>
+                              <strong className="py-4 font-black">
+                                数据分析:
+                              </strong>{" "}
+                              在算法数据分析方面，我运用统计方法、数据挖掘和机器学习技术，从复杂数据集中提取有价值的见解。这有助于明智的决策和战略制定。
+                            </li>
+                          </ul>
+                        </motion.div>
+                      )}
+                    </p>
                     <motion.div className="pt-[70px] pb-[140px]">
                       <motion.div
                         variants={fastWelcomevisblecontainer}
@@ -648,8 +616,7 @@ function Skill() {
                     </motion.div>
                   </motion.div>
                 )}
-                {(selectedTab.label[lang] == "Algorithm" ||
-                  selectedTab.label[lang] == "算法") && (
+                {selectedTab.label[0] == "Algorithm" && (
                   <motion.div
                     layoutId="abilitiy"
                     className={`flex flex-col w-full bg-clip-text bg-gradient-to-r from-${tabs[3].color1} to-${tabs[3].color2} `}
@@ -663,18 +630,18 @@ function Skill() {
                         {lang == 1 && "算法"}
                       </h3>
                       <p
-                        className={`text-transparent tile-copy from-${tabs[3].color1} to-${tabs[3].color2} bg-gradient-to-br bg-clip-text`}
+                        className={`text-transparent tile-copy from-${tabs[3].color1} to-${tabs[3].color2} bg-gradient-to-br bg-clip-text normal-text`}
                       >
                         {lang == 0 && (
                           <motion.div>
-                            <p className="py-10  text-[17px] ">
+                            <p className="py-10 ">
                               My proficiency in algorithm development spans
                               various specialized areas, showcasing a deep
                               understanding and practical application of
                               advanced concepts. Here are some key domains I
                               excel in:
                             </p>
-                            <ul className=" text-[17px] ">
+                            <ul className="">
                               <li>
                                 <strong className="py-4 font-black">
                                   Machine Learning:
@@ -726,10 +693,10 @@ function Skill() {
                         )}
                         {lang == 1 && (
                           <motion.div>
-                            <p className="py-10  text-[17px]  ">
+                            <p className="py-10 ">
                               我在算法开发方面具备深厚的知识，展现出对各种专业领域的深刻理解和实际应用。以下是我在一些关键领域的突出表现：
                             </p>
-                            <ul className=" text-[17px] ">
+                            <ul className="">
                               <li>
                                 <strong className="py-4 font-black">
                                   机器学习:
@@ -796,8 +763,7 @@ function Skill() {
                     </motion.div>
                   </motion.div>
                 )}
-                {(selectedTab.label[lang] == "Other" ||
-                  selectedTab.label[lang] == "其他") && (
+                {selectedTab.label[0] == "Other" && (
                   <motion.div
                     layoutId="abilitiy"
                     className={`flex flex-col w-full bg-clip-text bg-gradient-to-r from-${tabs[4].color1} to-${tabs[4].color2} `}
@@ -811,22 +777,20 @@ function Skill() {
                         {lang == 1 && "其他"}
                       </h3>
                       <p
-                        className={`text-transparent tile-copy  bg-gradient-to-br bg-clip-text`}
+                        className={`text-transparent tile-copy bg-gradient-to-br bg-clip-text normal-text`}
                       >
                         {lang == 0 && (
                           <motion.div>
-                            <p className="py-10  text-[17px] ">
+                            <p className="py-10 ">
                               My expertise extends beyond algorithmic
                               development, encompassing a diverse set of skills
                               and technologies that contribute to comprehensive
                               project execution. Here are some additional areas
                               where I excel:
                             </p>
-                            <ul className=" text-[17px] ">
+                            <ul>
                               <li>
-                                <strong className="py-4 font-black">
-                                  GitHub:
-                                </strong>{" "}
+                                <strong className="font-black ">GitHub:</strong>{" "}
                                 Proficient in version control, I leverage GitHub
                                 for collaborative development, code review, and
                                 repository management. This ensures seamless
@@ -834,29 +798,23 @@ function Skill() {
                                 project tracking.
                               </li>
                               <li>
-                                <strong className="py-4 font-black">
-                                  SSH:
-                                </strong>{" "}
-                                I am skilled in Secure Shell (SSH) protocol,
+                                <strong className="font-black ">SSH:</strong> I
+                                am skilled in Secure Shell (SSH) protocol,
                                 enabling secure access to servers for remote
                                 development, file transfer, and secure
                                 communication. This enhances the security and
                                 efficiency of the development process.
                               </li>
                               <li>
-                                <strong className="py-4 font-black">
-                                  Linux:
-                                </strong>{" "}
-                                I am experienced in working with Linux-based
+                                <strong className="font-black">Linux:</strong> I
+                                am experienced in working with Linux-based
                                 environments, realise basic command-line
                                 operations, system administration, and shell
                                 scripting. This proficiency contributes to
                                 efficient development and server management.
                               </li>
                               <li>
-                                <strong className="py-4 font-black">
-                                  Docker:
-                                </strong>{" "}
+                                <strong className="font-black">Docker:</strong>{" "}
                                 I have practical experience with Docker
                                 implementation, utilizing containerization for
                                 seamless deployment and scalability of
