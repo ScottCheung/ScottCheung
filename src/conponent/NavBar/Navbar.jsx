@@ -127,21 +127,22 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
         <motion.nav
           onMouseEnter={() => setBgwhite(true)}
           onMouseLeave={() => setBgwhite(false)}
+          // layout
           className={` fixed w-full flex flex-col`}
         >
           <motion.div
             onMouseLeave={() => setSelectedTab(null)}
             initial={{ opacity: 0, y: 60 }}
-            layout
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
+            // transition={{ duration: 0.5 }}
+            layout
             className={`flex flex-col w-full  ${BG} py-[10px] 
         ${
           windowWidth < 768
-            ? "h-auto p-[15px] "
+            ? " p-[15px] "
             : `${
                 isTop
-                  ? ` ${isHomeOrRoot ? "px-[5%] pt-[12vh] " : "pt-3"} h-auto `
+                  ? ` ${isHomeOrRoot ? "px-[5%] pt-[12vh] " : "pt-3"}  `
                   : ""
               }  md:px-10`
         }
@@ -156,8 +157,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
               }`
         }`}
           >
-            <div className="flex items-center justify-center w-full ">
-              <div className={`container md:px-[10%] relative`}>
+            <motion.div className="flex items-center justify-center w-full ">
+              <motion.div layout className={`container md:px-[10%] relative`}>
                 {/* 最主要的内容 */}
                 <motion.div
                   layout
@@ -193,6 +194,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           <motion.div
                             transition={{ duration: 0.7 }}
                             style={{ animationDelay: `${0.3}s` }}
+                            layout
                             className={`text-left  animate__zoomIn transition-all font-semibold ${
                               isTop
                                 ? `${
@@ -204,7 +206,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             {data.Avatar.Webname[lang]}
                           </motion.div>
                           <motion.div
-                            layout
+                            layout="position"
                             href="/info"
                             style={{ animationDelay: `${0.5}s` }}
                             className={` animate__animated animate__zoomIn transition-all text-left ${
@@ -566,11 +568,16 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         <motion.div
                           className={`w-full justify-between flex items-center ${
                             isExpanded ? "my-8" : ""
-                          } ${
-                            isTop
-                              ? "backdrop-blur-md bg-white/70 shadow-xl mt-[50px] rounded-[28px]"
-                              : "border divide-x bg-sky-200/30 mt-[50px] divide-gray-900 rounded-full border-gray-700"
-                          }`}
+                          }
+                           ${
+                             isTop
+                               ? `${
+                                   isTopTextColorWhite
+                                     ? "bg-white/70"
+                                     : " text-sky-950 bg-sky-200/30 border border-sky-950"
+                                 }  backdrop-blur-md  mt-[50px] rounded-[28px]`
+                               : "border divide-x bg-sky-200/30 mt-[50px] divide-gray-900 rounded-full border-gray-700"
+                           }`}
                         >
                           {navItem.scondMenu.map((item, index) => (
                             <a
@@ -638,18 +645,16 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     layoutId="isExp"
                     onMouseLeave={() => setSelectedTab(null)}
                     className={` ${
-                      isTop
-                        ? "backdrop-blur-md bg-white/70 "
-                        : " bg-sky-200/30 "
-                    } ${
-                      isTopTextColorWhite & isTop ? "text-sky-950" : ""
-                    }   rounded-[14px]  `}
+                      isTopTextColorWhite & isTop
+                        ? "bg-white/70"
+                        : " text-sky-950 bg-sky-200/30 border border-sky-950 "
+                    }   rounded-[14px]  my-[30px]`}
                   >
                     <ContactCate />
                   </motion.div>
                 )}
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
           <motion.div layout children="container flex ">
             {navbarItem.map(
@@ -663,7 +668,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                       className=" max-w-[320px] absolute top-0 left-0 transition-all"
                       src={data.dialog}
                     ></img>
-                    <div className="absolute top-0 left-[320px] bg-sky-900 transition-all inline-flex h-auto rounded-r-[35px] rounded-tl-[35px] max-w-[320px] overflow-hidden  ">
+                    <div className="absolute top-0 left-[320px] bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[320px] overflow-hidden  ">
                       <div className="p-[28px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    dark:bg-gray-700/20">
                         <p className="text-[25px] font-normal dark:text-gray-900 text-white  ">
                           {item.des[lang]}
@@ -753,13 +758,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
         ></div>
       </div>
       <AnimatePresence>
-        {selectedTab !== null && !isTop && (
+        {selectedTab != null && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            layout
-            className="fixed top-0 left-0 z-40 w-full  backdrop-blur-[20px] bg-black/40"
+            className={`fixed top-0 left-0 z-40 w-full h-full  backdrop-blur-[20px] ${isTopTextColorWhite ? "bg-gray-900/40" : "bg-white/40"} `}
           ></motion.div>
         )}
       </AnimatePresence>
