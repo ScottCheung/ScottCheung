@@ -161,7 +161,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 {/* 最主要的内容 */}
                 <motion.div
                   layout
-                  className="flex items-center justify-between w-full h-full "
+                  className="flex items-center justify-between w-full"
                 >
                   <motion.button
                     whileHover={{ scale: 1.03, transition: { duration: 1 } }}
@@ -225,7 +225,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                   </motion.button>
 
                   <motion.div
-                    className={`flex items-center h-full ${
+                    className={`flex items-center  ${
                       windowWidth < 876 ? "w-[50%]" : "w-[70%]"
                     } gap-[30px] justify-end `}
                   >
@@ -580,7 +580,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 animationDelay: `${index * 0.15}s`,
                                 animationDuration: `${0.7}s`,
                               }}
-                              className={`flex w-full h-full justify-center welcomeanimation ${index === 0 ? "rounded-s-[28px]" : ""} ${
+                              className={`flex w-full  justify-center welcomeanimation ${index === 0 ? "rounded-s-[28px]" : ""} ${
                                 index === navItem.scondMenu.length - 1
                                   ? "rounded-e-[28px]"
                                   : ""
@@ -606,7 +606,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                     <></>
                                   )}
                                   <div
-                                    className={`flex justify-center w-full h-full text-center lg:text-full ${
+                                    className={`flex justify-center w-full  text-center lg:text-full ${
                                       isTop
                                         ? "pb-[20px] text-[14px] md:text-[15px] lg:text-[18px]"
                                         : ""
@@ -672,7 +672,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           {item.expression}{" "}
                         </span>
                         <div className="group relative my-2.5 hidden">
-                          <div className="absolute flex items-center justify-center w-full h-full transition-opacity duration-300 rounded-lg opacity-0 bg-gray-900/50 group-hover:opacity-100">
+                          <div className="absolute flex items-center justify-center w-full transition-opacity duration-300 rounded-lg opacity-0 bg-gray-900/50 group-hover:opacity-100">
                             <button
                               data-tooltip-target="download-image"
                               className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none dark:text-white focus:ring-gray-50"
@@ -759,7 +759,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             layout
-            className="fixed top-0 left-0 z-40 w-full h-full backdrop-blur-[20px] bg-black/40"
+            className="fixed top-0 left-0 z-40 w-full  backdrop-blur-[20px] bg-black/40"
           ></motion.div>
         )}
       </AnimatePresence>
