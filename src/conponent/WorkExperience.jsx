@@ -361,7 +361,7 @@ function Card({ card, onClick }) {
         </motion.div>
       </div>
       <div className="-mx-[18%] mt-[10vh]  relative flex  items-center justify-between">
-        <div className="absolute -mt-[50px] flex w-full justify-between items-center py-[20px] px-[40px] text-[20px] text-gray-500 font-serif">
+        <div className="absolute  -mt-[100px]  flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-500 font-serif">
           <div>{card.startTime}</div>
           <div>{card.endTime}</div>
         </div>
