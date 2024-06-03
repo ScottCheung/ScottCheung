@@ -320,19 +320,22 @@ function Card({ card, onClick }) {
           initial={{ scale: 1, y: 0 }}
           whileHover={{ scale: 1.001, y: -5 }}
           whileTap={{ scale: 0.99 }}
-          className={`relative bg-white  cursor-pointer w-[250px] md:w-[300px] lg:w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
+          className={`relative bg-white  cursor-pointer w-[250px]  lg:w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
           onClick={() => onClick(card.id)}
         >
           <div className="absolute  -left-[30px] -top-[30px] right-[60px] rounded-[28px]  overflow-hidden aspect-[16/9] ">
             <motion.img
               layout
               src={card.image}
+              width={window.innerWidth > 1024 ? "800px" : "400px"}
+              height={window.innerWidth > 1024 ? "600px" : "300px"}
               layoutId={`card-img-${card.id}`}
               transition={{ duration: 0.4, easing: "easeInOut" }}
               className="object-cover object-bottom w-full shadow-lg"
             />
             <motion.kbd
               layoutId={"card-type" + card.type + card.company}
+              transition={{ duration: 0.7, easing: "easeInOut" }}
               class=" absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
             >
               {card.type[0]}
@@ -342,7 +345,7 @@ function Card({ card, onClick }) {
           <motion.div
             layout
             layoutId={`card-context-${card.id}`}
-            transition={{ duration: 0.7, easing: "easeInOut" }}
+            // transition={{ duration: 0.7, easing: "easeInOut" }}
             className="flex flex-col mt-[60%]  items-start justify-start h-[130px] "
           >
             <h1 className="font-bold  text-[20px] md:text-[25px] lg:text-[28px] text-gray">
@@ -506,7 +509,7 @@ function WorkExperience() {
                       layout
                       layoutId={`card-img-${selectedCard.id}`}
                       src={selectedCard.image}
-                      transition={{ duration: 0.7, easing: "easeInOut" }}
+                      transition={{ duration: 0.5, easing: "easeInOut" }}
                       alt="detail"
                       className="object-cover object-bottom w-full"
                     />
@@ -515,7 +518,7 @@ function WorkExperience() {
                   <motion.div
                     layout
                     layoutId={`card-context-${selectedCard.id}`}
-                    transition={{ duration: 0.7, easing: "easeInOut" }}
+                    transition={{ duration: 0.5, easing: "easeInOut" }}
                     className="flex flex-col w-full max-w-[800px] pt-[30px] lg:pt-0"
                   >
                     <div className="flex flex-col gap-y-8 ">
