@@ -70,12 +70,34 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     fill: "currentColor",
     pointerEvents: "none",
   };
+  const BTN = (functionName) => {
+    const functions = {
+      lang0: () => {
+        setLang("0");
+        localStorage.setItem("lang", "0");
+        window.location.reload();
+      },
+      lang1: () => {
+        setLang("1");
+        localStorage.setItem("lang", "1");
+        window.location.reload();
+      },
+      LangToggle: () => {
+        const newLang = lang === 0 ? 1 : 0;
+        setLang(newLang);
+        localStorage.setItem("lang", newLang);
+        window.location.reload();
+      },
+    };
 
-  const handleLangToggle = () => {
-    const newLang = lang === 0 ? 1 : 0;
-    setLang(newLang);
-    localStorage.setItem("lang", newLang);
-    window.location.reload();
+    return () => {
+      if (typeof functions[functionName] === "function") {
+        functions[functionName]();
+      } else {
+        // console.warn(`Function '${functionName}' not found.`);
+        null;
+      }
+    };
   };
 
   useEffect(() => {
@@ -139,11 +161,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             className={`flex flex-col w-full  ${BG} py-[10px] 
         ${
           windowWidth < 768
-            ? " p-[15px] "
-            : `${
-                isTop
-                  ? ` ${isHomeOrRoot ? "px-[5%] pt-[12vh] " : "pt-3"}  `
-                  : ""
+            ? ` p-[15px] ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? "bg-black/50" : "bg-white/50"} ` : " "}`
+            : `${isTop && isHomeOrRoot ? "px-[5%] pt-[12vh] " : "pt-3"} 
               }  md:px-10`
         }
         ${
@@ -243,7 +262,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             x: -100,
                             transition: { duration: 1 },
                           }}
-                          className="overflow-x-clip"
+                          className={`${
+                            isTop ? "gap-x-4" : "gap-x-1"
+                          } flex overflow-x-clip px-[10px] `}
                         >
                           {navbarItem.map((item, index) => (
                             <motion.button
@@ -263,9 +284,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 scale: 1.05,
                               }}
                               whileTap={{ scale: 0.95 }}
-                              onClick={() => {
-                                document.documentElement.style.zoom = 1;
-                              }}
+                              onClick={BTN(item.button)}
                               onMouseEnter={() => setSelectedTab(item.name[0])}
                             >
                               <a
@@ -320,109 +339,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         </motion.div>
                       )}
                     </AnimatePresence>
-                    {/* 切换语言按钮 */}
-                    {
-                      <motion.button
-                        key={"language"}
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{
-                          opacity: 1,
-                          y: 0,
-                          transition: {
-                            duration: 0.7,
-                            delay: 0.15 * navbarItem.length,
-                          },
-                        }}
-                        exit={{ opacity: 0, y: 30 }}
-                        whileHover={{
-                          scale: 1.05,
-                        }}
-                        whileTap={{ scale: 0.95 }}
-                        data-popover-target="lang"
-                        style={{
-                          animationDelay: `${(navbarItem.length + 1) * 0.2}s`,
-                        }}
-                        onClick={(e) => {
-                          e.preventDefault();
-                          handleLangToggle();
-                        }}
-                      >
-                        <span
-                          className={`${
-                            windowWidth < 768 ? "" : ""
-                          } ExpandButton`}
-                        >
-                          <i
-                            className={` mt-3 fi fi-rr-globe ${
-                              isTopTextColorWhite & isTop
-                                ? "text-white text-[20px]"
-                                : "text-gray-900 text-[17px]"
-                            } `}
-                          />
-                        </span>
-                      </motion.button>
-                    }
-                    {/* 切换语言按钮提示 */}
-                    <div
-                      data-popover
-                      role="tooltip"
-                      id="lang"
-                      className="fixed z-10 invisible justify-center flex w-auto text-gray-500 text-center transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
-                    >
-                      <div className="flex flex-col items-center px-6 py-4">
-                        <span className="text-center text-[15px] font-semibold">
-                          {lang == 0 && "点击切换中文"}
-                          {lang == 1 && "Switch to English"}
-                        </span>
-                        <span className="text-[14px] text-center font-semibold">
-                          {lang == 1 && "点击切换英文"}
-                          {lang == 0 && "Switch to Chinese"}
-                        </span>
-                      </div>
-                      <div data-popper-arrow></div>
-                    </div>
-                    {/* 主页下拉菜单
-                    {windowWidth > 1024 && !isTop && (
-                      <motion.button
-                        initial={{ rotate: 180 }}
-                        whileHover={
-                          isExpanded
-                            ? { scale: 1.1, rotate: 360 }
-                            : { scale: 1.1, rotate: 540 }
-                        }
-                        animate={isExpanded ? { rotate: 0 } : { rotate: 180 }}
-                        whileTap={{ scale: 0.8 }}
-                        // transition={{ duration: 0.3 }}
-                        type="button"
-                        layout
-                        onClick={(e) =>
-                          e.preventDefault() &
-                          setIsExpanded(!isExpanded) &
-                          (isTop && setIsOpened(!isOpened))
-                        }
-                      >
-                        <span
-                          className={`${
-                            windowWidth < 768 ? "mx-5" : "hover:bg-gray-900/10"
-                          } ExpandButton `}
-                        >
-                          <i
-                            style={{
-                              animationDelay: isTop
-                                ? `${(navbarItem.length + 2) * 0.2}s`
-                                : null,
-                            }}
-                            className={`animate__animated animate__fadeInUp smoothchange mt-1 ${
-                              windowWidth < 768
-                                ? "text-[20px] "
-                                : "text-3xl p-5"
-                            } ${
-                              isTop ? "text-white text-bold" : ""
-                            } fi fi-br-angle-up`}
-                          />
-                        </span>
-                      </motion.button>
-                    )} */}
                     {/* 下拉菜单按钮 */}
                     {windowWidth < 1024 && (
                       <button
@@ -607,12 +523,13 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                   : ""
                               } animate__animated opacity-80 hover:opacity-100 font-medium hover:bg-sky-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white`}
                             >
-                              <motion.div
+                              <motion.button
                                 layout
                                 style={{ borderRadius: 20 }}
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
                                 whileFocus={{ scale: 1 }}
+                                onClick={BTN(item.button)}
                                 className="w-full"
                               >
                                 <div className="content-center py-2 my-3 text-center icon">
@@ -644,7 +561,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                     ></i>
                                   </div>
                                 </div>
-                              </motion.div>
+                              </motion.button>
                             </a>
                           ))}
                         </motion.div>
@@ -670,6 +587,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
               </motion.div>
             </motion.div>
           </motion.div>
+
+          {/* 人物对话弹窗 */}
           <motion.div layout children="container flex ">
             {navbarItem.map(
               (item, index) =>
@@ -679,12 +598,16 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     className="md:mx-[10%] mt-[30px] flex relative gap-x-[20px]  duration-200 "
                   >
                     <img
-                      className=" max-w-[320px] absolute top-0 left-0 transition-all"
+                      className=" max-w-[320px] absolute top-[50%] left-0 transition-all"
                       src={data.dialog}
                     ></img>
-                    <div className="absolute top-0 left-[320px] bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[320px] overflow-hidden  ">
+                    <motion.div
+                      // layoutId="des"
+                      key={item.name[0] + index}
+                      className="absolute top-0 left-[320px] animate__animated animate__fadeIn bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[320px] overflow-hidden  "
+                    >
                       <div className="p-[28px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20">
-                        <p className="text-[25px] font-normal darrk:text-gray-900 text-white  ">
+                        <p className="text-[20px] font-normal darrk:text-gray-900 text-white  ">
                           {item.des[lang]}
                         </p>
                         <span className="text-center text-[30px] darrk:text-gray-900 text-white ">
@@ -719,7 +642,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           />
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </motion.div>
                 ),
             )}
