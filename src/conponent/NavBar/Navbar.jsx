@@ -195,7 +195,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             transition={{ duration: 0.7 }}
                             style={{ animationDelay: `${0.3}s` }}
                             layout
-                            className={`text-left  animate__zoomIn transition-all font-semibold ${
+                            className={`text-left animate__animated animate__zoomIn transition-all font-semibold ${
                               isTop
                                 ? `${
                                     isTopTextColorWhite ? "text-white" : ""
@@ -249,12 +249,20 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             <motion.button
                               layout
                               key={item.name}
+                              initial={{ opacity: 0, y: 30 }}
+                              animate={{
+                                opacity: 1,
+                                y: 0,
+                                transition: {
+                                  duration: 0.7,
+                                  delay: 0.15 * index,
+                                },
+                              }}
+                              exit={{ opacity: 0, y: 30 }}
                               whileHover={{
                                 scale: 1.05,
-                                transition: { duration: 0.7 },
                               }}
                               whileTap={{ scale: 0.95 }}
-                              transition={{ duration: 0.3 }}
                               onClick={() => {
                                 document.documentElement.style.zoom = 1;
                               }}
@@ -268,7 +276,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 }}
                                 data-popover-target={`nav-des-${item.name[0]}`}
                                 type="button"
-                                className={`rounded-[5px] smoothchange items-center  ${
+                                className={`rounded-[5px]  items-center  ${
                                   isTop
                                     ? `${
                                         index === navbarItem.length - 1
@@ -280,7 +288,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                           ? `ml-1`
                                           : `mx-1`
                                       }`
-                                } animate__animated animate__fadeInUp relative  items-center  px-6 py-3 text-[20px] font-medium text-center ${
+                                } relative  items-center  px-6 py-3 text-[20px] font-medium text-center ${
                                   isTopTextColorWhite & isTop
                                     ? "text-white flex flex-col items-center justify-center gap-x-[10px]"
                                     : "flex gap-x-[10px]"
@@ -316,18 +324,24 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     {
                       <motion.button
                         key={"language"}
-                        whileHover={
-                          isTop
-                            ? { scale: 1.1, transition: { duration: 0.7 } }
-                            : { scale: 1.1, transition: { duration: 0.7 } }
-                        }
-                        whileTap={{ scale: 1.05 }}
-                        transition={{ duration: 0.3 }}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{
+                          opacity: 1,
+                          y: 0,
+                          transition: {
+                            duration: 0.7,
+                            delay: 0.15 * navbarItem.length,
+                          },
+                        }}
+                        exit={{ opacity: 0, y: 30 }}
+                        whileHover={{
+                          scale: 1.05,
+                        }}
+                        whileTap={{ scale: 0.95 }}
                         data-popover-target="lang"
                         style={{
                           animationDelay: `${(navbarItem.length + 1) * 0.2}s`,
                         }}
-                        className="animate__animated animate__fadeInUp"
                         onClick={(e) => {
                           e.preventDefault();
                           handleLangToggle();
