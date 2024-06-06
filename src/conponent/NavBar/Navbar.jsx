@@ -149,7 +149,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
         <motion.nav
           onMouseEnter={() => setBgwhite(true)}
           onMouseLeave={() => setBgwhite(false)}
-          // layout
+          layout
           className={` fixed w-full flex flex-col`}
         >
           <motion.div
@@ -177,11 +177,14 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
         }`}
           >
             <motion.div className="flex items-center justify-center w-full ">
-              <motion.div layout className={`container md:px-[10%] relative`}>
+              <motion.div
+                layout
+                className={`flex items-center justify-center flex-col  relative w-full '`}
+              >
                 {/* 最主要的内容 */}
                 <motion.div
                   layout
-                  className="flex items-center justify-between w-full"
+                  className="flex items-center justify-between w-full max-w-[1200px] px-[3%]"
                 >
                   <motion.button
                     whileHover={{ scale: 1.03, transition: { duration: 1 } }}
@@ -295,23 +298,11 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 }}
                                 data-popover-target={`nav-des-${item.name[0]}`}
                                 type="button"
-                                className={`rounded-[5px]  items-center  ${
-                                  isTop
-                                    ? `${
-                                        index === navbarItem.length - 1
-                                          ? `ml-4`
-                                          : `mx-4`
-                                      }`
-                                    : ` ${
-                                        index === navbarItem.length - 1
-                                          ? `ml-1`
-                                          : `mx-1`
-                                      }`
-                                } relative  items-center  px-6 py-3 text-[20px] font-medium text-center ${
+                                className={`rounded-[5px]  items-center  px-6 py-3 text-[20px] gap-x-[10px] font-medium text-center ${
                                   isTopTextColorWhite & isTop
-                                    ? "text-white flex flex-col items-center justify-center gap-x-[10px]"
-                                    : "flex gap-x-[10px]"
-                                } rounded-lg hover:bg-gray-900/20  `}
+                                    ? "text-white flex flex-col items-center justify-center "
+                                    : "flex"
+                                } rounded-full hover:bg-gray-900/20  `}
                               >
                                 <div className="flex items-center justify-center w-full transition-all h-11">
                                   <div className="flex flex-shrink-0">
@@ -357,7 +348,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           width="18"
                           height="18"
                           viewBox="0 0 18 18"
-                          transition={{ duration: 0.5 }}
                           style={{
                             color:
                               isTopTextColorWhite & isTop
@@ -374,7 +364,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 ? "white"
                                 : "currentColor"
                             }
-                            strokeWidth="3"
+                            strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             points="2 12, 16 12"
@@ -383,7 +373,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 ? "2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"
                                 : "3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12",
                             }}
-                            transition={{ duration: 0.5 }}
                           />
                           <motion.polyline
                             fill={
@@ -394,7 +383,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 ? "white"
                                 : "currentColor"
                             }
-                            strokeWidth="3"
+                            strokeWidth="2"
                             strokeLinecap="round"
                             strokeLinejoin="round"
                             points="2 5, 16 5"
@@ -403,7 +392,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 ? "2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"
                                 : "3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5",
                             }}
-                            transition={{ duration: 0.5 }}
                           />
                         </motion.svg>
                       </button>
@@ -480,25 +468,29 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     </div>
                   </div>
                 )}
-
-                {/* 二级菜单 */}
-                {navbarItem.map(
-                  (navItem, navIndex) =>
-                    navItem.scondMenu &&
-                    selectedTab === navItem.name[0] && (
-                      <motion.div
-                        key={"isExpanded" + navIndex}
-                        layoutId="isExp"
-                        className={`w-full flex my-[20px] ${
-                          !isExpanded && selectedTab !== navItem.name[1]
-                            ? " items-center justify-center"
-                            : "items-center justify-center"
-                        }`}
-                      >
+                <motion.div
+                  layout
+                  className="relative flex w-full  max-w-[1200px] "
+                >
+                  {/* 二级菜单 */}
+                  {navbarItem.map(
+                    (navItem, navIndex) =>
+                      navItem.scondMenu &&
+                      selectedTab === navItem.name[0] && (
                         <motion.div
-                          className={`w-full justify-between flex items-center ${
-                            isExpanded ? "my-8" : ""
-                          }
+                          layout
+                          key={"isExpanded" + navIndex}
+                          layoutId="isExp"
+                          className={`w-full flex my-[20px] max-w-[1200px] px-[3%] ${
+                            !isExpanded && selectedTab !== navItem.name[1]
+                              ? " items-center justify-center"
+                              : "items-center justify-center"
+                          }`}
+                        >
+                          <motion.div
+                            className={`w-full justify-between flex items-center ${
+                              isExpanded ? "my-8" : ""
+                            }
                            ${
                              isTop
                                ? `${
@@ -508,82 +500,83 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                  }  backdrop-blur-md  mt-[50px] rounded-[28px]`
                                : "border divide-x bg-sky-200/30 mt-[50px] divide-gray-900 rounded-full border-gray-700"
                            }`}
-                        >
-                          {navItem.scondMenu.map((item, index) => (
-                            <a
-                              key={index}
-                              href={item.link}
-                              style={{
-                                animationDelay: `${index * 0.15}s`,
-                                animationDuration: `${0.7}s`,
-                              }}
-                              className={`flex w-full  justify-center welcomeanimation ${index === 0 ? "rounded-s-[28px]" : ""} ${
-                                index === navItem.scondMenu.length - 1
-                                  ? "rounded-e-[28px]"
-                                  : ""
-                              } animate__animated opacity-80 hover:opacity-100 font-medium hover:bg-sky-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white`}
-                            >
-                              <motion.button
-                                layout
-                                style={{ borderRadius: 20 }}
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                whileFocus={{ scale: 1 }}
-                                onClick={BTN(item.button)}
-                                className="w-full"
+                          >
+                            {navItem.scondMenu.map((item, index) => (
+                              <a
+                                key={index}
+                                href={item.link}
+                                style={{
+                                  animationDelay: `${index * 0.15}s`,
+                                  animationDuration: `${0.7}s`,
+                                }}
+                                className={`flex w-full  justify-center welcomeanimation ${index === 0 ? "rounded-s-[28px]" : ""} ${
+                                  index === navItem.scondMenu.length - 1
+                                    ? "rounded-e-[28px]"
+                                    : ""
+                                } animate__animated opacity-80 hover:opacity-100 font-medium hover:bg-sky-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white`}
                               >
-                                <div className="content-center py-2 my-3 text-center icon">
-                                  {isTop ? (
-                                    <i
-                                      className={`flex fi justify-center py-1 ${
-                                        isTop &&
-                                        "pt-[20px] text-[14px] md:text-[17px] lg:text-[25px]"
-                                      } ${item.icon}`}
-                                    ></i>
-                                  ) : (
-                                    <></>
-                                  )}
-                                  <div
-                                    className={`flex justify-center w-full  text-center lg:text-full ${
-                                      isTop
-                                        ? "pb-[20px] text-[14px] md:text-[15px] lg:text-[18px]"
-                                        : ""
-                                    }`}
-                                  >
-                                    {!isTop && window.innerWidth > 784 && (
+                                <motion.button
+                                  layout
+                                  style={{ borderRadius: 20 }}
+                                  whileHover={{ scale: 1.05 }}
+                                  whileTap={{ scale: 0.95 }}
+                                  whileFocus={{ scale: 1 }}
+                                  onClick={BTN(item.button)}
+                                  className="w-full"
+                                >
+                                  <div className="content-center py-2 my-3 text-center icon">
+                                    {isTop ? (
                                       <i
-                                        className={`flex fi justify-center mt-2 mr-4 ${item.icon}`}
+                                        className={`flex fi justify-center py-1 ${
+                                          isTop &&
+                                          "pt-[20px] text-[14px] md:text-[17px] lg:text-[25px]"
+                                        } ${item.icon}`}
                                       ></i>
+                                    ) : (
+                                      <></>
                                     )}
-                                    {item.name[lang]}
-                                    <i
-                                      className={`mt-1 ml-2 text-[15px] ${item.status}`}
-                                    ></i>
+                                    <div
+                                      className={`flex justify-center w-full  text-center lg:text-full ${
+                                        isTop
+                                          ? "pb-[20px] text-[14px] md:text-[15px] lg:text-[18px]"
+                                          : ""
+                                      }`}
+                                    >
+                                      {!isTop && window.innerWidth > 784 && (
+                                        <i
+                                          className={`flex fi justify-center mt-2 mr-4 ${item.icon}`}
+                                        ></i>
+                                      )}
+                                      {item.name[lang]}
+                                      <i
+                                        className={`mt-1 ml-2 text-[15px] ${item.status}`}
+                                      ></i>
+                                    </div>
                                   </div>
-                                </div>
-                              </motion.button>
-                            </a>
-                          ))}
+                                </motion.button>
+                              </a>
+                            ))}
+                          </motion.div>
                         </motion.div>
-                      </motion.div>
-                    ),
-                )}
+                      ),
+                  )}
 
-                {/* Contact */}
-                {selectedTab == "Contact" && (
-                  <motion.div
-                    layout
-                    layoutId="isExp"
-                    onMouseLeave={() => setSelectedTab(null)}
-                    className={` ${
-                      isTopTextColorWhite & isTop
-                        ? "bg-white/70"
-                        : " text-sky-950 bg-sky-200/30 border border-sky-950 "
-                    }   rounded-[14px]  my-[30px]`}
-                  >
-                    <ContactCate />
-                  </motion.div>
-                )}
+                  {/* Contact */}
+                  {selectedTab == "Contact" && (
+                    <motion.div
+                      layout
+                      layoutId="isExp"
+                      onMouseLeave={() => setSelectedTab(null)}
+                      className={`w-full flex py-[20px] mt-[50px] mx-[3%] max-w-[1200px]  ${
+                        isTopTextColorWhite & isTop
+                          ? "bg-white/70"
+                          : " text-sky-950 bg-sky-200/30 border border-sky-950 "
+                      }   rounded-[28px]  my-[30px]`}
+                    >
+                      <ContactCate />
+                    </motion.div>
+                  )}
+                </motion.div>
               </motion.div>
             </motion.div>
           </motion.div>

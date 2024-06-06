@@ -22,12 +22,12 @@ export default function Life() {
   }, []);
 
   return (
-    <div className="p-[20px] my-[20px]">
+    <div className="p-[20px]  flex w-full">
       <motion.ul
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className=" flex justify-between items-center px-20"
+        className="flex items-center justify-between w-full px-20 "
       >
         {data.items.map((type, index) => (
           <motion.li
@@ -44,7 +44,7 @@ export default function Life() {
                 animationDelay: `${index * 0.1}s`,
               }}
             >
-              <div className="items-center flex justify-center flex-col ">
+              <div className="flex flex-col items-center justify-center ">
                 <i
                   style={{
                     animationDelay: `${index * 0.1}s`,
