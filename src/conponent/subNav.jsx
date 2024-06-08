@@ -52,20 +52,22 @@ export function more() {
           <motion.div
             // layout
             // transition={{ type: 'spring', duration: 0.3 }}
-            className={`w-full  animate__animated flex justify-between md:rounded-full rounded-[12px] items-center  shadow-xl transition-all  ${bgStyle}`}
+            className={`w-full  flex justify-between md:rounded-full rounded-[12px] items-center  shadow-xl transition-all  ${bgStyle}`}
           >
             {navLocation.map((item, index) => (
-              <a
+              <motion.a
+                initial={{ width: "100%" }}
+                whileHover={{ width: "120%" }}
                 key={index}
                 href={item.id}
-                style={{ animationDelay: `${index * 0.17}s` }}
-                className={` flex  w-full h-full bg-black/20  justify-center animate__zoomIn text-gray-50 ${
+                style={{ animationDelay: `${index * 0.2}s` }}
+                className={` flex  w-full h-full bg-black/20  justify-center animate__zoomIn animate__animated  text-gray-50 ${
                   index === 0 ? "md:rounded-l-full rounded-l-[12px]" : ""
                 } ${
                   index === navLocation.length - 1
                     ? "md:rounded-r-full rounded-r-[12px]"
                     : ""
-                } animate__animated   font-medium bg-transparent hover:bg-sky-900 ${
+                }   font-medium bg-transparent hover:bg-sky-900 ${
                   item.color1
                 } ${
                   item.color2
@@ -102,7 +104,7 @@ export function more() {
                     </div>
                   </div>
                 </motion.div>
-              </a>
+              </motion.a>
             ))}
           </motion.div>
         </motion.div>
