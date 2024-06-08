@@ -105,6 +105,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
       if (window.scrollY < 0.0001) {
         setIsExpanded(true);
         setIsTop(true);
+        setIsScrolling(false);
       } else {
         setIsExpanded(false);
         setIsTop(false);
@@ -657,7 +658,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           transition={{ duration: 0.7 }}
           whileTap={{ scale: 0.9, opacity: 1 }}
           whileHover={{ scale: 1.1, opacity: 1 }}
-          onClick={() => window.scrollTo(0, 0)}
+          onClick={() => {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          }}
           className={` anz-card-modal-link fixed bottom-10 lg:right-20 right-10 z-50 drop-shadow-2xl `}
         >
           <div className="px-4 py-2 text-white rounded-full card-modal-trigger modal-trigger card-cta-modal-button lg:scale-150">
