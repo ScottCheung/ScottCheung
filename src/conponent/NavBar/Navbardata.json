@@ -139,7 +139,44 @@
         "您可以通过以下方式找到我 ~"
       ],
       "expression": "(｡♥‿♥｡) ☎️",
-      "isTopShow": true
+      "isTopShow": true,
+      "scondMenu": [
+        {
+          "name": ["Linkedin", "领英"],
+          "icon": "fi-brands-linkedin",
+          "link": "https://www.linkedin.com/in/zhang-xianzhe-03133a259/"
+        },
+        {
+          "name": ["E-mail", "邮件"],
+          "icon": "fi-rr-envelope",
+          "link": "https://outlook.office365.com/mail/"
+        },
+        {
+          "name": ["Facebook", " Facebook"],
+          "icon": "fi-brands-facebook",
+          "link": "https://www.facebook.com/profile.php?id=100085874466260"
+        },
+        {
+          "name": ["Phone", "电话"],
+          "icon": "fi-sr-circle-phone-flip",
+          "link": "+61 0434344292"
+        },
+        {
+          "name": ["Instagram", "Instagram"],
+          "icon": "fi-brands-instagram",
+          "link": "https://www.instagram.com/invites/contact/?i=er73s6a2y80u&utm_content=pblnb0t"
+        },
+        {
+          "name": ["Xiaohongshu", "小红书"],
+          "icon": "fi-sr-book-alt",
+          "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579"
+        },
+        {
+          "name": ["Wechat", "微信"],
+          "icon": "fi-sr-comments",
+          "link": "https://www.wechat.com/"
+        }
+      ]
     },
     {
       "name": ["Language", "语言"],
@@ -169,35 +206,35 @@
     {
       "id": "/#Education",
       "label": ["Education", "教育"],
-      "logo": "fi-rr-book",
+      "icon": "fi-rr-book",
       "color1": "from-red-500",
       "color2": "to-red-700"
     },
     {
       "id": "/#Capability",
       "label": ["Capability", "能力"],
-      "logo": "fi-rr-user",
+      "icon": "fi-rr-user",
       "color1": "from-orange-500",
       "color2": "to-amber-500"
     },
     {
       "id": "/#WorkExperience",
       "label": ["Work", "工作"],
-      "logo": "fi-rr-tool-box",
+      "icon": "fi-rr-tool-box",
       "color1": "from-cyan-500",
       "color2": "to-blue-500"
     },
     {
       "id": "/#SelfDescribing",
       "label": ["Describe", "自述"],
-      "logo": "fi-rr-comment-heart",
+      "icon": "fi-rr-comment-heart",
       "color1": "from-sky-500",
       "color2": "to-emerald-500"
     },
     {
       "id": "/#WhyMe",
       "label": ["Why me", "优势"],
-      "logo": "fi-rr-lightbulb-on",
+      "icon": "fi-rr-lightbulb-on",
       "color1": "from-indigo-500",
       "color2": "to-pink-500"
     }
@@ -206,25 +243,25 @@
     {
       "id": "/networkingmsg",
       "label": ["NetWorking", "互联社交"],
-      "logo": "fi-rr-tool-box",
+      "icon": "fi-rr-tool-box",
       "status": "fi-sr-eye-crossed"
     },
     {
       "id": "/coverletters",
       "label": ["Coverletters", "求职信"],
-      "logo": "fi-rr-book",
+      "icon": "fi-rr-book",
       "status": "fi-sr-lock"
     },
     {
       "id": "/rentmsg",
       "label": ["House Rental", "租房系统"],
-      "logo": "fi-rr-house-building",
+      "icon": "fi-rr-house-building",
       "status": "fi-sr-lock"
     },
     {
       "id": "/table2json",
       "label": ["Data converter", "数据转换"],
-      "logo": "fi-rr-database",
+      "icon": "fi-rr-database",
       "status": "fi-sr-unlock"
     }
   ],

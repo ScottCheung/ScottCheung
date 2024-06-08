@@ -561,22 +561,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         </motion.div>
                       ),
                   )}
-
-                  {/* Contact */}
-                  {selectedTab == "Contact" && (
-                    <motion.div
-                      layout
-                      layoutId="isExp"
-                      onMouseLeave={() => setSelectedTab(null)}
-                      className={`w-full flex py-[20px] mt-[50px] mx-[3%] max-w-[1200px]  ${
-                        isTopTextColorWhite & isTop
-                          ? "bg-white/70"
-                          : " text-sky-950 bg-sky-200/30 border border-sky-950 "
-                      }   rounded-[28px]  my-[30px]`}
-                    >
-                      <ContactCate />
-                    </motion.div>
-                  )}
                 </motion.div>
               </motion.div>
             </motion.div>
@@ -598,7 +582,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     <motion.div
                       // layoutId="des"
                       key={item.name[0] + index}
-                      className="absolute top-0 left-[320px] animate__animated animate__fadeIn bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[320px] overflow-hidden  "
+                      className="absolute top-0 left-[320px] animate__animated animate__fadeInUp bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[320px] overflow-hidden  "
                     >
                       <div className="p-[28px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20">
                         <p className="text-[20px] font-normal darrk:text-gray-900 text-white  ">
