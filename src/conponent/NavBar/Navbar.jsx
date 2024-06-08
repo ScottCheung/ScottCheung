@@ -503,9 +503,13 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                            }`}
                           >
                             {navItem.scondMenu.map((item, index) => (
-                              <a
+                              <motion.a
+                                layout
                                 key={index}
                                 href={item.link}
+                                animate={{ width: "100%" }}
+                                whileHover={{ width: "120%" }}
+                                whileTap={{ width: "100%" }}
                                 style={{
                                   animationDelay: `${index * 0.15}s`,
                                   animationDuration: `${0.7}s`,
@@ -513,7 +517,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 className={`flex w-full ${!isTop && `rounded-full`} justify-center welcomeanimation ${index === 0 && (isTop ? `rounded-l-[28px]` : `rounded-full`)} ${
                                   index === navItem.scondMenu.length - 1 &&
                                   (isTop ? `rounded-r-[28px]` : `rounded-full`)
-                                } opacity-80 hover:opacity-100 font-medium hover:bg-sky-900 hover:text-white focus:z-10 `}
+                                } opacity-80 hover:opacity-100 font-medium hover:shadow-2xl hover:bg-sky-900 hover:text-white focus:z-10 `}
                               >
                                 <motion.button
                                   layout
@@ -568,63 +572,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                     )}
                                   </div>
                                 </motion.button>
-                              </a>
+                              </motion.a>
                             ))}
-                            {/* {navItem.scondMenu.map((item, index) => (
-                              <a
-                                key={index}
-                                href={item.link}
-                                style={{
-                                  animationDelay: `${index * 0.15}s`,
-                                  animationDuration: `${0.7}s`,
-                                }}
-                                className={`flex w-full hidden justify-center welcomeanimation ${index === 0 ? "rounded-s-[28px]" : ""} ${
-                                  index === navItem.scondMenu.length - 1
-                                    ? "rounded-e-[28px]"
-                                    : ""
-                                } animate__animated opacity-80 hover:opacity-100 font-medium hover:bg-sky-900 hover:text-white focus:z-10 focus:ring-2 focus:ring-sky-500 focus:bg-sky-900 focus:text-white`}
-                              >
-                                <motion.button
-                                  layout
-                                  style={{ borderRadius: 20 }}
-                                  whileHover={{ scale: 1.05 }}
-                                  whileTap={{ scale: 0.95 }}
-                                  whileFocus={{ scale: 1 }}
-                                  onClick={BTN(item.button)}
-                                  className="w-full"
-                                >
-                                  <div className="content-center py-2 my-3 text-center icon">
-                                    {isTop ? (
-                                      <i
-                                        className={`flex fi justify-center py-1 ${
-                                          isTop &&
-                                          "pt-[20px] text-[14px] md:text-[17px] lg:text-[25px]"
-                                        } ${item.icon}`}
-                                      ></i>
-                                    ) : (
-                                      <></>
-                                    )}
-                                    <div
-                                      className={`flex justify-center w-full  text-center lg:text-full ${
-                                        isTop
-                                          ? "pb-[20px] text-[14px] md:text-[15px] lg:text-[18px]"
-                                          : ""
-                                      }`}
-                                    >
-                                      {!isTop && window.innerWidth > 784 && (
-                                        <i
-                                          className={`flex fi justify-center mt-2 mr-4 ${item.icon}`}
-                                        ></i>
-                                      )}
-                                      {item.name[lang]}
-                                      <i
-                                        className={`mt-1 ml-2 text-[15px] ${item.status}`}
-                                      ></i>
-                                    </div>
-                                  </div>
-                                </motion.button>
-                              </a>
-                            ))} */}
                           </motion.div>
                         </motion.div>
                       ),
