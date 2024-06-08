@@ -48,7 +48,7 @@ function SelfDescribing() {
   const SelfDescribing = (
     <section
       id="SelfDescribing"
-      className={`smoothchange items-center bg-fixed bg-center relative flex flex-col justify-center w-full  `}
+      className={`smoothchange items-center bg-scroll bg-center relative flex flex-col justify-center w-full  `}
       style={{
         backgroundImage: `url(${data.pic})`,
         backgroundSize: "cover",

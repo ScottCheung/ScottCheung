@@ -540,7 +540,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
 
                                     {item.name && (
                                       <div
-                                        className={`gap-x-4 gap-y-2 flex justify-center items-center w-full  ${
+                                        className={`gap-x-4 gap-y-2 flex h-full justify-center items-center w-full ${
                                           isTop &&
                                           "text-[17px] md:text-[20px] lg:text-[23px] gap-x-0"
                                         }`}
@@ -557,9 +557,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
 
                                         {item.status && (
                                           <i
-                                            className={`flex  ${
+                                            className={` flex ${
                                               isTop && " mx-2"
-                                            } justify-start text-[15px] ${item.status}`}
+                                            } justify-center items-center text-[15px] pb-[10px] ${item.status}`}
                                           ></i>
                                         )}
                                       </div>
