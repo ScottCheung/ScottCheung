@@ -129,9 +129,8 @@ function WhymeCard() {
             openCard(whymeCard);
           }}
           layout
-          style={{ willChange: "transform" }}
-          // transition={{ duration: EnterDuration }}
           layoutId={whymeCard.advantage}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className={` top-[10vh] left-[10vw]   right-[40vw] -bottom-[20vh] pb-[20vh] shadow-[30px] bg-white backdrop-blur-[200px]  rounded-[40px] p-[40px]  z-50 fixed`}
         >
           {show && (
@@ -157,7 +156,7 @@ function WhymeCard() {
                         openCard(feature);
                       }, 500);
                     }}
-                    transition={{ duration: 0.1 }}
+                    transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                     style={{
                       animationDelay: isDelay ? `${index * 0.1}s` : 0,
                     }}
@@ -206,8 +205,8 @@ function WhymeCard() {
                   </motion.div>
                   <div className="flex gap-x-[30px] items-center">
                     <motion.h3
-                      style={{ willChange: "transform" }}
                       layoutId={whymeCard.advantage + "title"}
+                      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
                       className={`text-[30px] animate__animated animate__zoomIn  font-semibold leading-normal mb-2 ${
                         whymeCard.color1 + " " + whymeCard.color2
                       } bg-clip-text text-transparent bg-gradient-to-br mb-2`}
@@ -228,7 +227,7 @@ function WhymeCard() {
                     </a>
                   </div>
                 </div>
-                <motion.div className="-mb-[10vh] max-h-[80vh] overflow-y-auto scrollbar-hide scroll-smooth gradient-mask pt-[10vh] pb-[30vh]">
+                <motion.div className="-mb-[10vh] max-h-[80vh] overflow-y-auto  scrollbar-hide scroll-smooth gradient-mask pt-[10vh] pb-[30vh]">
                   <div
                     className={`pb-[30px] relative flex flex-col  break-words`}
                   >

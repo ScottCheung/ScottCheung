@@ -157,7 +157,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             onMouseLeave={() => setSelectedTab(null)}
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
-            // transition={{ duration: 0.5 }}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             layout
             className={`flex flex-col w-full  ${BG} py-[10px] 
         ${
@@ -419,7 +419,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               transition: { duration: 0.3 },
                             }}
                             whileTap={{ scale: 0.95 }}
-                            transition={{ duration: 0.3 }}
+                            transition={{
+                              duration: 0.9,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
                           >
                             <a
                               style={{ animationDelay: `${index * 0.2}s` }}

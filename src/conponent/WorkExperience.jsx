@@ -309,59 +309,54 @@ function Card({ card, onClick }) {
       key={card.id}
       variants={WelcomeItem}
       transition={StagerFadeInUp}
-      // className="large-span-4 medium-span-6 small-span-12"
-      className="flex-shrink-0 "
+      className="flex-shrink-0"
     >
-      <div className="relative flex w-full ">
+      <div className="relative flex w-full">
         <motion.div
           layout
           layoutId={`card-container-${card.id}`}
-          transition={{ duration: 0.4, easing: "easeInOut" }}
           initial={{ scale: 1, y: 0 }}
           whileHover={{ scale: 1.001, y: -5 }}
           whileTap={{ scale: 0.99 }}
-          className={`relative bg-white  cursor-pointer w-[250px]  lg:w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className={`relative bg-white cursor-pointer w-[250px] lg:w-[400px] p-[28px] shadow-[10px] rounded-[28px] hover:${card.backgroundColor}/20`}
           onClick={() => onClick(card.id)}
         >
-          <div className="absolute  -left-[30px] -top-[30px] right-[60px] rounded-[28px]  overflow-hidden aspect-[16/9] ">
+          <div className="absolute -left-[30px] -top-[30px] right-[60px] rounded-[28px] overflow-hidden aspect-[16/9]">
             <motion.img
               layout
               src={card.image}
               width={window.innerWidth > 1024 ? "800px" : "400px"}
               height={window.innerWidth > 1024 ? "600px" : "300px"}
               layoutId={`card-img-${card.id}`}
-              transition={{ duration: 0.4, easing: "easeInOut" }}
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="object-cover object-bottom w-full shadow-lg"
             />
             <motion.kbd
               layoutId={"card-type" + card.type + card.company}
-              transition={{ duration: 0.7, easing: "easeInOut" }}
-              class=" absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
+              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
             >
               {card.type[0]}
             </motion.kbd>
           </div>
 
           <motion.div
-            layout
             layoutId={`card-context-${card.id}`}
-            // transition={{ duration: 0.7, easing: "easeInOut" }}
-            className="flex flex-col mt-[60%]  items-start justify-start h-[130px] "
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="flex flex-col mt-[60%] items-start justify-start h-[130px]"
           >
-            <h1 className="font-bold  text-[20px] md:text-[25px] lg:text-[28px] text-gray">
+            <h1 className="font-bold text-[20px] md:text-[25px] lg:text-[28px] text-gray">
               {card.title}
             </h1>
-            <h2 className="flex  text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
+            <h2 className="flex text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
               {card.company}
             </h2>
-            {/* <h1 className="flex  text-[17px] md:text-[20px] lg:text-[25px] text-gray">
-              {card.title}
-            </h1> */}
           </motion.div>
         </motion.div>
       </div>
-      <div className="-mx-[18%] mt-[10vh]  relative flex  items-center justify-between">
-        <div className="absolute  -mt-[100px]  flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-500 font-serif">
+      <div className="-mx-[18%] mt-[10vh] relative flex items-center justify-between">
+        <div className="absolute -mt-[100px] flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-500 font-serif">
           <div>{card.startTime}</div>
           <div>{card.endTime}</div>
         </div>
@@ -424,32 +419,24 @@ function WorkExperience() {
   };
 
   const BanScroll = () => {
-    const scrollbarWidth = adjustPaddingForScrollbar(); // 获取滚动条宽度
+    const scrollbarWidth = adjustPaddingForScrollbar();
     document.body.style.overflow = "hidden";
-    document.body.style.paddingRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
-    // document.getElementById('navbar').style.marginRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
-    // document.getElementById('navbar').style.opacity = 0;
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
   };
 
   const UnBanScroll = () => {
     document.body.style.overflow = "auto";
-    document.body.style.paddingRight = "0px"; // 重置paddingRight
-    // document.getElementById('navbar').style.marginRight = '0px'; // 重置paddingRight
-    // document.getElementById('navbar').style.opacity = 1;
+    document.body.style.paddingRight = "0px";
   };
 
   return (
-    <section className="flex flex-col justify-center w-full ">
-      {/* 一级标题 */}
-      <div id="WorkExperience" className={`flex justify-center `}>
+    <section className="flex flex-col justify-center w-full">
+      <div id="WorkExperience" className={`flex justify-center`}>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{
-            ease: [0.455, 0.03, 0.515, 0.955],
-            duration: 1,
-          }}
-          className="flex items-center justify-center "
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className="flex items-center justify-center"
         >
           <div className="">
             <i className="pt-3 mr-3 text-5xl fi lg:text-8xl fi-rr-tool-box"></i>
@@ -479,107 +466,101 @@ function WorkExperience() {
         ))}
       </motion.div>
       {isOpen && (
-        <AnimatePresence>
-          <motion.div
-            onClick={handleClose}
-            className="fixed  inset-0 top-0 bottom-0  w-full h-full z-50  bg-gray-900/75 backdrop-blur-[20px]"
-          >
-            <div className="relative flex items-center justify-center w-full h-full ">
-              <CtButton
-                type={"x"}
-                key={"close"}
-                position={"top-[30px] right-[30px] ESC  "}
-                btnsize={"60px"}
-                icon={"w-[20px] h-[20px] rotate-0"}
-                className="z-50"
-                onClick={(event) => {
-                  event.stopPropagation();
-                  handleClose();
-                }}
-              />
-              <motion.div onClick={(e) => e.stopPropagation()}>
+        <motion.div
+          onClick={handleClose}
+          className="fixed inset-0 top-0 bottom-0 w-full h-full z-50 bg-gray-900/75 backdrop-blur-[20px]"
+        >
+          <div className="relative flex items-center justify-center w-full h-full">
+            <CtButton
+              type={"x"}
+              key={"close"}
+              position={"top-[30px] right-[30px] ESC"}
+              btnsize={"60px"}
+              icon={"w-[20px] h-[20px] rotate-0"}
+              className="z-50"
+              onClick={(event) => {
+                event.stopPropagation();
+                handleClose();
+              }}
+            />
+            <motion.div onClick={(e) => e.stopPropagation()}>
+              <motion.div
+                layout
+                layoutId={`card-container-${selectedCard.id}`}
+                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                className="relative p-[20px] md:gap-x-[40px] flex-wrap lg:flex w-full gap-y-[50px] justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-y-auto"
+              >
+                <div className="w-full max-w-[800px] flex md:p-0 aspect-[4/3]">
+                  <motion.img
+                    layout
+                    layoutId={`card-img-${selectedCard.id}`}
+                    src={selectedCard.image}
+                    transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                    alt="detail"
+                    className="object-cover object-bottom w-full"
+                  />
+                </div>
+
                 <motion.div
                   layout
-                  layoutId={`card-container-${selectedCard.id}`}
-                  transition={{ duration: 0.5, easing: "easeInOut" }}
-                  className="relative p-[20px] md:gap-x-[40px] flex-wrap lg:flex w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-y-auto "
+                  layoutId={`card-context-${selectedCard.id}`}
+                  transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                  className="flex flex-col w-full max-w-[800px] pt-[30px] lg:pt-0"
                 >
-                  <div className="w-full max-w-[800px] flex md:p-0 aspect-[4/3] ">
-                    <motion.img
-                      layout
-                      layoutId={`card-img-${selectedCard.id}`}
-                      src={selectedCard.image}
-                      transition={{ duration: 0.5, easing: "easeInOut" }}
-                      alt="detail"
-                      className="object-cover object-bottom w-full"
-                    />
+                  <div className="flex flex-col gap-y-8">
+                    <div className="flex flex-wrap items-center gap-8">
+                      <h1 className="font-bold text-7xl">
+                        {selectedCard.title}
+                      </h1>
+                      <motion.kbd
+                        layoutId={
+                          "card-type" + selectedCard.type + selectedCard.company
+                        }
+                        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+                        className="flex items-center justify-center px-[20px] py-[5px] text-xl font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
+                      >
+                        {selectedCard.type}
+                      </motion.kbd>
+                    </div>
+
+                    <div className="flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-y-auto h-[30%] pb-8">
+                      <h2 className="flex w-[70%] text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
+                        {selectedCard.company}
+                      </h2>
+                      <div className="flex justify-end">
+                        <p className={timetext}>
+                          {selectedCard.startTime +
+                            " - " +
+                            selectedCard.endTime}
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
-                  <motion.div
-                    layout
-                    layoutId={`card-context-${selectedCard.id}`}
-                    transition={{ duration: 0.5, easing: "easeInOut" }}
-                    className="flex flex-col w-full max-w-[800px] pt-[30px] lg:pt-0"
-                  >
-                    <div className="flex flex-col gap-y-8 ">
-                      <div className="flex flex-wrap items-center gap-8">
-                        <h1 className="font-bold text-7xl">
-                          {selectedCard.title}
-                        </h1>
-                        <motion.kbd
-                          layoutId={
-                            "card-type" +
-                            selectedCard.type +
-                            selectedCard.company
-                          }
-                          class="flex items-center justify-center px-[20px] py-[5px] text-xl font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
-                        >
-                          {selectedCard.type}
-                        </motion.kbd>
-                      </div>
-
-                      <div className="flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-y-auto  h-[30%]  pb-8">
-                        <h2 className="flex w-[70%] text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
-                          {selectedCard.company}
-                        </h2>
-                        {/* duration */}
-                        <div className="flex justify-end ">
-                          <p className={timetext}>
-                            {selectedCard.startTime +
-                              " - " +
-                              selectedCard.endTime}
-                          </p>
-                        </div>
-                      </div>
+                  <div className={contentContainer}>
+                    <div className={normaltext}>
+                      <p>
+                        <h3 className="text-[20px] font-black">Skill:</h3>{" "}
+                        {selectedCard.skill.join(", ")}
+                      </p>
+                      <h3 className="text-[20px] font-black">Achievements:</h3>
+                      <ul className="pl-5">
+                        {selectedCard.points.map((item, index) => (
+                          <li key={index} className="mb-2 text-justify">
+                            <strong className="block mr-2 font-semibold">
+                              ▸ {item.point}
+                            </strong>
+                            {item.description}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
-
-                    <div className={contentContainer}>
-                      <div className={normaltext}>
-                        <p>
-                          <h3 className="text-[20px] font-black">Skill:</h3>{" "}
-                          {selectedCard.skill.join(",  ")}
-                        </p>
-                        <h3 className="text-[20px] font-black">
-                          Achievements:
-                        </h3>
-                        <ul className="pl-5 ">
-                          {selectedCard.points.map((item, index) => (
-                            <li key={index} className="mb-2 text-justify">
-                              <strong className="block mr-2 font-semibold">
-                                ▸ {item.point}
-                              </strong>
-                              {item.description}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </motion.div>
+                  </div>
                 </motion.div>
               </motion.div>
-            </div>
-          </motion.div>
-        </AnimatePresence>
+            </motion.div>
+          </div>
+        </motion.div>
       )}
     </section>
   );
