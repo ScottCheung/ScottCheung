@@ -2,16 +2,11 @@ import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Database from "../Database.json";
 import { Link, useNavigate } from "react-router-dom";
-import { hideRow, bgPic, useLanguage } from "../help/helpFunction";
-import More from "./More";
-import { useInView } from "react-intersection-observer";
+import { useLanguage } from "../help/helpFunction";
 import CtButton from "./ctButton";
 import { useAppContext } from "../help/ContextManager";
 
-const WorkExperiences = Database.PersonalInfo.WorkExperience;
-const visblecontainer = Database.Animation.Variant.Welcomevisblecontainer;
 const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
-const item = Database.Animation.Variant.WelcomeItem;
 const h1 = `font-sans tracking-wide text-sky-700 text-[30px] md:text-[50px]  font-bold  transition-all duration-1000`;
 const normaltext = "text-[15px] text-jusify transition-all duration-1000";
 const h2 = `flex text-[30px]  font-black text-sky-700 group-hover:text-sky-400,
@@ -24,102 +19,13 @@ const h3 = `text-[15px] font-black flex items-center `;
 const timetext = `text-2xl font-[500] text-gray-400 items-start transition-all duration-1000`;
 const whymeIcon = `text-[20px] flex justify-center items-center text-gray-400 group-hover:text-sky-700`;
 const whymelable = `text-[15px] text-gray-400 group-hover:text-sky-700`;
-const contentContainer = `flex-1 flex flex-col justify-between `;
+const contentContainer = `flex-1 flex flex-col justify-between  animate__animated animate__fadeInUp`;
 
 const Welcomevisblecontainer =
   Database.Animation.Variant.Welcomevisblecontainer;
 const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 const divisionline = `flex duration-0 flex flex-1 h-[5px]  rounded-full bg-sky-700  transition-all duration-1000`;
 
-const s = [
-  [
-    {
-      id: "FA-swust",
-      title: ["Financial", "Assistant"],
-      href: "/work/work=FA-swust",
-      type: "Part-time",
-      logoRound: "rounded",
-      logo: "/Graphs/study/swust.png",
-      tag: [null, "Part-time"],
-      web: "http://www.english.swust.edu.cn/main.htm",
-      time: "Mar 1, 2021 - Feb 1, 2022",
-      company:
-        "Southwest University of Science and Technology Analytical Testing Centre",
-      description: [
-        "Responsible for auditing the invoices of the business office up to RMB1,000,000, drawing up contracts up to RMB100,000, compliance review and signing. The business is responsible for the assessment and audit of the business system and occasional audits of the accounts flow according to the monthly and annual reports of the business. During the course of the work, it was found that the business progress audit was a single simple and time-consuming task, and with the help of office automation software, the business audit workload of this position for a year was completed in half a day, receiving high praise and commendation from the Business Office Director.",
-      ],
-    },
-    {
-      id: "FA-swust2",
-      title: ["Product", "Operation"],
-      href: "/work/work=FA-swust2",
-      type: "Part-time",
-      logoRound: "rounded",
-      logo: "/Graphs/study/swust.png",
-      tag: [null, "Part-time"],
-      web: "http://www.english.swust.edu.cn/main.htm",
-      time: "Aug 1, 2018 - Feb 1, 2019",
-      company: "Domi Group Buying",
-      description: ["Responsible for the backend "],
-    },
-    {
-      id: "PL-swust3",
-      title: ["Project", "Launcher"],
-      href: "/work/work=PL-swust3",
-      type: "Part-time",
-      logoRound: "nonrounded",
-      logo: "/Graphs/study/unsw.png",
-      tag: ["Full-time", null],
-      web: "http://www.english.swust.edu.cn/main.htm",
-      time: "Aug 1, 2018 - Feb 1, 2019",
-      company: "Domi Group Buying",
-      description: ["Responsible "],
-    },
-  ],
-  [
-    {
-      id: "FA-swust",
-      title: ["财务", "助理"],
-      href: "/work/work=FA-swust",
-      type: "兼职",
-      logoRound: "rounded",
-      logo: "/Graphs/study/swust.png",
-      tag: [null, "兼职"],
-      web: "http://www.english.swust.edu.cn/main.htm",
-      time: "2021年3月1日 - 2022年2月1日",
-      company: "西南科技大学分析测试中心",
-      description: [
-        "负责审计业务办公室发票高达人民币1,000,000，起草合同高达人民币100,000，合规审查和签署。该业务负责根据业务的月度和年度报告对业务系统进行评估和审计，并偶尔对账户流动进行审计。在工作过程中，发现业务进展审计是一项单一、简单且耗时的任务，借助办公自动化软件，该职位一年的业务审计工作在半天内完成，得到了业务办公室主任的高度赞扬和表扬。",
-      ],
-    },
-    {
-      id: "FA-swust2",
-      title: ["产品", "运营"],
-      href: "/work/work=FA-swust2",
-      type: "兼职",
-      logoRound: "rounded",
-      logo: "/Graphs/study/swust.png",
-      tag: [null, "兼职"],
-      web: "http://www.english.swust.edu.cn/main.htm",
-      time: "2018年8月1日 - 2019年2月1日",
-      company: "多米团购",
-      description: ["负责后台"],
-    },
-    {
-      id: "PL-swust3",
-      title: ["项目", "发起人"],
-      href: "/work/work=PL-swust3",
-      type: "兼职",
-      logoRound: "nonrounded",
-      logo: "/Graphs/study/unsw.png",
-      tag: ["全职", null],
-      web: "http://www.english.swust.edu.cn/main.htm",
-      time: "2018年8月1日 - 2019年2月1日",
-      company: "多米团购",
-      description: ["负责"],
-    },
-  ],
-];
 const cardData = [
   {
     id: 3,
@@ -309,54 +215,51 @@ function Card({ card, onClick }) {
       key={card.id}
       variants={WelcomeItem}
       transition={StagerFadeInUp}
-      className="flex-shrink-0"
+      // className="large-span-4 medium-span-6 small-span-12"
+      className="flex-shrink-0 "
     >
-      <div className="relative flex w-full">
+      <div className="relative flex w-full ">
         <motion.div
           layout
           layoutId={`card-container-${card.id}`}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           initial={{ scale: 1, y: 0 }}
           whileHover={{ scale: 1.001, y: -5 }}
           whileTap={{ scale: 0.99 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className={`relative bg-white cursor-pointer w-[250px] lg:w-[400px] p-[28px] shadow-[10px] rounded-[28px] hover:${card.backgroundColor}/20`}
+          className={`relative bg-white  cursor-pointer w-[250px]  lg:w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
           onClick={() => onClick(card.id)}
         >
-          <div className="absolute -left-[30px] -top-[30px] right-[60px] rounded-[28px] overflow-hidden aspect-[16/9]">
+          <div className="absolute  -left-[30px] -top-[30px] right-[60px] rounded-[28px]  overflow-hidden aspect-[16/9] ">
             <motion.img
               layout
               src={card.image}
               width={window.innerWidth > 1024 ? "800px" : "400px"}
               height={window.innerWidth > 1024 ? "600px" : "300px"}
               layoutId={`card-img-${card.id}`}
-              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="object-cover object-bottom w-full shadow-lg"
             />
             <motion.kbd
               layoutId={"card-type" + card.type + card.company}
-              transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              class=" absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
             >
               {card.type[0]}
             </motion.kbd>
           </div>
 
-          <motion.div
-            layoutId={`card-context-${card.id}`}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="flex flex-col mt-[60%] items-start justify-start h-[130px]"
-          >
-            <h1 className="font-bold text-[20px] md:text-[25px] lg:text-[28px] text-gray">
+          <div className="flex flex-col mt-[60%]  items-start justify-start h-[130px] animate__animated animate__fadeInUp">
+            <h1 className="font-bold  text-[20px] md:text-[25px] lg:text-[28px] text-gray">
               {card.title}
             </h1>
-            <h2 className="flex text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
+            <h2 className="flex  text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
               {card.company}
             </h2>
-          </motion.div>
+          </div>
         </motion.div>
       </div>
-      <div className="-mx-[18%] mt-[10vh] relative flex items-center justify-between">
-        <div className="absolute -mt-[100px] flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-500 font-serif">
+      <div className="-mx-[18%] mt-[10vh]  relative flex  items-center justify-between">
+        <div className="absolute  -mt-[100px]  flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-500 font-serif">
           <div>{card.startTime}</div>
           <div>{card.endTime}</div>
         </div>
@@ -382,13 +285,11 @@ function WorkExperience() {
     };
   }, []);
   const containerRef = useRef(null);
-
   const scrollToRight = () => {
     if (containerRef.current) {
       containerRef.current.scrollLeft = containerRef.current.scrollWidth;
     }
   };
-
   const [selectedCard, setSelectedCard] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
@@ -404,9 +305,9 @@ function WorkExperience() {
   };
 
   const handleClose = () => {
+    setIsOpen(false);
     setSelectedCard(null);
     UnBanScroll();
-    setIsOpen(false);
     setComponents((prevComponents) => ({
       ...prevComponents,
       NavBar: "visible",
@@ -419,24 +320,32 @@ function WorkExperience() {
   };
 
   const BanScroll = () => {
-    const scrollbarWidth = adjustPaddingForScrollbar();
+    const scrollbarWidth = adjustPaddingForScrollbar(); // 获取滚动条宽度
     document.body.style.overflow = "hidden";
-    document.body.style.paddingRight = `${scrollbarWidth}px`;
+    document.body.style.paddingRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
+    // document.getElementById('navbar').style.marginRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
+    // document.getElementById('navbar').style.opacity = 0;
   };
 
   const UnBanScroll = () => {
     document.body.style.overflow = "auto";
-    document.body.style.paddingRight = "0px";
+    document.body.style.paddingRight = "0px"; // 重置paddingRight
+    // document.getElementById('navbar').style.marginRight = '0px'; // 重置paddingRight
+    // document.getElementById('navbar').style.opacity = 1;
   };
 
   return (
-    <section className="flex flex-col justify-center w-full">
-      <div id="WorkExperience" className={`flex justify-center`}>
+    <section className="flex flex-col justify-center w-full ">
+      {/* 一级标题 */}
+      <div id="WorkExperience" className={`flex justify-center `}>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          className="flex items-center justify-center"
+          transition={{
+            ease: [0.22, 1, 0.36, 1],
+            duration: 1,
+          }}
+          className="flex items-center justify-center "
         >
           <div className="">
             <i className="pt-3 mr-3 text-5xl fi lg:text-8xl fi-rr-tool-box"></i>
@@ -466,101 +375,99 @@ function WorkExperience() {
         ))}
       </motion.div>
       {isOpen && (
-        <motion.div
-          onClick={handleClose}
-          className="fixed inset-0 top-0 bottom-0 w-full h-full z-50 bg-gray-900/75 backdrop-blur-[20px]"
-        >
-          <div className="relative flex items-center justify-center w-full h-full">
-            <CtButton
-              type={"x"}
-              key={"close"}
-              position={"top-[30px] right-[30px] ESC"}
-              btnsize={"60px"}
-              icon={"w-[20px] h-[20px] rotate-0"}
-              className="z-50"
-              onClick={(event) => {
-                event.stopPropagation();
-                handleClose();
-              }}
-            />
-            <motion.div onClick={(e) => e.stopPropagation()}>
-              <motion.div
-                layout
-                layoutId={`card-container-${selectedCard.id}`}
-                transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                className="relative p-[20px] md:gap-x-[40px] flex-wrap lg:flex w-full gap-y-[50px] justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-y-auto"
-              >
-                <div className="w-full max-w-[800px] flex md:p-0 aspect-[4/3]">
-                  <motion.img
-                    layout
-                    layoutId={`card-img-${selectedCard.id}`}
-                    src={selectedCard.image}
-                    transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                    alt="detail"
-                    className="object-cover object-bottom w-full"
-                  />
-                </div>
-
+        <AnimatePresence>
+          <motion.div
+            onClick={handleClose}
+            className="fixed  inset-0 top-0 bottom-0  w-full h-full z-50  bg-gray-900/75 backdrop-blur-[20px]"
+          >
+            <div className="relative flex items-center justify-center w-full h-full ">
+              <CtButton
+                type={"x"}
+                key={"close"}
+                position={"top-[30px] right-[30px] ESC  "}
+                btnsize={"60px"}
+                icon={"w-[20px] h-[20px] rotate-0"}
+                className="z-50"
+                onClick={(event) => {
+                  event.stopPropagation();
+                  handleClose();
+                }}
+              />
+              <motion.div onClick={(e) => e.stopPropagation()}>
                 <motion.div
                   layout
-                  layoutId={`card-context-${selectedCard.id}`}
-                  transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                  className="flex flex-col w-full max-w-[800px] pt-[30px] lg:pt-0"
+                  layoutId={`card-container-${selectedCard.id}`}
+                  transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+                  className="relative p-[20px] md:gap-x-[40px] flex-wrap lg:flex w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-y-auto "
                 >
-                  <div className="flex flex-col gap-y-8">
-                    <div className="flex flex-wrap items-center gap-8">
-                      <h1 className="font-bold text-7xl">
-                        {selectedCard.title}
-                      </h1>
-                      <motion.kbd
-                        layoutId={
-                          "card-type" + selectedCard.type + selectedCard.company
-                        }
-                        transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                        className="flex items-center justify-center px-[20px] py-[5px] text-xl font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
-                      >
-                        {selectedCard.type}
-                      </motion.kbd>
-                    </div>
+                  <div className="w-full max-w-[800px] flex md:p-0 aspect-[4/3] ">
+                    <motion.img
+                      layout
+                      layoutId={`card-img-${selectedCard.id}`}
+                      src={selectedCard.image}
+                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                      alt="detail"
+                      className="object-cover object-bottom w-full"
+                    />
+                  </div>
 
-                    <div className="flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-y-auto h-[30%] pb-8">
-                      <h2 className="flex w-[70%] text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
-                        {selectedCard.company}
-                      </h2>
-                      <div className="flex justify-end">
-                        <p className={timetext}>
-                          {selectedCard.startTime +
-                            " - " +
-                            selectedCard.endTime}
-                        </p>
+                  <motion.div
+                    // layout
+                    // transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                    className="flex flex-col w-full max-w-[800px] pt-[30px] lg:pt-0"
+                  >
+                    <div className="flex flex-col gap-y-8 ">
+                      <div className="flex flex-wrap items-center gap-8">
+                        <h1 className="font-bold text-7xl">
+                          {selectedCard.title}
+                        </h1>
+                        <motion.kbd class="flex items-center justify-center px-[20px] py-[5px] text-xl font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500">
+                          {selectedCard.type}
+                        </motion.kbd>
+                      </div>
+
+                      <div className="flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-y-auto  h-[30%]  pb-8">
+                        <h2 className="flex w-[70%] text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
+                          {selectedCard.company}
+                        </h2>
+                        {/* duration */}
+                        <div className="flex justify-end ">
+                          <p className={timetext}>
+                            {selectedCard.startTime +
+                              " - " +
+                              selectedCard.endTime}
+                          </p>
+                        </div>
                       </div>
                     </div>
-                  </div>
 
-                  <div className={contentContainer}>
-                    <div className={normaltext}>
-                      <p>
-                        <h3 className="text-[20px] font-black">Skill:</h3>{" "}
-                        {selectedCard.skill.join(", ")}
-                      </p>
-                      <h3 className="text-[20px] font-black">Achievements:</h3>
-                      <ul className="pl-5">
-                        {selectedCard.points.map((item, index) => (
-                          <li key={index} className="mb-2 text-justify">
-                            <strong className="block mr-2 font-semibold">
-                              ▸ {item.point}
-                            </strong>
-                            {item.description}
-                          </li>
-                        ))}
-                      </ul>
+                    <div className={contentContainer}>
+                      <div className={normaltext}>
+                        <p>
+                          <h3 className="text-[20px] font-black">Skill:</h3>{" "}
+                          {selectedCard.skill.join(",  ")}
+                        </p>
+                        <h3 className="text-[20px] font-black">
+                          Achievements:
+                        </h3>
+                        <ul className="pl-5 ">
+                          {selectedCard.points.map((item, index) => (
+                            <li key={index} className="mb-2 text-justify">
+                              <strong className="block mr-2 font-semibold">
+                                ▸ {item.point}
+                              </strong>
+                              {item.description}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
-                  </div>
+                  </motion.div>
                 </motion.div>
               </motion.div>
-            </motion.div>
-          </div>
-        </motion.div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
       )}
     </section>
   );

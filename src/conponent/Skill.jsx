@@ -400,10 +400,10 @@ function Skill() {
                       )}
                       {lang == 1 && (
                         <motion.div>
-                          <p className="py-10  text-[17px]  ">
+                          <p className="py-10 ">
                             我在后端技术方面拥有专业的技能，展示出对以下领域的熟练掌握：
                           </p>
-                          <ul className=" text-[17px]">
+                          <ul className="">
                             <li>
                               <strong className="py-4 font-black">
                                 MySQL:
@@ -827,10 +827,10 @@ function Skill() {
                         )}
                         {lang == 1 && (
                           <motion.div>
-                            <p className="py-10  text-[17px]  ">
+                            <p className="py-10">
                               我的专业知识不仅限于算法和开发，还涵盖了一系列其他技能和技术，有助于全面执行项目。以下是我在其他方面的卓越表现：
                             </p>
-                            <ul className=" text-[17px] ">
+                            <ul className="">
                               <li>
                                 <strong className="py-4 font-black">
                                   GitHub:
