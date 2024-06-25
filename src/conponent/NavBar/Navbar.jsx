@@ -232,7 +232,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             layout="position"
                             href="/info"
                             style={{ animationDelay: `${0.5}s` }}
-                            className={` animate__animated animate__zoomIn transition-all text-left ${
+                            className={`flex animate__animated animate__zoomIn transition-all text-left ${
                               isTop
                                 ? `${
                                     isTopTextColorWhite ? "text-white" : ""
@@ -242,7 +242,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           >
                             {" "}
                             {data.Avatar.helloword[lang]}
-                            {` | ${updateTime[lang]} ${[lang] == 0 ? "Updates" : "更新"}`}
+                            <p className="hidden md:flex ml-[7px]">{`|  ${updateTime[lang]} ${[lang] == 0 ? "Updates" : "更新"}`}</p>
                           </motion.div>
                         </div>
                       </div>

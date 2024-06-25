@@ -1,0 +1,260 @@
+{
+  "header": {
+    "name": "Xianzhe(Scott)    Zhang",
+    "contacts": [
+      {
+        "name": "Front-end Developer",
+        "icon": "flex items-center fi fi-rr-briefcase"
+      },
+      {
+        "name": "+61 434344292",
+        "icon": "flex items-center fi fi-rr-mobile-notch",
+        "link": "tel:+61 434344292"
+      },
+      {
+        "name": "xianzhe.site@gmail.com",
+        "icon": "flex items-center fi fi-rr-envelope",
+        "link": "mailto:xianzhe.site@gmail.com"
+      },
+      {
+        "name": "xianzhe.site",
+        "icon": "flex items-center fi fi-rr-link-alt",
+        "link": "https://xianzhe.site"
+      },
+      {
+        "name": "xianzhe1110",
+        "icon": "flex items-center fi fi-brands-linkedin",
+        "link": "https://www.linkedin.com/in/xianzhe1110/"
+      },
+      {
+        "name": "June 25",
+        "version": "20240625",
+        "icon": "flex items-center fi fi-rr-clock",
+        "link": "https://xianzhe.site/resumecheck/20240625"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Summary",
+      "icon": "flex items-center fi fi-rr-user",
+      "content": "Passionate front-end developer boasting over two years of development experience coupled with seven years in design, specializing in JavaScript, Tailwind CSS, and Framer Motion. Demonstrated expertise in front-end development, with a strong proficiency in crafting engaging user experiences and enhancing user interaction and satisfaction. Skilled in designing and deploying aesthetically pleasing, reliable, and fluid software systems. Possesses a five-year visa, eliminating the need for sponsorship. Discover more at https://xianzhe.site."
+    },
+    {
+      "title": "Highlights",
+      "icon": "flex items-center fi fi-sr-star-shooting",
+      "highlights": [
+        {
+          "no": 3,
+          "keyfeature": "Degrees",
+          "href": "https://xianzhe.site/Degrees",
+          "icon": "fi-rr-graduation-cap"
+        },
+        {
+          "no": 17,
+          "keyfeature": "scholarships",
+          "href": "https://xianzhe.site/scholarships",
+          "icon": "fi-rr-trophy-star"
+        },
+        {
+          "no": 58,
+          "keyfeature": " Certificates",
+          "href": "https://xianzhe.site/Certificates",
+          "icon": "fi-rr-diploma"
+        },
+        {
+          "no": 59,
+          "keyfeature": " Skills",
+          "icon": "fi flex items-center fi-rr-tools"
+        },
+        {
+          "no": 23,
+          "keyfeature": " Applications",
+          "icon": "fi-sr-window-alt"
+        },
+        {
+          "no": 42,
+          "keyfeature": "HD courses",
+          "icon": "fi-rr-circle-a"
+        }
+      ]
+    },
+    {
+      "title": "Education",
+      "icon": "flex items-center fi fi-rr-graduation-cap",
+      "edus": [
+        {
+          "degree": "Master of IT",
+          "school": "UNSW",
+          "link": "https://xianzhe.site/major/ArtificalInteliigence",
+          "major": "Artificial Intelligence",
+          "period": "Sep 2022 - May 2024"
+        },
+        {
+          "degree": "Bachelor of Management",
+          "school": "SWUST",
+          "link": "https://xianzhe.site/major/BusinessAdministration",
+          "major": "Administration Management",
+          "period": "Sep 2021 - May 2022"
+        },
+        {
+          "degree": "Bachelor of Engineer",
+          "school": "SWUST",
+          "link": "https://xianzhe.site/major/FunctionalMaterial",
+          "major": "Functional Material",
+          "gpa": "84/100",
+          "period": "Sep 2017 - May 2022"
+        }
+      ]
+    },
+    {
+      "title": "Projects",
+      "icon": "flex items-center fi fi-rr-folder",
+      "projects": [
+        {
+          "name": "Neo4j iGrapher ( Graphical data code-zero analysis tool )",
+          "link": "http://igrapher.xianzhe.site",
+          "skill": [
+            "Neo4j",
+            "JavaScript",
+            "React",
+            "D3",
+            "Tailwind",
+            "Framer Motion",
+            "Chrome DevTools",
+            "Figma"
+          ],
+          "contribution": [
+            {
+              "title": "Interface and Interaction Design",
+              "description": "Individually designed and implemented 2 complex interfaces, 5 medium inferfaces and over 20 interaction logics, using Figma to enhance design efficiency by 30%, ensuring intuitive and smooth user experiences."
+            },
+            {
+              "title": "Data Visualization Component Development",
+              "description": "Developed 25 fully customized React and D3.js data visualization components from scratch, enabling real-time graphical representation of complex data relationships."
+            },
+            {
+              "title": "Animation and Visual Effects Design",
+              "description": "Individually Designed and implemented over 40 UI animations and visual effects using Framer Motion and other animation libraries, boosting user interaction satisfaction by 80% and enhancing visual appeal. Optimized animation performance by 30% using Google performance analysis tools."
+            },
+            {
+              "title": "Frontend-Backend Integration",
+              "description": "Led frontend operations, successfully conducted over 10 large-scale data integration tests with backend services, ensuring 99% system stability and data accuracy."
+            }
+          ],
+          "period": "Feb 2024 - May 2024"
+        },
+        {
+          "name": "Personal website ( Portfolio )",
+          "link": "https://xianzhe.site/",
+          "skill": [
+            "Neo4j",
+            "JavaScript",
+            "React",
+            "Tailwind",
+            "Framer Motion",
+            "Chrome DevTools",
+            "Photoshop"
+          ],
+          "contribution": [
+            {
+              "title": "User Interface and Interactive Animation Design",
+              "description": "Designed and implemented visually appealing user interfaces and over 40 interactive animations using Framer Motion and other animation libraries. Used Google Performance Analytics to optimize performance and improve site performance by 50% animation. Improved user experience and satisfaction through intuitive and engaging animations."
+            },
+            {
+              "title": "Web Development",
+              "description": "Developed entire websites from scratch using JavaScript, React, Tailwind, and more. Created 36 adaptive components for data visualization in React, adapted to both desktop, mobile, and tablet to better showcase individuals."
+            },
+            {
+              "title": "Server Deployment",
+              "description": "Deployed the website to a server with domain mapping set up to ensure high availability and accessibility. Regularly maintained the web pages with missing elements and fixed unanticipated bugs on a regular basis."
+            }
+          ],
+          "period": "Oct 2023 - Now"
+        }
+      ]
+    },
+    {
+      "title": "Skill",
+      "icon": "flex items-center fi fi-rr-tool-box",
+      "skills": {
+        "Front-end": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "React",
+          "Redux",
+          "Tailwind",
+          "Framer",
+          "MUI",
+          "Photoshop",
+          "Lightroom",
+          "Illustrator",
+          "InDesign",
+          "XD",
+          "CSS libs",
+          "Animation libs"
+        ],
+        "Back-end": ["NodeJS", "Json", "TablePlus"],
+        "Database": [
+          "MySQL",
+          "PostgreSQL",
+          "Tableau",
+          "Python",
+          "Neo4j",
+          "Pandas"
+        ],
+        "AI-Algorithm": [
+          "Machine Learning",
+          "Deep Learning",
+          "Natural Language",
+          "Recommender System"
+        ],
+        "IT-Tool": ["Github", "SSH", "Docker", "Zsh", "Vim"],
+        "Language": ["English", "Chinese", "SiChuan Dialect"]
+      }
+    },
+    {
+      "title": "Why Me",
+      "icon": "<i className=\"flex items-center fi fi-rr-lightbulb-on",
+      "whymes": [
+        {
+          "id": "LearningAbility",
+          "advantage": ["Learning Ability"],
+          "href": "https://xianzhe.site/whyme/LearningAbility",
+          "icon": "fi-rr-graduation-cap"
+        },
+        {
+          "id": "Leadership",
+          "advantage": ["Leadership"],
+          "href": "https://xianzhe.site/whyme/Leadership",
+          "icon": "fi-rr-users-alt"
+        },
+        {
+          "id": "Communication",
+          "advantage": ["Communication Skills"],
+          "href": "https://xianzhe.site/whyme/Communication",
+          "icon": "fi-rr-comments"
+        },
+        {
+          "id": "ProblemSolving",
+          "advantage": ["Problem Solving"],
+          "href": "https://xianzhe.site/whyme/ProblemSolving",
+          "icon": "fi-rr-lightbulb-question"
+        },
+        {
+          "id": "AestheticAttitude",
+          "advantage": ["Aesthetic Attitude"],
+          "href": "https://xianzhe.site/whyme/AestheticAttitude",
+          "icon": "fi-rr-sparkles"
+        },
+        {
+          "id": "EmotionalStable",
+          "advantage": ["Emotional Stability"],
+          "href": "https://xianzhe.site/whyme/EmotionalStable",
+          "icon": "fi-rr-smile"
+        }
+      ]
+    }
+  ]
+}

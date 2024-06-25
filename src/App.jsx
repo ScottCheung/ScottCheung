@@ -14,9 +14,10 @@ import SingleWhyme from "./pages/SingleWhyme.jsx";
 import SingleWork from "./pages/SingleWork.jsx";
 import Gallery from "./pages/Gallery.jsx";
 import { AppContextProvider } from "./help/ContextManager";
-import Resume from "./pages/Resume.jsx";
+import Resume from "./pages/Resume/Resume.jsx";
 import AutoText from "./pages/AutoText/AutoText.jsx";
 import Navbar from "./conponent/NavBar/Navbar.jsx";
+import Resumecheck from "./pages/Resume/Resumecheck.jsx";
 
 const router = createBrowserRouter([
   {
@@ -92,6 +93,10 @@ const router = createBrowserRouter([
   {
     path: "/test",
     element: <Navbar />,
+  },
+  {
+    path: "/resumecheck/:version",
+    element: <Resumecheck />,
   },
 ]);
 
