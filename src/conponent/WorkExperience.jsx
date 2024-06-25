@@ -1,11 +1,3 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import Database from "../Database.json";
-import { Link, useNavigate } from "react-router-dom";
-import { useLanguage } from "../help/helpFunction";
-import CtButton from "./ctButton";
-import { useAppContext } from "../help/ContextManager";
-
 const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
 const h1 = `font-sans tracking-wide text-sky-700 text-[30px] md:text-[50px]  font-bold  transition-all duration-1000`;
 const normaltext = "text-[15px] text-jusify transition-all duration-1000";
@@ -209,6 +201,14 @@ const cardData = [
   },
 ];
 
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Database from "../Database.json";
+import { Link, useNavigate } from "react-router-dom";
+import { useLanguage } from "../help/helpFunction";
+import CtButton from "./ctButton";
+import { useAppContext } from "../help/ContextManager";
+
 function Card({ card, onClick }) {
   return (
     <motion.div
@@ -221,7 +221,7 @@ function Card({ card, onClick }) {
       <div className="relative flex w-full ">
         <motion.div
           layout
-          layoutId={`card-container-${card.id}`}
+          layoutId={`card-container-${card.type + card.company + card.id}`}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           initial={{ scale: 1, y: 0 }}
           whileHover={{ scale: 1.001, y: -5 }}
@@ -232,10 +232,10 @@ function Card({ card, onClick }) {
           <div className="absolute  -left-[30px] -top-[30px] right-[60px] rounded-[28px]  overflow-hidden aspect-[16/9] ">
             <motion.img
               layout
+              layoutId={`card-img-${card.id}`}
               src={card.image}
               width={window.innerWidth > 1024 ? "800px" : "400px"}
               height={window.innerWidth > 1024 ? "600px" : "300px"}
-              layoutId={`card-img-${card.id}`}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="object-cover object-bottom w-full shadow-lg"
             />
@@ -293,8 +293,7 @@ function WorkExperience() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
 
-  const handleCardClick = (id) => {
-    const card = cardData.find((card) => card.id === id);
+  const handleCardClick = (card) => {
     setSelectedCard(card);
     BanScroll();
     setIsOpen(true);
@@ -306,7 +305,9 @@ function WorkExperience() {
 
   const handleClose = () => {
     setIsOpen(false);
+
     setSelectedCard(null);
+
     UnBanScroll();
     setComponents((prevComponents) => ({
       ...prevComponents,
@@ -371,12 +372,20 @@ function WorkExperience() {
         className="flex w-full space-x-[80px] overflow-x-auto py-[20vh] pl-[200px] scroll-smooth scrollbar-hide"
       >
         {cardData.map((card) => (
-          <Card key={card.id} card={card} onClick={handleCardClick} />
+          <Card
+            key={card.id}
+            card={card}
+            onClick={() => handleCardClick(card)}
+          />
         ))}
       </motion.div>
-      {isOpen && (
-        <AnimatePresence>
+      <AnimatePresence>
+        {isOpen && (
           <motion.div
+            layout
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             onClick={handleClose}
             className="fixed  inset-0 top-0 bottom-0  w-full h-full z-50  bg-gray-900/75 backdrop-blur-[20px]"
           >
@@ -393,82 +402,103 @@ function WorkExperience() {
                   handleClose();
                 }}
               />
-              <motion.div onClick={(e) => e.stopPropagation()}>
-                <motion.div
-                  layout
-                  layoutId={`card-container-${selectedCard.id}`}
-                  transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-                  className="relative p-[20px] md:gap-x-[40px] flex-wrap lg:flex w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-y-auto "
-                >
-                  <div className="w-full max-w-[800px] flex md:p-0 aspect-[4/3] ">
-                    <motion.img
-                      layout
-                      layoutId={`card-img-${selectedCard.id}`}
-                      src={selectedCard.image}
-                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                      alt="detail"
-                      className="object-cover object-bottom w-full"
-                    />
-                  </div>
 
+              {isOpen && (
+                <motion.div onClick={(e) => e.stopPropagation()}>
                   <motion.div
-                    // layout
-                    // transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-                    className="flex flex-col w-full max-w-[800px] pt-[30px] lg:pt-0"
+                    layout
+                    layoutId={`card-container-${
+                      selectedCard.type + selectedCard.company + selectedCard.id
+                    }`}
+                    transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+                    className="relative p-[20px] md:gap-x-[40px] flex-wrap lg:flex w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-y-auto "
                   >
-                    <div className="flex flex-col gap-y-8 ">
-                      <div className="flex flex-wrap items-center gap-8">
-                        <h1 className="font-bold text-7xl">
-                          {selectedCard.title}
-                        </h1>
-                        <motion.kbd class="flex items-center justify-center px-[20px] py-[5px] text-xl font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500">
-                          {selectedCard.type}
-                        </motion.kbd>
-                      </div>
+                    <motion.div
+                      layoutId={`card-img-${selectedCard.id}`}
+                      transition={{
+                        duration: 1.2,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className="w-full max-w-[800px] flex md:p-0 aspect-[4/3] z-50"
+                    >
+                      <motion.img
+                        layout
+                        src={selectedCard.image}
+                        alt="detail"
+                        className="object-cover object-bottom w-full"
+                      />
+                    </motion.div>
 
-                      <div className="flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-y-auto  h-[30%]  pb-8">
-                        <h2 className="flex w-[70%] text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
-                          {selectedCard.company}
-                        </h2>
-                        {/* duration */}
-                        <div className="flex justify-end ">
-                          <p className={timetext}>
-                            {selectedCard.startTime +
-                              " - " +
-                              selectedCard.endTime}
-                          </p>
+                    <motion.div
+                      // layout
+
+                      className="flex flex-col w-full max-w-[800px] pt-[30px] lg:pt-0 z-40"
+                    >
+                      <div className="flex flex-col gap-y-8 ">
+                        <div className="flex flex-wrap items-center gap-8">
+                          <h1 className="font-bold text-7xl">
+                            {selectedCard.title}
+                          </h1>
+                          <motion.kbd
+                            layoutId={
+                              "card-type" +
+                              selectedCard.type +
+                              selectedCard.company
+                            }
+                            transition={{
+                              duration: 0.7,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
+                            class="flex items-center justify-center px-[20px] py-[5px] text-xl font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
+                          >
+                            {selectedCard.type}
+                          </motion.kbd>
+                        </div>
+
+                        <div className="flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-y-auto  h-[30%]  pb-8">
+                          <h2 className="flex w-[70%] text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
+                            {selectedCard.company}
+                          </h2>
+                          {/* duration */}
+                          <div className="flex justify-end ">
+                            <p className={timetext}>
+                              {selectedCard.startTime +
+                                " - " +
+                                selectedCard.endTime}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <div className={contentContainer}>
-                      <div className={normaltext}>
-                        <p>
-                          <h3 className="text-[20px] font-black">Skill:</h3>{" "}
-                          {selectedCard.skill.join(",  ")}
-                        </p>
-                        <h3 className="text-[20px] font-black">
-                          Achievements:
-                        </h3>
-                        <ul className="pl-5 ">
-                          {selectedCard.points.map((item, index) => (
-                            <li key={index} className="mb-2 text-justify">
-                              <strong className="block mr-2 font-semibold">
-                                ▸ {item.point}
-                              </strong>
-                              {item.description}
-                            </li>
-                          ))}
-                        </ul>
+                      <div className={contentContainer}>
+                        <div className={normaltext}>
+                          <p>
+                            <h3 className="text-[20px] font-black">Skill:</h3>{" "}
+                            {selectedCard.skill.join(",  ")}
+                          </p>
+                          <h3 className="text-[20px] font-black">
+                            Achievements:
+                          </h3>
+                          <ul className="pl-5 ">
+                            {selectedCard.points.map((item, index) => (
+                              <li key={index} className="mb-2 text-justify">
+                                <strong className="block mr-2 font-semibold">
+                                  ▸ {item.point}
+                                </strong>
+                                {item.description}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </motion.div>
                 </motion.div>
-              </motion.div>
+              )}
             </div>
           </motion.div>
-        </AnimatePresence>
-      )}
+        )}
+      </AnimatePresence>
     </section>
   );
 }

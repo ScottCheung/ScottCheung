@@ -147,6 +147,10 @@ function WhyMe({ hideTittle }) {
                             <motion.div
                               layout
                               layoutId={feature.advantage}
+                              transition={{
+                                duration: 0.9,
+                                ease: [0.22, 1, 0.36, 1],
+                              }}
                               className={`${
                                 hideTittle
                                   ? `${
@@ -161,7 +165,14 @@ function WhyMe({ hideTittle }) {
                                 <div className="icon-card-content">
                                   <div className="">
                                     <motion.div>
-                                      <motion.div className="flex items-center justify-start">
+                                      <motion.div
+                                        layoutId={feature.advantage + "icon"}
+                                        transition={{
+                                          duration: 0.9,
+                                          ease: [0.22, 1, 0.36, 1],
+                                        }}
+                                        className="flex items-center justify-start"
+                                      >
                                         <i
                                           style={{
                                             animationDelay: `${index * 0.2}s`,
@@ -178,6 +189,10 @@ function WhyMe({ hideTittle }) {
                                       <div className="flex justify-start py-6 sm:py-3">
                                         <motion.div
                                           layoutId={feature.advantage + "title"}
+                                          transition={{
+                                            duration: 0.9,
+                                            ease: [0.22, 1, 0.36, 1],
+                                          }}
                                           style={{
                                             animationDelay: `${index * 0.2}s`,
                                           }}

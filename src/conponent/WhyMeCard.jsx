@@ -9,11 +9,33 @@ import CtButton from "./ctButton";
 import { useAppContext } from "../help/ContextManager";
 import Loading from "./Loading";
 
-const delayDuration = 300;
+const delayDuration = 0;
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.3,
+      staggerChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, x: -80 },
+  visible: {
+    opacity: 1,
+    x: -50,
+    transition: {
+      type: "spring",
+      stiffness: 50,
+      damping: 10,
+    },
+  },
+};
 
 function WhymeCard() {
   const [show, setShow] = useState(false);
-  const [isDelay, setIsDelay] = useState(false);
   const { Components, setComponents, whymeCard, setWhymeCard } =
     useAppContext();
   const data = Database.PersonalInfo.Education;
@@ -83,13 +105,21 @@ function WhymeCard() {
   };
 
   const openCard = (feature) => {
-    setWhymeCard(feature);
     setComponents((prevComponents) => ({
       ...prevComponents,
-      NavBar: "hide",
-      whymeCard: "visible",
+      NavBar: "visible",
+      whymeCard: "hide",
     }));
-    BanScroll();
+
+    setTimeout(() => {
+      setWhymeCard(feature);
+      setComponents((prevComponents) => ({
+        ...prevComponents,
+        NavBar: "hide",
+        whymeCard: "visible",
+      }));
+      BanScroll();
+    }, 500);
   };
 
   const closeCard = () => {
@@ -109,13 +139,12 @@ function WhymeCard() {
         onClick={() => {
           closeCard();
         }}
-        className={`absolute top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] ESC justify-center animate__animated animate__fadeIn items-center z-30 ${
+        className={`absolute top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] ESC justify-center  items-center z-30 ${
           whymeCard.color1 + "/50" + " " + whymeCard.color2 + "/50"
         } bg-gradient-to-br  backdrop-blur-[20px]  justify-center items-center z-40`}
       >
         <motion.span
-          // layoutId={whymeCard.pic[0]}
-          className="fixed  right-0 bottom-0 w-[100vw] h-[100vh] -z-50  animate__animatedanimate__fadeIn "
+          className="fixed  right-0 bottom-0 w-[100vw] h-[100vh] -z-50  animate__animated animate__fadeIn "
           style={
             {
               ...bgPic(whymeCard.pic[0], "40% auto", "bottom right"),
@@ -134,43 +163,35 @@ function WhymeCard() {
           className={` top-[10vh] left-[10vw]   right-[40vw] -bottom-[20vh] pb-[20vh] shadow-[30px] bg-white backdrop-blur-[200px]  rounded-[40px] p-[40px]  z-50 fixed`}
         >
           {show && (
-            <div className="flex   gap-x-[30px]">
-              {" "}
+            <div className="flex gap-x-[30px]">
               <motion.div
                 layout
-                onMouseEnter={() => setIsDelay(false)}
-                onMouseLeave={() => setIsDelay(true)}
-                className="flex flex-col h-full gap-y-[30px] z-50"
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                className="flex flex-col h-full gap-y-[45px] z-50"
               >
                 {keyfeature.map((feature, index) => (
                   <motion.button
-                    layoutId={index + feature.advantage}
+                    layout
+                    variants={itemVariants}
                     key={index + feature.advantage}
-                    initial={{ x: -25 }}
-                    whileHover={{ x: -15 }}
-                    whileTap={{ x: 0 }}
                     onClick={(event) => {
                       event.stopPropagation();
-                      closeCard;
-                      setTimeout(() => {
-                        openCard(feature);
-                      }, 500);
-                    }}
-                    transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                    style={{
-                      animationDelay: isDelay ? `${index * 0.1}s` : 0,
+                      closeCard();
+                      openCard(feature);
                     }}
                     className={`${
                       whymeCard.advantage === feature.advantage ? "hidden" : ""
-                    } flex hover:shadow-6xl animate__animated animate__zoomIn shadow-md items-center py-[15px] justify-center bg-gradient-to-br w-[15vw] -ml-[40px]  rounded-r-full ${
+                    } flex hover:shadow-6xl shadow-md items-center py-[15px] justify-center bg-gradient-to-br w-[15vw] -ml-[40px] rounded-r-full ${
                       feature.color1 + " " + feature.color2
                     } `}
                   >
-                    <div className="flex flex-col items-center justify-center text-white text-l ">
+                    <div className="flex flex-col items-center justify-center text-white text-l">
                       <i
-                        className={`${feature.icon} fi  text-5xl text-white flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
+                        className={`${feature.icon} fi text-5xl text-white flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
                       ></i>
-                      <p className="font-black ">{feature.advantage}</p>
+                      <p className="font-black">{feature.advantage}</p>
                     </div>
                   </motion.button>
                 ))}
@@ -189,25 +210,32 @@ function WhymeCard() {
                   }}
                 />
                 <div className="flex justify-start items-center gap-x-[10px]">
-                  <motion.div
-                    style={{ willChange: "transform" }}
-                    className="flex-shrink-0 "
-                  >
+                  <motion.div className="flex-shrink-0 ">
                     <div
                       className={`flex justify-center items-center ${
                         whymeCard.color1 + " " + whymeCard.color2
-                      } bg-gradient-to-br animate__animated animate__zoomIn  rounded-full w-[60px] h-[60px]`}
+                      } bg-gradient-to-br rounded-full w-[60px] h-[60px]`}
                     >
-                      <motion.div className="text-white text-[30px] mt-[10px]">
+                      <motion.div
+                        layoutId={whymeCard.advantage + "icon"}
+                        transition={{
+                          duration: 0.9,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
+                        className="text-white text-[30px] mt-[10px]"
+                      >
                         <i className={`fi  ${whymeCard.icon}`}></i>
                       </motion.div>
                     </div>
                   </motion.div>
                   <div className="flex gap-x-[30px] items-center">
                     <motion.h3
+                      transition={{
+                        duration: 0.9,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
                       layoutId={whymeCard.advantage + "title"}
-                      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-                      className={`text-[30px] animate__animated animate__zoomIn  font-semibold leading-normal mb-2 ${
+                      className={`text-[30px]  font-semibold leading-normal mb-2 ${
                         whymeCard.color1 + " " + whymeCard.color2
                       } bg-clip-text text-transparent bg-gradient-to-br mb-2`}
                     >
@@ -235,7 +263,7 @@ function WhymeCard() {
                       <motion.div
                         className={` ${
                           whymeCard.color1 + " " + whymeCard.color2
-                        } bg-clip-text text-transparent bg-gradient-to-br text-[15px] md:text-[23px] animate__animated animate__zoomIn `}
+                        } bg-clip-text text-transparent bg-gradient-to-br text-[15px] md:text-[23px] animate__animated animate__fadeInUp `}
                       >
                         {whymeCard.description
                           .split("\n")
