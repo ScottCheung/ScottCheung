@@ -242,7 +242,16 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           >
                             {" "}
                             {data.Avatar.helloword[lang]}
-                            <p className="hidden md:flex ml-[7px]">{`|  ${updateTime[lang]} ${[lang] == 0 ? "Updates" : "更新"}`}</p>
+                            <p
+                              className={
+                                windowWidth < 876
+                                  ? "hidden"
+                                  : "flex ml-[7px] gap-x-[10px]"
+                              }
+                            >
+                              <p className="flex">|</p>
+                              {`${updateTime[lang]} ${["Updates", "更新"][lang]}`}
+                            </p>
                           </motion.div>
                         </div>
                       </div>
