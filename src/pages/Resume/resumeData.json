@@ -28,6 +28,7 @@
       },
       {
         "name": "Check Updates",
+        "update": "June 25",
         "version": "20240625",
         "icon": "flex items-center fi fi-rr-clock",
         "link": "https://xianzhe.site/resumecheck/20240625"

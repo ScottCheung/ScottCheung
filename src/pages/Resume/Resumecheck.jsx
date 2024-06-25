@@ -26,8 +26,8 @@ export default function Errorpage() {
       "恭喜！您正在使用最新版本。",
     ],
     OldVersion: [
-      `You are using an older version. Please view the latest version for updates as of ${latestContact.name}.`,
-      `您正在使用旧版本, 请查看最新版本(${latestContact.name} 更新)。`,
+      `You are not using latest version. Please view the latest version for updates as of ${latestContact.update}.`,
+      `您正在使用旧版本, 请查看最新版本(${latestContact.update} 更新)。`,
     ],
     btn1: ["View Latest", "查看最新版"],
     btn1web: "/resume",
