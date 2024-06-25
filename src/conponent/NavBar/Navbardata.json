@@ -190,12 +190,12 @@
       "isTopShow": false,
       "scondMenu": [
         {
-          "name": ["English", "英文"],
+          "name": ["English", "English"],
           "icon": "fi-rr-globe",
           "button": "lang0"
         },
         {
-          "name": ["Chinese", "中文"],
+          "name": ["中文", "中文"],
           "icon": "fi-ss-stars",
           "button": "lang1"
         }
