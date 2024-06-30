@@ -201,7 +201,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     >
                       <div className="flex item-center">
                         <div className="relative flex items-center justify-center">
-                          <img
+                          {/* <img
                             className={`transition-all animate__animated animate__zoomIn  ${
                               isTop ? "w-20" : "w-16"
                             }  rounded-md shadow-lg`}
@@ -211,7 +211,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             alt="Xianzhe's Page"
                             width="100"
                             height="100"
-                          ></img>
+                          ></img> */}
                         </div>
                         <div className="flex flex-col ml-6">
                           <motion.div
