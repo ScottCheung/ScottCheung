@@ -212,60 +212,61 @@ import { useAppContext } from "../help/ContextManager";
 function Card({ card, onClick }) {
   return (
     <motion.div
+      layout
       key={card.id}
-      variants={WelcomeItem}
-      transition={StagerFadeInUp}
-      // className="large-span-4 medium-span-6 small-span-12"
-      className="flex-shrink-0 "
+      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+      initial={{ scale: 1, y: 0 }}
+      whileHover={{ scale: 1.001, y: -5 }}
+      whileTap={{ scale: 0.99 }}
+      layoutId={`card-container-${card.type + card.company + card.id}`}
+      className={`relative bg-white  cursor-pointer w-[250px]  lg:w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
+      onClick={() => onClick(card.id)}
     >
-      <div className="relative flex w-full ">
-        <motion.div
+      <div className="absolute  -left-[30px] -top-[30px] right-[60px] rounded-[28px]  overflow-hidden aspect-[16/9] ">
+        <motion.img
           layout
-          layoutId={`card-container-${card.type + card.company + card.id}`}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          initial={{ scale: 1, y: 0 }}
-          whileHover={{ scale: 1.001, y: -5 }}
-          whileTap={{ scale: 0.99 }}
-          className={`relative bg-white  cursor-pointer w-[250px]  lg:w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
-          onClick={() => onClick(card.id)}
+          layoutId={`card-img-${card.id}`}
+          src={card.image}
+          width={window.innerWidth > 1024 ? "800px" : "400px"}
+          height={window.innerWidth > 1024 ? "600px" : "300px"}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="object-cover object-bottom w-full shadow-lg"
+        />
+        <motion.kbd
+          layoutId={"card-type" + card.type + card.company}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          class=" absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
         >
-          <div className="absolute  -left-[30px] -top-[30px] right-[60px] rounded-[28px]  overflow-hidden aspect-[16/9] ">
-            <motion.img
-              layout
-              layoutId={`card-img-${card.id}`}
-              src={card.image}
-              width={window.innerWidth > 1024 ? "800px" : "400px"}
-              height={window.innerWidth > 1024 ? "600px" : "300px"}
-              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="object-cover object-bottom w-full shadow-lg"
-            />
-            <motion.kbd
-              layoutId={"card-type" + card.type + card.company}
-              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              class=" absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
-            >
-              {card.type[0]}
-            </motion.kbd>
-          </div>
+          {card.type[0]}
+        </motion.kbd>
+      </div>
 
-          <div className="flex flex-col mt-[60%]  items-start justify-start h-[130px] animate__animated animate__fadeInUp">
-            <h1 className="font-bold  text-[20px] md:text-[25px] lg:text-[28px] text-gray">
-              {card.title}
-            </h1>
-            <h2 className="flex  text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
-              {card.company}
-            </h2>
-          </div>
-        </motion.div>
+      <div className="flex flex-col mt-[60%]  items-start justify-start h-[130px] animate__animated animate__fadeInUp">
+        <h1 className="font-bold  text-[20px] md:text-[25px] lg:text-[28px] text-gray">
+          {card.title}
+        </h1>
+        <h2 className="flex  text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
+          {card.company}
+        </h2>
       </div>
-      <div className="-mx-[18%] mt-[10vh]  relative flex  items-center justify-between">
-        <div className="absolute  -mt-[100px]  flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-500 font-serif">
-          <div>{card.startTime}</div>
-          <div>{card.endTime}</div>
-        </div>
-        <span className={divisionline}></span>
-        <div className="absolute right-0 bg-sky-700 rounded-full w-[30px] h-[30px]"></div>
+    </motion.div>
+  );
+}
+
+function Period({ period }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      className="-mx-[18%] mt-[10vh]  relative flex  items-center justify-between"
+    >
+      <div className="absolute  -mt-[100px]  flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-500 font-serif">
+        <div>{period.startTime}</div>
+        <div>{period.endTime}</div>
       </div>
+      <span className={divisionline}></span>
+      <div className="absolute right-0 bg-sky-700 rounded-full w-[30px] h-[30px]"></div>
     </motion.div>
   );
 }
@@ -305,9 +306,7 @@ function WorkExperience() {
 
   const handleClose = () => {
     setIsOpen(false);
-
     setSelectedCard(null);
-
     UnBanScroll();
     setComponents((prevComponents) => ({
       ...prevComponents,
@@ -336,9 +335,9 @@ function WorkExperience() {
   };
 
   return (
-    <section className="flex flex-col justify-center w-full ">
+    <motion.div layout className="flex flex-col justify-center w-full ">
       {/* 一级标题 */}
-      <div id="WorkExperience" className={`flex justify-center `}>
+      <motion.div layout id="WorkExperience" className={`flex justify-center `}>
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -356,7 +355,7 @@ function WorkExperience() {
             {lang == 1 && "工作经验"}
           </h2>
         </motion.div>
-      </div>
+      </motion.div>
       <motion.div
         ref={containerRef}
         variants={Welcomevisblecontainer}
@@ -369,14 +368,21 @@ function WorkExperience() {
           paddingRight:
             "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)",
         }}
-        className="flex w-full space-x-[80px] overflow-x-auto py-[20vh] pl-[200px] scroll-smooth scrollbar-hide"
+        className="flex w-full space-x-[80px] overflow-x-auto py-[20vh] pl-[200px] scroll-smooth scrollbar-hide   flex-shrink-0 "
       >
         {cardData.map((card) => (
-          <Card
+          <motion.div
             key={card.id}
-            card={card}
-            onClick={() => handleCardClick(card)}
-          />
+            // variants={WelcomeItem}
+            transition={StagerFadeInUp}
+            // className="flex flex-col items-center justify-center"
+          >
+            <Card card={card} onClick={() => handleCardClick(card)} />
+            <Period
+              period={card}
+              // onClick={() => handleCardClick(period)}
+            />
+          </motion.div>
         ))}
       </motion.div>
       <AnimatePresence>
@@ -499,7 +505,7 @@ function WorkExperience() {
           </motion.div>
         )}
       </AnimatePresence>
-    </section>
+    </motion.div>
   );
 }
 
