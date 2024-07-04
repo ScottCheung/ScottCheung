@@ -29,9 +29,9 @@
       {
         "name": "Check Updates",
         "update": "June 25",
-        "version": "20240625",
+        "version": "20240704",
         "icon": "flex items-center fi fi-rr-clock",
-        "link": "https://xianzhe.site/resumecheck/20240625"
+        "link": "https://xianzhe.site/resumecheck/20240704"
       }
     ]
   },
@@ -114,7 +114,7 @@
       "projects": [
         {
           "name": "Neo4j iGrapher ( Graphical data code-zero analysis tool )",
-          "link": "http://igrapher.xianzhe.site",
+          "link": "http://43.128.92.60/",
           "skill": [
             "Neo4j",
             "JavaScript",
