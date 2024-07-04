@@ -233,6 +233,7 @@ function Card({ card, onClick }) {
           className="object-cover object-bottom w-full shadow-lg"
         />
         <motion.kbd
+          layout
           layoutId={"card-type" + card.type + card.company}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           class=" absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
@@ -256,6 +257,7 @@ function Card({ card, onClick }) {
 function Period({ period }) {
   return (
     <motion.div
+      layout
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -339,6 +341,7 @@ function WorkExperience() {
       {/* 一级标题 */}
       <motion.div layout id="WorkExperience" className={`flex justify-center `}>
         <motion.div
+          layout
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{
@@ -357,6 +360,7 @@ function WorkExperience() {
         </motion.div>
       </motion.div>
       <motion.div
+        layout
         ref={containerRef}
         variants={Welcomevisblecontainer}
         initial="hidden"
