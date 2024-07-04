@@ -29,7 +29,10 @@ export default function Errorpage() {
       `You are not using latest version. Please view the latest version for updates as of ${latestContact.update}.`,
       `您正在使用旧版本, 请查看最新版本(${latestContact.update} 更新)。`,
     ],
-    btn1: ["View Latest", "查看最新版"],
+    btn1: [
+      `View Latest ( ${latestContact.update} )`,
+      `查看最新版 ( ${latestContact.update} )`,
+    ],
     btn1web: "/resume",
     btn1Icon: "fi-rr-home-heart",
     btn2: ["Download Resume", "下载简历"],
