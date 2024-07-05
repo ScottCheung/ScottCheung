@@ -116,9 +116,9 @@
           "name": "Neo4j iGrapher ( Graphical data code-zero analysis tool )",
           "link": "http://43.128.92.60/",
           "skill": [
-            "Neo4j",
             "HTML",
             "CSS",
+            "Neo4j",
             "JavaScript",
             "React",
             "D3",
