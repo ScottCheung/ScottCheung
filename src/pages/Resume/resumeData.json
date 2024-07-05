@@ -117,6 +117,8 @@
           "link": "http://43.128.92.60/",
           "skill": [
             "Neo4j",
+            "HTML",
+            "CSS",
             "JavaScript",
             "React",
             "D3",
@@ -149,7 +151,8 @@
           "name": "Personal website ( Portfolio )",
           "link": "https://xianzhe.site/",
           "skill": [
-            "Neo4j",
+            "HTML",
+            "CSS",
             "JavaScript",
             "React",
             "Tailwind",
