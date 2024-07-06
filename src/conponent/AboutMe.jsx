@@ -20,6 +20,26 @@ const floateMenu = {
 
 function SelfDescribing() {
   const lang = useLanguage();
+  const parseText = (text) => {
+    const parts = text.split(/({bold}.*?{bold})/).map((part, index) => {
+      if (part.startsWith("{bold}") && part.endsWith("{bold}")) {
+        return (
+          <span
+            key={index}
+            className="text-white mx-[3px] font-semibold text-[15px]  md:text-[20px]"
+          >
+            {part.replace(/{bold}/g, "")}
+          </span>
+        );
+      }
+      return (
+        <span className="text-white/70 text-[13px]  md:text-[18px]" key={index}>
+          {part}
+        </span>
+      );
+    });
+    return parts;
+  };
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
@@ -47,7 +67,6 @@ function SelfDescribing() {
 
   const SelfDescribing = (
     <section
-      id="SelfDescribing"
       className={`smoothchange items-center bg-scroll bg-center relative flex flex-col justify-center w-full  `}
       style={{
         backgroundImage: `url(${data.pic})`,
@@ -66,8 +85,11 @@ function SelfDescribing() {
           }}
           className="z-10 py-24 my-12 font-mono font-bold text-white text-8xl"
         >
-          <i className="fi fi-rr-comment-heart text-5xl lg:text-8xl mr-[20px] pt-3 "></i>
-          {lang == 0 && "Self Describing"}
+          <i
+            id="AboutMe"
+            className="fi fi-rr-comment-heart text-5xl lg:text-8xl mr-[20px] pt-3 "
+          ></i>
+          {lang == 0 && "About me"}
           {lang == 1 && "自述"}
         </motion.div>
         <div className="pb-48 ">
@@ -76,7 +98,7 @@ function SelfDescribing() {
               style={{ x, y, borderTopRightRadius, opacity, scale }}
               className="float-right"
             >
-              <motion.div className="">
+              <motion.div className="flex">
                 <motion.img
                   className="rounded-full w-[200px] h-[200px] md:w-[250px] md:h-[250px]   "
                   src={Database.PersonalInfo.Avatar[0]}
@@ -85,9 +107,13 @@ function SelfDescribing() {
             </motion.div>
             <motion.div
               style={{ x: target, opacity }}
-              className="block text-white text-[20px]  leading-loose"
+              className="block leading-loose "
             >
-              {data.description[lang]}
+              {data.description[lang].map((item, index) => (
+                <motion.div className="block mb-[30px]" key={index + item}>
+                  <p>{parseText(item)}</p>
+                </motion.div>
+              ))}
             </motion.div>
           </motion.blockquote>
         </div>

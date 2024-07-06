@@ -1,6 +1,6 @@
 {
   "header": {
-    "name": "Xianzhe(Scott)    Zhang",
+    "name": "Scott Cheung",
     "contacts": [
       {
         "name": "Front-end Developer",
@@ -28,10 +28,10 @@
       },
       {
         "name": "Check Updates",
-        "update": "July 5",
-        "version": "20240705",
+        "update": "July 6",
+        "version": "20240706",
         "icon": "flex items-center fi fi-rr-clock",
-        "link": "https://xianzhe.site/resumecheck/20240705"
+        "link": "https://xianzhe.site/resumecheck/20240706"
       }
     ]
   },
@@ -39,7 +39,7 @@
     {
       "title": "Summary",
       "icon": "flex items-center fi fi-rr-user",
-      "content": "Passionate front-end developer boasting over two years of development experience coupled with seven years in design, specializing in JavaScript, Tailwind CSS, and Framer Motion. Demonstrated expertise in front-end development, with a strong proficiency in crafting engaging user experiences and enhancing user interaction and satisfaction. Skilled in designing and deploying aesthetically pleasing, reliable, and fluid software systems. Possesses a five-year visa, eliminating the need for sponsorship. Discover more at https://xianzhe.site."
+      "content": "Results-driven Front-End Developer with over two years of development experience and seven years in design. Specializes in JavaScript, Tailwind CSS, and Framer Motion, with proven expertise in crafting engaging user experiences and enhancing user interaction. Adept at designing and deploying aesthetically pleasing, reliable, and fluid software systems. Holds a Master's degree in IT with a focus on AI from UNSW. Possesses a five-year visa, eliminating the need for sponsorship. Fluent in English and Mandarin, enhancing communication in multicultural teams. Discover more at https://xianzhe.site."
     },
     {
       "title": "Highlights",
@@ -108,6 +108,7 @@
         }
       ]
     },
+
     {
       "title": "Projects",
       "icon": "flex items-center fi fi-rr-folder",
@@ -124,7 +125,7 @@
             "D3",
             "Tailwind",
             "Framer Motion",
-            "Chrome DevTools",
+            "Google Chrome DevTools",
             "Figma"
           ],
           "contribution": [
@@ -157,7 +158,7 @@
             "React",
             "Tailwind",
             "Framer Motion",
-            "Chrome DevTools",
+            "Google Chrome DevTools",
             "Photoshop"
           ],
           "contribution": [
@@ -199,7 +200,6 @@
           "CSS libs",
           "Animation libs"
         ],
-        "Back-end": ["NodeJS", "Json", "TablePlus"],
         "Database": [
           "MySQL",
           "PostgreSQL",

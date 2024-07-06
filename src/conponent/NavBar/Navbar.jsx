@@ -9,8 +9,8 @@ import ContactCate from "../contactCategory.jsx";
 
 import Toast from "../toast.jsx";
 
-const updateMonth = 6;
-const updateDay = 25;
+const updateMonth = 7;
+const updateDay = 6;
 const updateTime = [
   `${updateDay} ${new Date(2000, updateMonth - 1, 1).toLocaleString("en-US", { month: "long" })}`,
   `${updateMonth} 月 ${updateDay} 日`,

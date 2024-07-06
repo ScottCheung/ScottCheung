@@ -23,8 +23,8 @@
         "color2": "to-blue-500"
       },
       {
-        "id": "/#SelfDescribing",
-        "label": ["Describe", "自述"],
+        "id": "/#AboutMe",
+        "label": ["About Me", "关于"],
         "logo": "fi-rr-comment-heart",
         "color1": "from-sky-500",
         "color2": "to-emerald-500"
@@ -1362,8 +1362,32 @@
     "SelfDescribing": {
       "pic": "https://cdn.pixabay.com/photo/2014/05/26/09/58/sydney-opera-house-354375_1280.jpg",
       "description": [
-        "Hello! I'm Scott Zhang from Sichuan Province, China. I grew up in a family where my father is a doctor, and my mother is a teacher. From a young age, I've been a person with diverse interests. I have a passion for music and photography, enjoying exploring new things. I've experienced both being the top student and facing challenges as the last one in class during my academic journey. My motivation for learning comes from my interests and the desire to solve problems. I consider myself intelligent, unafraid of challenges, and resilient, believing I can tackle various issues. My strengths lie in flexible thinking and a willingness to try new methods, although I tend to be overly concerned about details and aesthetics. I'm also aware of my weaker sense of time, and I'm currently making efforts to improve in this aspect. I am currently studying IT and planning to seek relevant employment in the coming months. I am eager to continually enhance myself through hard work. If you have any questions or suggestions, feel free to share; I'll provide you with constructive feedback. I hope I can be appealing and shine brightly for you.",
-        "你好！我是张贤哲，来自中国四川省。我在一个医生和一名教师的家庭中长大，从小就是一个兴趣广泛的人。我热爱音乐和摄影，喜欢探索新鲜事物。我曾在学业中取得过班上的第一名，也经历过班上的最后一名。这是因为我的学习动力来自于兴趣和解决问题的欲望。我认为自己聪明、不怕困难，有毅力，相信可以解决各种问题。灵活的思维和敢于尝试新方法是我的特点，尽管我对细节和美观度有些过于在意，同时时间观念相对较弱，能意识到问题是很好的开始，我目前正在尽力改善这一点。我正在学习IT，并计划在未来几个月内寻找相关工作。期待通过努力不断提升自己。有任何问题或建议，欢迎分享，我会给你良好的反馈。我希望我对你是足够吸引和闪耀的。"
+        [
+          "Hello, I'm {bold}Scott Cheung{bold}, a passionate and multifaceted individual who loves {bold}life{bold} and {bold}exploring new things{bold}. I excel in adopting new methods to improve efficiency in work and study. My {bold}intelligence{bold}, {bold}strong learning ability{bold}, and {bold}fearlessness{bold} in the face of challenges have enabled me to achieve {bold}three degrees{bold}, including a double major in my undergraduate studies and an {bold}IT master's degree{bold} from {bold}UNSW{bold}, all completed {bold}ahead of schedule{bold} in record time.",
+
+          "I have a solid background in management studies, which allows me to {bold}systematically solve problems{bold}. My {bold}flexible thinking{bold} enables me to embrace new methods while maintaining {bold}high standards for detail{bold} and {bold}aesthetics{bold}. Throughout my academic and professional journey, I have garnered {bold}58 awards{bold} and {bold}17 scholarships{bold}. During my undergraduate years, I also designed posters and logos as a side hustle.",
+
+          "My {bold}excellent communication skills{bold} enable me to collaborate efficiently with team members and understand client preferences. My {bold}keen aesthetic sense{bold} and {bold}ability to quickly capture industry trends{bold} have allowed me to design {bold}commercially valuable{bold} and {bold}aesthetically pleasing{bold} layouts, interactions, and interfaces.",
+
+          "In the IT field, I hold a master's degree from UNSW, specializing in AI. I have comprehensive knowledge in {bold}neural networks{bold}, {bold}deep learning{bold}, {bold}machine learning{bold}, {bold}natural language processing{bold}, and {bold}recommendation systems{bold}. My expertise also extends to {bold}front-end development{bold}. I am proficient in {bold}JavaScript{bold} and {bold}Python{bold}, and familiar with frameworks and tools such as {bold}React{bold}, {bold}Git{bold}, {bold}Tailwind{bold}, {bold}Framer{bold}, and {bold}Redux{bold}.",
+
+          "My {bold}diverse interests{bold}, including {bold}piano{bold}, {bold}calligraphy{bold}, {bold}painting{bold}, {bold}Tai Chi{bold}, {bold}taekwondo{bold}, {bold}photography{bold}, {bold}singing{bold}, {bold}guitar{bold}, {bold}ballet{bold}, and {bold}violin{bold}, have all contributed to my deep appreciation for work that embodies my {bold}aesthetic vision{bold} and {bold}analytical thinking{bold}.",
+
+          "Front-end development is the perfect job for me, as it allows me to help companies better present their content while expressing my own {bold}aesthetic attitude{bold}. It is the perfect combination of art and engineering. After developing a new component, I get instant feedback, unlike training an AI model, which typically requires a significant amount of time for feedback. This immediate positive feedback from front-end development stimulates me. I often lose track of time while developing web pages and can easily stay up all night coding. I immerse myself in the world of code. It seems I was born for front-end development, and my passion sustains me and enables me to achieve excellent results. I am grateful that my broad interests and continuous exploration have given me a clear understanding of {bold}who I am{bold} and {bold}what I love{bold}."
+        ],
+        [
+          "你好，我是{bold}张贤哲{bold}，一个充满{bold}热情{bold}且{bold}多才多艺{bold}的人，热爱{bold}生活{bold}和{bold}探索新事物{bold}。我擅长采用新方法来提高工作和学习的效率。我的{bold}聪明{bold}、{bold}强大的学习能力{bold}和面对挑战的{bold}无畏精神{bold}使我获得了{bold}三个学位{bold}，包括本科期间的双学位和来自{bold}UNSW{bold}的{bold}IT硕士学位{bold}，这些学位都在创纪录的时间内{bold}提前{bold}完成。",
+
+          "我在管理学方面有着扎实的背景，这使我能够{bold}系统地解决问题{bold}。我的{bold}灵活思维{bold}让我能够接受新方法并保持{bold}高标准的细节{bold}和{bold}美感{bold}。在我的学术和职业生涯中，我获得了{bold}58个奖项{bold}和{bold}17个奖学金{bold}，在本科期间，我还通过设计海报和标志作为副业。",
+
+          "我的{bold}优秀的沟通技巧{bold}使我能够高效地与团队成员合作，并了解客户的偏好。我的{bold}敏锐美学感知{bold}和{bold}快速捕捉行业趋势的能力{bold}使我能够设计出具有{bold}商业价值{bold}和{bold}美轮美奂{bold}的布局互动和界面。",
+
+          "在IT领域，我拥有UNSW的硕士学位，专攻人工智能，广泛掌握{bold}神经网络{bold}、{bold}深度学习{bold}、{bold}机器学习{bold}、{bold}自然语言处理{bold}和{bold}推荐系统{bold}的知识。我的专业知识还扩展到{bold}前端开发{bold}，我熟练掌握{bold}JavaScript{bold}和{bold}Python{bold}，并熟悉{bold}React{bold}、{bold}Git{bold}、{bold}Tailwind{bold}、{bold}Framer{bold}和{bold}Redux{bold}等框架和工具。",
+
+          "我的{bold}多种兴趣{bold}，包括{bold}钢琴{bold}、{bold}书法{bold}、{bold}绘画{bold}、{bold}太极{bold}、{bold}跆拳道{bold}、{bold}摄影{bold}、{bold}唱歌{bold}、{bold}吉他{bold}、{bold}芭蕾{bold}和{bold}小提琴{bold}，都使我对体现我{bold}美学视野{bold}和{bold}分析思维{bold}的工作有了深刻的理解。",
+
+          "前端开发于我是完美的工作，我可以帮助公司更好地展示内容，同时表达我自己的{bold}美学态度{bold}，这是艺术和工程的完美结合。在开发一个新组件后，它能给我即时反馈，这与训练AI模型不同，后者通常需要大量时间才能收到反馈。前端这种积极即使的反馈激励着我。我经常在开发网页时忘记时间，彻夜不眠地编写代码。我沉浸在代码的世界里，我似乎为前端开发而生，我的热爱可以支撑我，不断取得优秀的成果。我很感激我的兴趣广泛和不断探索，让我清楚地知道{bold}我是谁{bold}以及{bold}我所热爱的{bold}。"
+        ]
       ]
     },
     "KeyFeature1": [

@@ -9,7 +9,7 @@ import {
 import Navbar from "../conponent/NavBar/Navbar";
 import Education from "../conponent/Education";
 import WhyMe from "../conponent/WhyMe";
-import SelfDescribing from "../conponent/SelfDescribing";
+import AboutMe from "../conponent/AboutMe";
 import WorkExperience from "../conponent/WorkExperience";
 import Capability from "./Capability";
 import KeyFeature from "../conponent/KeyFeature";
@@ -128,7 +128,7 @@ function Home() {
       <KeyFeature />
       <Capability />
       <WorkExperience />
-      <SelfDescribing />
+      <AboutMe />
       <WhyMe />
       <Contact />
     </div>

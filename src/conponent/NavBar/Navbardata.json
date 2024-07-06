@@ -24,8 +24,8 @@
           "icon": "fi-rr-tool-box"
         },
         {
-          "link": "/#SelfDescribing",
-          "name": ["Describe", "自述"],
+          "link": "/#AboutMe",
+          "name": ["About me", "关于"],
           "icon": "fi-rr-comment-heart"
         },
         {
@@ -300,7 +300,7 @@
     }
   ],
   "Avatar": {
-    "Webname": ["Xianzhe Zhang", "张贤哲Scott"],
+    "Webname": ["Scott Cheung", "张贤哲Scott"],
     "helloword": ["Keep Enthusiasm", "保持热爱"]
   },
   "Hero": {

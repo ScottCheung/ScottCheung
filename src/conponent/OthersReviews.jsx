@@ -26,7 +26,7 @@ function SelfDescribing() {
       >
         <div className="visblecontainer">
           <h2 className="animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono">
-            Self Describing
+            About me
           </h2>
           <div className="row hestia-about-content">
             <blockquote

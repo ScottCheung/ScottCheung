@@ -91,26 +91,14 @@ function Contact({ isTopOut }) {
                                                     index * 0.3
                                                   }s`,
                                                 }}
-                                                className={`${type.icon} ${
-                                                  isOut
-                                                    ? `${
-                                                        ColorMapping[index % 6]
-                                                      }
-                                                } bg-gradient-to-br text-transparent bg-clip-text`
-                                                    : "text-white"
-                                                }  text-7xl animate__animated  animate__zoomIn animate__fast `}
+                                                className={`${type.icon} text-white text-7xl animate__animated  animate__zoomIn animate__fast `}
                                               ></i>
                                             </div>
                                           </div>
                                         </div>
                                         <div className="copy-visblecontainer">
                                           <div
-                                            className={`typography-card-headline ${
-                                              isOut
-                                                ? `${ColorMapping[index % 6]}
-                                            } bg-gradient-to-br text-transparent bg-clip-text`
-                                                : "text-white"
-                                            } `}
+                                            className={`typography-card-headline text-white`}
                                           >
                                             {type.type[lang]}{" "}
                                           </div>
@@ -119,12 +107,7 @@ function Contact({ isTopOut }) {
                                               animationDelay: `${index * 0.3}s`,
                                             }}
                                             className={`mt-7 animate__animated  animate__fadeInUp  card-description text-justify 
-                                            ${
-                                              isOut
-                                                ? `${ColorMapping[index % 6]}
-                                            } bg-gradient-to-br text-transparent bg-clip-text`
-                                                : "text-white"
-                                            } `}
+                                            text-white/50`}
                                           >
                                             {type.name}
                                           </p>

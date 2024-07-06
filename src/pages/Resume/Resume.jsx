@@ -34,7 +34,7 @@ export default function Resume() {
   }-${Math.max(
     colorDepth - 200 || 100,
   )} gap-x-[15px] items-center transition-all duration-1000`;
-  const printWidth = "max-w-[1350px] mt-[50px]";
+  const printWidth = "max-w-[1350px] ";
   const icon = `w-[15px] text-[15px] mr-[5px] mt-[2px]  transition-all duration-1000`;
   const divisionline = ` flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-50  transition-all duration-1000`;
   const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-10  transition-all duration-1000`;
@@ -101,7 +101,7 @@ export default function Resume() {
             </div>
           </div>
           {cvData.sections.map((section) => (
-            <div key={section.title} className="">
+            <div key={section.title}>
               {/* Headers */}
               <a
                 target="_blank"
@@ -194,6 +194,41 @@ export default function Resume() {
                     </React.Fragment>
                   ))}
               </div>
+              {/* Skills */}
+              {section.skills &&
+                Object.entries(section.skills).map(
+                  ([category, list], index) => (
+                    <div
+                      key={index}
+                      className="flex justify-between items-start md:items-center gap-x-[30px] py-[15px] md:py-[3px] "
+                    >
+                      <h2 className={h3}>{category}</h2>
+
+                      <span className={division}></span>
+
+                      <div className="text-right text-[15px] text-gray-600">
+                        {list.map((tag, index) => (
+                          <React.Fragment key={index} className="group">
+                            <p className="hidden group-hover:flex animate-animated animate-zoomIn">
+                              Click to search "{tag}" on Google
+                            </p>
+                            <a
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              href={`https://zh.wikipedia.org/wiki/${encodeURIComponent(tag)}`}
+                              className="text-gray-600 group-hover::underline"
+                            >
+                              {tag}
+                            </a>
+                            {index < list.length - 1 && (
+                              <span className="mx-2">|</span>
+                            )}
+                          </React.Fragment>
+                        ))}
+                      </div>
+                    </div>
+                  ),
+                )}
 
               {/* Education */}
               {section.edus && (
@@ -335,41 +370,6 @@ export default function Resume() {
                   </a>
                 ))}
 
-              {/* Skills */}
-              {section.skills &&
-                Object.entries(section.skills).map(
-                  ([category, list], index) => (
-                    <div
-                      key={index}
-                      className="flex justify-between items-start md:items-center gap-x-[30px] py-[15px] md:py-[3px] "
-                    >
-                      <h2 className={h3}>{category}</h2>
-
-                      <span className={division}></span>
-
-                      <div className="text-right text-[15px] text-gray-600">
-                        {list.map((tag, index) => (
-                          <React.Fragment key={index} className="group">
-                            <p className="hidden group-hover:flex animate-animated animate-zoomIn">
-                              Click to search "{tag}" on Google
-                            </p>
-                            <a
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href={`https://zh.wikipedia.org/wiki/${encodeURIComponent(tag)}`}
-                              className="text-gray-600 group-hover::underline"
-                            >
-                              {tag}
-                            </a>
-                            {index < list.length - 1 && (
-                              <span className="mx-2">|</span>
-                            )}
-                          </React.Fragment>
-                        ))}
-                      </div>
-                    </div>
-                  ),
-                )}
               {/* Whyme */}
               <div className="flex flex-wrap w-full justify-center md:justify-between gap-[30px]">
                 {section.whymes &&
