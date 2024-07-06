@@ -10,118 +10,175 @@ import {
 } from "framer-motion";
 import { hideRow, bgPic, useLanguage } from "../help/helpFunction";
 const data = Database.PersonalInfo.SelfDescribing;
-const floateMenu = {
-  start: { opacity: 0, scale: 0 },
-  end: {
-    scale: 1,
-    opacity: 1,
-  },
-};
 
 function SelfDescribing() {
   const lang = useLanguage();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const handleMediaQueryChange = (e) => setIsMobile(e.matches);
+    handleMediaQueryChange(mediaQuery);
+    mediaQuery.addEventListener("change", handleMediaQueryChange);
+    return () =>
+      mediaQuery.removeEventListener("change", handleMediaQueryChange);
+  }, []);
+
   const parseText = (text) => {
     const parts = text.split(/({bold}.*?{bold})/).map((part, index) => {
       if (part.startsWith("{bold}") && part.endsWith("{bold}")) {
         return (
           <span
             key={index}
-            className="text-white mx-[3px] font-semibold text-[15px]  md:text-[20px]"
+            className="text-white mx-[3px] text-[15px] md:text-[20px]"
           >
             {part.replace(/{bold}/g, "")}
           </span>
         );
       }
       return (
-        <span className="text-white/70 text-[13px]  md:text-[18px]" key={index}>
+        <span className="text-white/50 text-[13px]  md:text-[18px]" key={index}>
           {part}
         </span>
       );
     });
     return parts;
   };
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-  const ref = useRef(null);
+
+  const ref1 = useRef(null);
   const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["-100vh ", "-40vh"],
+    target: ref1,
+    offset: ["0vh", "80vh", "380vh", "450vh"], // 调整偏移量使滚动效果更平缓
   });
 
   // 根据滚动进度计算位移
-  const x = useTransform(scrollYProgress, [0, 1], ["30vw", "0vw"]);
-  const y = useTransform(scrollYProgress, [0, 1], ["-30vh", "0vh"]);
-  const width = useTransform(scrollYProgress, [0, 1], ["0vw", "100vw"]);
-  const target = useTransform(scrollYProgress, [0, 1], ["-30vw", "0vw"]);
-  const borderTopRightRadius = useTransform(scrollYProgress, [0, 1], [200, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
-
-  const SelfDescribing = (
-    <section
-      className={`smoothchange items-center bg-scroll bg-center relative flex flex-col justify-center w-full  `}
-      style={{
-        backgroundImage: `url(${data.pic})`,
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
-      }}
-    >
-      <span className="absolute w-full h-full bg-black opacity-70 "></span>
-      <div className="visblecontainer    sticky top-0 pt-[20vh]">
-        <motion.div
-          style={{ opacity, scale, y: target }}
-          transition={{
-            ease: [0.455, 0.03, 0.515, 0.955],
-            duration: 1,
-          }}
-          className="z-10 py-24 my-12 font-mono font-bold text-white text-8xl"
-        >
-          <i
-            id="AboutMe"
-            className="fi fi-rr-comment-heart text-5xl lg:text-8xl mr-[20px] pt-3 "
-          ></i>
-          {lang == 0 && "About me"}
-          {lang == 1 && "自述"}
-        </motion.div>
-        <div className="pb-48 ">
-          <motion.blockquote ref={ref} className="">
-            <motion.div
-              style={{ x, y, borderTopRightRadius, opacity, scale }}
-              className="float-right"
-            >
-              <motion.div className="flex">
-                <motion.img
-                  className="rounded-full w-[200px] h-[200px] md:w-[250px] md:h-[250px]   "
-                  src={Database.PersonalInfo.Avatar[0]}
-                ></motion.img>
-              </motion.div>
-            </motion.div>
-            <motion.div
-              style={{ x: target, opacity }}
-              className="block leading-loose "
-            >
-              {data.description[lang].map((item, index) => (
-                <motion.div className="block mb-[30px]" key={index + item}>
-                  <p>{parseText(item)}</p>
-                </motion.div>
-              ))}
-            </motion.div>
-          </motion.blockquote>
-        </div>
-      </div>
-    </section>
+  const x = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 1],
+    ["20vw", "0vw", "0vw", "20vw"],
+  );
+  const y = useTransform(
+    scrollYProgress,
+    [0, 0.4, 1, 1],
+    ["0vh", "0vh", "-60vw", "-120vh"],
+  );
+  const width = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 1],
+    ["50vw", "100vw", "100vw", "50vw"],
+  );
+  const target = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 1],
+    ["-50vw", "0vw", "0vw", "-50vw"],
+  );
+  const borderBottomRightRadius = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 1],
+    [200, 0, 0, 200],
+  );
+  const borderTopRightRadius = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 1],
+    [200, 0, 0, 200],
+  );
+  const opacity = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.8, 1],
+    [0, 1, 0.5, 0],
+  );
+  const scale = useTransform(
+    scrollYProgress,
+    [0, 0.4, 0.6, 1],
+    [0.5, 1, 1, 0.5],
   );
 
-  return <motion.div className={``}>{SelfDescribing}</motion.div>;
+  return (
+    <AnimatePresence>
+      <motion.div ref={ref1} className="md:h-[500vh]  relative">
+        <motion.div
+          style={{
+            backgroundImage: `url(${data.pic})`,
+            backgroundSize: "cover",
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center center",
+            width: isMobile ? "100vw" : width,
+            borderTopRightRadius: isMobile ? 0 : borderTopRightRadius,
+            borderBottomRightRadius: isMobile ? 0 : borderBottomRightRadius,
+          }}
+          className="sticky top-0 z-30 flex flex-col items-center justify-center w-full"
+        >
+          <motion.span
+            style={{
+              borderTopRightRadius: isMobile ? 1 : borderTopRightRadius,
+              borderBottomRightRadius: isMobile ? 1 : borderBottomRightRadius,
+              opacity: isMobile ? 1 : opacity,
+            }}
+            className="absolute w-full h-full bg-black/75"
+          ></motion.span>
+
+          <div className="visblecontainer py-[20vh] z-30">
+            <motion.div
+              style={{
+                opacity: isMobile ? 1 : opacity,
+                scale: isMobile ? 1 : scale,
+                y: isMobile ? 0 : y,
+              }}
+              className="z-10 flex items-center mb-12 font-mono font-bold text-white text-8xl"
+            >
+              <i
+                id="AboutMe"
+                className="flex fi fi-rr-comment-heart mr-[20px]"
+              ></i>
+              <p className="flex">{lang === 0 || "0" ? "About me" : "自述"}</p>
+            </motion.div>
+            <motion.blockquote className="">
+              <motion.div
+                style={{
+                  x: isMobile ? 0 : x,
+                  opacity: isMobile ? 1 : opacity,
+                  scale: isMobile ? 1 : scale,
+                  y: isMobile ? 0 : y,
+                }}
+                className="float-right"
+              >
+                <motion.div className="flex">
+                  <motion.img
+                    className="rounded-full w-[200px] h-[200px] md:w-[250px] md:h-[250px]"
+                    src={Database.PersonalInfo.Avatar[0]}
+                  ></motion.img>
+                </motion.div>
+              </motion.div>
+              <motion.div
+                style={{
+                  x: isMobile ? 0 : target,
+                  opacity: isMobile ? 1 : opacity,
+                  y: isMobile ? 0 : y,
+                }}
+                className="block "
+              >
+                {data.description[lang].map((item, index) => (
+                  <motion.div className="block mb-[30px]" key={index + item}>
+                    <p
+                      style={{
+                        lineHeight: 1.2353641176,
+                        fontWeight: 500,
+                        letterSpacing: "-0.022em",
+                        fontFamily:
+                          "SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif",
+                      }}
+                    >
+                      {parseText(item)}
+                    </p>
+                  </motion.div>
+                ))}
+              </motion.div>
+            </motion.blockquote>
+          </div>
+        </motion.div>
+      </motion.div>
+    </AnimatePresence>
+  );
 }
 
 export default SelfDescribing;
