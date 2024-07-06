@@ -95,7 +95,7 @@ function Home() {
   const ref = useRef(null);
 
   return (
-    <div className="relative transition-all bg-gray-200">
+    <div className="relative overflow-x-hidden transition-all bg-gray-200">
       <Navbar topTextColor={true} />
 
       <Carousel interval={5000}>
