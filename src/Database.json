@@ -286,7 +286,10 @@
         ],
         "web": "https://www.unsw.edu.au/",
         "majorweb": "https://en.wikipedia.org/wiki/Artificial_intelligence",
-        "time": ["Sep 13, 2022 - Sep 6, 2024", "2022.09.13 - 2021.09.06"],
+        "time": [
+          "Sep 13, 2022   -   Sep 6, 2024",
+          "2022.09.13   -   2021.09.06"
+        ],
         "description": [
           "This degree encompasses a broad spectrum of the AI field, covers advanced topics such as Machine Learning & Data Mining, Neural Networks, Deep Learning, Recommender Systems, and Natural Language Processing. This comprehensive curriculum provides candidates with a rich and thorough understanding of AI, strengthening his professional depth.",
           "该经历涵盖了人工智能领域的内容，包括机器学习与数据挖掘、神经网络、深度学习、推荐系统以及自然语言处理等先进主题。这个全面的课程设置为学生提供了对人工智能的深入而全面的理解，增强了他们在专业领域的深度。"
@@ -484,7 +487,10 @@
         ],
         "web": "https://www.unsw.edu.au/",
         "majorweb": "https://en.wikipedia.org/wiki/data_science",
-        "time": ["Sep 13, 2022 - Sep 6, 2024", "2022.09.13 - 2021.09.06"],
+        "time": [
+          "Sep 13, 2022   -   Sep 6, 2024",
+          "2022.09.13   -   2021.09.06"
+        ],
         "description": [
           "This stream covers a wide range of data-related fields, covers Machine Learning & Data Mining, Database Systems Implementation, Recommender Systems, and Design & Analysis of Algorithms. This comprehensive curriculum provides candidates with a rich and thorough understanding of data, strengthening his professional depth.",
           "该经历涵盖了广泛的与数据相关的内容，包括机器学习与数据挖掘、数据库系统实现、推荐系统以及算法的设计与分析。这个全面的课程体系为学生提供了对数据的丰富和深入的理解，增强了他们的专业深度。"
@@ -681,7 +687,10 @@
         ],
         "web": "https://english.swust.edu.cn/",
         "majorweb": "https://en.wikipedia.org/wiki/Functional_materials",
-        "time": ["Sep 4, 2017 - Sep 6, 2021", "2017.09.04 - 2021.09.04"],
+        "time": [
+          "Sep 4, 2017   -   Sep 6, 2021",
+          "2017.09.04   -   2021.09.04"
+        ],
         "description": [
           [
             "This degree encompasses a broad spectrum of chemistry, including inorganic chemistry, organic chemistry, and physical chemistry, along with the fundamentals of material science. Additionally, it covers mechanical design, electronic technology, and engineering mechanics, providing candidates with a comprehensive and rich engineering background."
@@ -1002,7 +1011,10 @@
         ],
         "web": "http://www.english.swust.edu.cn",
         "majorweb": "https://en.wikipedia.org/wiki/Business_administration",
-        "time": ["Sep 4, 2019 - Sep 6, 2021", "2019.09.04 - 2021.09.06"],
+        "time": [
+          "Sep 4, 2019   -   Sep 6, 2021",
+          "2019.09.04   -   2021.09.06"
+        ],
         "description": [
           "This degree encompasses fields such as economics, management, and accounting, including core courses in marketing, project management, human resource management, and financial management. Through the pursuit of this degree, candidates acquire a keen business mindset and systematic enterprise management capabilities.",
           "该经历涵盖了经济学、管理学和会计学等领域，包括营销、项目管理、人力资源管理和财务管理等核心课程。通过攻读这个学位，学生将获得敏锐的商业思维和系统的企业管理能力。"
@@ -2859,7 +2871,7 @@
           "logo": "/Graphs/study/swust.png",
           "tag": [null, "Part-time"],
           "web": "http://www.english.swust.edu.cn/main.htm",
-          "time": "Mar 1, 2021 - Feb 1, 2022",
+          "time": "Mar 1, 2021   -   Feb 1, 2022",
           "company": "Southwest University of Science and Technology Analytical Testing Centre",
           "description": [
             "Responsible for auditing the invoices of the business office up to RMB1,000,000, drawing up contracts up to RMB100,000, compliance review and signing. The business is responsible for the assessment and audit of the business system and occasional audits of the accounts flow according to the monthly and annual reports of the business. During the course of the work, it was found that the business progress audit was a single simple and time-consuming task, and with the help of office automation software, the business audit workload of this position for a year was completed in half a day, receiving high praise and commendation from the Business Office Director."
@@ -2874,7 +2886,7 @@
           "logo": "/Graphs/study/swust.png",
           "tag": [null, "Part-time"],
           "web": "http://www.english.swust.edu.cn/main.htm",
-          "time": "Aug 1, 2018 - Feb 1, 2019",
+          "time": "Aug 1, 2018   -   Feb 1, 2019",
           "company": "Domi Group Buying",
           "description": ["Responsible for the backend "]
         },
@@ -2887,7 +2899,7 @@
           "logo": "/Graphs/study/unsw.png",
           "tag": ["Full-time", null],
           "web": "http://www.english.swust.edu.cn/main.htm",
-          "time": "Aug 1, 2018 - Feb 1, 2019",
+          "time": "Aug 1, 2018   -   Feb 1, 2019",
           "company": "Domi Group Buying",
           "description": ["Responsible "]
         }
@@ -2902,7 +2914,7 @@
           "logo": "/Graphs/study/swust.png",
           "tag": [null, "兼职"],
           "web": "http://www.english.swust.edu.cn/main.htm",
-          "time": "2021年3月1日 - 2022年2月1日",
+          "time": "2021年3月1日   -   2022年2月1日",
           "company": "西南科技大学分析测试中心",
           "description": [
             "负责审计业务办公室发票高达人民币1,000,000，起草合同高达人民币100,000，合规审查和签署。该业务负责根据业务的月度和年度报告对业务系统进行评估和审计，并偶尔对账户流动进行审计。在工作过程中，发现业务进展审计是一项单一、简单且耗时的任务，借助办公自动化软件，该职位一年的业务审计工作在半天内完成，得到了业务办公室主任的高度赞扬和表扬。"
@@ -2917,7 +2929,7 @@
           "logo": "/Graphs/study/swust.png",
           "tag": [null, "兼职"],
           "web": "http://www.english.swust.edu.cn/main.htm",
-          "time": "2018年8月1日 - 2019年2月1日",
+          "time": "2018年8月1日   -   2019年2月1日",
           "company": "多米团购",
           "description": ["负责后台"]
         },
@@ -2930,7 +2942,7 @@
           "logo": "/Graphs/study/unsw.png",
           "tag": ["全职", null],
           "web": "http://www.english.swust.edu.cn/main.htm",
-          "time": "2018年8月1日 - 2019年2月1日",
+          "time": "2018年8月1日   -   2019年2月1日",
           "company": "多米团购",
           "description": ["负责"]
         }
@@ -3961,7 +3973,7 @@
       "WelcomeItem": {
         "hidden": {
           "opacity": 0,
-          "y": "30px",
+          "y": 60,
           "transition": {
             "opacity": {
               "ease": [0.455, 0.03, 0.515, 0.955],
@@ -3979,7 +3991,7 @@
         },
         "visible": {
           "opacity": 1,
-          "y": "0px",
+          "y": 0,
           "transition": {
             "opacity": {
               "ease": [0.455, 0.03, 0.515, 0.955],

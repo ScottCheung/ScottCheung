@@ -146,7 +146,7 @@ function Contact({ isTopOut }) {
                                   }}
                                 >
                                   <button
-                                    className="z-50 card-modal-trigger modal-trigger card-cta-modal-button "
+                                    className=" card-modal-trigger modal-trigger card-cta-modal-button"
                                     type="button"
                                   >
                                     <div className="modal-trigger-visblecontainer">
@@ -301,7 +301,7 @@ function Contact({ isTopOut }) {
     </>
   );
 
-  return <div className="flex flex-col Z-50">{Contact}</div>;
+  return <div className="flex flex-col ">{Contact}</div>;
 }
 
 export default Contact;

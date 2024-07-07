@@ -93,10 +93,11 @@ function WhyMe({ hideTittle }) {
 
   // 根据滚动进度计算位移
   const width = useTransform(scrollYProgress, [0, 1], ["-100vw", "100vw"]);
-  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const WhyMe = (
-    <motion.div ref={ref1} className="lg:-mt-[130vh] ">
+    <motion.div ref={ref1} className="lg:-mt-[120vh] ">
       <motion.div
         style={{
           backgroundImage: `url(${data.pic})`,
@@ -104,9 +105,8 @@ function WhyMe({ hideTittle }) {
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",
           width: isMobile ? "100vw" : width,
-          scale: isMobile ? 1 : scale,
         }}
-        className="w-full h-full sticky top-0 mb-[10vh]   "
+        className="w-full h-full sticky top-0 mb-[10vh] z-40  "
       >
         <div className="w-full h-full ">
           {/* 引导按钮 */}
@@ -145,173 +145,165 @@ function WhyMe({ hideTittle }) {
           </div>
           {/* Item 容器 */}
           <AnimatePresence>
-            <section className="section section-incentive background-alt staggered-end">
-              <div className="gallery gallery-align-start gallery-icon-cards">
-                <div className="scroll-visblecontainer">
-                  <div className="item-visblecontainer">
-                    <motion.ul
-                      className="card-set p-[20px] overflow-hidden scroll-smooth "
-                      role="list"
-                    >
-                      {keyfeature.map((feature, index) => (
-                        <motion.div
-                          onClick={() => {
-                            if (windowWidth > 1024) {
-                              openCard(feature);
-                            }
-                          }}
-                          key={index}
-                          variants={WelcomeItem}
-                          transition={StagerFadeInUp}
-                          whileHover={{ scale: 1.001 }}
-                          whileTap={{ scale: 0.99 }}
-                          className="gallery-item grid-item current "
-                        >
-                          <div className="icon-card card-visblecontainer ">
-                            <div className="card ">
-                              <motion.div
-                                layout
-                                layoutId={feature.advantage}
-                                transition={{
-                                  duration: 0.9,
-                                  ease: [0.22, 1, 0.36, 1],
-                                }}
-                                className={`${
-                                  hideTittle
-                                    ? `${
-                                        windowWidth > 768
-                                          ? "bg-gray-100 "
-                                          : "bg-gray-900/80"
-                                      }  `
-                                    : "bg-white/40  -z-30"
-                                }  card-modifier fixed-width bg-button card-padding has-trigger-button`}
-                              >
-                                <motion.div className="card-viewport-content">
-                                  <div className="icon-card-content">
-                                    <div className="">
-                                      <motion.div>
-                                        <motion.div
-                                          layoutId={feature.advantage + "icon"}
-                                          transition={{
-                                            duration: 0.9,
-                                            ease: [0.22, 1, 0.36, 1],
-                                          }}
-                                          className="flex items-center justify-start"
-                                        >
-                                          <i
-                                            style={{
-                                              animationDelay: `${index * 0.2}s`,
-                                            }}
-                                            className={`${
-                                              feature.icon
-                                            } fi animate__animated animate__delay-3s  animate__zoomIn  text-6xl ${
-                                              feature.color1 +
-                                              " " +
-                                              feature.color2
-                                            } flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
-                                          ></i>
-                                        </motion.div>
-                                        <div className="flex justify-start py-6 sm:py-3">
-                                          <motion.div
-                                            layoutId={
-                                              feature.advantage + "title"
-                                            }
-                                            transition={{
-                                              duration: 0.9,
-                                              ease: [0.22, 1, 0.36, 1],
-                                            }}
-                                            style={{
-                                              animationDelay: `${index * 0.2}s`,
-                                            }}
-                                            className={`animate__animated  animate__delay-3s animate__zoomIn animate__slow typography-card-headline ${
-                                              feature.color1 +
-                                              " " +
-                                              feature.color2
-                                            } flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
-                                          >
-                                            {feature.advantage}
-                                          </motion.div>
-                                        </div>
-                                      </motion.div>
-                                    </div>
-                                    <div
-                                      className={`${
-                                        hideTittle ? "hidden" : ""
-                                      } copy-visblecontainer md:h-[450px] h-[400px] overflow-hidden`}
-                                    >
-                                      <div
-                                        style={{
-                                          ...hideRow(3),
-                                          animationDelay: `${index * 0.3}s`,
-                                        }}
-                                        className={`text-full  my-7 animate__animated  animate__fadeInUp text-gray-600  card-description `}
-                                      >
-                                        {feature.description}
-                                      </div>
-                                      <More
-                                        color={`  ${
-                                          feature.color1 + " " + feature.color2
-                                        } bg-gradient-to-br text-transparent bg-clip-text `}
-                                      />
-                                    </div>
-                                  </div>
-                                </motion.div>
-                                <motion.span
-                                  layoutId={feature.pic[0]}
-                                  className="absolute top-0 left-0 right-0  bottom-0 -z-20 overflow-hidden rounded-[28px] first-letter:"
-                                  style={{
-                                    ...(!hideTittle
-                                      ? bgPic(
-                                          feature.pic[0],
-                                          "100% auto",
-                                          "center bottom",
-                                        )
-                                      : {}),
+            <motion.ul
+              style={{
+                paddingLeft:
+                  "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)",
+                scale: isMobile ? 1 : scale,
+                opacity: isMobile ? 1 : opacity,
+              }}
+              className="flex w-full space-x-[20px] md:space-x-[28px] pt-[100px] overflow-x-auto  scroll-smooth scrollbar-hide   flex-shrink-0 "
+            >
+              {keyfeature.map((feature, index) => (
+                <motion.div
+                  onClick={() => {
+                    if (windowWidth > 1024) {
+                      openCard(feature);
+                    }
+                  }}
+                  style={{
+                    opacity: isMobile ? 1 : opacity,
+                  }}
+                  key={index}
+                  variants={WelcomeItem}
+                  transition={StagerFadeInUp}
+                  whileHover={{ scale: 1.001 }}
+                  whileTap={{ scale: 0.99 }}
+                  className="gallery-item grid-item current "
+                >
+                  <div className="icon-card card-visblecontainer ">
+                    <div className="card ">
+                      <motion.div
+                        layout
+                        layoutId={feature.advantage}
+                        transition={{
+                          duration: 0.9,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
+                        className={`${
+                          hideTittle
+                            ? `${
+                                windowWidth > 768
+                                  ? "bg-gray-100 "
+                                  : "bg-gray-900/80"
+                              }  `
+                            : "bg-white/40  -z-30"
+                        }  card-modifier fixed-width bg-button card-padding has-trigger-button`}
+                      >
+                        <motion.div className="card-viewport-content">
+                          <div className="icon-card-content">
+                            <div className="">
+                              <motion.div>
+                                <motion.div
+                                  layoutId={feature.advantage + "icon"}
+                                  transition={{
+                                    duration: 0.9,
+                                    ease: [0.22, 1, 0.36, 1],
                                   }}
-                                ></motion.span>
+                                  className="flex items-center justify-start"
+                                >
+                                  <i
+                                    style={{
+                                      animationDelay: `${index * 0.2}s`,
+                                    }}
+                                    className={`${
+                                      feature.icon
+                                    } fi animate__animated animate__delay-3s  animate__zoomIn  text-6xl ${
+                                      feature.color1 + " " + feature.color2
+                                    } flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
+                                  ></i>
+                                </motion.div>
+                                <div className="flex justify-start py-6 sm:py-3">
+                                  <motion.div
+                                    layoutId={feature.advantage + "title"}
+                                    transition={{
+                                      duration: 0.9,
+                                      ease: [0.22, 1, 0.36, 1],
+                                    }}
+                                    style={{
+                                      animationDelay: `${index * 0.2}s`,
+                                    }}
+                                    className={`animate__animated  animate__delay-3s animate__zoomIn animate__slow typography-card-headline ${
+                                      feature.color1 + " " + feature.color2
+                                    } flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
+                                  >
+                                    {feature.advantage}
+                                  </motion.div>
+                                </div>
                               </motion.div>
                             </div>
-                            {(windowWidth < 1024 || hideTittle) && (
-                              <a
-                                href={feature.href}
-                                className="z-50 anz-card-modal-link "
+                            <div
+                              className={`${
+                                hideTittle ? "hidden" : ""
+                              } copy-visblecontainer md:h-[450px] h-[400px] overflow-hidden`}
+                            >
+                              <div
+                                style={{
+                                  ...hideRow(3),
+                                  animationDelay: `${index * 0.3}s`,
+                                }}
+                                className={`text-full  my-7 animate__animated  animate__fadeInUp text-gray-600  card-description `}
                               >
-                                <button
-                                  className="card-modal-trigger modal-trigger card-cta-modal-button"
-                                  type="link"
-                                >
-                                  <div className="modal-trigger-visblecontainer">
-                                    <span
-                                      className={`${
-                                        hideTittle
-                                          ? `${
-                                              feature.color1 +
-                                              " " +
-                                              feature.color2
-                                            } bg-gradient-to-br card-cta-modal-button-icon opacity-80`
-                                          : "card-cta-modal-button-icon"
-                                      }  `}
-                                    >
-                                      <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="8 8 20 20"
-                                        className="card-cta-modal-button-small-icon card-modal-button-small-icon"
-                                      >
-                                        <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
-                                      </svg>
-                                    </span>
-                                  </div>
-                                </button>
-                              </a>
-                            )}
+                                {feature.description}
+                              </div>
+                              <More
+                                color={`  ${
+                                  feature.color1 + " " + feature.color2
+                                } bg-gradient-to-br text-transparent bg-clip-text `}
+                              />
+                            </div>
                           </div>
                         </motion.div>
-                      ))}
-                    </motion.ul>
+                        <motion.span
+                          layoutId={feature.pic[0]}
+                          className="absolute top-0 left-0 right-0  bottom-0 -z-20 overflow-hidden rounded-[28px] first-letter:"
+                          style={{
+                            ...(!hideTittle
+                              ? bgPic(
+                                  feature.pic[0],
+                                  "100% auto",
+                                  "center bottom",
+                                )
+                              : {}),
+                          }}
+                        ></motion.span>
+                      </motion.div>
+                    </div>
+                    {(windowWidth < 1024 || hideTittle) && (
+                      <a
+                        href={feature.href}
+                        className="z-50 anz-card-modal-link "
+                      >
+                        <button
+                          className="card-modal-trigger modal-trigger card-cta-modal-button"
+                          type="link"
+                        >
+                          <div className="modal-trigger-visblecontainer">
+                            <span
+                              className={`${
+                                hideTittle
+                                  ? `${
+                                      feature.color1 + " " + feature.color2
+                                    } bg-gradient-to-br card-cta-modal-button-icon opacity-80`
+                                  : "card-cta-modal-button-icon"
+                              }  `}
+                            >
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="8 8 20 20"
+                                className="card-cta-modal-button-small-icon card-modal-button-small-icon"
+                              >
+                                <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+                              </svg>
+                            </span>
+                          </div>
+                        </button>
+                      </a>
+                    )}
                   </div>
-                </div>
-              </div>
-            </section>
+                </motion.div>
+              ))}
+            </motion.ul>
           </AnimatePresence>
         </div>
         {Components.whymeCard === "visible" && <WhyMeCard />}
