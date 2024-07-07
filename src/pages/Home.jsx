@@ -126,14 +126,15 @@ function Home() {
           <Education />
         </div>
       </div>
+      <div>
+        <KeyFeature />
+        <Capability />
+        <WorkExperience />
+        <AboutMe />
 
-      <KeyFeature />
-      <Capability />
-      <WorkExperience />
-      <AboutMe />
-
-      <WhyMe />
-      <Contact />
+        <WhyMe />
+        <Contact />
+      </div>
     </div>
   );
 }

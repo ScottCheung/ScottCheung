@@ -48,7 +48,7 @@ function SelfDescribing() {
   const ref1 = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref1,
-    offset: ["0vh", "80vh", "380vh", "450vh"], // 调整偏移量使滚动效果更平缓
+    offset: ["0vh", "80vh", "280vh", "350vh"], // 调整偏移量使滚动效果更平缓
   });
 
   // 根据滚动进度计算位移
@@ -95,7 +95,7 @@ function SelfDescribing() {
 
   return (
     <AnimatePresence>
-      <motion.div ref={ref1} className="flex lg:h-[500vh]  relative">
+      <motion.div ref={ref1} className=" lg:h-[500vh]  relative ">
         <motion.div
           style={{
             backgroundImage: `url(${data.pic})`,
@@ -105,6 +105,7 @@ function SelfDescribing() {
             width: isMobile ? "100vw" : width,
             borderTopRightRadius: isMobile ? 0 : borderTopRightRadius,
             borderBottomRightRadius: isMobile ? 0 : borderBottomRightRadius,
+            y: isMobile ? 0 : y,
           }}
           className="sticky top-0 z-30 flex flex-col items-center justify-center w-full"
         >
