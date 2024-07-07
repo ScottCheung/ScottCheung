@@ -126,7 +126,7 @@ function Home() {
           <Education />
         </div>
       </div>
-      <div>
+      <div className="">
         <KeyFeature />
         <Capability />
         <WorkExperience />

@@ -143,7 +143,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const navbar = (
     <AnimatePresence>
       <motion.div
-        className={`w-full z-50  duration-700 fixed  ${
+        className={`w-full z-50  duration-700 fixed overflow-hidden ${
           isScrolling || Components.NavBar === "hide" ? "  -top-[100px]" : "  "
         }  `}
       >
@@ -151,7 +151,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           onMouseEnter={() => setBgwhite(true)}
           onMouseLeave={() => setBgwhite(false)}
           layout
-          className={` fixed w-full flex flex-col`}
+          className={`  w-full flex flex-col overflow-hidden`}
         >
           <motion.div
             onMouseLeave={() => setSelectedTab(null)}
@@ -159,7 +159,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             layout
-            className={`flex flex-col w-full  ${BG} py-[10px] 
+            className={`flex flex-col w-full  ${BG} py-[10px] overflow-hidden
         ${
           windowWidth < 768
             ? ` p-[15px] ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? "bg-black/50" : "bg-white/50"} ` : " "}`
