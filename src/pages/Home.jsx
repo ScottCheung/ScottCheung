@@ -95,7 +95,14 @@ function Home() {
   const ref = useRef(null);
 
   return (
-    <div className="relative flex flex-col transition-all bg-gray-200 ">
+    <div
+      className={
+        `relative flex flex-col transition-all bg-gray-200  ` + windowWidth <
+        768
+          ? "overflow-hidden"
+          : ""
+      }
+    >
       <Navbar topTextColor={true} />
 
       <Carousel interval={5000}>
