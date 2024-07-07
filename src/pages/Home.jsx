@@ -96,7 +96,7 @@ function Home() {
 
   return (
     <div
-      className={`relative flex flex-col w-full transition-all bg-gray-200 overflow-hidden lg:overflow-auto `}
+      className={`relative flex flex-col w-full transition-all bg-gray-200 overflow-hidden md:overflow-auto lg:overflow-auto `}
     >
       <Navbar topTextColor={true} />
 
