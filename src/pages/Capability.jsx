@@ -91,7 +91,7 @@ function Capability() {
   }, []);
 
   const Capability = (
-    <motion.div id="Capability" className="z-20 grid py-48 section-sapphire ">
+    <motion.div id="Capability" className="grid py-48 section-sapphire ">
       {/* stack */}
       <Skill />
       {/* <Keyfeature2 />
@@ -112,7 +112,7 @@ function Capability() {
         transition={{ duration: 1 }}
         id={`infj`}
         role="tooltip"
-        className="m-[20px] absolute z-50 invisible rounded-[28px] flex w-[300px] md:w-[400px] lg:w-[800px]  transition-opacity duration-300 backdrop-blur-lg bg-white shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
+        className="m-[20px] absolute z-30 invisible rounded-[28px] flex w-[300px] md:w-[400px] lg:w-[800px]  transition-opacity duration-300 backdrop-blur-lg bg-white shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
       >
         <motion.div className="p-[40px]">
           <p className="text-[17px] md:text-[18px] lg:text-[20px] text-gray-900  py-4 text-center font-black ">
@@ -134,7 +134,7 @@ function Capability() {
   );
 
   return (
-    <motion.div className="z-50 md:-mt-[250px] w-full ">
+    <motion.div className="z-30 md:-mt-[250px] w-full ">
       {Capability}
     </motion.div>
   );
