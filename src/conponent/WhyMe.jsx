@@ -75,7 +75,7 @@ function WhyMe({ hideTittle }) {
   };
 
   const WhyMe = (
-    <div className="w-full h-full  mb-[10vh] relative flex">
+    <div className="w-full h-full  mb-[10vh] relative flex ">
       <div className="w-full h-full ">
         {/* 引导按钮 */}
         <motion.div

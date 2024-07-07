@@ -16,7 +16,7 @@ function SelfDescribing() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const mediaQuery = window.matchMedia("(max-width: 1080px)");
     const handleMediaQueryChange = (e) => setIsMobile(e.matches);
     handleMediaQueryChange(mediaQuery);
     mediaQuery.addEventListener("change", handleMediaQueryChange);
@@ -95,7 +95,7 @@ function SelfDescribing() {
 
   return (
     <AnimatePresence>
-      <motion.div ref={ref1} className="md:h-[500vh]  relative">
+      <motion.div ref={ref1} className="flex lg:h-[500vh]  relative">
         <motion.div
           style={{
             backgroundImage: `url(${data.pic})`,

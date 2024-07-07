@@ -143,7 +143,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const navbar = (
     <AnimatePresence>
       <motion.div
-        className={`z-50  duration-700 fixed  ${
+        className={`w-full z-50  duration-700 fixed  ${
           isScrolling || Components.NavBar === "hide" ? "  -top-[100px]" : "  "
         }  `}
       >

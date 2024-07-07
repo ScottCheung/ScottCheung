@@ -301,7 +301,7 @@ function Contact({ isTopOut }) {
     </>
   );
 
-  return <div className=" Z-50">{Contact}</div>;
+  return <div className="flex flex-col Z-50">{Contact}</div>;
 }
 
 export default Contact;

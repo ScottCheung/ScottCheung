@@ -96,7 +96,7 @@ function Home() {
 
   return (
     <div
-      className={`relative flex flex-col w-full transition-all bg-gray-200 overflow-hidden md:overflow-auto lg:overflow-auto `}
+      className={`relative flex flex-col w-full transition-all bg-gray-200  `}
     >
       <Navbar topTextColor={true} />
 
@@ -115,7 +115,7 @@ function Home() {
         ))}
       </Carousel>
       <div
-        className="bg-center bg-no-repeat bg-cover "
+        className="flex flex-col bg-center bg-no-repeat bg-cover Z-50 "
         style={
           {
             // backgroundImage: `url(${HomeCarousel[0].src})`,
@@ -131,6 +131,7 @@ function Home() {
       <Capability />
       <WorkExperience />
       <AboutMe />
+
       <WhyMe />
       <Contact />
     </div>

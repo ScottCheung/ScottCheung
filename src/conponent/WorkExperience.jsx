@@ -399,7 +399,7 @@ function WorkExperience() {
             onClick={handleClose}
             className="fixed  inset-0 top-0 bottom-0  w-full h-full z-50  bg-gray-900/75 backdrop-blur-[20px]"
           >
-            <div className="relative flex items-center justify-center w-full h-full ">
+            <div className="relative flex items-center justify-center w-full h-full overflow-hidden ">
               <CtButton
                 type={"x"}
                 key={"close"}
@@ -421,7 +421,7 @@ function WorkExperience() {
                       selectedCard.type + selectedCard.company + selectedCard.id
                     }`}
                     transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative p-[20px] md:gap-x-[40px] flex-wrap lg:flex w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-y-auto "
+                    className="relative z-0 flex lg:rounded-[28px] flex-wrap  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-y-auto "
                   >
                     <motion.div
                       layoutId={`card-img-${selectedCard.id}`}
@@ -429,7 +429,7 @@ function WorkExperience() {
                         duration: 1.2,
                         ease: [0.22, 1, 0.36, 1],
                       }}
-                      className="w-full max-w-[800px] flex md:p-0 aspect-[4/3] z-50"
+                      className="w-full lg:max-w-[800px]  flex md:p-0 aspect-[4/3] z-50"
                     >
                       <motion.img
                         layout
@@ -442,7 +442,7 @@ function WorkExperience() {
                     <motion.div
                       // layout
 
-                      className="flex flex-col w-full max-w-[800px] pt-[30px] lg:pt-0 z-40"
+                      className="flex flex-col w-full max-w-[800px] m-[30px] lg:pt-0 z-40 "
                     >
                       <div className="flex flex-col gap-y-8 ">
                         <div className="flex flex-wrap items-center gap-8">
