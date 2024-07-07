@@ -98,7 +98,7 @@ function Home() {
     <div
       className={
         `relative flex flex-col transition-all bg-gray-200  ` + windowWidth <
-        768
+        1080
           ? "overflow-hidden"
           : ""
       }
