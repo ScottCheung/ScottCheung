@@ -104,7 +104,7 @@ function Education({ hideTittle, simpleVer }) {
               transition={StagerFadeInUp}
               whileHover={{ scale: 1.001 }}
               whileTap={{ scale: 0.99 }}
-              className="col-span-12 md:col-span-6"
+              className="col-span-6"
             >
               <div
                 className={`transition-all p-[28px] rounded-[28px]  relative flex-shrink-0 w-auto h-auto lg:w-[500px] md:h-auto ${
@@ -138,7 +138,7 @@ function Education({ hideTittle, simpleVer }) {
                       className={
                         windowWidth > 1024
                           ? "typography-card-headline flex gap-x-[10px]"
-                          : "text-[25px] font-black flex gap-x-[5px]"
+                          : "text-[15px] font-black flex gap-x-[5px]"
                       }
                     >
                       <p>
@@ -173,7 +173,7 @@ function Education({ hideTittle, simpleVer }) {
                     className={`${
                       windowWidth > 1024
                         ? "card-description font-black"
-                        : " text-[15px] inline-flex font-black"
+                        : " text-[10px] inline-flex font-black"
                     } flex justify-center items-center w-full py-1  text-center text-white rounded-full px-[20px] text-justify-between animate__animated animate__zoomIn category bg-sky-900 ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700`}
                   >
                     {Experience.time[lang]}
