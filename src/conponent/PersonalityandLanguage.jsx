@@ -188,7 +188,7 @@ function PersonalityandLanguage() {
           <div
             className=" h-full w-full pb-[40vh] md:pb-[40vh] "
             style={{
-              backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj[0]})`,
+              backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj})`,
               backgroundSize: "100% auto",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center bottom",

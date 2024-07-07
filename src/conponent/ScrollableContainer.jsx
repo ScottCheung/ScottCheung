@@ -1,70 +1,90 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import Database from "../Database.json";
+const visblecontainer = Database.Animation.Variant.Welcomevisblecontainer;
+const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
+const item = Database.Animation.Variant.WelcomeItem;
+const Welcomevisblecontainer =
+  Database.Animation.Variant.Welcomevisblecontainer;
+const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 
-const ScrollableContainer = ({ children, Button_mt, container }) => {
+const ScrollableContainer = ({ children, gridMode }) => {
   const containerRef = useRef(null);
   const [isAtStart, setIsAtStart] = useState(true);
   const [isAtEnd, setIsAtEnd] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    handleScroll();
+  }, []);
 
   const handleScroll = () => {
     const container = containerRef.current;
+    if (!container) return;
+
     const atStart = container.scrollLeft === 0;
     const atEnd =
-      container.scrollLeft + container.offsetWidth + 1 >= container.scrollWidth;
+      container.scrollLeft + container.offsetWidth >= container.scrollWidth;
 
     setIsAtStart(atStart);
     setIsAtEnd(atEnd);
   };
+
   const handleScrollLeft = () => {
     const container = containerRef.current;
+    if (!container) return;
+
     const childWidth = container.firstChild?.offsetWidth || 0;
-    container.scrollBy({ left: 1 * -childWidth, behavior: "smooth" });
+    container.scrollBy({ left: -childWidth, behavior: "smooth" });
   };
 
   const handleScrollRight = () => {
     const container = containerRef.current;
+    if (!container) return;
+
     const childWidth = container.firstChild?.offsetWidth || 0;
-    container.scrollBy({ left: 1 * childWidth, behavior: "smooth" });
+    container.scrollBy({ left: childWidth, behavior: "smooth" });
   };
 
   const buttonStyle =
-    "bg-black/20 backdrop-blur-[5px] w-[45px] h-[45px] animate__animated animate__zoomIn  flex rounded-full justify-center items-center transition-all transform duration-1000";
-
-  const containerStyle = {
-    paddingLeft: containerRef.current?.firstChild?.offsetWidth || 0,
-    paddingRight: containerRef.current?.firstChild?.offsetWidth || 0,
-  };
-
+    "group bg-black/70 group-hover:bg-black/30 backdrop-blur-[5px] w-[50px] h-[50px] animate__animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-300";
+  const svg = "group-hover:fill-white  fill-gray-300 w-[25px] h-[25px]";
   return (
     <div className="flex flex-col items-center justify-center">
       <div
-        className={`${container} w-full flex overflow-x-scroll scrollbar-hide gap-x-[20px] justify-start  py-[200px]`}
-        style={containerStyle}
-        onScroll={handleScroll}
-        ref={containerRef}
+        style={{
+          paddingInline:
+            windowWidth > 1024
+              ? "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)"
+              : "0",
+        }}
+        className={` ${
+          windowWidth > 1024
+            ? "flex w-full justify-end pt-[28px] px-[10px]"
+            : "hidden"
+        } `}
       >
-        {React.Children.map(children, (child) =>
-          React.cloneElement(child, {
-            containerRef: containerRef,
-            isAtStart: isAtStart,
-            isAtEnd: isAtEnd,
-            handleScrollLeft: handleScrollLeft,
-            handleScrollRight: handleScrollRight,
-          }),
-        )}
-      </div>
-      <div className={`flex ${Button_mt} `}>
-        <div className="flex  justify-center  gap-x-[30px]">
+        <div className=" flex items-center justify-center gap-x-[20px]">
           <button
             onClick={handleScrollLeft}
             disabled={isAtStart}
             className={buttonStyle}
             style={{
-              opacity: isAtStart ? 0.5 : 1,
-              cursor: isAtStart ? "not-allowed" : "pointer",
+              opacity: isAtStart ? 0.2 : 1,
+              cursor: isAtStart ? "" : "pointer",
             }}
           >
             <svg
-              className="hover:fill-white rotate-180 fill-gray-200 w-[20px] h-[20px]"
+              className={svg + " rotate-180"}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="8 8 20 20"
             >
@@ -76,12 +96,12 @@ const ScrollableContainer = ({ children, Button_mt, container }) => {
             disabled={isAtEnd}
             className={buttonStyle}
             style={{
-              opacity: isAtEnd ? 0.5 : 1,
-              cursor: isAtEnd ? "not-allowed" : "pointer",
+              opacity: isAtEnd ? 0.2 : 1,
+              cursor: isAtEnd ? "" : "pointer",
             }}
           >
             <svg
-              className="hover:fill-white rotate-0 fill-gray-200 w-[20px] h-[20px]"
+              className={svg}
               xmlns="http://www.w3.org/2000/svg"
               viewBox="8 8 20 20"
             >
@@ -90,6 +110,28 @@ const ScrollableContainer = ({ children, Button_mt, container }) => {
           </button>
         </div>
       </div>
+      <motion.div
+        layout
+        variants={Welcomevisblecontainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, margin: "-30%" }}
+        style={{
+          paddingInline:
+            windowWidth > 1024
+              ? "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)"
+              : "0",
+        }}
+        className={`${
+          windowWidth > 1024
+            ? "flex overflow-x-auto gap-[28px] overflow-hidden lg:pb-[10vh]"
+            : "grid  w-full p-[20px] px-[10px]"
+        }  w-full pt-[50px]  scroll-smooth  scrollbar-hide   flex-shrink-0 `}
+        onScroll={handleScroll}
+        ref={containerRef}
+      >
+        {children}
+      </motion.div>
     </div>
   );
 };

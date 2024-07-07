@@ -143,7 +143,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const navbar = (
     <AnimatePresence>
       <motion.div
-        className={`w-full z-50  duration-700 fixed overflow-hidden ${
+        className={`w-full z-50  duration-700 fixed  ${
           isScrolling || Components.NavBar === "hide" ? "  -top-[100px]" : "  "
         }  `}
       >
@@ -151,7 +151,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           onMouseEnter={() => setBgwhite(true)}
           onMouseLeave={() => setBgwhite(false)}
           layout
-          className={`  w-full flex flex-col overflow-hidden`}
+          className={`  w-full flex flex-col `}
         >
           <motion.div
             onMouseLeave={() => setSelectedTab(null)}
@@ -159,7 +159,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             layout
-            className={`flex flex-col w-full  ${BG} py-[10px] overflow-hidden
+            className={`flex flex-col w-full  ${BG} py-[10px] 
         ${
           windowWidth < 768
             ? ` p-[15px] ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? "bg-black/50" : "bg-white/50"} ` : " "}`
@@ -596,13 +596,13 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           </motion.div>
 
           {/* 人物对话弹窗 */}
-          <motion.div layout children="container flex ">
+          <motion.div layout className="relative  w-full  max-w-[1200px] ">
             {navbarItem.map(
               (item, index) =>
-                selectedTab == item.name[0] && (
+                selectedTab === item.name[0] && (
                   <motion.div
                     key={item.name[0] + index + "introduction"}
-                    className="md:mx-[10%] mt-[30px] flex relative gap-x-[20px]  duration-200 "
+                    className="md:mx-[10%] mt-[30px] flex relative gap-x-[20px] duration-200 "
                   >
                     <img
                       className=" max-w-[320px] absolute top-[50%] left-0 transition-all"

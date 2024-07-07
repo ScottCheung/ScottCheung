@@ -1848,8 +1848,9 @@
         }
       ],
       "graphs": {
-        "code": ["https://3o.hk/images/2024/04/21/code.png"],
-        "infj": ["https://3o.hk/images/2024/04/21/infj.png"]
+        "bg": "./Graphs/capability/gallerybg.jpg",
+        "code": "https://3o.hk/images/2024/04/21/code.png",
+        "infj": "https://3o.hk/images/2024/04/21/infj.png"
       }
     },
     "Certificates": [

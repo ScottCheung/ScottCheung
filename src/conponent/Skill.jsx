@@ -93,20 +93,24 @@ function Skill() {
       >
         <motion.div
           className="relative h-auto transition-all tile-content"
-          // style={{
-          //   backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.gallerybg[0]})`,
-          //   backgroundSize: `100% auto`,
-          //   backgroundRepeat: 'repeat',
-          //   backgroundPosition: 'center bottle',
-          // }}
+          style={{
+            backgroundImage:
+              windowWidth < 1080
+                ? `url(${Database.PersonalInfo.Capability.graphs.bg})`
+                : "",
+            backgroundSize: "100 % auto",
+            backgroundRepeat: "repeat",
+            backgroundPosition: "center bottle",
+          }}
         >
           <motion.div
             id="blackOverlay"
-            className="absolute z-0 transition-all gradient-mask"
+            className="absolute z-10 invisible transition-all lg:visible gradient-mask "
           >
             <BG />
           </motion.div>
-          <span className="absolute  top-0 bottom-0 left-0  right-0 from-[#050D19] to-slate-950 bg-gradient-to-br -z-50"></span>
+          <span className="absolute visible transition-all lg:invisible  top-0 bottom-0 left-0  right-0 from-[#050D19]/50 to-slate-950/50 bg-gradient-to-br z-0"></span>
+          <span className="absolute invisible transition-all lg:visible top-0 bottom-0 left-0  right-0 from-[#050D19] to-slate-950 bg-gradient-to-br z-0"></span>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
