@@ -148,7 +148,7 @@ function PersonalityandLanguage() {
                     <motion.div className="text-[18px] font-[500]">
                       {per.name}
                     </motion.div>
-                    <motion.div className="flex text-[17px] font-[600]">
+                    <motion.div className="flex text-[20px] font-[600]">
                       <N className="" n={per.label} d={3} /> %
                     </motion.div>
                   </motion.div>
@@ -249,7 +249,7 @@ function PersonalityandLanguage() {
                       <motion.div className="text-[18px] font-[500]">
                         {personality.name}
                       </motion.div>
-                      <motion.div className="flex text-[17px] font-[600]">
+                      <motion.div className="flex text-[20px] font-[600]">
                         <N n={personality.label} d={3} />
                       </motion.div>
                     </motion.div>
