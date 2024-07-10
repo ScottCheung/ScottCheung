@@ -25,7 +25,7 @@ function Contact({ isTopOut }) {
   const infos = Database.PersonalInfo.Infos[lang];
   const isOut = isTopOut; //True of false
   const Contact = (
-    <div className={`overflow-hidden h-[100vh] flex relative`}>
+    <div className={` h-auto flex relative`}>
       <div
         className="w-full h-full overflow-hidden  bg-center bg-cover pb-[50px]"
         style={{
