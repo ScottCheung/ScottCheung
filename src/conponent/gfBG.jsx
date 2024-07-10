@@ -5,7 +5,7 @@ const CanvasBackground = () => {
   const stars = [];
   let count = 0;
   const maxStars = 700;
-  const hue = 217;
+  const hue = 200;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -63,7 +63,7 @@ const CanvasBackground = () => {
       this.orbitX = w / 2;
       this.orbitY = h / 2;
       this.timePassed = random(0, maxStars);
-      this.speed = random(this.orbitRadius) / 900000;
+      this.speed = random(this.orbitRadius) / 999999;
       this.alpha = random(2, 10) / 10;
 
       count++;
@@ -99,8 +99,8 @@ const CanvasBackground = () => {
 
     function animation() {
       ctx.globalCompositeOperation = "source-over";
-      ctx.globalAlpha = 0.8;
-      ctx.fillStyle = "hsla(" + 217 + ", 64%, 6%, 1)";
+      ctx.globalAlpha = 0.9;
+      ctx.fillStyle = "hsla(" + 200 + ", 64%, 6%, 1)";
       ctx.fillRect(0, 0, w, h);
 
       ctx.globalCompositeOperation = "lighter";

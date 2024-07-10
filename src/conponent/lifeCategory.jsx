@@ -13,7 +13,15 @@ export default function Life() {
   return (
     <section className="p-[20px] my-[20px]">
       <div className="">
-        <div className={`animate__animated animate__fadeIn grid w-full`}>
+        <div
+          style={{
+            paddingInline:
+              window.innerWidth > 1024
+                ? "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)"
+                : "0",
+          }}
+          className={`grid grid-cols-12 gap-8 animate__animated animate__fadeIn  w-full`}
+        >
           {Lifes.map((life, index) => (
             <motion.a
               whileHover={{ scale: 1.02 }}
@@ -24,7 +32,7 @@ export default function Life() {
                 setIndex(index);
               }}
               onMouseLeave={() => setHoverColor(false)}
-              className="welcomeanimation grid-item large-span-3 medium-span-6 small-span-12 w-full duration-500 smoothchange pt-[200px] text-center rounded-[12px] overflow-visible"
+              className="welcomeanimation lg:col-span-3  md:col-span-6 col-span-12  w-full duration-500 smoothchange pt-[300px] text-center rounded-[12px] overflow-visible"
               style={{
                 backgroundImage: `url(${life.pic})`,
                 backgroundSize: "70% auto",

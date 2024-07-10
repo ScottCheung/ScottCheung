@@ -15,7 +15,7 @@ export const AppContextProvider = ({ children }) => {
     whymeCard: "hidden",
   });
   const [ResumeView, setResumeView] = useState({
-    forceColor: 3,
+    forceColor: 4,
     colorDepth: 800,
   });
   const [whymeCard, setWhymeCard] = useState();

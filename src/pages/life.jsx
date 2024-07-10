@@ -403,7 +403,7 @@ export default function Life() {
           </div>
         </section> */}
       </main>
-      <Contact isTopOut={true} />
+      <Contact />
     </div>
   );
 }

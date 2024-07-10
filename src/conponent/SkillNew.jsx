@@ -7,31 +7,42 @@ import BG from "./gfBG";
 const tabs = [
   {
     label: ["Frontend", "前端"],
-    color1: "[#fda085]",
-    color2: "[#f9f586]",
+    color1: "[#2af598]",
+    ratio1: "[-25%]",
+    ratio2: "[125%]",
+    color2: "[#009efd]",
     contentKey: "front-end",
   },
   {
     label: ["Backend", "后端"],
     color1: "[#f9f586]",
+    ratio1: "[-25%]",
+    ratio2: "[100%]",
     color2: "[#43e97b]",
     contentKey: "backend-end",
   },
   {
     label: ["DataBase", "数据库"],
-    color1: "[#43e97b]",
-    color2: "[#38f9d7]",
+    color1: "[#F7B500]",
+    ratio1: "[-76%]",
+    ratio2: "[76%]",
+    color2: "[#6DD400]",
     contentKey: "database",
   },
   {
     label: ["Algorithm", "算法"],
-    color1: "[#2af598]",
-    color2: "[#009efd]",
+    color1: "[#CB2C14]",
+
+    ratio1: "[-50%]",
+    ratio2: "[150%]",
+    color2: "[#FFA221]",
     contentKey: "algorithm",
   },
   {
     label: ["Other", "其他"],
     color1: "[#00f2fe]",
+    ratio1: "[-25%]",
+    ratio2: "[125%]",
     color2: "[#b721ff]",
     contentKey: "other",
   },
@@ -67,44 +78,51 @@ function Skill() {
           lineHeight: 1.23536,
           fontFamily: `"SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif`,
         }}
-        className={`flex relative flex-col w-full bg-clip-text bg-gradient-to-r from-${selectedTab.color1} to-${selectedTab.color2}`}
+        className={`flex-1 relative  flex-col w-full bg-clip-text bg-gradient-to-r from-${selectedTab.ratio1} to-${selectedTab.ratio2}  from-${selectedTab.color1} to-${selectedTab.color2}`}
       >
-        <p
-          className={`text-transparent from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text flex text-[13px] md:text-[15px] lg:text-[20px]`}
+        <motion.p
+          className={`text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2}  from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text flex text-[13px] md:text-[15px] lg:text-[20px]`}
+          initial="hidden"
+          animate="visible"
+          variants={{
+            hidden: { opacity: 0, y: 30 },
+            visible: { opacity: 1, y: 0 },
+          }}
+          transition={{ duration: 1 }}
         >
           {content.description}
-        </p>
+        </motion.p>
         <motion.ul
           variants={Database.Animation.Variant.Welcomevisblecontainer}
           initial="hidden"
           whileInView="visible"
-          // viewport={{ once: false, margin: "-30%" }}
-          className={` text-transparent grid grid-cols-12 gap-[20px] md:gap-[40px] lg:gap-[70px] py-[50px] lg:py-[100px] from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text normal-text`}
+          className={`text-transparent grid  grid-cols-12 gap-[20px] md:gap-[40px] lg:gap-[70px] py-[50px]  lg:py-[100px] from-${selectedTab.ratio1} to-${selectedTab.ratio2}  from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text normal-text`}
         >
           {content.skills.map((skill, index) => (
             <motion.li
               key={index}
-              initial="hidden"
-              animate="visible"
-              variants={{
-                hidden: { opacity: 0, y: 30, pointerEvents: "none" },
-                visible: { opacity: 1, y: 0, pointerEvents: "auto" },
-              }}
-              transition={{ duration: 1, delay: index * 0.15 }}
-              className="flex items-start  col-span-12 pb-2 md:col-span-6 lg:col-span-4 xl:col-span-3 gap-x-[20px]"
+              variants={WelcomeItem}
+              transition={StagerFadeInUp}
+              className="flex items-start col-span-12 pb-2 md:col-span-6 lg:col-span-4 xl:col-span-3 gap-x-[20px]"
             >
-              <motion.div className="flex flex-shrink-0 justify-center items-center w-[50px] h-[50px] p-[10px] bg-gradient-to-br rounded-[9px]">
+              <motion.div
+                className="flex flex-shrink-0 justify-center items-center w-[50px] h-[50px] p-[10px] bg-gradient-to-br rounded-[9px]"
+                transition={{ duration: 1, delay: index * 0.15 }}
+              >
                 <img src={skill.image} alt={skill.name} />
               </motion.div>
 
-              <motion.div className="flex flex-col flex-wrap ">
-                <strong className="flex font-[600] text-[13px] md:text-[15px] lg:text-[20px] items-start pb-4">
+              <div
+                style={{ animationDelay: `${0.18 * index}s` }}
+                className={`flex flex-col animate__animated animate__zoomIn text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2}  from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text`}
+              >
+                <motion.strong className="flex font-[600] text-[13px] md:text-[15px] lg:text-[20px] items-start pb-4">
                   {skill.name}
-                </strong>
-                <p className="flex  flex-wrap text-[10px] md:text-[13px] lg:text-[15px] w-[280px] md:w-auto ">
+                </motion.strong>
+                <motion.p className="flex flex-wrap text-[10px] md:text-[13px] lg:text-[15px] w-[280px] md:w-auto">
                   {skill.description}
-                </p>
-              </motion.div>
+                </motion.p>
+              </div>
             </motion.li>
           ))}
         </motion.ul>
@@ -119,23 +137,35 @@ function Skill() {
   const direction = tabs.indexOf(selectedTab) > tabs.indexOf(prevTab) ? 1 : -1;
 
   return (
-    <motion.div className="transition-all grid-item large-span-12 col-span-12 z-20 -mt-[20vh]">
+    <motion.div className="transition-all grid-item large-span-12 col-span-12 z-20 -mt-[20vh] ">
       <motion.div
         id="Capability"
         className="transition-all shadow-[40px] relative z-0"
       >
         <motion.div
           id="blackOverlay"
-          className={`absolute top-0 bottom-0 left-0 right-0 z-10 invisible transition-all lg:visible gradient-mask overflow-hidden ${BigRadius} shadow-2xl`}
+          className={`absolute top-0 bottom-0 left-0 right-0 z-10  invisible transition-all lg:visible gradient-mask overflow-hidden ${BigRadius} shadow-2xl`}
         >
-          <BG />
+          <motion.span
+            layout
+            style={{
+              backgroundImage: `url(https://palettemaker.com/_nuxt/landing-header-bg.19f630cc.webp)`,
+              backgroundSize: "100% auto",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "right bottom",
+            }}
+            className={`absolute flex-1  invisible transition-all lg:visible top-0 bottom-0 left-0 right-0 opacity-50 z-0 ${BigRadius}`}
+          ></motion.span>
+          <div className="">
+            <BG />
+          </div>
           <span
             className={`absolute invisible transition-all lg:visible top-0 bottom-0 left-0 right-0 from-[#050D19] to-slate-950 bg-gradient-to-br -z-10 ${BigRadius}`}
           ></span>
         </motion.div>
 
         <motion.div
-          className={`z-20 relative h-auto transition-all tile-content overflow-hidden ${BigRadius}`}
+          className={`z-40 relative h-auto transition-all   tile-content overflow-hidden ${BigRadius}`}
           style={{
             backgroundImage:
               windowWidth < 1080
@@ -153,7 +183,7 @@ function Skill() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 2 }}
-            className={`flex font-[900] items-center justify-center transition-all text-6xl md:text-7xl lg:text-8xl z-30 from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br text-transparent bg-clip-text text-center mt-[30px] mb-[80px]`}
+            className={`flex font-[900] items-center justify-center transition-all text-6xl md:text-7xl lg:text-8xl z-30 from-${selectedTab.ratio1} to-${selectedTab.ratio2}  from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br text-transparent bg-clip-text text-center mt-[30px] mb-[80px]`}
           >
             <i className="flex items-center fi fi-rr-circle-user mr-[20px]"></i>
             <p className="flex items-center ">
@@ -182,13 +212,13 @@ function Skill() {
                 >
                   <div className="flex flex-col">
                     <h3
-                      className={`flex bg-gradient-to-br text-transparent bg-clip-text from-${tab.color1} to-${tab.color2}`}
+                      className={`flex bg-gradient-to-br text-transparent bg-clip-text from-${tab.ratio1} to-${tab.ratio2} from-${tab.color1} to-${tab.color2}`}
                     >
                       {tab.label[lang]}
                     </h3>
                     {tab === selectedTab ? (
                       <motion.div
-                        className={`mt-[10px] from-${tab.color1} to-${tab.color2} bg-gradient-to-r w-full h-[3px] lg:h-[6px] rounded-full z-50`}
+                        className={`mt-[10px] from-${tab.ratio1} to-${tab.ratio2}  from-${tab.color1} to-${tab.color2} bg-gradient-to-r w-full h-[3px] lg:h-[6px] rounded-full z-50`}
                         layoutId="underline"
                       />
                     ) : null}
@@ -203,6 +233,7 @@ function Skill() {
                 animate={{ x: 0, opacity: 1 }}
                 exit={{ x: direction * 100, opacity: 0 }}
                 transition={{ duration: 0.5 }}
+                className="lg:pb-[40vh]"
               >
                 {renderContent()}
               </motion.div>
