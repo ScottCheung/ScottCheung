@@ -54,7 +54,7 @@ export function SelectText(text, color, space) {
     if (part.startsWith("[") && part.endsWith("]")) {
       // 如果是方括号内的文本，应用加粗样式
       return (
-        <span key={index} className={`font-black text-${color}`}>
+        <span key={index} className={`px-1 text-${color}`}>
           {(space || "") +
             `${part.substring(1, part.length - 1)}` +
             (space || "")}

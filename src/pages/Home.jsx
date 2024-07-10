@@ -71,10 +71,20 @@ function Home() {
     useAppContext();
   const videoRef = useRef(null);
   const lang = useLanguage();
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const keyfeature = Database.PersonalInfo.WhyMe[lang];
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [scrollbarWidth, setScrollbarWidth] = useState(0);
+  useEffect(() => {
+    const div = document.createElement("div");
+    div.style.visibility = "hidden";
+    div.style.overflow = "scroll";
+    document.body.appendChild(div);
+    const scrollbarWidth = div.offsetWidth - div.clientWidth;
+    document.body.removeChild(div);
+    setScrollbarWidth(scrollbarWidth);
+  }, []);
+  const viewwidth = window.innerWidth - scrollbarWidth;
 
-  // 页面加载完成后自动播放视频
   useEffect(() => {
     function handleResize() {
       setWindowWidth(window.innerWidth);
@@ -96,7 +106,7 @@ function Home() {
 
   return (
     <div
-      className={`relative flex flex-col w-full transition-all bg-gray-200 ${windowWidth < 1080 ? "overflow-hidden" : ""} `}
+      className={`relative flex flex-col w-[${viewwidth}px] transition-all bg-gray-200 ${windowWidth < 1080 ? "overflow-hidden" : ""} `}
     >
       <Navbar topTextColor={true} />
 

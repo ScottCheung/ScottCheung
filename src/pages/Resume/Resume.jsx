@@ -25,9 +25,9 @@ export default function Resume() {
   const { ResumeView } = useAppContext();
   const forceColor = printMode ? resume : ResumeView.forceColor;
   const colorDepth = ResumeView.colorDepth;
-  const h1 = `font-sans tracking-wide text-${EmphasizeColorLists[forceColor]}-${colorDepth} text-[30px] md:text-[50px]  ${printMode ? "text-[100px]" : ""}  font-bold  transition-all duration-1000`;
+  const h1 = `font-sans tracking-wide text-${EmphasizeColorLists[forceColor]}-${colorDepth} text-[30px] md:text-[50px]  ${printMode ? "text-[100px]" : ""}  font-black  transition-all duration-1000`;
   const normaltext = "text-[18px] text-jusify transition-all duration-1000";
-  const h2 = `flex items-center text-[30px]  font-black text-${
+  const h2 = `flex items-center text-[30px]  font-[700] text-${
     EmphasizeColorLists[forceColor]
   }-${colorDepth} group-hover:text-${
     EmphasizeColorLists[forceColor]
@@ -84,7 +84,7 @@ export default function Resume() {
                     target="_blank"
                     rel="noopener noreferrer"
                     href={contact.link}
-                    className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth}  flex justify-center items-center gap-x-[5px] ${printMode ? "text-[15px]" : ""} `}
+                    className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth}  flex justify-center items-center  ${printMode ? "text-[18px] gap-x-[5px]" : "gap-x-[10px] text-[18px]"} `}
                   >
                     <i className={contact.icon}></i>
                     <div className={contact.link && "hover:underline"}>
@@ -107,7 +107,7 @@ export default function Resume() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={section.href}
-                className={`flex justify-between items-center gap-x-[20px] mt-[30px] mb-[20px] ${
+                className={`flex justify-between  items-center gap-x-[20px] mt-[30px] mb-[20px] ${
                   section.href && "group"
                 }`}
               >

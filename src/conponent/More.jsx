@@ -6,12 +6,14 @@ export function more({ color }) {
   const lang = useLanguage();
   return (
     <motion.div
+      layout
+      initial={{ scale: 0.9 }}
+      whileInView={{ scale: 1 }}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
-      className={`text-${color}-500 hover:text-${color}-700 text-${color} hover:text-${color}`}
+      className={`inline-flex text-${color}-700 group-hover:text-${color}-500 hover:text-${color}-500 text-[15px] text-${color} hover:text-${color}`}
     >
-      [ {lang == 1 && "更多"}
-      {lang == 0 && "more"} ]
+      [ {lang == 1 ? "更多" : "more"} ]
     </motion.div>
   );
 }

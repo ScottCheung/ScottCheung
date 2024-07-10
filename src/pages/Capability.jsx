@@ -10,8 +10,7 @@ import {
 } from "../help/helpFunction.js";
 import { Link } from "react-router-dom";
 import N from "../conponent/Num.jsx";
-import BG from "../conponent/gfBG.jsx";
-import Skill from "../conponent/Skill.jsx";
+import Skill from "../conponent/SkillNew.jsx";
 import Gooduser from "../conponent/Gooduser.jsx";
 import Otherability from "../conponent/Otherability.jsx";
 import PersonalityandLanguage from "../conponent/PersonalityandLanguage.jsx";
@@ -91,46 +90,60 @@ function Capability() {
   }, []);
 
   const Capability = (
-    <motion.div id="Capability" className="grid py-48 section-sapphire ">
-      {/* stack */}
-      <Skill />
-      {/* <Keyfeature2 />
-      <Highlight /> */}
-
-      {/* High Quality */}
-      <Highquality />
-      {/* row2-left */}
-      <Otherability />
-      {/* good user */}
-      <Gooduser />
-      <PersonalityandLanguage />
-
-      {/* INFJ instruction hover */}
+    <div
+      style={{
+        paddingInline:
+          windowWidth > 1024
+            ? "calc(50vw - min(1680px, var(--global-viewport-content-responsive)) / 2)"
+            : "10px",
+      }}
+      className="flex w-full "
+    >
+      {" "}
       <motion.div
-        initial={{ scale: 0, y: 30, opacity: 0 }}
-        animate={{ scale: 1, y: 0, opacity: 1 }}
-        transition={{ duration: 1 }}
-        id={`infj`}
-        role="tooltip"
-        className="m-[20px] absolute z-30 invisible rounded-[28px] flex w-[300px] md:w-[400px] lg:w-[800px]  transition-opacity duration-300 backdrop-blur-lg bg-white shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
+        id="Capability"
+        className="grid grid-cols-12 gap-[28px] py-48 "
       >
-        <motion.div className="p-[40px]">
-          <p className="text-[17px] md:text-[18px] lg:text-[20px] text-gray-900  py-4 text-center font-black ">
-            {lang == 0 && "Click to learn infj"}
-            {lang == 1 && "点击了解infj人格"}
-          </p>
-          <motion.div className="text-[14px] md:text-[17px] lg:text-[14px] text-gray-500 text-left font-mono">
-            {personality.Mbti[lang].split("\n").map((paragraph, index) => (
-              <motion.div key={index}>
-                <p className="mb-2">{SelectText(paragraph)}</p>
-                <br className="border-b" />
-              </motion.div>
-            ))}
+        {/* stack */}
+        <Skill />
+        {/* <Keyfeature2 />
+    <Highlight /> */}
+
+        {/* High Quality */}
+        <Highquality />
+        {/* row2-left */}
+        <Otherability />
+        {/* good user */}
+        <Gooduser />
+        <PersonalityandLanguage />
+
+        {/* INFJ instruction hover */}
+        <motion.div
+          initial={{ scale: 0, y: 30, opacity: 0 }}
+          animate={{ scale: 1, y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          id={`infj`}
+          role="tooltip"
+          className="m-[20px] absolute z-30 invisible rounded-[28px] flex w-[300px] md:w-[400px] lg:w-[800px]  transition-opacity duration-300 backdrop-blur-lg bg-white shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
+        >
+          <motion.div className="p-[40px]">
+            <p className="text-[17px] md:text-[18px] lg:text-[20px] text-gray-900  py-4 text-center font-black ">
+              {lang == 0 && "Click to learn infj"}
+              {lang == 1 && "点击了解infj人格"}
+            </p>
+            <motion.div className="text-[14px] md:text-[17px] lg:text-[14px] text-gray-500 text-left font-mono">
+              {personality.Mbti[lang].split("\n").map((paragraph, index) => (
+                <motion.div key={index}>
+                  <p className="mb-2">{SelectText(paragraph)}</p>
+                  <br className="border-b" />
+                </motion.div>
+              ))}
+            </motion.div>
           </motion.div>
+          <motion.div tooltip-arrow></motion.div>
         </motion.div>
-        <motion.div tooltip-arrow></motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 
   return (

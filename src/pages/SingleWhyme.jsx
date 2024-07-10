@@ -32,20 +32,21 @@ export default function WhyM() {
   }, []);
 
   return (
-    <div className="overflow-hidden">
+    <div className="flex flex-col overflow-hidden">
       <Navbar topTextColor={true} />
-      {/* <link rel="stylesheet" href="../style/output.css" type="text/css"/> */}
-      {/* <link rel="stylesheet" href="../style/style.css" type="text/css"/> */}
+
       <link
         rel="stylesheet"
         href="../style/appleStyleGrid/overview.built.css"
         type="text/css"
       />
+      <link
+        rel="stylesheet"
+        href="../style/uicons/css/all/all.css"
+        type="text/css"
+      />
       <script src="https://cdn.tailwindcss.com"></script>
-      {/* <link rel="stylesheet" href="../style/work/main.built.css" type="text/css"/>
-	<link rel="stylesheet" href="../style/work/overview.built.css" type="text/css"/>
-	<link rel="stylesheet" href="../style/work/main.built2.css" type="text/css"/>
-	<link rel="stylesheet" href="../style/work/overview.built2.css" type="text/css"/> */}
+
       <main
         className=""
         style={
@@ -73,7 +74,7 @@ export default function WhyM() {
             }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: "0px", scale: 1 }}
-            className="absolute top-0 w-full h-full bgrid-colsenter bgrid-colsover"
+            className="absolute top-0 w-full h-full bg-center bg-no-repeat bg-cover"
             style={{
               backgroundImage:
                 "url('https://3o.hk/images/2024/01/22/profilebg.jpg')",
@@ -93,9 +94,13 @@ export default function WhyM() {
           }}
           whileInView={{ opacity: 1, y: "0px" }}
           viewport={{ once: true }}
-          className={`visblecontainer ${
-            windowWidth > 768 ? "mb-[100px]" : ""
-          }  `}
+          className={` flex ${windowWidth > 768 ? "mb-[50vh]" : ""}  `}
+          style={{
+            paddingInline:
+              windowWidth > 1024
+                ? "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)"
+                : "0",
+          }}
         >
           <motion.div
             initial={{ opacity: 1, y: "30px", scale: 2 }}
@@ -105,16 +110,11 @@ export default function WhyM() {
             }}
             whileInView={{ opacity: 1, y: "0px", scale: 1 }}
             viewport={{ once: true }}
-            className={`pb-[30px] relative flex flex-col min-w-0 break-words ${
-              windowWidth > 768
-                ? "bg-white"
-                : "bg-gradient-to-br from-white via-white to-white/80 backdrop-blur-md"
-            }  w-full mb-6 shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp`}
+            className={`pb-[30vw] relative flex flex-col  break-words bg-white w-full shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp`}
             style={
-              (windowWidth > 768 && {
-                ...bgPic(selectedWhyMeItem.pic[1], "40% auto", "bottom center"),
-              }) ||
-              null
+              {
+                ...bgPic(selectedWhyMeItem.pic[0], "25vw auto", "bottom right"),
+              } || null
             }
           >
             <div className="px-6">
@@ -164,10 +164,10 @@ export default function WhyM() {
               </motion.div>
               <div className="py-10 mt-10 text-center">
                 <div className="flex flex-wrap justify-center">
-                  <div className={`grid `}>
+                  <div className={` `}>
                     {/* row1-right-with-button */}
-                    <div className="grid-item large-span-12 small-span-12 ">
-                      <div className="content-between">
+                    <div className="">
+                      <div className="content-between ">
                         <motion.div
                           // initial={{ opacity: 0, y: 300 }}
                           transition={{
@@ -180,7 +180,7 @@ export default function WhyM() {
                             selectedWhyMeItem.color1 +
                             " " +
                             selectedWhyMeItem.color2
-                          } tile-headline typography-subsection-headline bg-clip-text text-transparent bg-gradient-to-br  text-[15px] md:text-[28px] h-auto pb-[400px]`}
+                          }  bg-clip-text text-transparent bg-gradient-to-br font-[600] text-[15px] md:text-[20px] h-auto p-[14px] lg:p-[28px]`}
                         >
                           {selectedWhyMeItem.description
                             .split("\n")
@@ -208,8 +208,10 @@ export default function WhyM() {
             </div>
           </motion.div>
         </motion.div>
-
-        <WhyMe hideTittle={true} />
+        <div className="pb-[500px] lg:pb-0 ">
+          {" "}
+          <WhyMe hideTittle={true} />
+        </div>
       </main>
 
       <Contact />

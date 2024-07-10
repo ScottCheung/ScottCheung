@@ -1,4 +1,3 @@
-const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
 const h1 = `font-sans tracking-wide text-sky-700 text-[30px] md:text-[50px]  font-bold  transition-all duration-1000`;
 const normaltext = "text-[15px] text-jusify transition-all duration-1000";
 const h2 = `flex text-[30px]  font-black text-sky-700 group-hover:text-sky-400,
@@ -12,10 +11,8 @@ const timetext = `text-2xl font-[500] text-gray-400 items-start transition-all d
 const whymeIcon = `text-[20px] flex justify-center items-center text-gray-400 group-hover:text-sky-700`;
 const whymelable = `text-[15px] text-gray-400 group-hover:text-sky-700`;
 const contentContainer = `flex-1 flex flex-col justify-between  animate__animated animate__fadeInUp`;
-
-const Welcomevisblecontainer =
-  Database.Animation.Variant.Welcomevisblecontainer;
 const WelcomeItem = Database.Animation.Variant.WelcomeItem;
+const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
 const divisionline = `flex duration-0 flex flex-1 h-[5px]  rounded-full bg-sky-700  transition-all duration-1000`;
 
 const cardData = [
@@ -208,6 +205,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../help/helpFunction";
 import CtButton from "./ctButton";
 import { useAppContext } from "../help/ContextManager";
+import ScrollableContainer from "./ScrollableContainer";
 
 function Card({ card, onClick }) {
   return (
@@ -219,10 +217,10 @@ function Card({ card, onClick }) {
       whileHover={{ scale: 1.001, y: -5 }}
       whileTap={{ scale: 0.99 }}
       layoutId={`card-container-${card.type + card.company + card.id}`}
-      className={`relative bg-white  cursor-pointer w-[250px]  lg:w-[400px] p-[28px] shadow-[10px] rounded-[28px]  hover:${card.backgroundColor}/20`}
+      className={`relative bg-white  cursor-pointer w-auto h-auto flex flex-col lg:w-[400px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  hover:${card.backgroundColor}/20`}
       onClick={() => onClick(card.id)}
     >
-      <div className="absolute  -left-[30px] -top-[30px] right-[60px] rounded-[28px]  overflow-hidden aspect-[16/9] ">
+      <div className="lg:absolute  -left-[30px] -top-[30px] right-[60px] lg:rounded-[28px]  overflow-hidden aspect-[16/9] ">
         <motion.img
           layout
           layoutId={`card-img-${card.id}`}
@@ -236,17 +234,17 @@ function Card({ card, onClick }) {
           layout
           layoutId={"card-type" + card.type + card.company}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          class=" absolute bottom-[20px] right-[20px] flex w-[35px] h-[35px] items-center justify-center p-[20px] text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
+          class=" absolute top-[20px] right-[20px]  lg:bottom-[20px] lg:right-[20px] flex-shrink-0 flex w-[35px] h-[35rpx] lg:w-[35px] lg:h-[35px]  items-center justify-center  lg:p-[20px] text-[18px] lg:text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500"
         >
           {card.type[0]}
         </motion.kbd>
       </div>
 
-      <div className="flex flex-col mt-[60%]  items-start justify-start h-[130px] animate__animated animate__fadeInUp">
-        <h1 className="font-bold  text-[20px] md:text-[25px] lg:text-[28px] text-gray">
+      <div className="flex flex-col  p-[14px] lg:p-[0px] lg:mt-[60%]  items-start justify-start h-[130px] animate__animated animate__fadeInUp">
+        <h1 className="font-bold  text-[17px] md:text-[25px] lg:text-[28px] text-gray">
           {card.title}
         </h1>
-        <h2 className="flex  text-[13px] md:text-[16px] lg:text-[21px] text-gray-400">
+        <h2 className="flex  text-[11px] md:text-[16px] lg:text-[21px] text-gray-400">
           {card.company}
         </h2>
       </div>
@@ -261,7 +259,7 @@ function Period({ period }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className="-mx-[18%] mt-[10vh]  relative flex  items-center justify-between"
+      className="-mx-[18%] mt-[10vh] hidden relative lg:flex  items-center justify-between"
     >
       <div className="absolute  -mt-[100px]  flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-500 font-serif">
         <div>{period.startTime}</div>
@@ -337,58 +335,32 @@ function WorkExperience() {
   };
 
   return (
-    <motion.div layout className="flex flex-col justify-center w-full ">
-      {/* 一级标题 */}
-      <motion.div layout id="WorkExperience" className={`flex justify-center `}>
-        <motion.div
-          layout
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{
-            ease: [0.22, 1, 0.36, 1],
-            duration: 1,
-          }}
-          className="flex items-center justify-center "
-        >
-          <div className="">
-            <i className="pt-3 mr-3 text-5xl fi lg:text-8xl fi-rr-tool-box"></i>
-          </div>
-          <h2 className="font-mono text-5xl font-bold lg:text-8xl">
-            {lang == 0 && "Work Experience"}
-            {lang == 1 && "工作经验"}
-          </h2>
-        </motion.div>
-      </motion.div>
-      <motion.div
-        layout
-        ref={containerRef}
-        variants={Welcomevisblecontainer}
-        initial="hidden"
-        whileInView="visible"
-        exit={{ opacity: 0 }}
-        viewport={{ once: false, margin: "-30%" }}
-        onAnimationComplete={scrollToRight}
-        style={{
-          paddingRight:
-            "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)",
+    <motion.div
+      layout
+      className="flex flex-col items-center justify-center w-full min-h-[100vh]"
+    >
+      <ScrollableContainer
+        id="WorkExperience"
+        toRight={true}
+        gap={80}
+        header={{
+          cont: lang == 0 ? "Work Experience" : "工作经验",
+          icon: "fi-rr-tool-box",
         }}
-        className="flex w-full space-x-[80px] overflow-x-auto py-[20vh] pl-[200px] scroll-smooth scrollbar-hide   flex-shrink-0 "
       >
         {cardData.map((card) => (
           <motion.div
             key={card.id}
-            // variants={WelcomeItem}
+            variants={WelcomeItem}
             transition={StagerFadeInUp}
-            // className="flex flex-col items-center justify-center"
+            className="col-span-6"
           >
             <Card card={card} onClick={() => handleCardClick(card)} />
-            <Period
-              period={card}
-              // onClick={() => handleCardClick(period)}
-            />
+            <Period period={card} />
           </motion.div>
         ))}
-      </motion.div>
+      </ScrollableContainer>
+      {/* </motion.div> */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -421,7 +393,7 @@ function WorkExperience() {
                       selectedCard.type + selectedCard.company + selectedCard.id
                     }`}
                     transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative z-0 flex lg:rounded-[28px] flex-wrap  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-y-auto "
+                    className="relative z-0 flex  lg:rounded-[28px] flex-wrap scrollbar-hide  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-auto lg:overflow-hidden"
                   >
                     <motion.div
                       layoutId={`card-img-${selectedCard.id}`}

@@ -10,15 +10,36 @@ import ContactCate from "../contactCategory.jsx";
 import Toast from "../toast.jsx";
 
 const updateMonth = 7;
-const updateDay = 6;
+const updateDay = 10;
+// 获取当前日期
+const currentDate = new Date();
+
+// 构建更新日期对象
+const updateDate = new Date(
+  currentDate.getFullYear(),
+  updateMonth - 1,
+  updateDay,
+);
+
+// 计算日期差异（毫秒数差异）
+const timeDifference = currentDate - updateDate;
+
+// 将毫秒数差异转换为天数差异
+const dayDifference = timeDifference / (1000 * 3600 * 24);
+const daysBetween = Math.floor(dayDifference);
+
+// 判断是否是今天
+const isToday = currentDate.toDateString() === updateDate.toDateString();
+
+// 判断是否在一周内
+const isWithinOneWeek = Math.abs(daysBetween) <= 7;
+
 const updateTime = [
   `${updateDay} ${new Date(2000, updateMonth - 1, 1).toLocaleString("en-US", { month: "long" })}`,
   `${updateMonth} 月 ${updateDay} 日`,
 ];
 
 const navbarItem = data.navbarItem;
-const navLocation = data.Location;
-const Workbench = data.workbench;
 
 function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const { Components } = useAppContext();
@@ -26,6 +47,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     localStorage.getItem("Current version") || null,
   );
   const [lang, setLang] = useState(parseInt(localStorage.getItem("lang")) || 0);
+
+  const updateMessage = isToday
+    ? ["Today", "今天"][lang]
+    : isWithinOneWeek
+      ? `${Math.abs(daysBetween)} ${["days ago", "天前"][lang]}`
+      : updateTime[lang];
   const [bgwhite, setBgwhite] = useState(false);
   const isTopTextColorWhite = topTextColor;
   const scrollTo = scrollToHash();
@@ -144,7 +171,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     <AnimatePresence>
       <motion.div
         className={`w-full z-50  duration-700 fixed  ${
-          isScrolling || Components.NavBar === "hide" ? "  -top-[100px]" : "  "
+          isScrolling || Components.NavBar === "hide"
+            ? "  -top-[100px]"
+            : " top-0 "
         }  `}
       >
         <motion.nav
@@ -163,7 +192,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
         ${
           windowWidth < 768
             ? ` p-[15px] ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? "bg-black/50" : "bg-white/50"} ` : " "}`
-            : `${isTop && isHomeOrRoot ? "px-[5%] pt-[12vh] " : "pt-3"} 
+            : `${isTop && isHomeOrRoot ? "px-[5%] pt-[12vh] " : ""} 
               }  md:px-10`
         }
         ${
@@ -185,62 +214,47 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 {/* 最主要的内容 */}
                 <motion.div
                   layout
-                  className="flex items-center justify-between w-full max-w-[1200px] px-[3%]"
+                  className="flex items-center justify-between w-full max-w-[1200px] "
                 >
                   <motion.button
-                    whileHover={{ scale: 1.03, transition: { duration: 1 } }}
+                    whileHover={{ scale: 1.01, transition: { duration: 1 } }}
                     whileTap={{ scale: 0.99 }}
                     layout
-                    data-popover-target={`version`}
-                    className="z-50 flex"
+                    data-popover-target="version"
+                    className="z-50 flex items-center justify-center h-full"
                   >
                     <a
                       href="/info"
-                      style={{ animationDelay: `${0.5}s` }}
-                      classname=" animate__animated animate__fadeInRight animate_slow"
+                      className="flex items-center justify-center h-full animate__animated animate__fadeInUp"
                     >
-                      <div className="flex item-center">
-                        <div className="relative flex items-center justify-center">
-                          <img
-                            className={`transition-all animate__animated animate__zoomIn  ${
-                              isTop ? "w-20" : "w-16"
-                            }  rounded-md shadow-lg`}
-                            src={
-                              "https://3o.hk/images/2024/01/14/avatar.th.jpg"
-                            }
-                            alt="Xianzhe's Page"
-                            width="100"
-                            height="100"
-                          ></img>
-                        </div>
-                        <div className="flex flex-col ml-6">
+                      <div className="flex items-center h-full gap-8">
+                        <motion.img
+                          layout
+                          className={` transition-all animate__animated animate__zoomIn ${isTop ? "w-32 rounded-full" : "w-20 rounded-[12px]"}  shadow-lg`}
+                          src="https://3o.hk/images/2024/01/14/avatar.th.jpg"
+                          alt="Xianzhe's Page"
+                        />
+                        {isWithinOneWeek && (
+                          <span
+                            class={`${isTop ? "w-8 h-8 left-0 top-0" : "-left-3 -top-3 w-6 h-6"} absolute   bg-green-400 border-2 border-white dark:border-gray-800 rounded-full`}
+                          ></span>
+                        )}
+
+                        <div
+                          className={`flex flex-col justify-between  ${isTop ? "w-50  rounded-full" : "w-32 "} `}
+                        >
                           <motion.div
-                            transition={{ duration: 0.7 }}
-                            style={{ animationDelay: `${0.3}s` }}
                             layout
-                            className={`text-left animate__animated animate__zoomIn transition-all font-semibold ${
-                              isTop
-                                ? `${
-                                    isTopTextColorWhite ? "text-white" : ""
-                                  } mb-[10px] text-[15px]  md:mb-[8px] md:text-[17px] lg:mb-0 lg:text-[25px]`
-                                : "text-xl py-2"
-                            }`}
+                            className={`flex  text-nowrap text-left items-start justify-start animate__animated animate__zoomIn transition-all font-[600] ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[17px]  md:text-[30px] lg:text-[35px] ` : "text-[17px] lg:text-[17px]"}`}
                           >
                             {data.Avatar.Webname[lang]}
                           </motion.div>
                           <motion.div
                             layout="position"
                             href="/info"
-                            style={{ animationDelay: `${0.5}s` }}
-                            className={`flex animate__animated animate__zoomIn transition-all text-left ${
-                              isTop
-                                ? `${
-                                    isTopTextColorWhite ? "text-white" : ""
-                                  }  text-lg`
-                                : "text-base"
-                            }`}
+                            style={{ animationDelay: "0.5s" }}
+                            className={`flex text-nowrap animate__animated animate__zoomIn transition-all text-left ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[13px]` : "text-[10px]"}`}
                           >
-                            {" "}
                             {data.Avatar.helloword[lang]}
                             <p
                               className={
@@ -249,8 +263,18 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                   : "flex ml-[7px] gap-x-[10px]"
                               }
                             >
-                              <p className="flex">|</p>
-                              {`${updateTime[lang]} ${["Updates", "更新"][lang]}`}
+                              <span>|</span>
+                              <span
+                                className={
+                                  isWithinOneWeek
+                                    ? isTop && isTopTextColorWhite
+                                      ? "text-green-200 font-[600]"
+                                      : "text-green-700"
+                                    : ""
+                                }
+                              >
+                                {`${updateMessage} ${["Updates", "更新"][lang]}`}
+                              </span>
                             </p>
                           </motion.div>
                         </div>
@@ -308,27 +332,25 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 }}
                                 data-popover-target={`nav-des-${item.name[0]}`}
                                 type="button"
-                                className={`rounded-[5px]  items-center  px-6 py-3 text-[20px] gap-x-[10px] font-medium text-center ${
+                                className={`rounded-[5px]  items-center  justify-center   py-6  gap-[5px] font-medium text-center ${
                                   isTopTextColorWhite & isTop
-                                    ? "text-white flex flex-col items-center justify-center "
-                                    : "flex"
+                                    ? "text-white flex flex-col px-12"
+                                    : "flex px-6"
                                 } rounded-full hover:bg-gray-900/20  `}
                               >
-                                <div className="flex items-center justify-center w-full transition-all h-11">
-                                  <div className="flex flex-shrink-0">
-                                    <i
-                                      className={`${
-                                        isTopTextColorWhite & isTop
-                                          ? "text-white text-[20px]"
-                                          : "text-gray-900 text-[17px]"
-                                      }  fi ${item.icon} `}
-                                    ></i>
-                                  </div>
+                                <div className="flex items-center justify-center w-full transition-all">
+                                  <i
+                                    className={`flex items-center ${
+                                      isTopTextColorWhite & isTop
+                                        ? "text-white text-[25px]"
+                                        : "text-gray-900 text-[20px]"
+                                    }  fi ${item.icon} `}
+                                  ></i>
                                 </div>
                                 <div
-                                  className={`${
+                                  className={`flex items-center ${
                                     isTopTextColorWhite & isTop
-                                      ? "text-white text-[13px]"
+                                      ? "text-white text-[15px]"
                                       : "text-gray-900 text-[15px]"
                                   } md:hidden lg:flex transition-all`}
                                 >
@@ -347,7 +369,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           animationDelay: `${navbarItem.length * 0.2}s`,
                         }}
                         type="button"
-                        className={`mx-[10px] transition-none animate__animated animate__fadeInUp `}
+                        className={` transition-none animate__animated animate__fadeInUp `}
                         onClick={(e) =>
                           e.preventDefault() &
                           setIsOpened(!isOpened) &
@@ -355,6 +377,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         }
                       >
                         <motion.svg
+                          className="w-10 h-10"
                           width="18"
                           height="18"
                           viewBox="0 0 18 18"

@@ -9,7 +9,7 @@ import { useLanguage } from "../help/helpFunction";
 import { useParams } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
 
-// if (pathname === '/major/ArtificalInteliigence') {
+// if (pathname === '/major/ArtificalInteligence') {
 //   data = course.filter((item) => item.id === "AI");
 // } else if (pathname === '/major/DataScience') {
 //   data = course.filter((item) => item.id === "DS");
@@ -57,52 +57,24 @@ export default function Example() {
         type="text/css"
       />
       <AnimatePresence>
-        <motion.div
-          layout
-          layoutId={localStorage.getItem("currenStu")}
-          className="page-overview "
-          data-component-list="PageXpController"
-          data-anim-scroll-group="body"
-        >
+        <motion.div layout layoutId={localStorage.getItem("currenStu")}>
           <Navbar className="z-50" onHeightChange={handleNavbarHeightChange} />
           <script src="https://cdn.tailwindcss.com"></script>
-          <link rel="stylesheet" href="../style/output.css" type="text/css" />
-          <link rel="stylesheet" href="../style/style.css" type="text/css" />
-          <link
-            rel="stylesheet"
-            href="../style/appleStyleGrid/overview.built.css"
-            type="text/css"
-          />
-          <link
-            rel="stylesheet"
-            href="../style/work/main.built.css"
-            type="text/css"
-          />
-          <link
-            rel="stylesheet"
-            href="../style/work/overview.built.css"
-            type="text/css"
-          />
-          <link
-            rel="stylesheet"
-            href="../style/work/main.built2.css"
-            type="text/css"
-          />
-          <link
-            rel="stylesheet"
-            href="../style/work/overview.built2.css"
-            type="text/css"
-          />
-          <main id="main" className="main" role="main">
-            <section className="section section-welcome no-pad-bottom">
+
+          <main
+            id="main"
+            className="main text-[15px] md:text-[17px] lg:text-[20px]"
+            role="main"
+          >
+            <section className="section section-welcome no-pad-bottom welcomeanimation">
               <div className="mt-24 section-content-responsive">
-                <header className="section-header row">
-                  <h1 className=" welcomeanimation section-header-headline">
+                <header className="flex flex-col items-center justify-between px-8 lg:flex-row section-header">
+                  <h1 className="flex items-center welcomeanimation font-[600] text-[40px] text-gray-900">
                     {data[0].major[lang][0]}
                     {lang == 0 && " "}
                     {data[0].major[lang][1]}
                   </h1>
-                  <div className="section-header-copy-visblecontainer">
+                  <div className="flex items-center welcomeanimation text-[20px]">
                     <p>{data[0].type[lang]}</p>
                   </div>
                 </header>
@@ -110,7 +82,7 @@ export default function Example() {
               {data[0].type[0] == "Bacholor degree" && (
                 <a
                   href={data[0].web}
-                  className={`welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky z-30 shadow-2xl`}
+                  className={`welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky z-30 `}
                   style={{ top: `calc(${navbarHeight}px + 10px)` }}
                 >
                   <div className="flex flex-row items-center justify-center">
@@ -131,7 +103,7 @@ export default function Example() {
               {data[0].type[0] == "Master degree" && (
                 <a
                   href={data[0].web}
-                  className={`welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky z-30 shadow-2xl`}
+                  className={`welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky z-30 `}
                   style={{
                     top: `calc(${navbarHeight}px + 10px)`,
                     backgroundImage:
@@ -149,7 +121,7 @@ export default function Example() {
               )}
               <div className="h-auto space-y-6 welcome-video-wall-visblecontainer visblecontainer">
                 <div className="pt-24 pb-4 text-gray-500">
-                  <h2 className="typography-section-intro-headline section-intro-headline">
+                  <h2 className="flex items-center welcomeanimation font-[600] text-[40px] text-gray-900 section-intro-headline">
                     {lang == 0 && "University Status"}
                     {lang == 1 && "学校信息"}
                   </h2>
@@ -164,7 +136,7 @@ export default function Example() {
                   </a>
                 </p>
                 <div className="pt-24 pb-4 text-gray-500">
-                  <h2 className="typography-section-intro-headline section-intro-headline">
+                  <h2 className="flex items-center welcomeanimation font-[600] text-[40px] text-gray-900 section-intro-headline">
                     {data[0].major[lang][0]}
                     {lang == 0 && " "}
                     {data[0].major[lang][1]}
@@ -184,7 +156,7 @@ export default function Example() {
             <section className="overflow-hidden section section-welcome no-pad-bottom visblecontainer">
               <div className="welcome-video-wall-visblecontainer  space-y-6 h-auto w-[100%]">
                 <div className="w-[100%] text-gray-500 pt-24 pb-4  bg-gradient-to-br from-white from-10% via-white via-90% to-white/0 z-50">
-                  <h2 className="typography-section-intro-headline section-intro-headline ">
+                  <h2 className="flex items-center welcomeanimation font-[600] text-[40px] text-gray-900 section-intro-headline ">
                     {lang == 1 && "主要课程"}
                     {lang == 0 && "Main Course"}
                   </h2>

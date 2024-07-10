@@ -86,12 +86,12 @@ export default function Profile() {
                   </div>
                 </div>
                 <div className="mt-12 text-center">
-                  <h3 className="mb-2 text-4xl font-semibold leading-normal text-gray-800 animate__animated animate__zoomIn">
+                  <h3 className="mb-2 text-5xl font-[600] leading-normal text-gray-800 animate__animated animate__zoomIn">
                     张贤哲 | Scott Zhang
                   </h3>
                   <a
                     href="https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7"
-                    className="mt-0 mb-2 text-xl font-bold leading-normal text-gray-500 uppercase"
+                    className="mt-0 mb-2 text-xl font-[600] leading-normal text-gray-500 uppercase"
                   >
                     <i className="mr-2 text-gray-500 fi fi-rr-marker"></i>
 
@@ -103,7 +103,7 @@ export default function Profile() {
                 <div className="py-10 mt-10 text-center border-t">
                   <div className="flex flex-wrap justify-center">
                     <div className="w-full px-4 lg:w-9/12">
-                      <p className="mb-4 text-xl leading-relaxed text-gray-800 ">
+                      <p className="mb-4 text-3xl leading-relaxed text-red-500 ">
                         {lang == 0 &&
                           "Please note that all these informations is private. Please respect privacy and please do not spread it."}
                         {lang == 1 &&
@@ -118,7 +118,7 @@ export default function Profile() {
                         <motion.div
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
-                          className={`animate__animated animate__zoomIn ${
+                          className={`animate__animated hidden animate__zoomIn ${
                             isExpanded ? "hidden" : ""
                           }`}
                         >
@@ -128,7 +128,7 @@ export default function Profile() {
                         <motion.div
                           whileHover={{ scale: 1.1 }}
                           whileTap={{ scale: 0.9 }}
-                          className={`animate__animated animate__zoomIn ${
+                          className={`animate__animated  animate__zoomIn ${
                             !isExpanded ? "hidden" : ""
                           }`}
                         >
@@ -182,7 +182,14 @@ export default function Profile() {
                   {" "}
                   {/* Basic Information */}
                   <div className="tile-header ">
-                    <h3 className="py-16 mx-8 tile-headline typography-subsection-headline animate__animated animate__zoomIn">
+                    <h3
+                      style={{
+                        lineHeight: 1.19048,
+                        fontWeight: 600,
+                        letterSpacing: "0.011em",
+                      }}
+                      className="py-4 text-[30px] text-gray-900 animate__animated animate__zoomIn"
+                    >
                       {lang == 0 && "Basic Information"}
                       {lang == 1 && "基本信息"}
                     </h3>
@@ -209,7 +216,7 @@ export default function Profile() {
                             whileTap={{ scale: 0.99 }}
                             layout
                             style={{ animationDelay: `${0.05 * index}s` }}
-                            className="py-3 mx-8 border-b sm:py-4 animate__animated animate__fadeInRight"
+                            className="py-4 mx-8 border-b md:py-8 animate__animated animate__fadeInRight"
                           >
                             <div className="flex items-center">
                               <div className="flex-shrink-0">
@@ -218,11 +225,11 @@ export default function Profile() {
                                 ></i>
                               </div>
                               <div className="flex-1 min-w-0 ms-4">
-                                <p className="text-3xl font-medium font-semibold text-gray-900 truncate darrk:text-white">
+                                <p className="text-3xl font-medium text-gray-900 truncate darrk:text-white">
                                   {info.cont}
                                 </p>
                               </div>
-                              <div className="inline-flex items-center text-2xl text-gray-900 darrk:text-white">
+                              <div className="inline-flex items-center text-2xl text-gray-900 lg:text-3xl darrk:text-white">
                                 {info.icon}
                               </div>
                             </div>
@@ -238,7 +245,7 @@ export default function Profile() {
           <div className="min-h-[20vh]"></div>
         </div>
       </div>
-      <Contact isTopOut={true} />
+      <Contact />
     </div>
   );
 }

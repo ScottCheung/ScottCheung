@@ -93,43 +93,36 @@ function Otherability() {
   }, []);
 
   const Otherability = (
-    <motion.div className="h-auto grid-item large-span-8 medium-span-6 small-span-12 grid-item-swipe-reply carnival-item-in-view ">
-      <motion.div className="tile ">
-        {/* 半透明要改 */}
-        <motion.div
-          className="bg-black "
-          style={{
-            backgroundImage: `url(https://3o.hk/images/2024/05/19/bg.jpg)`,
-            backgroundSize: "60% auto",
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: "right bottom",
-          }}
-        >
-          {/* Skill */}
-          <motion.div className="px-[36px] py-[36px]  backdrop-contrast-125 pb-[40%]">
-            {Object.entries(Skill.skills[lang]).map(
-              ([category, list], index) => (
-                <motion.div
-                  key={index + "skill"}
-                  initial={{ opacity: 0, x: 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.9 }}
-                  className="flex flex-col gap-[5px] py-[15px] md:pb-[45px] text-gradient"
-                >
-                  <h2 className="text-gray-200 typography-subsection-headline text-[30px]">
-                    {" "}
-                    {category}
-                  </h2>
+    <motion.div className="h-auto rounded-[28px] grid-item col-span-12 md:col-span-6 lg:col-span-8">
+      <motion.div
+        className="bg-black rounded-[28px] pb-[50%]"
+        style={{
+          backgroundImage: `url(https://3o.hk/images/2024/05/19/bg.jpg)`,
+          backgroundSize: "60% auto",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "right bottom",
+        }}
+      >
+        {/* Skill */}
+        <motion.div className="rounded-[28px] p-[20px]   backdrop-contrast-125 lg:p-[36px]  ">
+          {Object.entries(Skill.skills[lang]).map(([category, list], index) => (
+            <motion.div
+              key={index + "skill"}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.1, duration: 0.9 }}
+              className="flex flex-col text-gradient py-[15px] gap-[5px] md:pb-[45px]"
+            >
+              <h2 className="font-[600] text-gray-200 text-[30px] typography-subsection-headline">
+                {" "}
+                {category}
+              </h2>
 
-                  <p className="text-left text-[20px] text-gray-400 ">
-                    {/* <a href={`https://www.google.com/search?q=${list}`}> */}
-                    {list.join("  ｜  ")}
-                    {/* </a> */}
-                  </p>
-                </motion.div>
-              ),
-            )}
-          </motion.div>
+              <p className="text-left text-[15px] text-gray-400 lg:text-[20px] ">
+                {list.join("  ｜  ")}
+              </p>
+            </motion.div>
+          ))}
         </motion.div>
       </motion.div>
     </motion.div>

@@ -10,12 +10,8 @@ import ScrollableContainer from "./ScrollableContainer";
 import CtButton from "./ctButton";
 
 const data = Database.PersonalInfo.Education;
-const visblecontainer = Database.Animation.Variant.Welcomevisblecontainer;
-const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
-const item = Database.Animation.Variant.WelcomeItem;
-const Welcomevisblecontainer =
-  Database.Animation.Variant.Welcomevisblecontainer;
 const WelcomeItem = Database.Animation.Variant.WelcomeItem;
+const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
 
 function Education({ hideTittle, simpleVer }) {
   const isTittle = hideTittle || false;
@@ -37,90 +33,54 @@ function Education({ hideTittle, simpleVer }) {
   });
 
   const Education = (
-    <div className="z-30 ">
-      {!isTittle ? (
-        <div>
-          {/* 一级标题 */}
-          <div className="flex justify-center  pt-[10vh] items-center">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                ease: [0.455, 0.03, 0.515, 0.955],
-                duration: 1,
-              }}
-              className="flex items-center justify-center gap-x-[20px]"
-            >
-              <div className="flex-initial animate__animated animate__zoomIn">
-                <i className=" fi text-5xl lg:text-8xl fi-rr-circle-book-open mr-[20px] pt-3 "></i>
-              </div>
-              <h2 className="font-mono text-5xl font-bold animate__animated animate__zoomIn lg:text-8xl">
-                {lang == "1" && "教育"}
-                {lang == "0" && "Education"}
-              </h2>
-              <div className="flex animate__animated animate__rotateIn">
-                <div className="flex justify-center">
-                  <Link
-                    to="#Education"
-                    id="Education"
-                    style={{ animationDelay: `${0.4}s` }}
-                    className="z-50 flex items-center justify-center w-24 h-24 text-center rounded-full shadow-none bg-gray-200/20 hover:text-white hover:bg-sky-900"
-                  >
-                    <i className="text-3xl fi fi-br-angle-up "></i>
-                  </Link>
-                </div>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      ) : (
-        <></>
-      )}
-
+    <div className="z-30 lg:min-h-[100vh] flex w-full items-center">
       {/* Item 容器 */}
-      <ScrollableContainer>
+      <ScrollableContainer
+        id="Education"
+        gap={20}
+        header={{
+          cont: lang == "1" ? "教育" : "Education",
+          icon: "fi-rr-circle-book-open",
+        }}
+      >
         {data.map((Experience, index) => (
           <motion.div
+            layout
             href={Experience.href}
             key={index}
             variants={WelcomeItem}
             transition={StagerFadeInUp}
             whileTap={{ scale: 0.95 }}
-            className="col-span-6"
+            className="col-span-6 group"
           >
             <div
-              className={`transition-all p-[28px] rounded-[28px] hover:scale-[1.02] duration-500 relative flex-shrink-0 w-auto h-auto ${simpleVer ? "lg:w-[300px]" : "lg:w-[500px]"}  md:h-auto ${
+              className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px]  duration-300 relative  w-auto h-auto ${simpleVer ? "lg:w-[300px]" : "lg:w-[500px]"}  md:h-auto ${
                 hideTittle ? "bg-gray-50" : "bg-white/80"
               }`}
             >
               <div
-                className={` max-w-[70px] lg:max-w-[120px] h-auto items-center flex justify-center overflow-hidden ${
+                className={` max-w-[70px] lg:max-w-[120px] h-auto items-center flex justify-center overflow-hidden mb-[14px] md:mb-[14px] ${
                   Experience.tag[0][0] == "Bachelor"
                     ? "rounded-full bg-white "
                     : ""
                 }  `}
               >
                 <img
-                  style={{
-                    animationDelay: `${index * 0.3}s`,
-                  }}
                   src={Experience.logo}
                   alt={Experience.university}
-                  className={`rounded-xl animate__animated  animate__zoomIn animate__fast `}
+                  className={`rounded-xl  `}
                 ></img>
               </div>
-              <div className="pb-[40px]">
-                <div
-                  style={{
-                    animationDelay: `${index * 0.2}s`,
-                  }}
-                  className="items-start justify-start my-[10px] md:flex gap-x-4 md:flex-col animate__animated animate__zoomIn"
-                >
+
+              <div
+                className={simpleVer || windowWidth < 1024 ? " " : " pb-[40px]"}
+              >
+                <div className="items-start justify-start my-[10px] flex md:flex gap-x-4 md:flex-col ">
                   <div
                     className={
                       windowWidth > 1024
-                        ? `typography-card-headline  gap-x-[10px] ${simpleVer ? "" : "flex"}`
-                        : "text-[15px] font-black flex gap-x-[5px]"
+                        ? `typography-card-headline font-[600]   duration-300  transition-all text-sky-950 gap-x-[10px]   ${simpleVer ? "text-[20px] " : "text-[35px]  flex group-hover:text-[38px] "}`
+                        : "text-[13px] md:text-[18px]  font-[600] transition-all flex flex-col md:flex-row  gap-x-[5px]"
                     }
                   >
                     <div className="flex items-center">
@@ -132,69 +92,71 @@ function Education({ hideTittle, simpleVer }) {
                     </div>
                   </div>
                 </div>
+                {/* Duration */}
+                <motion.div
+                  layout
+                  className={`${
+                    windowWidth > 1024
+                      ? "typography-family-paragraph "
+                      : " text-[10px] inline-flex "
+                  } flex justify-center transition-all duration-500 items-center font-[600] w-full  my-2  text-center text-white rounded-[7px] md:rounded-full  lg:text-[15px]  text-justify-between py-2 category bg-sky-900  `}
+                >
+                  {Experience.time[lang]}
+                </motion.div>
                 {/* Tag */}
                 <div
-                  className={`${simpleVer || windowWidth < 1024 ? "hidden" : "flex justify-start py-5 space-x-3 text-[15px]"}`}
+                  className={`${simpleVer || windowWidth < 1024 ? "hidden" : "flex justify-start  py-5 space-x-3 text-[15px]"}`}
                 >
-                  <div
-                    style={{
-                      animationDelay: `${index * 0.2}s`,
-                    }}
-                    className="inline-flex justify-center items-center  py-1 font-medium text-white rounded-full px-[20px]  animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 category"
-                  >
+                  <div className="inline-flex border-sky-900/70  transition-all duration-300  text-white bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-[13px] lg:text-[13px]  items-center  justify-center space-x-2 cursor-pointer   rounded-full px-3 py-1.5 md:px-4 md:py-2 lg:px-6 lg:py-1.5">
                     {Experience.tag[lang][0]}
                   </div>
                   {Experience.tag[lang][1] && (
-                    <div className="inline-flex justify-center items-center py-1 font-medium text-white rounded-full px-[20px]  animate__animated animate__zoomIn animate__slow bg-gradient-to-br from-emerald-500 to-sky-500 ">
+                    <div className="iinline-flex border-sky-900/70 transition-all duration-300  text-white bg-gradient-to-r from-emerald-500 to-sky-500 text-[13px] lg:text-[13px]  items-center  justify-center space-x-2 cursor-pointer   rounded-full px-3 py-1.5 md:px-4 md:py-2 lg:px-6 lg:py-1.5">
                       {Experience.tag[lang][1]}
                     </div>
                   )}
                 </div>
-                <div
-                  style={{
-                    animationDelay: `${index * 0.3}s`,
-                  }}
-                  className={`${
-                    windowWidth > 1024
-                      ? "card-description font-black"
-                      : " text-[10px] inline-flex font-black"
-                  } flex justify-center items-center w-full py-1  text-center text-white rounded-full px-[20px] text-justify-between animate__animated animate__zoomIn category bg-sky-900 ring-1 ring-inset ring-gray-900/10 hover:bg-gray-700`}
-                >
-                  {Experience.time[lang]}
-                </div>
+
+                {/* Des */}
                 <div
                   className={simpleVer || windowWidth < 1024 ? "hidden" : " "}
                 >
-                  {/* Duration */}
                   <p
                     style={{
                       ...hideRow(3),
                       animationDelay: `${index * 0.3}s`,
                     }}
-                    className={` mt-10  text-gray-600 animate__animated animate__fadeInUp card-description darrk:text-gray-50`}
+                    className={` text-gray-400 group-hover:text-gray-700 text-[15px]  darrk:text-gray-50`}
                   >
                     {Experience.description[lang]}
                   </p>{" "}
-                  <More color={"blue"} />
+                  <More color={"sky"} />
                 </div>
               </div>
 
-              <a className="anz-card-modal-link" href={Experience.href}>
+              <a
+                href={Experience.href}
+                className="absolute top-0 bottom-0 left-0 right-0 w-full h-full "
+              >
                 <button
-                  className="card-modal-trigger modal-trigger card-cta-modal-button"
+                  className={`absolute  ${windowWidth < 1024 || simpleVer ? " top-[14px] right-[14px] lg:top-[28px] lg:right-[28px] " : "right-[28px] bottom-[28px]"} w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] bg-gray-900/30 group-hover:bg-gray-900 transition-all duration-300  rounded-full  flex justify-center items-center`}
                   type="link"
                 >
-                  <div className="modal-trigger-visblecontainer">
-                    <span className="card-cta-modal-button-icon">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="8 8 20 20"
-                        className="card-cta-modal-button-small-icon card-modal-button-small-icon"
-                      >
-                        <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
-                      </svg>
-                    </span>
-                  </div>
+                  <span
+                    className={
+                      windowWidth < 1024
+                        ? `w-[15px] h-[15px]`
+                        : `w-[20px] h-[20px]`
+                    }
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="8 8 20 20"
+                      className="fill-white"
+                    >
+                      <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+                    </svg>
+                  </span>
                 </button>
               </a>
             </div>

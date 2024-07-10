@@ -20,19 +20,21 @@ export default function material() {
       >
         <Navbar />
 
-        <main id="main" className="main" role="main">
+        <main
+          id="main"
+          className="main text-[15px] md:text-[15px] lg:text-[17px]"
+          role="main"
+        >
           <section className="section section-welcome no-pad-bottom">
             <div className="mt-24 section-content-responsive">
-              <header className="section-header">
-                <h1 className=" welcomeanimation section-header-headline">
+              <header className="flex flex-col items-center justify-between px-8 lg:flex-row section-header">
+                <h1 className="flex items-center welcomeanimation font-[600] text-[40px] text-gray-900">
                   {lang == 1 && "荣誉"}
                   {lang == 0 && "Certificates"}
                 </h1>
-                <div className="section-header-copy-visblecontainer">
-                  <p>
-                    {lang == 1 && "58项荣誉"}
-                    {lang == 0 && "58 Certificates"}
-                  </p>
+                <div className="flex items-center welcomeanimation text-[20px]">
+                  {lang == 1 && "58项荣誉"}
+                  {lang == 0 && "58 Certificates"}
                 </div>
               </header>
             </div>
@@ -40,7 +42,7 @@ export default function material() {
 
           <div className="h-auto md:mx-[10%] z-0 welcomeanimation">
             <div className=" text-gray-500  pb-4 sticky   top-0 z-0 bg-gradient-to-br from-white from-10% via-white via-90% to-white/10  ">
-              <h2 className="sticky top-0 z-50 typography-section-intro-headline section-intro-headline pt-[100px]">
+              <h2 className="sticky top-0 z-50 welcomeanimation font-[600] text-[40px] text-gray-900 pt-[100px]">
                 {lang == 1 && "荣誉"}
                 {lang == 0 && "Certificates"}
               </h2>
@@ -100,10 +102,10 @@ export default function material() {
                   <motion.tbody
                     key={index}
                     variants={item}
-                    transition={LeftappearBar}
                     whileHover={{ scale: 1.001 }}
                     whileTap={{ scale: 0.99 }}
                     layout
+                    className="py-16"
                   >
                     <tr className="bg-white border-b darrk:bg-gray-800 darrk:border-gray-700">
                       <th
@@ -124,7 +126,7 @@ export default function material() {
                           target="_blank"
                           rel="noopener noreferrer"
                           href={Certificate.src}
-                          className="hover:text-sky-700 hover:underline darrk:text-sky-400 darrk:hover:text-sky-700"
+                          className="text-sky-500 hover:text-sky-700 hover:underline darrk:text-sky-400 darrk:hover:text-sky-700"
                         >
                           {lang == 0 ? "Link " : "链接"}
                         </a>

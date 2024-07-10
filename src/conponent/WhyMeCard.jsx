@@ -9,27 +9,13 @@ import CtButton from "./ctButton";
 import { useAppContext } from "../help/ContextManager";
 import Loading from "./Loading";
 
-const delayDuration = 0;
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.3,
+      // delay: 0.3,
       staggerChildren: 0.1,
-    },
-  },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, x: -80 },
-  visible: {
-    opacity: 1,
-    x: -50,
-    transition: {
-      type: "spring",
-      stiffness: 50,
-      damping: 10,
     },
   },
 };
@@ -82,15 +68,11 @@ function WhymeCard() {
   }, []);
   useEffect(() => {
     // 监听 Components.whymeCard 的值变化
-    const timer = setTimeout(() => {
-      if (Components.whymeCard === "visible") {
-        setShow(true);
-      } else if (Components.whymeCard === "hide") {
-        setShow(false);
-      }
-    }, delayDuration);
-
-    return () => clearTimeout(timer);
+    if (Components.whymeCard === "visible") {
+      setShow(true);
+    } else if (Components.whymeCard === "hide") {
+      setShow(false);
+    }
   }, [Components.whymeCard]);
 
   const BanScroll = () => {
@@ -134,20 +116,20 @@ function WhymeCard() {
   };
 
   const WhymeCard = (
-    <div className="w-full h-[100vh] fixed top-0 bottom-0 left-0 right-0 z-50 ">
+    <div className="w-full h-[100vh] hidden lg:block fixed top-0 bottom-0 left-0 right-0 z-0 ">
       <motion.span
         onClick={() => {
           closeCard();
         }}
-        className={`absolute top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] ESC justify-center  items-center z-30 ${
+        className={`absolute top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] ESC  z-0 ${
           whymeCard.color1 + "/50" + " " + whymeCard.color2 + "/50"
-        } bg-gradient-to-br  backdrop-blur-[20px]  justify-center items-center z-40`}
+        } bg-gradient-to-br  backdrop-blur-[20px]   `}
       >
         <motion.span
           className="fixed  right-0 bottom-0 w-[100vw] h-[100vh] -z-50  animate__animated animate__fadeIn "
           style={
             {
-              ...bgPic(whymeCard.pic[0], "40% auto", "bottom right"),
+              ...bgPic(whymeCard.pic[0], "35% auto", "bottom right"),
             } || null
           }
         ></motion.span>
@@ -157,136 +139,145 @@ function WhymeCard() {
             event.stopPropagation();
             openCard(whymeCard);
           }}
-          layout
-          layoutId={whymeCard.advantage}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className={` top-[10vh] left-[10vw]   right-[40vw] -bottom-[20vh] pb-[20vh] shadow-[30px] bg-white backdrop-blur-[200px]  rounded-[40px] p-[40px]  z-50 fixed`}
+          className={` top-[10vh] left-[10vw] -bottom-[20vh]  right-[35vw]  shadow-[30px] z-50 fixed`}
         >
-          {show && (
-            <div className="flex gap-x-[30px]">
-              <motion.div
-                layout
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}
-                className="flex flex-col h-full gap-y-[45px] z-50"
-              >
-                {keyfeature.map((feature, index) => (
-                  <motion.button
+          <motion.div
+            layout
+            layoutId={whymeCard.advantage}
+            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            className="flex  bg-white  -mb-[20vh] rounded-[40px] py-[40px] px-[28px] z-50 "
+          >
+            <animatePresence>
+              {show && (
+                <div className="flex gap-x-[20px]">
+                  <motion.div
                     layout
-                    variants={itemVariants}
-                    key={index + feature.advantage}
-                    onClick={(event) => {
-                      event.stopPropagation();
-                      closeCard();
-                      openCard(feature);
-                    }}
-                    className={`${
-                      whymeCard.advantage === feature.advantage ? "hidden" : ""
-                    } flex hover:shadow-6xl shadow-md items-center py-[15px] justify-center bg-gradient-to-br w-[15vw] -ml-[40px] rounded-r-full ${
-                      feature.color1 + " " + feature.color2
-                    } `}
+                    className="flex flex-col h-full gap-y-[45px] z-50"
                   >
-                    <div className="flex flex-col items-center justify-center text-white text-l">
-                      <i
-                        className={`${feature.icon} fi text-5xl text-white flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
-                      ></i>
-                      <p className="font-black">{feature.advantage}</p>
-                    </div>
-                  </motion.button>
-                ))}
-              </motion.div>
-              <div className="z-50 flex flex-col">
-                <CtButton
-                  type={"x"}
-                  key={"close"}
-                  position={"top-0 -right-[120px] ESC  "}
-                  btnsize={"60px"}
-                  icon={"w-[20px] h-[20px] rotate-0"}
-                  className="z-50"
-                  onClick={(event) => {
-                    event.stopPropagation();
-                    closeCard();
-                  }}
-                />
-                <div className="flex justify-start items-center gap-x-[10px]">
-                  <motion.div className="flex-shrink-0 ">
-                    <div
-                      className={`flex justify-center items-center ${
-                        whymeCard.color1 + " " + whymeCard.color2
-                      } bg-gradient-to-br rounded-full w-[60px] h-[60px]`}
-                    >
-                      <motion.div
-                        layoutId={whymeCard.advantage + "icon"}
-                        transition={{
-                          duration: 0.9,
-                          ease: [0.22, 1, 0.36, 1],
+                    {keyfeature.map((feature, index) => (
+                      <motion.button
+                        layout
+                        key={index + feature.advantage}
+                        onClick={(event) => {
+                          event.stopPropagation();
+                          closeCard();
+                          openCard(feature);
                         }}
-                        className="text-white text-[30px] mt-[10px]"
+                        style={{ animationDelay: `${index * 0.1}s` } || null}
+                        className={`${
+                          whymeCard.advantage === feature.advantage
+                            ? "hidden"
+                            : "animate__animated animate__fadeInUp"
+                        } flex hover:shadow-6xl shadow-md items-start py-[15px] justify-center bg-gradient-to-br w-[10vw] -ml-[40px] rounded-r-[22px] ${
+                          feature.color1 + " " + feature.color2
+                        } `}
                       >
-                        <i className={`fi  ${whymeCard.icon}`}></i>
-                      </motion.div>
-                    </div>
+                        <div className="flex flex-col items-center justify-start text-white text-l">
+                          <i
+                            className={`${feature.icon} flex justify-start fi text-5xl text-white flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
+                          ></i>
+                          <p className="flex justify-start font-[600] text-[13px]">
+                            {feature.advantage}
+                          </p>
+                        </div>
+                      </motion.button>
+                    ))}
                   </motion.div>
-                  <div className="flex gap-x-[30px] items-center">
-                    <motion.h3
-                      transition={{
-                        duration: 0.9,
-                        ease: [0.22, 1, 0.36, 1],
+                  <div className="z-50 flex flex-col">
+                    <CtButton
+                      type={"x"}
+                      key={"close"}
+                      position={"top-0 -right-[120px] ESC  "}
+                      btnsize={"60px"}
+                      icon={"w-[20px] h-[20px] rotate-0"}
+                      className="z-50"
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        closeCard();
                       }}
-                      layoutId={whymeCard.advantage + "title"}
-                      className={`text-[30px]  font-semibold leading-normal mb-2 ${
-                        whymeCard.color1 + " " + whymeCard.color2
-                      } bg-clip-text text-transparent bg-gradient-to-br mb-2`}
+                    />
+                    <div className="flex justify-start items-center gap-x-[10px]">
+                      <div className="flex gap-x-[30px] items-center">
+                        <div
+                          className={`flex justify-center items-center ${
+                            whymeCard.color1 + " " + whymeCard.color2
+                          } bg-gradient-to-br rounded-full w-[60px] h-[60px]`}
+                        >
+                          <motion.div
+                            layoutId={whymeCard.advantage + "icon"}
+                            transition={{
+                              duration: 0.9,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
+                            className="text-white text-[30px] mt-[10px]"
+                          >
+                            <i className={`fi  ${whymeCard.icon}`}></i>
+                          </motion.div>
+                        </div>
+                        <motion.h3
+                          transition={{
+                            duration: 0.9,
+                            ease: [0.22, 1, 0.36, 1],
+                          }}
+                          layoutId={whymeCard.advantage + "title"}
+                          className={`text-[50px] text-nowrap overflow-auto flex font-black leading-normal  ${
+                            whymeCard.color1 + " " + whymeCard.color2
+                          } bg-clip-text text-transparent bg-gradient-to-br `}
+                        >
+                          {whymeCard.advantage}
+                        </motion.h3>
+                        <a
+                          className="flex  w-[50px] h-[50px] rounded-full bg-gray-400/20  justify-center items-center  hover:scale-105 transition-all   z-50"
+                          href={whymeCard.href}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="8 8 20 20"
+                            className="w-[25px] h-[25px] flex text-gray-500"
+                          >
+                            <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <motion.div
+                      style={{
+                        maskImage:
+                          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 1) 50px, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)",
+                        WebkitMaskImage:
+                          "linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 1) 50px, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)",
+                      }}
+                      className=" max-h-[80vh] overflow-y-auto  scrollbar-hide scroll-smooth gradient-mask pt-[50px] pb-[30vh]"
                     >
-                      {whymeCard.advantage}
-                    </motion.h3>
-                    <a
-                      className="flex w-[30px] h-[30px] mb-[10px] rounded-full bg-gray-400/20  justify-center items-center  hover:scale-105    z-50"
-                      href={whymeCard.href}
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="8 8 20 20"
-                        className="w-[15px] h-[15px]"
+                      <div
+                        className={`pb-[30px] relative flex flex-col  break-words`}
                       >
-                        <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-                <motion.div className="-mb-[10vh] max-h-[80vh] overflow-y-auto  scrollbar-hide scroll-smooth gradient-mask pt-[10vh] pb-[30vh]">
-                  <div
-                    className={`pb-[30px] relative flex flex-col  break-words`}
-                  >
-                    <motion.div children=" ">
-                      <motion.div
-                        className={` ${
-                          whymeCard.color1 + " " + whymeCard.color2
-                        } bg-clip-text text-transparent bg-gradient-to-br text-[15px] md:text-[23px] animate__animated animate__fadeInUp `}
-                      >
-                        {whymeCard.description
-                          .split("\n")
-                          .map((paragraph, index) => (
-                            <motion.div key={index}>
-                              <p className="mb-2 text-between">
-                                {SelectText(paragraph)}
-                              </p>
-                              <br className="border-b" />
-                            </motion.div>
-                          ))}
-                      </motion.div>
+                        <motion.div children=" ">
+                          <motion.div
+                            style={{ animationDelay: "0.5s" }}
+                            className={` ${
+                              whymeCard.color1 + " " + whymeCard.color2
+                            } bg-clip-text text-transparent bg-gradient-to-br text-[15px] md:text-[23px] animate__animated animate__fadeInUp`}
+                          >
+                            {whymeCard.description
+                              .split("\n")
+                              .map((paragraph, index) => (
+                                <motion.div key={index} className="">
+                                  <p className="mb-2 text-between ">
+                                    {SelectText(paragraph)}
+                                  </p>
+                                  <br className="border-b" />
+                                </motion.div>
+                              ))}
+                          </motion.div>
+                        </motion.div>
+                      </div>
                     </motion.div>
                   </div>
-                </motion.div>
-              </div>
-            </div>
-          )}
-          {!show && (
-            <div className="flex items-center justify-center">
-              <Loading cursor={`w-[50px] h-[50px] `} />
-            </div>
-          )}
+                </div>
+              )}
+            </animatePresence>
+          </motion.div>
         </motion.div>
       </motion.span>
     </div>

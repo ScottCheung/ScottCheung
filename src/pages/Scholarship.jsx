@@ -16,16 +16,21 @@ export default function Scholarship() {
       >
         <Navbar />
 
-        <main id="main" className="main" role="main">
+        <main
+          id="main"
+          className="main text-[15px] md:text-[15px] lg:text-[17px]"
+          role="main"
+        >
           <section className="section section-welcome no-pad-bottom">
             <div className="mt-24 section-content-responsive">
-              <header className="section-header">
-                <h1 className=" welcomeanimation section-header-headline">
+              <header className="flex flex-col items-center justify-between px-8 lg:flex-row section-header">
+                <h1 className="flex items-center welcomeanimation section-header-headline font-[600] text-[40px]">
                   {lang == 1 && "奖学金"}
                   {lang == 0 && "Scholorship"}
                 </h1>
-                <div className="section-header-copy-visblecontainer">
+                <div className="flex items-center welcomeanimation text-[20px]">
                   <p>
+                    {" "}
                     {lang == 1 && "17项奖学金"}
                     {lang == 0 && "17 scholarships"}
                   </p>
@@ -35,8 +40,8 @@ export default function Scholarship() {
           </section>
           <section className="section section-welcome no-pad-bottom">
             <div className="h-auto space-y-6 welcome-video-wall-visblecontainer visblecontainer ">
-              <div className=" text-gray-500  pb-4 sticky top-0 z-50 bg-gradient-to-br from-white from-10% via-white via-90% to-white/0 ">
-                <h2 className="typography-section-intro-headline section-intro-headline pt-[100px]">
+              <div className=" text-gray-500  pb-4 sticky top-0 z-30 bg-gradient-to-br from-white from-10% via-white via-90% to-white/0 ">
+                <h2 className="section-header-headline font-[600] text-[40px] text-gray-900 pt-[100px]">
                   {lang == 1 && "奖学金"}
                   {lang == 0 && "Scholorship"}
                 </h2>
@@ -101,20 +106,22 @@ export default function Scholarship() {
                           {Scholarship.CourseName}
                         </td>
                         <td className="px-6 py-4">{Scholarship.Type}</td>
-                        <td className="px-6 py-4">{Scholarship.Description}</td>
+                        <td className="px-6 py-4 text-[10px]">
+                          {Scholarship.Description}
+                        </td>
                       </tr>
                     </tbody>
                   ))}
                   <tbody>
-                    <tr className="bg-white border-b darrk:bg-gray-800 darrk:border-gray-700">
+                    <tr className="w-full bg-white border-b darrk:bg-gray-800 darrk:border-gray-700">
                       <th
                         scope="row"
-                        className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white"
+                        className="px-6 py-16 text-[25px] font-medium text-green-900 whitespace-nowrap darrk:text-white"
                       >
                         {lang == 1 && "总计 17项奖学金"}
                         {lang == 0 && "Totally 17 scholarships"}
                       </th>
-                      <td className="px-6 py-4">{Scholarship.Description}</td>
+                      <td className="px-6 py-4 ">{Scholarship.Description}</td>
                     </tr>
                   </tbody>
                 </table>

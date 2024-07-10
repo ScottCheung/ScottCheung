@@ -251,12 +251,12 @@
     "Avatar": ["https://3o.hk/images/2024/04/10/avater.png"],
     "Education": [
       {
-        "id": "ArtificalInteliigence",
+        "id": "ArtificalInteligence",
         "major": [
-          ["Artifical", "Inteliigence"],
+          ["Artifical", "Inteligence"],
           ["人工", "智能"]
         ],
-        "href": "/major/ArtificalInteliigence",
+        "href": "/major/ArtificalInteligence",
         "type": ["Master degree", "硕士学位"],
         "logo": "/Graphs/study/unsw.png",
         "banner": "https://3o.hk/images/2024/05/25/unsw-students-banner.png",
@@ -286,10 +286,7 @@
         ],
         "web": "https://www.unsw.edu.au/",
         "majorweb": "https://en.wikipedia.org/wiki/Artificial_intelligence",
-        "time": [
-          "Sep 13, 2022   -   Sep 6, 2024",
-          "2022.09.13   -   2021.09.06"
-        ],
+        "time": ["Sep, 2022   -   Sep, 2024", "2022.09   -   2021.09"],
         "description": [
           "This degree encompasses a broad spectrum of the AI field, covers advanced topics such as Machine Learning & Data Mining, Neural Networks, Deep Learning, Recommender Systems, and Natural Language Processing. This comprehensive curriculum provides candidates with a rich and thorough understanding of AI, strengthening his professional depth.",
           "该经历涵盖了人工智能领域的内容，包括机器学习与数据挖掘、神经网络、深度学习、推荐系统以及自然语言处理等先进主题。这个全面的课程设置为学生提供了对人工智能的深入而全面的理解，增强了他们在专业领域的深度。"
@@ -487,10 +484,7 @@
         ],
         "web": "https://www.unsw.edu.au/",
         "majorweb": "https://en.wikipedia.org/wiki/data_science",
-        "time": [
-          "Sep 13, 2022   -   Sep 6, 2024",
-          "2022.09.13   -   2021.09.06"
-        ],
+        "time": ["Sep, 2022   -   Sep, 2024", "2022.09   -   2021.09"],
         "description": [
           "This stream covers a wide range of data-related fields, covers Machine Learning & Data Mining, Database Systems Implementation, Recommender Systems, and Design & Analysis of Algorithms. This comprehensive curriculum provides candidates with a rich and thorough understanding of data, strengthening his professional depth.",
           "该经历涵盖了广泛的与数据相关的内容，包括机器学习与数据挖掘、数据库系统实现、推荐系统以及算法的设计与分析。这个全面的课程体系为学生提供了对数据的丰富和深入的理解，增强了他们的专业深度。"
@@ -687,10 +681,7 @@
         ],
         "web": "https://english.swust.edu.cn/",
         "majorweb": "https://en.wikipedia.org/wiki/Functional_materials",
-        "time": [
-          "Sep 4, 2017   -   Sep 6, 2021",
-          "2017.09.04   -   2021.09.04"
-        ],
+        "time": ["Sep, 2017   -   Sep, 2021", "2017.09   -   2021.09"],
         "description": [
           [
             "This degree encompasses a broad spectrum of chemistry, including inorganic chemistry, organic chemistry, and physical chemistry, along with the fundamentals of material science. Additionally, it covers mechanical design, electronic technology, and engineering mechanics, providing candidates with a comprehensive and rich engineering background."
@@ -1011,10 +1002,7 @@
         ],
         "web": "http://www.english.swust.edu.cn",
         "majorweb": "https://en.wikipedia.org/wiki/Business_administration",
-        "time": [
-          "Sep 4, 2019   -   Sep 6, 2021",
-          "2019.09.04   -   2021.09.06"
-        ],
+        "time": ["Sep, 2019   -   Sep, 2021", "2019.09   -   2021.09"],
         "description": [
           "This degree encompasses fields such as economics, management, and accounting, including core courses in marketing, project management, human resource management, and financial management. Through the pursuit of this degree, candidates acquire a keen business mindset and systematic enterprise management capabilities.",
           "该经历涵盖了经济学、管理学和会计学等领域，包括营销、项目管理、人力资源管理和财务管理等核心课程。通过攻读这个学位，学生将获得敏锐的商业思维和系统的企业管理能力。"
@@ -1375,7 +1363,7 @@
       "pic": "https://cdn.pixabay.com/photo/2014/05/26/09/58/sydney-opera-house-354375_1280.jpg",
       "description": [
         [
-          "Hello, I'm {bold}Scott Cheung{bold}, a passionate and multifaceted individual who loves {bold}life{bold} and {bold}exploring new things{bold}. I excel in adopting new methods to improve efficiency in work and study. My {bold}intelligence{bold}, {bold}strong learning ability{bold}, and {bold}fearlessness{bold} in the face of challenges have enabled me to achieve {bold}three degrees{bold}, including a double major in my undergraduate studies and an {bold}IT master's degree{bold} from {bold}UNSW{bold}, all completed {bold}ahead of schedule{bold} in record time.",
+          "Hello, I'm {bold}Scott Cheung{bold}, a passionate and multifaceted individual who loves {bold}life{bold} and {bold}exploring new things{bold}. I excel in adopting new methods to improve efficiency in work and study. My {bold}intelligence{bold}, {bold}strong learning ability{bold}, and {bold}fearlessness{bold} in the face of challenges have enabled me to achieve {bold}three degrees{bold}, including a double major in my undergraduate studies and an {bold}IT master's degree{bold} from {bold}UNSW{bold}, All degrees completed {bold}ahead of schedule{bold}.",
 
           "I have a solid background in management studies, which allows me to {bold}systematically solve problems{bold}. My {bold}flexible thinking{bold} enables me to embrace new methods while maintaining {bold}high standards for detail{bold} and {bold}aesthetics{bold}. Throughout my academic and professional journey, I have garnered {bold}58 awards{bold} and {bold}17 scholarships{bold}. During my undergraduate years, I also designed posters and logos as a side hustle.",
 
@@ -1388,7 +1376,7 @@
           "Front-end development is the perfect job for me, as it allows me to help companies better present their content while expressing my own {bold}aesthetic attitude{bold}. It is the perfect combination of art and engineering. After developing a new component, I get instant feedback, unlike training an AI model, which typically requires a significant amount of time for feedback. This immediate positive feedback from front-end development stimulates me. I often lose track of time while developing web pages and can easily stay up all night coding. I immerse myself in the world of code. It seems I was born for front-end development, and my passion sustains me and enables me to achieve excellent results. I am grateful that my broad interests and continuous exploration have given me a clear understanding of {bold}who I am{bold} and {bold}what I love{bold}."
         ],
         [
-          "你好，我是{bold}张贤哲{bold}，一个充满{bold}热情{bold}且{bold}多才多艺{bold}的人，热爱{bold}生活{bold}和{bold}探索新事物{bold}。我擅长采用新方法来提高工作和学习的效率。我的{bold}聪明{bold}、{bold}强大的学习能力{bold}和面对挑战的{bold}无畏精神{bold}使我获得了{bold}三个学位{bold}，包括本科期间的双学位和来自{bold}UNSW{bold}的{bold}IT硕士学位{bold}，这些学位都在创纪录的时间内{bold}提前{bold}完成。",
+          "你好，我是{bold}张贤哲{bold}，一个充满{bold}热情{bold}且{bold}多才多艺{bold}的人，热爱{bold}生活{bold}和{bold}探索新事物{bold}。我擅长采用新方法来提高工作和学习的效率。我的{bold}聪明{bold}、{bold}强大的学习能力{bold}和面对挑战的{bold}无畏精神{bold}使我获得了{bold}三个学位{bold}，包括本科期间的双学位和来自{bold}UNSW{bold}的{bold}IT硕士学位{bold}，这些学位都{bold}提前{bold}完成，是不是超棒！",
 
           "我在管理学方面有着扎实的背景，这使我能够{bold}系统地解决问题{bold}。我的{bold}灵活思维{bold}让我能够接受新方法并保持{bold}高标准的细节{bold}和{bold}美感{bold}。在我的学术和职业生涯中，我获得了{bold}58个奖项{bold}和{bold}17个奖学金{bold}，在本科期间，我还通过设计海报和标志作为副业。",
 
@@ -1500,7 +1488,7 @@
           "name": "scottzhang9779"
         },
         {
-          "type": ["Little Red Book", "小红书"],
+          "type": ["XiaoHongShu", "小红书"],
           "icon": "fi-sr-book-alt",
           "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579",
           "name": "贤哲scott"
@@ -1731,122 +1719,348 @@
           "src": "https://help.apple.com/assets/64FFB258AE78C91D760CB66A/64FFB25D3DC7043983057480/en_US/97f5f4dfe6df84d78caacff68ec63538.png"
         }
       ],
-      "front-end": [
-        {
-          "name": "HTML",
-          "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg"
-        },
-        {
-          "name": "CSS",
-          "image": "https://www.svgrepo.com/show/521591/css.svg"
-        },
-        {
-          "name": "JavaScript",
-          "image": "https://www.svgrepo.com/show/510028/javascript-file.svg"
-        },
-        {
-          "name": "React",
-          "image": "https://www.svgrepo.com/show/473768/react.svg"
-        },
-
-        {
-          "name": "Redux",
-          "image": "https://www.svgrepo.com/show/378456/redux-fill.svg"
-        },
-
-        {
-          "name": "Tailwind",
-          "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg"
-        },
-        {
-          "name": "Framer",
-          "image": "https://www.svgrepo.com/show/371686/animation.svg"
-        },
-        {
-          "name": "Main UI",
-          "image": "https://www.svgrepo.com/show/38133/ui8.svg"
-        },
-        {
-          "name": "Animation libs",
-          "image": "https://www.svgrepo.com/show/488047/animation.svg"
-        }
-      ],
-      "backend-end": [
-        {
-          "name": "MySQL",
-          "image": "https://www.svgrepo.com/show/394296/mysql.svg"
-        },
-        {
-          "name": "PostgreSQL",
-          "image": "https://www.svgrepo.com/show/473760/postgresql.svg"
-        },
-        {
-          "name": "NodeJS",
-          "image": "https://www.svgrepo.com/show/473736/nodejs.svg"
-        },
-        {
-          "name": "Json",
-          "image": "https://www.svgrepo.com/show/74933/json-file.svg"
-        },
-        {
-          "name": "TablePlus",
-          "image": "https://www.svgrepo.com/show/532228/table-list.svg"
-        }
-      ],
-      "database": [
-        {
-          "name": "MySQL",
-          "image": "https://www.svgrepo.com/show/394296/mysql.svg"
-        },
-        {
-          "name": "PostgreSQL",
-          "image": "https://www.svgrepo.com/show/473760/postgresql.svg"
-        },
-        {
-          "name": "Tableau",
-          "image": "https://www.svgrepo.com/show/342280/tableau.svg"
-        },
-        {
-          "name": "Python",
-          "image": "https://www.svgrepo.com/show/510150/python-file.svg"
-        },
-        {
-          "name": "Neo4j",
-          "image": "https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg"
-        }
-      ],
-      "Algorithm": [
-        {
-          "name": "Machine Learning",
-          "image": "https://www.svgrepo.com/show/445872/machine-learning.svg"
-        },
-        {
-          "name": "Deep Learning",
-          "image": "https://www.svgrepo.com/show/473805/tensorflow.svg"
-        },
-        {
-          "name": "Natural Language",
-          "image": "https://www.svgrepo.com/show/64578/nlp-neurolinguistic-programation.svg"
-        },
-        {
-          "name": "Recommender System",
-          "image": "https://www.svgrepo.com/show/324465/neuron-connections-neural-network.svg"
-        }
-      ],
-      "other": [
-        {
-          "name": "Github",
-          "image": "https://www.svgrepo.com/show/512317/github-142.svg"
-        },
-        {
-          "name": "SSH",
-          "image": "https://www.svgrepo.com/show/501028/terminal.svg"
-        },
-        {
-          "name": "Docker",
-          "image": "https://www.svgrepo.com/show/521276/docker-16.svg"
-        }
-      ],
+      "des": {
+        "Frontend": [
+          {
+            "description": "I am capable of designing and implementing frontend interfaces that are attractive, highly interactive, ensuring users have an outstanding user experience. My frontend expertise not only spans a wide range of technologies but also emphasizes interface design and user experience. I am dedicated to crafting modern applications that are not only visually appealing and elegant but also powerful in functionality.",
+            "skills": [
+              {
+                "name": "HTML",
+                "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg",
+                "description": "Proficient in HTML for creating well-structured, semantic web content."
+              },
+              {
+                "name": "CSS",
+                "image": "https://www.svgrepo.com/show/521591/css.svg",
+                "description": "Skilled in CSS for designing visually appealing and responsive web pages."
+              },
+              {
+                "name": "JavaScript",
+                "image": "https://www.svgrepo.com/show/510028/javascript-file.svg",
+                "description": "Experienced in JavaScript for developing dynamic and interactive web applications."
+              },
+              {
+                "name": "React",
+                "image": "https://www.svgrepo.com/show/473768/react.svg",
+                "description": "Expert in React for building efficient and maintainable single-page applications (SPAs)."
+              },
+              {
+                "name": "Redux",
+                "image": "https://www.svgrepo.com/show/378456/redux-fill.svg",
+                "description": "Proficient in Redux for state management in complex applications."
+              },
+              {
+                "name": "Tailwind CSS",
+                "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg",
+                "description": "Skilled in Tailwind CSS for rapid UI development with utility-first design."
+              },
+              {
+                "name": "Framer Motion",
+                "image": "https://www.svgrepo.com/show/371686/animation.svg",
+                "description": "Proficient in Framer Motion for creating smooth and engaging animations."
+              },
+              {
+                "name": "Component Libraries",
+                "image": "https://www.svgrepo.com/show/38133/ui8.svg",
+                "description": "Experienced in Component Libraries for building responsive and mobile-first web pages."
+              },
+              {
+                "name": "Animation Libraries",
+                "image": "https://www.svgrepo.com/show/488047/animation.svg",
+                "description": "Skilled in various animation libraries such as AnimationCss and Spring for enhancing user interactions."
+              }
+            ]
+          },
+          {
+            "description": "我能够设计并实现具有吸引力、高度交互性的前端界面，确保用户获得出色的使用体验。我的前端能力不仅体现在技术广度上，同时注重界面设计和用户体验，致力于打造既美观优雅又功能强大的现代化应用程序。",
+            "skills": [
+              {
+                "name": "HTML",
+                "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg",
+                "description": "精通HTML，能够创建结构良好、语义化的网页内容。"
+              },
+              {
+                "name": "CSS",
+                "image": "https://www.svgrepo.com/show/521591/css.svg",
+                "description": "擅长使用CSS设计视觉上吸引人的响应式网页。"
+              },
+              {
+                "name": "JavaScript",
+                "image": "https://www.svgrepo.com/show/510028/javascript-file.svg",
+                "description": "拥有JavaScript经验，能够开发动态和交互性强的网页应用。"
+              },
+              {
+                "name": "React",
+                "image": "https://www.svgrepo.com/show/473768/react.svg",
+                "description": "精通React，能够构建高效、可维护的单页应用（SPA）。"
+              },
+              {
+                "name": "Redux",
+                "image": "https://www.svgrepo.com/show/378456/redux-fill.svg",
+                "description": "熟练使用Redux进行复杂应用的状态管理。"
+              },
+              {
+                "name": "Tailwind CSS",
+                "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg",
+                "description": "擅长使用Tailwind CSS进行快速UI开发，采用实用优先的设计。"
+              },
+              {
+                "name": "Framer Motion",
+                "image": "https://www.svgrepo.com/show/371686/animation.svg",
+                "description": "精通Framer Motion，能够创建流畅且吸引人的动画效果。"
+              },
+              {
+                "name": "组件库",
+                "image": "https://www.svgrepo.com/show/38133/ui8.svg",
+                "description": "具有使用组件库构建响应式和移动优先网页的经验。"
+              },
+              {
+                "name": "动画库",
+                "image": "https://www.svgrepo.com/show/488047/animation.svg",
+                "description": "熟练使用各种动画库，如AnimationCss和Spring，提升用户交互体验。"
+              }
+            ]
+          }
+        ],
+        "Backend": [
+          {
+            "description": "In backend technologies, demonstrate proficiency in the following:",
+            "skills": [
+              {
+                "name": "MySQL",
+                "image": "https://www.svgrepo.com/show/394296/mysql.svg",
+                "description": "Experienced in MySQL for developing and managing relational databases."
+              },
+              {
+                "name": "PostgreSQL",
+                "image": "https://www.svgrepo.com/show/473760/postgresql.svg",
+                "description": "Proficient in PostgreSQL for building robust and scalable database solutions."
+              },
+              {
+                "name": "NodeJS",
+                "image": "https://www.svgrepo.com/show/473736/nodejs.svg",
+                "description": "Skilled in NodeJS for building efficient and scalable server-side applications."
+              },
+              {
+                "name": "JSON",
+                "image": "https://www.svgrepo.com/show/74933/json-file.svg",
+                "description": "Adept at working with JSON for seamless data interchange between frontend and backend."
+              },
+              {
+                "name": "TablePlus",
+                "image": "https://www.svgrepo.com/show/532228/table-list.svg",
+                "description": "Proficient in using TablePlus for efficient database management and development."
+              }
+            ]
+          },
+          {
+            "description": "后端技术方面，在以下领域展示了熟练的能力：",
+            "skills": [
+              {
+                "name": "MySQL",
+                "image": "https://www.svgrepo.com/show/394296/mysql.svg",
+                "description": "具有使用MySQL开发和管理关系数据库的经验。"
+              },
+              {
+                "name": "PostgreSQL",
+                "image": "https://www.svgrepo.com/show/473760/postgresql.svg",
+                "description": "熟练使用PostgreSQL构建稳健且可扩展的数据库解决方案。"
+              },
+              {
+                "name": "NodeJS",
+                "image": "https://www.svgrepo.com/show/473736/nodejs.svg",
+                "description": "擅长使用NodeJS构建高效且可扩展的服务器端应用程序。"
+              },
+              {
+                "name": "JSON",
+                "image": "https://www.svgrepo.com/show/74933/json-file.svg",
+                "description": "熟练使用JSON实现前后端数据交换。"
+              },
+              {
+                "name": "TablePlus",
+                "image": "https://www.svgrepo.com/show/532228/table-list.svg",
+                "description": "熟练使用TablePlus进行高效的数据库管理和开发。"
+              }
+            ]
+          }
+        ],
+        "DataBase": [
+          {
+            "description": "In the realm of database management, I bring forth a wealth of expertise, showcasing proficiency in various key areas.",
+            "skills": [
+              {
+                "name": "MySQL",
+                "image": "https://www.svgrepo.com/show/394296/mysql.svg",
+                "description": "Well-versed in MySQL for efficient and reliable database operations, including querying, creating tables, building views, filtering, and sorting."
+              },
+              {
+                "name": "PostgreSQL",
+                "image": "https://www.svgrepo.com/show/473760/postgresql.svg",
+                "description": "Comprehensive knowledge of PostgreSQL for constructing robust and scalable database solutions with advanced functionalities."
+              },
+              {
+                "name": "Tableau",
+                "image": "https://www.svgrepo.com/show/342280/tableau.svg",
+                "description": "Experienced in using Tableau for data visualization, creating insightful graphs and charts to enhance data interpretation."
+              },
+              {
+                "name": "Python Data Processing",
+                "image": "https://www.svgrepo.com/show/510150/python-file.svg",
+                "description": "Proficient in Python for data processing using libraries like Pandas, and skilled in creating visualizations with tools like Tableau."
+              },
+              {
+                "name": "Neo4j",
+                "image": "https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg",
+                "description": "Experienced in designing well-structured and optimized database architectures with Neo4j, tailored to specific application requirements."
+              }
+            ]
+          },
+          {
+            "description": "在数据库管理领域，我带来了丰富的专业知识，展示了在多个关键领域的熟练能力。",
+            "skills": [
+              {
+                "name": "MySQL",
+                "image": "https://www.svgrepo.com/show/394296/mysql.svg",
+                "description": "精通MySQL，实现高效可靠的数据库操作，包括查询、创建表、建立视图、筛选和排序。"
+              },
+              {
+                "name": "PostgreSQL",
+                "image": "https://www.svgrepo.com/show/473760/postgresql.svg",
+                "description": "全面掌握PostgreSQL，构建稳健且可扩展的数据库解决方案，具备高级功能。"
+              },
+              {
+                "name": "Tableau",
+                "image": "https://www.svgrepo.com/show/342280/tableau.svg",
+                "description": "具有使用Tableau进行数据可视化的经验，创建有洞察力的图表，增强数据解释。"
+              },
+              {
+                "name": "Python数据处理",
+                "image": "https://www.svgrepo.com/show/510150/python-file.svg",
+                "description": "熟练使用Python进行数据处理，利用Pandas等库，并擅长使用Tableau等工具创建可视化。"
+              },
+              {
+                "name": "Neo4j",
+                "image": "https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg",
+                "description": "具有使用Neo4j设计结构良好且优化的数据库架构的经验，满足特定应用需求。"
+              }
+            ]
+          }
+        ],
+        "Algorithm": [
+          {
+            "description": "My proficiency in algorithm development spans various specialized areas, showcasing a deep understanding and practical application of advanced concepts. Here are some key domains I excel in.",
+            "skills": [
+              {
+                "name": "Machine Learning",
+                "image": "https://www.svgrepo.com/show/445872/machine-learning.svg",
+                "description": "Specialized in applying machine learning algorithms for data analysis, prediction, and optimization, with expertise in regression, clustering, and classification models."
+              },
+              {
+                "name": "Deep Learning",
+                "image": "https://www.svgrepo.com/show/473805/tensorflow.svg",
+                "description": "Experienced in deep learning, leveraging neural networks for tasks like image recognition, NLP, and pattern recognition, with practical experience in CNNs and RNNs."
+              },
+              {
+                "name": "Natural Language Processing",
+                "image": "https://www.svgrepo.com/show/64578/nlp-neurolinguistic-programation.svg",
+                "description": "Adept at developing NLP algorithms for text classification, sentiment analysis, and language generation, enabling applications to understand and generate human-like language."
+              },
+              {
+                "name": "Recommender Systems",
+                "image": "https://www.svgrepo.com/show/324465/neuron-connections-neural-network.svg",
+                "description": "Hands-on experience in developing recommender systems using collaborative filtering, content-based filtering, and hybrid approaches to analyze user preferences and behavior."
+              }
+            ]
+          },
+          {
+            "description": "我在算法开发方面具备深厚的知识，展现出对各种专业领域的深刻理解和实际应用。以下是我在一些关键领域的突出表现。",
+            "skills": [
+              {
+                "name": "机器学习",
+                "image": "https://www.svgrepo.com/show/445872/machine-learning.svg",
+                "description": "熟悉应用机器学习算法和数据挖掘、预测和优化，精通回归、聚类、分类、随机森林等基本模型，有实际项目开发经验，通过对 stable diffusion的图像进行识别，生成文字描述。"
+              },
+              {
+                "name": "深度学习",
+                "image": "https://www.svgrepo.com/show/473805/tensorflow.svg",
+                "description": "具备深度学习经验，利用神经网络处理图像识别、自然语言处理和模式识别任务，实际操作过CNN和RNN，有实际项目开发经验，训练模型，一共有 8 种情绪，跟据图片判断人类的情绪。"
+              },
+              {
+                "name": "自然语言处理",
+                "image": "https://www.svgrepo.com/show/64578/nlp-neurolinguistic-programation.svg",
+                "description": "熟悉 NLP 算法和模型，熟悉 NLP 应用程序构建的通用流程，熟悉通过预训练模型构建NLP 程序，有实际项目开发经验，为一篇文章生成标题，使用 T5 模型构建。"
+              },
+              {
+                "name": "推荐系统",
+                "image": "https://www.svgrepo.com/show/324465/neuron-connections-neural-network.svg",
+                "description": "拥有开发推荐系统的实际经验，利用协同过滤、基于内容的过滤和混合方法分析用户偏好和行为，有实际项目开发经验，针对用户用餐数据，使用协同过滤、基于内容的过滤为用户生成推荐。"
+              }
+            ]
+          }
+        ],
+        "Other": [
+          {
+            "description": "My expertise extends beyond algorithmic development, encompassing a diverse set of skills and technologies that contribute to comprehensive project execution. Here are some additional areas where I excel.",
+            "skills": [
+              {
+                "name": "GitHub",
+                "image": "https://www.svgrepo.com/show/512317/github-142.svg",
+                "description": "Proficient in version control, leveraging GitHub for collaborative development, code review, and repository management."
+              },
+              {
+                "name": "SSH",
+                "image": "https://www.svgrepo.com/show/501028/terminal.svg",
+                "description": "Skilled in SSH for secure server access, remote development, and file transfer, enhancing development process security and efficiency."
+              },
+              {
+                "name": "Linux",
+                "image": "https://www.svgrepo.com/show/503411/linux.svg",
+                "description": "Experienced in Linux-based environments for command-line operations, system administration, and shell scripting."
+              },
+              {
+                "name": "Zsh",
+                "image": "https://www.svgrepo.com/show/341135/term.svg",
+                "description": "熟悉 Zsh 工具，熟悉指令封装，能大幅度提升工作效率。"
+              },
+              {
+                "name": "Docker",
+                "image": "https://www.svgrepo.com/show/521276/docker-16.svg",
+                "description": "Experienced in Docker implementation for containerization, ensuring seamless deployment and scalability of applications."
+              }
+            ]
+          },
+          {
+            "description": "我的专业知识不仅限于算法和开发，还涵盖了一系列其他IT技能，有助于全面执行项目。以下是我在其他方面的卓越表现。",
+            "skills": [
+              {
+                "name": "GitHub",
+                "image": "https://www.svgrepo.com/show/512317/github-142.svg",
+                "description": "精通版本控制，利用GitHub进行协作开发、代码审查和仓库管理。"
+              },
+              {
+                "name": "SSH",
+                "image": "https://www.svgrepo.com/show/501028/terminal.svg",
+                "description": "擅长使用SSH实现安全的服务器访问、远程开发和文件传输，提高开发过程的安全性和效率。"
+              },
+              {
+                "name": "Linux",
+                "image": "https://www.svgrepo.com/show/503411/linux.svg",
+                "description": "具有基于Linux的环境中工作的经验，了解命令行操作、系统管理和Shell脚本。"
+              },
+              {
+                "name": "Zsh",
+                "image": "https://www.svgrepo.com/show/341135/term.svg",
+                "description": "熟悉 Zsh 工具，熟悉指令封装，能大幅度提升工作效率。"
+              },
+              {
+                "name": "Docker",
+                "image": "https://www.svgrepo.com/show/521276/docker-16.svg",
+                "description": "具有Docker实施方面的实际经验，利用容器化实现应用程序的无缝部署和扩展性。"
+              }
+            ]
+          }
+        ]
+      },
       "graphs": {
         "bg": "./Graphs/capability/gallerybg.jpg",
         "code": "https://3o.hk/images/2024/04/21/code.png",
@@ -3967,26 +4181,34 @@
         },
         "visible": {
           "transition": {
-            "staggerChildren": 0.12
+            "staggerChildren": 0.15,
+            "opacity": 1,
+            "y": 0,
+            "transition": {
+              "opacity": {
+                "ease": [0.455, 0.03, 0.515, 0.955],
+                "duration": 0.9
+              },
+              "y": {
+                "ease": [0.455, 0.03, 0.515, 0.955],
+                "duration": 0.7
+              }
+            }
           }
         }
       },
       "WelcomeItem": {
         "hidden": {
           "opacity": 0,
-          "y": 60,
+          "y": 30,
           "transition": {
             "opacity": {
               "ease": [0.455, 0.03, 0.515, 0.955],
-              "duration": 3
+              "duration": 0.1
             },
             "y": {
               "ease": [0.455, 0.03, 0.515, 0.955],
-              "duration": 0.7
-            },
-            "scale": {
-              "ease": [0.455, 0.03, 0.515, 0.955],
-              "duration": 0.7
+              "duration": 0.1
             }
           }
         },
@@ -3999,10 +4221,6 @@
               "duration": 0.9
             },
             "y": {
-              "ease": [0.455, 0.03, 0.515, 0.955],
-              "duration": 0.7
-            },
-            "scale": {
               "ease": [0.455, 0.03, 0.515, 0.955],
               "duration": 0.7
             }
@@ -4030,6 +4248,10 @@
         "visible": {
           "opacity": 1,
           "x": "0"
+        },
+        "transition": {
+          "delayChildren": 0.006,
+          "staggerChildren": 0.006
         }
       },
       "ProgressBarvisblecontainer": {

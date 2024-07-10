@@ -5,7 +5,7 @@ import { LazyMotion, domAnimation, m } from "framer-motion";
 import { hideRow, bgPic, useLanguage, SelectText } from "../help/helpFunction";
 import { Link } from "react-router-dom";
 import N from "./Num";
-import BG from "./gfBG";
+import Toggle from "./Toggle";
 
 // loaddata
 const language = Database.PersonalInfo.Capability.language;
@@ -68,6 +68,7 @@ function Gooduser() {
   const lang = useLanguage();
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [open, setOpen] = useState(false);
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -80,15 +81,10 @@ function Gooduser() {
 
   const Gooduser = (
     // {/* Good User */}
-    <motion.div
-      className="grid-item large-span-8 medium-span-6 small-span-12 grid-item-check-in will-change carnival-item-in-view "
-      data-component-list="CarnivalInlineVideo TileOverlay WillChange"
-      data-analytics-section-engagement="name:let your friend know when you arrive safely"
-      data-tile-name="check-in"
-    >
-      <motion.div className="tile tile-with-overlay bg-gradient-to-br to-[30%] hover:to-[25%] transition-all from-blue-900 to-black">
+    <motion.div className="col-span-12 md:col-span-6 lg:col-span-8">
+      <motion.div className=" rounded-[28px] overflow-hidden bg-gradient-to-br to-[30%] hover:to-[25%] transition-all from-blue-900 to-black ">
         <motion.div
-          className="pb-[30%] tile-content tile-rounded z-0 "
+          className="pb-[30%] tile-content  z-0 "
           style={{
             backgroundImage: `url(https://3o.hk/images/2024/05/19/bgg.png)`,
             backgroundSize: "100% auto",
@@ -108,13 +104,37 @@ function Gooduser() {
               ease: [0.455, 0.03, 0.515, 0.955],
               duration: 1.3,
             }}
-            className="tile-header pb-[30px] tile-rounded   "
+            className="p-[20px] lg:p-[40px]  "
           >
-            <motion.div className="text-white tile-headline typography-subsection-headline text-[30px]">
-              {lang == 0 && "Good User"}
-              {lang == 1 && "绝对的能手"}
-            </motion.div>
-            <p className="tile-copy typography-subsection-copy text-white pb-[20px]">
+            <div className="flex items-center justify-between pb-4">
+              <motion.div
+                style={{
+                  lineHeight: 1.1904761905,
+                  fontWeight: 600,
+                  letterSpacing: "0.011em",
+                  // fontFamily: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+                }}
+                className="text-white font-[600] text-[30px]"
+              >
+                {lang == 0 && "Good User"}
+                {lang == 1 && "绝对的能手"}
+              </motion.div>
+              <motion.button
+                layout
+                onClick={() => setOpen(!open)}
+                className="flex"
+              >
+                <Toggle isExpanded={open} />
+              </motion.button>
+            </div>
+            <motion.div
+              style={{
+                lineHeight: 1.4211026316,
+                fontWeight: 600,
+                letterSpacing: "0.012em",
+              }}
+              className="text-[15px] lg:text-[20px] text-white pb-[50px]"
+            >
               {lang == 0 &&
                 SelectText(
                   "As a proficient user, I've mastered every app I need, ensuring that work is [flawless] and [efficient].",
@@ -125,19 +145,30 @@ function Gooduser() {
                   "作为一位熟练的使用者，我掌握了我所需的每个应用程序，确保每一项工作都完成得[无懈可击]且[高效]。",
                   "yellow-500",
                 )}
-            </p>
+
+              {open && (
+                <motion.p
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  className="pt-8 text-white"
+                  layout
+                >
+                  {lang == 0 &&
+                    "I have amassed extensive experience in the IT field, demonstrating proficiency with a wide array of professional software. I am adept at utilizing the Microsoft Office suite, including Word, Excel, and PowerPoint, to efficiently manage document editing, data analysis, and presentation creation. Additionally, I have expertise in Adobe's suite of software, such as Photoshop, Illustrator, and After Effects, enabling me to produce high-quality designs and animated effects.In the realm of development, I excel in using tools like Visual Studio Code, PyCharm, and other integrated development environments (IDEs), alongside version control systems like GitHub. Throughout my past projects, I have successfully leveraged these tools to accomplish a diverse range of tasks, showcasing my technical skills and demonstrating a high level of proficiency. My passion for learning new technologies drives me to continuously stay updated on the latest industry trends, ensuring that I remain competitive and effective in my professional endeavors."}
+                  {lang == 1 &&
+                    "我在IT领域积累了丰富的经验，精通各种专业软件。我熟练掌握Microsoft Office套件，包括Word、Excel和PowerPoint，能够高效地处理文档编辑、数据分析和演示文稿的制作。此外，我在Adobe软件套件（如Photoshop、Illustrator和After Effects）方面也有很高的造诣，能够制作出高质量的设计和动画效果。在开发方面，我擅长使用Visual Studio Code、PyCharm等集成开发环境（IDEs），以及GitHub等版本控制工具。在过去的项目中，我成功地利用这些工具完成了各种任务，展示了我的技术技能并证明了我高水平的专业能力。我对学习新技术充满热情，并始终关注最新的行业趋势，以确保我的竞争力和专业效率。"}
+                </motion.p>
+              )}
+            </motion.div>
           </motion.div>
-          <motion.div
-            // style={{ background: 'linear-gradient(135deg,#767676,#1d1d1f)' }}
-            className="mb-[30px] p-[28px] rounded-[28px] "
-          >
+          <motion.div layout className="mb-[30px] rounded-[28px] ">
             <motion.div
               variants={fastWelcomevisblecontainer}
               initial="hidden"
               whileInView="visible"
               // viewport={{ once: true }}
 
-              className="grid items-center content-center justify-center w-full h-full "
+              className="grid items-center content-center justify-center w-full h-full grid-cols-12 gap-16"
             >
               {apps.map((app, index) => (
                 <motion.div
@@ -155,7 +186,7 @@ function Gooduser() {
                   transition={{ duration: 1, delay: index * 0.05 }}
                   whileHover={{ scale: 1.02, transition: { duration: 0.5 } }}
                   whileTap={{ scale: 0.98, transition: { duration: 0.5 } }}
-                  className="grid-item large-span-3 medium-span-4 small-span-4"
+                  className="col-span-4 md:col-span-4 lg:col-span-3"
                 >
                   <motion.div className="flex justify-center flex-shrink-0">
                     <img
@@ -173,12 +204,8 @@ function Gooduser() {
             </motion.div>
           </motion.div>
         </motion.div>
-        <input
-          type="checkbox"
-          className="tile-overlay-toggle"
-          id="tile-overlay-toggle-check-in"
-        />
-        <motion.div className="tile-overlay">
+
+        {/* <motion.div className="tile-overlay">
           <label
             tabIndex={0}
             className="tile-button-wrapper"
@@ -231,7 +258,7 @@ function Gooduser() {
               </p>
             </motion.div>
           </motion.div>
-        </motion.div>
+        </motion.div> */}
       </motion.div>
     </motion.div>
   );

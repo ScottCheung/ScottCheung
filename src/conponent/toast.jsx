@@ -47,7 +47,7 @@ const Toast = ({ type, message, duration = 5000 }) => {
             <div
               className={`flex justify-between text-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-500 bg-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-100 rounded-lg darrk:bg-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-800 darrk:text-${type === "success" ? "green" : type === "error" ? "red" : "orange"}-200`}
             >
-              <div className="flex items-start flex-col">
+              <div className="flex flex-col items-start">
                 {/* success */}
                 {type === "success" ? (
                   <svg
@@ -85,7 +85,7 @@ const Toast = ({ type, message, duration = 5000 }) => {
               </div>
 
               <div className="flex flex-col justify-start ml-[10px]">
-                <span className=" text-[17px] font-black">
+                <span className=" text-[17px] font-[600]">
                   {lang == 0 &&
                     (type === "success"
                       ? "Congradulation"

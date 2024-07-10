@@ -40,70 +40,79 @@ function KeyFeature() {
         y,
         borderRadius,
       }}
-      className={`w-full flex h-[100vh]  md:h-[150vh]   overflow-hidden transform-gpu  `}
+      className={`w-full flex h-[80vh]  md:h-[150vh]   overflow-hidden transform-gpu  `}
     >
-      <motion.section className="w-full md:h-[150vh] relative overflow-hidden bg-gradient-to-r   from-lime-500  to-emerald-500 ">
+      <motion.section className="flex items-center w-full md:h-[150vh] relative overflow-hidden bg-gradient-to-r   from-lime-500  to-emerald-500 ">
         <img
-          className="w-full md:h-[150vh] object-cover absolute object-bottom"
+          className="absolute top-0 left-0 object-cover object-bottom w-full h-full transition-all"
           src={bg[0]}
         />
 
         <motion.span
-          className={`w-full h-full absolute  transition-all bg-black/60  z-40`}
+          className={`w-full h-full absolute  transition-all bg-black/60  z-0`}
         ></motion.span>
+        <div className="flex items-center justify-center w-full h-full">
+          <motion.div
+            variants={Welcomevisblecontainer}
+            initial="hidden"
+            whileInView="visible"
+            transition={StagerFadeInUp}
+            style={{
+              paddingInline:
+                windowWidth > 1024
+                  ? "calc(50vw - min(1680px, var(--global-viewport-content-responsive)) / 2)"
+                  : "10px",
+            }}
+            // viewport={{ once: true }}
 
-        <motion.div
-          variants={Welcomevisblecontainer}
-          initial="hidden"
-          whileInView="visible"
-          transition={StagerFadeInUp}
-          // viewport={{ once: true }}
-
-          className="grid visblecontainer  py-48  z-50  absolute left-0 right-0 items-center md:top-[40vh] "
-        >
-          {KeyFeatures.map((KeyFeature, index) => (
-            <motion.div
-              key={index}
-              variants={WelcomeItem}
-              // whileTap={{ scale: 0.97, transition: { duration: 0.1 } }}
-              transition={StagerFadeInUp}
-              viewport={{ margin: "-30%" }}
-              layout
-              className=" px-[20px] rounded-[28px]  hover:bg-gradient-to-t   from-lime-500/20  to-emerald-500/20  hover:backdrop-blur-md  hover:shadow-2xl focus:shadow-2xl  grid-item large-span-4 medium-span-4 small-span-6 grid-item-search h-[230px]"
-            >
-              <a
-                href={`${KeyFeature.href}`}
-                className="flex justify-start w-full item-center md:justify-center"
+            className="z-50 grid w-full grid-cols-12 gap-8 "
+          >
+            {KeyFeatures.map((KeyFeature, index) => (
+              <motion.div
+                key={index}
+                variants={WelcomeItem}
+                // whileTap={{ scale: 0.97, transition: { duration: 0.1 } }}
+                transition={StagerFadeInUp}
+                viewport={{ margin: "-30%" }}
+                layout
+                className=" px-[20px] rounded-[28px]  hover:bg-gradient-to-t   from-lime-500/20  to-emerald-500/20  hover:backdrop-blur-md  hover:shadow-2xl focus:shadow-2xl relative col-span-6 md:col-span-4 lg:col-span-4 "
               >
-                <div className="absolute text-[50px] right-20 top-20 font-semibold  text-white ">
-                  <N n={KeyFeature.no} d={1.5} />
-                </div>
-                <div className="flex justify-start w-full item-center md:justify-center my-[30px]">
-                  <div className="flex flex-col items-center text-transparent typography-card-headline bg-gradient-to-br bg-clip-text from-lime-500 to-emerald-500">
-                    <i
-                      className={`   text-[100px]  fi  ${KeyFeature.icon}`}
-                    ></i>
-                    {KeyFeature.keyfeature[lang]}
+                <a
+                  href={`${KeyFeature.href}`}
+                  className="flex flex-col items-center justify-center p-[28px] w-full item-center md:justify-center"
+                >
+                  <div className="flex items-center text-[100px] lg:text-[130px]  font-semibold  text-white ">
+                    <N n={KeyFeature.no} d={1.5} />
                   </div>
-                </div>
-              </a>
+                  <div className="flex items-center justify-center w-full -mt-[30px]">
+                    <div className="flex gap-[20px] items-center text-transparent  bg-gradient-to-br bg-clip-text from-lime-500 to-emerald-500">
+                      <i
+                        className={`text-[30px] md:text-[40px]  lg:text-[50px]  fi  ${KeyFeature.icon}`}
+                      ></i>
+                      <p className="flex text-[15px] md:text-[20px] lg:text-[30px] font-[900]">
+                        {KeyFeature.keyfeature[lang]}
+                      </p>
+                    </div>
+                  </div>
+                </a>
 
-              <div
-                data-popover
-                id={`keyFeatureDes-${index}`}
-                role="tooltip"
-                className="absolute z-10 invisible inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
-              >
-                <div className="px-6 py-4">
-                  <p className="text-[13px] text-left font-mono">
-                    {KeyFeature.description[lang]}
-                  </p>
+                <div
+                  data-popover
+                  id={`keyFeatureDes-${index}`}
+                  role="tooltip"
+                  className="absolute z-10 invisible inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800"
+                >
+                  <div className="px-6 py-4">
+                    <p className="text-[13px] text-left font-mono">
+                      {KeyFeature.description[lang]}
+                    </p>
+                  </div>
+                  <div data-popper-arrow></div>
                 </div>
-                <div data-popper-arrow></div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
       </motion.section>
     </motion.div>
   );
