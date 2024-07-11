@@ -6,11 +6,13 @@ import data from "./Navbardata.json";
 import { scrollToHash } from "../../help/helpFunction.js";
 import LifeCate from "../lifeCategory.jsx";
 import ContactCate from "../contactCategory.jsx";
+import packageinfo from "../../../package.json";
 
 import Toast from "../toast.jsx";
 
 const updateMonth = 7;
 const updateDay = 12;
+const version = packageinfo.version.toString();
 // 获取当前日期
 const currentDate = new Date();
 
@@ -277,7 +279,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                     : ""
                                 }
                               >
-                                {`${updateMessage} ${["Updates", "更新"][lang]}`}
+                                {` ${updateMessage} ${["Updates", "更新"][lang]} ${version} `}
                               </span>
                             </p>
                           </motion.div>
