@@ -7,30 +7,47 @@ import KeyFeature from "../conponent/KeyFeature";
 
 export default function Example() {
   return (
-    <div className="bg-gradient-to-br from-pink-100 from-10% via-pink-50 via-50% to-white/0 ">
+    <div className="bg-gradient-to-b from-pink-100 from-10% via-blue-500/40 to-white ">
       <Navbar />
-      <div className="flex flex-col w-full px-0 justify-center overflow-hidden md:px-[50px]">
-        <motion.div
-          className="flex flex-col bg-sky-200 rounded-[28px] h-[130vh]  mt-[100px] mb-[100vh] w-full animate__animated animate__zoomIn relative"
-          style={{
-            ...bgPic(
-              "https://3o.hk/images/2024/01/19/LearningAbility.png",
-              "800px auto",
-              "bottom right",
-            ),
-          }}
-        >
-          <div className="h-[50vh] ">
-            {" "}
+
+      <div className="flex relative  rounded-[28px] p-[28px] ">
+        {/* PlannetBackground */}
+
+        <motion.div className="flex flex-col z-20  rounded-[28px] overflow-hidden h-[130vh]  mt-[100px]  w-full animate__animated animate__zoomIn relative">
+          <motion.span
+            layout
+            className={`absolute  flex blur-[5px] top-0 bottom-0 opacity-50 left-0 right-0  z-10 `}
+          >
+            <div
+              style={{
+                backgroundImage: `url(https://newsroom.unsw.edu.au/sites/default/files/styles/full_width__2x/public/thumbnails/image/2022-11-02-students-library-lawn-0002_2.jpg)`,
+                backgroundSize: "100% auto",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center bottom",
+              }}
+              className="w-full h-full animate__animated animate__fadeInDown "
+            ></div>
+          </motion.span>
+
+          <div
+            style={{
+              ...bgPic(
+                "https://3o.hk/images/2024/01/19/LearningAbility.png",
+                "800px auto",
+                "bottom right",
+              ),
+            }}
+            className="z-20 w-full h-full "
+          >
             <div className=" flex font-black h-[60vh] text-[30px] justify-center items-center animate__animated animate__fadeInUp md:text-[70px] lg:text-[150px]">
               I have 4 majors
             </div>
           </div>
-          <Education hideTittle={true} simpleVer={true} />
         </motion.div>
       </div>
-      <KeyFeature className="rounded-[28px] mt-[50vh] p-[28px] overflow-hidden " />
-      <Contact className="rounded-[28px] mt-[50vh] p-[28px] overflow-hidden " />
+      <Education hideTittle={true} simpleVer={true} />
+      <KeyFeature />
+      <Contact />
     </div>
   );
 }

@@ -258,7 +258,9 @@ function WhyMe({ hideTittle }) {
           </AnimatePresence>
         </ScrollableContainer>
       </motion.div>
-      {Components.whymeCard === "visible" && <WhyMeCard />}
+      <AnimatePresence>
+        {Components.whymeCard === "visible" && <WhyMeCard />}
+      </AnimatePresence>
     </motion.div>
   );
 

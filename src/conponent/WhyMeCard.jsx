@@ -21,7 +21,7 @@ const containerVariants = {
 };
 
 function WhymeCard() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState(true);
   const { Components, setComponents, whymeCard, setWhymeCard } =
     useAppContext();
   const data = Database.PersonalInfo.Education;
@@ -105,6 +105,7 @@ function WhymeCard() {
   };
 
   const closeCard = () => {
+    setShow(false);
     setComponents((prevComponents) => ({
       ...prevComponents,
       NavBar: "visible",
@@ -112,10 +113,9 @@ function WhymeCard() {
     }));
     setWhymeCard(null);
     UnBanScroll();
-    setShow(false);
   };
 
-  const WhymeCard = (
+  const WhymeCard = show && (
     <div className="w-full h-[100vh] hidden lg:block fixed top-0 bottom-0 left-0 right-0 z-50 ">
       <motion.span
         onClick={() => {
