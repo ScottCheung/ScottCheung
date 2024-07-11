@@ -145,7 +145,7 @@ function Skill() {
       >
         <motion.div
           id="blackOverlay"
-          className={`absolute top-0 bottom-0 left-0 right-0 z-10 invisible transition-all lg:visible overflow-hidden ${BigRadius} shadow-2xl`}
+          className={`absolute top-0 bottom-0 left-0 right-0 z-10 hidden transition-all lg:flex overflow-hidden ${BigRadius} shadow-2xl`}
         >
           <motion.span className="relative flex w-full h-full transition-all duration-1000 ">
             {/* PlannetBackground */}
@@ -162,7 +162,7 @@ function Skill() {
             {/* GalaxyBackground */}
             <motion.span
               layout
-              className="absolute top-0 bottom-0 left-0 right-0 z-0"
+              className="absolute top-0 bottom-0 left-0 right-0 z-0 "
             >
               <BG />
             </motion.span>

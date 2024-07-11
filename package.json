@@ -27,6 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prepublish": "npm version patch",
     "publish": "rm -rf docs && GENERATE_SOURCEMAP=false react-scripts build && mv build docs && echo 'xianzhe.site' > docs/CNAME && git add . && git commit -m 'deploy' && git push",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

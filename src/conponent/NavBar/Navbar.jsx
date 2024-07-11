@@ -10,7 +10,7 @@ import ContactCate from "../contactCategory.jsx";
 import Toast from "../toast.jsx";
 
 const updateMonth = 7;
-const updateDay = 10;
+const updateDay = 12;
 // 获取当前日期
 const currentDate = new Date();
 
