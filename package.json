@@ -27,7 +27,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prepublish": "echo 'VERSION_TYPE is set to: $VERSION_TYPE'; git diff-index --quiet HEAD -- || { echo 'Git working directory not clean. Commit or stash changes first.'; exit 1; }; git tag -d v$(node -p -e \"require('./package.json').version\") && npm version patch",
+    "prepublish": "npm version patch",
     "publish": "rm -rf docs && GENERATE_SOURCEMAP=false react-scripts build && mv build docs && echo 'xianzhe.site' > docs/CNAME && git add . && git commit -m 'deploy' && git push",
     "TW": "tailwindcss build public/style/style.css -o output.css"
   },
