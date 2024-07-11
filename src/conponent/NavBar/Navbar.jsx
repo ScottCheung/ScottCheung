@@ -170,6 +170,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const navbar = (
     <AnimatePresence>
       <motion.div
+        layout="position"
+        transition={{ duration: 1.2 }}
         className={`w-full z-50  duration-700 fixed  ${
           isScrolling || Components.NavBar === "hide"
             ? "  -top-[100px]"
@@ -186,7 +188,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             onMouseLeave={() => setSelectedTab(null)}
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             layout
             className={`flex flex-col w-full  ${BG} py-[10px] 
         ${
@@ -209,11 +211,13 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             <motion.div className="flex items-center justify-center w-full ">
               <motion.div
                 layout
+                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                 className={`flex items-center justify-center flex-col  relative w-full '`}
               >
                 {/* 最主要的内容 */}
                 <motion.div
                   layout
+                  transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                   className="flex items-center justify-between w-full max-w-[1200px] "
                 >
                   <motion.button
@@ -245,13 +249,21 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         >
                           <motion.div
                             layout
+                            transition={{
+                              duration: 1.2,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
                             className={`flex  text-nowrap text-left items-start justify-start animate__animated animate__zoomIn transition-all font-[600] ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[17px]  md:text-[30px] lg:text-[35px] ` : "text-[17px] lg:text-[17px]"}`}
                           >
                             {data.Avatar.Webname[lang]}
                           </motion.div>
                           <motion.div
-                            layout="position"
                             href="/info"
+                            layout
+                            transition={{
+                              duration: 1.2,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
                             style={{ animationDelay: "0.5s" }}
                             className={`flex text-nowrap animate__animated animate__zoomIn transition-all text-left ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[13px]` : "text-[10px]"}`}
                           >

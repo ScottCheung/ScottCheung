@@ -114,6 +114,7 @@ function Gooduser() {
                   letterSpacing: "0.011em",
                   // fontFamily: SF Pro Display, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
                 }}
+                transition={{ duration: 0.5 }}
                 className="text-white font-[600] text-[30px]"
               >
                 {lang == 0 && "Good User"}
@@ -121,7 +122,7 @@ function Gooduser() {
               </motion.div>
               <motion.button
                 layout
-                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                transition={{ duration: 0.5 }}
                 onClick={() => setOpen(!open)}
                 className="flex"
               >
@@ -136,13 +137,7 @@ function Gooduser() {
               }}
               className="text-[15px] flex flex-col lg:text-[20px] gap-[28px] text-white pb-[50px]"
             >
-              <motion.p
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: "auto" }}
-                className="flex text-white"
-                layout
-                transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              >
+              <motion.p layout transition={{ duration: 1 }}>
                 {lang == 0 &&
                   SelectText(
                     "As a proficient user, I've mastered every app I need, ensuring that work is [flawless] and [efficient].",
@@ -157,11 +152,11 @@ function Gooduser() {
 
               {open && (
                 <motion.p
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: "auto" }}
+                  initial={{ opacity: 0, scale: 0.9, height: 0 }}
+                  animate={{ opacity: 1, scale: 1, height: "auto" }}
                   className="flex text-white"
                   layout
-                  transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                 >
                   {lang == 0 &&
                     "I have amassed extensive experience in the IT field, demonstrating proficiency with a wide array of professional software. I am adept at utilizing the Microsoft Office suite, including Word, Excel, and PowerPoint, to efficiently manage document editing, data analysis, and presentation creation. Additionally, I have expertise in Adobe's suite of software, such as Photoshop, Illustrator, and After Effects, enabling me to produce high-quality designs and animated effects.In the realm of development, I excel in using tools like Visual Studio Code, PyCharm, and other integrated development environments (IDEs), alongside version control systems like GitHub. Throughout my past projects, I have successfully leveraged these tools to accomplish a diverse range of tasks, showcasing my technical skills and demonstrating a high level of proficiency. My passion for learning new technologies drives me to continuously stay updated on the latest industry trends, ensuring that I remain competitive and effective in my professional endeavors."}

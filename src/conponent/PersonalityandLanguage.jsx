@@ -86,9 +86,10 @@ function PersonalityandLanguage() {
       data-tile-name="search"
     >
       <motion.div layout className="flex flex-col h-full gap-[28px] relative">
+        {/* INFJ */}
         <motion.div
           initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+          whileInView={{ opacity: 1, height: "auto" }}
           layout
           transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true, offset: 0.5 }}
@@ -101,7 +102,7 @@ function PersonalityandLanguage() {
           <div className="pb-[70%] flex-grow">
             <motion.div
               initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
+              whileInView={{ opacity: 1, height: "auto" }}
               transition={{
                 ease: [0.455, 0.03, 0.515, 0.955],
                 duration: 2,
@@ -190,96 +191,104 @@ function PersonalityandLanguage() {
           ></motion.div>
         </motion.div>
 
+        {/* Language */}
         <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1, height: "auto" }}
           layout
-          variants={ProgressBarvisblecontainer}
-          initial="hidden"
-          whileInView="visible"
-          className="rounded-[28px] flex-1 h-full relative min-h-[600px]"
-          style={{
-            background:
-              "linear-gradient(to top left, #9795f0 0%, #fbc8d4 100%)",
-          }}
+          transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
         >
           <motion.div
             layout
-            className="absolute bottom-0   left-0 right-0 h-[40vh] md:h-[40vh]"
+            variants={ProgressBarvisblecontainer}
+            initial="hidden"
+            whileInView="visible"
+            className="rounded-[28px] flex-1 h-full relative min-h-[600px]"
             style={{
-              backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj})`,
-              backgroundSize: "80% auto",
-              backgroundRepeat: "no-repeat",
-              backgroundPosition: "center bottom",
-              filter: "drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))",
+              background:
+                "linear-gradient(to top left, #9795f0 0%, #fbc8d4 100%)",
             }}
-          ></motion.div>
-          <div className="p-[20px] lg:p-[40px] flex-grow">
-            <div className="w-full h-full">
-              <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{
-                  ease: [0.455, 0.03, 0.515, 0.955],
-                  duration: 2,
-                }}
-                className="flex justify-between"
-              >
-                <h3
-                  style={{
-                    lineHeight: 1.19048,
-                    fontWeight: 600,
-                    letterSpacing: "0.011em",
+          >
+            <motion.div
+              layout
+              className="absolute bottom-0   left-0 right-0 h-[40vh] md:h-[40vh]"
+              style={{
+                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj})`,
+                backgroundSize: "80% auto",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center bottom",
+                filter: "drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))",
+              }}
+            ></motion.div>
+            <div className="p-[20px] lg:p-[40px] flex-grow">
+              <div className="w-full h-full">
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{
+                    ease: [0.455, 0.03, 0.515, 0.955],
+                    duration: 2,
                   }}
-                  className="flex items-center py-4 text-[30px] text-purple-900"
+                  className="flex justify-between"
                 >
-                  {lang == 0 && "Language"}
-                  {lang == 1 && "语言能力"}
-                </h3>
-                <a
-                  href="https://en.wikipedia.org/wiki/Multilingualism"
-                  className="py-4 text-purple-900 text-[17px] font-[600]"
-                >
-                  {lang == 0 && "Multi-language"}
-                  {lang == 1 && "多语言"}
-                </a>
-              </motion.div>
-              <motion.div className="space-y-8">
-                {language[lang].map((personality, index) => (
-                  <motion.div>
-                    <motion.div
-                      key={index}
-                      className={`${
-                        personality.color1 + " " + personality.color2
-                      } flex justify-between bg-gradient-to-r text-transparent bg-clip-text pb-[10px]`}
-                    >
-                      <motion.div className="text-[18px] font-[500]">
-                        {personality.name}
-                      </motion.div>
-                      <motion.div className="flex text-[20px] font-[600]">
-                        <N n={personality.label} d={3} />
-                      </motion.div>
-                    </motion.div>
-                    <motion.div className="w-full h-[15px] mb-4 rounded-full bg-white/20 darrk:bg-gray-700">
+                  <h3
+                    style={{
+                      lineHeight: 1.19048,
+                      fontWeight: 600,
+                      letterSpacing: "0.011em",
+                    }}
+                    className="flex items-center py-4 text-[30px] text-purple-900"
+                  >
+                    {lang == 0 && "Language"}
+                    {lang == 1 && "语言能力"}
+                  </h3>
+                  <a
+                    href="https://en.wikipedia.org/wiki/Multilingualism"
+                    className="py-4 text-purple-900 text-[17px] font-[600]"
+                  >
+                    {lang == 0 && "Multi-language"}
+                    {lang == 1 && "多语言"}
+                  </a>
+                </motion.div>
+                <motion.div className="space-y-8">
+                  {language[lang].map((personality, index) => (
+                    <motion.div>
                       <motion.div
                         key={index}
-                        variants={{
-                          hidden: { opacity: 0, width: "0%" },
-                          visible: {
-                            opacity: 1,
-                            width: `${personality.column}`,
-                          },
-                        }}
-                        transition={{ duration: 1, delay: (index + 4) * 0.1 }}
                         className={`${
                           personality.color1 + " " + personality.color2
-                        } bg-gradient-to-r  h-[15px] rounded-full`}
-                        style={{ width: `0%` }}
-                      ></motion.div>
+                        } flex justify-between bg-gradient-to-r text-transparent bg-clip-text pb-[10px]`}
+                      >
+                        <motion.div className="text-[18px] font-[500]">
+                          {personality.name}
+                        </motion.div>
+                        <motion.div className="flex text-[20px] font-[600]">
+                          <N n={personality.label} d={3} />
+                        </motion.div>
+                      </motion.div>
+                      <motion.div className="w-full h-[15px] mb-4 rounded-full bg-white/20 darrk:bg-gray-700">
+                        <motion.div
+                          key={index}
+                          variants={{
+                            hidden: { opacity: 0, width: "0%" },
+                            visible: {
+                              opacity: 1,
+                              width: `${personality.column}`,
+                            },
+                          }}
+                          transition={{ duration: 1, delay: (index + 4) * 0.1 }}
+                          className={`${
+                            personality.color1 + " " + personality.color2
+                          } bg-gradient-to-r  h-[15px] rounded-full`}
+                          style={{ width: `0%` }}
+                        ></motion.div>
+                      </motion.div>
                     </motion.div>
-                  </motion.div>
-                ))}
-              </motion.div>
+                  ))}
+                </motion.div>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       </motion.div>
     </motion.div>
