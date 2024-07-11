@@ -40,7 +40,7 @@ function KeyFeature() {
         y,
         borderRadius,
       }}
-      className={`w-full flex h-[80vh]  md:h-[150vh]   overflow-hidden transform-gpu  `}
+      className={`w-full flex h-[80vh]  md:h-[150vh]   overflow-hidden  `}
     >
       <motion.section className="flex items-center w-full md:h-[150vh] relative overflow-hidden bg-gradient-to-r   from-lime-500  to-emerald-500 ">
         <img

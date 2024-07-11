@@ -343,6 +343,7 @@ function WorkExperience() {
       <ScrollableContainer
         toRight={true}
         gap={80}
+        containerPY={50}
         header={{
           cont: lang == 0 ? "Work Experience" : "工作经验",
           icon: "fi-rr-tool-box",
@@ -388,15 +389,16 @@ function WorkExperience() {
               />
 
               {isOpen && (
-                <motion.div onClick={(e) => e.stopPropagation()}>
-                  <motion.div
-                    layout
-                    layoutId={`card-container-${
-                      selectedCard.type + selectedCard.company + selectedCard.id
-                    }`}
-                    transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-                    className="relative z-0 flex  lg:rounded-[28px] flex-wrap scrollbar-hide  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg max-h-[100vh] overflow-auto lg:overflow-hidden"
-                  >
+                <motion.div
+                  className="flex"
+                  layout
+                  layoutId={`card-container-${
+                    selectedCard.type + selectedCard.company + selectedCard.id
+                  }`}
+                  transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <motion.div className="relative z-0 flex  lg:rounded-[28px] flex-wrap scrollbar-hide  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg  overflow-auto lg:overflow-hidden">
                     <motion.div
                       layoutId={`card-img-${selectedCard.id}`}
                       transition={{
