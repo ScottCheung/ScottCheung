@@ -170,8 +170,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const navbar = (
     <AnimatePresence>
       <motion.div
-        layout="position"
-        transition={{ duration: 1.2 }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         className={`w-full z-50  duration-700 fixed  ${
           isScrolling || Components.NavBar === "hide"
             ? "  -top-[100px]"
@@ -181,7 +180,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
         <motion.nav
           onMouseEnter={() => setBgwhite(true)}
           onMouseLeave={() => setBgwhite(false)}
-          layout
+          layout="position"
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className={`  w-full flex flex-col `}
         >
           <motion.div
@@ -216,25 +216,28 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
               >
                 {/* 最主要的内容 */}
                 <motion.div
-                  layout
+                  layout="position"
                   transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                   className="flex items-center justify-between w-full max-w-[1200px] "
                 >
                   <motion.button
+                    layout="position"
+                    transition={{
+                      duration: 1.2,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
                     whileHover={{ scale: 1.01, transition: { duration: 1 } }}
                     whileTap={{ scale: 0.99 }}
-                    layout
-                    data-popover-target="version"
-                    className="z-50 flex items-center justify-center h-full"
+                    className="z-50 inline-flex items-center justify-center h-full "
                   >
                     <a
                       href="/info"
-                      className="flex items-center justify-center h-full animate__animated animate__fadeInUp"
+                      className="inline-flex items-center justify-center h-full animate__animated animate__fadeInUp"
                     >
-                      <div className="flex items-center h-full gap-8">
+                      <div className="inline-flex items-center h-full gap-8">
                         <motion.img
                           layout
-                          className={` transition-all animate__animated animate__zoomIn ${isTop ? "w-32 rounded-full" : "w-20 rounded-[12px]"}  shadow-lg`}
+                          className={`  animate__animated animate__zoomIn ${isTop ? "w-32 rounded-full" : "w-20 rounded-[12px]"}  shadow-lg`}
                           src="https://3o.hk/images/2024/01/14/avatar.th.jpg"
                           alt="Xianzhe's Page"
                         />
@@ -248,24 +251,14 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           className={`flex flex-col justify-between  ${isTop ? "w-50  rounded-full" : "w-32 "} `}
                         >
                           <motion.div
-                            layout
-                            transition={{
-                              duration: 1.2,
-                              ease: [0.22, 1, 0.36, 1],
-                            }}
-                            className={`flex  text-nowrap text-left items-start justify-start animate__animated animate__zoomIn transition-all font-[600] ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[17px]  md:text-[30px] lg:text-[35px] ` : "text-[17px] lg:text-[17px]"}`}
+                            className={`flex  text-nowrap text-left items-start justify-start animate__animated animate__zoomIn duration-1000 transition-all font-[600] ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[17px]  md:text-[30px] lg:text-[35px] ` : "text-[17px] lg:text-[17px]"}`}
                           >
                             {data.Avatar.Webname[lang]}
                           </motion.div>
                           <motion.div
                             href="/info"
-                            layout
-                            transition={{
-                              duration: 1.2,
-                              ease: [0.22, 1, 0.36, 1],
-                            }}
                             style={{ animationDelay: "0.5s" }}
-                            className={`flex text-nowrap animate__animated animate__zoomIn transition-all text-left ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[13px]` : "text-[10px]"}`}
+                            className={`flex text-nowrap animate__animated animate__zoomIn transition-all  duration-1000 text-left ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[13px]` : "text-[10px]"}`}
                           >
                             {data.Avatar.helloword[lang]}
                             <p
@@ -302,7 +295,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     <AnimatePresence className="flex">
                       {windowWidth > 876 && (
                         <motion.div
-                          layout
+                          layout="position"
                           key="navbarItem"
                           transition={{ duration: 0.3 }}
                           exit={{
@@ -317,7 +310,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         >
                           {navbarItem.map((item, index) => (
                             <motion.button
-                              layout
+                              layout="position"
                               key={item.name}
                               initial={{ opacity: 0, y: 30 }}
                               animate={{
@@ -352,7 +345,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               >
                                 <div className="flex items-center justify-center w-full transition-all">
                                   <i
-                                    className={`flex items-center ${
+                                    className={`flex transition-all  duration-1000  items-center ${
                                       isTopTextColorWhite & isTop
                                         ? "text-white text-[25px]"
                                         : "text-gray-900 text-[20px]"
@@ -360,11 +353,11 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                   ></i>
                                 </div>
                                 <div
-                                  className={`flex items-center ${
+                                  className={`flex transition-all  duration-1000  items-center ${
                                     isTopTextColorWhite & isTop
                                       ? "text-white text-[15px]"
                                       : "text-gray-900 text-[15px]"
-                                  } md:hidden lg:flex transition-all`}
+                                  } md:hidden lg:flex `}
                                 >
                                   {item.name[lang]}
                                 </div>
@@ -706,30 +699,25 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             transition: { duration: 0.3, type: "easeInOut" },
           }}
           exit={{ opacity: 0, scale: 0 }}
-          transition={{ duration: 0.7 }}
+          transition={{ duration: 1.2 }}
           whileTap={{ scale: 0.9, opacity: 1 }}
           whileHover={{ scale: 1.1, opacity: 1 }}
-          onClick={() => {
-            window.scrollTo({
-              top: 0,
-              behavior: "smooth",
-            });
-          }}
-          className={` anz-card-modal-link fixed bottom-10 lg:right-20 right-10 z-50 drop-shadow-2xl `}
+          // onClick={scrollToTop}
+          className={`fixed bottom-10 lg:right-20 right-10 z-50  `}
         >
-          <div className="px-4 py-2 text-white rounded-full card-modal-trigger modal-trigger card-cta-modal-button lg:scale-150">
+          <div className="px-4 py-2 text-white rounded-full lg:scale-150">
             <div className="modal-trigger-visblecontainer ">
               <motion.span
                 initial={{ rotate: 90 }}
                 whileTap={{ scale: 0.9, opacity: 0.8, rotate: 270 }}
-                className="bg-white shadow-xl opacity-70 card-cta-modal-button-icon hover:opacity-100 drop-shadow-md "
+                className="bg-white opacity-70 hover:opacity-100 "
                 style={buttonStyles}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="8 8 20 20"
                   style={iconStyles}
-                  className="card-cta-modal-button-small-icon card-modal-button-small-icon w-[18px] h-[18px] text-white rotate-180"
+                  className=" w-[18px] h-[18px] text-white rotate-180"
                 >
                   <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
                 </svg>
