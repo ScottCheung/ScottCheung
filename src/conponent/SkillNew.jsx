@@ -106,7 +106,7 @@ function Skill() {
               className="flex items-start col-span-12 pb-2 md:col-span-6 lg:col-span-4 xl:col-span-3 gap-x-[20px]"
             >
               <motion.div
-                className="flex flex-shrink-0 justify-center items-center w-[50px] h-[50px] p-[10px] bg-gradient-to-br rounded-[9px]"
+                className={`flex flex-shrink-0 justify-center items-center w-[50px] h-[50px] p-[10px] from-[-200%] to-[200%] bg-gradient-to-br rounded-[9px]`}
                 transition={{ duration: 1, delay: index * 0.15 }}
               >
                 <img src={skill.image} alt={skill.name} />
@@ -114,7 +114,7 @@ function Skill() {
 
               <div
                 style={{ animationDelay: `${0.18 * index}s` }}
-                className={`flex flex-col animate__animated animate__zoomIn text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2}  from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text`}
+                className={`flex flex-col animate__animated animate__zoomIn text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2}   bg-gradient-to-br bg-clip-text`}
               >
                 <motion.strong className="flex font-[600] text-[13px] md:text-[15px] lg:text-[20px] items-start pb-4">
                   {skill.name}
@@ -165,7 +165,7 @@ function Skill() {
         </motion.div>
 
         <motion.div
-          className={`z-40 relative h-auto transition-all   tile-content overflow-hidden ${BigRadius}`}
+          className={`z-40 relative h-auto transition-all  overflow-hidden ${BigRadius}`}
           style={{
             backgroundImage:
               windowWidth < 1080
@@ -179,17 +179,20 @@ function Skill() {
           <span
             className={`absolute visible transition-all lg:invisible top-0 bottom-0 left-0 right-0 from-[#050D19]/70 to-slate-950/70 bg-gradient-to-br z-0 ${BigRadius}`}
           ></span>
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 2 }}
-            className={`flex font-[900] items-center justify-center transition-all text-6xl md:text-7xl lg:text-8xl z-30 from-${selectedTab.ratio1} to-${selectedTab.ratio2}  from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br text-transparent bg-clip-text text-center mt-[30px] mb-[80px]`}
-          >
-            <i className="flex items-center fi fi-rr-circle-user mr-[20px]"></i>
-            <p className="flex items-center ">
-              {lang == 0 ? "Capability" : "能力"}
-            </p>
-          </motion.div>
+          <div className="flex items-center justify-center">
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 2 }}
+              className={`inline-flex  font-[900] items-center justify-center transition-all text-6xl md:text-7xl lg:text-8xl z-30 from-${selectedTab.ratio1} to-${selectedTab.ratio2}  from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-r text-transparent bg-clip-text text-center mt-[30px] mb-[80px]`}
+            >
+              <i className="flex items-center fi fi-rr-circle-user mr-[20px] text-transparent bg-clip-text"></i>
+              <p className="flex items-center text-transparent bg-clip-text">
+                {lang == 0 ? "Capability" : "能力"}
+              </p>
+            </motion.div>
+          </div>
+
           <motion.div className="z-30 ">
             <motion.ul
               layout
@@ -218,7 +221,7 @@ function Skill() {
                     </h3>
                     {tab === selectedTab ? (
                       <motion.div
-                        className={`mt-[10px] from-${tab.ratio1} to-${tab.ratio2}  from-${tab.color1} to-${tab.color2} bg-gradient-to-r w-full h-[3px] lg:h-[6px] rounded-full z-50`}
+                        className={`mt-[10px] from-[-150%] to-[150%] from-${tab.color1} to-${tab.color2} bg-gradient-to-r w-full h-[3px] lg:h-[6px] rounded-full z-50`}
                         layoutId="underline"
                       />
                     ) : null}

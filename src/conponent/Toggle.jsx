@@ -5,9 +5,10 @@ const SvgSwitcher = ({ isExpanded, size }) => {
   return (
     <motion.div
       layout
+      transition={{ duration: 0.5 }}
       className={`flex hover:lg:border-white/70 border-transparent gap-2 lg:gap-4 text-white/50 text-[15px] lg:text-[20px] border-[2px] items-center  justify-center space-x-2 cursor-pointer   rounded-full px-3 py-1.5 md:px-4 md:py-2 lg:px-6 lg:py-3`}
     >
-      <motion.p className="block ">
+      <motion.p transition={{ duration: 0.5 }} className="block ">
         {isExpanded ? "Collapse" : "Expand"}
       </motion.p>
       <motion.svg
@@ -24,6 +25,7 @@ const SvgSwitcher = ({ isExpanded, size }) => {
             fill="none"
             strokeLinejoin="round"
             fillRule="evenodd"
+            transition={{ duration: 0.5 }}
             animate={{
               points: "15 7.72 8.5 1.13 2 7.72",
             }}

@@ -93,7 +93,7 @@ function Otherability() {
   }, []);
 
   const Otherability = (
-    <motion.div className="h-auto rounded-[28px] grid-item col-span-12 md:col-span-6 lg:col-span-8">
+    <motion.div className="h-auto rounded-[28px] backdrop-contrast-125 col-span-12 md:col-span-6 lg:col-span-8">
       <motion.div
         className="bg-black rounded-[28px] pb-[50%]"
         style={{
@@ -104,7 +104,7 @@ function Otherability() {
         }}
       >
         {/* Skill */}
-        <motion.div className="rounded-[28px] p-[20px]   backdrop-contrast-125 lg:p-[36px]  ">
+        <motion.div className="rounded-[28px] p-[20px]   lg:p-[36px]  ">
           {Object.entries(Skill.skills[lang]).map(([category, list], index) => (
             <motion.div
               key={index + "skill"}

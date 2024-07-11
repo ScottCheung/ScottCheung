@@ -4,6 +4,7 @@ import KeyFeature from "../conponent/KeyFeature";
 import { motion, AnimatePresence } from "framer-motion";
 import { hideRow, useLanguage, ScrollToTop } from "../help/helpFunction";
 import CertificateGallery from "../conponent/CertificateGallery";
+import Contact from "../conponent/Contact";
 
 const Certificates = database.PersonalInfo.Certificates;
 const visblecontainer = database.Animation.Variant.fastWelcomevisblecontainer;
@@ -141,6 +142,7 @@ export default function material() {
           <KeyFeature />
         </main>
       </div>
+      <Contact />
     </div>
   );
 }

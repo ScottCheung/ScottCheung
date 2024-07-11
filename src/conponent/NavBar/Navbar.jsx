@@ -628,7 +628,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     className="md:mx-[10%] mt-[30px] flex relative gap-x-[20px] duration-200 "
                   >
                     <img
-                      className=" max-w-[320px] absolute top-[50%] left-0 transition-all"
+                      style={{
+                        filter: "drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))",
+                      }}
+                      className=" max-w-[320px]  absolute top-[50%] left-0 transition-all"
                       src={data.dialog}
                     ></img>
                     <motion.div

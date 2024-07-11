@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "../help/helpFunction";
 import { useParams } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
+import Contact from "../conponent/Contact.jsx";
 
 // if (pathname === '/major/ArtificalInteligence') {
 //   data = course.filter((item) => item.id === "AI");
@@ -281,6 +282,7 @@ export default function Example() {
           </main>
         </motion.div>
       </AnimatePresence>
+      <Contact />
     </div>
   );
 }

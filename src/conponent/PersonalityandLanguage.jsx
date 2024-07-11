@@ -87,12 +87,16 @@ function PersonalityandLanguage() {
     >
       <motion.div layout className="flex flex-col h-full gap-[28px] relative">
         <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
           layout
+          transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
+          viewport={{ once: true, offset: 0.5 }}
           style={{
             background:
               "linear-gradient(to bottom right, rgba(0, 0, 0,  1), rgba(0, 100, 0, 1))",
           }}
-          className="flex-1 p-[20px] lg:p-[40px] rounded-[28px] relative"
+          className="flex-1  p-[20px] lg:p-[40px] rounded-[28px] relative"
         >
           <div className="pb-[70%] flex-grow">
             <motion.div
@@ -199,12 +203,13 @@ function PersonalityandLanguage() {
         >
           <motion.div
             layout
-            className="absolute bottom-0 left-0 right-0 h-[40vh] md:h-[40vh]"
+            className="absolute bottom-0   left-0 right-0 h-[40vh] md:h-[40vh]"
             style={{
               backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj})`,
-              backgroundSize: "70% auto",
+              backgroundSize: "80% auto",
               backgroundRepeat: "no-repeat",
               backgroundPosition: "center bottom",
+              filter: "drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))",
             }}
           ></motion.div>
           <div className="p-[20px] lg:p-[40px] flex-grow">
@@ -224,7 +229,7 @@ function PersonalityandLanguage() {
                     fontWeight: 600,
                     letterSpacing: "0.011em",
                   }}
-                  className="py-4 typography-subsection-headline text-[30px] text-purple-900"
+                  className="flex items-center py-4 text-[30px] text-purple-900"
                 >
                   {lang == 0 && "Language"}
                   {lang == 1 && "语言能力"}

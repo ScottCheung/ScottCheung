@@ -54,8 +54,8 @@ function Education({ hideTittle, simpleVer }) {
             className="col-span-6 group"
           >
             <div
-              className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px]  duration-300 relative  w-auto h-auto ${simpleVer ? "lg:w-[300px]" : "lg:w-[500px]"}  md:h-auto ${
-                hideTittle ? "bg-gray-50" : "bg-white/80"
+              className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] transition-all duration-300 relative  w-auto h-auto ${simpleVer ? "lg:w-[300px]" : "lg:w-[500px]"}  md:h-auto ${
+                hideTittle ? "bg-gray-50 hover:bg-sky-100/50" : "bg-white/80"
               }`}
             >
               <div
@@ -83,7 +83,9 @@ function Education({ hideTittle, simpleVer }) {
                         : "text-[13px] md:text-[18px]  font-[600] transition-all flex flex-col md:flex-row  gap-x-[5px]"
                     }
                   >
-                    <div className="flex items-center">
+                    <div
+                      className={`flex items-center  ${simpleVer || windowWidth < 1024 ? "" : " lg:h-[60px]"}`}
+                    >
                       {`${Experience.major[lang][0]}`}
                       {lang == 1 && Experience.major[lang][1]}{" "}
                     </div>

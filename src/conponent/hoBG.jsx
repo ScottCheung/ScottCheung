@@ -60,7 +60,7 @@ const AnimatedBackground = () => {
       this.orbitX = w / 2;
       this.orbitY = h / 2;
       this.timePassed = random(0, maxStars);
-      this.speed = random(this.orbitRadius) / 900000;
+      this.speed = random(this.orbitRadius) / 9000000000;
       this.alpha = random(2, 10) / 10;
 
       count++;
@@ -115,7 +115,7 @@ const AnimatedBackground = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden w-full h-screen">
+    <div className="w-full h-screen overflow-hidden">
       <canvas ref={canvasRef} />
     </div>
   );

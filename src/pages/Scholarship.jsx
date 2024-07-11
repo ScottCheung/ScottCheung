@@ -139,6 +139,7 @@ export default function Scholarship() {
           <KeyFeature />
         </main>
       </div>
+      <Contact />
     </div>
   );
 }
