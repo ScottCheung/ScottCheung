@@ -1,9 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @font-face {
   font-family: "Hey August";
-  src: url("../fonts/Hey August.ttf") format("truetype");
+  src: url("../Hey August.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
