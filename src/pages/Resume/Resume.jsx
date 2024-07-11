@@ -1,5 +1,5 @@
 import { useTime } from "framer-motion";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import DockerBar from "../../conponent/DockerBar";
 import { useAppContext } from "../../help/ContextManager";
 import { motion } from "framer-motion";
@@ -25,32 +25,46 @@ export default function Resume() {
   const { ResumeView } = useAppContext();
   const forceColor = printMode ? resume : ResumeView.forceColor;
   const colorDepth = ResumeView.colorDepth;
-  const h1 = `font-sans tracking-wide text-${EmphasizeColorLists[forceColor]}-${colorDepth} text-[30px] md:text-[50px]  ${printMode ? "text-[100px]" : ""}  font-black  transition-all duration-1000`;
+
+  if (printMode) {
+    document.body.style.backgroundColor = "white";
+  }
+  const [isTop, setIsTop] = useState(true);
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY === 0) {
+        setIsTop(true);
+      } else {
+        setIsTop(false);
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const normaltext = "text-[18px] text-jusify transition-all duration-1000";
-  const h2 = `flex items-center text-[30px]  font-[700] text-${
+  const h2 = `flex items-center text-[30px] font-[700] text-${
     EmphasizeColorLists[forceColor]
   }-${colorDepth} group-hover:text-${
     EmphasizeColorLists[forceColor]
-  }-${Math.max(
-    colorDepth - 200 || 100,
-  )} gap-x-[15px] items-center transition-all duration-1000`;
-  const printWidth = "max-w-[1350px] ";
-  const icon = `w-[15px] text-[15px] mr-[5px] mt-[2px]  transition-all duration-1000`;
-  const divisionline = ` flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-50  transition-all duration-1000`;
-  const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-10  transition-all duration-1000`;
+  }-${Math.max(colorDepth - 200 || 100)} gap-x-[15px] items-center transition-all duration-1000`;
+  const printWidth = "max-w-[1350px]";
+  const icon = `w-[15px] text-[15px] mr-[5px] mt-[2px] transition-all duration-1000`;
+  const divisionline = `flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-50 transition-all duration-1000`;
+  const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-10 transition-all duration-1000`;
 
-  const h3 = `flex  items-center text-[20px] font-semibold flex items-center `;
-  const h4 = `flex  items-center text-[15px] text-gray-500 flex items-center `;
-  const timetext = `flex  items-center  text-2xl font-[500] text-gray-400  transition-all duration-1000`;
+  const h3 = `flex items-center text-[20px] font-semibold flex items-center`;
+  const h4 = `flex items-center text-[15px] text-gray-500 flex items-center`;
+  const timetext = `flex items-center text-2xl font-[500] text-gray-400 transition-all duration-1000`;
   const whymeIcon = `text-[20px] flex justify-center items-center text-gray-400 group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
   const whymelable = `text-[15px] text-gray-400 group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
   const contentContainer = `flex-1 flex flex-col justify-between`;
   const laptopMode = window.innerWidth > 1024;
   const strong = `block mr-2 font-semibold pr-1 -ml-1 text-${EmphasizeColorLists[forceColor]}-${colorDepth - 100} transition-all duration-1000`;
-
-  if (printMode) {
-    document.body.style.backgroundColor = "white";
-  }
 
   return (
     <div className="flex w-full bg-white md:justify-center">
@@ -63,28 +77,44 @@ export default function Resume() {
       <motion.div
         layout
         id="pdf-content"
-        className={`bg-white flex relative justify-center ${printMode ? "" : "py-[5%] pt-[15%] md:pt-[10%] px-[5%] pb-[30vh]"}  `}
+        className={`bg-white flex relative justify-center ${
+          printMode ? "" : "py-[5%] pt-[15%] md:pt-[10%] px-[5%] pb-[30vh]"
+        }`}
       >
-        {/* {printMode && ( */}
         <link
           rel="stylesheet"
           href="../style/uicons/css/all/all.css"
           type="text/css"
         />
-        {/* // )} */}
+        <link rel="stylesheet" href="../style/style.css" type="text/css" />
         <div
-          className={`${printMode ? printWidth : "visblecontainer mx-auto"} min-h-[100vh] flex flex-col `}
+          className={`${
+            printMode ? printWidth : "visblecontainer mx-auto"
+          } min-h-[100vh] flex flex-col`}
         >
-          <div className="py-4 text-center">
-            <h1 className={h1}>{cvData.header.name}</h1>
-            <div className="flex justify-center items-center gap-x-[15px] flex-wrap mt-[25px] ">
+          <div className="text-center ">
+            <h1
+              style={{ fontFamily: "Hey August, sans-serif" }}
+              className={`tracking-wide text-${EmphasizeColorLists[forceColor]}-${colorDepth} tracking-widest
+   ${printMode ? "text-[100px]" : isTop ? "text-[50px] md:text-[80px]  lg:text-[100px]" : "text-[30px] md:text-[50px]  lg:text-[50px]"}  font-[100] transition-all duration-1000`}
+            >
+              {cvData.header.name}
+              {/* {isTop && "top"} */}
+            </h1>
+            <div
+              className={`flex justify-center items-center gap-x-[15px] flex-wrap  ${printMode ? "" : "mt-[25px]"}`}
+            >
               {cvData.header.contacts.map((contact, index) => (
                 <React.Fragment key={contact.name}>
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href={contact.link}
-                    className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth}  flex justify-center items-center  ${printMode ? "text-[18px] gap-x-[5px]" : "gap-x-[10px] text-[18px]"} `}
+                    className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} flex justify-center items-center ${
+                      printMode
+                        ? "text-[18px] gap-x-[5px]"
+                        : "gap-x-[10px] text-[18px]"
+                    }`}
                   >
                     <i className={contact.icon}></i>
                     <div className={contact.link && "hover:underline"}>
@@ -107,7 +137,7 @@ export default function Resume() {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={section.href}
-                className={`flex justify-between  items-center gap-x-[20px] mt-[30px] mb-[20px] ${
+                className={`flex justify-between items-center gap-x-[20px] mt-[30px] mb-[20px] ${
                   section.href && "group"
                 }`}
               >
@@ -117,7 +147,7 @@ export default function Resume() {
                   {section.link && (
                     <div className="-ml-[10px] flex">
                       <svg
-                        class="w-[20px] h-[20px]  -rotate-45"
+                        class="w-[20px] h-[20px] -rotate-45"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
@@ -170,10 +200,12 @@ export default function Resume() {
                           }
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`flex flex-col w-full item-center justify-center ${KeyFeature.href ? `group` : "cursor-default"} transition-all`}
+                          className={`flex flex-col w-full item-center justify-center ${
+                            KeyFeature.href ? `group` : "cursor-default"
+                          } transition-all`}
                         >
                           <div className={whymeIcon}>
-                            <i className={`mr-2 ${KeyFeature.icon} `}></i>
+                            <i className={`mr-2 ${KeyFeature.icon}`}></i>
                             <N
                               n={KeyFeature.no}
                               d={printMode ? 0.000000001 : 2}
@@ -200,7 +232,7 @@ export default function Resume() {
                   ([category, list], index) => (
                     <div
                       key={index}
-                      className="flex justify-between items-start md:items-center gap-x-[30px] py-[15px] md:py-[3px] "
+                      className="flex justify-between items-start md:items-center gap-x-[30px] py-[15px] md:py-[3px]"
                     >
                       <h2 className={h3}>{category}</h2>
 
@@ -241,18 +273,13 @@ export default function Resume() {
                       key={index}
                       className={
                         edu.link &&
-                        "group cursor-pointer flex-1 w-full " +
-                          " mt-3 flex justify-between items-start " +
-                          ``
+                        "group cursor-pointer flex-1 w-full mt-3 flex justify-between items-start"
                       }
                     >
                       <div className={contentContainer}>
                         <div className="flex justify-between flex-1 w-full">
                           <p
-                            className={
-                              h3 +
-                              `cursor-pointer group-hover:bold flex flex-1  justify-start`
-                            }
+                            className={`${h3} cursor-pointer group-hover:bold flex flex-1 justify-start`}
                           >
                             {edu.school}
                           </p>
@@ -261,12 +288,12 @@ export default function Resume() {
                           <p className={timetext}>{edu.period}</p>
                         </div>
 
-                        <div className="flex items-center justify-start ">
+                        <div className="flex items-center justify-start">
                           <div className={h4}>{edu.degree}</div>
                           {edu.link && (
                             <div>
                               <svg
-                                class={h4 + " w-4 h-4 mx-2  -rotate-45"}
+                                class={`${h4} w-4 h-4 mx-2 -rotate-45`}
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -285,12 +312,9 @@ export default function Resume() {
                         </div>
 
                         <div
-                          className={
-                            normaltext +
-                            `duration-300  group-hover:text-${
-                              EmphasizeColorLists[forceColor]
-                            }-${colorDepth - 100}`
-                          }
+                          className={`${normaltext} duration-300 group-hover:text-${EmphasizeColorLists[forceColor]}-${
+                            colorDepth - 100
+                          }`}
                         >
                           <p className="tracking-widest group-hover:underline">
                             {edu.major}
@@ -312,9 +336,7 @@ export default function Resume() {
                     key={index}
                     className={
                       project.link &&
-                      "group cursor-pointer " +
-                        " mt-3 flex justify-between items-start " +
-                        ` `
+                      "group cursor-pointer mt-3 flex justify-between items-start"
                     }
                   >
                     <div className={contentContainer}>
@@ -324,7 +346,7 @@ export default function Resume() {
                           {project.link && (
                             <div>
                               <svg
-                                class="w-4 h-4 mx-2  -rotate-45"
+                                class="w-4 h-4 mx-2 -rotate-45"
                                 aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -342,12 +364,12 @@ export default function Resume() {
                           )}
                         </h3>
                         {/* duration */}
-                        <div className="flex flex-col justify-end ">
+                        <div className="flex flex-col justify-end">
                           <p className={timetext}>{project.period}</p>
                         </div>
                       </div>
 
-                      <div className={normaltext + " pl-[20px]"}>
+                      <div className={`${normaltext} pl-[20px]`}>
                         <p>
                           <strong className={strong}>Skill:</strong>{" "}
                           {project.skill.join(", ")}
@@ -355,7 +377,7 @@ export default function Resume() {
                         <p>
                           <strong className={strong}>Contribution:</strong>{" "}
                         </p>
-                        <ul className="pl-5 ">
+                        <ul className="pl-5">
                           {project.contribution.map((item, index) => (
                             <li key={index} className="mb-2 text-justify">
                               <strong className={strong}>

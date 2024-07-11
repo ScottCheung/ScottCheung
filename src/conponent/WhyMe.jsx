@@ -88,13 +88,13 @@ function WhyMe({ hideTittle }) {
   };
 
   const closeCard = () => {
-    setWhymeCard(null);
-    UnBanScroll();
     setComponents((prevComponents) => ({
       ...prevComponents,
       NavBar: "visible",
       whymeCard: "hide",
     }));
+    setWhymeCard(null);
+    UnBanScroll();
   };
   const ref1 = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -108,11 +108,11 @@ function WhyMe({ hideTittle }) {
     [0, 1],
     [`${viewwidth * -1}px`, `${viewwidth}px`],
   );
-  const x = useTransform(
-    scrollYProgress,
-    [0, 0.85, 1],
-    ["-100vw", "-100vw", "0vw"],
-  );
+  // const width = useTransform(
+  //   scrollYProgress,
+  //   [0, 0.65, 1],
+  //   ["-100vw", "-100vw", "0vw"],
+  // );
 
   const WhyMe = (
     <motion.div
@@ -125,13 +125,13 @@ function WhyMe({ hideTittle }) {
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center center",
-          // width: isMobile || hideTittle ? "100vw" : width,
+          width: isMobile || hideTittle ? "100vw" : width,
         }}
       >
         {/* Item 容器 */}
 
         <ScrollableContainer
-          headerStyle={isMobile || hideTittle ? "100vw" : width}
+          headerStyle={isMobile ? "100vw" : width}
           headerPY="py-[10px]"
           id="WhyMe"
           gap={20}
@@ -140,7 +140,7 @@ function WhyMe({ hideTittle }) {
             icon: "fi-rr-lightbulb-on",
           }}
         >
-          <AnimatePresence>
+          <AnimatePresence mode="wait">
             {keyfeature.map((feature, index) => (
               <motion.div
                 onClick={() => {
@@ -149,7 +149,7 @@ function WhyMe({ hideTittle }) {
                   }
                 }}
                 key={index + feature.advantage}
-                className="col-span-6 "
+                className="z-40 col-span-6"
               >
                 <motion.div
                   layout
@@ -159,7 +159,7 @@ function WhyMe({ hideTittle }) {
                     ease: [0.22, 1, 0.36, 1],
                   }}
                 >
-                  <motion.div style={{ x: isMobile ? 1 : x }} className="">
+                  <motion.div className="">
                     <motion.div
                       style={{
                         ...(!hideTittle && windowWidth > 1024
@@ -257,9 +257,8 @@ function WhyMe({ hideTittle }) {
             ))}
           </AnimatePresence>
         </ScrollableContainer>
-
-        {Components.whymeCard === "visible" && <WhyMeCard />}
       </motion.div>
+      {Components.whymeCard === "visible" && <WhyMeCard />}
     </motion.div>
   );
 

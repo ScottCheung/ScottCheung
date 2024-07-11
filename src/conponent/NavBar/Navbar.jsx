@@ -66,8 +66,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const currentPage = window.location.pathname;
   const isHomeOrRoot = currentPage === "/" || currentPage === "/home";
   const [selectedTab, setSelectedTab] = useState(null);
-  const [ShowProfile, setShowProfile] = useState(false);
-  const hideExpandElement = ExpandElement || false;
   const buttonStyles = {
     "--scrim-background-color": "rgb(66, 66, 66)",
     "--scrim-hover-background-color": "#37373a",
@@ -199,11 +197,11 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
         }
         ${
           isScrolling
-            ? `${isTop && " backdrop-blur-[20px]"}`
+            ? `${isTop && " backdrop-blur-[20px] bg-white/90"}`
             : `${
                 !isTop &&
-                `backdrop-blur-[20px]  shadow-xl ${
-                  bgwhite ? "bg-white/90" : "bg-white/70"
+                `backdrop-blur-[70px] border-b-2 border-gray-200 ${
+                  bgwhite ? "bg-white/90" : "bg-white/90"
                 }`
               }`
         }`}
@@ -243,7 +241,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         />
                         {isWithinOneWeek && (
                           <span
-                            class={`${isTop ? "w-8 h-8 left-0 top-0" : "-left-3 -top-3 w-6 h-6"} absolute   bg-green-400 border-2 border-white dark:border-gray-800 rounded-full`}
+                            class={`${isTop ? "w-8 h-8 left-0 top-0" : "-left-1 -top-1 w-3 h-3"} absolute   bg-green-400  rounded-full`}
                           ></span>
                         )}
 
@@ -251,7 +249,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           className={`flex flex-col justify-between  ${isTop ? "w-50  rounded-full" : "w-32 "} `}
                         >
                           <motion.div
-                            className={`flex  text-nowrap text-left items-start justify-start animate__animated animate__zoomIn duration-1000 transition-all font-[600] ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[17px]  md:text-[30px] lg:text-[35px] ` : "text-[17px] lg:text-[17px]"}`}
+                            style={{ fontFamily: "Hey August, sans-serif" }}
+                            className={`flex  text-nowrap text-left tracking-widest items-start justify-start animate__animated animate__zoomIn duration-1000 transition-all  ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[17px]  md:text-[30px] lg:text-[35px] ` : "text-[17px] lg:text-[17px]"}`}
                           >
                             {data.Avatar.Webname[lang]}
                           </motion.div>
@@ -337,11 +336,11 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 }}
                                 data-popover-target={`nav-des-${item.name[0]}`}
                                 type="button"
-                                className={`rounded-[5px]  items-center  justify-center   py-6  gap-[5px] font-medium text-center ${
+                                className={`rounded-[5px]  items-center  justify-center     gap-[5px] font-medium text-center ${
                                   isTopTextColorWhite & isTop
-                                    ? "text-white flex flex-col px-12"
-                                    : "flex px-6"
-                                } rounded-full hover:bg-gray-900/20  `}
+                                    ? "text-white flex flex-col px-12 py-12"
+                                    : "flex px-8"
+                                } rounded-full hover:bg-gray-900/20 py-6 `}
                               >
                                 <div className="flex items-center justify-center w-full transition-all">
                                   <i
@@ -522,7 +521,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           layout
                           key={"isExpanded" + navIndex}
                           layoutId="isExp"
-                          className={`w-full flex my-[20px] max-w-[1200px] px-[3%] ${
+                          className={`w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  ${
                             !isExpanded && selectedTab !== navItem.name[1]
                               ? " items-center justify-center"
                               : "items-center justify-center"
@@ -630,22 +629,27 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 selectedTab === item.name[0] && (
                   <motion.div
                     key={item.name[0] + index + "introduction"}
-                    className="md:mx-[10%] mt-[30px] flex relative gap-x-[20px] duration-200 "
+                    className="md:mx-[10%] mt-[30px]  flex relative gap-x-[20px] duration-200 "
                   >
                     <img
                       style={{
                         filter: "drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))",
+                        // height: "400px",
+                        maskImage:
+                          "linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)",
+                        WebkitMaskImage:
+                          "linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)",
                       }}
-                      className=" max-w-[320px]  absolute top-[50%] left-0 transition-all"
+                      className=" max-w-[320px] px-[30px] lg:max-w-[420px]  absolute top-[100%] left-0 transition-all"
                       src={data.dialog}
                     ></img>
                     <motion.div
                       // layoutId="des"
                       key={item.name[0] + index}
-                      className="absolute top-0 left-[320px] animate__animated animate__fadeInUp bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[320px] overflow-hidden  "
+                      className="absolute top-0 left-[320px] lg:left-[420px] animate__animated animate__fadeInUp bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  "
                     >
-                      <div className="p-[28px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20">
-                        <p className="text-[20px] font-normal darrk:text-gray-900 text-white  ">
+                      <div className="p-[28px] lg:p-[40px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20">
+                        <p className="text-[20px] lg:text-[30px]  darrk:text-gray-900 text-white  ">
                           {item.des[lang]}
                         </p>
                         <span className="text-center text-[30px] darrk:text-gray-900 text-white ">
@@ -738,8 +742,19 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={`fixed top-0 left-0 z-40 w-full h-full  backdrop-blur-[20px] ${isTopTextColorWhite ? "bg-gray-900/40" : "bg-white/40"} `}
-          ></motion.div>
+            className={`fixed top-0 left-0 z-40  bottom-0  right-0  w-full h-full  backdrop-blur-[20px] ${isTopTextColorWhite ? "bg-gray-900/40" : "bg-white/40"} `}
+          >
+            <div
+              style={{
+                backgroundImage: `url(${windowWidth > 1024 && data.dialog})`,
+                backgroundSize: "25% auto",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "left bottom",
+                filter: "drop-shadow(0px 20px 26px rgba(0, 0, 0, 0))",
+              }}
+              className="flex hidden w-full h-full"
+            ></div>
+          </motion.div>
         )}
       </AnimatePresence>
     </AnimatePresence>

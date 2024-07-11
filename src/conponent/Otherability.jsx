@@ -95,7 +95,7 @@ function Otherability() {
   const Otherability = (
     <motion.div className="h-auto rounded-[28px] backdrop-contrast-125 col-span-12 md:col-span-6 lg:col-span-8">
       <motion.div
-        className="bg-black rounded-[28px] pb-[50%]"
+        className="bg-black rounded-[28px] pb-[40%] "
         style={{
           backgroundImage: `url(https://3o.hk/images/2024/05/19/bg.jpg)`,
           backgroundSize: "60% auto",

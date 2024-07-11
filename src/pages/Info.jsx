@@ -26,7 +26,7 @@ export default function Profile() {
   }, []);
 
   return (
-    <div className="overflow-hidden profile-page">
+    <div className="overflow-hidden bg-[#f5f5f7] profile-page">
       <Navbar topTextColor={true} />
       <main className="overflow-hidden profile-page">
         <motion.div
@@ -87,7 +87,7 @@ export default function Profile() {
                 </div>
                 <div className="mt-12 text-center">
                   <h3 className="mb-2 text-5xl font-[600] leading-normal text-gray-800 animate__animated animate__zoomIn">
-                    张贤哲 | Scott Zhang
+                    张贤哲 | Scott Cheung
                   </h3>
                   <a
                     href="https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7"
@@ -144,106 +144,95 @@ export default function Profile() {
           </div>
         </section>
       </main>
-      <div className="grid visblecontainer section-sapphire pb-24 mb-[15vh]">
-        <div className="grid-item large-span-12 tile-body-no-pad-left tile-body-no-pad-right tile-body-no-pad-bottom grid-item-stickers ">
-          <div className="tile tile-rounded ">
-            <motion.div
-              variants={visblecontainer}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-              className="bg-white tile-content "
-            >
-              {isExpanded ? (
-                <>
-                  {" "}
-                  {/* Further Information */}
-                  <div className="tile-header ">
-                    <div className="flex justify-between">
-                      <h3 className="py-16 mx-8 tile-headline typography-subsection-headline animate__animated animate__zoomIn">
-                        {lang == 0 && "QA Info"}
-                        {lang == 1 && "QA信息"}
-                      </h3>
-                      <motion.div
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        className="py-16 tile-headline animate__animated animate__zoomIn"
-                      >
-                        <a href="/">
-                          {lang == 0 && "more >"}
-                          {lang == 1 && "更多  >>"}
-                        </a>
-                      </motion.div>
-                    </div>
-                  </div>
-                </>
-              ) : (
-                <>
-                  {" "}
-                  {/* Basic Information */}
-                  <div className="tile-header ">
-                    <h3
-                      style={{
-                        lineHeight: 1.19048,
-                        fontWeight: 600,
-                        letterSpacing: "0.011em",
-                      }}
-                      className="py-4 text-[30px] text-gray-900 animate__animated animate__zoomIn"
-                    >
-                      {lang == 0 && "Basic Information"}
-                      {lang == 1 && "基本信息"}
-                    </h3>
-                    <div
-                      className={`grid ${
-                        windowWidth > 786 ? "grid-cols-2" : "grid-cols-1"
-                      } `}
-                    >
-                      {infos.map((info, index) => {
-                        // 判断是否为 "Age"
-                        if (info.cont === "Age" || info.cont === "年龄") {
-                          // 计算年份，这里假设 birthYear 是存储出生年份的变量
-                          const currentYear = new Date().getFullYear();
-                          const age = currentYear - 1997 - 1;
-                          info.icon = age;
-                        }
+      <div className="visblecontainer section-sapphire pb-24 mb-[15vh]">
+        <motion.div
+          variants={visblecontainer}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          className="bg-white pt-[14px] md:pt-[28px] lg:pt-[40px] px-[14px] md:px-[28px] lg:px-[40px] pb-[80px] rounded-[28px] animate__animated animate__fadeInUp"
+        >
+          {isExpanded ? (
+            <>
+              {" "}
+              {/* Further Information */}
+              <div className="tile-header ">
+                <div className="flex justify-between">
+                  <h3 className="py-16 mx-8 tile-headline typography-subsection-headline animate__animated animate__zoomIn">
+                    {lang == 0 && "QA Info"}
+                    {lang == 1 && "QA信息"}
+                  </h3>
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    className="py-16 tile-headline animate__animated animate__zoomIn"
+                  >
+                    <a href="/">
+                      {lang == 0 && "more >"}
+                      {lang == 1 && "更多  >>"}
+                    </a>
+                  </motion.div>
+                </div>
+              </div>
+            </>
+          ) : (
+            <>
+              {" "}
+              {/* Basic Information */}
+              <div className="tile-header ">
+                <h3
+                  style={{
+                    lineHeight: 1.19048,
+                    fontWeight: 600,
+                    letterSpacing: "0.011em",
+                  }}
+                  className="py-4 text-[30px] text-gray-900 animate__animated animate__zoomIn"
+                >
+                  {lang == 0 && "Basic Information"}
+                  {lang == 1 && "基本信息"}
+                </h3>
+                <div className={`grid grid-cols-12 lg:gap-x-[40px]`}>
+                  {infos.map((info, index) => {
+                    // 判断是否为 "Age"
+                    if (info.cont === "Age" || info.cont === "年龄") {
+                      // 计算年份，这里假设 birthYear 是存储出生年份的变量
+                      const currentYear = new Date().getFullYear();
+                      const age = currentYear - 1997 - 1;
+                      info.icon = age;
+                    }
 
-                        return (
-                          <motion.div
-                            key={index}
-                            variants={item}
-                            transition={LeftappearBar}
-                            whileHover={{ scale: 1.001 }}
-                            whileTap={{ scale: 0.99 }}
-                            layout
-                            style={{ animationDelay: `${0.05 * index}s` }}
-                            className="py-4 mx-8 border-b md:py-8 animate__animated animate__fadeInRight"
-                          >
-                            <div className="flex items-center">
-                              <div className="flex-shrink-0">
-                                <i
-                                  className={`text-[17px] text-gray-900 fi ${info.label}`}
-                                ></i>
-                              </div>
-                              <div className="flex-1 min-w-0 ms-4">
-                                <p className="text-3xl font-medium text-gray-900 truncate darrk:text-white">
-                                  {info.cont}
-                                </p>
-                              </div>
-                              <div className="inline-flex items-center text-2xl text-gray-900 lg:text-3xl darrk:text-white">
-                                {info.icon}
-                              </div>
-                            </div>
-                          </motion.div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </>
-              )}
-            </motion.div>
-          </div>
-          <div className="min-h-[20vh]"></div>
-        </div>
+                    return (
+                      <motion.div
+                        key={index + info.icon}
+                        variants={item}
+                        transition={LeftappearBar}
+                        whileHover={{ scale: 1.001 }}
+                        whileTap={{ scale: 0.99 }}
+                        layout
+                        style={{ animationDelay: `${0.05 * index}s` }}
+                        className="flex justify-between col-span-12 py-4 border-b lg:col-span-6 md:py-8 animate__animated animate__fadeInRight"
+                      >
+                        <div className="flex gap-4 lg:gap-8">
+                          <i
+                            className={`flex text-[12px] md:text-[18px] lg:text-3xl text-gray-900 fi ${info.label}`}
+                          ></i>
+                          <p className="flex text-[12px] md:text-[18px] lg:text-3xl font-medium text-gray-900 truncate darrk:text-white">
+                            {info.cont}
+                          </p>
+                        </div>
+                        <div className="inline-flex items-center text-[10px] md:text-[15px] text-gray-600 lg:text-3xl darrk:text-white">
+                          {info.icon}
+                        </div>
+                      </motion.div>
+                    );
+                  })}
+                </div>
+              </div>
+            </>
+          )}
+        </motion.div>
+
+        <div className="min-h-[20vh]"></div>
       </div>
       <Contact />
     </div>

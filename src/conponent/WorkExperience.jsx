@@ -337,10 +337,10 @@ function WorkExperience() {
   return (
     <motion.div
       layout
+      id="WorkExperience"
       className="flex flex-col items-center justify-center w-full min-h-[100vh]"
     >
       <ScrollableContainer
-        id="WorkExperience"
         toRight={true}
         gap={80}
         header={{
@@ -348,17 +348,19 @@ function WorkExperience() {
           icon: "fi-rr-tool-box",
         }}
       >
-        {cardData.map((card) => (
-          <motion.div
-            key={card.id}
-            variants={WelcomeItem}
-            transition={StagerFadeInUp}
-            className="col-span-6"
-          >
-            <Card card={card} onClick={() => handleCardClick(card)} />
-            <Period period={card} />
-          </motion.div>
-        ))}
+        <AnimatePresence mode="wait">
+          {cardData.map((card) => (
+            <motion.div
+              key={card.id}
+              variants={WelcomeItem}
+              transition={StagerFadeInUp}
+              className="col-span-6"
+            >
+              <Card card={card} onClick={() => handleCardClick(card)} />
+              <Period period={card} />
+            </motion.div>
+          ))}
+        </AnimatePresence>
       </ScrollableContainer>
       {/* </motion.div> */}
       <AnimatePresence>

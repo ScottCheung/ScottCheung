@@ -102,7 +102,7 @@ function Capability() {
       {" "}
       <motion.div
         id="Capability"
-        className="grid grid-cols-12 gap-[28px] py-48 "
+        className="grid grid-cols-12 gap-[14px] lg:gap-[28px] py-48 "
       >
         {/* stack */}
         <Skill />

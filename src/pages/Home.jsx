@@ -124,27 +124,13 @@ function Home() {
           </a>
         ))}
       </Carousel>
-      <div
-        className="flex flex-col bg-center bg-no-repeat bg-cover Z-50 "
-        style={
-          {
-            // backgroundImage: `url(${HomeCarousel[0].src})`,
-          }
-        }
-      >
-        <div className="backdrop-blur-[10px] bg-white/20 ">
-          <Education />
-        </div>
-      </div>
-      <div className="">
-        <KeyFeature />
-        <Capability />
-        <WorkExperience />
-        <AboutMe />
-
-        <WhyMe />
-        <Contact />
-      </div>
+      <Education />
+      <KeyFeature />
+      <Capability />
+      <WorkExperience />
+      <AboutMe />
+      <WhyMe />
+      <Contact />
     </div>
   );
 }

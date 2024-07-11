@@ -85,14 +85,17 @@ function PersonalityandLanguage() {
       data-analytics-section-engagement="name:search filters"
       data-tile-name="search"
     >
-      <motion.div layout className="flex flex-col h-full gap-[28px] relative">
+      <motion.div
+        layout
+        className="flex flex-col h-full gap-[14px] lg:gap-[28px] relative"
+      >
         {/* INFJ */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1, height: "auto" }}
+          // initial={{ opacity: 0 }}
+          // whileInView={{ opacity: 1 }}
           layout
           transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-          viewport={{ once: true, offset: 0.5 }}
+          viewport={{ once: true }}
           style={{
             background:
               "linear-gradient(to bottom right, rgba(0, 0, 0,  1), rgba(0, 100, 0, 1))",
@@ -193,8 +196,8 @@ function PersonalityandLanguage() {
 
         {/* Language */}
         <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1, height: "auto" }}
+          // initial={{ opacity: 0 }}
+          // whileInView={{ opacity: 1 }}
           layout
           transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
         >

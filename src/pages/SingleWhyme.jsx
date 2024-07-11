@@ -94,7 +94,7 @@ export default function WhyM() {
           }}
           whileInView={{ opacity: 1, y: "0px" }}
           viewport={{ once: true }}
-          className={` flex ${windowWidth > 768 ? "mb-[50vh]" : ""}  `}
+          className={` flex ${windowWidth > 768 ? "mb-[50vh]" : "mx-4"}  `}
           style={{
             paddingInline:
               windowWidth > 1024
@@ -110,10 +110,14 @@ export default function WhyM() {
             }}
             whileInView={{ opacity: 1, y: "0px", scale: 1 }}
             viewport={{ once: true }}
-            className={`pb-[30vw] relative flex flex-col  break-words bg-white w-full shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp`}
+            className={`pb-[35vw] relative flex flex-col  break-words bg-white w-full shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp`}
             style={
               {
-                ...bgPic(selectedWhyMeItem.pic[0], "25vw auto", "bottom right"),
+                ...bgPic(
+                  selectedWhyMeItem.pic[0],
+                  windowWidth > 768 ? "30vw auto" : "50vw auto",
+                  "bottom right",
+                ),
               } || null
             }
           >

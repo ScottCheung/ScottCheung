@@ -81,7 +81,10 @@ function KeyFeature() {
                   href={`${KeyFeature.href}`}
                   className="flex flex-col items-center justify-center p-[28px] w-full item-center md:justify-center"
                 >
-                  <div className="flex items-center text-[100px] lg:text-[130px]  font-semibold  text-white ">
+                  <div
+                    style={{ fontFamily: "Hey August, sans-serif" }}
+                    className="flex items-center text-[100px] lg:text-[150px]  text-white "
+                  >
                     <N n={KeyFeature.no} d={1.5} />
                   </div>
                   <div className="flex items-center justify-center w-full -mt-[30px]">
@@ -89,7 +92,7 @@ function KeyFeature() {
                       <i
                         className={`text-[30px] md:text-[40px]  lg:text-[50px]  fi  ${KeyFeature.icon}`}
                       ></i>
-                      <p className="flex text-[15px] md:text-[20px] lg:text-[30px] font-[900]">
+                      <p className="flex text-[15px] md:text-[20px] lg:text-[30px] font-[600]">
                         {KeyFeature.keyfeature[lang]}
                       </p>
                     </div>

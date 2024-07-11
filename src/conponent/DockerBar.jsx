@@ -101,7 +101,7 @@ function DockerBar(props) {
       icon: "fi fi-sr-disk pt-[5px] ",
       onClick: () => {
         const link = document.createElement("a");
-        link.href = `https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Xianzhe%20%7C%20${EmphasizeColorLists[ResumeView.forceColor]}.pdf`;
+        link.href = `https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Scott%20Cheung%20%7C%20${EmphasizeColorLists[ResumeView.forceColor]}.pdf`;
         link.download = "Xianzhe's CV.pdf";
         document.body.appendChild(link);
         link.click();

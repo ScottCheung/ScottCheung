@@ -1460,7 +1460,7 @@
         {
           "type": ["Linkedin", "领英"],
           "icon": "fi-brands-linkedin",
-          "link": "https://www.linkedin.com/in/zhang-xianzhe-03133a259/",
+          "link": "https://www.linkedin.com/in/xianzhe1110/",
           "name": "Xianzhe Zhang"
         },
         {
@@ -2020,7 +2020,7 @@
               {
                 "name": "Zsh",
                 "image": "https://www.svgrepo.com/show/341135/term.svg",
-                "description": "熟悉 Zsh 工具，熟悉指令封装，能大幅度提升工作效率。"
+                "description": "Familiar with Zsh tools, familiar with command wrapping and common plug-ins, can greatly improve work efficiency."
               },
               {
                 "name": "Docker",
