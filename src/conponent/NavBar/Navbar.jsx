@@ -9,19 +9,22 @@ import ContactCate from "../contactCategory.jsx";
 import packageinfo from "../../../package.json";
 
 import Toast from "../toast.jsx";
-
-const updateMonth = 7;
-const updateDay = 12;
 const version = packageinfo.version.toString();
+
+// const updateMonth = 7;
+// const updateDay = 12;
+// // 构建更新日期对象
+// const updateDate = new Date(
+//   currentDate.getFullYear(),
+//   updateMonth - 1,
+//   updateDay,
+// );
+
+// 创建更新日期对象
+const updateDate = new Date(packageinfo.lastPublishedAt.toString());
+
 // 获取当前日期
 const currentDate = new Date();
-
-// 构建更新日期对象
-const updateDate = new Date(
-  currentDate.getFullYear(),
-  updateMonth - 1,
-  updateDay,
-);
 
 // 计算日期差异（毫秒数差异）
 const timeDifference = currentDate - updateDate;
@@ -36,6 +39,11 @@ const isToday = currentDate.toDateString() === updateDate.toDateString();
 // 判断是否在一周内
 const isWithinOneWeek = Math.abs(daysBetween) <= 7;
 
+// 提取更新日期的日和月
+const updateDay = updateDate.getUTCDate();
+const updateMonth = updateDate.getUTCMonth() + 1; // 月份是从0开始的，所以要加1
+
+// 格式化更新日期
 const updateTime = [
   `${updateDay} ${new Date(2000, updateMonth - 1, 1).toLocaleString("en-US", { month: "long" })}`,
   `${updateMonth} 月 ${updateDay} 日`,
