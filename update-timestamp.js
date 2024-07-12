@@ -15,8 +15,8 @@ packageJson.lastPublishedAt = currentTime;
 
 // 创建新的日志条目
 const newLogEntry = {
-  new: "updateInfo",
-  fix: "updateInfo",
+  new: "None",
+  fix: "Fix some bugs of transition, update the info of the transition.",
   feature: "updateInfo",
   description: "This function adds new information to the package.json file",
   version: packageJson.version,
