@@ -6,7 +6,7 @@ const currentTime = new Date().toISOString();
 
 // 读取 package.json 文件
 const packageJsonPath = path.resolve(__dirname, "package.json");
-const logPath = path.resolve(__dirname, "update-log.json");
+const logPath = path.resolve(__dirname, "./src/update-log.json");
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
 const log = JSON.parse(fs.readFileSync(logPath, "utf8"));
 

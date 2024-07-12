@@ -7,6 +7,7 @@ import { scrollToHash } from "../../help/helpFunction.js";
 import LifeCate from "../lifeCategory.jsx";
 import ContactCate from "../contactCategory.jsx";
 import packageinfo from "../../../package.json";
+import Log from "../Log.jsx";
 
 import Toast from "../toast.jsx";
 const version = packageinfo.version.toString();
@@ -701,6 +702,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           </motion.div>
         </motion.nav>
       </motion.div>
+      <Log />
 
       {/* toTop buttom */}
       {!isTop && Components.NavBar === "visible" && (
