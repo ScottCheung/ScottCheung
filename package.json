@@ -1,7 +1,7 @@
 {
   "name": "xianzhezhang",
   "version": "19.0.1",
-  "lastPublishedAt": "2024-07-12T00:21:16.529Z",
+  "lastPublishedAt": "2024-07-12T00:36:12.076Z",
   "private": true,
   "homepage": "https://xianzhezhang97.github.io",
   "dependencies": {
@@ -52,5 +52,19 @@
   },
   "plugins": [
     "@babel/plugin-syntax-dynamic-import"
-  ]
+  ],
+  "address": {
+    "street": "Wolli Creek",
+    "city": "Sydney",
+    "state": "NSW",
+    "zipcode": "2205"
+  },
+  "updateInfo": {
+    "new": "updateInfo",
+    "fix": "updateInfo",
+    "feature": "updateInfo",
+    "description": "This function adds new information to the package.json file",
+    "version": "1.0.0",
+    "date": "2024-07-12T00:36:12.076Z"
+  }
 }
