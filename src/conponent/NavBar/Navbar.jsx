@@ -12,15 +12,6 @@ import Log from "../Log.jsx";
 import Toast from "../toast.jsx";
 const version = packageinfo.version.toString();
 
-// const updateMonth = 7;
-// const updateDay = 12;
-// // 构建更新日期对象
-// const updateDate = new Date(
-//   currentDate.getFullYear(),
-//   updateMonth - 1,
-//   updateDay,
-// );
-
 // 创建更新日期对象
 const updateDate = new Date(packageinfo.lastPublishedAt.toString());
 
@@ -35,7 +26,7 @@ const dayDifference = timeDifference / (1000 * 3600 * 24);
 const daysBetween = Math.floor(dayDifference);
 
 // 判断是否是今天
-const isToday = currentDate.toDateString() === updateDate.toDateString();
+const isToday = Math.abs(daysBetween) == 0;
 
 // 判断是否在一周内
 const isWithinOneWeek = Math.abs(daysBetween) <= 7;
@@ -64,6 +55,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     : isWithinOneWeek
       ? `${Math.abs(daysBetween)} ${["days ago", "天前"][lang]}`
       : updateTime[lang];
+
   const [bgwhite, setBgwhite] = useState(false);
   const isTopTextColorWhite = topTextColor;
   const scrollTo = scrollToHash();

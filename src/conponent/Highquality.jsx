@@ -105,7 +105,7 @@ function Highquality() {
             }}
             className="text-white py-4 text-[30px]"
           >
-            {lang == 0 && "Perfect? for evertthing"}
+            {lang == 0 && "Perfect? for EVERYTHING"}
             {lang == 1 && "完美? 方方面面"}
           </h3>
           {/* 完美主义 内容 */}
