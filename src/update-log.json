@@ -1,44 +1,100 @@
 {
-  "2024-07-12T01:11:33.333Z": {
-    "new": "updateInfo",
-    "fix": "updateInfo",
-    "feature": "updateInfo",
-    "description": "This function adds new information to the package.json file",
-    "version": "20.5.5",
-    "time": "2024-07-12T01:11:33.333Z",
-    "address": {
-      "street": "Wolli Creek",
-      "city": "Sydney",
-      "state": "NSW",
-      "zipcode": "2205"
-    }
-  },
-  "2024-07-12T01:13:04.478Z": {
-    "new": "updateInfo",
-    "fix": "updateInfo",
-    "feature": "updateInfo",
-    "description": "This function adds new information to the package.json file",
-    "version": "20.5.6",
-    "time": "2024-07-12T01:13:04.478Z",
-    "address": {
-      "street": "Wolli Creek",
-      "city": "Sydney",
-      "state": "NSW",
-      "zipcode": "2205"
-    }
-  },
-  "2024-07-12T01:16:42.413Z": {
+  "2024-07-12T08:17:13.906Z": {
     "new": "None",
     "fix": "Fix some bugs of transition, update the info of the transition.",
     "feature": "updateInfo",
     "description": "This function adds new information to the package.json file",
     "version": "20.5.7",
-    "time": "2024-07-12T01:16:42.413Z",
+    "time": "2024-07-12T08:17:13.906Z",
     "address": {
-      "street": "Wolli Creek",
       "city": "Sydney",
-      "state": "NSW",
-      "zipcode": "2205"
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    }
+  },
+  "2024-07-12T08:17:18.152Z": {
+    "new": "None",
+    "fix": "Fix some bugs of transition, update the info of the transition.",
+    "feature": "updateInfo",
+    "description": "This function adds new information to the package.json file",
+    "version": "20.5.7",
+    "time": "2024-07-12T08:17:18.152Z",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    }
+  },
+  "2024-07-12T08:17:23.092Z": {
+    "new": "None",
+    "fix": "Fix some bugs of transition, update the info of the transition.",
+    "feature": "updateInfo",
+    "description": "This function adds new information to the package.json file",
+    "version": "20.5.7",
+    "time": "2024-07-12T08:17:23.092Z",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    }
+  },
+  "2024-07-12T08:17:23.954Z": {
+    "new": "None",
+    "fix": "Fix some bugs of transition, update the info of the transition.",
+    "feature": "updateInfo",
+    "description": "This function adds new information to the package.json file",
+    "version": "20.5.7",
+    "time": "2024-07-12T08:17:23.954Z",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    }
+  },
+  "2024-07-12T08:17:24.740Z": {
+    "new": "None",
+    "fix": "Fix some bugs of transition, update the info of the transition.",
+    "feature": "updateInfo",
+    "description": "This function adds new information to the package.json file",
+    "version": "20.5.7",
+    "time": "2024-07-12T08:17:24.740Z",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    }
+  },
+  "2024-07-12T08:17:30.902Z": {
+    "new": "None",
+    "fix": "Fix some bugs of transition, update the info of the transition.",
+    "feature": "updateInfo",
+    "description": "This function adds new information to the package.json file",
+    "version": "20.5.7",
+    "time": "2024-07-12T08:17:30.902Z",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    }
+  },
+  "2024-07-12T08:17:44.475Z": {
+    "new": "None",
+    "fix": "Fix some bugs of transition, update the info of the transition.",
+    "feature": "updateInfo",
+    "description": "This function adds new information to the package.json file",
+    "version": "20.5.7",
+    "time": "2024-07-12T08:17:44.475Z",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
     }
   }
 }

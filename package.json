@@ -1,7 +1,7 @@
 {
   "name": "xianzhezhang",
   "version": "20.5.7",
-  "lastPublishedAt": "2024-07-12T01:16:42.413Z",
+  "lastPublishedAt": "2024-07-12T08:17:44.475Z",
   "private": true,
   "homepage": "https://xianzhezhang97.github.io",
   "dependencies": {
@@ -10,6 +10,7 @@
     "@heroicons/react": "^2.1.1",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "apexcharts": "^3.49.0",
+    "axios": "^1.7.2",
     "eslint": "8.57.0",
     "flowbite": "^2.3.0",
     "framer-motion": "^10.18.0",
