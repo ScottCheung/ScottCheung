@@ -12,5 +12,19 @@
       "state": "NSW",
       "zipcode": "2205"
     }
+  },
+  "2024-07-12T01:13:04.478Z": {
+    "new": "updateInfo",
+    "fix": "updateInfo",
+    "feature": "updateInfo",
+    "description": "This function adds new information to the package.json file",
+    "version": "20.5.6",
+    "time": "2024-07-12T01:13:04.478Z",
+    "address": {
+      "street": "Wolli Creek",
+      "city": "Sydney",
+      "state": "NSW",
+      "zipcode": "2205"
+    }
   }
 }
