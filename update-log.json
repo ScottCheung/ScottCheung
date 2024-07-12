@@ -1,1 +1,16 @@
-{}
+{
+  "2024-07-12T01:11:33.333Z": {
+    "new": "updateInfo",
+    "fix": "updateInfo",
+    "feature": "updateInfo",
+    "description": "This function adds new information to the package.json file",
+    "version": "20.5.5",
+    "time": "2024-07-12T01:11:33.333Z",
+    "address": {
+      "street": "Wolli Creek",
+      "city": "Sydney",
+      "state": "NSW",
+      "zipcode": "2205"
+    }
+  }
+}
