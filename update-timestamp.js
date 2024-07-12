@@ -34,4 +34,4 @@ packageJson.updateInfo = {
 
 // 将更新后的内容写回 package.json 文件
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
-fs.writeFileSync(Log, JSON.stringify(Log, null, 2);
+fs.writeFileSync(Log, JSON.stringify(Log, null, 2));
