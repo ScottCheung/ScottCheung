@@ -54,42 +54,19 @@ const getGeolocation = async () => {
     author: "Scott Cheung",
     address,
 
-    header: ["TimeLine.json file", "时间线数据"],
-    New: [
+    header: ["New Log Function", "更新 Log 记录功能"],
+    new: [
       [
         "Update the info of the Update-Log, show the update contents every time.",
-        "This function adds new information to the package.json file",
-        "This function adds new information to the package.json file",
       ],
-      [
-        "新增了更新日志功能，可以查看每次更新的内容",
-        "新增了更新日志功能，可以查看每次更新的内容",
-      ],
+      ["新增了更新日志功能，可以查看每次更新的内容"],
     ],
-    fix: [
-      [
-        "Fix some bugs of transition, update the info of the transition.",
-        "Fix some bugs of transition, update the info of the transition.",
-        "Fix some bugs of transition, update the info of the transition.",
-      ],
-      [
-        "Fix some bugs of transition, update the info of the transition.",
-        "Fix some bugs of transition, update the info of the transition.",
-        "Fix some bugs of transition, update the info of the transition.",
-      ],
-    ],
-
+    fix: [["Fix some bugs of animation bugs."], ["修复了动画 BUG."]],
     impro: [
       [
-        "Fix some bugs of transition, update the info of the transition.",
-        "Fix some bugs of transition, update the info of the transition.",
-        "Fix some bugs of transition, update the info of the transition.",
+        "Improve some situations of transition, update the info of the transition.",
       ],
-      [
-        "Fix some bugs of transition, update the info of the transition.",
-        "Fix some bugs of transition, update the info of the transition.",
-        "Fix some bugs of transition, update the info of the transition.",
-      ],
+      ["修复了翻译不佳的情况."],
     ],
   };
 
