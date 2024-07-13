@@ -69,6 +69,8 @@ const getGeolocation = async () => {
     //   ["修复了翻译不佳的情况."],
     // ],
 
+    // 显示优化
+
     // 性能优化
     header: ["Patch Update", "补丁更新"],
     new: [],
