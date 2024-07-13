@@ -183,7 +183,7 @@ function WhyMe({ hideTittle }) {
                             }}
                             className={`${
                               feature.icon
-                            } fi animate__animated  animate__zoomIn ${hideTittle ? "text-[20px] lg:text-[30px]" : "text-[30px] lg:text-[40px]"}  ${
+                            } fi animate__animated  animate__zoomIn from-[-20%] to-[120%] ${hideTittle ? "text-[20px] lg:text-[30px]" : "text-[30px] lg:text-[40px]"}  ${
                               feature.color1 + " " + feature.color2
                             } flex items-center pb-[10px] bg-clip-text text-transparent bg-gradient-to-br`}
                           ></i>

@@ -129,7 +129,7 @@ function WhymeCard() {
           className="fixed  right-0 bottom-0 w-[100vw] h-[100vh] z-10  animate__animated animate__fadeIn "
           style={
             {
-              ...bgPic(whymeCard.pic[0], "35% auto", "bottom right"),
+              ...bgPic(whymeCard.pic[1], "35% auto", "bottom right"),
             } || null
           }
         ></motion.span>
@@ -145,6 +145,9 @@ function WhymeCard() {
             {/* {show && ( */}
             <motion.div
               layout
+              onClick={(event) => {
+                event.stopPropagation();
+              }}
               layoutId={whymeCard.advantage}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
               className="flex  bg-white  -mb-[20vh] rounded-[40px] py-[40px] px-[28px] z-50 "
@@ -152,7 +155,7 @@ function WhymeCard() {
               <div className="flex gap-x-[20px]">
                 <motion.div
                   layout
-                  className="flex flex-col h-full gap-y-[45px] z-50"
+                  className="flex flex-col h-full gap-y-[35px] z-50"
                 >
                   {keyfeature.map((feature, index) => (
                     <motion.button
@@ -170,11 +173,11 @@ function WhymeCard() {
                         whymeCard.advantage === feature.advantage
                           ? "hidden"
                           : "animate__animated animate__fadeInUp"
-                      } flex hover:shadow-6xl shadow-md items-start py-[15px] justify-center bg-gradient-to-br w-[10vw] -ml-[40px] rounded-r-[22px] ${
+                      } flex hover:shadow-6xl shadow-md items-start py-[20px] justify-center bg-gradient-to-br from-[-20%] to-[120%] w-[10vw] mr-[30px] -ml-[28px] rounded-r-full ${
                         feature.color1 + " " + feature.color2
                       } `}
                     >
-                      <div className="flex flex-col items-center justify-start text-white text-l">
+                      <div className="flex flex-col items-center justify-start text-white gap-[10px]">
                         <i
                           className={`${feature.icon} flex justify-start fi text-5xl text-white flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
                         ></i>

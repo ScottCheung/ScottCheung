@@ -206,7 +206,7 @@ function PersonalityandLanguage() {
             variants={ProgressBarvisblecontainer}
             initial="hidden"
             whileInView="visible"
-            className="rounded-[28px] flex-1 h-full relative min-h-[600px]"
+            className="rounded-[28px] flex-1 h-full relative min-h-[600px] overflow-hidden"
             style={{
               background:
                 "linear-gradient(to top left, #9795f0 0%, #fbc8d4 100%)",

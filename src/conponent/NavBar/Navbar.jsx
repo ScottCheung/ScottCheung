@@ -711,16 +711,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           whileTap={{ scale: 0.9, opacity: 1 }}
           whileHover={{ scale: 1.1, opacity: 1 }}
           onClick={() => {
-            const scrollDuration = 3000; // 滚动持续时间为3000毫秒（3秒）
-            const scrollStep = -window.scrollY / (scrollDuration / 10); // 每一步的滚动距离
-
-            const scrollInterval = setInterval(() => {
-              if (window.scrollY !== 0) {
-                window.scrollBy(0, scrollStep);
-              } else {
-                clearInterval(scrollInterval);
-              }
-            }, 10); // 每10毫秒执行一次
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
           }}
           className={`fixed bottom-10 lg:right-20 right-10 z-50  `}
         >
