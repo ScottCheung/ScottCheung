@@ -9,10 +9,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Initial Release", "初始发布"],
+    "header": [
+      "Initial Release",
+      "初始发布"
+    ],
     "new": [
-      ["Launch the personal website with essential features."],
-      ["推出个人网站的基本功能."]
+      [
+        "Launch the personal website with essential features."
+      ],
+      [
+        "推出个人网站的基本功能."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -27,8 +34,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Resume Section", "新增简历栏目"],
-    "new": [["Add a resume section to the website."], ["网站新增简历栏目."]],
+    "header": [
+      "New Resume Section",
+      "新增简历栏目"
+    ],
+    "new": [
+      [
+        "Add a resume section to the website."
+      ],
+      [
+        "网站新增简历栏目."
+      ]
+    ],
     "fix": [],
     "impro": []
   },
@@ -42,11 +59,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Bug Fixes", "修复错误"],
+    "header": [
+      "Bug Fixes",
+      "修复错误"
+    ],
     "new": [],
     "fix": [
-      ["Fix display issues on mobile devices."],
-      ["修复移动设备上的显示问题."]
+      [
+        "Fix display issues on mobile devices."
+      ],
+      [
+        "修复移动设备上的显示问题."
+      ]
     ],
     "impro": []
   },
@@ -60,10 +84,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Project Section", "新增项目栏目"],
+    "header": [
+      "New Project Section",
+      "新增项目栏目"
+    ],
     "new": [
-      ["Add a project section to showcase completed projects."],
-      ["新增项目栏目以展示已完成的项目."]
+      [
+        "Add a project section to showcase completed projects."
+      ],
+      [
+        "新增项目栏目以展示已完成的项目."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -78,11 +109,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix typos and grammar errors in the project descriptions."],
-      ["修复项目描述中的拼写和语法错误."]
+      [
+        "Fix typos and grammar errors in the project descriptions."
+      ],
+      [
+        "修复项目描述中的拼写和语法错误."
+      ]
     ],
     "impro": []
   },
@@ -96,10 +134,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Photo Gallery", "新增相册"],
+    "header": [
+      "New Photo Gallery",
+      "新增相册"
+    ],
     "new": [
-      ["Add a photo gallery section to the website."],
-      ["网站新增相册栏目."]
+      [
+        "Add a photo gallery section to the website."
+      ],
+      [
+        "网站新增相册栏目."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -114,11 +159,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix image loading issues in the photo gallery."],
-      ["修复相册中的图片加载问题."]
+      [
+        "Fix image loading issues in the photo gallery."
+      ],
+      [
+        "修复相册中的图片加载问题."
+      ]
     ],
     "impro": []
   },
@@ -132,10 +184,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Social Section", "新增社交栏目"],
+    "header": [
+      "New Social Section",
+      "新增社交栏目"
+    ],
     "new": [
-      ["Add a social section to integrate with social media."],
-      ["新增社交栏目以整合社交媒体."]
+      [
+        "Add a social section to integrate with social media."
+      ],
+      [
+        "新增社交栏目以整合社交媒体."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -150,11 +209,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix link issues in the social section."],
-      ["修复社交栏目中的链接问题."]
+      [
+        "Fix link issues in the social section."
+      ],
+      [
+        "修复社交栏目中的链接问题."
+      ]
     ],
     "impro": []
   },
@@ -168,10 +234,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Workbench Section", "新增工作台栏目"],
+    "header": [
+      "New Workbench Section",
+      "新增工作台栏目"
+    ],
     "new": [
-      ["Add a workbench section for project management."],
-      ["新增工作台栏目以管理项目."]
+      [
+        "Add a workbench section for project management."
+      ],
+      [
+        "新增工作台栏目以管理项目."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -186,11 +259,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix minor UI issues in the workbench section."],
-      ["修复工作台栏目中的小 UI 问题."]
+      [
+        "Fix minor UI issues in the workbench section."
+      ],
+      [
+        "修复工作台栏目中的小 UI 问题."
+      ]
     ],
     "impro": []
   },
@@ -204,10 +284,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Job Board Section", "新增工作板栏目"],
+    "header": [
+      "New Job Board Section",
+      "新增工作板栏目"
+    ],
     "new": [
-      ["Add a job board section for job listings."],
-      ["新增工作板栏目以发布职位列表."]
+      [
+        "Add a job board section for job listings."
+      ],
+      [
+        "新增工作板栏目以发布职位列表."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -222,11 +309,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix layout issues on the job board section."],
-      ["修复工作板栏目的布局问题."]
+      [
+        "Fix layout issues on the job board section."
+      ],
+      [
+        "修复工作板栏目的布局问题."
+      ]
     ],
     "impro": []
   },
@@ -240,10 +334,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Rental System", "新增租房系统"],
+    "header": [
+      "New Rental System",
+      "新增租房系统"
+    ],
     "new": [
-      ["Add a rental system for property listings."],
-      ["新增租房系统以发布房产列表."]
+      [
+        "Add a rental system for property listings."
+      ],
+      [
+        "新增租房系统以发布房产列表."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -258,9 +359,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix property image loading issues."], ["修复房产图片加载问题."]],
+    "fix": [
+      [
+        "Fix property image loading issues."
+      ],
+      [
+        "修复房产图片加载问题."
+      ]
+    ],
     "impro": []
   },
   "2023-10-15T13:15:00.000Z": {
@@ -273,10 +384,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Life Section", "新增生活栏目"],
+    "header": [
+      "New Life Section",
+      "新增生活栏目"
+    ],
     "new": [
-      ["Add a life section for personal blog posts."],
-      ["新增生活栏目以发布个人博客文章."]
+      [
+        "Add a life section for personal blog posts."
+      ],
+      [
+        "新增生活栏目以发布个人博客文章."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -291,11 +409,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix formatting issues in blog posts."],
-      ["修复博客文章中的格式问题."]
+      [
+        "Fix formatting issues in blog posts."
+      ],
+      [
+        "修复博客文章中的格式问题."
+      ]
     ],
     "impro": []
   },
@@ -309,10 +434,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Portfolio Section", "新增作品集栏目"],
+    "header": [
+      "New Portfolio Section",
+      "新增作品集栏目"
+    ],
     "new": [
-      ["Add a portfolio section to showcase design work."],
-      ["新增作品集栏目以展示设计作品."]
+      [
+        "Add a portfolio section to showcase design work."
+      ],
+      [
+        "新增作品集栏目以展示设计作品."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -327,11 +459,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix image cropping issues in the portfolio section."],
-      ["修复作品集栏目中的图片裁剪问题."]
+      [
+        "Fix image cropping issues in the portfolio section."
+      ],
+      [
+        "修复作品集栏目中的图片裁剪问题."
+      ]
     ],
     "impro": []
   },
@@ -345,15 +484,26 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Major Layout Redesign", "重大布局重构"],
+    "header": [
+      "Major Layout Redesign",
+      "重大布局重构"
+    ],
     "new": [
-      ["Complete redesign of the website layout."],
-      ["网站布局的完全重设计."]
+      [
+        "Complete redesign of the website layout."
+      ],
+      [
+        "网站布局的完全重设计."
+      ]
     ],
     "fix": [],
     "impro": [
-      ["Improve navigation and user experience."],
-      ["改进导航和用户体验."]
+      [
+        "Improve navigation and user experience."
+      ],
+      [
+        "改进导航和用户体验."
+      ]
     ]
   },
   "2023-11-10T09:00:00.000Z": {
@@ -366,9 +516,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix minor issues from the redesign."], ["修复重设计中的小问题."]],
+    "fix": [
+      [
+        "Fix minor issues from the redesign."
+      ],
+      [
+        "修复重设计中的小问题."
+      ]
+    ],
     "impro": []
   },
   "2023-11-15T10:45:00.000Z": {
@@ -381,10 +541,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Contact Form", "新增联系表单"],
+    "header": [
+      "New Contact Form",
+      "新增联系表单"
+    ],
     "new": [
-      ["Add a contact form for users to reach out."],
-      ["新增联系表单以便用户联系."]
+      [
+        "Add a contact form for users to reach out."
+      ],
+      [
+        "新增联系表单以便用户联系."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -399,11 +566,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix validation issues in the contact form."],
-      ["修复联系表单中的验证问题."]
+      [
+        "Fix validation issues in the contact form."
+      ],
+      [
+        "修复联系表单中的验证问题."
+      ]
     ],
     "impro": []
   },
@@ -417,10 +591,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Blog Section", "新增博客栏目"],
+    "header": [
+      "New Blog Section",
+      "新增博客栏目"
+    ],
     "new": [
-      ["Add a blog section for tech articles."],
-      ["新增博客栏目以发布技术文章."]
+      [
+        "Add a blog section for tech articles."
+      ],
+      [
+        "新增博客栏目以发布技术文章."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -435,11 +616,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix formatting issues in the blog section."],
-      ["修复博客栏目中的格式问题."]
+      [
+        "Fix formatting issues in the blog section."
+      ],
+      [
+        "修复博客栏目中的格式问题."
+      ]
     ],
     "impro": []
   },
@@ -453,10 +641,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Testimonials Section", "新增推荐信栏目"],
+    "header": [
+      "New Testimonials Section",
+      "新增推荐信栏目"
+    ],
     "new": [
-      ["Add a testimonials section to showcase user feedback."],
-      ["新增推荐信栏目以展示用户反馈."]
+      [
+        "Add a testimonials section to showcase user feedback."
+      ],
+      [
+        "新增推荐信栏目以展示用户反馈."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -471,11 +666,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix testimonial formatting issues."],
-      ["修复推荐信中的格式问题."]
+      [
+        "Fix testimonial formatting issues."
+      ],
+      [
+        "修复推荐信中的格式问题."
+      ]
     ],
     "impro": []
   },
@@ -489,10 +691,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New FAQ Section", "新增常见问题栏目"],
+    "header": [
+      "New FAQ Section",
+      "新增常见问题栏目"
+    ],
     "new": [
-      ["Add a FAQ section to answer common questions."],
-      ["新增常见问题栏目以解答常见问题."]
+      [
+        "Add a FAQ section to answer common questions."
+      ],
+      [
+        "新增常见问题栏目以解答常见问题."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -507,11 +716,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix typo issues in the FAQ section."],
-      ["修复常见问题栏目中的拼写错误."]
+      [
+        "Fix typo issues in the FAQ section."
+      ],
+      [
+        "修复常见问题栏目中的拼写错误."
+      ]
     ],
     "impro": []
   },
@@ -525,10 +741,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Case Study Section", "新增案例研究栏目"],
+    "header": [
+      "New Case Study Section",
+      "新增案例研究栏目"
+    ],
     "new": [
-      ["Add a case study section to highlight projects."],
-      ["新增案例研究栏目以展示项目."]
+      [
+        "Add a case study section to highlight projects."
+      ],
+      [
+        "新增案例研究栏目以展示项目."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -543,9 +766,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix case study image issues."], ["修复案例研究中的图片问题."]],
+    "fix": [
+      [
+        "Fix case study image issues."
+      ],
+      [
+        "修复案例研究中的图片问题."
+      ]
+    ],
     "impro": []
   },
   "2024-01-05T10:30:00.000Z": {
@@ -558,10 +791,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Downloadable Resources Section", "新增下载资源栏目"],
+    "header": [
+      "New Downloadable Resources Section",
+      "新增下载资源栏目"
+    ],
     "new": [
-      ["Add a downloadable resources section for templates."],
-      ["新增下载资源栏目以提供模板."]
+      [
+        "Add a downloadable resources section for templates."
+      ],
+      [
+        "新增下载资源栏目以提供模板."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -576,9 +816,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix download link issues."], ["修复下载链接问题."]],
+    "fix": [
+      [
+        "Fix download link issues."
+      ],
+      [
+        "修复下载链接问题."
+      ]
+    ],
     "impro": []
   },
   "2024-01-15T10:30:00.000Z": {
@@ -591,10 +841,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New E-commerce Section", "新增电子商务栏目"],
+    "header": [
+      "New E-commerce Section",
+      "新增电子商务栏目"
+    ],
     "new": [
-      ["Add an e-commerce section for selling products."],
-      ["新增电子商务栏目以销售产品."]
+      [
+        "Add an e-commerce section for selling products."
+      ],
+      [
+        "新增电子商务栏目以销售产品."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -609,9 +866,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix payment gateway issues."], ["修复支付网关问题."]],
+    "fix": [
+      [
+        "Fix payment gateway issues."
+      ],
+      [
+        "修复支付网关问题."
+      ]
+    ],
     "impro": []
   },
   "2024-01-25T10:30:00.000Z": {
@@ -624,10 +891,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Chatbot Section", "新增聊天机器人栏目"],
+    "header": [
+      "New Chatbot Section",
+      "新增聊天机器人栏目"
+    ],
     "new": [
-      ["Add a chatbot section for user support."],
-      ["新增聊天机器人栏目以提供用户支持."]
+      [
+        "Add a chatbot section for user support."
+      ],
+      [
+        "新增聊天机器人栏目以提供用户支持."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -642,9 +916,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix chatbot response issues."], ["修复聊天机器人响应问题."]],
+    "fix": [
+      [
+        "Fix chatbot response issues."
+      ],
+      [
+        "修复聊天机器人响应问题."
+      ]
+    ],
     "impro": []
   },
   "2024-02-05T10:30:00.000Z": {
@@ -657,10 +941,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Analytics Dashboard", "新增分析仪表板"],
+    "header": [
+      "New Analytics Dashboard",
+      "新增分析仪表板"
+    ],
     "new": [
-      ["Add an analytics dashboard for website metrics."],
-      ["新增分析仪表板以显示网站指标."]
+      [
+        "Add an analytics dashboard for website metrics."
+      ],
+      [
+        "新增分析仪表板以显示网站指标."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -675,11 +966,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix chart rendering issues in the dashboard."],
-      ["修复仪表板中的图表渲染问题."]
+      [
+        "Fix chart rendering issues in the dashboard."
+      ],
+      [
+        "修复仪表板中的图表渲染问题."
+      ]
     ],
     "impro": []
   },
@@ -693,15 +991,26 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Major Feature Update", "重大功能更新"],
+    "header": [
+      "Major Feature Update",
+      "重大功能更新"
+    ],
     "new": [
-      ["Introduce new AI-driven features for content recommendations."],
-      ["引入新的 AI 驱动的内容推荐功能."]
+      [
+        "Introduce new AI-driven features for content recommendations."
+      ],
+      [
+        "引入新的 AI 驱动的内容推荐功能."
+      ]
     ],
     "fix": [],
     "impro": [
-      ["Improve site performance and loading times."],
-      ["改进网站性能和加载时间."]
+      [
+        "Improve site performance and loading times."
+      ],
+      [
+        "改进网站性能和加载时间."
+      ]
     ]
   },
   "2024-02-20T09:00:00.000Z": {
@@ -714,11 +1023,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix minor bugs from the feature update."],
-      ["修复功能更新中的小错误."]
+      [
+        "Fix minor bugs from the feature update."
+      ],
+      [
+        "修复功能更新中的小错误."
+      ]
     ],
     "impro": []
   },
@@ -732,10 +1048,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Video Gallery", "新增视频库"],
+    "header": [
+      "New Video Gallery",
+      "新增视频库"
+    ],
     "new": [
-      ["Add a video gallery section to the website."],
-      ["新增视频库栏目到网站."]
+      [
+        "Add a video gallery section to the website."
+      ],
+      [
+        "新增视频库栏目到网站."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -750,9 +1073,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix video playback issues."], ["修复视频播放问题."]],
+    "fix": [
+      [
+        "Fix video playback issues."
+      ],
+      [
+        "修复视频播放问题."
+      ]
+    ],
     "impro": []
   },
   "2024-03-05T10:30:00.000Z": {
@@ -765,10 +1098,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Feedback System", "新增反馈系统"],
+    "header": [
+      "New Feedback System",
+      "新增反馈系统"
+    ],
     "new": [
-      ["Add a feedback system for user comments."],
-      ["新增反馈系统以接收用户评论."]
+      [
+        "Add a feedback system for user comments."
+      ],
+      [
+        "新增反馈系统以接收用户评论."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -783,9 +1123,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix comment submission issues."], ["修复评论提交问题."]],
+    "fix": [
+      [
+        "Fix comment submission issues."
+      ],
+      [
+        "修复评论提交问题."
+      ]
+    ],
     "impro": []
   },
   "2024-03-15T10:30:00.000Z": {
@@ -798,10 +1148,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Survey System", "新增调查系统"],
+    "header": [
+      "New Survey System",
+      "新增调查系统"
+    ],
     "new": [
-      ["Add a survey system for user feedback."],
-      ["新增调查系统以接收用户反馈."]
+      [
+        "Add a survey system for user feedback."
+      ],
+      [
+        "新增调查系统以接收用户反馈."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -816,9 +1173,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix survey response issues."], ["修复调查响应问题."]],
+    "fix": [
+      [
+        "Fix survey response issues."
+      ],
+      [
+        "修复调查响应问题."
+      ]
+    ],
     "impro": []
   },
   "2024-03-25T10:30:00.000Z": {
@@ -831,10 +1198,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Event Calendar", "新增活动日历"],
+    "header": [
+      "New Event Calendar",
+      "新增活动日历"
+    ],
     "new": [
-      ["Add an event calendar to display upcoming events."],
-      ["新增活动日历以显示即将到来的活动."]
+      [
+        "Add an event calendar to display upcoming events."
+      ],
+      [
+        "新增活动日历以显示即将到来的活动."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -849,9 +1223,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix event date display issues."], ["修复活动日期显示问题."]],
+    "fix": [
+      [
+        "Fix event date display issues."
+      ],
+      [
+        "修复活动日期显示问题."
+      ]
+    ],
     "impro": []
   },
   "2024-04-05T10:30:00.000Z": {
@@ -864,10 +1248,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Forum Section", "新增论坛栏目"],
+    "header": [
+      "New Forum Section",
+      "新增论坛栏目"
+    ],
     "new": [
-      ["Add a forum section for user discussions."],
-      ["新增论坛栏目以便用户讨论."]
+      [
+        "Add a forum section for user discussions."
+      ],
+      [
+        "新增论坛栏目以便用户讨论."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -882,9 +1273,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix forum thread display issues."], ["修复论坛主题显示问题."]],
+    "fix": [
+      [
+        "Fix forum thread display issues."
+      ],
+      [
+        "修复论坛主题显示问题."
+      ]
+    ],
     "impro": []
   },
   "2024-04-15T10:30:00.000Z": {
@@ -897,10 +1298,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Notification System", "新增通知系统"],
+    "header": [
+      "New Notification System",
+      "新增通知系统"
+    ],
     "new": [
-      ["Add a notification system for real-time alerts."],
-      ["新增通知系统以提供实时警报."]
+      [
+        "Add a notification system for real-time alerts."
+      ],
+      [
+        "新增通知系统以提供实时警报."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -915,9 +1323,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix notification display issues."], ["修复通知显示问题."]],
+    "fix": [
+      [
+        "Fix notification display issues."
+      ],
+      [
+        "修复通知显示问题."
+      ]
+    ],
     "impro": []
   },
   "2024-04-25T10:30:00.000Z": {
@@ -930,10 +1348,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Support Ticket System", "新增支持工单系统"],
+    "header": [
+      "New Support Ticket System",
+      "新增支持工单系统"
+    ],
     "new": [
-      ["Add a support ticket system for user inquiries."],
-      ["新增支持工单系统以处理用户咨询."]
+      [
+        "Add a support ticket system for user inquiries."
+      ],
+      [
+        "新增支持工单系统以处理用户咨询."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -948,11 +1373,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix support ticket submission issues."],
-      ["修复支持工单提交问题."]
+      [
+        "Fix support ticket submission issues."
+      ],
+      [
+        "修复支持工单提交问题."
+      ]
     ],
     "impro": []
   },
@@ -966,10 +1398,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Payment Integration", "新增支付集成"],
+    "header": [
+      "New Payment Integration",
+      "新增支付集成"
+    ],
     "new": [
-      ["Add payment integration for e-commerce transactions."],
-      ["新增支付集成以进行电子商务交易."]
+      [
+        "Add payment integration for e-commerce transactions."
+      ],
+      [
+        "新增支付集成以进行电子商务交易."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -984,9 +1423,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix payment gateway issues."], ["修复支付网关问题."]],
+    "fix": [
+      [
+        "Fix payment gateway issues."
+      ],
+      [
+        "修复支付网关问题."
+      ]
+    ],
     "impro": []
   },
   "2024-05-15T10:30:00.000Z": {
@@ -999,10 +1448,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Blog Post Editor", "新增博客文章编辑器"],
+    "header": [
+      "New Blog Post Editor",
+      "新增博客文章编辑器"
+    ],
     "new": [
-      ["Add a rich text editor for blog posts."],
-      ["新增博客文章的富文本编辑器."]
+      [
+        "Add a rich text editor for blog posts."
+      ],
+      [
+        "新增博客文章的富文本编辑器."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -1017,9 +1473,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix editor formatting issues."], ["修复编辑器的格式问题."]],
+    "fix": [
+      [
+        "Fix editor formatting issues."
+      ],
+      [
+        "修复编辑器的格式问题."
+      ]
+    ],
     "impro": []
   },
   "2024-05-25T10:30:00.000Z": {
@@ -1032,15 +1498,26 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Major UI Overhaul", "重大 UI 重构"],
+    "header": [
+      "Major UI Overhaul",
+      "重大 UI 重构"
+    ],
     "new": [
-      ["Complete overhaul of the website's UI."],
-      ["网站 UI 的完全重构."]
+      [
+        "Complete overhaul of the website's UI."
+      ],
+      [
+        "网站 UI 的完全重构."
+      ]
     ],
     "fix": [],
     "impro": [
-      ["Improve overall user experience and navigation."],
-      ["改进整体用户体验和导航."]
+      [
+        "Improve overall user experience and navigation."
+      ],
+      [
+        "改进整体用户体验和导航."
+      ]
     ]
   },
   "2024-05-30T09:00:00.000Z": {
@@ -1053,11 +1530,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix minor UI issues from the overhaul."],
-      ["修复重构中的小 UI 问题."]
+      [
+        "Fix minor UI issues from the overhaul."
+      ],
+      [
+        "修复重构中的小 UI 问题."
+      ]
     ],
     "impro": []
   },
@@ -1071,10 +1555,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Help Center", "新增帮助中心"],
+    "header": [
+      "New Help Center",
+      "新增帮助中心"
+    ],
     "new": [
-      ["Add a help center for user support and FAQs."],
-      ["新增帮助中心以提供用户支持和常见问题解答."]
+      [
+        "Add a help center for user support and FAQs."
+      ],
+      [
+        "新增帮助中心以提供用户支持和常见问题解答."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -1089,11 +1580,18 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
     "fix": [
-      ["Fix search issues in the help center."],
-      ["修复帮助中心中的搜索问题."]
+      [
+        "Fix search issues in the help center."
+      ],
+      [
+        "修复帮助中心中的搜索问题."
+      ]
     ],
     "impro": []
   },
@@ -1107,10 +1605,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New User Profile Section", "新增用户资料栏目"],
+    "header": [
+      "New User Profile Section",
+      "新增用户资料栏目"
+    ],
     "new": [
-      ["Add a user profile section for account management."],
-      ["新增用户资料栏目以管理帐户."]
+      [
+        "Add a user profile section for account management."
+      ],
+      [
+        "新增用户资料栏目以管理帐户."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -1125,9 +1630,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix profile picture upload issues."], ["修复资料图片上传问题."]],
+    "fix": [
+      [
+        "Fix profile picture upload issues."
+      ],
+      [
+        "修复资料图片上传问题."
+      ]
+    ],
     "impro": []
   },
   "2024-06-25T10:30:00.000Z": {
@@ -1140,10 +1655,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Activity Feed", "新增活动动态"],
+    "header": [
+      "New Activity Feed",
+      "新增活动动态"
+    ],
     "new": [
-      ["Add an activity feed to show recent user actions."],
-      ["新增活动动态以显示最近的用户操作."]
+      [
+        "Add an activity feed to show recent user actions."
+      ],
+      [
+        "新增活动动态以显示最近的用户操作."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -1158,9 +1680,19 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["Patch Update", "补丁更新"],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
     "new": [],
-    "fix": [["Fix activity feed display issues."], ["修复活动动态显示问题."]],
+    "fix": [
+      [
+        "Fix activity feed display issues."
+      ],
+      [
+        "修复活动动态显示问题."
+      ]
+    ],
     "impro": []
   },
   "2024-07-05T10:30:00.000Z": {
@@ -1173,10 +1705,17 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Notification Center", "新增通知中心"],
+    "header": [
+      "New Notification Center",
+      "新增通知中心"
+    ],
     "new": [
-      ["Add a notification center to manage alerts."],
-      ["新增通知中心以管理警报."]
+      [
+        "Add a notification center to manage alerts."
+      ],
+      [
+        "新增通知中心以管理警报."
+      ]
     ],
     "fix": [],
     "impro": []
@@ -1191,19 +1730,61 @@
       "zipcode": "1001",
       "loc": "-33.8678,151.2073"
     },
-    "header": ["New Log Function", "更新 Log 记录功能"],
+    "header": [
+      "New Log Function",
+      "更新 Log 记录功能"
+    ],
     "new": [
       [
         "Update the info of the Update-Log, show the update contents every time."
       ],
-      ["新增了更新日志功能，可以查看每次更新的内容"]
+      [
+        "新增了更新日志功能，可以查看每次更新的内容"
+      ]
     ],
-    "fix": [["Fix some bugs of animation bugs."], ["修复了动画 BUG."]],
+    "fix": [
+      [
+        "Fix some bugs of animation bugs."
+      ],
+      [
+        "修复了动画 BUG."
+      ]
+    ],
     "impro": [
       [
         "Improve some situations of transition, update the info of the transition."
       ],
-      ["修复了翻译不佳的情况."]
+      [
+        "修复了翻译不佳的情况."
+      ]
     ]
+  },
+  "2024-07-13T07:41:18.936Z": {
+    "version": "4.4.2",
+    "time": "2024-07-13T07:41:18.936Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
+    "new": [],
+    "fix": [
+      [
+        "Fix performance issues in home page. Optimise long task.",
+        "Fix some bugs of animation bugs.",
+        null
+      ],
+      [
+        "修复主页性能问题. 优化长事件",
+        "修复了动画 BUG."
+      ]
+    ],
+    "impro": []
   }
 }
