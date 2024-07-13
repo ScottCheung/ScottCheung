@@ -74,11 +74,11 @@ const getGeolocation = async () => {
     new: [],
     fix: [
       [
-        [
-          "Fix performance issues in home page. Optimise long task.",
-          "Fix some bugs of animation bugs.",
-        ][("修复主页性能问题. 优化长事件", "修复了动画 BUG.")],
+        "Fix performance issues in home page. Optimise long task.",
+        "Fix some bugs of animation bugs.",
+        ,
       ],
+      ["修复主页性能问题. 优化长事件", "修复了动画 BUG."],
     ],
     impro: [],
   };
