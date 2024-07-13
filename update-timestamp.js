@@ -53,7 +53,7 @@ const getGeolocation = async () => {
     time: currentTime,
     author: "Scott Cheung",
     address,
-
+    // 自定义
     // header: ["New Log Function", "更新 Log 记录功能"],
     // new: [
     //   [
