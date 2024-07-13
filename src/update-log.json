@@ -1699,5 +1699,44 @@
     ],
     "fix": [],
     "impro": []
+  },
+  "2024-07-13T00:18:11.873Z": {
+    "version": "4.4.1",
+    "time": "2024-07-13T00:18:11.873Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "New Log Function",
+      "更新 Log 记录功能"
+    ],
+    "new": [
+      [
+        "Update the info of the Update-Log, show the update contents every time."
+      ],
+      [
+        "新增了更新日志功能，可以查看每次更新的内容"
+      ]
+    ],
+    "fix": [
+      [
+        "Fix some bugs of animation bugs."
+      ],
+      [
+        "修复了动画 BUG."
+      ]
+    ],
+    "impro": [
+      [
+        "Improve some situations of transition, update the info of the transition."
+      ],
+      [
+        "修复了翻译不佳的情况."
+      ]
+    ]
   }
 }
