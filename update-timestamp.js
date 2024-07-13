@@ -49,13 +49,48 @@ const getGeolocation = async () => {
   // 创建新的日志条目
   // 创建新的日志条目
   const newLogEntry = {
-    new: "None",
-    fix: "Fix some bugs of transition, update the info of the transition.",
-    feature: "updateInfo",
-    description: "This function adds new information to the package.json file",
     version: packageJson.version,
     time: currentTime,
+    author: "Scott Cheung",
     address,
+
+    header: ["TimeLine.json file", "时间线数据"],
+    New: [
+      [
+        "Update the info of the Update-Log, show the update contents every time.",
+        "This function adds new information to the package.json file",
+        "This function adds new information to the package.json file",
+      ],
+      [
+        "新增了更新日志功能，可以查看每次更新的内容",
+        "新增了更新日志功能，可以查看每次更新的内容",
+      ],
+    ],
+    fix: [
+      [
+        "Fix some bugs of transition, update the info of the transition.",
+        "Fix some bugs of transition, update the info of the transition.",
+        "Fix some bugs of transition, update the info of the transition.",
+      ],
+      [
+        "Fix some bugs of transition, update the info of the transition.",
+        "Fix some bugs of transition, update the info of the transition.",
+        "Fix some bugs of transition, update the info of the transition.",
+      ],
+    ],
+
+    impro: [
+      [
+        "Fix some bugs of transition, update the info of the transition.",
+        "Fix some bugs of transition, update the info of the transition.",
+        "Fix some bugs of transition, update the info of the transition.",
+      ],
+      [
+        "Fix some bugs of transition, update the info of the transition.",
+        "Fix some bugs of transition, update the info of the transition.",
+        "Fix some bugs of transition, update the info of the transition.",
+      ],
+    ],
   };
 
   // 将新日志条目添加到日志字典中，以时间戳作为键
@@ -66,6 +101,6 @@ const getGeolocation = async () => {
   fs.writeFileSync(logPath, JSON.stringify(log, null, 2));
 
   console.log(
-    `Updated package.json and update-log.json with current time: ${currentTime}`,
+    `Updated package.json and update-log.json with update-log. time: ${currentTime}`,
   );
 })();

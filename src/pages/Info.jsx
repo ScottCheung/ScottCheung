@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../conponent/NavBar/Navbar";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, animate } from "framer-motion";
 import database from "../Database.json";
 import Contact from "../conponent/Contact";
 import { useLanguage } from "../help/helpFunction";
 import { Link } from "react-router-dom";
+import LogAll from "../conponent/LogAll";
 
 export default function Profile() {
   document.body.style.overflowX = "hidden";
@@ -69,171 +70,137 @@ export default function Profile() {
             </svg>
           </div>
         </motion.div>
-        <section className="relative py-16 ">
-          <div className="visblecontainer ">
-            <div className="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp ">
-              <div className="px-6">
-                <div className="flex justify-center mb-64">
-                  <div className="flex justify-center w-full">
-                    <div className="">
-                      <img
-                        alt="..."
-                        src="https://3o.hk/images/2024/01/14/avatar.md.jpg"
-                        className="shadow-xl rounded-full h-auto align-middle border-none absolute -m-[75px] animate__animated animate__zoomIn"
-                        style={{ maxWidth: "150px" }}
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div className="mt-12 text-center">
-                  <h3 className="mb-2 text-5xl font-[600] leading-normal text-gray-800 animate__animated animate__zoomIn">
-                    张贤哲 | Scott Cheung
-                  </h3>
-                  <a
-                    href="https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7"
-                    className="mt-0 mb-2 text-xl font-[600] leading-normal text-gray-500 uppercase"
-                  >
-                    <i className="mr-2 text-gray-500 fi fi-rr-marker"></i>
+        <div className="visblecontainer flex flex-col gap-[28px] pb-[30vh]">
+          <motion.div
+            initial={{ height: "0px", opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            transition={{ duration: 0.8, ease: [0.455, 0.03, 0.515, 0.955] }}
+            className="relative flex flex-col bg-white pt-[14px] md:pt-[28px] lg:pt-[40px] px-[14px] md:px-[28px] lg:px-[40px] pb-[80px] rounded-[28px]  -mt-[150px] animate__animated animate__fadeInUp "
+          >
+            <div className="flex justify-center w-full">
+              <img
+                alt="..."
+                src="https://3o.hk/images/2024/01/14/avatar.md.jpg"
+                className="shadow-xl rounded-full h-auto absolute  -m-[105px] animate__animated animate__zoomIn"
+                style={{ maxWidth: "150px" }}
+              />
+            </div>
+            <div className="text-center ">
+              <h3 className="mt-64 text-5xl font-[600] leading-normal text-gray-800 animate__animated animate__zoomIn">
+                {["Scott Cheung", "张贤哲"][lang]}
+              </h3>
+              <a
+                href="https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7"
+                className="mt-0 mb-2 text-xl font-[600] leading-normal text-gray-500 uppercase"
+              >
+                <i className="mr-2 text-gray-500 fi fi-rr-marker"></i>
 
-                    {lang == 0 && "Sydney, Australia"}
-                    {lang == 1 && "澳大利亚，悉尼"}
-                  </a>
-                  <div className="mt-10 mb-2 text-gray-700"></div>
-                </div>
-                <div className="py-10 mt-10 text-center border-t">
-                  <div className="flex flex-wrap justify-center">
-                    <div className="w-full px-4 lg:w-9/12">
-                      <p className="mb-4 text-3xl leading-relaxed text-red-500 ">
-                        {lang == 0 &&
-                          "Please note that all these informations is private. Please respect privacy and please do not spread it."}
-                        {lang == 1 &&
-                          "请不要随意传播个人信息，请尊重他人隐私，谢谢。"}
-                      </p>
-                      <button
-                        className="font-normal text-pink-500 animate__animated animate__zoomIn"
-                        onClick={(e) =>
-                          e.preventDefault() & setIsExpanded(!isExpanded)
-                        }
-                      >
-                        <motion.div
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          className={`animate__animated hidden animate__zoomIn ${
-                            isExpanded ? "hidden" : ""
-                          }`}
-                        >
-                          {lang == 0 && "Show QA Info"}
-                          {lang == 1 && "展开QA问答"}
-                        </motion.div>
-                        <motion.div
-                          whileHover={{ scale: 1.1 }}
-                          whileTap={{ scale: 0.9 }}
-                          className={`animate__animated  animate__zoomIn ${
-                            !isExpanded ? "hidden" : ""
-                          }`}
-                        >
-                          {lang == 0 && "Show Basic Information"}
-                          {lang == 1 && "展开基本信息"}
-                        </motion.div>
-                      </button>
-                    </div>
-                  </div>
+                {lang == 0 && "Sydney, Australia"}
+                {lang == 1 && "澳大利亚，悉尼"}
+              </a>
+              <div className="mt-10 mb-2 text-gray-700"></div>
+            </div>
+            <div className="py-10 mt-10 text-center border-t">
+              <div className="flex flex-wrap justify-center">
+                <div className="w-full px-4 lg:w-9/12">
+                  <p className="mb-4 text-3xl leading-relaxed text-gray-500 ">
+                    {lang == 0 &&
+                      "Please note that all these informations is private. Please respect privacy and please do not spread it."}
+                    {lang == 1 &&
+                      "请不要随意传播个人信息，请尊重他人隐私，谢谢。"}
+                  </p>
+                  <button
+                    className="font-normal text-pink-500 text-[15px] animate__animated animate__zoomIn"
+                    onClick={(e) =>
+                      e.preventDefault() & setIsExpanded(!isExpanded)
+                    }
+                  >
+                    <motion.div
+                      layout
+                      whileHover={{ scale: 1.1 }}
+                      whileTap={{ scale: 0.9 }}
+                      className={`animate__animated  animate__zoomIn`}
+                    >
+                      {isExpanded
+                        ? ["Collapse", "收起"][lang]
+                        : [
+                            "I agree, show me more information.",
+                            "我同意，显示更多信息。",
+                          ][lang]}
+                    </motion.div>
+                  </button>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </main>
-      <div className="visblecontainer section-sapphire pb-24 mb-[15vh]">
-        <motion.div
-          variants={visblecontainer}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="bg-white pt-[14px] md:pt-[28px] lg:pt-[40px] px-[14px] md:px-[28px] lg:px-[40px] pb-[80px] rounded-[28px] animate__animated animate__fadeInUp"
-        >
-          {isExpanded ? (
-            <>
-              {" "}
-              {/* Further Information */}
-              <div className="tile-header ">
-                <div className="flex justify-between">
-                  <h3 className="py-16 mx-8 tile-headline typography-subsection-headline animate__animated animate__zoomIn">
-                    {lang == 0 && "QA Info"}
-                    {lang == 1 && "QA信息"}
+            {isExpanded && (
+              <motion.div>
+                {/* Basic Information */}
+                <div className="flex flex-col">
+                  <h3
+                    style={{
+                      lineHeight: 1.19048,
+                      fontWeight: 600,
+                      letterSpacing: "0.011em",
+                    }}
+                    className="py-4 text-[30px] text-gray-900 animate__animated animate__zoomIn"
+                  >
+                    {lang == 0 && "Basic Information"}
+                    {lang == 1 && "基本信息"}
                   </h3>
                   <motion.div
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.9 }}
-                    className="py-16 tile-headline animate__animated animate__zoomIn"
+                    vibrants={item}
+                    className={`grid grid-cols-12 lg:gap-x-[40px]`}
                   >
-                    <a href="/">
-                      {lang == 0 && "more >"}
-                      {lang == 1 && "更多  >>"}
-                    </a>
+                    {infos.map((info, index) => {
+                      // 判断是否为 "Age"
+                      if (info.cont === "Age" || info.cont === "年龄") {
+                        // 计算年份，这里假设 birthYear 是存储出生年份的变量
+                        const currentYear = new Date().getFullYear();
+                        const age = currentYear - 1997 - 1;
+                        info.icon = age;
+                      }
+
+                      return (
+                        <motion.div
+                          key={index + info.icon}
+                          transition={LeftappearBar}
+                          whileHover={{ scale: 1.001 }}
+                          whileTap={{ scale: 0.99 }}
+                          layout
+                          style={{ animationDelay: `${0.05 * index}s` }}
+                          className="flex justify-between col-span-12 py-4 border-b lg:col-span-6 md:py-8 animate__animated animate__zoomIn"
+                        >
+                          <div className="flex gap-4 lg:gap-8">
+                            <i
+                              className={`flex text-[12px] md:text-[18px] lg:text-3xl text-gray-900 fi ${info.label}`}
+                            ></i>
+                            <p className="flex text-[12px] md:text-[18px] lg:text-3xl font-medium text-gray-900 truncate darrk:text-white">
+                              {info.cont}
+                            </p>
+                          </div>
+                          <div className="inline-flex items-center text-[10px] md:text-[15px] text-gray-600 lg:text-3xl darrk:text-white">
+                            {info.icon}
+                          </div>
+                        </motion.div>
+                      );
+                    })}
                   </motion.div>
                 </div>
-              </div>
-            </>
-          ) : (
-            <>
-              {" "}
-              {/* Basic Information */}
-              <div className="tile-header ">
-                <h3
-                  style={{
-                    lineHeight: 1.19048,
-                    fontWeight: 600,
-                    letterSpacing: "0.011em",
-                  }}
-                  className="py-4 text-[30px] text-gray-900 animate__animated animate__zoomIn"
-                >
-                  {lang == 0 && "Basic Information"}
-                  {lang == 1 && "基本信息"}
-                </h3>
-                <div className={`grid grid-cols-12 lg:gap-x-[40px]`}>
-                  {infos.map((info, index) => {
-                    // 判断是否为 "Age"
-                    if (info.cont === "Age" || info.cont === "年龄") {
-                      // 计算年份，这里假设 birthYear 是存储出生年份的变量
-                      const currentYear = new Date().getFullYear();
-                      const age = currentYear - 1997 - 1;
-                      info.icon = age;
-                    }
+              </motion.div>
+            )}
+          </motion.div>
+          <motion.div
+            variants={visblecontainer}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="bg-white pt-[14px] md:pt-[28px] lg:pt-[60px] px-[14px] md:px-[28px] lg:px-[40px] pb-[80px] rounded-[28px] "
+          >
+            <LogAll />
+          </motion.div>
+        </div>
+      </main>
 
-                    return (
-                      <motion.div
-                        key={index + info.icon}
-                        variants={item}
-                        transition={LeftappearBar}
-                        whileHover={{ scale: 1.001 }}
-                        whileTap={{ scale: 0.99 }}
-                        layout
-                        style={{ animationDelay: `${0.05 * index}s` }}
-                        className="flex justify-between col-span-12 py-4 border-b lg:col-span-6 md:py-8 animate__animated animate__fadeInRight"
-                      >
-                        <div className="flex gap-4 lg:gap-8">
-                          <i
-                            className={`flex text-[12px] md:text-[18px] lg:text-3xl text-gray-900 fi ${info.label}`}
-                          ></i>
-                          <p className="flex text-[12px] md:text-[18px] lg:text-3xl font-medium text-gray-900 truncate darrk:text-white">
-                            {info.cont}
-                          </p>
-                        </div>
-                        <div className="inline-flex items-center text-[10px] md:text-[15px] text-gray-600 lg:text-3xl darrk:text-white">
-                          {info.icon}
-                        </div>
-                      </motion.div>
-                    );
-                  })}
-                </div>
-              </div>
-            </>
-          )}
-        </motion.div>
-
-        <div className="min-h-[20vh]"></div>
-      </div>
       <Contact />
     </div>
   );
