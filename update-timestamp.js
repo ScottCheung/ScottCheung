@@ -54,20 +54,31 @@ const getGeolocation = async () => {
     author: "Scott Cheung",
     address,
 
-    header: ["New Log Function", "更新 Log 记录功能"],
-    new: [
+    // header: ["New Log Function", "更新 Log 记录功能"],
+    // new: [
+    //   [
+    //     "Update the info of the Update-Log, show the update contents every time.",
+    //   ],
+    //   ["新增了更新日志功能，可以查看每次更新的内容"],
+    // ],
+    // fix: [["Fix some bugs of animation bugs."], ["修复了动画 BUG."]],
+    // impro: [
+    //   [
+    //     "Improve some situations of transition, update the info of the transition.",
+    //   ],
+    //   ["修复了翻译不佳的情况."],
+    // ],
+
+    // 性能优化
+    header: ["Patch Update", "补丁更新"],
+    new: [],
+    fix: [
       [
-        "Update the info of the Update-Log, show the update contents every time.",
+        "Fix performance issues in home page. Optimise long task.",
+        "修复主页性能问题. 优化长事件",
       ],
-      ["新增了更新日志功能，可以查看每次更新的内容"],
     ],
-    fix: [["Fix some bugs of animation bugs."], ["修复了动画 BUG."]],
-    impro: [
-      [
-        "Improve some situations of transition, update the info of the transition.",
-      ],
-      ["修复了翻译不佳的情况."],
-    ],
+    impro: [],
   };
 
   // 将新日志条目添加到日志字典中，以时间戳作为键
