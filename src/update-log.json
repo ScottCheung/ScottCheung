@@ -1810,5 +1810,33 @@
       ]
     ],
     "impro": []
+  },
+  "2024-07-14T15:20:55.466Z": {
+    "version": "4.4.4",
+    "time": "2024-07-14T15:20:55.466Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
+    "new": [],
+    "fix": [
+      [
+        "Fix performance issues in home page. Optimise long task.",
+        "Fix some bugs of animation bugs.",
+        null
+      ],
+      [
+        "修复主页性能问题，优化长事件。",
+        "修复了动画 BUG。"
+      ]
+    ],
+    "impro": []
   }
 }
