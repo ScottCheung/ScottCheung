@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { motion, useTime, AnimatePresence } from "framer-motion";
-import { useAppContext } from "../../help/ContextManager.js";
-import data from "./Navbardata.json";
-import { scrollToHash } from "../../help/helpFunction.js";
-import packageinfo from "../../../package.json";
-import Log from "../Log.jsx";
+import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { motion, useTime, AnimatePresence } from 'framer-motion';
+import { useAppContext } from '../../help/ContextManager.js';
+import data from './Navbardata.json';
+import { scrollToHash } from '../../help/helpFunction.js';
+import packageinfo from '../../../package.json';
+import Log from '../Log.jsx';
 
-import Toast from "../toast.jsx";
+import Toast from '../toast.jsx';
 const version = packageinfo.version.toString();
 
 // 创建更新日期对象
@@ -27,7 +27,7 @@ const daysBetween = Math.floor(dayDifference);
 const isToday = Math.abs(daysBetween) == 0;
 
 // 判断是否在一周内
-const isWithinOneWeek = Math.abs(daysBetween) <= 7;
+const isWithinOneWeek = Math.abs(daysBetween) <= 3;
 
 // 提取更新日期的日和月
 const updateDay = updateDate.getUTCDate();
@@ -35,7 +35,7 @@ const updateMonth = updateDate.getUTCMonth() + 1; // 月份是从0开始的，�
 
 // 格式化更新日期
 const updateTime = [
-  `${updateDay} ${new Date(2000, updateMonth - 1, 1).toLocaleString("en-US", { month: "long" })}`,
+  `${updateDay} ${new Date(2000, updateMonth - 1, 1).toLocaleString('en-US', { month: 'long' })}`,
   `${updateMonth} 月 ${updateDay} 日`,
 ];
 
@@ -44,14 +44,14 @@ const navbarItem = data.navbarItem;
 function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const { Components } = useAppContext();
   const [currentVersion, setCurrentVersion] = useState(
-    localStorage.getItem("Current version") || null,
+    localStorage.getItem('Current version') || null,
   );
-  const [lang, setLang] = useState(parseInt(localStorage.getItem("lang")) || 0);
+  const [lang, setLang] = useState(parseInt(localStorage.getItem('lang')) || 0);
 
   const updateMessage = isToday
-    ? ["Today", "今天"][lang]
+    ? ['Today', '今天'][lang]
     : isWithinOneWeek
-      ? `${Math.abs(daysBetween)} ${["days ago", "天前"][lang]}`
+      ? `${Math.abs(daysBetween)} ${['days ago', '天前'][lang]}`
       : updateTime[lang];
 
   const [bgwhite, setBgwhite] = useState(false);
@@ -65,59 +65,59 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpened, setIsOpened] = useState(false);
   const currentPage = window.location.pathname;
-  const isHomeOrRoot = currentPage === "/" || currentPage === "/home";
+  const isHomeOrRoot = currentPage === '/' || currentPage === '/home';
   const [selectedTab, setSelectedTab] = useState(null);
   const buttonStyles = {
-    "--scrim-background-color": "rgb(66, 66, 66)",
-    "--scrim-hover-background-color": "#37373a",
-    "--scrim-active-background-color": "#2f2f32",
-    "--icon-color": "#f7f7f7",
-    "--icon-interaction-color": "rgb(255, 255, 255)",
-    borderRadius: "50%",
-    display: "flex",
-    alignItems: "center",
-    height: "36px",
-    width: "36px",
-    outline: "none",
-    position: "absolute",
+    '--scrim-background-color': 'rgb(66, 66, 66)',
+    '--scrim-hover-background-color': '#37373a',
+    '--scrim-active-background-color': '#2f2f32',
+    '--icon-color': '#f7f7f7',
+    '--icon-interaction-color': 'rgb(255, 255, 255)',
+    borderRadius: '50%',
+    display: 'flex',
+    alignItems: 'center',
+    height: '36px',
+    width: '36px',
+    outline: 'none',
+    position: 'absolute',
     zIndex: 1,
-    right: "20px",
-    bottom: "20px",
+    right: '20px',
+    bottom: '20px',
     margin: 0,
     padding: 0,
     border: 0,
-    justifyContent: "center",
-    cursor: "pointer",
-    transition: "background-color 100ms linear, color 100ms linear",
-    backgroundColor: "var(--scrim-background-color)",
-    color: "var(--icon-color)",
+    justifyContent: 'center',
+    cursor: 'pointer',
+    transition: 'background-color 100ms linear, color 100ms linear',
+    backgroundColor: 'var(--scrim-background-color)',
+    color: 'var(--icon-color)',
   };
   const iconStyles = {
-    fill: "currentColor",
-    pointerEvents: "none",
+    fill: 'currentColor',
+    pointerEvents: 'none',
   };
   const BTN = (functionName) => {
     const functions = {
       lang0: () => {
-        setLang("0");
-        localStorage.setItem("lang", "0");
+        setLang('0');
+        localStorage.setItem('lang', '0');
         window.location.reload();
       },
       lang1: () => {
-        setLang("1");
-        localStorage.setItem("lang", "1");
+        setLang('1');
+        localStorage.setItem('lang', '1');
         window.location.reload();
       },
       LangToggle: () => {
         const newLang = lang === 0 ? 1 : 0;
         setLang(newLang);
-        localStorage.setItem("lang", newLang);
+        localStorage.setItem('lang', newLang);
         window.location.reload();
       },
     };
 
     return () => {
-      if (typeof functions[functionName] === "function") {
+      if (typeof functions[functionName] === 'function') {
         functions[functionName]();
       } else {
         // console.warn(`Function '${functionName}' not found.`);
@@ -155,14 +155,14 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
       }, []);
     }
 
-    window.addEventListener("scroll", handleScroll1);
-    window.addEventListener("wheel", handleScrollStatus);
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('scroll', handleScroll1);
+    window.addEventListener('wheel', handleScrollStatus);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll1);
-      window.removeEventListener("wheel", handleScrollStatus);
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('scroll', handleScroll1);
+      window.removeEventListener('wheel', handleScrollStatus);
+      window.removeEventListener('resize', handleResize);
     };
   }, [isExpanded, selectedTab]);
 
@@ -171,15 +171,15 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
       <motion.div
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
         className={`w-full z-50  duration-700 fixed  ${
-          isScrolling || Components.NavBar === "hide"
-            ? "  -top-[100px]"
-            : " top-0 "
+          isScrolling || Components.NavBar === 'hide'
+            ? '  -top-[100px]'
+            : ' top-0 '
         }  `}
       >
         <motion.nav
           onMouseEnter={() => setBgwhite(true)}
           onMouseLeave={() => setBgwhite(false)}
-          layout="position"
+          layout='position'
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className={`  w-full flex flex-col `}
         >
@@ -192,22 +192,22 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             className={`flex flex-col w-full  ${BG} py-[10px] 
         ${
           windowWidth < 768
-            ? ` p-[15px] ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? "bg-black/50" : "bg-white/50"} ` : " "}`
-            : `${isTop && isHomeOrRoot ? "px-[5%] pt-[12vh] " : ""} 
+            ? ` p-[15px] ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`
+            : `${isTop && isHomeOrRoot ? 'px-[5%] pt-[12vh] ' : ''} 
               }  md:px-10`
         }
         ${
           isScrolling
-            ? `${isTop && " backdrop-blur-[20px] bg-white/90"}`
+            ? `${isTop && ' backdrop-blur-[20px] bg-white/90'}`
             : `${
                 !isTop &&
                 `backdrop-blur-[70px] border-b-2 border-gray-200 ${
-                  bgwhite ? "bg-white/90" : "bg-white/90"
+                  bgwhite ? 'bg-white/90' : 'bg-white/90'
                 }`
               }`
         }`}
           >
-            <motion.div className="flex items-center justify-center w-full ">
+            <motion.div className='flex items-center justify-center w-full '>
               <motion.div
                 layout
                 transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
@@ -215,57 +215,57 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
               >
                 {/* 最主要的内容 */}
                 <motion.div
-                  layout="position"
+                  layout='position'
                   transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                  className="flex items-center justify-between w-full max-w-[1200px] "
+                  className='flex items-center justify-between w-full max-w-[1200px] '
                 >
                   <motion.button
-                    layout="position"
+                    layout='position'
                     transition={{
                       duration: 1.2,
                       ease: [0.22, 1, 0.36, 1],
                     }}
                     whileHover={{ scale: 1.01, transition: { duration: 1 } }}
                     whileTap={{ scale: 0.99 }}
-                    className="z-50 inline-flex items-center justify-center h-full "
+                    className='z-50 inline-flex items-center justify-center h-full '
                   >
                     <a
-                      href="/info"
-                      className="inline-flex items-center justify-center h-full animate__animated animate__fadeInUp"
+                      href='/info'
+                      className='inline-flex items-center justify-center h-full animate__animated animate__fadeInUp'
                     >
-                      <div className="inline-flex items-center h-full gap-8">
+                      <div className='inline-flex items-center h-full gap-8'>
                         <motion.img
                           layout
-                          className={`  animate__animated animate__zoomIn ${isTop ? "w-32 rounded-full" : "w-20 rounded-[12px]"}  shadow-lg`}
-                          src="https://3o.hk/images/2024/01/14/avatar.th.jpg"
+                          className={`  animate__animated animate__zoomIn ${isTop ? 'w-32 rounded-full' : 'w-20 rounded-[12px]'}  shadow-lg`}
+                          src='https://3o.hk/images/2024/01/14/avatar.th.jpg'
                           alt="Xianzhe's Page"
                         />
                         {isWithinOneWeek && (
                           <span
-                            class={`${isTop ? "w-8 h-8 left-0 top-0" : "-left-1 -top-1 w-3 h-3"} absolute   bg-green-400  rounded-full`}
+                            class={`${isTop ? 'w-8 h-8 left-0 top-0' : '-left-1 -top-1 w-3 h-3'} absolute   bg-green-400  rounded-full`}
                           ></span>
                         )}
 
                         <div
-                          className={`flex flex-col justify-between  ${isTop ? "w-50  rounded-full" : "w-32 "} `}
+                          className={`flex flex-col justify-between  ${isTop ? 'w-50  rounded-full' : 'w-32 '} `}
                         >
                           <motion.div
-                            style={{ fontFamily: "Hey August, sans-serif" }}
-                            className={`flex  text-nowrap text-left tracking-widest items-start justify-start animate__animated animate__zoomIn duration-1000 transition-all  ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[17px]  md:text-[30px] lg:text-[35px] ` : "text-[17px] lg:text-[17px]"}`}
+                            style={{ fontFamily: 'Hey August, sans-serif' }}
+                            className={`flex  text-nowrap text-left tracking-widest items-start justify-start animate__animated animate__zoomIn duration-1000 transition-all  ${isTop ? `${isTopTextColorWhite ? 'text-white' : ''} text-[17px]  md:text-[30px] lg:text-[35px] ` : 'text-[17px] lg:text-[17px]'}`}
                           >
                             {data.Avatar.Webname[lang]}
                           </motion.div>
                           <motion.div
-                            href="/info"
-                            style={{ animationDelay: "0.5s" }}
-                            className={`flex text-nowrap animate__animated animate__zoomIn transition-all  duration-1000 text-left ${isTop ? `${isTopTextColorWhite ? "text-white" : ""} text-[13px]` : "text-[10px]"}`}
+                            href='/info'
+                            style={{ animationDelay: '0.5s' }}
+                            className={`flex text-nowrap animate__animated animate__zoomIn transition-all  duration-1000 text-left ${isTop ? `${isTopTextColorWhite ? 'text-white' : ''} text-[13px]` : 'text-[10px]'}`}
                           >
                             {data.Avatar.helloword[lang]}
                             <p
                               className={
                                 windowWidth < 876
-                                  ? "hidden"
-                                  : "flex ml-[7px] gap-x-[10px]"
+                                  ? 'hidden'
+                                  : 'flex ml-[7px] gap-x-[10px]'
                               }
                             >
                               <span>|</span>
@@ -273,12 +273,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 className={
                                   isWithinOneWeek
                                     ? isTop && isTopTextColorWhite
-                                      ? "text-green-200 font-[600]"
-                                      : "text-green-700"
-                                    : ""
+                                      ? 'text-green-200 font-[600]'
+                                      : 'text-green-700'
+                                    : ''
                                 }
                               >
-                                {` ${updateMessage} ${["Updates", "更新"][lang]} ${version} `}
+                                {` ${updateMessage} ${['Updates', '更新'][lang]} ${version} `}
                               </span>
                             </p>
                           </motion.div>
@@ -289,14 +289,14 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
 
                   <motion.div
                     className={`flex items-center  ${
-                      windowWidth < 876 ? "w-[50%]" : "w-[70%]"
+                      windowWidth < 876 ? 'w-[50%]' : 'w-[70%]'
                     } gap-[30px] justify-end `}
                   >
-                    <AnimatePresence className="flex">
+                    <AnimatePresence className='flex'>
                       {windowWidth > 876 && (
                         <motion.div
-                          layout="position"
-                          key="navbarItem"
+                          layout='position'
+                          key='navbarItem'
                           transition={{ duration: 0.3 }}
                           exit={{
                             opacity: 0,
@@ -305,12 +305,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             transition: { duration: 1 },
                           }}
                           className={`${
-                            isTop ? "gap-x-4" : "gap-x-1"
+                            isTop ? 'gap-x-4' : 'gap-x-1'
                           } flex overflow-x-clip px-[10px] `}
                         >
                           {navbarItem.map((item, index) => (
                             <motion.button
-                              layout="position"
+                              layout='position'
                               key={item.name}
                               initial={{ opacity: 0, y: 30 }}
                               animate={{
@@ -336,27 +336,27 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                   animationDelay: `${index * 0.2}s`,
                                 }}
                                 data-popover-target={`nav-des-${item.name[0]}`}
-                                type="button"
+                                type='button'
                                 className={`rounded-[5px]  items-center  justify-center     gap-[5px] font-medium text-center ${
                                   isTopTextColorWhite & isTop
-                                    ? "text-white flex flex-col px-12 py-12"
-                                    : "flex px-8"
+                                    ? 'text-white flex flex-col px-12 py-12'
+                                    : 'flex px-8'
                                 } rounded-full hover:bg-gray-900/20 py-6 `}
                               >
-                                <div className="flex items-center justify-center w-full transition-all">
+                                <div className='flex items-center justify-center w-full transition-all'>
                                   <i
                                     className={`flex transition-all  duration-1000  items-center ${
                                       isTopTextColorWhite & isTop
-                                        ? "text-white text-[25px]"
-                                        : "text-gray-900 text-[20px]"
+                                        ? 'text-white text-[25px]'
+                                        : 'text-gray-900 text-[20px]'
                                     }  fi ${item.icon} `}
                                   ></i>
                                 </div>
                                 <div
                                   className={`flex transition-all  duration-1000  items-center ${
                                     isTopTextColorWhite & isTop
-                                      ? "text-white text-[15px]"
-                                      : "text-gray-900 text-[15px]"
+                                      ? 'text-white text-[15px]'
+                                      : 'text-gray-900 text-[15px]'
                                   } md:hidden lg:flex `}
                                 >
                                   {item.name[lang]}
@@ -373,7 +373,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         style={{
                           animationDelay: `${navbarItem.length * 0.2}s`,
                         }}
-                        type="button"
+                        type='button'
                         className={` transition-none animate__animated animate__fadeInUp `}
                         onClick={(e) =>
                           e.preventDefault() &
@@ -382,53 +382,53 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         }
                       >
                         <motion.svg
-                          className="w-10 h-10"
-                          width="18"
-                          height="18"
-                          viewBox="0 0 18 18"
+                          className='w-10 h-10'
+                          width='18'
+                          height='18'
+                          viewBox='0 0 18 18'
                           style={{
                             color:
                               isTopTextColorWhite & isTop
-                                ? "fill-white text-bold"
-                                : "fill-gray-700 ",
+                                ? 'fill-white text-bold'
+                                : 'fill-gray-700 ',
                           }}
                         >
                           <motion.polyline
                             fill={
-                              isTopTextColorWhite & isTop ? "white" : "gray"
+                              isTopTextColorWhite & isTop ? 'white' : 'gray'
                             }
                             stroke={
                               isTopTextColorWhite & isTop
-                                ? "white"
-                                : "currentColor"
+                                ? 'white'
+                                : 'currentColor'
                             }
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            points="2 12, 16 12"
+                            strokeWidth='2'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            points='2 12, 16 12'
                             animate={{
                               points: !isOpened
-                                ? "2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5"
-                                : "3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12",
+                                ? '2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5'
+                                : '3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12',
                             }}
                           />
                           <motion.polyline
                             fill={
-                              isTopTextColorWhite & isTop ? "white" : "gray"
+                              isTopTextColorWhite & isTop ? 'white' : 'gray'
                             }
                             stroke={
                               isTopTextColorWhite & isTop
-                                ? "white"
-                                : "currentColor"
+                                ? 'white'
+                                : 'currentColor'
                             }
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            points="2 5, 16 5"
+                            strokeWidth='2'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            points='2 5, 16 5'
                             animate={{
                               points: !isOpened
-                                ? "2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15"
-                                : "3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5",
+                                ? '2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15'
+                                : '3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5',
                             }}
                           />
                         </motion.svg>
@@ -439,7 +439,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 {/* menu button */}
                 {windowWidth <= 786 && isOpened && (
                   <div className={`w-full mx-[10px] `}>
-                    <div className="z-20 w-full rounded-lg shadow "></div>
+                    <div className='z-20 w-full rounded-lg shadow '></div>
                     <div className={`rounded-2xl pt-[30px] `}>
                       {navbarItem.map((item, index) => (
                         <AnimatePresence>
@@ -467,27 +467,27 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               href={item.href}
                               className={`flex py-5 animate__animated animate__zoomIn  place-items-center items-center px-4 ${
                                 isTop
-                                  ? "hover:bg-gray-900/50 rounded-l-full"
-                                  : "hover:bg-gray-300/50 rounded-l-full "
+                                  ? 'hover:bg-gray-900/50 rounded-l-full'
+                                  : 'hover:bg-gray-300/50 rounded-l-full '
                               }`}
                             >
-                              <div className="flex-shrink-0">
-                                <div className="flex items-center justify-center w-24 h-24 rounded-full">
+                              <div className='flex-shrink-0'>
+                                <div className='flex items-center justify-center w-24 h-24 rounded-full'>
                                   <i
                                     className={`${
                                       isTopTextColorWhite & isTop
-                                        ? "text-white"
-                                        : "text-gray-900"
+                                        ? 'text-white'
+                                        : 'text-gray-900'
                                     } text-5xl fi ${item.icon}`}
                                   ></i>
                                 </div>
                               </div>
-                              <div className="w-full ps-2">
+                              <div className='w-full ps-2'>
                                 <div
                                   className={`${
                                     isTopTextColorWhite & isTop
-                                      ? "text-white"
-                                      : "text-gray-900"
+                                      ? 'text-white'
+                                      : 'text-gray-900'
                                   } font-bold text-4xl`}
                                 >
                                   {item.name[lang]}
@@ -495,8 +495,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 <div
                                   className={`${
                                     isTopTextColorWhite & isTop
-                                      ? "text-white"
-                                      : "text-gray-900"
+                                      ? 'text-white'
+                                      : 'text-gray-900'
                                   } text-xs text-blue-500 `}
                                 >
                                   {item.des[lang]}
@@ -511,7 +511,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 )}
                 <motion.div
                   layout
-                  className="relative flex w-full  max-w-[1200px] "
+                  className='relative flex w-full  max-w-[1200px] '
                 >
                   {/* 二级菜单 */}
                   {navbarItem.map(
@@ -520,26 +520,26 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                       selectedTab === navItem.name[0] && (
                         <motion.div
                           layout
-                          key={"isExpanded" + navIndex}
-                          layoutId="isExp"
+                          key={'isExpanded' + navIndex}
+                          layoutId='isExp'
                           className={`w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  ${
                             !isExpanded && selectedTab !== navItem.name[1]
-                              ? " items-center justify-center"
-                              : "items-center justify-center"
+                              ? ' items-center justify-center'
+                              : 'items-center justify-center'
                           }`}
                         >
                           <motion.div
                             className={`w-full justify-between flex items-center ${
-                              isExpanded ? "my-8" : ""
+                              isExpanded ? 'my-8' : ''
                             }
                            ${
                              isTop
                                ? `${
                                    isTopTextColorWhite
-                                     ? "bg-white/70"
-                                     : " text-sky-950 bg-sky-200/30 border border-sky-950"
+                                     ? 'bg-white/70'
+                                     : ' text-sky-950 bg-sky-200/30 border border-sky-950'
                                  }  backdrop-blur-md  mt-[50px] rounded-[28px]`
-                               : "border divide-x bg-sky-200/30 mt-[50px] divide-gray-900/0 rounded-full border-gray-700"
+                               : 'border divide-x bg-sky-200/30 mt-[50px] divide-gray-900/0 rounded-full border-gray-700'
                            }`}
                           >
                             {navItem.scondMenu.map((item, index) => (
@@ -547,9 +547,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 layout
                                 key={index}
                                 href={item.link}
-                                animate={{ width: "100%" }}
-                                whileHover={{ width: "120%" }}
-                                whileTap={{ width: "100%" }}
+                                animate={{ width: '100%' }}
+                                whileHover={{ width: '120%' }}
+                                whileTap={{ width: '100%' }}
                                 style={{
                                   animationDelay: `${index * 0.15}s`,
                                   animationDuration: `${0.7}s`,
@@ -566,14 +566,14 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                   whileTap={{ scale: 0.95 }}
                                   whileFocus={{ scale: 1 }}
                                   onClick={BTN(item.button)}
-                                  className="w-full"
+                                  className='w-full'
                                 >
-                                  <div className="flex flex-col items-center justify-center px-2 py-[20px] my-3 text-center gap-y-2 ">
+                                  <div className='flex flex-col items-center justify-center px-2 py-[20px] my-3 text-center gap-y-2 '>
                                     {(isTop || item.detail) && (
                                       <i
                                         className={`flex fi justify-center ${
                                           isTop &&
-                                          " text-[17px] md:text-[20px] lg:text-[23px]"
+                                          ' text-[17px] md:text-[20px] lg:text-[23px]'
                                         } ${item.icon}`}
                                       ></i>
                                     )}
@@ -582,7 +582,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                       <div
                                         className={`gap-x-4 gap-y-2 flex h-full justify-center items-center w-full ${
                                           isTop &&
-                                          "text-[17px] md:text-[20px] lg:text-[23px] gap-x-0"
+                                          'text-[17px] md:text-[20px] lg:text-[23px] gap-x-0'
                                         }`}
                                       >
                                         {!isTop && window.innerWidth > 784 && (
@@ -591,14 +591,14 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                           ></i>
                                         )}
 
-                                        <p className="flex items-center justify-center text-[14px] md:text-[15px] lg:text-[18px]">
+                                        <p className='flex items-center justify-center text-[14px] md:text-[15px] lg:text-[18px]'>
                                           {item.name[lang]}
                                         </p>
 
                                         {item.status && (
                                           <i
                                             className={` flex ${
-                                              isTop && " mx-2"
+                                              isTop && ' mx-2'
                                             } justify-center items-center text-[15px] pb-[10px] ${item.status}`}
                                           ></i>
                                         )}
@@ -606,7 +606,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                     )}
 
                                     {item.detail && (
-                                      <p className="flex items-center justify-center w-full text-base">
+                                      <p className='flex items-center justify-center w-full text-base'>
                                         {item.detail[lang]}
                                       </p>
                                     )}
@@ -624,64 +624,64 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           </motion.div>
 
           {/* 人物对话弹窗 */}
-          <motion.div layout className="relative  w-full  max-w-[1200px] ">
+          <motion.div layout className='relative  w-full  max-w-[1200px] '>
             {navbarItem.map(
               (item, index) =>
                 selectedTab === item.name[0] && (
                   <motion.div
-                    key={item.name[0] + index + "introduction"}
-                    className="md:mx-[10%] mt-[30px]  flex relative gap-x-[20px] duration-200 "
+                    key={item.name[0] + index + 'introduction'}
+                    className='md:mx-[10%] mt-[30px]  flex relative gap-x-[20px] duration-200 '
                   >
                     <img
                       style={{
-                        filter: "drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))",
+                        filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))',
                         // height: "400px",
                         maskImage:
-                          "linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)",
+                          'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
                         WebkitMaskImage:
-                          "linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)",
+                          'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
                       }}
-                      className=" max-w-[320px] px-[30px] lg:max-w-[420px]  absolute top-[100%] left-0 transition-all"
+                      className=' max-w-[320px] px-[30px] lg:max-w-[420px]  absolute top-[100%] left-0 transition-all'
                       src={data.dialog}
                     ></img>
                     <motion.div
                       // layoutId="des"
                       key={item.name[0] + index}
-                      className="absolute top-0 left-[320px] lg:left-[420px] animate__animated animate__fadeInUp bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  "
+                      className='absolute top-0 left-[320px] lg:left-[420px] animate__animated animate__fadeInUp bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  '
                     >
-                      <div className="p-[28px] lg:p-[40px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20">
-                        <p className="text-[20px] lg:text-[30px]  darrk:text-gray-900 text-white  ">
+                      <div className='p-[28px] lg:p-[40px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20'>
+                        <p className='text-[20px] lg:text-[30px]  darrk:text-gray-900 text-white  '>
                           {item.des[lang]}
                         </p>
-                        <span className="text-center text-[30px] darrk:text-gray-900 text-white ">
-                          {item.expression}{" "}
+                        <span className='text-center text-[30px] darrk:text-gray-900 text-white '>
+                          {item.expression}{' '}
                         </span>
-                        <div className="group relative my-2.5 hidden">
-                          <div className="absolute flex items-center justify-center w-full transition-opacity duration-300 rounded-lg opacity-0 bg-gray-900/50 group-hover:opacity-100">
+                        <div className='group relative my-2.5 hidden'>
+                          <div className='absolute flex items-center justify-center w-full transition-opacity duration-300 rounded-lg opacity-0 bg-gray-900/50 group-hover:opacity-100'>
                             <button
-                              data-tooltip-target="download-image"
-                              className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none darrk:text-white focus:ring-gray-50"
+                              data-tooltip-target='download-image'
+                              className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none darrk:text-white focus:ring-gray-50'
                             >
                               <svg
-                                className="w-5 h-5 text-white"
-                                aria-hidden="true"
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 16 18"
+                                className='w-5 h-5 text-white'
+                                aria-hidden='true'
+                                xmlns='http://www.w3.org/2000/svg'
+                                fill='none'
+                                viewBox='0 0 16 18'
                               >
                                 <path
-                                  stroke="currentColor"
-                                  strokeLinecap="round"
-                                  strokeLinejoin="round"
+                                  stroke='currentColor'
+                                  strokeLinecap='round'
+                                  strokeLinejoin='round'
                                   strokeWidth={2}
-                                  d="M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3"
+                                  d='M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3'
                                 />
                               </svg>
                             </button>
                           </div>
                           <img
-                            src="/docs/images/blog/image-1.jpg"
-                            className="rounded-lg"
+                            src='/docs/images/blog/image-1.jpg'
+                            className='rounded-lg'
                           />
                         </div>
                       </div>
@@ -692,17 +692,19 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           </motion.div>
         </motion.nav>
       </motion.div>
-      <Log />
+      <div className='hidden md:flex'>
+        <Log />
+      </div>
 
       {/* toTop buttom */}
-      {!isTop && Components.NavBar === "visible" && (
+      {!isTop && Components.NavBar === 'visible' && (
         <motion.button
-          key="toTop"
+          key='toTop'
           initial={{ opacity: 0, scale: 0 }}
           animate={{
             opacity: 1,
             scale: 1,
-            transition: { duration: 0.3, type: "easeInOut" },
+            transition: { duration: 0.3, type: 'easeInOut' },
           }}
           exit={{ opacity: 0, scale: 0 }}
           transition={{ duration: 1.2 }}
@@ -711,36 +713,36 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           onClick={() => {
             window.scrollTo({
               top: 0,
-              behavior: "smooth",
+              behavior: 'smooth',
             });
           }}
           className={`fixed bottom-10 lg:right-20 right-10 z-50  `}
         >
-          <div className="px-4 py-2 text-white rounded-full lg:scale-150">
-            <div className="modal-trigger-visblecontainer ">
+          <div className='px-4 py-2 text-white rounded-full lg:scale-150'>
+            <div className='modal-trigger-visblecontainer '>
               <motion.span
                 initial={{ rotate: 90 }}
                 whileTap={{ scale: 0.9, opacity: 0.8, rotate: 270 }}
-                className="bg-white opacity-70 hover:opacity-100 "
+                className='bg-white opacity-70 hover:opacity-100 '
                 style={buttonStyles}
               >
                 <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="8 8 20 20"
+                  xmlns='http://www.w3.org/2000/svg'
+                  viewBox='8 8 20 20'
                   style={iconStyles}
-                  className=" w-[18px] h-[18px] text-white rotate-180"
+                  className=' w-[18px] h-[18px] text-white rotate-180'
                 >
-                  <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+                  <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
                 </svg>
               </motion.span>
             </div>
           </div>
         </motion.button>
       )}
-      <div className="relative z-50 ">
+      <div className='relative z-50 '>
         <div
-          id="toast-root"
-          className="fixed flex flex-col top-40 right-20 "
+          id='toast-root'
+          className='fixed flex flex-col top-40 right-20 '
         ></div>
       </div>
       <AnimatePresence>
@@ -749,17 +751,17 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={`fixed top-0 left-0 z-40  bottom-0  right-0  w-full h-full  backdrop-blur-[20px] ${isTopTextColorWhite ? "bg-gray-900/40" : "bg-white/40"} `}
+            className={`fixed top-0 left-0 z-40  bottom-0  right-0  w-full h-full  backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-gray-900/40' : 'bg-white/40'} `}
           >
             <div
               style={{
                 backgroundImage: `url(${windowWidth > 1024 && data.dialog})`,
-                backgroundSize: "25% auto",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "left bottom",
-                filter: "drop-shadow(0px 20px 26px rgba(0, 0, 0, 0))",
+                backgroundSize: '25% auto',
+                backgroundRepeat: 'no-repeat',
+                backgroundPosition: 'left bottom',
+                filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0))',
               }}
-              className="flex hidden w-full h-full"
+              className='flex hidden w-full h-full'
             ></div>
           </motion.div>
         )}

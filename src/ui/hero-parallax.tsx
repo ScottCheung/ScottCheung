@@ -1,13 +1,13 @@
-"use client";
-import React from "react";
-import TextAnimate from "./TextAnimate.tsx";
+'use client';
+import React from 'react';
+import TextAnimate from './TextAnimate.tsx';
 import {
   motion,
   useScroll,
   useTransform,
   useSpring,
   MotionValue,
-} from "framer-motion";
+} from 'framer-motion';
 
 // Define the type for the items to be displayed
 interface ItemType {
@@ -20,7 +20,7 @@ interface ItemType {
 export const HeroParallax = ({ Items }: { Items: ItemType[] }) => {
   if (!Items || Items.length === 0) {
     return (
-      <div className="flex items-center justify-center text-5xl">
+      <div className='flex items-center justify-center text-5xl'>
         No items to display
       </div>
     );
@@ -46,7 +46,7 @@ export const HeroParallax = ({ Items }: { Items: ItemType[] }) => {
   const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start start", "end start"],
+    offset: ['start start', 'end start'],
   });
 
   // Create various animated values
@@ -73,7 +73,7 @@ export const HeroParallax = ({ Items }: { Items: ItemType[] }) => {
     springConfig,
   );
   const opacitySpan = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [1, 0]),
+    useTransform(scrollYProgress, [0, 0.05], [1, 0]),
     springConfig,
   );
   const rotateZ = useSpring(
@@ -88,12 +88,12 @@ export const HeroParallax = ({ Items }: { Items: ItemType[] }) => {
   return (
     <div
       ref={ref}
-      className="h-[300vh] relative overflow-hidden antialiased flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className='h-[300vh] relative overflow-hidden antialiased flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]'
     >
       <Header />
       <motion.span
         style={{ opacity: opacitySpan }}
-        className="absolute w-[100vw] h-[100vh] z-10 bg-gradient-to-tr from-[0%] to-[100%] from-black via-[40%] via-black to-transparent"
+        className='absolute w-[100vw] h-[100vh] z-10 bg-gradient-to-tr from-[0%] to-[100%] from-black via-[40%] via-black to-transparent'
       ></motion.span>
       <motion.div
         style={{
@@ -102,12 +102,12 @@ export const HeroParallax = ({ Items }: { Items: ItemType[] }) => {
           translateY,
           opacity,
         }}
-        className="flex flex-col gap-10"
+        className='flex flex-col gap-10'
       >
         {rows.map((row, index) => (
           <motion.div
             key={index}
-            className={`flex ${index % 2 === 0 ? "flex-row-reverse space-x-reverse" : "flex-row"} gap-10`}
+            className={`flex ${index % 2 === 0 ? 'flex-row-reverse space-x-reverse' : 'flex-row'} gap-10`}
           >
             {row.map((Item) => (
               <ProductCard
@@ -127,24 +127,24 @@ export const HeroParallax = ({ Items }: { Items: ItemType[] }) => {
 // Header component
 export const Header = () => {
   return (
-    <div className="absolute top-[30vh] left-4 lg:left-[10vw] w-full px-4  max-w-7xl ">
-      <script src="https://cdn.tailwindcss.com"></script>
-      <div className="relative flex flex-col gap-0">
+    <div className='absolute top-[30vh] left-4 lg:left-[10vw] w-full px-4  max-w-7xl '>
+      <script src='https://cdn.tailwindcss.com'></script>
+      <div className='relative flex flex-col gap-0'>
         <TextAnimate
           duration={-3}
           delay={-0.5}
-          className="flex w-full z-20 text-[50px] md:text-[80px] lg:text-[100px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-100 font-[700]"
-          text="The Projects"
-          type="fadeIn"
+          className='flex w-full z-20 text-[50px] md:text-[80px] lg:text-[100px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-100 font-[700]'
+          text='The Projects'
+          type='fadeIn'
         />
         <TextAnimate
           duration={0.5}
           delay={-0.5}
-          className="flex w-full z-30 text-[60px] md:text-[90px] lg:text-[110px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-100 font-bold"
-          text="I contribute to"
-          type="fadeIn"
+          className='flex w-full z-30 text-[60px] md:text-[90px] lg:text-[110px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-100 font-bold'
+          text='I contribute to'
+          type='fadeIn'
         />
-        <p className="relative z-20 max-w-5xl mt-8 text-[20px]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-100 ">
+        <p className='relative z-20 max-w-5xl mt-8 text-[20px]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-100 '>
           This page is under development. Datas are not correct. Open time is
           not expected. Please check back later. Thank you!
         </p>
@@ -178,24 +178,24 @@ export const ProductCard = ({
       }}
       key={Item.title}
       transition={{ duration: 0.3 }}
-      className="group/Item h-96 w-[30rem] relative flex-shrink-0 overflow-hidden"
+      className='group/Item h-96 w-[30rem] relative flex-shrink-0 overflow-hidden'
     >
       <a
         href={Item.link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block group-hover/Item:shadow-2xl"
+        target='_blank'
+        rel='noopener noreferrer'
+        className='block group-hover/Item:shadow-2xl'
       >
         <img
           src={Item.thumbnail}
-          height="600"
-          width="600"
-          className="absolute inset-0 object-cover object-left-top w-full h-full"
+          height='600'
+          width='600'
+          className='absolute inset-0 object-cover object-left-top w-full h-full'
           alt={Item.title}
         />
       </a>
-      <div className="absolute inset-0 w-full h-full opacity-0 pointer-events-none bg-gradient-to-t from-black to-transparent group-hover/Item:opacity-80"></div>
-      <h2 className="absolute text-white opacity-0 bottom-[28px] text-[20px] left-[28px] group-hover/Item:opacity-100">
+      <div className='absolute inset-0 w-full h-full opacity-0 pointer-events-none bg-gradient-to-t from-black to-transparent group-hover/Item:opacity-80'></div>
+      <h2 className='absolute text-white opacity-0 bottom-[28px] text-[20px] left-[28px] group-hover/Item:opacity-100'>
         {Item.title}
       </h2>
     </motion.div>
