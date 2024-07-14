@@ -4,6 +4,8 @@ import { motion, useTime, AnimatePresence } from 'framer-motion';
 import { useAppContext } from '../../help/ContextManager.js';
 import data from './Navbardata.json';
 import { scrollToHash } from '../../help/helpFunction.js';
+import LifeCate from '../lifeCategory.jsx';
+import ContactCate from '../contactCategory.jsx';
 import packageinfo from '../../../package.json';
 import Log from '../Log.jsx';
 
@@ -27,7 +29,7 @@ const daysBetween = Math.floor(dayDifference);
 const isToday = Math.abs(daysBetween) == 0;
 
 // 判断是否在一周内
-const isWithinOneWeek = Math.abs(daysBetween) <= 3;
+const isWithinOneWeek = Math.abs(daysBetween) <= 7;
 
 // 提取更新日期的日和月
 const updateDay = updateDate.getUTCDate();
@@ -125,22 +127,6 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
       }
     };
   };
-  const [scrollbarWidth, setScrollbarWidth] = useState(0);
-  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
-
-  useEffect(() => {
-    const div = document.createElement('div');
-    div.style.visibility = 'hidden';
-    div.style.overflow = 'scroll';
-    document.body.appendChild(div);
-    const scrollbarWidth = div.offsetWidth - div.clientWidth;
-    document.body.removeChild(div);
-    setScrollbarWidth(scrollbarWidth);
-
-    setViewportHeight(window.innerHeight);
-  }, []);
-
-  const viewwidth = window.innerWidth - scrollbarWidth;
 
   useEffect(() => {
     function handleScroll1() {
@@ -186,7 +172,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     <AnimatePresence>
       <motion.div
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className={`w-full left-0 right-0 z-50 h-[30px] duration-700 fixed  ${
+        className={`w-full z-50  duration-700 fixed  ${
           isScrolling || Components.NavBar === 'hide'
             ? '  -top-[100px]'
             : ' top-0 '
@@ -708,7 +694,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           </motion.div>
         </motion.nav>
       </motion.div>
-      <div className='hidden md:flex'>
+      <div className='hidden md:block'>
         <Log />
       </div>
 
