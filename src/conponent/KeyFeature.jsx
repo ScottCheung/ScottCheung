@@ -23,6 +23,17 @@ function KeyFeature() {
   const lang = useLanguage();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1080); // 初始值
+  const [scrollbarWidth, setScrollbarWidth] = useState(0);
+  useEffect(() => {
+    const div = document.createElement('div');
+    div.style.visibility = 'hidden';
+    div.style.overflow = 'scroll';
+    document.body.appendChild(div);
+    const scrollbarWidth = div.offsetWidth - div.clientWidth;
+    document.body.removeChild(div);
+    setScrollbarWidth(scrollbarWidth);
+  }, []);
+  const viewwidth = window.innerWidth - scrollbarWidth;
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -40,21 +51,31 @@ function KeyFeature() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const width = useTransform(scrollYProgress, [0, 1], ['50vw', '100vw']);
-  const y = useTransform(scrollYProgress, [0, 1], ['50vh', '0vh']);
+  const width = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [`${viewwidth * 0.5}px`, `${viewwidth}px`],
+  );
+  const y = useTransform(
+    scrollYProgress,
+    [0, 1],
+    [`${viewwidth * 0.5}px`, `${viewwidth * 0}px`],
+  );
   const borderRadius = useTransform(scrollYProgress, [0, 1], [500, 0]);
 
   const KeyFeature = (
     <motion.div
       ref={ref}
       style={{
-        width: isMobile ? '100vw' : width,
+        width: isMobile ? `${viewwidth}px` : width,
         y: isMobile ? 0 : y,
         borderRadius: isMobile ? 28 : borderRadius,
       }}
-      className={`w-full flex h-[1000px] md:h-[150vh] overflow-hidden`}
+      className={` flex h-[1000px] md:h-[150vh] overflow-hidden justify-center`}
     >
-      <motion.section className='relative flex items-center w-full overflow-hidden bg-gradient-to-r from-lime-500 to-emerald-500'>
+      <motion.section
+        className={`relative flex items-center w-[${viewwidth}px] overflow-hidden bg-gradient-to-r from-lime-500 to-emerald-500`}
+      >
         <img
           className='absolute top-0 left-0 object-cover object-bottom w-full h-full transition-all'
           src={bg[0]}

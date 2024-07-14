@@ -11,7 +11,7 @@ import {
 import { hideRow, bgPic, useLanguage } from '../help/helpFunction';
 const data = Database.PersonalInfo.SelfDescribing;
 
-function SelfDescribing(viewwidth) {
+function SelfDescribing() {
   const lang = useLanguage();
   const [isMobile, setIsMobile] = useState(false);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
@@ -24,6 +24,7 @@ function SelfDescribing(viewwidth) {
     document.body.removeChild(div);
     setScrollbarWidth(scrollbarWidth);
   }, []);
+  const viewwidth = window.innerWidth - scrollbarWidth;
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(max-width: 1080px)');
@@ -114,7 +115,7 @@ function SelfDescribing(viewwidth) {
 
   return (
     <AnimatePresence>
-      <motion.div ref={ref1} className={`lg:h-[500vh]  relative `}>
+      <motion.div ref={ref1} className=' lg:h-[500vh]  relative w-full block'>
         <motion.div
           style={{
             backgroundImage: `url(${data.pic})`,
@@ -126,7 +127,7 @@ function SelfDescribing(viewwidth) {
             borderBottomRightRadius: isMobile ? 0 : borderBottomRightRadius,
             y: isMobile ? 0 : y,
           }}
-          className={`sticky top-0 z-30 flex flex-col items-center justify-center w-[${viewwidth}px] `}
+          className='sticky top-0 z-30 flex flex-col items-center justify-center w-full'
         >
           <motion.span
             style={{
@@ -134,7 +135,7 @@ function SelfDescribing(viewwidth) {
               borderBottomRightRadius: isMobile ? 1 : borderBottomRightRadius,
               opacity: isMobile ? 1 : opacity,
             }}
-            className={`absolute w-full flex h-full bg-black/75`}
+            className='absolute w-full h-full bg-black/75'
           ></motion.span>
 
           <div className='visblecontainer py-[20vh] z-30'>

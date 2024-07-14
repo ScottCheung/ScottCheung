@@ -106,13 +106,13 @@ function Home() {
 
   return (
     <div
-      className={`relative flex flex-col w-[${viewwidth}px] transition-all bg-gray-200 ${windowWidth < 1080 ? 'overflow-x-hidden' : ''} `}
+      className={`relative flex flex-col items-center w-[${viewwidth}px] transition-all bg-gray-200 ${windowWidth < 1080 ? 'overflow-x-hidden' : ''} `}
     >
       <Navbar topTextColor={true} />
 
       <Carousel HomeCarousel={HomeCarousel} interval={5000}></Carousel>
       <Education />
-      <KeyFeature />
+      <KeyFeature viewwidth={viewwidth} />
       <Capability />
       <WorkExperience />
       <AboutMe />
