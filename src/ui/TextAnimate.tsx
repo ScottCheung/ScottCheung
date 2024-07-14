@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import React, { FC, useRef } from "react";
-import { HTMLMotionProps, motion, useInView } from "framer-motion";
+import React, { FC, useRef } from 'react';
+import { HTMLMotionProps, motion, useInView } from 'framer-motion';
 
 type AnimationType =
-  | "fadeIn"
-  | "fadeInUp"
-  | "popIn"
-  | "shiftInUp"
-  | "rollIn"
-  | "whipIn"
-  | "whipInUp"
-  | "calmInUp";
+  | 'fadeIn'
+  | 'fadeInUp'
+  | 'popIn'
+  | 'shiftInUp'
+  | 'rollIn'
+  | 'whipIn'
+  | 'whipInUp'
+  | 'calmInUp';
 
-interface Props extends HTMLMotionProps<"div"> {
+interface Props extends HTMLMotionProps<'div'> {
   text: string;
   type?: AnimationType;
   delay?: number;
@@ -35,7 +35,7 @@ const animationVariants = (delay: number = 0, duration: number = 0.5) => ({
         opacity: 1,
         y: [0, -10, 0],
         transition: {
-          type: "spring",
+          type: 'spring',
           damping: 12,
           stiffness: 100,
           duration: duration,
@@ -70,7 +70,7 @@ const animationVariants = (delay: number = 0, duration: number = 0.5) => ({
         opacity: 1,
         scale: 1.1,
         transition: {
-          type: "spring",
+          type: 'spring',
           damping: 15,
           stiffness: 400,
           duration: duration,
@@ -88,7 +88,7 @@ const animationVariants = (delay: number = 0, duration: number = 0.5) => ({
     },
     child: {
       hidden: {
-        y: "200%",
+        y: '200%',
         transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: duration },
       },
       visible: {
@@ -109,7 +109,7 @@ const animationVariants = (delay: number = 0, duration: number = 0.5) => ({
     },
     child: {
       hidden: {
-        y: "100%",
+        y: '100%',
         transition: {
           ease: [0.75, 0, 0.25, 1],
           duration: duration,
@@ -133,7 +133,7 @@ const animationVariants = (delay: number = 0, duration: number = 0.5) => ({
     },
     child: {
       hidden: {
-        y: "200%",
+        y: '200%',
         transition: { ease: [0.455, 0.03, 0.515, 0.955], duration: duration },
       },
       visible: {
@@ -189,7 +189,7 @@ const animationVariants = (delay: number = 0, duration: number = 0.5) => ({
 
 const TextAnimate: FC<Props> = ({
   text,
-  type = "whipInUp",
+  type = 'whipInUp',
   delay = 0,
   duration = 0.5,
   animateOnce = true,
@@ -203,18 +203,18 @@ const TextAnimate: FC<Props> = ({
   return (
     <motion.h2
       ref={ref}
-      style={{ display: "flex", overflow: "hidden" }}
-      role="heading"
+      style={{ display: 'flex', overflow: 'hidden' }}
+      role='heading'
       variants={container}
-      initial="hidden"
-      whileInView="visible"
+      initial='hidden'
+      whileInView='visible'
       viewport={{ once: animateOnce }}
-      className="px-8 py-5 pb-8 mt-10 text-4xl font-black text-black dark:text-neutral-100 md:text-5xl"
+      className='px-8 py-5 pb-8 mt-10 text-4xl font-black text-black darrk:text-neutral-100 md:text-5xl'
       {...props}
     >
       {letters.map((letter, index) => (
         <motion.span key={index} variants={child}>
-          {letter === " " ? "\u00A0" : letter}
+          {letter === ' ' ? '\u00A0' : letter}
         </motion.span>
       ))}
     </motion.h2>

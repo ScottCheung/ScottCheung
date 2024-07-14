@@ -15,14 +15,14 @@ const animationVariants = {
 
 const LogEntry = ({ entry }) => (
   <motion.li
-    className={`relative border-gray-200 dark:border-gray-700 my-[30px]`}
+    className={`relative border-gray-200 darrk:border-gray-700 my-[30px]`}
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.5 }}
   >
     <div className='flex flex-col gap-y-[10px]'>
       <div
-        className={`flex items-center ${headerHeight} gap-[20px] text-gray-900 dark:text-white`}
+        className={`flex items-center ${headerHeight} gap-[20px] text-gray-900 darrk:text-white`}
       >
         <h3 className='flex  items-center font-[600]'>
           <i
@@ -30,7 +30,7 @@ const LogEntry = ({ entry }) => (
           ></i>
           {entry.version}{' '}
         </h3>
-        <span className='inline-flex text-[12px] bg-blue-100 text-blue-800 font-medium px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300'>
+        <span className='inline-flex text-[12px] bg-blue-100 text-blue-800 font-medium px-2.5 py-0.5 rounded darrk:bg-blue-900 darrk:text-blue-300'>
           Latest
         </span>
       </div>
@@ -50,7 +50,7 @@ const LogEntry = ({ entry }) => (
           <span className='flex'>{`${entry.address.city}, ${entry.address.state}, ${entry.address.zipcode}`}</span>
         </div>
       </div>
-      <header className='mb-4 text-[15px] lg:text-[20px] font-normal text-gray-900 dark:text-gray-400'>
+      <header className='mb-4 text-[15px] lg:text-[20px] font-normal text-gray-900 darrk:text-gray-400'>
         {entry.header[lang]}
       </header>
       {entry.new && entry.new[lang] && entry.new[lang].length > 0 && (

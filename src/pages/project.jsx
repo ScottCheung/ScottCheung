@@ -164,10 +164,8 @@ const products = [
 export default function project() {
   return (
     <div className='relative bg-black'>
-      <span className='absolute w-full flex h-[100vh] bg-gradient-to-b from-[0%] to-[90%] from-black via-[30%] via-black/50 to-transparent'></span>
-
       <Navbar topTextColor={true} />
-      <div className='vh-[200vh]'>
+      <div className='md:vh-[200vh]'>
         {' '}
         <HeroParallax Items={products} />
       </div>

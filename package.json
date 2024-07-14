@@ -24,6 +24,7 @@
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.20.1",
     "react-scripts": "^5.0.1",
+    "react-swipeable": "^7.0.1",
     "three": "^0.166.1",
     "three-globe": "^2.31.1"
   },
