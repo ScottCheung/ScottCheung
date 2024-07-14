@@ -158,7 +158,7 @@ export default function Log() {
   return (
     <div
       id='log-window'
-      className='fixed top-0 left-0 z-50 items-center justify-center  w-full h-full bg-gray-800 bg-opacity-75  backdrop-blur-md'
+      className='fixed top-0 left-0 z-50 items-center justify-center w-full h-full bg-gray-800 bg-opacity-75 backdrop-blur-md'
       onClick={handleClose}
     >
       <motion.div
@@ -201,6 +201,7 @@ export default function Log() {
               {['More infos', '更多'][lang]}
             </motion.a>
             <motion.a
+              href='https://xianzhe.site'
               style={{ animationDelay: '0.4s' }}
               className={button}
               onClick={handleClose}
