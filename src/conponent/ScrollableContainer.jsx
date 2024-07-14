@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import Database from "../Database.json";
+import Database from "../data/Database.json";
 import TextAnimate from "../ui/TextAnimate.tsx";
 
 const ScrollableContainer = ({

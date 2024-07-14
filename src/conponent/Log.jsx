@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import packageinfo from "../update-log.json";
+import packageinfo from "../data/update-log.json";
 
 const globalBradius = "lg:rounded-[28px] ";
 const globalBpadding = "lg:p-[40px] p-[28px]";

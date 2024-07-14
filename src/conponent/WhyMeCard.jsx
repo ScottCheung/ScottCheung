@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import Database from "../Database.json";
+import Database from "../data/Database.json";
 import { hideRow, bgPic, useLanguage, SelectText } from "../help/helpFunction";
 import More from "./More";
 import { Link, useNavigate } from "react-router-dom";

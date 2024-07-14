@@ -200,7 +200,7 @@ const cardData = [
 
 import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Database from "../Database.json";
+import Database from "../data/Database.json";
 import { Link, useNavigate } from "react-router-dom";
 import { useLanguage } from "../help/helpFunction";
 import CtButton from "./ctButton";

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { hideRow, useLanguage } from "../help/helpFunction";
-import data from "../Database.json";
+import data from "../data/Database.json";
 import { Link } from "react-router-dom";
 const navLocation = data.Navbar.Location;
 

@@ -1,5 +1,5 @@
 import { useLayoutEffect, useEffect, useState } from "react";
-import database from "../Database.json";
+import database from "../data/Database.json";
 import { motion } from "framer-motion";
 import { useLanguage } from "../help/helpFunction";
 

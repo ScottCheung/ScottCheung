@@ -1811,9 +1811,9 @@
     ],
     "impro": []
   },
-  "2024-07-14T15:20:55.466Z": {
+  "2024-07-14T17:35:45.497Z": {
     "version": "4.4.4",
-    "time": "2024-07-14T15:20:55.466Z",
+    "time": "2024-07-14T17:35:45.497Z",
     "author": "Scott Cheung",
     "address": {
       "city": "Sydney",
@@ -1828,13 +1828,10 @@
     "new": [],
     "fix": [
       [
-        "Fix performance issues in home page. Optimise long task.",
-        "Fix some bugs of animation bugs.",
-        null
+        "Fix some bugs."
       ],
       [
-        "修复主页性能问题，优化长事件。",
-        "修复了动画 BUG。"
+        "修复部分异常"
       ]
     ],
     "impro": []

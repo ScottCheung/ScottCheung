@@ -1,7 +1,7 @@
 import { useLayoutEffect, useState } from "react";
 import Navbar from "../conponent/NavBar/Navbar";
 import Contact from "../conponent/Contact";
-import database from "../Database.json";
+import database from "../data/Database.json";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../help/helpFunction";
 import { Link } from "react-router-dom";

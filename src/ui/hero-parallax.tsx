@@ -69,7 +69,7 @@ export const HeroParallax = ({ Items }: { Items: ItemType[] }) => {
     springConfig,
   );
   const opacity = useSpring(
-    useTransform(scrollYProgress, [0, 0.2], [0.2, 1]),
+    useTransform(scrollYProgress, [0, 0.2], [0.5, 0.9]),
     springConfig,
   );
   const opacitySpan = useSpring(
@@ -88,12 +88,12 @@ export const HeroParallax = ({ Items }: { Items: ItemType[] }) => {
   return (
     <div
       ref={ref}
-      className="h-[300vh]  overflow-hidden antialiased relative flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
+      className="h-[300vh] relative overflow-hidden antialiased flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.span
         style={{ opacity: opacitySpan }}
-        className="absolute w-[100vw] h-[100vh] z-10 bg-gradient-to-tr from-[0%] to-[90%] from-black via-[20%] via-black to-transparent"
+        className="absolute w-[100vw] h-[100vh] z-10 bg-gradient-to-tr from-[0%] to-[100%] from-black via-[40%] via-black to-transparent"
       ></motion.span>
       <motion.div
         style={{
@@ -145,7 +145,8 @@ export const Header = () => {
           type="fadeIn"
         />
         <p className="relative z-20 max-w-5xl mt-8 text-[20px]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-100 ">
-          This page is under development.
+          This page is under development. Datas are not correct. Open time is
+          not expected. Please check back later. Thank you!
         </p>
       </div>
     </div>
@@ -179,7 +180,12 @@ export const ProductCard = ({
       transition={{ duration: 0.3 }}
       className="group/Item h-96 w-[30rem] relative flex-shrink-0 overflow-hidden"
     >
-      <a href={Item.link} className="block group-hover/Item:shadow-2xl">
+      <a
+        href={Item.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block group-hover/Item:shadow-2xl"
+      >
         <img
           src={Item.thumbnail}
           height="600"

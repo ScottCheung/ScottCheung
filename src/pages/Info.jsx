@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../conponent/NavBar/Navbar";
 import { motion, AnimatePresence, animate } from "framer-motion";
-import database from "../Database.json";
+import database from "../data/Database.json";
 import Contact from "../conponent/Contact";
 import { useLanguage } from "../help/helpFunction";
 import { Link } from "react-router-dom";

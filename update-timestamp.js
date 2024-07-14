@@ -1,15 +1,15 @@
-const fs = require("fs");
-const path = require("path");
-const axios = require("axios");
+const fs = require('fs');
+const path = require('path');
+const axios = require('axios');
 
 // 获取当前时间
 const currentTime = new Date().toISOString();
 
 // 读取 package.json 文件
-const packageJsonPath = path.resolve(__dirname, "package.json");
-const logPath = path.resolve(__dirname, "./src/update-log.json");
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
-const log = JSON.parse(fs.readFileSync(logPath, "utf8"));
+const packageJsonPath = path.resolve(__dirname, 'package.json');
+const logPath = path.resolve(__dirname, './src/data/update-log.json');
+const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+const log = JSON.parse(fs.readFileSync(logPath, 'utf8'));
 
 // 更新发布时间戳
 packageJson.lastPublishedAt = currentTime;
@@ -18,7 +18,7 @@ packageJson.lastPublishedAt = currentTime;
 const getGeolocation = async () => {
   try {
     const response = await axios.get(
-      "https://ipinfo.io/json?token=7ea9f53eb7d899",
+      'https://ipinfo.io/json?token=7ea9f53eb7d899',
     );
     const { city, region, postal, loc } = response.data;
     return {
@@ -28,12 +28,12 @@ const getGeolocation = async () => {
       loc,
     };
   } catch (error) {
-    console.error("Error fetching geolocation:", error);
+    console.error('Error fetching geolocation:', error);
     return {
-      city: "Unknown",
-      state: "Unknown",
-      zipcode: "Unknown",
-      loc: "Unknown",
+      city: 'Unknown',
+      state: 'Unknown',
+      zipcode: 'Unknown',
+      loc: 'Unknown',
     };
   }
 };
@@ -51,7 +51,7 @@ const getGeolocation = async () => {
   const newLogEntry = {
     version: packageJson.version,
     time: currentTime,
-    author: "Scott Cheung",
+    author: 'Scott Cheung',
     address,
     // 自定义
     // header: ["New Log Function", "更新 Log 记录功能"],
@@ -69,27 +69,24 @@ const getGeolocation = async () => {
     //   ["修复了翻译不佳的情况."],
     // ],
 
-    // // 显示优化 💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅
+    // 显示优化 💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅
+    header: ['Patch Update', '补丁更新'],
+    new: [],
+    fix: [['Fix some bugs.'], ['修复部分异常']],
+    impro: [],
+
+    // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
     // header: ["Patch Update", "补丁更新"],
     // new: [],
     // fix: [
-    //   ["Fix some bugs of toTop button js error."],
-    //   ["修复到顶端按钮js异常"],
+    //   [
+    //     "Fix performance issues, Optimise long task.",
+    //     "Fix some bugs.",
+    //     ,
+    //   ],
+    //   ["修复性能问题，优化长事件。", "修复了动画 BUG。"],
     // ],
     // impro: [],
-
-    // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-    header: ["Patch Update", "补丁更新"],
-    new: [],
-    fix: [
-      [
-        "Fix performance issues in home page. Optimise long task.",
-        "Fix some bugs of animation bugs.",
-        ,
-      ],
-      ["修复主页性能问题，优化长事件。", "修复了动画 BUG。"],
-    ],
-    impro: [],
   };
 
   // 将新日志条目添加到日志字典中，以时间戳作为键

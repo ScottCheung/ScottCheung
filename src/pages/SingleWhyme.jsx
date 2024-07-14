@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Navbar from "../conponent/NavBar/Navbar";
 import { motion, AnimatePresence } from "framer-motion";
-import database from "../Database.json";
+import database from "../data/Database.json";
 import Contact from "../conponent/Contact";
 import WhyMe from "../conponent/WhyMe";
 import { hideRow, bgPic, useLanguage, SelectText } from "../help/helpFunction";

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Database from "../Database.json";
+import Database from "../data/Database.json";
 import { motion, AnimatePresence } from "framer-motion";
 import { useLanguage } from "../help/helpFunction";
 import BG from "./gfBG";

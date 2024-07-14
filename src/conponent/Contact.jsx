@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Database from "../Database.json";
+import Database from "../data/Database.json";
 import { useLanguage } from "../help/helpFunction";
 import { Link } from "react-router-dom";
 import Toast from "./toast";

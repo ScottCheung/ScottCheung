@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import packageinfo from "../update-log.json";
+import packageinfo from "../data/update-log.json";
 import { hideRow, useLanguage } from "../help/helpFunction";
 
 const globalBradius = "lg:rounded-[28px] ";

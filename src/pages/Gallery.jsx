@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import Navbar from "../conponent/NavBar/Navbar";
-import Database from "../Database.json";
+import Database from "../data/Database.json";
 import { useLanguage } from "../help/helpFunction";
 import { useParams, useNavigate } from "react-router-dom";
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Database from "../Database.json";
+import Database from "../data/Database.json";
 import { useLanguage } from "../help/helpFunction";
 
 const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;

@@ -1,5 +1,5 @@
 import Navbar from "../conponent/Navbar/Navbar";
-import Database from "../Database.json";
+import Database from "../data/Database.json";
 import { motion, AnimatePresence } from "framer-motion";
 import Education from "../conponent/Education";
 import { Link } from "react-router-dom";

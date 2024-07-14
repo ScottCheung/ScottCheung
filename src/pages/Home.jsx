@@ -17,7 +17,7 @@ import Welcome from "../conponent/Welocome";
 import Contact from "../conponent/Contact";
 import SubNav from "../conponent/subNav";
 import Carousel from "../conponent/Carousel";
-import Database from "../Database.json";
+import Database from "../data/Database.json";
 import { useAppContext } from "../help/ContextManager";
 import { hideRow, bgPic, useLanguage, SelectText } from "../help/helpFunction";
 

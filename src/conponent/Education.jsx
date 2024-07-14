@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { LazyMotion, domAnimation, m } from "framer-motion";
-import Database from "../Database.json";
+import Database from "../data/Database.json";
 import { Link } from "react-router-dom";
 import { hideRow, useLanguage } from "../help/helpFunction";
 import More from "./More";

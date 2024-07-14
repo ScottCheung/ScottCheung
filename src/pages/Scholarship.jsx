@@ -1,5 +1,5 @@
 import Navbar from "../conponent/NavBar/Navbar";
-import database from "../Database.json";
+import database from "../data/Database.json";
 import KeyFeature from "../conponent/KeyFeature";
 import Contact from "../conponent/Contact";
 const Scholarships = database.PersonalInfo.Scholarships;

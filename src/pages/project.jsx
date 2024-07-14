@@ -6,156 +6,156 @@ import Contact from "../conponent/Contact";
 const products = [
   {
     title: "Moonbeam",
-    link: "https://gomoonbeam.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
   },
   {
     title: "Cursor",
-    link: "https://cursor.so",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/cursor.png",
   },
   {
     title: "Rogue",
-    link: "https://userogue.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/rogue.png",
   },
 
   {
     title: "Editorially",
-    link: "https://editorially.org",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/editorially.png",
   },
   {
     title: "Editrix AI",
-    link: "https://editrix.ai",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/editrix.png",
   },
   {
     title: "Pixel Perfect",
-    link: "https://app.pixelperfect.quest",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
   },
 
   {
     title: "Algochurn",
-    link: "https://algochurn.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/algochurn.png",
   },
   {
     title: "Aceternity UI",
-    link: "https://ui.aceternity.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/aceternityui.png",
   },
   {
     title: "Tailwind Master Kit",
-    link: "https://tailwindmasterkit.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png",
   },
   {
     title: "SmartBridge",
-    link: "https://smartbridgetech.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/smartbridge.png",
   },
   {
     title: "Renderwork Studio",
-    link: "https://renderwork.studio",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
   },
 
   {
     title: "Creme Digital",
-    link: "https://cremedigital.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
   },
   {
     title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
   },
   {
     title: "Invoker Labs",
-    link: "https://invoker.lol",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/invoker.png",
   },
   {
     title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
   },
   {
     title: "Renderwork Studio",
-    link: "https://renderwork.studio",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
   },
 
   {
     title: "Creme Digital",
-    link: "https://cremedigital.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
   },
   {
     title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
   },
   {
     title: "Invoker Labs",
-    link: "https://invoker.lol",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/invoker.png",
   },
   {
     title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
   },
   {
     title: "Renderwork Studio",
-    link: "https://renderwork.studio",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/renderwork.png",
   },
 
   {
     title: "Creme Digital",
-    link: "https://cremedigital.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/cremedigital.png",
   },
   {
     title: "Golden Bells Academy",
-    link: "https://goldenbellsacademy.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png",
   },
   {
     title: "Invoker Labs",
-    link: "https://invoker.lol",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/invoker.png",
   },
   {
     title: "E Free Invoice",
-    link: "https://efreeinvoice.com",
+    link: "https://xianzhe.site",
     thumbnail:
       "https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png",
   },
@@ -170,6 +170,10 @@ export default function project() {
       <div className="vh-[200vh]">
         {" "}
         <HeroParallax Items={products} />
+      </div>
+      <div className="relative flex w-full h-full min-h-[100vh]">
+        <span className="absolute -top-[30vh]  left-0 right-0 w-full flex h-[30vh] bg-gradient-to-t from-[0%] to-[100%] from-black to-transparent"></span>
+        sdsd
       </div>
       <Contact />
     </div>

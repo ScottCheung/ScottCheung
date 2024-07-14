@@ -1,6 +1,6 @@
 import Navbar from "../conponent/NavBar/Navbar.jsx";
 import Education from "../conponent/Education";
-import database from "../Database.json";
+import database from "../data/Database.json";
 import React, { useState, useEffect } from "react";
 const pathname = window.location.pathname;
 const course = database.PersonalInfo.Education;
