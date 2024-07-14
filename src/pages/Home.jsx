@@ -13,12 +13,15 @@ import AboutMe from '../conponent/AboutMe';
 import WorkExperience from '../conponent/WorkExperience';
 import Capability from './Capability';
 import KeyFeature from '../conponent/KeyFeature';
+import Welcome from '../conponent/Welocome';
 import Contact from '../conponent/Contact';
+import SubNav from '../conponent/subNav';
 import Carousel from '../conponent/Carousel';
 import Database from '../data/Database.json';
 import { useAppContext } from '../help/ContextManager';
-import { useLanguage } from '../help/helpFunction';
+import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
 
+const bg = Database.PersonalInfo.Welcomebg[0];
 const HomeCarousel = [
   {
     href: '/life',
@@ -55,17 +58,22 @@ const HomeCarousel = [
     minisrc: 'https://3o.hk/images/2024/05/22/IMG_08432.png',
     src: 'https://3o.hk/images/2024/01/21/IMG_0843.png',
   },
+  //   {
+  //     href: '/life',
+  //     type: 'video',
+  //     duration: '50s',
+  //     src: 'flowbite.com/docs/videos/flowbite.mp4',
+  //   },
 ];
 
 function Home() {
   const { Components, setComponents, whymeCard, setWhymeCard } =
     useAppContext();
+  const videoRef = useRef(null);
   const lang = useLanguage();
   const keyfeature = Database.PersonalInfo.WhyMe[lang];
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
-  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
-
   useEffect(() => {
     const div = document.createElement('div');
     div.style.visibility = 'hidden';
@@ -74,10 +82,7 @@ function Home() {
     const scrollbarWidth = div.offsetWidth - div.clientWidth;
     document.body.removeChild(div);
     setScrollbarWidth(scrollbarWidth);
-
-    setViewportHeight(window.innerHeight);
   }, []);
-
   const viewwidth = window.innerWidth - scrollbarWidth;
 
   useEffect(() => {
@@ -92,17 +97,25 @@ function Home() {
     };
   }, []);
 
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  }, []);
+  const ref = useRef(null);
+
   return (
     <div
-      className={`relative flex flex-col w-full items-center justify-center transition-all  bg-gray-200`}
+      className={`relative flex flex-col w-[${viewwidth}px] transition-all bg-gray-200 ${windowWidth < 1080 ? 'overflow-x-hidden' : ''} `}
     >
-      <Navbar topTextColor={true} viewwidth={viewwidth} />
+      <Navbar topTextColor={true} />
+
       <Carousel HomeCarousel={HomeCarousel} interval={5000}></Carousel>
       <Education />
       <KeyFeature />
       <Capability />
       <WorkExperience />
-      <AboutMe viewwidth={viewwidth} />
+      <AboutMe />
       <WhyMe />
       <Contact />
     </div>

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../help/helpFunction';
 import { useSwipeable } from 'react-swipeable';
+import SubNav from '../conponent/subNav';
 
 const Carousel = ({ interval, HomeCarousel }) => {
   const lang = useLanguage();
@@ -34,7 +35,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
 
   useEffect(() => {
     const handleResize = () => {
-      setViewportHeight(window.innerHeight);
+      // setViewportHeight(window.innerHeight);
     };
 
     window.addEventListener('resize', handleResize);
@@ -109,9 +110,11 @@ const Carousel = ({ interval, HomeCarousel }) => {
       }}
       tabIndex='0'
     >
-      <span className='absolute z-20 object-cover w-full h-full bg-black/30'></span>
+      <span
+        className={`absolute z-20 top-0 bottom-0 left-0 right-0 object-cover h-${viewportHeight}px bg-black/30`}
+      ></span>
       <div
-        className={`flex w-full h-full ${isTransitioning ? 'transition-transform duration-500' : ''}`}
+        className={`flex z-10 w-full h-full ${isTransitioning ? 'transition-transform duration-500' : ''}`}
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {[
@@ -119,7 +122,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
           ...HomeCarousel,
           HomeCarousel[0],
         ].map((item, index) => (
-          <motion.div className={`flex-none w-full h-full`} key={index}>
+          <motion.div className={`flex-none w-full `} key={index}>
             <a href={item.href} className='block w-full h-full'>
               <img
                 src={window.innerWidth < 768 ? item.minisrc : item.src}
@@ -141,7 +144,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
             isTop && setIsPaused(false);
           }}
           onClick={prevSlide}
-          className='absolute left-0 w-[20%] h-full z-40 bg-gradient-to-r hover:from-black/20 to-transparent cursor-pointer'
+          className='absolute left-0 w-[20%]  z-40 bg-gradient-to-r hover:from-black/20 to-transparent cursor-pointer'
         >
           {showLeftButton && (
             <motion.button
@@ -168,7 +171,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
             isTop && setIsPaused(false);
           }}
           onClick={nextSlide}
-          className='absolute right-0 w-[20%] h-full z-50 bg-gradient-to-l hover:from-black/20 to-transparent cursor-pointer'
+          className='absolute right-0 w-[20%]  z-50 bg-gradient-to-l hover:from-black/20 to-transparent cursor-pointer'
         >
           {showRightButton && (
             <motion.button
@@ -196,7 +199,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
           }}
           initial={{ width: 0 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className='w-full h-[30px] rounded-lg absolute top-[80%] gap-y-[30px] flex flex-col justify-center items-center z-50'
+          className={`w-full h-[30px] rounded-lg absolute  top-[${viewportHeight * 0.8}px] gap-y-[30px] flex flex-col justify-center items-center z-50`}
         >
           <motion.div className='w-auto flex gap-x-[20px]'>
             <div
@@ -293,6 +296,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
               </motion.button>
             </div>
           </motion.div>
+          <SubNav />
         </motion.div>
       </AnimatePresence>
     </motion.div>

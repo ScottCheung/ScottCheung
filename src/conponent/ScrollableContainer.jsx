@@ -1,7 +1,7 @@
-import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
-import Database from "../data/Database.json";
-import TextAnimate from "../ui/TextAnimate.tsx";
+import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+import Database from '../data/Database.json';
+import TextAnimate from '../ui/TextAnimate.tsx';
 
 const ScrollableContainer = ({
   id,
@@ -12,7 +12,7 @@ const ScrollableContainer = ({
   headerPY,
   headerStyle,
   containerPY,
-  header = { cont: "", icon: "" },
+  header = { cont: '', icon: '' },
 }) => {
   const containerRef = useRef(null);
   const [isAtStart, setIsAtStart] = useState(true);
@@ -23,9 +23,9 @@ const ScrollableContainer = ({
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -57,7 +57,7 @@ const ScrollableContainer = ({
     if (!container) return;
 
     const childWidth = container.firstChild?.offsetWidth + gap || 0;
-    container.scrollBy({ left: -childWidth, behavior: "smooth" });
+    container.scrollBy({ left: -childWidth, behavior: 'smooth' });
   };
 
   const handleScrollRight = () => {
@@ -65,31 +65,31 @@ const ScrollableContainer = ({
     if (!container) return;
 
     const childWidth = container.firstChild?.offsetWidth + gap || 0;
-    container.scrollBy({ left: childWidth, behavior: "smooth" });
+    container.scrollBy({ left: childWidth, behavior: 'smooth' });
   };
 
   const buttonStyle = `group bg-black/70 group-hover:bg-black/30 backdrop-blur-[5px] w-[50px] h-[50px] animate__animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-300`;
-  const svg = ` fill-gray-300 w-[25px] h-[25px]  ${isAtEnd || isAtStart ? "" : "group-hover:fill-white"}`;
+  const svg = ` fill-gray-300 w-[25px] h-[25px]  ${isAtEnd || isAtStart ? '' : 'group-hover:fill-white'}`;
 
   return (
-    <div className="flex flex-col items-start justify-start w-full p-4 lg:p-0">
+    <div className='flex flex-col items-start justify-start w-full p-4 lg:p-0'>
       {/* Header & Control Buttons */}
-      <div id={id} className="h-[5vh]"></div>
+      <div id={id} className='h-[5vh]'></div>
       <motion.div
         style={{
           width: headerStyle,
           paddingInline:
             windowWidth > 1024
-              ? "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)"
-              : "0",
+              ? 'calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)'
+              : '0',
         }}
-        className={`flex w-full justify-between items-center px-[10px] gap-[20px]  ${headerPY ? headerPY : "my-[50px]"}`}
+        className={`flex w-full justify-between items-center px-[10px] gap-[20px]  ${headerPY ? headerPY : 'my-[50px]'}`}
       >
         {/* Header */}
         <div
-          className={`flex items-center justify-center w-full lg:w-auto ${textColor ? textColor : "text-gray-800"}`}
+          className={`flex items-center justify-center w-full lg:w-auto ${textColor ? textColor : 'text-gray-800'}`}
         >
-          <motion.div className="flex items-center justify-center gap-x-[20px]">
+          <motion.div className='flex items-center justify-center gap-x-[20px]'>
             <motion.i
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -99,9 +99,9 @@ const ScrollableContainer = ({
 
             <TextAnimate
               transition={{ duration: 0.3 }}
-              className="flex items-center font-mono text-5xl font-black text-nowrap lg:text-8xl"
+              className='flex items-center font-mono text-5xl font-black text-nowrap lg:text-8xl'
               text={header.cont}
-              type="fadeIn"
+              type='fadeIn'
             />
           </motion.div>
         </div>
@@ -110,8 +110,8 @@ const ScrollableContainer = ({
         <div
           className={`${
             windowWidth > 1024
-              ? "flex items-center justify-center gap-x-[20px]"
-              : "hidden"
+              ? 'flex items-center justify-center gap-x-[20px]'
+              : 'hidden'
           }`}
         >
           <motion.button
@@ -126,15 +126,15 @@ const ScrollableContainer = ({
             className={buttonStyle}
             style={{
               opacity: isAtStart ? 0.2 : 1,
-              cursor: isAtStart ? "" : "pointer",
+              cursor: isAtStart ? '' : 'pointer',
             }}
           >
             <svg
               className={`${svg} rotate-180`}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="8 8 20 20"
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='8 8 20 20'
             >
-              <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+              <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
             </svg>
           </motion.button>
           <motion.button
@@ -149,15 +149,15 @@ const ScrollableContainer = ({
             className={buttonStyle}
             style={{
               opacity: isAtEnd ? 0.2 : 1,
-              cursor: isAtEnd ? "" : "pointer",
+              cursor: isAtEnd ? '' : 'pointer',
             }}
           >
             <svg
               className={svg}
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="8 8 20 20"
+              xmlns='http://www.w3.org/2000/svg'
+              viewBox='8 8 20 20'
             >
-              <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+              <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
             </svg>
           </motion.button>
         </div>
@@ -166,21 +166,25 @@ const ScrollableContainer = ({
       {/* Container */}
       <motion.div
         layout
-        variants={Database.Animation.Variant.Welcomevisblecontainer}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: false, margin: "-30%" }}
+        variants={
+          windowWidth > 1024
+            ? Database.Animation.Variant.Welcomevisblecontainer
+            : undefined
+        }
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: false, margin: '-30%' }}
         onAnimationComplete={scrollToRight}
         style={{
           paddingInline:
             windowWidth > 1024
-              ? "calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)"
-              : "0",
+              ? 'calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)'
+              : '0',
         }}
         className={`${
           windowWidth > 1024
-            ? `flex overflow-x-auto gap-[${gap}px] ${containerPY ? `${containerPY} py-[${containerPY}px]` : "py-[30px]"} z-30 overflow-hidden`
-            : "grid grid-cols-12 gap-4 w-full p-[20px] px-[10px]"
+            ? `flex overflow-x-auto gap-[${gap}px] ${containerPY ? `${containerPY} py-[${containerPY}px]` : 'py-[30px]'} z-30 overflow-hidden`
+            : 'grid grid-cols-12 gap-4 w-full p-[20px] px-[10px]'
         } w-full scroll-smooth scrollbar-hide flex-shrink-0`}
         onScroll={handleScroll}
         ref={containerRef}

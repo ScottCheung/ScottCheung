@@ -37,7 +37,7 @@ function Contact({ isTopOut }) {
             isOut ? 'opacity-50' : 'opacity-60'
           }  `}
         ></span>
-        <div className='pt-[150px] z-30 '>
+        <div className='lg:pt-[150px] z-30 '>
           <AnimatePresence>
             <ScrollableContainer
               gap={10}
