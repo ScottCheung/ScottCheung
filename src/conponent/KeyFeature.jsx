@@ -52,9 +52,9 @@ function KeyFeature() {
         y: isMobile ? 0 : y,
         borderRadius: isMobile ? 28 : borderRadius,
       }}
-      className={`w-full flex h-[80vh] md:h-[150vh] overflow-hidden`}
+      className={`w-full flex h-[1000px] md:h-[150vh] overflow-hidden`}
     >
-      <motion.section className='flex items-center w-full md:h-[150vh] relative overflow-hidden bg-gradient-to-r from-lime-500 to-emerald-500'>
+      <motion.section className='relative flex items-center w-full overflow-hidden bg-gradient-to-r from-lime-500 to-emerald-500'>
         <img
           className='absolute top-0 left-0 object-cover object-bottom w-full h-full transition-all'
           src={bg[0]}
@@ -130,7 +130,7 @@ function KeyFeature() {
     </motion.div>
   );
 
-  return <div className='flex justify-center'>{KeyFeature}</div>;
+  return KeyFeature;
 }
 
 export default KeyFeature;
