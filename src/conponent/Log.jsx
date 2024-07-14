@@ -158,7 +158,7 @@ export default function Log() {
   return (
     <div
       id='log-window'
-      className='fixed top-0 left-0 z-50 items-center justify-center w-full h-full bg-gray-800 bg-opacity-75 backdrop-blur-md'
+      className='fixed top-0 left-0 z-50 flex justify-center w-full h-full bg-gray-800 bg-opacity-75 md:items-center backdrop-blur-md'
       onClick={handleClose}
     >
       <motion.div

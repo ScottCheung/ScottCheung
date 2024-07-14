@@ -2010,5 +2010,30 @@
       ]
     ],
     "impro": []
+  },
+  "2024-07-14T23:33:10.008Z": {
+    "version": "4.4.12",
+    "time": "2024-07-14T23:33:10.008Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
+    "new": [],
+    "fix": [
+      [
+        "Fix some bugs."
+      ],
+      [
+        "修复部分异常"
+      ]
+    ],
+    "impro": []
   }
 }
