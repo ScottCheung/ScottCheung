@@ -1,7 +1,6 @@
 const fs = require("fs");
 const path = require("path");
 const axios = require("axios");
-const { exec } = require("child_process");
 
 // 获取当前时间
 const currentTime = new Date().toISOString();
@@ -11,9 +10,6 @@ const packageJsonPath = path.resolve(__dirname, "package.json");
 const logPath = path.resolve(__dirname, "./src/update-log.json");
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
 const log = JSON.parse(fs.readFileSync(logPath, "utf8"));
-
-// 获取版本号
-const version = packageJson.version;
 
 // 更新发布时间戳
 packageJson.lastPublishedAt = currentTime;
@@ -42,30 +38,15 @@ const getGeolocation = async () => {
   }
 };
 
-const deleteGitTag = async (tag) => {
-  return new Promise((resolve, reject) => {
-    exec(`git tag -d ${tag}`, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`Error deleting tag: ${stderr}`);
-        return reject(error);
-      }
-      console.log(`Tag deleted: ${stdout}`);
-      exec(`git push origin :refs/tags/${tag}`, (error, stdout, stderr) => {
-        if (error) {
-          console.error(`Error pushing deletion: ${stderr}`);
-          return reject(error);
-        }
-        console.log(`Tag deletion pushed: ${stdout}`);
-        resolve();
-      });
-    });
-  });
-};
-
 (async () => {
   const address = await getGeolocation();
-  await deleteGitTag(`v${version}`);
+  // 创建新的日志条目
+  // 创建新的日志条目
+  // 创建新的日志条目
+  // 创建新的日志条目
 
+  // 创建新的日志条目
+  // 创建新的日志条目
   // 创建新的日志条目
   const newLogEntry = {
     version: packageJson.version,
