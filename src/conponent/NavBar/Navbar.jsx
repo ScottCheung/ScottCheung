@@ -4,8 +4,6 @@ import { motion, useTime, AnimatePresence } from "framer-motion";
 import { useAppContext } from "../../help/ContextManager.js";
 import data from "./Navbardata.json";
 import { scrollToHash } from "../../help/helpFunction.js";
-import LifeCate from "../lifeCategory.jsx";
-import ContactCate from "../contactCategory.jsx";
 import packageinfo from "../../../package.json";
 import Log from "../Log.jsx";
 

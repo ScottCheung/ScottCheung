@@ -10,7 +10,7 @@ import {
 } from "framer-motion";
 import N from "./Num";
 import { hideRow, useLanguage } from "../help/helpFunction";
-import ScrollableContainer from "./ScrollableContainer";
+import TextAnimate from "../ui/TextAnimate.tsx";
 
 const KeyFeatures = Database.PersonalInfo.KeyFeature1;
 const bg = Database.PersonalInfo.KeyFeaturebg;
@@ -88,13 +88,19 @@ function KeyFeature() {
                     <N n={KeyFeature.no} d={2} />
                   </div>
                   <div className="flex items-center justify-center w-full -mt-[30px]">
-                    <div className="flex gap-[20px] items-center text-transparent  bg-gradient-to-br bg-clip-text from-lime-500 to-emerald-500">
+                    <div className="flex gap-[20px] items-center text-transparent  bg-gradient-to-br bg-clip-text from-[-20%] to-[120%] from-lime-500 to-emerald-500">
                       <i
                         className={`text-[30px] md:text-[40px]  lg:text-[50px]  fi  ${KeyFeature.icon}`}
                       ></i>
-                      <p className="flex text-[15px] md:text-[20px] lg:text-[30px] font-[600]">
-                        {KeyFeature.keyfeature[lang]}
-                      </p>
+
+                      <TextAnimate
+                        animateOnce={true}
+                        duration={0.3}
+                        delay={-1 + 0.3 * index}
+                        className="flex text-[15px] md:text-[20px] lg:text-[30px] font-[600]"
+                        text={KeyFeature.keyfeature[lang]}
+                        type="fadeIn"
+                      />
                     </div>
                   </div>
                 </a>

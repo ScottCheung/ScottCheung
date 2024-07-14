@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 :root {
   --global-card-corner-radius: 28px;
   --global-card-padding: 32px;
@@ -18,6 +21,33 @@
   --global-viewport-content-responsive: 87.5vw;
   --global-animation-easing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
   --global-select-column-space: 20px;
+}
+
+.gradient-border {
+  position: relative;
+  overflow: hidden; /* 确保伪元素不会超出容器 */
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle,
+    white 0%,
+    rgba(255, 255, 255, 1) 40%,
+    transparent 60%
+  );
+  z-index: 0;
+  pointer-events: none; /* 确保伪元素不会影响鼠标事件 */
+}
+
+.gradient-border > * {
+  position: relative;
+  z-index: 1;
 }
 
 @media only screen and (min-width: 1441px) {

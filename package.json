@@ -6,14 +6,12 @@
   "homepage": "https://xianzhezhang97.github.io",
   "dependencies": {
     "@flaticon/flaticon-uicons": "^3.2.1",
-    "@headlessui/react": "^1.7.18",
-    "@heroicons/react": "^2.1.1",
+    "@headlessui/react": "^2.1.2",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/react": "^18.3.3",
     "apexcharts": "^3.49.0",
     "axios": "^1.7.2",
     "eslint": "8.57.0",
-    "flowbite": "^2.3.0",
     "prettier": "^3.2.5",
     "prettier-plugin-tailwindcss": "^0.5.14",
     "react": "^18.2.0",
@@ -23,9 +21,7 @@
     "react-intersection-observer": "^9.5.3",
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.20.1",
-    "react-scripts": "^5.0.1",
-    "snapsvg-cjs": "^0.0.6",
-    "styled-components": "^6.1.8"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -51,6 +47,7 @@
     "framer-motion": "^11.3.2",
     "gh-pages": "^6.1.1",
     "postcss": "^8.4.38",
+    "react-app-rewired": "^2.2.1",
     "tailwind-merge": "^2.4.0",
     "tailwindcss": "^3.4.4"
   },

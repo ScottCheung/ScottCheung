@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import Database from "../Database.json";
+import TextAnimate from "../ui/TextAnimate.tsx";
 
 const ScrollableContainer = ({
   id,
@@ -95,17 +96,13 @@ const ScrollableContainer = ({
               transition={{ duration: 0.5 }}
               className={`flex items-center text-5xl fi lg:text-8xl ${header.icon}`}
             ></motion.i>
-            <motion.h2
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{
-                delay: 0.1,
-                duration: 0.5,
-              }}
+
+            <TextAnimate
+              transition={{ duration: 0.3 }}
               className="flex items-center font-mono text-5xl font-black text-nowrap lg:text-8xl"
-            >
-              {header.cont}
-            </motion.h2>
+              text={header.cont}
+              type="fadeIn"
+            />
           </motion.div>
         </div>
 

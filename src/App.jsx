@@ -18,6 +18,7 @@ import Resume from "./pages/Resume/Resume.jsx";
 import AutoText from "./pages/AutoText/AutoText.jsx";
 import Navbar from "./conponent/NavBar/Navbar.jsx";
 import Resumecheck from "./pages/Resume/Resumecheck.jsx";
+import Project from "./pages/project.jsx";
 
 const router = createBrowserRouter([
   {
@@ -97,6 +98,10 @@ const router = createBrowserRouter([
   {
     path: "/resumecheck/:version",
     element: <Resumecheck />,
+  },
+  {
+    path: "/project",
+    element: <Project />,
   },
 ]);
 
