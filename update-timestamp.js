@@ -72,7 +72,10 @@ const getGeolocation = async () => {
     // 显示优化 💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅
     header: ["Patch Update", "补丁更新"],
     new: [],
-    fix: [["Fix some bugs of bugs."], ["修复部分异常"]],
+    fix: [
+      ["Fix some bugs of toTop button js error."],
+      ["修复到顶端按钮js异常"],
+    ],
     impro: [],
 
     // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
