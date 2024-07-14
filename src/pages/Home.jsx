@@ -17,6 +17,7 @@ import Welcome from '../conponent/Welocome';
 import Contact from '../conponent/Contact';
 import SubNav from '../conponent/subNav';
 import Carousel from '../conponent/Carousel';
+import Log from '../conponent/Log';
 import Database from '../data/Database.json';
 import { useAppContext } from '../help/ContextManager';
 import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
@@ -109,7 +110,7 @@ function Home() {
       className={`relative flex flex-col items-center w-[${viewwidth}px] transition-all bg-gray-200 ${windowWidth < 1080 ? 'overflow-x-hidden' : ''} `}
     >
       <Navbar topTextColor={true} />
-
+      <Log />
       <Carousel HomeCarousel={HomeCarousel} interval={5000}></Carousel>
       <Education />
       <KeyFeature viewwidth={viewwidth} />
