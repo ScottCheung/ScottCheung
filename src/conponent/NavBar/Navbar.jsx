@@ -708,7 +708,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           </motion.div>
         </motion.nav>
       </motion.div>
-      <div className='hidden md:flex'>{/* <Log /> */}</div>
+      <div className='hidden md:flex'>
+        <Log />
+      </div>
 
       {/* toTop buttom */}
       {!isTop && Components.NavBar === 'visible' && (
