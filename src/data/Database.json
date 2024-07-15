@@ -1750,6 +1750,11 @@
                 "description": "Proficient in Redux for state management in complex applications."
               },
               {
+                "name": "TypeScript",
+                "image": "https://www.svgrepo.com/show/521320/typescript-16.svg",
+                "description": "Proficient in TypeScript for enhancing JavaScript with static typing to improve code quality and maintainability."
+              },
+              {
                 "name": "Tailwind CSS",
                 "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg",
                 "description": "Skilled in Tailwind CSS for rapid UI development with utility-first design."
@@ -1760,8 +1765,74 @@
                 "description": "Proficient in Framer Motion for creating smooth and engaging animations."
               },
               {
+                "name": "GraphQL",
+                "image": "https://www.svgrepo.com/show/473649/graphql.svg",
+                "description": "Experienced in GraphQL for efficient data fetching and API management."
+              },
+              {
+                "name": "Next.js",
+                "image": "https://www.svgrepo.com/show/521299/next-16.svg",
+                "description": "Experienced in Next.js for server-side rendering and static site generation in React applications."
+              },
+              {
+                "name": "Node.js",
+                "image": "https://www.svgrepo.com/show/521297/node-16.svg",
+                "description": "Proficient in Node.js for building scalable server-side applications and APIs."
+              },
+              {
+                "name": "Webpack",
+                "image": "https://www.svgrepo.com/show/503138/webpack.svg",
+                "description": "Skilled in Webpack for bundling JavaScript modules and optimizing web performance."
+              },
+              {
+                "name": "Jest",
+                "image": "https://www.svgrepo.com/show/525096/test-tube-minimalistic.svg",
+                "description": "Proficient in Jest for writing unit and integration tests to ensure code reliability."
+              },
+              {
+                "name": "Cypress",
+                "image": "https://www.svgrepo.com/show/330247/cypress.svg",
+                "description": "Skilled in Cypress for end-to-end testing to ensure application stability and user experience."
+              },
+              {
+                "name": "RESTful APIs",
+                "image": "https://www.svgrepo.com/show/447473/rest-api.svg",
+                "description": "Experienced in designing and consuming RESTful APIs for effective client-server communication."
+              },
+
+              {
+                "name": "Responsive Design",
+                "image": "https://www.svgrepo.com/show/153781/responsive-design-symbol.svg",
+                "description": "Skilled in creating responsive designs to ensure web applications work seamlessly across various devices and screen sizes."
+              },
+              {
+                "name": "Performance Optimization",
+                "image": "https://www.svgrepo.com/show/379226/performance.svg",
+                "description": "Proficient in optimizing web performance to ensure fast loading times and a smooth user experience, like Long Task."
+              },
+              {
+                "name": "Accessibility",
+                "image": "https://www.svgrepo.com/show/491164/accessibility.svg",
+                "description": "Experienced in implementing accessibility best practices to ensure web applications are usable by people with disabilities."
+              },
+              {
+                "name": "SEO Optimization",
+                "image": "https://www.svgrepo.com/show/478722/seo-1.svg",
+                "description": "Skilled in SEO optimization using tools like Google Chrome for evaluating and enhancing website visibility, including optimizing titles, content, and meta tags."
+              },
+              {
+                "name": "Figma",
+                "image": "https://www.svgrepo.com/show/532271/figma.svg",
+                "description": "Proficient in Figma for UI/UX design, enabling collaboration with design teams and translating design specifications into code."
+              },
+              {
+                "name": "Adobe Photoshop (PS)",
+                "image": "https://www.svgrepo.com/show/508752/photoshop.svg",
+                "description": "Proficient in Adobe Photoshop for creating and editing graphics, images, and design elements for web and UI projects."
+              },
+              {
                 "name": "Component Libraries",
-                "image": "https://www.svgrepo.com/show/38133/ui8.svg",
+                "image": "https://www.svgrepo.com/show/430362/ux-line-circle.svg",
                 "description": "Experienced in Component Libraries for building responsive and mobile-first web pages."
               },
               {
@@ -1777,47 +1848,117 @@
               {
                 "name": "HTML",
                 "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg",
-                "description": "精通HTML，能够创建结构良好、语义化的网页内容。"
+                "description": "精通 HTML，用于创建结构良好、语义明确的网页内容。"
               },
               {
                 "name": "CSS",
                 "image": "https://www.svgrepo.com/show/521591/css.svg",
-                "description": "擅长使用CSS设计视觉上吸引人的响应式网页。"
+                "description": "擅长 CSS，用于设计视觉吸引力强且响应迅速的网页。"
               },
               {
                 "name": "JavaScript",
                 "image": "https://www.svgrepo.com/show/510028/javascript-file.svg",
-                "description": "拥有JavaScript经验，能够开发动态和交互性强的网页应用。"
+                "description": "有丰富的 JavaScript 经验，用于开发动态和交互式的网页应用。"
               },
               {
                 "name": "React",
                 "image": "https://www.svgrepo.com/show/473768/react.svg",
-                "description": "精通React，能够构建高效、可维护的单页应用（SPA）。"
+                "description": "精通 React，用于构建高效且易维护的单页应用（SPA）。"
               },
               {
                 "name": "Redux",
                 "image": "https://www.svgrepo.com/show/378456/redux-fill.svg",
-                "description": "熟练使用Redux进行复杂应用的状态管理。"
+                "description": "精通 Redux，用于复杂应用的状态管理。"
+              },
+              {
+                "name": "TypeScript",
+                "image": "https://www.svgrepo.com/show/521320/typescript-16.svg",
+                "description": "精通 TypeScript，通过静态类型增强 JavaScript，以提高代码质量和可维护性。"
               },
               {
                 "name": "Tailwind CSS",
                 "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg",
-                "description": "擅长使用Tailwind CSS进行快速UI开发，采用实用优先的设计。"
+                "description": "擅长 Tailwind CSS，用于以实用为先的设计快速开发 UI。"
               },
               {
                 "name": "Framer Motion",
                 "image": "https://www.svgrepo.com/show/371686/animation.svg",
-                "description": "精通Framer Motion，能够创建流畅且吸引人的动画效果。"
+                "description": "精通 Framer Motion，用于创建流畅且引人入胜的动画。"
+              },
+              {
+                "name": "GraphQL",
+                "image": "https://www.svgrepo.com/show/473649/graphql.svg",
+                "description": "有丰富的 GraphQL 经验，用于高效的数据获取和 API 管理。"
+              },
+              {
+                "name": "Next.js",
+                "image": "https://www.svgrepo.com/show/521299/next-16.svg",
+                "description": "有丰富的 Next.js 经验，用于 React 应用的服务器端渲染和静态站点生成。"
+              },
+              {
+                "name": "Node.js",
+                "image": "https://www.svgrepo.com/show/521297/node-16.svg",
+                "description": "精通 Node.js，用于构建可扩展的服务器端应用和 API。"
+              },
+              {
+                "name": "Webpack",
+                "image": "https://www.svgrepo.com/show/503138/webpack.svg",
+                "description": "擅长 Webpack，用于打包 JavaScript 模块和优化网页性能。"
+              },
+              {
+                "name": "Jest",
+                "image": "https://www.svgrepo.com/show/525096/test-tube-minimalistic.svg",
+                "description": "精通 Jest，用于编写单元测试和集成测试，以确保代码可靠性。"
+              },
+              {
+                "name": "Cypress",
+                "image": "https://www.svgrepo.com/show/330247/cypress.svg",
+                "description": "擅长 Cypress，用于端到端测试，以确保应用的稳定性和用户体验。"
+              },
+              {
+                "name": "RESTful APIs",
+                "image": "https://www.svgrepo.com/show/447473/rest-api.svg",
+                "description": "有设计和使用 RESTful APIs 的经验，用于高效的客户端和服务器端通信。"
+              },
+              {
+                "name": "响应式设计",
+                "image": "https://www.svgrepo.com/show/153781/responsive-design-symbol.svg",
+                "description": "擅长响应式设计，确保网页应用在各种设备和屏幕尺寸上无缝运行。"
+              },
+              {
+                "name": "性能优化",
+                "image": "https://www.svgrepo.com/show/379226/performance.svg",
+                "description": "精通性能优化，确保网页快速加载并提供流畅的用户体验，例如 Long Task。"
+              },
+              {
+                "name": "无障碍访问",
+                "image": "https://www.svgrepo.com/show/491164/accessibility.svg",
+                "description": "有实施无障碍最佳实践的经验，确保网页应用对残障人士可用。"
+              },
+              {
+                "name": "SEO 优化",
+                "image": "https://www.svgrepo.com/show/478722/seo-1.svg",
+                "description": "擅长使用谷歌浏览器进行 SEO 评估和优化，包括优化标题、内容和元标签，提高网站可见性。"
+              },
+              {
+                "name": "Figma",
+                "image": "https://www.svgrepo.com/show/532271/figma.svg",
+                "description": "精通 Figma，用于 UI/UX 设计，能够与设计团队协作，并将设计规范转化为代码。"
+              },
+              {
+                "name": "Adobe Photoshop (PS)",
+                "image": "https://www.svgrepo.com/show/508752/photoshop.svg",
+                "description": "精通 Adobe Photoshop，用于创建和编辑图形、图像和网页及 UI 项目的设计元素。"
               },
               {
                 "name": "组件库",
-                "image": "https://www.svgrepo.com/show/38133/ui8.svg",
-                "description": "具有使用组件库构建响应式和移动优先网页的经验。"
+                "image": "https://www.svgrepo.com/show/430362/ux-line-circle.svg",
+                "description": "有使用组件库构建响应式和移动优先网页的经验。"
               },
               {
                 "name": "动画库",
                 "image": "https://www.svgrepo.com/show/488047/animation.svg",
-                "description": "熟练使用各种动画库，如AnimationCss和Spring，提升用户交互体验。"
+                "description": "擅长使用各种动画库（如 AnimationCss 和 Spring）来增强用户交互体验。"
               }
             ]
           }
@@ -1850,6 +1991,11 @@
                 "name": "TablePlus",
                 "image": "https://www.svgrepo.com/show/532228/table-list.svg",
                 "description": "Proficient in using TablePlus for efficient database management and development."
+              },
+              {
+                "name": "Postman",
+                "image": "https://www.svgrepo.com/show/342128/postman.svg",
+                "description": "Skilled in using Postman for API testing and development, ensuring efficient and reliable API integrations."
               }
             ]
           },
@@ -1880,6 +2026,11 @@
                 "name": "TablePlus",
                 "image": "https://www.svgrepo.com/show/532228/table-list.svg",
                 "description": "熟练使用TablePlus进行高效的数据库管理和开发。"
+              },
+              {
+                "name": "Postman",
+                "image": "https://www.svgrepo.com/show/342128/postman.svg",
+                "description": "擅长使用 Postman 进行 API 测试和开发，确保高效可靠的 API 集成。"
               }
             ]
           }
@@ -2026,6 +2177,37 @@
                 "name": "Docker",
                 "image": "https://www.svgrepo.com/show/521276/docker-16.svg",
                 "description": "Experienced in Docker implementation for containerization, ensuring seamless deployment and scalability of applications."
+              },
+              {
+                "name": "Jira",
+                "image": "https://www.svgrepo.com/show/473672/jira.svg",
+                "description": "Experienced in Jira for project management and issue tracking, facilitating Agile workflows and team collaboration."
+              },
+              {
+                "name": "Agile/Scrum",
+                "image": "https://www.svgrepo.com/show/372946/scrum.svg",
+                "description": "Experienced in Agile and Scrum methodologies for iterative and collaborative software development."
+              },
+              {
+                "name": "Jenkins",
+
+                "image": "https://www.svgrepo.com/show/445828/jenkins.svg",
+                "description": "Skilled in using Jenkins for continuous integration and continuous delivery (CI/CD) to automate the software development process."
+              },
+              {
+                "name": "Kubernetes",
+                "image": "https://www.svgrepo.com/show/521293/kubernetes-16.svg",
+                "description": "Experienced in Kubernetes for container orchestration, managing containerized applications in a clustered environment."
+              },
+              {
+                "name": "Postman",
+                "image": "https://www.svgrepo.com/show/342128/postman.svg",
+                "description": "Skilled in using Postman for API testing and development, ensuring efficient and reliable API integrations."
+              },
+              {
+                "name": "Vagrant",
+                "image": "https://www.svgrepo.com/show/306915/vagrant.svg",
+                "description": "Familiar with Vagrant for managing and configuring virtualized development environments, improving development consistency."
               }
             ]
           },
@@ -2035,27 +2217,57 @@
               {
                 "name": "GitHub",
                 "image": "https://www.svgrepo.com/show/512317/github-142.svg",
-                "description": "精通版本控制，利用GitHub进行协作开发、代码审查和仓库管理。"
+                "description": "精通版本控制，利用 GitHub 进行协作开发、代码审查和仓库管理。"
               },
               {
                 "name": "SSH",
                 "image": "https://www.svgrepo.com/show/501028/terminal.svg",
-                "description": "擅长使用SSH实现安全的服务器访问、远程开发和文件传输，提高开发过程的安全性和效率。"
+                "description": "擅长使用 SSH 进行安全的服务器访问、远程开发和文件传输，提升开发过程的安全性和效率。"
               },
               {
                 "name": "Linux",
                 "image": "https://www.svgrepo.com/show/503411/linux.svg",
-                "description": "具有基于Linux的环境中工作的经验，了解命令行操作、系统管理和Shell脚本。"
+                "description": "有在基于 Linux 的环境中进行命令行操作、系统管理和 Shell 脚本编写的经验。"
               },
               {
                 "name": "Zsh",
                 "image": "https://www.svgrepo.com/show/341135/term.svg",
-                "description": "熟悉 Zsh 工具，熟悉指令封装，能大幅度提升工作效率。"
+                "description": "熟悉 Zsh 工具，熟练使用命令包装和常见插件，可以大大提高工作效率。"
               },
               {
                 "name": "Docker",
                 "image": "https://www.svgrepo.com/show/521276/docker-16.svg",
-                "description": "具有Docker实施方面的实际经验，利用容器化实现应用程序的无缝部署和扩展性。"
+                "description": "有 Docker 实施的经验，用于容器化，确保应用的无缝部署和可扩展性。"
+              },
+              {
+                "name": "Jira",
+                "image": "https://www.svgrepo.com/show/473672/jira.svg",
+                "description": "有使用 Jira 进行项目管理和问题跟踪的经验，促进敏捷工作流程和团队协作。"
+              },
+              {
+                "name": "敏捷/Scrum",
+                "image": "https://www.svgrepo.com/show/372946/scrum.svg",
+                "description": "有丰富的敏捷和 Scrum 方法论经验，用于迭代和协作软件开发。"
+              },
+              {
+                "name": "Jenkins",
+                "image": "https://www.svgrepo.com/show/445828/jenkins.svg",
+                "description": "擅长使用 Jenkins 进行持续集成和持续交付（CI/CD），以自动化软件开发过程。"
+              },
+              {
+                "name": "Kubernetes",
+                "image": "https://www.svgrepo.com/show/521293/kubernetes-16.svg",
+                "description": "有 Kubernetes 容器编排的经验，在集群环境中管理容器化应用。"
+              },
+              {
+                "name": "Postman",
+                "image": "https://www.svgrepo.com/show/342128/postman.svg",
+                "description": "擅长使用 Postman 进行 API 测试和开发，确保高效可靠的 API 集成。"
+              },
+              {
+                "name": "Vagrant",
+                "image": "https://www.svgrepo.com/show/306915/vagrant.svg",
+                "description": "熟悉 Vagrant，用于管理和配置虚拟化开发环境，提高开发一致性。"
               }
             ]
           }

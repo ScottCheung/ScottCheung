@@ -2035,5 +2035,46 @@
       ]
     ],
     "impro": []
+  },
+  "2024-07-15T11:56:41.236Z": {
+    "version": "4.5.0",
+    "time": "2024-07-15T11:56:41.236Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Improve Log view tag Function",
+      "更新 Log 记录tag功能"
+    ],
+    "new": [
+      [
+        "Add contents of skill part in Home and CV page."
+      ],
+      [
+        "新增内容，在主页的能力部分和简历页。"
+      ]
+    ],
+    "fix": [
+      [
+        "Fix some bugs of animation bugs."
+      ],
+      [
+        "修复了动画 BUG."
+      ]
+    ],
+    "impro": [
+      [
+        "Improve some info of the transition.",
+        "Improve some performance of the Carousel."
+      ],
+      [
+        "修复了翻译不佳的情况.",
+        "优化了轮播图的性能。"
+      ]
+    ]
   }
 }

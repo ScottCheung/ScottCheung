@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import packageinfo from '../data/update-log.json';
-import { hideRow, useLanguage } from '../help/helpFunction';
 
 const globalBradius = 'lg:rounded-[28px] ';
 const globalradius = 'lg:rounded-[14px] rounded-[12px]';
@@ -16,10 +15,25 @@ const animationVariants = {
   visible: { opacity: 1, scale: 1 },
 };
 
-const LogEntry = ({ entry }) => (
+const getVersionType = (version, previousVersion) => {
+  if (!previousVersion) return ['Initial'];
+
+  const [major, minor, patch] = version.split('.').map(Number);
+  const [prevMajor, prevMinor, prevPatch] = previousVersion
+    .split('.')
+    .map(Number);
+
+  if (major > prevMajor) return ['Major'];
+  if (minor > prevMinor) return ['Minor'];
+  if (patch > prevPatch) return ['Patch'];
+
+  return '';
+};
+
+const LogEntry = ({ entry, versionType }) => (
   <motion.li
     layoutId={entry.version}
-    className={`relative border-gray-200 darrk:border-gray-700 my-[30px]`}
+    className='relative border-gray-200 darrk:border-gray-700 my-[30px]'
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ offset: 0.5 }}
@@ -36,14 +50,18 @@ const LogEntry = ({ entry }) => (
         className={`flex items-center ${headerHeight} gap-[20px] text-gray-900 darrk:text-white`}
       >
         <h3 className='flex font-[600]'>{entry.version} </h3>
-        <span className='inline-flex text-[12px] bg-blue-100 text-blue-800 font-medium px-2.5 py-0.5 rounded darrk:bg-blue-900 darrk:text-blue-300'>
-          Latest
-        </span>
+        {versionType &&
+          versionType.map((tag, index) => (
+            <span
+              key={index + tag + index}
+              className={`${tag === 'Latest' ? 'bg-green-100 text-green-800' : tag === 'Patch' ? `bg-orange-100 text-orange-800` : tag === 'Minor' ? 'bg-green-100 text-green-800' : tag === 'Major' ? 'bg-purple-100 text-purple-800' : `bg-sky-100 text-sky-800`} inline-flex text-[12px] bg-blue-100  font-medium px-2.5 py-0.5 rounded `}
+            >
+              {tag}
+            </span>
+          ))}
       </div>
       {/* Author & Time & Location */}
-      <div
-        className={`flex flex-wrap -mt-[5px] lg:-mt-[15px] items-center text-[10px] lg:text-[13px] text-gray-400 gap-x-[10px] lg:gap-x-[20px]`}
-      >
+      <div className='flex flex-wrap -mt-[5px] lg:-mt-[15px] items-center text-[10px] lg:text-[13px] text-gray-400 gap-x-[10px] lg:gap-x-[20px]'>
         <div className='flex items-center gap-2'>
           <i className='flex fi fi-rr-user'></i>
           <span className='flex'>{entry.author}</span>
@@ -62,21 +80,21 @@ const LogEntry = ({ entry }) => (
       </header>
       {entry.new && entry.new[lang] && entry.new[lang].length > 0 && (
         <Section
-          title='New Feature'
+          title='New'
           items={entry.new[lang]}
           Icon={'fi-rr-features text-indigo-500'}
         />
       )}
       {entry.fix && entry.fix[lang] && entry.fix[lang].length > 0 && (
         <Section
-          title='Fix Bug'
+          title='Fix'
           items={entry.fix[lang]}
           Icon={'fi-rr-productivity text-orange-500'}
         />
       )}
       {entry.impro && entry.impro[lang] && entry.impro[lang].length > 0 && (
         <Section
-          title='Function Improvement'
+          title='Improvement'
           items={entry.impro[lang]}
           Icon={'fi-br-rotate-right text-green-500'}
         />
@@ -87,14 +105,14 @@ const LogEntry = ({ entry }) => (
 
 const Section = ({ title, items, Icon }) => (
   <motion.div
-    className='flex items-start p-[14px] gap-[14px] mb-4 bg-gray-100  rounded-[14px] shadow-sm'
+    className='flex items-start p-[14px] gap-[14px] mb-4 bg-gray-100 rounded-[14px] shadow-sm'
     initial='hidden'
     animate='visible'
     variants={animationVariants}
     transition={{ duration: 0.6, ease: 'easeInOut' }}
   >
-    <i className={`lg:flex hidden fi ${Icon}  text-5xl `}></i>
-    <span className='flex flex-col text-[13px] '>
+    <i className={`lg:flex hidden fi ${Icon} text-5xl`}></i>
+    <span className='flex flex-col text-[13px]'>
       <strong className='flex items-start mb-1 text-[15px] -mt-1'>
         {title}:{' '}
       </strong>
@@ -118,7 +136,6 @@ const Section = ({ title, items, Icon }) => (
 );
 
 export default function Log() {
-  const [isOpen, setIsOpen] = useState(true);
   const [isDescending, setIsDescending] = useState(true);
 
   const handleToggleSortOrder = () => {
@@ -127,15 +144,23 @@ export default function Log() {
 
   const sortedEntries = Object.keys(packageinfo)
     .map((key) => packageinfo[key])
-    .sort((a, b) =>
-      isDescending
-        ? new Date(b.time) - new Date(a.time)
-        : new Date(a.time) - new Date(b.time),
-    );
+    .sort((a, b) => new Date(b.time) - new Date(a.time));
+
+  const entriesWithVersionType = sortedEntries.map((entry, index, array) => {
+    const previousEntry = index < array.length - 1 ? array[index + 1] : null;
+    const versionType =
+      index === 0
+        ? ['Latest', getVersionType(entry.version, previousEntry?.version)]
+        : [`${getVersionType(entry.version, previousEntry?.version)}`];
+    return {
+      ...entry,
+      versionType,
+    };
+  });
 
   return (
     <motion.div
-      className={`relative flex`}
+      className='relative flex'
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.3 }}
@@ -145,7 +170,7 @@ export default function Log() {
           <motion.button
             layout
             onClick={handleToggleSortOrder}
-            className='px-8 py-4  text-white bg-blue-500 text-[15px] rounded-full'
+            className='px-8 py-4 text-white bg-blue-500 text-[15px] rounded-full'
           >
             {isDescending ? 'Sort Ascending' : 'Sort Descending'}
           </motion.button>
@@ -155,13 +180,18 @@ export default function Log() {
           id='log-entries'
           style={{ imageMask: 'transparent' }}
         >
-          <ol
-            className={`relative border-blue-200 ${iconoffset} border-s-2 darrk:border-gray-700`}
+          <motion.ol
+            layout
+            className={`relative flex ${isDescending ? 'flex-col' : 'flex-col-reverse'}   border-blue-200 ${iconoffset} border-s-2 darrk:border-gray-700`}
           >
-            {sortedEntries.map((entry, index) => (
-              <LogEntry key={index} entry={entry} />
+            {entriesWithVersionType.map((entry, index) => (
+              <LogEntry
+                key={index}
+                entry={entry}
+                versionType={entry.versionType}
+              />
             ))}
-          </ol>
+          </motion.ol>
         </div>
       </div>
     </motion.div>

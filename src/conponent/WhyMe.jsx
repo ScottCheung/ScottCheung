@@ -175,7 +175,7 @@ function WhyMe({ hideTittle }) {
                             duration: 0.9,
                             ease: [0.22, 1, 0.36, 1],
                           }}
-                          className='flex items-center justify-start'
+                          className='flex items-center justify-start transform-gpu'
                         >
                           <i
                             style={{

@@ -71,7 +71,7 @@ function KeyFeature() {
         y: isMobile ? 0 : y,
         borderRadius: isMobile ? 28 : borderRadius,
       }}
-      className={` flex h-[1000px] md:h-[150vh] overflow-hidden justify-center`}
+      className={` flex h-[1000px] md:h-[150vh] overflow-hidden justify-center transform-gpu`}
     >
       <motion.section
         className={`relative flex items-center w-[${viewwidth}px] overflow-hidden bg-gradient-to-r from-lime-500 to-emerald-500`}

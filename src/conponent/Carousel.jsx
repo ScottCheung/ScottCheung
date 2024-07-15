@@ -261,7 +261,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
                         progress >= 0 &&
                         isPaused === false && (
                           <div
-                            className='bg-gradient-to-br from-sky-500 to-emerald-500 h-[15px] rounded-full'
+                            className='bg-white h-[15px] rounded-full'
                             style={{ width: `${progress}%` }}
                           />
                         )}

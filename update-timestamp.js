@@ -54,26 +54,25 @@ const getGeolocation = async () => {
     author: 'Scott Cheung',
     address,
     // 自定义
-    // header: ["New Log Function", "更新 Log 记录功能"],
-    // new: [
-    //   [
-    //     "Update the info of the Update-Log, show the update contents every time.",
-    //   ],
-    //   ["新增了更新日志功能，可以查看每次更新的内容"],
-    // ],
-    // fix: [["Fix some bugs of animation bugs."], ["修复了动画 BUG."]],
-    // impro: [
-    //   [
-    //     "Improve some situations of transition, update the info of the transition.",
-    //   ],
-    //   ["修复了翻译不佳的情况."],
-    // ],
+    header: ['Improve Log view tag Function', '更新 Log 记录tag功能'],
+    new: [
+      ['Add contents of skill part in Home and CV page.'],
+      ['新增内容，在主页的能力部分和简历页。'],
+    ],
+    fix: [['Fix some bugs of animation bugs.'], ['修复了动画 BUG.']],
+    impro: [
+      [
+        'Improve some info of the transition.',
+        'Improve some performance of the Carousel.',
+      ],
+      ['修复了翻译不佳的情况.', '优化了轮播图的性能。'],
+    ],
 
     // 显示优化 💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅
-    header: ['Patch Update', '补丁更新'],
-    new: [],
-    fix: [['Fix some bugs.'], ['修复部分异常']],
-    impro: [],
+    // header: ['Patch Update', '补丁更新'],
+    // new: [],
+    // fix: [['Fix some bugs.'], ['修复部分异常']],
+    // impro: [],
 
     // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
     // header: ["Patch Update", "补丁更新"],
