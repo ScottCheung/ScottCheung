@@ -310,7 +310,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           } flex overflow-x-clip px-[10px] `}
                         >
                           {navbarItem.map((item, index) => (
-                            <motion.button
+                            <motion.div
                               layout='position'
                               key={item.name}
                               initial={{ opacity: 0, y: 30 }}
@@ -323,19 +323,20 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 },
                               }}
                               exit={{ opacity: 0, y: 30 }}
-                              whileTap={{ scale: 0.95 }}
-                              onClick={BTN(item.button)}
-                              onMouseEnter={() => setSelectedTab(item.name[0])}
                               className='relative group'
                             >
                               <motion.a
                                 href={item.href}
                                 key={index}
-                                onMouseEnter={() => handleTabChange(index)}
+                                onClick={BTN(item.button)}
+                                onMouseEnter={() => {
+                                  handleTabChange(index);
+                                  setSelectedTab(item.name[0]);
+                                }}
                                 style={{
                                   animationDelay: `${index * 0.2}s`,
                                 }}
-                                data-popover-target={`nav-des-${item.name[0]}`}
+                                whileTap={{ scale: 0.95 }}
                                 type='button'
                                 className={` rounded-[5px] items-center justify-center gap-[5px] font-medium text-center ${
                                   isTopTextColorWhite & isTop
@@ -376,7 +377,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                   </AnimatePresence>
                                 </div>
                               </motion.a>
-                            </motion.button>
+                            </motion.div>
                           ))}
                         </motion.div>
                       )}
