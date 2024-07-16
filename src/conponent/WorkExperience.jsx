@@ -217,7 +217,7 @@ function Card({ card, onClick }) {
       whileHover={{ scale: 1.001, y: -5 }}
       whileTap={{ scale: 0.99 }}
       layoutId={`card-container-${card.type + card.company + card.id}`}
-      className={`relative bg-white transform-gpu cursor-pointer w-auto h-auto flex flex-col lg:w-[400px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:hover:${card.backgroundColor}/20`}
+      className={`relative bg-white transform-gpuu cursor-pointer w-auto h-auto flex flex-col lg:w-[400px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:hover:${card.backgroundColor}/20`}
       onClick={() => onClick(card.id)}
     >
       <div className='lg:absolute  -left-[30px] -top-[30px] right-[60px] lg:rounded-[28px]  overflow-hidden aspect-[16/9] '>
@@ -398,7 +398,7 @@ function WorkExperience() {
                   transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <motion.div className='relative z-0 flex transform-gpu lg:rounded-[28px] flex-wrap scrollbar-hide max-h-[100vh] lg:max-h-[80vh]  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg  overflow-auto lg:overflow-hidden'>
+                  <motion.div className='relative z-0 flex transform-gpuu lg:rounded-[28px] flex-wrap scrollbar-hide max-h-[100vh] lg:max-h-[80vh]  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg  overflow-auto lg:overflow-hidden'>
                     <motion.div
                       layoutId={`card-img-${selectedCard.id}`}
                       transition={{

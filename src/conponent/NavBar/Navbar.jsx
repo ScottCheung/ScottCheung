@@ -8,6 +8,7 @@ import LifeCate from '../lifeCategory.jsx';
 import ContactCate from '../contactCategory.jsx';
 import packageinfo from '../../../package.json';
 import Log from '../Log.jsx';
+import Underline from '../../ui/underline.tsx';
 
 import Toast from '../toast.jsx';
 const version = packageinfo.version.toString();
@@ -45,6 +46,10 @@ const navbarItem = data.navbarItem;
 
 function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
   const { Components } = useAppContext();
+  const [hoverTab, setHoverTab] = useState(-1);
+  const handleTabChange = (index) => {
+    setHoverTab(index);
+  };
   const [currentVersion, setCurrentVersion] = useState(
     localStorage.getItem('Current version') || null,
   );
@@ -186,7 +191,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           className={`  w-full flex flex-col `}
         >
           <motion.div
-            onMouseLeave={() => setSelectedTab(null)}
+            onMouseLeave={() => {
+              setSelectedTab(null);
+              handleTabChange(-1);
+            }}
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
@@ -306,7 +314,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                             x: -100,
                             transition: { duration: 1 },
                           }}
-                          className={`${
+                          className={` ${
                             isTop ? 'gap-x-4' : 'gap-x-1'
                           } flex overflow-x-clip px-[10px] `}
                         >
@@ -324,46 +332,61 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 },
                               }}
                               exit={{ opacity: 0, y: 30 }}
-                              whileHover={{
-                                scale: 1.05,
-                              }}
                               whileTap={{ scale: 0.95 }}
                               onClick={BTN(item.button)}
                               onMouseEnter={() => setSelectedTab(item.name[0])}
+                              className='relative group'
                             >
-                              <a
+                              <motion.a
                                 href={item.href}
                                 key={index}
+                                onMouseEnter={() => handleTabChange(index)}
                                 style={{
                                   animationDelay: `${index * 0.2}s`,
                                 }}
                                 data-popover-target={`nav-des-${item.name[0]}`}
                                 type='button'
-                                className={`rounded-[5px]  items-center  justify-center     gap-[5px] font-medium text-center ${
+                                className={` rounded-[5px] items-center justify-center gap-[5px] font-medium text-center ${
                                   isTopTextColorWhite & isTop
-                                    ? 'text-white flex flex-col px-12 py-12'
-                                    : 'flex px-8'
-                                } rounded-full hover:bg-gray-900/20 py-6 `}
+                                    ? 'text-white flex flex-col px-12 hover:bg-gray-900/20'
+                                    : 'flex flex-col px-8'
+                                } rounded-full mx-3 py-6 transition-all duration-1000`}
                               >
-                                <div className='flex items-center justify-center w-full transition-all'>
+                                <div className='flex items-center justify-center w-full '>
                                   <i
-                                    className={`flex transition-all  duration-1000  items-center ${
+                                    className={`flex  items-center ${
                                       isTopTextColorWhite & isTop
                                         ? 'text-white text-[25px]'
                                         : 'text-gray-900 text-[20px]'
-                                    }  fi ${item.icon} `}
+                                    }  fi ${item.icon}`}
                                   ></i>
                                 </div>
                                 <div
-                                  className={`flex transition-all  duration-1000  items-center ${
+                                  className={` relative items-center ${
                                     isTopTextColorWhite & isTop
-                                      ? 'text-white text-[15px]'
+                                      ? 'text-white text-[15px] flex'
                                       : 'text-gray-900 text-[15px]'
-                                  } md:hidden lg:flex `}
+                                  } md:hidden lg:flex`}
                                 >
                                   {item.name[lang]}
+                                  {/* <Underline
+                                    height={1}
+                                    color='current'
+                                    margintop={2}
+                                  /> */}
+
+                                  <AnimatePresence>
+                                    {hoverTab === index && (
+                                      <Underline
+                                        height={1}
+                                        alwaysShow={true}
+                                        color='current'
+                                        margintop={2}
+                                      />
+                                    )}
+                                  </AnimatePresence>
                                 </div>
-                              </a>
+                              </motion.a>
                             </motion.button>
                           ))}
                         </motion.div>

@@ -127,7 +127,7 @@ function SelfDescribing() {
             borderBottomRightRadius: isMobile ? 0 : borderBottomRightRadius,
             y: isMobile ? 0 : y,
           }}
-          className='sticky top-0 z-30 flex flex-col items-center justify-center w-full transform-gpu'
+          className='sticky top-0 z-30 flex flex-col items-center justify-center w-full transform-gpuu'
         >
           <motion.span
             style={{
@@ -145,7 +145,7 @@ function SelfDescribing() {
                 scale: isMobile ? 1 : scale,
                 y: isMobile ? 0 : y,
               }}
-              className='z-10 flex items-center mb-12 font-mono font-bold text-white transform-gpu text-8xl'
+              className='z-10 flex items-center mb-12 font-mono font-bold text-white transform-gpuu text-8xl'
             >
               <i
                 id='AboutMe'
@@ -161,7 +161,7 @@ function SelfDescribing() {
                   scale: isMobile ? 1 : scale,
                   y: isMobile ? 0 : y,
                 }}
-                className='float-right transform-gpu'
+                className='float-right transform-gpuu'
               >
                 <motion.div className='flex'>
                   <motion.img
@@ -176,7 +176,7 @@ function SelfDescribing() {
                   opacity: isMobile ? 1 : opacity,
                   y: isMobile ? 0 : y,
                 }}
-                className='block transform-gpu'
+                className='block transform-gpuu'
               >
                 {data.description[lang].map((item, index) => (
                   <motion.div className='block mb-[30px] ' key={index + item}>
