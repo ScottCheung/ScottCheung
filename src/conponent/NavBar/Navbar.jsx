@@ -655,13 +655,13 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         WebkitMaskImage:
                           'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
                       }}
-                      className=' max-w-[320px] px-[30px] lg:max-w-[420px]  absolute top-[100%] left-0 transition-all'
+                      className='lg:hidden max-w-[320px] px-[30px] lg:max-w-[420px]  absolute top-[100%] left-0 transition-all'
                       src={data.dialog}
                     ></img>
                     <motion.div
                       // layoutId="des"
                       key={item.name[0] + index}
-                      className='absolute top-0 left-[320px] lg:left-[420px] animate__animated animate__fadeInUp bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  '
+                      className='absolute top-[10px] left-[320px] lg:left-[420px] animate__animated animate__fadeInUp bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  '
                     >
                       <div className='p-[28px] lg:p-[40px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20'>
                         <p className='text-[20px] lg:text-[30px]  darrk:text-gray-900 text-white  '>
@@ -772,7 +772,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 backgroundPosition: 'left bottom',
                 filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0))',
               }}
-              className='flex hidden w-full h-full'
+              className='hidden w-full h-full lg:flex'
             ></div>
           </motion.div>
         )}
