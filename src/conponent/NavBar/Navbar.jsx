@@ -61,13 +61,11 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
       ? `${Math.abs(daysBetween)} ${['days ago', '天前'][lang]}`
       : updateTime[lang];
 
-  const [bgwhite, setBgwhite] = useState(false);
   const isTopTextColorWhite = topTextColor;
   const scrollTo = scrollToHash();
   const navigate = useNavigate();
   const [isExpanded, setIsExpanded] = useState(true);
   const [isTop, setIsTop] = useState(true);
-  const [isShowVersion, setIsShowVersion] = useState(false);
   const [isScrolling, setIsScrolling] = useState(false);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isOpened, setIsOpened] = useState(false);
@@ -154,7 +152,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     function handleScrollStatus(event) {
       clearTimeout(scrollTimer);
       scrollTimer = setTimeout(() => {
-        if (event.deltaY > 50) {
+        if (event.deltaY > 10) {
           setIsScrolling(true);
         } else if (event.deltaY < 0) {
           setIsScrolling(false);
@@ -184,11 +182,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
         }  `}
       >
         <motion.nav
-          onMouseEnter={() => setBgwhite(true)}
-          onMouseLeave={() => setBgwhite(false)}
           layout='position'
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className={`  w-full flex flex-col `}
+          className={`  w-full flex flex-col`}
         >
           <motion.div
             onMouseLeave={() => {
@@ -199,25 +195,23 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             layout
-            className={`flex flex-col w-full  ${BG} py-[10px] 
+            className={`flex flex-col w-full  ${BG}
         ${
           windowWidth < 768
             ? ` p-[15px] ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`
-            : `${isTop && isHomeOrRoot ? 'px-[5%] pt-[12vh] ' : ''} 
+            : ` ${isTop && isHomeOrRoot ? 'px-[5%] pt-[12vh] ' : ''} 
               }  md:px-10`
         }
         ${
           isScrolling
-            ? `${isTop && ' backdrop-blur-[20px] bg-white/90'}`
+            ? ` backdrop-blur-[20px]  bg-white/90`
             : `${
                 !isTop &&
-                `backdrop-blur-[70px] border-b-2 border-gray-200 ${
-                  bgwhite ? 'bg-white/90' : 'bg-white/90'
-                }`
+                `backdrop-blur-[20px]  border-b-2 border-gray-200/70 bg-white bg-opacity-90 `
               }`
         }`}
           >
-            <motion.div className='flex items-center justify-center w-full '>
+            <motion.div className='flex items-center justify-center w-full p-[10px] '>
               <motion.div
                 layout
                 transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
@@ -237,62 +231,59 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     }}
                     whileHover={{ scale: 1.01, transition: { duration: 1 } }}
                     whileTap={{ scale: 0.99 }}
-                    className='z-50 inline-flex items-center justify-center h-full '
+                    className='z-50 flex items-center justify-center h-full '
                   >
                     <a
                       href='/info'
-                      className='inline-flex items-center justify-center h-full animate__animated animate__fadeInUp'
+                      className='inline-flex items-end gap-x-[20px] justify-center h-full animate__animated animate__fadeInUp'
                     >
-                      <div className='inline-flex items-center h-full gap-8'>
-                        <motion.img
-                          layout
-                          className={`  animate__animated animate__zoomIn ${isTop ? 'w-32 rounded-full' : 'w-20 rounded-[12px]'}  shadow-lg`}
-                          src='https://3o.hk/images/2024/01/14/avatar.th.jpg'
-                          alt="Xianzhe's Page"
-                        />
-                        {isWithinOneWeek && (
-                          <span
-                            class={`${isTop ? 'w-8 h-8 left-0 top-0' : '-left-1 -top-1 w-3 h-3'} absolute   bg-green-400  rounded-full`}
-                          ></span>
-                        )}
-
-                        <div
-                          className={`flex flex-col justify-between  ${isTop ? 'w-50  rounded-full' : 'w-32 '} `}
+                      <motion.img
+                        layout
+                        className={`flex flex-1  animate__animated animate__zoomIn   ${isTop ? 'w-32 h-32 rounded-full' : 'w-28 h-28 rounded-[14px]'} shadow-lg`}
+                        src='https://3o.hk/images/2024/01/14/avatar.th.jpg'
+                        alt="Xianzhe's Page"
+                      />
+                      {isWithinOneWeek && (
+                        <span
+                          class={`${isTop ? 'w-8 h-8 left-2 top-2' : '-left-1 -top-1 w-3 h-3'} absolute   bg-green-400  rounded-full`}
+                        ></span>
+                      )}
+                      <div
+                        className={`flex flex-1 flex-col justify-between h-full `}
+                      >
+                        <motion.div
+                          style={{ fontFamily: 'Hey August, sans-serif' }}
+                          className={`flex flex-1 mb-2 text-nowrap text-left tracking-widest items-start justify-start animate__animated animate__zoomIn duration-1000 transition-all  ${isTop ? `${isTopTextColorWhite ? 'text-white' : ''} text-[17px]  md:text-[30px] lg:text-[35px] ` : 'text-[20px] lg:text-[25px]'}`}
                         >
-                          <motion.div
-                            style={{ fontFamily: 'Hey August, sans-serif' }}
-                            className={`flex  text-nowrap text-left tracking-widest items-start justify-start animate__animated animate__zoomIn duration-1000 transition-all  ${isTop ? `${isTopTextColorWhite ? 'text-white' : ''} text-[17px]  md:text-[30px] lg:text-[35px] ` : 'text-[17px] lg:text-[17px]'}`}
+                          {data.Avatar.Webname[lang]}
+                        </motion.div>
+                        <motion.div
+                          href='/info'
+                          style={{ animationDelay: '0.5s' }}
+                          className={`flex text-nowrap animate__animated animate__zoomIn transition-all  duration-1000 text-left ${isTop ? `${isTopTextColorWhite ? 'text-white' : ''} text-[13px]` : 'text-[10px]'}`}
+                        >
+                          {data.Avatar.helloword[lang]}
+                          <p
+                            className={
+                              windowWidth < 876
+                                ? 'hidden'
+                                : 'flex ml-[7px] gap-x-[10px]'
+                            }
                           >
-                            {data.Avatar.Webname[lang]}
-                          </motion.div>
-                          <motion.div
-                            href='/info'
-                            style={{ animationDelay: '0.5s' }}
-                            className={`flex text-nowrap animate__animated animate__zoomIn transition-all  duration-1000 text-left ${isTop ? `${isTopTextColorWhite ? 'text-white' : ''} text-[13px]` : 'text-[10px]'}`}
-                          >
-                            {data.Avatar.helloword[lang]}
-                            <p
+                            <span>|</span>
+                            <span
                               className={
-                                windowWidth < 876
-                                  ? 'hidden'
-                                  : 'flex ml-[7px] gap-x-[10px]'
+                                isWithinOneWeek
+                                  ? isTop && isTopTextColorWhite
+                                    ? 'text-green-200 font-[600]'
+                                    : 'text-green-700'
+                                  : ''
                               }
                             >
-                              <span>|</span>
-                              <span
-                                className={
-                                  isWithinOneWeek
-                                    ? isTop && isTopTextColorWhite
-                                      ? 'text-green-200 font-[600]'
-                                      : 'text-green-700'
-                                    : ''
-                                }
-                              >
-                                {` ${updateMessage} ${['Updates', '更新'][lang]} ${version} `}
-                              </span>
-                            </p>
-                          </motion.div>
-                        </div>
+                              {` ${updateMessage} ${['Updates', '更新'][lang]} ${version} `}
+                            </span>
+                          </p>
+                        </motion.div>
                       </div>
                     </a>
                   </motion.button>
@@ -348,40 +339,38 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                 type='button'
                                 className={` rounded-[5px] items-center justify-center gap-[5px] font-medium text-center ${
                                   isTopTextColorWhite & isTop
-                                    ? 'text-white flex flex-col px-12 hover:bg-gray-900/20'
-                                    : 'flex flex-col px-8'
-                                } rounded-full mx-3 py-6 transition-all duration-1000`}
+                                    ? 'text-white flex flex-col px-12 py-12 hover:bg-gray-900/20'
+                                    : 'flex flex-col px-8 py-6'
+                                } rounded-full lg:mx-3  transition-all duration-1000`}
                               >
                                 <div className='flex items-center justify-center w-full '>
                                   <i
-                                    className={`flex  items-center ${
+                                    className={`flex transition-all duration-1000 items-center ${
                                       isTopTextColorWhite & isTop
                                         ? 'text-white text-[25px]'
-                                        : 'text-gray-900 text-[20px]'
+                                        : 'text-gray-900 text-[23px]'
                                     }  fi ${item.icon}`}
                                   ></i>
                                 </div>
                                 <div
-                                  className={` relative items-center ${
+                                  className={` relative transition-all duration-1000 items-center ${
                                     isTopTextColorWhite & isTop
                                       ? 'text-white text-[15px] flex'
                                       : 'text-gray-900 text-[15px]'
                                   } md:hidden lg:flex`}
                                 >
                                   {item.name[lang]}
-                                  {/* <Underline
-                                    height={1}
-                                    color='current'
-                                    margintop={2}
-                                  /> */}
-
                                   <AnimatePresence>
                                     {hoverTab === index && (
                                       <Underline
-                                        height={1}
+                                        height={isTop ? 1 : 1.5}
                                         alwaysShow={true}
-                                        color='current'
-                                        margintop={2}
+                                        color={
+                                          isTopTextColorWhite && isTop
+                                            ? 'white'
+                                            : 'sky'
+                                        }
+                                        margintop={isTop ? 3 : 5}
                                       />
                                     )}
                                   </AnimatePresence>
@@ -463,7 +452,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 </motion.div>
                 {/* menu button */}
                 {windowWidth <= 786 && isOpened && (
-                  <div className={`w-full mx-[10px] `}>
+                  <div className={`w-full lg:mx-[10px] `}>
                     <div className='z-20 w-full rounded-lg shadow '></div>
                     <div className={`rounded-2xl pt-[30px] `}>
                       {navbarItem.map((item, index) => (
@@ -623,7 +612,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                         {item.status && (
                                           <i
                                             className={` flex ${
-                                              isTop && ' mx-2'
+                                              isTop && ' lg:mx-2'
                                             } justify-center items-center text-[15px] pb-[10px] ${item.status}`}
                                           ></i>
                                         )}
@@ -655,7 +644,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 selectedTab === item.name[0] && (
                   <motion.div
                     key={item.name[0] + index + 'introduction'}
-                    className='md:mx-[10%] mt-[30px]  flex relative gap-x-[20px] duration-200 '
+                    className='lg::mx-[10%] mt-[30px]  flex relative gap-x-[20px] duration-200 '
                   >
                     <img
                       style={{

@@ -11,7 +11,7 @@ import {
 import N from './Num';
 import { hideRow, useLanguage } from '../help/helpFunction';
 import TextAnimate from '../ui/TextAnimate.tsx';
-
+import Underline from '../ui/underline.tsx';
 const KeyFeatures = Database.PersonalInfo.KeyFeature1;
 const bg = Database.PersonalInfo.KeyFeaturebg;
 const Welcomevisblecontainer =
@@ -102,7 +102,7 @@ function KeyFeature() {
                 transition={StagerFadeInUp}
                 viewport={{ margin: '-30%' }}
                 layout
-                className='px-[20px] rounded-[28px] hover:bg-gradient-to-t from-lime-500/20 to-emerald-500/20 hover:backdrop-blur-md hover:shadow-2xl focus:shadow-2xl relative col-span-6 md:col-span-4 lg:col-span-4'
+                className='flex group relative px-[20px] rounded-[28px] hover:bg-gradient-to-t from-lime-500/20 to-emerald-500/20 hover:backdrop-blur-md hover:shadow-2xl focus:shadow-2xl  col-span-6 md:col-span-4 lg:col-span-4'
               >
                 <a
                   href={`${KeyFeature.href}`}
@@ -127,19 +127,27 @@ function KeyFeature() {
                         text={KeyFeature.keyfeature[lang]}
                         type='fadeIn'
                       />
+                      <Underline
+                        height={1}
+                        // alwaysShow={true}
+                        color='current'
+                        margintop={2}
+                      />
                     </div>
                   </div>
                 </a>
                 <div
-                  data-popover
                   id={`keyFeatureDes-${index}`}
-                  role='tooltip'
-                  className='absolute z-10 invisible inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800'
+                  className='  absolute z-10 invisible inline-flex w-96 text-gray-500 transition-opacity duration-300 bg-white rounded-[14px] shadow-2xl opacity-0 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800'
                 >
-                  <div className='px-6 py-4'>
+                  <div className='flex px-6 py-4 group'>
                     <p className='text-[13px] text-left font-mono'>
                       {KeyFeature.description[lang]}
                     </p>
+
+                    <span
+                      className={`absolute -bottom-${2} left-0 right-0 w-0  h-${2} transition-all duration-300 rounded-full  group-hover:w-full`}
+                    ></span>
                   </div>
                   <div data-popper-arrow></div>
                 </div>

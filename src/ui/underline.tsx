@@ -12,7 +12,8 @@ export default function Underline({
       initial={{ width: 0, opacity: 0 }}
       animate={{ width: '100%', opacity: alwaysShow ? 1 : 0 }}
       exit={{ width: 0, opacity: 0 }}
-      className={`absolute -bottom-${margintop} left-0 right-0 ${alwaysShow ? 'w-full' : 'w-0'}  bg-${color} h-${height} rounded-full  group-hover:w-full`}
+      transition={{ duration: 0.3 }}
+      className={`absolute -bottom-${margintop} left-0 right-0 ${alwaysShow ? 'w-full' : 'w-0'} bg-${color}  bg-${color}-800 h-${height} rounded-full  group-hover:w-full`}
     ></motion.span>
   );
 }
