@@ -195,12 +195,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             layout
-            className={`flex flex-col w-full  ${BG}
+            className={`flex flex-col w-full  p-[5px]  ${BG}
         ${
           windowWidth < 768
-            ? ` p-[15px] ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`
-            : ` ${isTop && isHomeOrRoot ? 'px-[5%] pt-[12vh] ' : ''} 
-              }  md:px-10`
+            ? ` ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`
+            : ` ${isTop && isHomeOrRoot ? 'px-[5%] lg:pt-[12vh] ' : ''} 
+              `
         }
         ${
           isScrolling
@@ -211,7 +211,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
               }`
         }`}
           >
-            <motion.div className='flex items-center justify-center w-full p-[10px] '>
+            <motion.div className='flex items-center justify-center w-full '>
               <motion.div
                 layout
                 transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
