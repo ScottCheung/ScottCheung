@@ -111,8 +111,8 @@
     },
 
     {
-      "title": "Projects",
-      "icon": "flex items-center fi fi-rr-folder",
+      "title": "Work Experience",
+      "icon": "flex items-center fi fi-rr-city",
       "projects": [
         {
           "name": "Neo4j iGrapher ( Graphical data code-zero analysis tool )",
@@ -132,19 +132,19 @@
           "contribution": [
             {
               "title": "Interface and Interaction Design",
-              "description": "Individually designed and implemented 2 complex interfaces, 5 medium inferfaces and over 20 interaction logics, using Figma to enhance design efficiency by 30%, ensuring intuitive and smooth user experiences."
+              "description": "Individually designed and implemented {bold}2{bold} complex interfaces, {bold}5{bold} medium inferfaces and over {bold}20{bold} interaction logics, using Figma to enhance design efficiency by 30%, ensuring intuitive and smooth user experiences."
             },
             {
               "title": "Data Visualization Component Development",
-              "description": "Developed 25 fully customized React and D3.js data visualization components from scratch, enabling real-time graphical representation of complex data relationships."
+              "description": "Developed {bold}25{bold} fully customized React and D3.js data visualization components from scratch, enabling real-time graphical representation of complex data relationships."
             },
             {
               "title": "Animation and Visual Effects Design",
-              "description": "Individually Designed and implemented over 40 UI animations and visual effects using Framer Motion and other animation libraries, boosting user interaction satisfaction by 80% and enhancing visual appeal. Optimized animation performance by 30% using Google performance analysis tools."
+              "description": "Individually Designed and implemented over {bold}40{bold} UI animations and visual effects using Framer Motion and other animation libraries, boosting user interaction satisfaction by 80% and enhancing visual appeal. Optimized animation performance by {bold}37%{bold} using Google performance analysis tools."
             },
             {
               "title": "Frontend-Backend Integration",
-              "description": "Led frontend operations, successfully conducted over 10 large-scale data integration tests with backend services, ensuring 99% system stability and data accuracy."
+              "description": "Led frontend operations, successfully conducted over {bold}10{bold} large-scale data integration tests with backend services, ensuring {bold}99%{bold} system stability and data accuracy."
             }
           ],
           "period": "Feb 2024 - May 2024"
@@ -165,11 +165,11 @@
           "contribution": [
             {
               "title": "User Interface and Interactive Animation Design",
-              "description": "Designed and implemented visually appealing user interfaces and over 40 interactive animations using Framer Motion and other animation libraries. Used Google Performance Analytics to optimize performance and improve site performance by 50% animation. Improved user experience and satisfaction through intuitive and engaging animations."
+              "description": "Designed and implemented visually appealing user interfaces and over {bold}34{bold} interactive animations using Framer Motion and other animation libraries. Used Google Performance Analytics to optimize performance and improve site performance by {bold}62%{bold} animation. Improved user experience and satisfaction through intuitive and engaging animations."
             },
             {
               "title": "Web Development",
-              "description": "Developed entire websites from scratch using JavaScript, React, Tailwind, and more. Created 36 adaptive components for data visualization in React, adapted to both desktop, mobile, and tablet to better showcase individuals."
+              "description": "Developed entire websites from scratch using JavaScript, TypeScript, React, Tailwind, and more. Created {bold}46 adaptive components{bold} for data visualization in React, adapted to both desktop, mobile, and tablet to better showcase individuals."
             },
             {
               "title": "Server Deployment",

@@ -45,6 +45,29 @@ export default function Resume() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  const parseText = (text) => {
+    const parts = text.split(/({bold}.*?{bold})/).map((part, index) => {
+      if (part.startsWith('{bold}') && part.endsWith('{bold}')) {
+        return (
+          <span
+            key={index}
+            className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-50 font-black mx-[3px] text-[15px] md:text-[20px] lg:text-[20px]`}
+          >
+            {part.replace(/{bold}/g, '')}
+          </span>
+        );
+      }
+      return (
+        <span
+          className='text-black text-[13px]  md:text-[18px] lg:text-[20px]'
+          key={index}
+        >
+          {part}
+        </span>
+      );
+    });
+    return parts;
+  };
 
   const normaltext = 'text-[18px] text-jusify transition-all duration-1000';
   const h2 = `flex items-center text-[30px] font-[700] text-${
@@ -388,7 +411,7 @@ export default function Resume() {
                               <strong className={strong}>
                                 ▸ {item.title} :
                               </strong>
-                              {item.description}
+                              {parseText(item.description)}
                             </li>
                           ))}
                         </ul>
