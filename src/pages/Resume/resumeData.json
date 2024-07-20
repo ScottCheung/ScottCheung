@@ -29,10 +29,10 @@
       },
       {
         "name": "Check Updates",
-        "update": "July 15",
-        "version": "20240715",
+        "update": "July 21",
+        "version": "20240721",
         "icon": "flex items-center fi fi-rr-clock",
-        "link": "https://xianzhe.site/resumecheck/20240715"
+        "link": "https://xianzhe.site/resumecheck/20240721"
       }
     ]
   },
