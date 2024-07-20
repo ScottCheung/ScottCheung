@@ -2233,5 +2233,30 @@
       ]
     ],
     "impro": []
+  },
+  "2024-07-20T20:10:35.127Z": {
+    "version": "4.6.5",
+    "time": "2024-07-20T20:10:35.127Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
+    "new": [],
+    "fix": [
+      [
+        "Fix bug for second Navbar doesn't appear when it is mobile view."
+      ],
+      [
+        "修复导航栏第二菜单有时不出现的异常"
+      ]
+    ],
+    "impro": []
   }
 }

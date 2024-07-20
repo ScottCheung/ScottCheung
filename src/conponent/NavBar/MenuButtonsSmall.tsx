@@ -100,7 +100,7 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
                   <div
                     className={`${
                       textColor && isTop ? 'text-white' : 'text-gray-900'
-                    } text-xs text-blue-500`}
+                    } text-[10px] `}
                   >
                     {item.des[lang]}
                   </div>

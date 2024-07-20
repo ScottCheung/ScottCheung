@@ -51,7 +51,7 @@ export default function Resume() {
         return (
           <span
             key={index}
-            className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-50 font-black mx-[3px] text-[15px] md:text-[20px] lg:text-[20px]`}
+            className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:opacity-100  opacity-50 font-black mx-[3px] text-[15px] md:text-[20px] lg:text-[20px]`}
           >
             {part.replace(/{bold}/g, '')}
           </span>
@@ -77,10 +77,10 @@ export default function Resume() {
   }-${Math.max(colorDepth - 200 || 100)} gap-x-[15px] items-center transition-all duration-1000`;
   const printWidth = 'max-w-[1350px]';
   const icon = `w-[15px] text-[15px] mr-[5px] mt-[2px] transition-all duration-1000`;
-  const divisionline = `flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-50 transition-all duration-1000`;
+  const divisionline = `flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:opacity-100  opacity-50 transition-all duration-1000`;
   const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-10 transition-all duration-1000`;
 
-  const h3 = `flex items-start text-[20px] font-semibold flex `;
+  const h3 = `flex items-center text-[20px] font-semibold flex `;
   const h4 = `flex items-center text-[15px] text-gray-500 flex items-center`;
   const timetext = `flex items-center text-2xl font-[500] text-gray-400 transition-all duration-1000`;
   const whymeIcon = `text-[20px] flex justify-center items-center text-gray-400 group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
@@ -372,9 +372,16 @@ export default function Resume() {
                         <h3 className={h3}>
                           {project.name}
                           {project.link && (
-                            <div>
+                            <div
+                              className={`flex items-center group-hover:opacity-100  opacity-50 text-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
+                            >
+                              <p
+                                className={`ml-[10px] text-[15px]  font-black`}
+                              >
+                                Link
+                              </p>
                               <svg
-                                class='w-4 h-4 mx-2 -rotate-45'
+                                class='w-6 h-6  flex -rotate-45'
                                 aria-hidden='true'
                                 xmlns='http://www.w3.org/2000/svg'
                                 fill='none'
