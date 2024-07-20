@@ -576,7 +576,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
           </motion.div>
 
           {/* 人物对话弹窗 */}
-          <motion.div layout className='relative  w-full  max-w-[1200px] '>
+          <motion.div
+            layout
+            className='relative lg:hidden  w-full  max-w-[1200px] '
+          >
             {navbarItem.map(
               (item, index) =>
                 selectedTab === item.name[0] && (
@@ -593,7 +596,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         WebkitMaskImage:
                           'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
                       }}
-                      className='lg:hidden max-w-[320px] px-[30px] lg:max-w-[420px]  absolute top-[100%] left-0 transition-all'
+                      className=' max-w-[320px] px-[30px] lg:max-w-[420px]  absolute top-[100%] left-0 transition-all'
                       src={data.dialog}
                     ></img>
                     <motion.div
@@ -712,6 +715,53 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
               }}
               className='hidden w-full h-full lg:flex'
             ></div>
+
+            {navbarItem.map(
+              (item, index) =>
+                selectedTab === item.name[0] && (
+                  <motion.div
+                    key={item.name[0] + index + 'introduction'}
+                    className='absolute bottom-[10vw] left-[320px] lg:left-[420px] animate__animated animate__fadeInUp bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  '
+                  >
+                    <div className='p-[28px] lg:p-[40px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20'>
+                      <p className='text-[20px] lg:text-[30px]  darrk:text-gray-900 text-white  '>
+                        {item.des[lang]}
+                      </p>
+                      <span className='text-center text-[30px] darrk:text-gray-900 text-white '>
+                        {item.expression}{' '}
+                      </span>
+                      <div className='group relative my-2.5 hidden'>
+                        <div className='absolute flex items-center justify-center w-full transition-opacity duration-300 rounded-lg opacity-0 bg-gray-900/50 group-hover:opacity-100'>
+                          <button
+                            data-tooltip-target='download-image'
+                            className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none darrk:text-white focus:ring-gray-50'
+                          >
+                            <svg
+                              className='w-5 h-5 text-white'
+                              aria-hidden='true'
+                              xmlns='http://www.w3.org/2000/svg'
+                              fill='none'
+                              viewBox='0 0 16 18'
+                            >
+                              <path
+                                stroke='currentColor'
+                                strokeLinecap='round'
+                                strokeLinejoin='round'
+                                strokeWidth={2}
+                                d='M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3'
+                              />
+                            </svg>
+                          </button>
+                        </div>
+                        <img
+                          src='/docs/images/blog/image-1.jpg'
+                          className='rounded-lg'
+                        />
+                      </div>
+                    </div>
+                  </motion.div>
+                ),
+            )}
           </motion.div>
         )}
       </AnimatePresence>
