@@ -58,7 +58,7 @@
           "link": "/project",
           "name": ["Project", "作品"],
           "icon": "fi-rr-folder",
-          "status": "fi-sr-eye-crossed"
+          "status": "fi-sr-eye"
         },
         {
           "link": "/networkingmsg",

@@ -9,6 +9,7 @@ import ContactCate from '../contactCategory.jsx';
 import packageinfo from '../../../package.json';
 import Log from '../Log.jsx';
 import Underline from '../../ui/underline.tsx';
+import MenuButtonsSmall from './MenuButtonsSmall.tsx';
 
 import Toast from '../toast.jsx';
 const version = packageinfo.version.toString();
@@ -195,10 +196,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             layout
-            className={`flex flex-col w-full  p-[5px]  ${BG}
+            className={`flex flex-col w-full   ${BG}
         ${
           windowWidth < 768
-            ? ` ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`
+            ? ` pr-[5%]  ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`
             : ` ${isTop && isHomeOrRoot ? 'px-[5%] lg:pt-[12vh] ' : ''} 
               `
         }
@@ -207,7 +208,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             ? ` backdrop-blur-[20px]  bg-white/90`
             : `${
                 !isTop &&
-                `backdrop-blur-[20px]  border-b-2 border-gray-200/70 bg-white bg-opacity-90 `
+                `backdrop-blur-[20px]  border-b-1 border-gray-200/70 bg-white bg-opacity-90 `
               }`
         }`}
           >
@@ -235,11 +236,11 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                   >
                     <a
                       href='/info'
-                      className='inline-flex items-end gap-x-[20px] justify-center h-full animate__animated animate__fadeInUp'
+                      className='inline-flex items-center gap-x-[10px] justify-center h-full animate__animated animate__fadeInUp'
                     >
                       <motion.img
                         layout
-                        className={`flex flex-1  animate__animated animate__zoomIn   ${isTop ? 'w-32 h-32 rounded-full' : 'w-28 h-28 rounded-[14px]'} shadow-lg`}
+                        className={`flex items-center required justify-center m-4  animate__animated animate__zoomIn   ${isTop ? 'w-32 h-32 rounded-full' : 'w-28 h-28 rounded-[14px]'} shadow-lg`}
                         src='https://3o.hk/images/2024/01/14/avatar.th.jpg'
                         alt="Xianzhe's Page"
                       />
@@ -453,76 +454,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 </motion.div>
                 {/* menu button */}
                 {windowWidth <= 786 && isOpened && (
-                  <div className={`w-full lg:mx-[10px] `}>
-                    <div className='z-20 w-full rounded-lg shadow '></div>
-                    <div className={`rounded-2xl pt-[30px] `}>
-                      {navbarItem.map((item, index) => (
-                        <AnimatePresence>
-                          <motion.div
-                            layout
-                            key={item.name}
-                            exit={{
-                              opacity: 0,
-                              scale: 0,
-                              transition: { duration: 0.7 },
-                            }}
-                            whileHover={{
-                              scale: 1.02,
-                              transition: { duration: 0.3 },
-                            }}
-                            whileTap={{ scale: 0.95 }}
-                            transition={{
-                              duration: 0.9,
-                              ease: [0.22, 1, 0.36, 1],
-                            }}
-                          >
-                            <a
-                              style={{ animationDelay: `${index * 0.2}s` }}
-                              key={index}
-                              href={item.href}
-                              className={`flex py-5 animate__animated animate__zoomIn  place-items-center items-center px-4 ${
-                                isTop
-                                  ? 'hover:bg-gray-900/50 rounded-l-full'
-                                  : 'hover:bg-gray-300/50 rounded-l-full '
-                              }`}
-                            >
-                              <div className='flex-shrink-0'>
-                                <div className='flex items-center justify-center w-24 h-24 rounded-full'>
-                                  <i
-                                    className={`${
-                                      isTopTextColorWhite & isTop
-                                        ? 'text-white'
-                                        : 'text-gray-900'
-                                    } text-5xl fi ${item.icon}`}
-                                  ></i>
-                                </div>
-                              </div>
-                              <div className='w-full ps-2'>
-                                <div
-                                  className={`${
-                                    isTopTextColorWhite & isTop
-                                      ? 'text-white'
-                                      : 'text-gray-900'
-                                  } font-bold text-4xl`}
-                                >
-                                  {item.name[lang]}
-                                </div>
-                                <div
-                                  className={`${
-                                    isTopTextColorWhite & isTop
-                                      ? 'text-white'
-                                      : 'text-gray-900'
-                                  } text-xs text-blue-500 `}
-                                >
-                                  {item.des[lang]}
-                                </div>
-                              </div>
-                            </a>
-                          </motion.div>
-                        </AnimatePresence>
-                      ))}
-                    </div>
-                  </div>
+                  <MenuButtonsSmall
+                    data={navbarItem}
+                    textColor={topTextColor}
+                    isTop={isTop}
+                    lang={lang}
+                  />
                 )}
                 <motion.div
                   layout
