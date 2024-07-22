@@ -86,14 +86,14 @@ export default function Example() {
                   className={`welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky z-30 `}
                   style={{ top: `calc(${navbarHeight}px + 10px)` }}
                 >
-                  <div className='flex flex-row items-center justify-center'>
+                  <div className='flex flex-wrap items-center justify-center'>
                     <img
                       className='w-[130px] px-7'
                       src='https://3o.hk/images/2024/05/25/817d5684-7ac9-491b-8752-60cfa0809adc.png'
                       alt='swustPng'
                     />
                     <img
-                      className='w-[400px] h-[130px] py-12 px-7'
+                      className='max-w-[80vw] lg:max-w-[400px] h-auto py-12 px-7'
                       src='https://3o.hk/images/2024/05/25/ea60b2ce-3079-4e5f-ad4d-440410ae50af.png'
                       alt='swustName'
                     />
@@ -127,8 +127,8 @@ export default function Example() {
                     {lang == 1 && '学校信息'}
                   </h2>
                 </div>
-                <p className='text-justify '>{data[0].unides[lang][0]}</p>
-                <p className='text-justify '>
+                <p className=''>{data[0].unides[lang][0]}</p>
+                <p className=''>
                   {data[0].unides[lang][1]}
                   <a className='text-sky-500' href={data[0].web}>
                     {' '}
@@ -143,8 +143,8 @@ export default function Example() {
                     {data[0].major[lang][1]}
                   </h2>
                 </div>
-                <p className='text-justify '>{data[0].majordes[lang][0]}</p>
-                <p className='text-justify '>
+                <p className=''>{data[0].majordes[lang][0]}</p>
+                <p className=''>
                   {data[0].majordes[lang][1]}
                   <a className='text-sky-500' href={data[0].majorweb}>
                     {' '}
@@ -193,7 +193,7 @@ export default function Example() {
                   )}
                 </div>
 
-                <p className='text-justify '>{data[0].description[lang]}</p>
+                <p className=''>{data[0].description[lang]}</p>
                 <div className='relative flex pb-48 overflow-x-auto md:'>
                   <motion.table
                     variants={visblecontainer}
