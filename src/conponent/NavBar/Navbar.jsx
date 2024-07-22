@@ -457,6 +457,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                   <MenuButtonsSmall
                     data={navbarItem}
                     textColor={topTextColor}
+                    setIsOpened={setIsOpened}
                     isTop={isTop}
                     lang={lang}
                   />

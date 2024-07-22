@@ -17,6 +17,7 @@ interface NavbarSmallScreenProps {
   textColor?: boolean;
   isTop?: boolean;
   lang?: number;
+  setIsOpened: any;
 }
 
 const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
@@ -24,6 +25,7 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
   textColor = false,
   isTop = true,
   lang = 0,
+  setIsOpened,
 }) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -133,7 +135,13 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
                     <a
                       key={subItem.name[0] + subIndex}
                       href={subItem.link}
-                      onClick={BTN(subItem.button)}
+                      onClick={() => {
+                        const buttonFunction = BTN(subItem.button);
+                        if (typeof buttonFunction === 'function') {
+                          buttonFunction();
+                        }
+                        setIsOpened(false);
+                      }}
                       className={`pl-[33px] flex py-6 items-center justify-between  ${
                         isTop
                           ? 'hover:bg-gray-900/50 rounded-l-full'
