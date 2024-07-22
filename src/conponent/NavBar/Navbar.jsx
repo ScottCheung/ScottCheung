@@ -208,7 +208,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             ? ` backdrop-blur-[20px]  bg-white/90`
             : `${
                 !isTop &&
-                `backdrop-blur-[20px]  border-b-1 border-gray-200/70 bg-white bg-opacity-90 `
+                `backdrop-blur-[20px]  border-b-[1px] border-gray-300 bg-white bg-opacity-90 `
               }`
         }`}
           >
@@ -492,7 +492,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                                      ? 'bg-white/70'
                                      : ' text-sky-950 bg-sky-200/30 border border-sky-950'
                                  }  backdrop-blur-md  mt-[50px] rounded-[28px]`
-                               : 'border divide-x bg-sky-200/30 mt-[50px] divide-gray-900/0 rounded-full border-gray-700'
+                               : ' divide-x border-2 bg-sky-200/30 mt-[50px] divide-gray-900/0 rounded-full border-gray-700'
                            }`}
                           >
                             {navItem.scondMenu.map((item, index) => (
