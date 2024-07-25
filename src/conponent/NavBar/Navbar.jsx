@@ -240,17 +240,17 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     >
                       <motion.img
                         layout
-                        className={`flex items-center required justify-center m-4  animate__animated animate__zoomIn   ${isTop ? 'w-32 h-32 rounded-full' : 'w-28 h-28 rounded-[14px]'} shadow-lg`}
+                        className={`flex items-center required justify-center m-4  animate__animated animate__zoomIn   ${isTop ? 'w-32 h-32 rounded-full' : 'w-12 h-12 md:w-18 md:h-18 lg:w-28 lg:h-28 rounded-[14px]'} shadow-lg`}
                         src='https://3o.hk/images/2024/01/14/avatar.th.jpg'
                         alt="Xianzhe's Page"
                       />
                       {isWithinOneWeek && (
                         <span
-                          class={`${isTop ? 'w-8 h-8 left-2 top-2' : '-left-1 -top-1 w-3 h-3'} absolute   bg-green-400  rounded-full`}
+                          class={`${isTop ? 'w-8 h-8 left-2 top-2' : '-left-1 -top-1 w-3 h-3'} absolute hidden lg:flex   bg-green-400  rounded-full`}
                         ></span>
                       )}
                       <div
-                        className={`flex flex-1 flex-col justify-between h-full `}
+                        className={`hidden  lg:flex flex-1 flex-col justify-between h-full `}
                       >
                         <motion.div
                           style={{ fontFamily: 'Hey August, sans-serif' }}
@@ -294,7 +294,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                       windowWidth < 876 ? 'w-[50%]' : 'w-[70%]'
                     } gap-[30px] justify-end `}
                   >
-                    <AnimatePresence className='flex'>
+                    <AnimatePresence>
                       {windowWidth > 876 && (
                         <motion.div
                           layout='position'
@@ -390,7 +390,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           animationDelay: `${navbarItem.length * 0.2}s`,
                         }}
                         type='button'
-                        className={` transition-none animate__animated animate__fadeInUp `}
+                        className={`p-8 transition-none animate__animated animate__fadeInUp `}
                         onClick={(e) =>
                           e.preventDefault() &
                           setIsOpened(!isOpened) &

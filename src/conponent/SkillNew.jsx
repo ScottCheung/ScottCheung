@@ -30,7 +30,7 @@ const tabs = [
     contentKey: 'database',
   },
   {
-    label: ['Algorithm', '算法'],
+    label: ['Algorithm & AI', '算法 & AI'],
     color1: '[#CB2C14]',
     ratio1: '[-50%]',
     ratio2: '[150%]',
@@ -103,7 +103,7 @@ function Skill() {
               key={index}
               // variants={WelcomeItem}
               transition={StagerFadeInUp}
-              style={{ animationDelay: `${0.1 * index}s` }}
+              style={{ animationDelay: `${0.07 * index}s` }}
               className='flex items-start animate__animated animate__zoomIn col-span-12 pb-2 md:col-span-6 lg:col-span-4 xl:col-span-3 gap-x-[20px]'
             >
               <motion.div

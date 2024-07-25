@@ -1722,552 +1722,775 @@
       "des": {
         "Frontend": [
           {
-            "description": "I am capable of designing and implementing frontend interfaces that are attractive, highly interactive, ensuring users have an outstanding user experience. My frontend expertise not only spans a wide range of technologies but also emphasizes interface design and user experience. I am dedicated to crafting modern applications that are not only visually appealing and elegant but also powerful in functionality.",
+            "description": "As a passionate and innovative Frontend Developer, I specialize in creating stunning and highly interactive user interfaces that deliver an exceptional user experience. With a deep understanding of both design and technology, I transform complex ideas into elegant, functional, and visually captivating applications. My expertise spans a broad spectrum of technologies, enabling me to craft modern web applications that not only look incredible but also perform seamlessly. I am dedicated to pushing the boundaries of frontend development, ensuring every project is a blend of aesthetic brilliance and powerful functionality.",
             "skills": [
               {
                 "name": "HTML",
                 "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg",
-                "description": "Proficient in HTML for creating well-structured, semantic web content."
+                "description": "Proficient in HTML for creating well-structured, semantic web content, ensuring accessibility and SEO best practices, including the use of ARIA roles and semantic tags."
               },
               {
                 "name": "CSS",
                 "image": "https://www.svgrepo.com/show/521591/css.svg",
-                "description": "Skilled in CSS for designing visually appealing and responsive web pages."
+                "description": "Skilled in CSS for designing visually appealing and responsive web pages, with deep knowledge of CSS Grid, Flexbox, animations, transitions, and preprocessors like SASS."
               },
               {
                 "name": "JavaScript",
                 "image": "https://www.svgrepo.com/show/510028/javascript-file.svg",
-                "description": "Experienced in JavaScript for developing dynamic and interactive web applications."
+                "description": "Experienced in JavaScript for developing dynamic and interactive web applications, with expertise in ES6+ features, asynchronous programming, and using modern libraries and frameworks."
               },
               {
                 "name": "React",
                 "image": "https://www.svgrepo.com/show/473768/react.svg",
-                "description": "Expert in React for building efficient and maintainable single-page applications (SPAs)."
+                "description": "Expert in React for building efficient and maintainable single-page applications (SPAs), proficient in hooks, context API, and React Router for dynamic routing."
               },
               {
                 "name": "Redux",
                 "image": "https://www.svgrepo.com/show/378456/redux-fill.svg",
-                "description": "Proficient in Redux for state management in complex applications."
+                "description": "Proficient in Redux for state management in complex applications, including middleware like Redux Thunk and Redux Saga for handling asynchronous actions."
               },
               {
                 "name": "TypeScript",
                 "image": "https://www.svgrepo.com/show/521320/typescript-16.svg",
-                "description": "Proficient in TypeScript for enhancing JavaScript with static typing to improve code quality and maintainability."
+                "description": "Proficient in TypeScript for enhancing JavaScript with static typing to improve code quality and maintainability, including experience with advanced types, generics, and interfaces."
               },
               {
                 "name": "Tailwind CSS",
                 "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg",
-                "description": "Skilled in Tailwind CSS for rapid UI development with utility-first design."
+                "description": "Skilled in Tailwind CSS for rapid UI development with utility-first design, allowing for customizable and responsive designs using a consistent, scalable framework."
               },
               {
                 "name": "Framer Motion",
                 "image": "https://www.svgrepo.com/show/371686/animation.svg",
-                "description": "Proficient in Framer Motion for creating smooth and engaging animations."
+                "description": "Proficient in Framer Motion for creating smooth and engaging animations, including experience with keyframes, transitions, and gesture-based animations."
               },
               {
                 "name": "GraphQL",
                 "image": "https://www.svgrepo.com/show/473649/graphql.svg",
-                "description": "Experienced in GraphQL for efficient data fetching and API management."
+                "description": "Experienced in GraphQL for efficient data fetching and API management, including setting up GraphQL servers with Apollo, managing schemas, and writing complex queries and mutations."
               },
               {
                 "name": "Next.js",
                 "image": "https://www.svgrepo.com/show/521299/next-16.svg",
-                "description": "Experienced in Next.js for server-side rendering and static site generation in React applications."
+                "description": "Experienced in Next.js for server-side rendering and static site generation in React applications, with knowledge of dynamic routing, API routes, and deployment on platforms like Vercel."
               },
               {
                 "name": "Node.js",
                 "image": "https://www.svgrepo.com/show/521297/node-16.svg",
-                "description": "Proficient in Node.js for building scalable server-side applications and APIs."
+                "description": "Proficient in Node.js for building scalable server-side applications and APIs, with experience in Express.js, RESTful services, and integrating with databases like MongoDB and PostgreSQL."
               },
               {
                 "name": "Webpack",
                 "image": "https://www.svgrepo.com/show/503138/webpack.svg",
-                "description": "Skilled in Webpack for bundling JavaScript modules and optimizing web performance."
+                "description": "Skilled in Webpack for bundling JavaScript modules and optimizing web performance, including experience with loaders, plugins, and optimizing build processes for faster load times."
               },
               {
                 "name": "Jest",
                 "image": "https://www.svgrepo.com/show/525096/test-tube-minimalistic.svg",
-                "description": "Proficient in Jest for writing unit and integration tests to ensure code reliability."
+                "description": "Proficient in Jest for writing unit and integration tests to ensure code reliability, including using mocking libraries and setting up continuous integration pipelines for automated testing."
               },
               {
                 "name": "Cypress",
                 "image": "https://www.svgrepo.com/show/330247/cypress.svg",
-                "description": "Skilled in Cypress for end-to-end testing to ensure application stability and user experience."
+                "description": "Skilled in Cypress for end-to-end testing to ensure application stability and user experience, including writing comprehensive test suites and using Cypress plugins for enhanced testing capabilities."
               },
               {
                 "name": "RESTful APIs",
                 "image": "https://www.svgrepo.com/show/447473/rest-api.svg",
-                "description": "Experienced in designing and consuming RESTful APIs for effective client-server communication."
+                "description": "Experienced in designing and consuming RESTful APIs for effective client-server communication, including understanding of HTTP methods, status codes, and API documentation using tools like Swagger."
               },
-
               {
                 "name": "Responsive Design",
                 "image": "https://www.svgrepo.com/show/153781/responsive-design-symbol.svg",
-                "description": "Skilled in creating responsive designs to ensure web applications work seamlessly across various devices and screen sizes."
+                "description": "Skilled in creating responsive designs to ensure web applications work seamlessly across various devices and screen sizes, using media queries, flexible grid layouts, and responsive images."
               },
               {
                 "name": "Performance Optimization",
                 "image": "https://www.svgrepo.com/show/379226/performance.svg",
-                "description": "Proficient in optimizing web performance to ensure fast loading times and a smooth user experience, like Long Task."
+                "description": "Proficient in optimizing web performance to ensure fast loading times and a smooth user experience, including key metrics like FCP, SI, LCP, TBT, and CLS, and tools like Google Lighthouse, WebPageTest, and Chrome DevTools."
               },
               {
                 "name": "Accessibility",
                 "image": "https://www.svgrepo.com/show/491164/accessibility.svg",
-                "description": "Experienced in implementing accessibility best practices to ensure web applications are usable by people with disabilities."
+                "description": "Experienced in implementing accessibility best practices to ensure web applications are usable by people with disabilities, including using screen reader testing, ARIA roles, and keyboard navigation."
               },
               {
                 "name": "SEO Optimization",
                 "image": "https://www.svgrepo.com/show/478722/seo-1.svg",
-                "description": "Skilled in SEO optimization using tools like Google Chrome for evaluating and enhancing website visibility, including optimizing titles, content, and meta tags."
+                "description": "Skilled in SEO optimization using tools like Google Chrome for evaluating and enhancing website visibility, including optimizing titles, content, meta tags, and improving site structure for better indexing."
               },
               {
                 "name": "Figma",
                 "image": "https://www.svgrepo.com/show/532271/figma.svg",
-                "description": "Proficient in Figma for UI/UX design, enabling collaboration with design teams and translating design specifications into code."
+                "description": "Proficient in Figma for UI/UX design, enabling collaboration with design teams and translating design specifications into code, including creating interactive prototypes and design systems."
               },
               {
                 "name": "Adobe Photoshop (PS)",
                 "image": "https://www.svgrepo.com/show/508752/photoshop.svg",
-                "description": "Proficient in Adobe Photoshop for creating and editing graphics, images, and design elements for web and UI projects."
+                "description": "Proficient in Adobe Photoshop for creating and editing graphics, images, and design elements for web and UI projects, with experience in photo editing, compositing, and creating web-optimized graphics."
               },
               {
                 "name": "Component Libraries",
                 "image": "https://www.svgrepo.com/show/430362/ux-line-circle.svg",
-                "description": "Experienced in Component Libraries for building responsive and mobile-first web pages."
+                "description": "Experienced in using Component Libraries for building responsive and mobile-first web pages, including main libraries like Flowbite UI、Material-UI, Ant Design, and Bootstrap."
               },
               {
                 "name": "Animation Libraries",
                 "image": "https://www.svgrepo.com/show/488047/animation.svg",
-                "description": "Skilled in various animation libraries such as AnimationCss and Spring for enhancing user interactions."
-              }
-            ]
-          },
-          {
-            "description": "我能够设计并实现具有吸引力、高度交互性的前端界面，确保用户获得出色的使用体验。我的前端能力不仅体现在技术广度上，同时注重界面设计和用户体验，致力于打造既美观优雅又功能强大的现代化应用程序。",
-            "skills": [
-              {
-                "name": "HTML",
-                "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg",
-                "description": "精通 HTML，用于创建结构良好、语义明确的网页内容。"
-              },
-              {
-                "name": "CSS",
-                "image": "https://www.svgrepo.com/show/521591/css.svg",
-                "description": "擅长 CSS，用于设计视觉吸引力强且响应迅速的网页。"
-              },
-              {
-                "name": "JavaScript",
-                "image": "https://www.svgrepo.com/show/510028/javascript-file.svg",
-                "description": "有丰富的 JavaScript 经验，用于开发动态和交互式的网页应用。"
-              },
-              {
-                "name": "React",
-                "image": "https://www.svgrepo.com/show/473768/react.svg",
-                "description": "精通 React，用于构建高效且易维护的单页应用（SPA）。"
-              },
-              {
-                "name": "Redux",
-                "image": "https://www.svgrepo.com/show/378456/redux-fill.svg",
-                "description": "精通 Redux，用于复杂应用的状态管理。"
-              },
-              {
-                "name": "TypeScript",
-                "image": "https://www.svgrepo.com/show/521320/typescript-16.svg",
-                "description": "精通 TypeScript，通过静态类型增强 JavaScript，以提高代码质量和可维护性。"
-              },
-              {
-                "name": "Tailwind CSS",
-                "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg",
-                "description": "擅长 Tailwind CSS，用于以实用为先的设计快速开发 UI。"
-              },
-              {
-                "name": "Framer Motion",
-                "image": "https://www.svgrepo.com/show/371686/animation.svg",
-                "description": "精通 Framer Motion，用于创建流畅且引人入胜的动画。"
+                "description": "Skilled in various animation libraries such as Framer Motion、 Animation.css and Spring for enhancing user interactions, including creating complex animations and ensuring performance optimization."
               },
               {
                 "name": "GraphQL",
                 "image": "https://www.svgrepo.com/show/473649/graphql.svg",
-                "description": "有丰富的 GraphQL 经验，用于高效的数据获取和 API 管理。"
+                "description": "Experienced in GraphQL for efficient data fetching and API management, including setting up GraphQL servers with Apollo, managing schemas, and writing complex queries and mutations."
               },
               {
-                "name": "Next.js",
-                "image": "https://www.svgrepo.com/show/521299/next-16.svg",
-                "description": "有丰富的 Next.js 经验，用于 React 应用的服务器端渲染和静态站点生成。"
-              },
-              {
-                "name": "Node.js",
-                "image": "https://www.svgrepo.com/show/521297/node-16.svg",
-                "description": "精通 Node.js，用于构建可扩展的服务器端应用和 API。"
-              },
-              {
-                "name": "Webpack",
-                "image": "https://www.svgrepo.com/show/503138/webpack.svg",
-                "description": "擅长 Webpack，用于打包 JavaScript 模块和优化网页性能。"
-              },
-              {
-                "name": "Jest",
+                "name": "Testing Library",
                 "image": "https://www.svgrepo.com/show/525096/test-tube-minimalistic.svg",
-                "description": "精通 Jest，用于编写单元测试和集成测试，以确保代码可靠性。"
+                "description": "Proficient in Testing Library for writing unit and integration tests to ensure code reliability, including using mocking libraries and setting up continuous integration pipelines for automated testing."
               },
               {
                 "name": "Cypress",
                 "image": "https://www.svgrepo.com/show/330247/cypress.svg",
-                "description": "擅长 Cypress，用于端到端测试，以确保应用的稳定性和用户体验。"
+                "description": "Skilled in Cypress for end-to-end testing to ensure application stability and user experience, including writing comprehensive test suites and using Cypress plugins for enhanced testing capabilities."
+              },
+              {
+                "name": "CI/CD",
+                "image": "https://www.svgrepo.com/show/521297/node-16.svg",
+                "description": "Experienced in setting up CI/CD pipelines using tools like Jenkins, GitHub Actions, and GitLab CI, ensuring automated testing, building, and deployment processes."
+              }
+            ]
+          },
+          {
+            "description": "作为一名充满激情且富有创新精神的前端开发者，我专注于创建令人惊叹且高度互动的用户界面，提供卓越的用户体验。凭借对设计和技术的深刻理解，我将复杂的创意转化为优雅、实用且视觉上引人注目的应用程序。我的专业知识涵盖广泛的技术领域，使我能够打造不仅外观出色且性能无缝的现代Web应用程序。我致力于推动前端开发的边界，确保每个项目都兼具美学卓越与强大功能。",
+            "skills": [
+              {
+                "name": "HTML",
+                "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg",
+                "description": "精通 HTML，用于创建结构良好、语义明确的网页内容，确保无障碍和 SEO 最佳实践，包括使用 ARIA 角色和语义标签。"
+              },
+              {
+                "name": "CSS",
+                "image": "https://www.svgrepo.com/show/521591/css.svg",
+                "description": "擅长 CSS，用于设计视觉吸引力强且响应迅速的网页，精通 CSS Grid、Flexbox、动画、过渡和预处理器（如 SASS）。"
+              },
+              {
+                "name": "JavaScript",
+                "image": "https://www.svgrepo.com/show/510028/javascript-file.svg",
+                "description": "有丰富的 JavaScript 经验，用于开发动态和交互式的网页应用，精通 ES6+ 特性、异步编程以及使用现代库和框架。"
+              },
+              {
+                "name": "React",
+                "image": "https://www.svgrepo.com/show/473768/react.svg",
+                "description": "精通 React，用于构建高效且易维护的单页应用（SPA），精通 hooks、context API 和 React Router 用于动态路由。"
+              },
+              {
+                "name": "Redux",
+                "image": "https://www.svgrepo.com/show/378456/redux-fill.svg",
+                "description": "精通 Redux，用于复杂应用的状态管理，包括中间件如 Redux Thunk 和 Redux Saga 用于处理异步操作。"
+              },
+              {
+                "name": "TypeScript",
+                "image": "https://www.svgrepo.com/show/521320/typescript-16.svg",
+                "description": "精通 TypeScript，通过静态类型增强 JavaScript，以提高代码质量和可维护性，包含高级类型、泛型和接口的经验。"
+              },
+              {
+                "name": "Tailwind CSS",
+                "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg",
+                "description": "擅长 Tailwind CSS，用于以实用为先的设计快速开发 UI，使得设计既可定制又具响应性，使用一致且可扩展的框架。"
+              },
+              {
+                "name": "Framer Motion",
+                "image": "https://www.svgrepo.com/show/371686/animation.svg",
+                "description": "精通 Framer Motion，用于创建流畅且引人入胜的动画，包含关键帧、过渡和基于手势的动画。"
+              },
+              {
+                "name": "GraphQL",
+                "image": "https://www.svgrepo.com/show/473649/graphql.svg",
+                "description": "有丰富的 GraphQL 经验，用于高效的数据获取和 API 管理，包括使用 Apollo 设置 GraphQL 服务器、管理 schema 和编写复杂的查询和变更。"
+              },
+              {
+                "name": "Next.js",
+                "image": "https://www.svgrepo.com/show/521299/next-16.svg",
+                "description": "有丰富的 Next.js 经验，用于 React 应用的服务器端渲染和静态站点生成，包含动态路由、API 路由和在 Vercel 等平台上的部署。"
+              },
+              {
+                "name": "Node.js",
+                "image": "https://www.svgrepo.com/show/521297/node-16.svg",
+                "description": "精通 Node.js，用于构建可扩展的服务器端应用和 API，有使用 Express.js、RESTful 服务以及集成 MongoDB 和 PostgreSQL 数据库的经验。"
+              },
+              {
+                "name": "Webpack",
+                "image": "https://www.svgrepo.com/show/503138/webpack.svg",
+                "description": "擅长 Webpack，用于打包 JavaScript 模块和优化网页性能，包括使用 loaders、plugins 和优化构建过程以提高加载速度。"
+              },
+              {
+                "name": "Jest",
+                "image": "https://www.svgrepo.com/show/525096/test-tube-minimalistic.svg",
+                "description": "精通 Jest，用于编写单元测试和集成测试，以确保代码可靠性，包含使用 mock 库和设置持续集成管道进行自动化测试的经验。"
+              },
+              {
+                "name": "Cypress",
+                "image": "https://www.svgrepo.com/show/330247/cypress.svg",
+                "description": "擅长 Cypress，用于端到端测试，以确保应用的稳定性和用户体验，包含编写全面的测试套件和使用 Cypress 插件增强测试能力。"
               },
               {
                 "name": "RESTful APIs",
                 "image": "https://www.svgrepo.com/show/447473/rest-api.svg",
-                "description": "有设计和使用 RESTful APIs 的经验，用于高效的客户端和服务器端通信。"
+                "description": "有设计和使用 RESTful APIs 的经验，用于高效的客户端和服务器端通信，包含 HTTP 方法、状态码和使用 Swagger 等工具进行 API 文档编写的知识。"
               },
               {
                 "name": "响应式设计",
                 "image": "https://www.svgrepo.com/show/153781/responsive-design-symbol.svg",
-                "description": "擅长响应式设计，确保网页应用在各种设备和屏幕尺寸上无缝运行。"
+                "description": "擅长响应式设计，确保网页应用在各种设备和屏幕尺寸上无缝运行，使用媒体查询、灵活的网格布局和响应式图片。"
               },
               {
                 "name": "性能优化",
                 "image": "https://www.svgrepo.com/show/379226/performance.svg",
-                "description": "精通性能优化，确保网页快速加载并提供流畅的用户体验，例如 Long Task。"
+                "description": "精通性能优化，确保网页快速加载并提供流畅的用户体验，包含关键性能指标如 FCP、SI、LCP、TBT 和 CLS，以及使用 Google Lighthouse、WebPageTest 和 Chrome DevTools 工具。"
               },
               {
                 "name": "无障碍访问",
                 "image": "https://www.svgrepo.com/show/491164/accessibility.svg",
-                "description": "有实施无障碍最佳实践的经验，确保网页应用对残障人士可用。"
+                "description": "有实施无障碍最佳实践的经验，确保网页应用对残障人士可用，包含使用屏幕阅读器测试、ARIA 角色和键盘导航。"
               },
               {
                 "name": "SEO 优化",
                 "image": "https://www.svgrepo.com/show/478722/seo-1.svg",
-                "description": "擅长使用谷歌浏览器进行 SEO 评估和优化，包括优化标题、内容和元标签，提高网站可见性。"
+                "description": "擅长使用谷歌浏览器进行 SEO 评估和优化，包括优化标题、内容和元标签，提高网站可见性，以及改进网站结构以便更好地进行索引。"
               },
               {
                 "name": "Figma",
                 "image": "https://www.svgrepo.com/show/532271/figma.svg",
-                "description": "精通 Figma，用于 UI/UX 设计，能够与设计团队协作，并将设计规范转化为代码。"
+                "description": "精通 Figma，用于 UI/UX 设计，能够与设计团队协作，并将设计规范转化为代码，包含创建互动原型和设计系统的能力。"
               },
               {
                 "name": "Adobe Photoshop (PS)",
                 "image": "https://www.svgrepo.com/show/508752/photoshop.svg",
-                "description": "精通 Adobe Photoshop，用于创建和编辑图形、图像和网页及 UI 项目的设计元素。"
+                "description": "精通 Adobe Photoshop，用于创建和编辑图形、图像和网页及 UI 项目的设计元素，有照片编辑、合成和创建网络优化图形的经验。"
               },
               {
                 "name": "组件库",
                 "image": "https://www.svgrepo.com/show/430362/ux-line-circle.svg",
-                "description": "有使用组件库构建响应式和移动优先网页的经验。"
+                "description": "有使用组件库构建响应式和移动优先网页的经验，包括 Flowbite UI、Material-UI、Ant Design 和 Bootstrap 等主流 UI 库。"
               },
               {
                 "name": "动画库",
                 "image": "https://www.svgrepo.com/show/488047/animation.svg",
-                "description": "擅长使用各种动画库（如 AnimationCss 和 Spring）来增强用户交互体验。"
+                "description": "擅长使用各种动画库（如Framer Motion、Animation.css 和 Spring）来增强用户交互体验，包含创建复杂动画并确保性能优化的能力。"
+              },
+              {
+                "name": "Testing Library",
+                "image": "https://www.svgrepo.com/show/525096/test-tube-minimalistic.svg",
+                "description": "精通 Testing Library，用于编写单元测试和集成测试，以确保代码可靠性，包含使用 mock 库和设置持续集成管道进行自动化测试的经验。"
               }
             ]
           }
         ],
         "Backend": [
           {
-            "description": "In backend technologies, demonstrate proficiency in the following:",
+            "description": "As a Backend Developer, I excel in designing and implementing robust, scalable, and efficient server-side applications. My extensive experience with various backend technologies ensures that I can build and manage systems that are not only powerful but also reliable and performant. My backend expertise is rooted in a deep understanding of database management, server-side programming, and cloud-based solutions, making me a versatile and reliable developer for any backend project. I am committed to delivering high-quality, scalable, and maintainable backend systems that drive the success of modern applications. Here’s a snapshot of my key skills and expertise:",
             "skills": [
               {
                 "name": "MySQL",
                 "image": "https://www.svgrepo.com/show/394296/mysql.svg",
-                "description": "Experienced in MySQL for developing and managing relational databases."
+                "description": "Experienced in MySQL for developing and managing relational databases, including designing complex queries, indexing for performance optimization, and ensuring data integrity through normalization."
               },
               {
                 "name": "PostgreSQL",
                 "image": "https://www.svgrepo.com/show/473760/postgresql.svg",
-                "description": "Proficient in PostgreSQL for building robust and scalable database solutions."
+                "description": "Proficient in PostgreSQL for building robust and scalable database solutions, with experience in advanced features like JSONB, full-text search, and custom functions using PL/pgSQL."
               },
               {
                 "name": "NodeJS",
                 "image": "https://www.svgrepo.com/show/473736/nodejs.svg",
-                "description": "Skilled in NodeJS for building efficient and scalable server-side applications."
+                "description": "Skilled in NodeJS for building efficient and scalable server-side applications, including asynchronous programming with Promises and async/await, and using frameworks like Express.js and Koa."
               },
               {
                 "name": "JSON",
                 "image": "https://www.svgrepo.com/show/74933/json-file.svg",
-                "description": "Adept at working with JSON for seamless data interchange between frontend and backend."
+                "description": "Adept at working with JSON for seamless data interchange between frontend and backend, including JSON schema validation and optimization for performance in API responses."
               },
               {
                 "name": "TablePlus",
                 "image": "https://www.svgrepo.com/show/532228/table-list.svg",
-                "description": "Proficient in using TablePlus for efficient database management and development."
+                "description": "Proficient in using TablePlus for efficient database management and development, including advanced querying, table design, and database migrations."
               },
               {
                 "name": "Postman",
                 "image": "https://www.svgrepo.com/show/342128/postman.svg",
-                "description": "Skilled in using Postman for API testing and development, ensuring efficient and reliable API integrations."
+                "description": "Skilled in using Postman for API testing and development, ensuring efficient and reliable API integrations, including creating and automating test collections and environments."
+              },
+              {
+                "name": "Redis",
+                "image": "https://www.svgrepo.com/show/394393/redis.svg",
+                "description": "Experienced in using Redis for caching, session management, and real-time data processing, optimizing application performance and reducing database load."
+              },
+              {
+                "name": "Docker",
+                "image": "https://www.svgrepo.com/show/521276/docker-16.svg",
+                "description": "Proficient in Docker for containerization of applications, ensuring consistent environments for development, testing, and production, and using Docker Compose for multi-container applications."
+              },
+              {
+                "name": "Kubernetes",
+                "image": "https://www.svgrepo.com/show/521293/kubernetes-16.svg",
+                "description": "Skilled in Kubernetes for orchestrating containerized applications, including deploying, scaling, and managing applications with Kubernetes clusters."
+              },
+              {
+                "name": "GraphQL",
+                "image": "https://www.svgrepo.com/show/473649/graphql.svg",
+                "description": "Experienced in GraphQL for building flexible and efficient APIs, including setting up GraphQL servers, defining schemas, and optimizing queries for performance."
+              },
+              {
+                "name": "AWS",
+                "image": "https://www.svgrepo.com/show/448266/aws.svg",
+                "description": "Proficient in AWS for cloud computing solutions, including services like EC2, S3, RDS, Lambda, and CloudFormation for deploying and managing scalable applications."
+              },
+              {
+                "name": "Microservices",
+                "image": "https://www.svgrepo.com/show/355235/services.svg",
+                "description": "Skilled in designing and implementing microservices architectures, including API gateway setup, service discovery, and inter-service communication using tools like Docker and Kubernetes."
+              },
+              {
+                "name": "CI/CD",
+                "image": "https://www.svgrepo.com/show/332277/ci.svg",
+                "description": "Experienced in setting up CI/CD pipelines using tools like Jenkins, GitHub Actions, and GitLab CI, ensuring automated testing, building, and deployment processes."
+              },
+              {
+                "name": "Serverless",
+                "image": "https://www.svgrepo.com/show/448597/serverless.svg",
+                "description": "Proficient in developing serverless applications using AWS Lambda, API Gateway, and other cloud services, enabling scalable and cost-effective solutions."
               }
             ]
           },
           {
-            "description": "后端技术方面，在以下领域展示了熟练的能力：",
+            "description": "作为一名后端开发者，我擅长设计和实现健壮、可扩展且高效的服务器端应用程序。凭借丰富的后端技术经验，我能够构建和管理不仅强大而且可靠和高性能的系统。我的后端专业知识植根于对数据库管理、服务器端编程和基于云的解决方案的深刻理解，这使我成为任何后端项目的多面手和可靠的开发人员。我致力于提供高质量、可扩展和可维护的后端系统，推动现代应用程序取得成功。以下是我主要技能和专长的简要概述：",
             "skills": [
               {
                 "name": "MySQL",
                 "image": "https://www.svgrepo.com/show/394296/mysql.svg",
-                "description": "具有使用MySQL开发和管理关系数据库的经验。"
+                "description": "具有使用 MySQL 开发和管理关系数据库的经验，包括设计复杂查询、性能优化索引以及通过规范化确保数据完整性。"
               },
               {
                 "name": "PostgreSQL",
                 "image": "https://www.svgrepo.com/show/473760/postgresql.svg",
-                "description": "熟练使用PostgreSQL构建稳健且可扩展的数据库解决方案。"
+                "description": "熟练使用 PostgreSQL 构建稳健且可扩展的数据库解决方案，包含 JSONB、全文搜索和使用 PL/pgSQL 编写自定义函数等高级功能。"
               },
               {
                 "name": "NodeJS",
                 "image": "https://www.svgrepo.com/show/473736/nodejs.svg",
-                "description": "擅长使用NodeJS构建高效且可扩展的服务器端应用程序。"
+                "description": "擅长使用 NodeJS 构建高效且可扩展的服务器端应用程序，包括使用 Promises 和 async/await 进行异步编程，以及使用 Express.js 和 Koa 等框架。"
               },
               {
                 "name": "JSON",
                 "image": "https://www.svgrepo.com/show/74933/json-file.svg",
-                "description": "熟练使用JSON实现前后端数据交换。"
+                "description": "熟练使用 JSON 实现前后端数据交换，包括 JSON 模式验证和优化 API 响应的性能。"
               },
               {
                 "name": "TablePlus",
                 "image": "https://www.svgrepo.com/show/532228/table-list.svg",
-                "description": "熟练使用TablePlus进行高效的数据库管理和开发。"
+                "description": "熟练使用 TablePlus 进行高效的数据库管理和开发，包括高级查询、表设计和数据库迁移。"
               },
               {
                 "name": "Postman",
                 "image": "https://www.svgrepo.com/show/342128/postman.svg",
-                "description": "擅长使用 Postman 进行 API 测试和开发，确保高效可靠的 API 集成。"
+                "description": "擅长使用 Postman 进行 API 测试和开发，确保高效可靠的 API 集成，包括创建和自动化测试集合和环境。"
+              },
+              {
+                "name": "Redis",
+                "image": "https://www.svgrepo.com/show/394393/redis.svg",
+                "description": "有使用 Redis 进行缓存、会话管理和实时数据处理的经验，优化应用性能并减轻数据库负载。"
+              },
+              {
+                "name": "Docker",
+                "image": "https://www.svgrepo.com/show/521276/docker-16.svg",
+                "description": "精通 Docker，用于应用程序的容器化，确保开发、测试和生产环境的一致性，并使用 Docker Compose 进行多容器应用程序管理。"
+              },
+              {
+                "name": "Kubernetes",
+                "image": "https://www.svgrepo.com/show/521293/kubernetes-16.svg",
+                "description": "擅长使用 Kubernetes 协调容器化应用程序，包括使用 Kubernetes 集群部署、扩展和管理应用程序。"
+              },
+              {
+                "name": "GraphQL",
+                "image": "https://www.svgrepo.com/show/473649/graphql.svg",
+                "description": "有丰富的 GraphQL 经验，用于构建灵活且高效的 API，包括设置 GraphQL 服务器、定义 schema 和优化查询性能。"
+              },
+              {
+                "name": "AWS",
+                "image": "https://www.svgrepo.com/show/448266/aws.svg",
+                "description": "精通 AWS 云计算解决方案，包括使用 EC2、S3、RDS、Lambda 和 CloudFormation 等服务，部署和管理可扩展的应用程序。"
+              },
+              {
+                "name": "微服务",
+                "image": "https://www.svgrepo.com/show/355235/services.svg",
+                "description": "擅长设计和实现微服务架构，包括设置 API 网关、服务发现和使用 Docker 和 Kubernetes 进行服务间通信。"
+              },
+              {
+                "name": "CI/CD",
+                "image": "https://www.svgrepo.com/show/332277/ci.svg",
+                "description": "有使用 Jenkins、GitHub Actions 和 GitLab CI 等工具设置 CI/CD 管道的经验，确保自动化测试、构建和部署过程。"
+              },
+              {
+                "name": "无服务器",
+                "image": "https://www.svgrepo.com/show/448597/serverless.svg",
+                "description": "精通使用 AWS Lambda、API Gateway 和其他云服务开发无服务器应用程序，实现可扩展且具成本效益的解决方案。"
               }
             ]
           }
         ],
         "DataBase": [
           {
-            "description": "In the realm of database management, I bring forth a wealth of expertise, showcasing proficiency in various key areas.",
+            "description": "In the realm of database management, I bring forth a wealth of expertise, showcasing proficiency in various key areas. My skill set covers a wide range of database technologies and tools, ensuring efficient, reliable, and scalable database operations. Here are some highlights of my capabilities:",
             "skills": [
               {
                 "name": "MySQL",
                 "image": "https://www.svgrepo.com/show/394296/mysql.svg",
-                "description": "Well-versed in MySQL for efficient and reliable database operations, including querying, creating tables, building views, filtering, and sorting."
+                "description": "Well-versed in MySQL for efficient and reliable database operations, including complex querying, indexing, transaction management, creating stored procedures and functions, and optimizing performance through normalization and tuning."
               },
               {
                 "name": "PostgreSQL",
                 "image": "https://www.svgrepo.com/show/473760/postgresql.svg",
-                "description": "Comprehensive knowledge of PostgreSQL for constructing robust and scalable database solutions with advanced functionalities."
+                "description": "Comprehensive knowledge of PostgreSQL for constructing robust and scalable database solutions, with advanced functionalities like JSONB data types, full-text search, partitioning, and custom PL/pgSQL functions."
               },
               {
                 "name": "Tableau",
                 "image": "https://www.svgrepo.com/show/342280/tableau.svg",
-                "description": "Experienced in using Tableau for data visualization, creating insightful graphs and charts to enhance data interpretation."
+                "description": "Experienced in using Tableau for data visualization, creating insightful graphs, dashboards, and interactive reports to enhance data interpretation and decision-making."
               },
               {
                 "name": "Python Data Processing",
                 "image": "https://www.svgrepo.com/show/510150/python-file.svg",
-                "description": "Proficient in Python for data processing using libraries like Pandas, and skilled in creating visualizations with tools like Tableau."
+                "description": "Proficient in Python for data processing using libraries like Pandas and NumPy, skilled in data cleaning, transformation, analysis, and creating visualizations with tools like Matplotlib and Seaborn."
               },
               {
                 "name": "Neo4j",
                 "image": "https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg",
-                "description": "Experienced in designing well-structured and optimized database architectures with Neo4j, tailored to specific application requirements."
+                "description": "Experienced in designing well-structured and optimized database architectures with Neo4j, tailored to specific application requirements, including creating and querying graph databases with Cypher."
+              },
+              {
+                "name": "MongoDB",
+                "image": "https://www.svgrepo.com/show/473729/mongodb.svg",
+                "description": "Skilled in MongoDB for developing flexible and scalable NoSQL database solutions, including designing schemas, creating indexes, and optimizing queries for performance."
+              },
+              {
+                "name": "Elasticsearch",
+                "image": "https://www.svgrepo.com/show/330356/elasticsearch.svg",
+                "description": "Proficient in Elasticsearch for full-text search and analytics, including setting up clusters, indexing data, and creating search queries using the Elasticsearch Query DSL."
+              },
+              {
+                "name": "Redis",
+                "image": "https://www.svgrepo.com/show/394393/redis.svg",
+                "description": "Experienced in Redis for in-memory data structure store, used as a database, cache, and message broker, including data persistence, replication, and high availability setup."
+              },
+              {
+                "name": "Firebase",
+                "image": "https://www.svgrepo.com/show/473606/firebase.svg",
+                "description": "Skilled in Firebase for building real-time applications, including Firestore for NoSQL databases, Firebase Authentication, and integrating with cloud functions."
               }
             ]
           },
           {
-            "description": "在数据库管理领域，我带来了丰富的专业知识，展示了在多个关键领域的熟练能力。",
+            "description": "在数据库管理领域，我拥有丰富的专业知识，精通各个关键领域。我的技能组合涵盖广泛的数据库技术和工具，可确保高效、可靠和可扩展的数据库操作。我在数据库管理方面的专业知识确保我能够处理从关系数据库到 NoSQL 数据库、数据可视化和实时数据处理等各种数据需求。我致力于提供稳健、可扩展和高性能的数据库解决方案，推动现代应用程序取得成功。以下是我的一些能力亮点：",
             "skills": [
               {
                 "name": "MySQL",
                 "image": "https://www.svgrepo.com/show/394296/mysql.svg",
-                "description": "精通MySQL，实现高效可靠的数据库操作，包括查询、创建表、建立视图、筛选和排序。"
+                "description": "精通 MySQL，实现高效可靠的数据库操作，包括复杂查询、索引、事务管理、创建存储过程和函数，并通过规范化和调优优化性能。"
               },
               {
                 "name": "PostgreSQL",
                 "image": "https://www.svgrepo.com/show/473760/postgresql.svg",
-                "description": "全面掌握PostgreSQL，构建稳健且可扩展的数据库解决方案，具备高级功能。"
+                "description": "全面掌握 PostgreSQL，构建稳健且可扩展的数据库解决方案，具备高级功能如 JSONB 数据类型、全文搜索、分区和自定义 PL/pgSQL 函数。"
               },
               {
                 "name": "Tableau",
                 "image": "https://www.svgrepo.com/show/342280/tableau.svg",
-                "description": "具有使用Tableau进行数据可视化的经验，创建有洞察力的图表，增强数据解释。"
+                "description": "具有使用 Tableau 进行数据可视化的经验，创建有洞察力的图表、仪表盘和交互式报告，增强数据解释和决策。"
               },
               {
                 "name": "Python数据处理",
                 "image": "https://www.svgrepo.com/show/510150/python-file.svg",
-                "description": "熟练使用Python进行数据处理，利用Pandas等库，并擅长使用Tableau等工具创建可视化。"
+                "description": "熟练使用 Python 进行数据处理，利用 Pandas 和 NumPy 等库，擅长数据清洗、转换、分析，并使用 Matplotlib 和 Seaborn 等工具创建可视化。"
               },
               {
                 "name": "Neo4j",
                 "image": "https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg",
-                "description": "具有使用Neo4j设计结构良好且优化的数据库架构的经验，满足特定应用需求。"
+                "description": "具有使用 Neo4j 设计结构良好且优化的数据库架构的经验，满足特定应用需求，包括使用 Cypher 创建和查询图数据库。"
+              },
+              {
+                "name": "MongoDB",
+                "image": "https://www.svgrepo.com/show/473729/mongodb.svg",
+                "description": "擅长使用 MongoDB 开发灵活且可扩展的 NoSQL 数据库解决方案，包括设计模式、创建索引和优化查询性能。"
+              },
+              {
+                "name": "Elasticsearch",
+                "image": "https://www.svgrepo.com/show/330356/elasticsearch.svg",
+                "description": "精通 Elasticsearch 用于全文搜索和分析，包括设置集群、索引数据和使用 Elasticsearch 查询 DSL 创建搜索查询。"
+              },
+              {
+                "name": "Redis",
+                "image": "https://www.svgrepo.com/show/394393/redis.svg",
+                "description": "有使用 Redis 进行内存数据结构存储的经验，用作数据库、缓存和消息代理，包括数据持久性、复制和高可用性设置。"
+              },
+              {
+                "name": "Firebase",
+                "image": "https://www.svgrepo.com/show/473606/firebase.svg",
+                "description": "擅长使用 Firebase 构建实时应用程序，包括 Firestore 用于 NoSQL 数据库、Firebase 认证和与云函数集成。"
               }
             ]
           }
         ],
-        "Algorithm": [
+        "Algorithm & AI": [
           {
-            "description": "My proficiency in algorithm development spans various specialized areas, showcasing a deep understanding and practical application of advanced concepts. Here are some key domains I excel in.",
+            "description": "My proficiency in algorithm development spans various specialized areas, showcasing a deep understanding and practical application of advanced concepts.I bring a comprehensive and practical approach to algorithm and AI development, ensuring robust and optimized solutions tailored to specific problem domains. My expertise spans a wide array of advanced algorithms and AI techniques, making me a valuable asset for any project requiring sophisticated data analysis and intelligent system design. Here are some key domains I excel in:",
             "skills": [
               {
                 "name": "Machine Learning",
                 "image": "https://www.svgrepo.com/show/445872/machine-learning.svg",
-                "description": "Specialized in applying machine learning algorithms for data analysis, prediction, and optimization, with expertise in regression, clustering, and classification models."
+                "description": "Specialized in applying machine learning algorithms for data analysis, prediction, and optimization, with expertise in regression, clustering, and classification models. Proficient in using libraries such as scikit-learn, XGBoost, and LightGBM for model development and evaluation."
               },
               {
                 "name": "Deep Learning",
                 "image": "https://www.svgrepo.com/show/473805/tensorflow.svg",
-                "description": "Experienced in deep learning, leveraging neural networks for tasks like image recognition, NLP, and pattern recognition, with practical experience in CNNs and RNNs."
+                "description": "Experienced in deep learning, leveraging neural networks for tasks like image recognition, NLP, and pattern recognition, with practical experience in CNNs, RNNs, and frameworks like TensorFlow, Keras, and PyTorch."
               },
               {
                 "name": "Natural Language Processing",
                 "image": "https://www.svgrepo.com/show/64578/nlp-neurolinguistic-programation.svg",
-                "description": "Adept at developing NLP algorithms for text classification, sentiment analysis, and language generation, enabling applications to understand and generate human-like language."
+                "description": "Adept at developing NLP algorithms for text classification, sentiment analysis, and language generation, enabling applications to understand and generate human-like language. Proficient in using libraries such as NLTK, SpaCy, and Hugging Face Transformers."
               },
               {
                 "name": "Recommender Systems",
                 "image": "https://www.svgrepo.com/show/324465/neuron-connections-neural-network.svg",
-                "description": "Hands-on experience in developing recommender systems using collaborative filtering, content-based filtering, and hybrid approaches to analyze user preferences and behavior."
+                "description": "Hands-on experience in developing recommender systems using collaborative filtering, content-based filtering, and hybrid approaches to analyze user preferences and behavior. Skilled in using techniques such as matrix factorization, SVD, and incorporating deep learning for recommendation."
+              },
+              {
+                "name": "Optimization Algorithms",
+                "image": "https://www.svgrepo.com/show/509897/double-up-chevron.svg",
+                "description": "Proficient in optimization algorithms for solving complex problems, including linear programming, integer programming, and metaheuristic methods such as genetic algorithms and simulated annealing."
+              },
+              {
+                "name": "Graph Algorithms",
+                "image": "https://www.svgrepo.com/show/525935/graph.svg",
+                "description": "Experienced in graph algorithms for solving network-related problems, including shortest path algorithms (Dijkstra's, A*), minimum spanning tree, and graph traversal techniques (DFS, BFS)."
+              },
+              {
+                "name": "Sorting Algorithms",
+                "image": "https://www.svgrepo.com/show/489625/sorting-left.svg",
+                "description": "Skilled in various sorting algorithms including quicksort, mergesort, heapsort, and bubble sort, optimizing for different use cases and ensuring efficient data ordering."
+              },
+              {
+                "name": "Search Algorithms",
+                "image": "https://www.svgrepo.com/show/532555/search.svg",
+                "description": "Proficient in search algorithms like binary search, linear search, and search techniques on data structures like trees (e.g., BST) and graphs (e.g., BFS, DFS)."
+              },
+              {
+                "name": "Dynamic Programming",
+                "image": "https://www.svgrepo.com/show/497411/programming-arrow.svg",
+                "description": "Experienced in dynamic programming for solving complex problems by breaking them down into simpler subproblems, with applications in optimization problems and algorithm design."
+              },
+              {
+                "name": "Divide and Conquer",
+                "image": "https://www.svgrepo.com/show/507647/divide-square.svg",
+                "description": "Proficient in divide and conquer techniques for problem-solving, including algorithms like quicksort and mergesort, ensuring efficient solution derivation by recursive problem division."
+              },
+              {
+                "name": "Greedy Algorithms",
+                "image": "https://www.svgrepo.com/show/481455/snake-6.svg",
+                "description": "Skilled in greedy algorithms for optimization problems, ensuring locally optimal choices at each step, with applications in problems like Huffman coding and activity selection."
+              },
+              {
+                "name": "Backtracking",
+                "image": "https://www.svgrepo.com/show/370886/undo-curve.svg",
+                "description": "Experienced in backtracking algorithms for constraint satisfaction problems, such as solving puzzles (e.g., Sudoku) and combinatorial problems (e.g., N-Queens problem)."
               }
             ]
           },
           {
-            "description": "我在算法开发方面具备深厚的知识，展现出对各种专业领域的深刻理解和实际应用。以下是我在一些关键领域的突出表现。",
+            "description": "我在算法开发方面的能力横跨多个专业领域，展示了对先进概念的深刻理解和实际应用。我为算法和人工智能开发带来了全面而实用的方法，确保为特定问题领域量身定制稳健而优化的解决方案。我的专业知识涵盖了一系列先进的算法和人工智能技术，使我成为任何需要复杂数据分析和智能系统设计的项目的宝贵资产。以下是我擅长的一些关键领域：",
             "skills": [
               {
                 "name": "机器学习",
                 "image": "https://www.svgrepo.com/show/445872/machine-learning.svg",
-                "description": "熟悉应用机器学习算法和数据挖掘、预测和优化，精通回归、聚类、分类、随机森林等基本模型，有实际项目开发经验，通过对 stable diffusion的图像进行识别，生成文字描述。"
+                "description": "熟悉应用机器学习算法和数据挖掘、预测和优化，精通回归、聚类、分类、随机森林等基本模型，有实际项目开发经验，通过对 stable diffusion 的图像进行识别，生成文字描述。精通使用 scikit-learn、XGBoost 和 LightGBM 等库进行模型开发和评估。"
               },
               {
                 "name": "深度学习",
                 "image": "https://www.svgrepo.com/show/473805/tensorflow.svg",
-                "description": "具备深度学习经验，利用神经网络处理图像识别、自然语言处理和模式识别任务，实际操作过CNN和RNN，有实际项目开发经验，训练模型，一共有 8 种情绪，跟据图片判断人类的情绪。"
+                "description": "具备深度学习经验，利用神经网络处理图像识别、自然语言处理和模式识别任务，实际操作过 CNN 和 RNN，有实际项目开发经验，训练模型，一共有 8 种情绪，根据图片判断人类的情绪。熟练使用 TensorFlow、Keras 和 PyTorch 框架。"
               },
               {
                 "name": "自然语言处理",
                 "image": "https://www.svgrepo.com/show/64578/nlp-neurolinguistic-programation.svg",
-                "description": "熟悉 NLP 算法和模型，熟悉 NLP 应用程序构建的通用流程，熟悉通过预训练模型构建NLP 程序，有实际项目开发经验，为一篇文章生成标题，使用 T5 模型构建。"
+                "description": "熟悉 NLP 算法和模型，熟悉 NLP 应用程序构建的通用流程，熟悉通过预训练模型构建 NLP 程序，有实际项目开发经验，为一篇文章生成标题，使用 T5 模型构建。精通使用 NLTK、SpaCy 和 Hugging Face Transformers 等库。"
               },
               {
                 "name": "推荐系统",
                 "image": "https://www.svgrepo.com/show/324465/neuron-connections-neural-network.svg",
-                "description": "拥有开发推荐系统的实际经验，利用协同过滤、基于内容的过滤和混合方法分析用户偏好和行为，有实际项目开发经验，针对用户用餐数据，使用协同过滤、基于内容的过滤为用户生成推荐。"
+                "description": "拥有开发推荐系统的实际经验，利用协同过滤、基于内容的过滤和混合方法分析用户偏好和行为，有实际项目开发经验，针对用户用餐数据，使用协同过滤、基于内容的过滤为用户生成推荐。熟练使用矩阵分解、SVD 和深度学习进行推荐。"
+              },
+              {
+                "name": "优化算法",
+                "image": "https://www.svgrepo.com/show/509897/double-up-chevron.svg",
+                "description": "精通优化算法解决复杂问题，包括线性规划、整数规划和元启发式方法，如遗传算法和模拟退火。"
+              },
+              {
+                "name": "图算法",
+                "image": "https://www.svgrepo.com/show/525935/graph.svg",
+                "description": "具有图算法解决网络相关问题的经验，包括最短路径算法（Dijkstra、A*）、最小生成树和图遍历技术（DFS、BFS）。"
+              },
+              {
+                "name": "排序算法",
+                "image": "https://www.svgrepo.com/show/489625/sorting-left.svg",
+                "description": "擅长各种排序算法，包括快速排序、归并排序、堆排序和冒泡排序，针对不同用例优化数据排序效率。"
+              },
+              {
+                "name": "搜索算法",
+                "image": "https://www.svgrepo.com/show/532555/search.svg",
+                "description": "熟练掌握搜索算法，如二分搜索、线性搜索和树（如 BST）和图（如 BFS、DFS）上的搜索技术。"
+              },
+              {
+                "name": "动态规划",
+                "image": "https://www.svgrepo.com/show/497411/programming-arrow.svg",
+                "description": "具有动态规划解决复杂问题的经验，通过将问题分解为更简单的子问题，应用于优化问题和算法设计。"
+              },
+              {
+                "name": "分治算法",
+                "image": "https://www.svgrepo.com/show/507647/divide-square.svg",
+                "description": "精通分治技术解决问题，包括快速排序和归并排序等算法，通过递归问题划分确保高效解决方案。"
+              },
+              {
+                "name": "贪心算法",
+                "image": "https://www.svgrepo.com/show/481455/snake-6.svg",
+                "description": "擅长贪心算法解决优化问题，确保每一步的局部最优选择，应用于如霍夫曼编码和活动选择等问题。"
+              },
+              {
+                "name": "回溯算法",
+                "image": "https://www.svgrepo.com/show/370886/undo-curve.svg",
+                "description": "具有回溯算法解决约束满足问题的经验，如解决数独等谜题和组合问题（如 N 皇后问题）。"
               }
             ]
           }
         ],
         "Other": [
           {
-            "description": "My expertise extends beyond algorithmic development, encompassing a diverse set of skills and technologies that contribute to comprehensive project execution. Here are some additional areas where I excel.",
+            "description": "My expertise extends beyond algorithmic development, encompassing a diverse set of skills and technologies that contribute to comprehensive project execution. My diverse skill set ensures that I can handle various aspects of software development, from version control and secure server management to containerization and project management. This versatility enables me to contribute effectively to any project, ensuring high-quality, efficient, and scalable solutions. Here are some additional areas where I excel:",
             "skills": [
               {
                 "name": "GitHub",
                 "image": "https://www.svgrepo.com/show/512317/github-142.svg",
-                "description": "Proficient in version control, leveraging GitHub for collaborative development, code review, and repository management."
+                "description": "Proficient in version control, leveraging GitHub for collaborative development, code review, and repository management. Skilled in using Git workflows, managing pull requests, and implementing continuous integration with GitHub Actions."
               },
               {
                 "name": "SSH",
                 "image": "https://www.svgrepo.com/show/501028/terminal.svg",
-                "description": "Skilled in SSH for secure server access, remote development, and file transfer, enhancing development process security and efficiency."
+                "description": "Skilled in SSH for secure server access, remote development, and file transfer, enhancing development process security and efficiency. Proficient in generating and managing SSH keys, configuring SSH tunnels, and securing remote servers."
               },
               {
                 "name": "Linux",
                 "image": "https://www.svgrepo.com/show/503411/linux.svg",
-                "description": "Experienced in Linux-based environments for command-line operations, system administration, and shell scripting."
+                "description": "Experienced in Linux-based environments for command-line operations, system administration, and shell scripting. Proficient in managing system services, configuring network settings, and automating tasks using Bash scripts."
               },
               {
                 "name": "Zsh",
                 "image": "https://www.svgrepo.com/show/341135/term.svg",
-                "description": "Familiar with Zsh tools, familiar with command wrapping and common plug-ins, can greatly improve work efficiency."
+                "description": "Familiar with Zsh tools, familiar with command wrapping and common plug-ins, can greatly improve work efficiency. Skilled in configuring Oh My Zsh, creating custom aliases, and integrating productivity-enhancing plugins."
               },
               {
                 "name": "Docker",
                 "image": "https://www.svgrepo.com/show/521276/docker-16.svg",
-                "description": "Experienced in Docker implementation for containerization, ensuring seamless deployment and scalability of applications."
+                "description": "Experienced in Docker implementation for containerization, ensuring seamless deployment and scalability of applications. Proficient in writing Dockerfiles, managing Docker Compose for multi-container applications, and optimizing container performance."
               },
               {
                 "name": "Jira",
                 "image": "https://www.svgrepo.com/show/473672/jira.svg",
-                "description": "Experienced in Jira for project management and issue tracking, facilitating Agile workflows and team collaboration."
+                "description": "Experienced in Jira for project management and issue tracking, facilitating Agile workflows and team collaboration. Skilled in creating and managing epics, user stories, tasks, and setting up Scrum and Kanban boards."
               },
               {
                 "name": "Agile/Scrum",
                 "image": "https://www.svgrepo.com/show/372946/scrum.svg",
-                "description": "Experienced in Agile and Scrum methodologies for iterative and collaborative software development."
+                "description": "Experienced in Agile and Scrum methodologies for iterative and collaborative software development. Proficient in conducting sprint planning, daily stand-ups, sprint reviews, and retrospectives to ensure continuous improvement."
               },
               {
                 "name": "Jenkins",
-
                 "image": "https://www.svgrepo.com/show/445828/jenkins.svg",
-                "description": "Skilled in using Jenkins for continuous integration and continuous delivery (CI/CD) to automate the software development process."
+                "description": "Skilled in using Jenkins for continuous integration and continuous delivery (CI/CD) to automate the software development process. Proficient in creating Jenkins pipelines, integrating with version control systems, and automating testing and deployment processes."
               },
               {
                 "name": "Kubernetes",
                 "image": "https://www.svgrepo.com/show/521293/kubernetes-16.svg",
-                "description": "Experienced in Kubernetes for container orchestration, managing containerized applications in a clustered environment."
+                "description": "Experienced in Kubernetes for container orchestration, managing containerized applications in a clustered environment. Proficient in deploying, scaling, and maintaining applications using Kubernetes, Helm charts, and managing Kubernetes clusters."
               },
               {
                 "name": "Postman",
                 "image": "https://www.svgrepo.com/show/342128/postman.svg",
-                "description": "Skilled in using Postman for API testing and development, ensuring efficient and reliable API integrations."
+                "description": "Skilled in using Postman for API testing and development, ensuring efficient and reliable API integrations. Proficient in creating and automating test collections, managing environments, and utilizing Newman for continuous integration."
               },
               {
                 "name": "Vagrant",
                 "image": "https://www.svgrepo.com/show/306915/vagrant.svg",
-                "description": "Familiar with Vagrant for managing and configuring virtualized development environments, improving development consistency."
+                "description": "Familiar with Vagrant for managing and configuring virtualized development environments, improving development consistency. Skilled in writing Vagrantfiles, provisioning with Ansible or Shell scripts, and managing multi-machine environments."
               }
             ]
           },
           {
-            "description": "我的专业知识不仅限于算法和开发，还涵盖了一系列其他IT技能，有助于全面执行项目。以下是我在其他方面的卓越表现。",
+            "description": "我的专长不仅限于算法开发，还包括有助于全面执行项目的各种技能和技术。从版本控制和安全服务器管理到容器化和项目管理，我所掌握的各种技能确保我能够处理软件开发的各个方面。这种多才多艺的能力使我能够为任何项目做出有效贡献，确保提供高质量、高效率和可扩展的解决方案。以下是我擅长的其他领域：",
             "skills": [
               {
                 "name": "GitHub",
                 "image": "https://www.svgrepo.com/show/512317/github-142.svg",
-                "description": "精通版本控制，利用 GitHub 进行协作开发、代码审查和仓库管理。"
+                "description": "精通版本控制，利用 GitHub 进行协作开发、代码审查和仓库管理。熟练掌握 Git 工作流、管理拉取请求以及实施 GitHub Actions 的持续集成。"
               },
               {
                 "name": "SSH",
                 "image": "https://www.svgrepo.com/show/501028/terminal.svg",
-                "description": "擅长使用 SSH 进行安全的服务器访问、远程开发和文件传输，提升开发过程的安全性和效率。"
+                "description": "擅长使用 SSH 进行安全的服务器访问、远程开发和文件传输，提升开发过程的安全性和效率。熟练生成和管理 SSH 密钥、配置 SSH 隧道以及保护远程服务器。"
               },
               {
                 "name": "Linux",
                 "image": "https://www.svgrepo.com/show/503411/linux.svg",
-                "description": "有在基于 Linux 的环境中进行命令行操作、系统管理和 Shell 脚本编写的经验。"
+                "description": "有在基于 Linux 的环境中进行命令行操作、系统管理和 Shell 脚本编写的经验。熟练管理系统服务、配置网络设置以及使用 Bash 脚本自动化任务。"
               },
               {
                 "name": "Zsh",
                 "image": "https://www.svgrepo.com/show/341135/term.svg",
-                "description": "熟悉 Zsh 工具，熟练使用命令包装和常见插件，可以大大提高工作效率。"
+                "description": "熟悉 Zsh 工具，熟练使用命令包装和常见插件，可以大大提高工作效率。熟练配置 Oh My Zsh、创建自定义别名以及集成提高生产力的插件。"
               },
               {
                 "name": "Docker",
                 "image": "https://www.svgrepo.com/show/521276/docker-16.svg",
-                "description": "有 Docker 实施的经验，用于容器化，确保应用的无缝部署和可扩展性。"
+                "description": "有 Docker 实施的经验，用于容器化，确保应用的无缝部署和可扩展性。熟练编写 Dockerfile、管理 Docker Compose 多容器应用以及优化容器性能。"
               },
               {
                 "name": "Jira",
                 "image": "https://www.svgrepo.com/show/473672/jira.svg",
-                "description": "有使用 Jira 进行项目管理和问题跟踪的经验，促进敏捷工作流程和团队协作。"
+                "description": "有使用 Jira 进行项目管理和问题跟踪的经验，促进敏捷工作流程和团队协作。熟练创建和管理史诗、用户故事、任务以及设置 Scrum 和 Kanban 板。"
               },
               {
                 "name": "敏捷/Scrum",
                 "image": "https://www.svgrepo.com/show/372946/scrum.svg",
-                "description": "有丰富的敏捷和 Scrum 方法论经验，用于迭代和协作软件开发。"
+                "description": "有丰富的敏捷和 Scrum 方法论经验，用于迭代和协作软件开发。熟练进行冲刺规划、每日站会、冲刺评审和回顾，以确保持续改进。"
               },
               {
                 "name": "Jenkins",
                 "image": "https://www.svgrepo.com/show/445828/jenkins.svg",
-                "description": "擅长使用 Jenkins 进行持续集成和持续交付（CI/CD），以自动化软件开发过程。"
+                "description": "擅长使用 Jenkins 进行持续集成和持续交付（CI/CD），以自动化软件开发过程。熟练创建 Jenkins 流水线、与版本控制系统集成以及自动化测试和部署过程。"
               },
               {
                 "name": "Kubernetes",
                 "image": "https://www.svgrepo.com/show/521293/kubernetes-16.svg",
-                "description": "有 Kubernetes 容器编排的经验，在集群环境中管理容器化应用。"
+                "description": "有 Kubernetes 容器编排的经验，在集群环境中管理容器化应用。熟练使用 Kubernetes、Helm 图表部署、扩展和维护应用程序以及管理 Kubernetes 集群。"
               },
               {
                 "name": "Postman",
                 "image": "https://www.svgrepo.com/show/342128/postman.svg",
-                "description": "擅长使用 Postman 进行 API 测试和开发，确保高效可靠的 API 集成。"
+                "description": "擅长使用 Postman 进行 API 测试和开发，确保高效可靠的 API 集成。熟练创建和自动化测试集合、管理环境以及利用 Newman 进行持续集成。"
               },
               {
                 "name": "Vagrant",
                 "image": "https://www.svgrepo.com/show/306915/vagrant.svg",
-                "description": "熟悉 Vagrant，用于管理和配置虚拟化开发环境，提高开发一致性。"
+                "description": "熟悉 Vagrant，用于管理和配置虚拟化开发环境，提高开发一致性。熟练编写 Vagrantfile、使用 Ansible 或 Shell 脚本进行预配置以及管理多机环境。"
               }
             ]
           }
