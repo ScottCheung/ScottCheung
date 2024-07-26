@@ -176,7 +176,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
     <AnimatePresence>
       <motion.div
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className={`w-full z-50  duration-700 fixed  ${
+        className={`w-full z-50 h-0 duration-700 fixed   ${
           isScrolling || Components.NavBar === 'hide'
             ? '  -top-[100px]'
             : ' top-0 '
@@ -240,7 +240,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                     >
                       <motion.img
                         layout
-                        className={`flex items-center required justify-center m-4  animate__animated animate__zoomIn   ${isTop ? 'w-32 h-32 rounded-full' : 'w-18 h-18 md:w-22 md:h-22 lg:w-28 lg:h-28 rounded-[14px]'} shadow-lg`}
+                        className={`flex items-center required justify-center m-4  animate__animated animate__zoomIn   ${isTop ? 'w-32 h-32 rounded-lg' : 'w-[30px] h-[30px] md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-[7px]'} shadow-lg`}
                         src='https://3o.hk/images/2024/01/14/avatar.th.jpg'
                         alt="Xianzhe's Page"
                       />
@@ -390,7 +390,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                           animationDelay: `${navbarItem.length * 0.2}s`,
                         }}
                         type='button'
-                        className={`p-8 transition-none animate__animated animate__fadeInUp `}
+                        className={`py-6 pl-6 transition-none animate__animated animate__fadeInUp `}
                         onClick={(e) =>
                           e.preventDefault() &
                           setIsOpened(!isOpened) &

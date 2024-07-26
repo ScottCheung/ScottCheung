@@ -69,8 +69,8 @@ export default function Resume() {
     return parts;
   };
 
-  const normaltext = 'text-[18px] text-jusify transition-all duration-1000';
-  const h2 = `flex items-center text-[30px] font-[700] text-${
+  const normaltext = ' text-[18px] text-jusify transition-all duration-1000';
+  const h2 = `flex tracking-wide items-center text-[30px] font-[700] text-${
     EmphasizeColorLists[forceColor]
   }-${colorDepth} group-hover:text-${
     EmphasizeColorLists[forceColor]
@@ -80,14 +80,14 @@ export default function Resume() {
   const divisionline = `flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:opacity-100  opacity-50 transition-all duration-1000`;
   const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-10 transition-all duration-1000`;
 
-  const h3 = `flex items-center text-[20px] font-semibold flex `;
-  const h4 = `flex items-center text-[15px] text-gray-500 flex items-center`;
+  const h3 = `flex tracking-wide items-center text-[20px] font-semibold flex `;
+  const h4 = `flex tracking-wide items-center text-[15px] text-gray-500 flex items-center`;
   const timetext = `flex items-center text-2xl font-[500] text-gray-400 transition-all duration-1000`;
   const whymeIcon = `text-[20px] flex justify-center items-center text-gray-400 group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
   const whymelable = `text-[15px] text-gray-400 group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
   const contentContainer = `flex-1 flex flex-col justify-between`;
   const laptopMode = window.innerWidth > 1024;
-  const strong = `block mr-2 font-semibold pr-1 -ml-1 text-${EmphasizeColorLists[forceColor]}-${colorDepth - 100} transition-all duration-1000`;
+  const strong = `flex mr-2 tracking-wide font-bold pr-1 -ml-1 text-${EmphasizeColorLists[forceColor]}-${colorDepth - 100} transition-all duration-1000`;
 
   return (
     <div className='flex w-full bg-white md:justify-center'>
@@ -125,10 +125,9 @@ export default function Resume() {
    ${printMode ? 'text-[100px]' : isTop ? 'text-[50px] md:text-[80px]  lg:text-[100px]' : 'text-[30px] md:text-[50px]  lg:text-[50px]'}  font-[100] transition-all duration-1000`}
             >
               {cvData.header.name}
-              {/* {isTop && "top"} */}
             </h1>
             <div
-              className={`flex justify-center items-center gap-x-[15px] flex-wrap  ${printMode ? '' : 'mt-[25px]'}`}
+              className={`flex justify-center items-center gap-x-[15px] flex-nowrap  ${printMode ? '' : 'mt-[25px]'}`}
             >
               {cvData.header.contacts.map((contact, index) => (
                 <React.Fragment key={contact.name}>
@@ -136,7 +135,7 @@ export default function Resume() {
                     target='_blank'
                     rel='noopener noreferrer'
                     href={contact.link}
-                    className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} flex justify-center items-center ${
+                    className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} text-nowrap flex justify-center items-center ${
                       printMode
                         ? 'text-[18px] gap-x-[5px]'
                         : 'gap-x-[10px] text-[18px]'
@@ -207,7 +206,7 @@ export default function Resume() {
                 </div>
               )}
               {/* Highlights*/}
-              <div className='flex flex-wrap w-full justify-center md:justify-between gap-[30px]'>
+              <div className='flex flex-nowrap w-full justify-center md:justify-between gap-[30px]'>
                 {section.highlights &&
                   section.highlights.map((KeyFeature, index) => (
                     <React.Fragment key={index}>
@@ -258,17 +257,17 @@ export default function Resume() {
                   ([category, list], index) => (
                     <div
                       key={index}
-                      className='flex justify-between items-start md:items-center gap-x-[30px] py-[15px] md:py-[3px]'
+                      className='flex justify-between leading-8 mb-2 items-start md:items-center gap-x-[30px] py-[15px] md:py-[3px]'
                     >
                       <h2 className={h3}>{category}</h2>
 
                       <span className={division}></span>
 
                       <div
-                        className={`text-right text-[15px] ${printMode ? 'max-w-[70%]' : 'max-w-[80%]'} text-gray-600`}
+                        className={`text-right  text-[15px] ${printMode ? 'max-w-[70%]' : 'max-w-[80%]'} text-gray-600`}
                       >
                         {list.map((tag, index) => (
-                          <React.Fragment key={index} className='group'>
+                          <React.Fragment key={index} className=' group'>
                             <p className='hidden group-hover:flex animate-animated animate-zoomIn'>
                               Click to search "{tag}" on Google
                             </p>
@@ -405,17 +404,19 @@ export default function Resume() {
                       </div>
 
                       <div className={`${normaltext} pl-[20px]`}>
-                        <p>
-                          <strong className={strong}>Skill:</strong>{' '}
-                          {project.skill.join(', ')}
+                        <p className='flex '>
+                          <strong className={strong}>Skill:</strong>
+                          <p className='font-black text-black'>
+                            {project.skill.join(' | ')}
+                          </p>
                         </p>
                         <p>
                           <strong className={strong}>Contribution:</strong>{' '}
                         </p>
                         <ul className='pl-5'>
                           {project.contribution.map((item, index) => (
-                            <li key={index} className='mb-2 text-justify'>
-                              <strong className={strong}>
+                            <li key={index} className='mb-4 text-justify'>
+                              <strong className={strong + ' '}>
                                 ▸ {item.title} :
                               </strong>
                               {parseText(item.description)}

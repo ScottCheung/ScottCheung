@@ -40,7 +40,7 @@
     {
       "title": "Summary",
       "icon": "flex items-center fi fi-rr-user",
-      "content": "Results-driven Front-End Developer with over two years of development experience and seven years in design. Specializes in JavaScript, Tailwind CSS, and Framer Motion, with proven expertise in crafting engaging user experiences and enhancing user interaction. Adept at designing and deploying aesthetically pleasing, reliable, and fluid software systems. Holds a Master's degree in IT with a focus on FrontEnd development and AI from UNSW. Possesses a five-year visa, eliminating the need for sponsorship. Fluent in English and Mandarin, enhancing communication in multicultural teams. Discover more at https://xianzhe.site."
+      "content": "Never say \"no\" and Results-driven Front-End Developer with over two years of development experience and seven years in design. Specializes in JavaScript, Tailwind CSS, and Framer Motion, with proven expertise in crafting engaging user experiences and enhancing user interaction. Adept at designing and deploying aesthetically pleasing, reliable, and fluid software systems. Holds a Master's degree in IT with a focus on FrontEnd development and AI from UNSW. Possesses a five-year visa, eliminating the need for sponsorship. Fluent in English and Mandarin, enhancing communication in multicultural teams. Discover more at https://xianzhe.site."
     },
     {
       "title": "Highlights",
@@ -82,6 +82,63 @@
       ]
     },
     {
+      "title": "Skill",
+      "icon": "flex items-center fi fi-rr-tool-box",
+      "skills": {
+        "FrontEnd": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "TypeScript",
+          "Next.js",
+          "Node.js",
+          "React",
+          "Redux",
+          "Tailwind",
+          "Framer",
+          "Photoshop",
+          "GraphQL",
+          "Webpack",
+          "RESTful APIs",
+          "SEO Optimization",
+          "Performance Optimization",
+          "UI/UX design",
+          "CSS libs",
+          "Animation libs"
+        ],
+        "Database": [
+          "MySQL",
+          "PostgreSQL",
+          "Tableau",
+          "SQLite",
+          "PowerBI",
+          "Python",
+          "Neo4j",
+          "Pandas"
+        ],
+        "AI-Algorithm": [
+          "Machine Learning",
+          "Deep Learning",
+          "Natural Language",
+          "Recommender System"
+        ],
+        "IT-Tool": [
+          "Github",
+          "SSH",
+          "Docker",
+          "Zsh",
+          "Vim",
+          "Docker",
+          "Jira",
+          "Agile/Scrum",
+          "Jenkins",
+          "Kubernetes",
+          "Postman",
+          "Vagrant"
+        ]
+      }
+    },
+    {
       "title": "Education",
       "icon": "flex items-center fi fi-rr-graduation-cap",
       "edus": [
@@ -111,7 +168,7 @@
     },
 
     {
-      "title": "Work Experience",
+      "title": "Projects",
       "icon": "flex items-center fi fi-rr-city",
       "projects": [
         {
@@ -179,63 +236,6 @@
           "period": "Oct 2023 - Now"
         }
       ]
-    },
-    {
-      "title": "Skill",
-      "icon": "flex items-center fi fi-rr-tool-box",
-      "skills": {
-        "FrontEnd": [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
-          "Next.js",
-          "Node.js",
-          "React",
-          "Redux",
-          "Tailwind",
-          "Framer",
-          "Photoshop",
-          "GraphQL",
-          "Webpack",
-          "RESTful APIs",
-          "SEO Optimization",
-          "Performance Optimization",
-          "UI/UX design",
-          "CSS libs",
-          "Animation libs"
-        ],
-        "Database": [
-          "MySQL",
-          "PostgreSQL",
-          "Tableau",
-          "SQLite",
-          "PowerBI",
-          "Python",
-          "Neo4j",
-          "Pandas"
-        ],
-        "AI-Algorithm": [
-          "Machine Learning",
-          "Deep Learning",
-          "Natural Language",
-          "Recommender System"
-        ],
-        "IT-Tool": [
-          "Github",
-          "SSH",
-          "Docker",
-          "Zsh",
-          "Vim",
-          "Docker",
-          "Jira",
-          "Agile/Scrum",
-          "Jenkins",
-          "Kubernetes",
-          "Postman",
-          "Vagrant"
-        ]
-      }
     },
     {
       "title": "Why Me",
