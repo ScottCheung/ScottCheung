@@ -116,7 +116,7 @@ export default function Resume({ print }) {
         <link rel='stylesheet' href='../style/style.css' type='text/css' />
         <div
           className={`${
-            printMode ? printWidth : 'w-[1350px] mx-auto'
+            printMode ? printWidth : 'w-full max-w-[1350px] mx-auto'
           } min-h-[100vh] flex flex-col`}
         >
           <div className='text-center '>
@@ -127,7 +127,7 @@ export default function Resume({ print }) {
                 }
               }
               className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} tracking-widest font-black 
-   ${printMode ? 'text-[70px]  mb-[20px]' : isTop ? ' text-[50px] md:text-[60px]  lg:text-[70px]' : 'text-[30px] md:text-[50px]  lg:text-[50px]'}  font-[100] transition-all duration-1000`}
+   ${printMode ? 'text-[70px]  mb-[20px]' : isTop ? ' text-[50px] md:text-[75px]  lg:text-[100px]' : 'text-[30px] md:text-[50px]  lg:text-[50px]'}  font-[100] transition-all duration-1000`}
             >
               {cvData.header.name}
             </h1>
@@ -168,7 +168,7 @@ export default function Resume({ print }) {
                 rel='noopener noreferrer'
                 href={section.href}
                 className={`flex justify-between items-center gap-x-[20px] mt-[20px] mb-[10px] ${
-                  section.href && 'group'
+                  section.href && 'lg:group'
                 }`}
               >
                 <h2 className={h2}>
@@ -205,7 +205,7 @@ export default function Resume({ print }) {
                     textJustify: 'inter-word',
                     width: '100%',
                   }}
-                  className={normaltext + ' group'}
+                  className={normaltext + ' lg:group'}
                 >
                   <p className='group-hover:leading-[40px] leading-[30px] transition-all '>
                     {parseText(section.content)}
@@ -233,7 +233,7 @@ export default function Resume({ print }) {
                           target='_blank'
                           rel='noopener noreferrer'
                           className={`flex flex-col w-full item-center justify-center ${
-                            KeyFeature.href ? `group` : 'cursor-default'
+                            KeyFeature.href ? `lg:group` : 'cursor-default'
                           } transition-all duration-1000`}
                         >
                           <div className={whymeIcon}>
@@ -278,7 +278,7 @@ export default function Resume({ print }) {
                   ))}
               </div>
               {/* Skills */}
-              <div className='group'>
+              <div className='lg:group'>
                 {' '}
                 {section.skills &&
                   Object.entries(section.skills).map(
@@ -295,7 +295,7 @@ export default function Resume({ print }) {
                           className={`text-right  flex flex-wrap justify-end items-center text-[15px] ${printMode ? 'max-w-[70%]' : 'max-w-[80%]'} text-gray-600`}
                         >
                           {list.map((tag, index) => (
-                            <React.Fragment key={index} className=' group'>
+                            <React.Fragment key={index} className=' lg:group'>
                               <p className='hidden hover:flex animate-animated animate-zoomIn'>
                                 Click to search "{tag}" on Google
                               </p>
@@ -324,7 +324,7 @@ export default function Resume({ print }) {
               {section.edus && (
                 <div className='flex justify-between items-center gap-x-[60px]'>
                   {section.edus.map((edu, index) => (
-                    <React.Fragment key={index} className=' group'>
+                    <React.Fragment key={index}>
                       <a
                         href={edu.link}
                         target='_blank'
@@ -332,7 +332,7 @@ export default function Resume({ print }) {
                         key={index}
                         className={
                           edu.link &&
-                          'group cursor-pointer  flex-1 w-full mt-3 flex justify-between items-center'
+                          'lg:group cursor-pointer  flex-1 w-full mt-3 flex justify-between items-center'
                         }
                       >
                         <div className={contentContainer}>
@@ -404,7 +404,7 @@ export default function Resume({ print }) {
                       ' cursor-pointer mt-3 flex justify-between items-start'
                     }
                   >
-                    <div className={contentContainer + ' group'}>
+                    <div className={contentContainer + ' lg:group'}>
                       <div className='flex-col items-center justify-start md:flex md:flex-row md:justify-between'>
                         <h3 className={workPartTitle}>
                           <div className='flex'></div>
@@ -498,7 +498,7 @@ export default function Resume({ print }) {
                     key={index}
                     className={
                       project.link &&
-                      'group cursor-pointer mb-6 flex justify-between items-start'
+                      'lg:group cursor-pointer mb-6 flex justify-between items-start'
                     }
                   >
                     <div className={contentContainer}>
@@ -597,7 +597,7 @@ export default function Resume({ print }) {
                         target='_blank'
                         rel='noopener noreferrer'
                         href={whyme.href}
-                        className={`group`}
+                        className={`lg:group`}
                       >
                         <div key={index} className={whymeIcon}>
                           <i className={whyme.icon}></i>
