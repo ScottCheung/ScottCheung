@@ -44,9 +44,15 @@
       "scondMenu": [
         {
           "link": "/resume",
-          "name": ["Resume", "简历"],
+          "name": ["CV view", "简历预览"],
           "icon": "fi-rr-memo-pad",
-          "status": "fi-sr-unlock"
+          "status": "fi-sr-eye"
+        },
+        {
+          "link": "https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Scott%20Cheung%20%7C%20sky.pdf",
+          "name": ["Download CV", "简历下载"],
+          "icon": "fi-rr-memo-pad",
+          "status": "fi-br-download"
         },
         {
           "link": "/coverletters",
@@ -92,7 +98,7 @@
           "icon": "fi-sr-picture",
           "name": ["Gallery", "图 库"],
           "link": "/gallery",
-          "status": "fi-sr-unlock"
+          "status": "fi-sr-eye"
         },
         {
           "icon": "fi-sr-followcollection",
@@ -120,13 +126,13 @@
           "link": "/tool",
           "name": ["Tools panel", "工具仪表"],
           "icon": "fi-rr-tools",
-          "status": "fi-sr-unlock"
+          "status": "fi-sr-eye"
         },
         {
           "link": "/table2json",
           "name": ["Data converter", "数据转换"],
           "icon": "fi-rr-database",
-          "status": "fi-sr-unlock"
+          "status": "fi-sr-eye"
         }
       ]
     },
@@ -262,7 +268,7 @@
       "id": "/table2json",
       "label": ["Data converter", "数据转换"],
       "icon": "fi-rr-database",
-      "status": "fi-sr-unlock"
+      "status": "fi-sr-eye"
     }
   ],
   "Lifes": [
@@ -288,7 +294,7 @@
       "link": "/gallery",
       "pic": "3o.hk/images/2024/01/19/AestheticAttitude.md.png",
       "des": "It collect picture I take ~",
-      "status": "fi-sr-unlock"
+      "status": "fi-sr-eye"
     },
     {
       "icon": "fi-sr-followcollection",
