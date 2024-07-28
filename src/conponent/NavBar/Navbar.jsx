@@ -704,7 +704,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={`fixed top-0 left-0 z-40  bottom-0  right-0  w-full h-full  backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-gray-900/40' : 'bg-white/40'} `}
+            className={`fixed top-0 left-0 z-40  bottom-0  right-0  w-full h-full  backdrop-blur-[20px] ${isTopTextColorWhite && isTop ? 'bg-gray-900/40' : 'bg-white/40'} `}
           >
             <div
               style={{
@@ -722,7 +722,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 selectedTab === item.name[0] && (
                   <motion.div
                     key={item.name[0] + index + 'introduction'}
-                    className='absolute bottom-[10vw] left-[320px] lg:left-[420px] animate__animated animate__fadeInUp bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  '
+                    className='absolute hidden  lg:inline-flex bottom-[10vw] left-[320px] lg:left-[420px] animate__animated animate__fadeInUp bg-sky-900 transition-all   rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  '
                   >
                     <div className='p-[28px] lg:p-[40px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20'>
                       <p className='text-[20px] lg:text-[30px]  darrk:text-gray-900 text-white  '>

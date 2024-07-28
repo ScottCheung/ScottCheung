@@ -2258,5 +2258,48 @@
       ]
     ],
     "impro": []
+  },
+  "2024-07-28T09:04:28.563Z": {
+    "version": "4.7.0",
+    "time": "2024-07-28T09:04:28.563Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Update CV page's UI and contents.",
+      "更新简历 UI 和内容，更新Skill部分内容。"
+    ],
+    "new": [
+      [
+        "Add contents of skill part in Home and CV page.",
+        "Adjust partial UI and Animations in Home and CV page."
+      ],
+      [
+        "新增内容，在主页的能力部分和简历页。",
+        "调整部分在主页和简历页的 UI 和 动画。"
+      ]
+    ],
+    "fix": [
+      [
+        "Fix some bugs of animation bugs."
+      ],
+      [
+        "修复了动画 BUG."
+      ]
+    ],
+    "impro": [
+      [
+        "Improve some info of the transition.",
+        "Improve some performance of the Carousel."
+      ],
+      [
+        "修复了翻译不佳的情况.",
+        "优化了轮播图的性能。"
+      ]
+    ]
   }
 }

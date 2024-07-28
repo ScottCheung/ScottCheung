@@ -13,7 +13,7 @@ const whymelable = `text-[15px] text-gray-400 group-hover:text-sky-700`;
 const contentContainer = `flex-1 flex flex-col justify-between  animate__animated animate__fadeInUp`;
 const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
-const divisionline = `flex duration-0 flex flex-1 h-[5px]  rounded-full bg-sky-700  transition-all duration-1000`;
+const divisionline = `flex duration-0 flex flex-1 h-[5px] w-[2px] rounded-full bg-sky-700  transition-all duration-1000`;
 
 const cardData = [
   {
@@ -71,44 +71,50 @@ const cardData = [
   },
   {
     id: 2,
-    title: 'Operation / Data Analysis',
-    type: 'Part Time',
+    title: 'Web Developer',
+    type: 'Contract',
     company: 'Domi Group Buying',
     startTime: 'Aug 2018',
-    endTime: 'Nov 2018',
+    endTime: 'Sep 2019',
     image:
       'https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg',
     backgroundColor: 'bg-blue-300',
     skill: [
+      'React',
+      'HTML',
+      'CSS',
+      'JavaScript',
+      'Framer Motion',
+      'Tailwind',
       'Data Analysis',
-      'Operational Management',
-      'Excel',
-      'SQL',
-      'Communication Skills',
-      'Problem-Solving Skills',
-      'Time Management',
-      'Attention to Detail',
+      'Shopify',
+      'Google Chrome DevTools',
+      'Figma',
+      'Photoshop(PS)',
+      'TypeScript',
+      'SEO Optimization',
+      'Performance Optimization',
     ],
     points: [
       {
-        point: 'Sales Data Analysis',
+        point: 'UI/UX Interface Enhancement',
         description:
-          'Analyzed daily sales data using Excel and SQL, identifying trends and insights that led to a 15% increase in overall sales.',
+          'Enhanced UI/UX using Photoshop and Figma, integrating a Customer Behaviour Analytics module that increased user engagement by 54% through improved gaze metrics.',
       },
       {
-        point: 'Operational Efficiency Improvement',
+        point: 'E-commerce Platform Optimization',
         description:
-          'Streamlined order processing and inventory management systems, reducing order fulfillment time by 20%.',
+          'Overhauled the e-commerce platform with HTML, CSS, JavaScript, and React, enhancing user experience and payment processes. Designed dedicated product pages and promotional posters, significantly boosting product visibility and sales.',
       },
       {
-        point: 'Customer Behavior Insights',
+        point: 'SEO and Performance Optimization',
         description:
-          'Conducted customer behavior analysis to understand buying patterns, which informed targeted marketing strategies and improved customer retention by 10%.',
+          'Boosted website performance and SEO by 22% and 14% respectively, utilizing Google Chrome DevTools and Lighthouse for targeted optimizations.',
       },
       {
-        point: 'Performance Reporting',
+        point: 'Performance Reporting System Development',
         description:
-          'Developed comprehensive performance reports for management, providing actionable insights and data-driven recommendations to support strategic decision-making.',
+          'Developed a dynamic performance reporting system using React and Tailwind, enhanced with Framer Motion animations. This system features Excel export capabilities, providing management with detailed, actionable insights.',
       },
     ],
   },
@@ -225,8 +231,6 @@ function Card({ card, onClick }) {
           layout
           layoutId={`card-img-${card.id}`}
           src={card.image}
-          width={window.innerWidth > 1024 ? '800px' : '400px'}
-          height={window.innerWidth > 1024 ? '600px' : '300px'}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className='object-cover object-bottom w-full shadow-lg'
         />
@@ -390,7 +394,7 @@ function WorkExperience() {
 
               {isOpen && (
                 <motion.div
-                  className='flex'
+                  className='sticky top-0 flex'
                   layout
                   layoutId={`card-container-${
                     selectedCard.type + selectedCard.company + selectedCard.id
@@ -398,27 +402,27 @@ function WorkExperience() {
                   transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <motion.div className='relative z-0 flex transform-gpuu lg:rounded-[28px] flex-wrap scrollbar-hide max-h-[100vh] lg:max-h-[80vh]  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg  overflow-auto lg:overflow-hidden'>
+                  <motion.div className='relative  z-0 flex transform-gpuu lg:rounded-[28px] flex-wrap  max-h-[100vh] lg:max-h-[90vh]   w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg  overflow-auto '>
                     <motion.div
                       layoutId={`card-img-${selectedCard.id}`}
                       transition={{
                         duration: 1.2,
                         ease: [0.22, 1, 0.36, 1],
                       }}
-                      className='w-full lg:max-w-[800px]  flex md:p-0 aspect-[4/3] z-50'
+                      className={`${windowWidth > 1440 ? 'lg:max-w-[400px] w-full h-full' : 'w-full h-[300px]'} object-center  object-cover flex md:p-0 aspect-[4/3] z-50`}
                     >
                       <motion.img
                         layout
                         src={selectedCard.image}
                         alt='detail'
-                        className='object-cover object-bottom w-full'
+                        className='object-cover object-center w-full h-full'
                       />
                     </motion.div>
 
                     <motion.div
                       // layout
 
-                      className='flex flex-col w-full max-w-[800px] m-[30px] lg:pt-0 z-40 '
+                      className='flex flex-col w-full max-w-[800px] m-[40px] lg:pt-0 z-40 lg:pb-[10vh]'
                     >
                       <div className='flex flex-col gap-y-8 '>
                         <div className='flex flex-wrap items-center gap-8'>

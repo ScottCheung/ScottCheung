@@ -163,7 +163,7 @@ function WhyMe({ hideTittle }) {
                     <motion.div
                       style={{
                         ...(!hideTittle && windowWidth > 1024
-                          ? bgPic(feature.pic[0], '100% auto', 'center bottom')
+                          ? bgPic(feature.pic[1], '100% auto', 'center bottom')
                           : {}),
                       }}
                       className={` ${hideTittle ? 'bg-gray-50' : 'bg-white/80'}  hover:scale-[1.01] transition-all duration-300 p-[14px] lg:p-[40px] rounded-[14px] lg:rounded-[28px] relative flex-shrink-0 w-auto h-auto ${hideTittle ? 'lg:w-[300px]' : 'lg:w-[400px]'}  md:h-auto `}

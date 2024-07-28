@@ -89,7 +89,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/resume/:resume',
-    element: <Resume />,
+    element: <Resume print={true} />,
   },
   { path: '/at', element: <AutoText /> },
   {

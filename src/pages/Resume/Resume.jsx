@@ -7,6 +7,7 @@ import N from '../../conponent/Num';
 import Navbar from '../../conponent/NavBar/Navbar';
 import { useParams, useNavigate } from 'react-router-dom';
 import cvData from './resumeData.json';
+import { div } from 'three/examples/jsm/nodes/Nodes.js';
 
 const EmphasizeColorLists = [
   'red',
@@ -18,9 +19,9 @@ const EmphasizeColorLists = [
   'purple',
 ];
 
-export default function Resume() {
-  const printMode = false;
-  // const printMode = true;
+export default function Resume({ print }) {
+  const printMode = print || null;
+
   let { resume } = useParams();
   const { ResumeView } = useAppContext();
   const forceColor = printMode ? resume : ResumeView.forceColor;
@@ -31,6 +32,7 @@ export default function Resume() {
   }
   const [isTop, setIsTop] = useState(true);
   useEffect(() => {
+    console.log('ResumeView----', printMode);
     function handleScroll() {
       if (window.scrollY === 0) {
         setIsTop(true);
@@ -46,20 +48,20 @@ export default function Resume() {
     };
   }, []);
   const parseText = (text) => {
-    const parts = text.split(/({bold}.*?{bold})/).map((part, index) => {
-      if (part.startsWith('{bold}') && part.endsWith('{bold}')) {
+    const parts = text.split(/(<s>.*?<s>)/).map((part, index) => {
+      if (part.startsWith('<s>') && part.endsWith('<s>')) {
         return (
           <span
             key={index}
-            className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:opacity-100  opacity-50 font-black mx-[3px] text-[15px] md:text-[20px] lg:text-[20px]`}
+            className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} transition-all duration-300  group-hover:opacity-70 group-hover:tracking-[1px] opacity-60 font-bold mx-[3px] `}
           >
-            {part.replace(/{bold}/g, '')}
+            {part.replace(/<s>/g, '')}
           </span>
         );
       }
       return (
         <span
-          className='text-black text-[13px]  md:text-[18px] lg:text-[20px]'
+          className='text-gray-700 transition-all duration-1000'
           key={index}
         >
           {part}
@@ -76,18 +78,17 @@ export default function Resume() {
     EmphasizeColorLists[forceColor]
   }-${Math.max(colorDepth - 200 || 100)} gap-x-[15px] items-center transition-all duration-1000`;
   const printWidth = 'max-w-[1350px]';
-  const icon = `w-[15px] text-[15px] mr-[5px] mt-[2px] transition-all duration-1000`;
   const divisionline = `flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:opacity-100  opacity-50 transition-all duration-1000`;
-  const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} opacity-10 transition-all duration-1000`;
-
-  const h3 = `flex tracking-wide items-center text-[20px] font-semibold flex `;
-  const h4 = `flex tracking-wide items-center text-[15px] text-gray-500 flex items-center`;
-  const timetext = `flex items-center text-2xl font-[500] text-gray-400 transition-all duration-1000`;
-  const whymeIcon = `text-[20px] flex justify-center items-center text-gray-400 group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
-  const whymelable = `text-[15px] text-gray-400 group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
+  const division = ` items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:opacity-50  opacity-10 transition-all duration-1000`;
+  const divisionCol = `flex w-[1px] h-4 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
+  const h3 = `flex tracking-[1px] items-center text-[22px] font-bold flex group-hover:text-[28px] transition-all duration-1000`;
+  const workPartTitle = `flex tracking-[1px] items-center text-[23px] group-hover:text-[28px] transition-all duration-1000 font-bold flex`;
+  const h4 = `flex items-center text-[15px] text-gray-500 flex items-center`;
+  const timetext = `flex items-center text-2xl font-[500] text-gray-400  transition-all duration-1000  group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
+  const whymeIcon = `text-[20px] flex justify-center items-center text-gray-400 group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth} `;
+  const whymelable = `text-[15px] text-gray-400  group-hover:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
   const contentContainer = `flex-1 flex flex-col justify-between`;
-  const laptopMode = window.innerWidth > 1024;
-  const strong = `flex mr-2 tracking-wide font-bold pr-1 -ml-1 text-${EmphasizeColorLists[forceColor]}-${colorDepth - 100} transition-all duration-1000`;
+  const strong = `flex mr-2 tracking-wide font-bold pr-1 -ml-1  text-${EmphasizeColorLists[forceColor]}-${colorDepth - 100} transition-all duration-1000`;
 
   return (
     <div className='flex w-full bg-white md:justify-center'>
@@ -115,14 +116,18 @@ export default function Resume() {
         <link rel='stylesheet' href='../style/style.css' type='text/css' />
         <div
           className={`${
-            printMode ? printWidth : 'visblecontainer mx-auto'
+            printMode ? printWidth : 'w-[1350px] mx-auto'
           } min-h-[100vh] flex flex-col`}
         >
           <div className='text-center '>
             <h1
-              style={{ fontFamily: 'Hey August, sans-serif' }}
-              className={`tracking-wide text-${EmphasizeColorLists[forceColor]}-${colorDepth} tracking-widest
-   ${printMode ? 'text-[100px]' : isTop ? 'text-[50px] md:text-[80px]  lg:text-[100px]' : 'text-[30px] md:text-[50px]  lg:text-[50px]'}  font-[100] transition-all duration-1000`}
+              style={
+                {
+                  // fontFamily: 'Hey August, sans-serif',
+                }
+              }
+              className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} tracking-widest font-black 
+   ${printMode ? 'text-[70px]  mb-[20px]' : isTop ? ' text-[50px] md:text-[60px]  lg:text-[70px]' : 'text-[30px] md:text-[50px]  lg:text-[50px]'}  font-[100] transition-all duration-1000`}
             >
               {cvData.header.name}
             </h1>
@@ -162,7 +167,7 @@ export default function Resume() {
                 target='_blank'
                 rel='noopener noreferrer'
                 href={section.href}
-                className={`flex justify-between items-center gap-x-[20px] mt-[30px] mb-[20px] ${
+                className={`flex justify-between items-center gap-x-[20px] mt-[20px] mb-[10px] ${
                   section.href && 'group'
                 }`}
               >
@@ -200,13 +205,15 @@ export default function Resume() {
                     textJustify: 'inter-word',
                     width: '100%',
                   }}
-                  className={normaltext}
+                  className={normaltext + ' group'}
                 >
-                  <p>{section.content}</p>
+                  <p className='group-hover:leading-[40px] leading-[30px] transition-all '>
+                    {parseText(section.content)}
+                  </p>
                 </div>
               )}
               {/* Highlights*/}
-              <div className='flex flex-nowrap w-full justify-center md:justify-between gap-[30px]'>
+              <div className='flex flex-nowrap items-center w-full justify-center md:justify-between gap-[30px]'>
                 {section.highlights &&
                   section.highlights.map((KeyFeature, index) => (
                     <React.Fragment key={index}>
@@ -227,7 +234,7 @@ export default function Resume() {
                           rel='noopener noreferrer'
                           className={`flex flex-col w-full item-center justify-center ${
                             KeyFeature.href ? `group` : 'cursor-default'
-                          } transition-all`}
+                          } transition-all duration-1000`}
                         >
                           <div className={whymeIcon}>
                             <i className={`mr-2 ${KeyFeature.icon}`}></i>
@@ -238,89 +245,183 @@ export default function Resume() {
                           </div>
                           <div className='flex items-center justify-center w-full'>
                             <div className={whymelable}>
-                              <p>{KeyFeature.keyfeature}</p>
+                              <p className='flex items-center gap-x-[10px]'>
+                                {KeyFeature.keyfeature}{' '}
+                                {KeyFeature.href && (
+                                  <div className='flex '>
+                                    <svg
+                                      class='flex w-[10px] h-[10px] -rotate-45'
+                                      aria-hidden='true'
+                                      xmlns='http://www.w3.org/2000/svg'
+                                      fill='none'
+                                      viewBox='0 0 14 10'
+                                    >
+                                      <path
+                                        stroke='currentColor'
+                                        stroke-linecap='round'
+                                        stroke-linejoin='round'
+                                        stroke-width='2'
+                                        d='M1 5h12m0 0L9 1m4 4L9 9'
+                                      />
+                                    </svg>
+                                  </div>
+                                )}
+                              </p>
                             </div>
                           </div>
                         </a>
                       </motion.div>
                       {index !== section.highlights.length - 1 && (
-                        <div
-                          className={`w-[1px] h-4 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
-                        ></div>
+                        <div className={divisionCol}></div>
                       )}
                     </React.Fragment>
                   ))}
               </div>
               {/* Skills */}
-              {section.skills &&
-                Object.entries(section.skills).map(
-                  ([category, list], index) => (
-                    <div
-                      key={index}
-                      className='flex justify-between leading-8 mb-2 items-start md:items-center gap-x-[30px] py-[15px] md:py-[3px]'
-                    >
-                      <h2 className={h3}>{category}</h2>
-
-                      <span className={division}></span>
-
+              <div className='group'>
+                {' '}
+                {section.skills &&
+                  Object.entries(section.skills).map(
+                    ([category, list], index) => (
                       <div
-                        className={`text-right  text-[15px] ${printMode ? 'max-w-[70%]' : 'max-w-[80%]'} text-gray-600`}
+                        key={index}
+                        className='flex  group-hover:my-[30px] transition-all duration-1000 justify-between leading-8 mb-2 items-start md:items-center gap-x-[30px] py-[15px] md:py-[3px]'
                       >
-                        {list.map((tag, index) => (
-                          <React.Fragment key={index} className=' group'>
-                            <p className='hidden group-hover:flex animate-animated animate-zoomIn'>
-                              Click to search "{tag}" on Google
-                            </p>
-                            <a
-                              target='_blank'
-                              rel='noopener noreferrer'
-                              href={`https://zh.wikipedia.org/wiki/${encodeURIComponent(tag)}`}
-                              className='text-gray-600 group-hover::underline'
-                            >
-                              {tag}
-                            </a>
-                            {index < list.length - 1 && (
-                              <span className='mx-2'>|</span>
-                            )}
-                          </React.Fragment>
-                        ))}
+                        <h2 className={h3}>{category}</h2>
+
+                        <span className={division}></span>
+
+                        <div
+                          className={`text-right  flex flex-wrap justify-end items-center text-[15px] ${printMode ? 'max-w-[70%]' : 'max-w-[80%]'} text-gray-600`}
+                        >
+                          {list.map((tag, index) => (
+                            <React.Fragment key={index} className=' group'>
+                              <p className='hidden hover:flex animate-animated animate-zoomIn'>
+                                Click to search "{tag}" on Google
+                              </p>
+                              <a
+                                target='_blank'
+                                rel='noopener noreferrer'
+                                href={`https://zh.wikipedia.org/wiki/${encodeURIComponent(tag)}`}
+                                className='text-gray-600 group-hover::underline'
+                              >
+                                {tag}
+                              </a>
+                              {index < list.length - 1 && (
+                                <span
+                                  className={`flex mx-4 w-[1px] h-[5px] border-l-[1px] border-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
+                                ></span>
+                              )}
+                            </React.Fragment>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ),
-                )}
+                    ),
+                  )}
+              </div>
 
               {/* Education */}
               {section.edus && (
-                <div className='flex justify-between gap-x-[30px]'>
+                <div className='flex justify-between items-center gap-x-[60px]'>
                   {section.edus.map((edu, index) => (
-                    <a
-                      href={edu.link}
-                      target='_blank'
-                      rel='noopener noreferrer'
-                      key={index}
-                      className={
-                        edu.link &&
-                        'group cursor-pointer flex-1 w-full mt-3 flex justify-between items-start'
-                      }
-                    >
-                      <div className={contentContainer}>
-                        <div className='flex justify-between flex-1 w-full'>
-                          <p
-                            className={`${h3} cursor-pointer group-hover:bold flex flex-1 justify-start`}
+                    <React.Fragment key={index} className=' group'>
+                      <a
+                        href={edu.link}
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        key={index}
+                        className={
+                          edu.link &&
+                          'group cursor-pointer  flex-1 w-full mt-3 flex justify-between items-center'
+                        }
+                      >
+                        <div className={contentContainer}>
+                          <div className='flex justify-between flex-1 w-full'>
+                            <p
+                              className={`${h3} cursor-pointer group-hover:bold flex flex-1 justify-start`}
+                            >
+                              {edu.school}
+                            </p>
+
+                            {/* duration */}
+                            <p className={timetext}>{edu.period}</p>
+                          </div>
+
+                          <div className='flex items-center justify-start'>
+                            <div className={h4}>{edu.degree}</div>
+                            {edu.link && (
+                              <div>
+                                <svg
+                                  class={`${h4} w-4 h-4 mx-2 -rotate-45`}
+                                  aria-hidden='true'
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  fill='none'
+                                  viewBox='0 0 14 10'
+                                >
+                                  <path
+                                    stroke='currentColor'
+                                    stroke-linecap='round'
+                                    stroke-linejoin='round'
+                                    stroke-width='2'
+                                    d='M1 5h12m0 0L9 1m4 4L9 9'
+                                  />
+                                </svg>
+                              </div>
+                            )}
+                          </div>
+
+                          <div
+                            className={`${normaltext} duration-300 group-hover:text-${EmphasizeColorLists[forceColor]}-${
+                              colorDepth - 100
+                            }`}
                           >
-                            {edu.school}
-                          </p>
-
-                          {/* duration */}
-                          <p className={timetext}>{edu.period}</p>
+                            <p className='tracking-widest group-hover:underline'>
+                              {edu.major}
+                            </p>
+                          </div>
                         </div>
+                      </a>
+                      {index < 2 && (
+                        <span
+                          className={`flex items-center mx-4 w-[1px]  h-[35px] rounded-full border-l-[1px] border-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
+                        ></span>
+                      )}
+                    </React.Fragment>
+                  ))}
+                </div>
+              )}
 
-                        <div className='flex items-center justify-start'>
-                          <div className={h4}>{edu.degree}</div>
-                          {edu.link && (
-                            <div>
+              {/* WorkExperience */}
+              {section.WorkExperience &&
+                section.WorkExperience.map((work, index) => (
+                  <a
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href={work.link}
+                    key={index}
+                    className={
+                      work.link &&
+                      ' cursor-pointer mt-3 flex justify-between items-start'
+                    }
+                  >
+                    <div className={contentContainer + ' group'}>
+                      <div className='flex-col items-center justify-start md:flex md:flex-row md:justify-between'>
+                        <h3 className={workPartTitle}>
+                          <div className='flex'></div>
+                          {work.company}
+                          <div className={divisionCol + ' mx-[20px]'}></div>
+                          {work.title}
+                          {work.link && (
+                            <div
+                              className={`flex items-center group-hover:opacity-100  opacity-70 text-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
+                            >
+                              <p
+                                className={`ml-[10px] text-[15px]  font-black group-hover:my-[30px]  transition-all duration-1000`}
+                              >
+                                Link
+                              </p>
                               <svg
-                                class={`${h4} w-4 h-4 mx-2 -rotate-45`}
+                                class='w-6 h-6  flex -rotate-45'
                                 aria-hidden='true'
                                 xmlns='http://www.w3.org/2000/svg'
                                 fill='none'
@@ -336,22 +437,56 @@ export default function Resume() {
                               </svg>
                             </div>
                           )}
-                        </div>
-
-                        <div
-                          className={`${normaltext} duration-300 group-hover:text-${EmphasizeColorLists[forceColor]}-${
-                            colorDepth - 100
-                          }`}
-                        >
-                          <p className='tracking-widest group-hover:underline'>
-                            {edu.major}
-                          </p>
+                        </h3>
+                        <span className={division + ' mx-[20px]'}></span>
+                        {/* duration */}
+                        <div className='flex flex-col justify-end'>
+                          <p className={timetext}>{work.period}</p>
                         </div>
                       </div>
-                    </a>
-                  ))}
-                </div>
-              )}
+
+                      <div className={`${normaltext} pl-[20px]`}>
+                        <p className='flex group-hover:my-[30px] transition-all duration-1000'>
+                          <strong className={strong}>Desceription:</strong>
+                          <p className='flex items-center font-bold text-gray-600'>
+                            {parseText(work.des)}
+                          </p>
+                        </p>
+                        <p className='flex group-hover:my-[30px] transition-all duration-1000'>
+                          <strong className={strong}>Skill:</strong>
+                          <p className='flex items-center font-bold text-gray-600'>
+                            {work.skill.map((skill, index) => (
+                              <React.Fragment key={index}>
+                                {skill}
+                                {index < work.skill.length - 1 && (
+                                  <div
+                                    className={divisionCol + ' mx-[10px]'}
+                                  ></div>
+                                )}
+                              </React.Fragment>
+                            ))}
+                          </p>
+                        </p>
+                        <p>
+                          <strong className={strong}>Contribution:</strong>{' '}
+                        </p>
+                        <ul className='pl-5'>
+                          {work.contribution.map((item, index) => (
+                            <li
+                              key={index}
+                              className='mb-4 text-justify group-hover:my-[30px] transition-all duration-1000'
+                            >
+                              <strong className={strong + ' '}>
+                                ▸ {item.title} :
+                              </strong>
+                              {parseText(item.description)}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                  </a>
+                ))}
 
               {/* Projects */}
               {section.projects &&
@@ -363,7 +498,7 @@ export default function Resume() {
                     key={index}
                     className={
                       project.link &&
-                      'group cursor-pointer mt-3 flex justify-between items-start'
+                      'group cursor-pointer mb-6 flex justify-between items-start'
                     }
                   >
                     <div className={contentContainer}>
@@ -396,7 +531,14 @@ export default function Resume() {
                               </svg>
                             </div>
                           )}
+                          {project.tag && (
+                            <span class='inline-flex mx-3 items-center tracking-normal gap-x-[5px] bg-green-100 text-green-800 text-[13px] font-medium px-[7px] py-[3px] rounded-full dark:bg-green-900 dark:text-green-300'>
+                              <i class=' flex fi  fi-rr-check-circle text-green-500 rounded-full'></i>
+                              <p className='flex'>{project.tag}</p>
+                            </span>
+                          )}
                         </h3>
+                        <span className={division + ' mx-[20px]'}></span>
                         {/* duration */}
                         <div className='flex flex-col justify-end'>
                           <p className={timetext}>{project.period}</p>
@@ -404,18 +546,36 @@ export default function Resume() {
                       </div>
 
                       <div className={`${normaltext} pl-[20px]`}>
-                        <p className='flex '>
-                          <strong className={strong}>Skill:</strong>
-                          <p className='font-black text-black'>
-                            {project.skill.join(' | ')}
+                        <p className='flex group-hover:my-[30px] transition-all duration-1000'>
+                          <strong className={strong}>Desceription:</strong>
+                          <p className='flex items-center font-bold text-gray-600'>
+                            {parseText(project.des)}
                           </p>
                         </p>
-                        <p>
+                        <p className='flex group-hover:my-[30px] transition-all duration-1000'>
+                          <strong className={strong}>Skill:</strong>
+                          <p className='flex items-center font-bold text-gray-600'>
+                            {project.skill.map((skill, index) => (
+                              <React.Fragment key={index}>
+                                {skill}
+                                {index < project.skill.length - 1 && (
+                                  <div
+                                    className={divisionCol + ' mx-[10px]'}
+                                  ></div>
+                                )}
+                              </React.Fragment>
+                            ))}
+                          </p>
+                        </p>
+                        <p className=''>
                           <strong className={strong}>Contribution:</strong>{' '}
                         </p>
-                        <ul className='pl-5'>
+                        <ul className='pl-5 '>
                           {project.contribution.map((item, index) => (
-                            <li key={index} className='mb-4 text-justify'>
+                            <li
+                              key={index}
+                              className='mb-4 text-justify group-hover:mb-[30px] transition-all duration-1000'
+                            >
                               <strong className={strong + ' '}>
                                 ▸ {item.title} :
                               </strong>
@@ -429,7 +589,7 @@ export default function Resume() {
                 ))}
 
               {/* Whyme */}
-              <div className='flex flex-wrap w-full justify-center md:justify-between gap-[30px]'>
+              <div className='flex flex-nowrap items-center w-full justify-center md:justify-between gap-[30px]'>
                 {section.whymes &&
                   section.whymes.map((whyme, index) => (
                     <React.Fragment key={whyme.advantage}>
@@ -442,12 +602,33 @@ export default function Resume() {
                         <div key={index} className={whymeIcon}>
                           <i className={whyme.icon}></i>
                         </div>
-                        <h3 className={whymelable}>{whyme.advantage}</h3>
+                        <h3 className={whymelable}>
+                          <p className='flex items-center gap-x-[10px]'>
+                            {whyme.advantage}
+                            {whyme.href && (
+                              <div className='flex '>
+                                <svg
+                                  class='flex w-[10px] h-[10px] -rotate-45'
+                                  aria-hidden='true'
+                                  xmlns='http://www.w3.org/2000/svg'
+                                  fill='none'
+                                  viewBox='0 0 14 10'
+                                >
+                                  <path
+                                    stroke='currentColor'
+                                    stroke-linecap='round'
+                                    stroke-linejoin='round'
+                                    stroke-width='2'
+                                    d='M1 5h12m0 0L9 1m4 4L9 9'
+                                  />
+                                </svg>
+                              </div>
+                            )}
+                          </p>
+                        </h3>
                       </a>
                       {index !== section.whymes.length - 1 && (
-                        <div
-                          className={`w-[1px] h-4 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
-                        ></div>
+                        <div className={divisionCol}></div>
                       )}
                     </React.Fragment>
                   ))}
