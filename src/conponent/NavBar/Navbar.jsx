@@ -244,11 +244,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                         src='https://3o.hk/images/2024/01/14/avatar.th.jpg'
                         alt="Xianzhe's Page"
                       />
-                      {isWithinOneWeek && (
-                        <span
-                          class={`${isTop ? 'w-8 h-8 -left-1 top-1' : 'left-2 top-1 w-6 h-6'} absolute hidden lg:flex   bg-green-400  rounded-full`}
-                        ></span>
-                      )}
+
                       <div
                         className={`hidden  lg:flex flex-1 flex-col justify-between h-full `}
                       >
