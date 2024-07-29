@@ -246,7 +246,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                       />
                       {isWithinOneWeek && (
                         <span
-                          class={`${isTop ? 'w-8 h-8 left-2 top-2' : '-left-1 -top-1 w-3 h-3'} absolute hidden lg:flex   bg-green-400  rounded-full`}
+                          class={`${isTop ? 'w-8 h-8 -left-1 top-1' : 'left-3 top-1 w-6 h-6'} absolute hidden lg:flex   bg-green-400  rounded-full`}
                         ></span>
                       )}
                       <div
