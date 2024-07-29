@@ -149,7 +149,7 @@ function WhymeCard() {
                 event.stopPropagation();
               }}
               layoutId={whymeCard.advantage}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               className='flex  bg-white h-[100vh]  -mb-[20vh] rounded-[40px] py-[40px] px-[28px] z-50 '
             >
               <div className='flex gap-x-[20px]'>
