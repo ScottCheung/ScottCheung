@@ -718,7 +718,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                 selectedTab === item.name[0] && (
                   <motion.div
                     key={item.name[0] + index + 'introduction'}
-                    className='absolute hidden  lg:inline-flex bottom-[10vw] left-[320px] lg:left-[420px] animate__animated animate__fadeInUp bg-sky-900 transition-all   rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  '
+                    className='absolute hidden  lg:inline-flex bottom-[10vw] left-[25%] lg:left-[25%] animate__animated animate__fadeInUp bg-sky-900 transition-all   rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  '
                   >
                     <div className='p-[28px] lg:p-[40px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20'>
                       <p className='text-[20px] lg:text-[30px]  darrk:text-gray-900 text-white  '>

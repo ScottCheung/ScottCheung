@@ -20,6 +20,7 @@ import Navbar from './conponent/NavBar/Navbar.jsx';
 import Resumecheck from './pages/Resume/Resumecheck.jsx';
 import Project from './pages/project.jsx';
 import Tool from './pages/tool/Tools.jsx';
+import Coverletter from './pages/CoverLetter/coverletter.tsx';
 
 const router = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ const router = createBrowserRouter([
   {
     path: '/Contact',
     element: <Contact />,
+  },
+  {
+    path: '/coverletter',
+    element: <Coverletter />,
   },
   {
     path: '/resume',
