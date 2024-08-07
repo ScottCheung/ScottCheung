@@ -127,7 +127,7 @@ function SelfDescribing() {
             borderBottomRightRadius: isMobile ? 0 : borderBottomRightRadius,
             y: isMobile ? 0 : y,
           }}
-          className='sticky top-0 z-30 flex flex-col items-center justify-center w-full transform-gpuu'
+          className='sticky top-0 z-20 flex flex-col items-center justify-center w-full transform-gpuu'
         >
           <motion.span
             style={{

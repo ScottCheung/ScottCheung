@@ -376,7 +376,7 @@ function WorkExperience() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
-            className='fixed  inset-0 top-0 bottom-0  w-full h-full z-50  bg-gray-900/75 backdrop-blur-[20px]'
+            className='fixed  inset-0 top-0 bottom-0  w-full h-full z-30  bg-gray-900/75 backdrop-blur-[20px]'
           >
             <div className='relative flex items-center justify-center w-full h-full '>
               <CtButton
@@ -385,7 +385,7 @@ function WorkExperience() {
                 position={'top-[30px] right-[30px] ESC  '}
                 btnsize={'60px'}
                 icon={'w-[20px] h-[20px] rotate-0'}
-                className='z-50'
+                className='z-40'
                 onClick={(event) => {
                   event.stopPropagation();
                   handleClose();
