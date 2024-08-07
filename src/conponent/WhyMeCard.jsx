@@ -116,7 +116,7 @@ function WhymeCard() {
   };
 
   const WhymeCard = show && (
-    <div className='w-full h-[100vh] hidden lg:block fixed top-0 bottom-0 left-0 right-0 z-50 '>
+    <div className='w-full h-[100vh] hidden lg:block fixed top-0 bottom-0 left-0 right-0 z-40 '>
       <motion.span
         onClick={() => {
           closeCard();
