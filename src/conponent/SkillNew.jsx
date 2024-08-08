@@ -116,10 +116,10 @@ function Skill() {
               <div
                 className={`flex flex-col  text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2} bg-gradient-to-br bg-clip-text`}
               >
-                <motion.strong className='flex font-[600] text-[13px] md:text-[15px] lg:text-[20px] items-start pb-4'>
+                <motion.strong className='flex font-[700] tracking-wider text-[13px] md:text-[15px] lg:text-[20px] items-start pb-4'>
                   {skill.name}
                 </motion.strong>
-                <motion.p className='flex flex-wrap text-[10px] md:text-[13px] lg:text-[15px] w-[280px] md:w-auto'>
+                <motion.p className='flex flex-wrap text-[10px] md:text-[12px] lg:text-[13px] w-[280px] md:w-auto'>
                   {skill.description}
                 </motion.p>
               </div>

@@ -94,12 +94,12 @@ const ScrollableContainer = ({
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className={`flex items-center text-5xl fi lg:text-8xl ${header.icon}`}
+              className={`flex items-center text-5xl fi lg:text-6xl xl:text-8xl ${header.icon}`}
             ></motion.i>
 
             <TextAnimate
               transition={{ duration: 0.3 }}
-              className='flex items-center font-mono text-5xl font-black text-nowrap lg:text-8xl'
+              className='flex items-center font-mono text-5xl font-black text-nowrap lg:text-6xl xl:text-8xl'
               text={header.cont}
               type='fadeIn'
             />

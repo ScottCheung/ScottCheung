@@ -166,7 +166,7 @@ function WhyMe({ hideTittle }) {
                           ? bgPic(feature.pic[1], '100% auto', 'center bottom')
                           : {}),
                       }}
-                      className={` ${hideTittle ? 'bg-gray-50' : 'bg-white/80'}  hover:scale-[1.01] transition-all duration-300 p-[14px] lg:p-[40px] rounded-[14px] lg:rounded-[28px] relative flex-shrink-0 w-auto h-auto ${hideTittle ? 'lg:w-[300px]' : 'lg:w-[400px]'}  md:h-auto `}
+                      className={` ${hideTittle ? 'bg-gray-50' : 'bg-white/80'}  hover:scale-[1.01] transition-all duration-300 p-[14px] lg:p-[35px] rounded-[14px] lg:rounded-[28px] relative flex-shrink-0 w-auto h-auto ${hideTittle ? 'lg:w-[250px]' : 'lg:w-[350px] '}  md:h-auto `}
                     >
                       <motion.div>
                         <motion.div
@@ -183,9 +183,9 @@ function WhyMe({ hideTittle }) {
                             }}
                             className={`${
                               feature.icon
-                            } fi animate__animated  animate__zoomIn from-[-20%] to-[120%] ${hideTittle ? 'text-[20px] lg:text-[30px]' : 'text-[30px] lg:text-[40px]'}  ${
+                            } fi animate__animated  animate__zoomIn from-[-20%] to-[120%] ${hideTittle ? 'text-[20px] lg:text-[30px]' : 'text-[25px] lg:text-[30px] xl:text-[35px]'}  ${
                               feature.color1 + ' ' + feature.color2
-                            } flex items-center pb-[10px] bg-clip-text text-transparent bg-gradient-to-br`}
+                            } flex items-center lg:pb-[5px] xl:pb-[10px] bg-clip-text text-transparent bg-gradient-to-br`}
                           ></i>
                         </motion.div>
                         <div className='flex justify-start pb-6 sm:pb-3'>
@@ -198,7 +198,7 @@ function WhyMe({ hideTittle }) {
                             style={{
                               animationDelay: `${index * 0.2}s`,
                             }}
-                            className={`animate__animated   animate__zoomIn  font-[700] ${hideTittle ? 'text-[15px] md:text-[17px] lg:text-[20px]' : 'text-[12px] md:text-[20px] lg:text-[30px]'}   ${
+                            className={`animate__animated   animate__zoomIn  font-[700] ${hideTittle ? 'text-[15px] md:text-[17px] lg:text-[20px]' : 'text-[12px] md:text-[17px] lg:text-[25px]'}   ${
                               feature.color1 + ' ' + feature.color2
                             } flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
                           >
@@ -210,7 +210,7 @@ function WhyMe({ hideTittle }) {
                       <div
                         className={`${
                           hideTittle || windowWidth < 1024 ? 'hidden' : ''
-                        } copy-visblecontainer md:h-[480px] h-[400px] overflow-hidden`}
+                        } copy-visblecontainer md:h-[480px] h-[200px] overflow-hidden`}
                       >
                         <div
                           style={{

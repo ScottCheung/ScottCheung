@@ -120,6 +120,8 @@ function WhymeCard() {
       <motion.span
         onClick={() => {
           closeCard();
+
+          event.stopPropagation();
         }}
         className={`absolute top-0 left-0 right-0 bottom-0 w-[100vw] h-[100vh] ESC  z-0 ${
           whymeCard.color1 + '/50' + ' ' + whymeCard.color2 + '/50'
@@ -136,10 +138,10 @@ function WhymeCard() {
 
         <motion.div
           onClick={(event) => {
-            event.stopPropagation();
-            openCard(whymeCard);
+            // event.stopPropagation();
+            // openCard(whymeCard);
           }}
-          className={` top-[10vh] left-[10vw] -bottom-[20vh]  right-[35vw]  shadow-[30px] z-50 fixed`}
+          className={` top-[10vh]   -bottom-[20vh]   shadow-[30px] z-50 fixed`}
         >
           <AnimatePresence mode='wait'>
             {/* {show && ( */}
@@ -150,7 +152,7 @@ function WhymeCard() {
               }}
               layoutId={whymeCard.advantage}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-              className='flex  bg-white h-[100vh]  -mb-[20vh] rounded-[40px] py-[40px] px-[28px] z-50 '
+              className='flex relative  bg-white h-[100vh] lg:ml-[10vw] ml-[50px] mr-[200px] lg:mr-[35vw] -mb-[20vh] rounded-[40px] py-[40px] px-[28px] z-50 '
             >
               <div className='flex gap-x-[20px]'>
                 <motion.div
@@ -181,8 +183,11 @@ function WhymeCard() {
                         <i
                           className={`${feature.icon} flex justify-start fi text-5xl text-white flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
                         ></i>
-                        <p className='flex justify-start font-[600] text-[13px]'>
+                        <p
+                          className={`${window.innerWidth < 1280 ? 'hidden' : 'flex'}  justify-start font-[600] text-[12px]`}
+                        >
                           {feature.advantage}
+                          {/* {window.innerWidth} */}
                         </p>
                       </div>
                     </motion.button>
@@ -214,7 +219,7 @@ function WhymeCard() {
                             duration: 0.9,
                             ease: [0.22, 1, 0.36, 1],
                           }}
-                          className='text-white text-[30px] mt-[10px]'
+                          className='text-white text-wrap text-[30px] mt-[10px]'
                         >
                           <i className={`fi  ${whymeCard.icon}`}></i>
                         </motion.div>
@@ -225,7 +230,7 @@ function WhymeCard() {
                           ease: [0.22, 1, 0.36, 1],
                         }}
                         layoutId={whymeCard.advantage + 'title'}
-                        className={`text-[50px] text-nowrap overflow-auto flex font-black leading-normal  ${
+                        className={`text-[30px] text-nowrap overflow-auto flex font-black leading-normal  ${
                           whymeCard.color1 + ' ' + whymeCard.color2
                         } bg-clip-text text-transparent bg-gradient-to-br `}
                       >
