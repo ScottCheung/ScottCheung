@@ -272,8 +272,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                               className={
                                 isWithinOneWeek
                                   ? isTop && isTopTextColorWhite
-                                    ? 'text-green-200 font-[600]'
-                                    : 'text-green-700'
+                                    ? 'text-sky-200 font-[600]'
+                                    : 'text-sky-700'
                                   : ''
                               }
                             >

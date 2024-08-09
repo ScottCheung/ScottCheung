@@ -203,14 +203,14 @@ const Carousel = ({ interval, HomeCarousel }) => {
         >
           <motion.div className='w-auto flex gap-x-[20px]'>
             <div
-              className='bg-white/20 rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
+              className='bg-white/200 hover:bg-black/30  transition-all rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
               style={{ animationDelay: '0.15s' }}
             >
               <motion.button
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
                 onClick={prevSlide}
-                className='bg-black/20 backdrop-blur-[5px] w-[45px] h-[45px] animate__animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-1000'
+                className='bg-black/20 w-[45px] h-[45px] animate__animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-1000'
               >
                 <svg
                   className='hover:fill-white rotate-180 fill-gray-200 w-[20px] h-[20px]'
@@ -222,14 +222,14 @@ const Carousel = ({ interval, HomeCarousel }) => {
               </motion.button>
             </div>
             <div
-              className='bg-white/20 rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
+              className='bg-white/200 hover:bg-black/30  transition-all  rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
               style={{ animationDelay: '0.3s' }}
             >
               <motion.button
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
                 onClick={nextSlide}
-                className='bg-black/20 backdrop-blur-[5px] w-[45px] h-[45px] animate__animated animate__zoomIn flex rounded-full justify-center items-center transition-all duration-1000'
+                className='bg-black/20  w-[45px] h-[45px] animate__animated animate__zoomIn flex rounded-full justify-center items-center transition-all duration-1000'
               >
                 <svg
                   className='hover:fill-white fill-gray-200 w-[20px] h-[20px]'
@@ -241,27 +241,27 @@ const Carousel = ({ interval, HomeCarousel }) => {
               </motion.button>
             </div>
             <div
-              className='bg-white/20 rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
+              className='bg-white/200 hover:bg-black/30  transition-all   rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
               style={{ animationDelay: '0.45s' }}
             >
               <motion.div
                 layout
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
-                className='bg-black/20 p-[15px] backdrop-blur-[5px] flex rounded-full gap-x-[20px] justify-center items-center transition-all'
+                className='bg-black/20 p-[15px] flex rounded-full gap-x-[20px] justify-center items-center transition-all'
               >
                 {HomeCarousel.map((item, index) => (
                   <div key={index}>
                     <div
                       onClick={() => setActiveIndex(index + 1)}
                       style={{ animationDelay: `${(index + 3) * 0.25}s` }}
-                      className={`bg-gray-200/50 hover:bg-gray-50/50 animate__animated animate__zoomIn cursor-pointer h-[15px] overflow-hidden transition-all duration-500 rounded-full ${index + 1 === activeIndex ? 'w-[50px]' : 'w-[15px]'}`}
+                      className={`bg-gray-200/50 hover:bg-gray-50/50 animate__animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[15px] ${index + 1 === activeIndex ? 'w-[50px]' : 'w-[15px]'}`}
                     >
                       {index + 1 === activeIndex &&
                         progress >= 0 &&
                         isPaused === false && (
                           <div
-                            className='bg-white h-[15px] rounded-full'
+                            className='h-full bg-white rounded-full'
                             style={{ width: `${progress}%` }}
                           />
                         )}
@@ -271,13 +271,13 @@ const Carousel = ({ interval, HomeCarousel }) => {
               </motion.div>
             </div>
             <div
-              className='bg-white/20 rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
+              className='bg-white/200 hover:bg-black/30  transition-all  rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
               style={{ animationDelay: '0.6s' }}
             >
               <motion.button
                 layout
                 onClick={() => setIsPaused(!isPaused)}
-                className='bg-black/20 backdrop-blur-[5px] w-[45px] h-[45px] animate__animated animate__fadeIn flex rounded-full justify-center items-center transition-all ring-0 outline-none duration-1000'
+                className='bg-black/20 w-[45px] h-[45px] animate__animated animate__fadeIn flex rounded-full justify-center items-center transition-all ring-0 outline-none duration-1000'
               >
                 <motion.svg
                   whileTap={{ scale: 1.1 }}

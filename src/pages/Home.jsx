@@ -111,7 +111,7 @@ function Home() {
     >
       <Navbar topTextColor={true} />
       <Log />
-      <Carousel HomeCarousel={HomeCarousel} interval={5000}></Carousel>
+      <Carousel HomeCarousel={HomeCarousel} interval={3000}></Carousel>
       <Education />
       <KeyFeature viewwidth={viewwidth} />
       <Capability />

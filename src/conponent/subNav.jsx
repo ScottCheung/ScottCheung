@@ -1,26 +1,26 @@
-import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { hideRow, useLanguage } from "../help/helpFunction";
-import data from "../data/Database.json";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { hideRow, useLanguage } from '../help/helpFunction';
+import data from '../data/Database.json';
+import { Link } from 'react-router-dom';
 const navLocation = data.Navbar.Location;
 
 export function more() {
   const lang = useLanguage();
   const [isTop, setIsTop] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [bgStyle, setBgStyle] = useState("bg-white/10 backdrop-blur-[40px]");
+  const [bgStyle, setBgStyle] = useState('bg-white/10 backdrop-blur-[40px]');
 
   useEffect(() => {
     function handleScroll() {
       if (window.scrollY < 700) {
         setIsTop(true);
         setTimeout(() => {
-          setBgStyle("bg-white/10 backdrop-blur-[40px] ");
+          setBgStyle('bg-white/10 backdrop-blur-[40px] ');
         }, 1000);
       } else {
         setIsTop(false);
-        setBgStyle("bg-sky-900  backdrop-blur-[40px] -z-50");
+        setBgStyle('bg-sky-900  backdrop-blur-[40px] -z-50');
       }
     }
 
@@ -29,13 +29,13 @@ export function more() {
     }
 
     // 注册事件监听器
-    window.addEventListener("scroll", handleScroll);
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
 
     // 在组件卸载时取消事件监听器
     return () => {
-      window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
     };
   }, []); // 空数组表示该 effect 仅在组件挂载和卸载时运行
 
@@ -53,17 +53,17 @@ export function more() {
           >
             {navLocation.map((item, index) => (
               <motion.a
-                initial={{ width: "100%" }}
-                whileHover={{ width: "120%" }}
+                initial={{ width: '100%' }}
+                whileHover={{ width: '120%' }}
                 key={index}
                 href={item.id}
                 style={{ animationDelay: `${index * 0.2}s` }}
                 className={` flex  w-full h-full bg-black/20  justify-center animate__zoomIn animate__animated  text-gray-50 ${
-                  index === 0 ? "md:rounded-l-full rounded-l-[12px]" : ""
+                  index === 0 ? 'md:rounded-l-full rounded-l-[12px]' : ''
                 } ${
                   index === navLocation.length - 1
-                    ? "md:rounded-r-full rounded-r-[12px]"
-                    : ""
+                    ? 'md:rounded-r-full rounded-r-[12px]'
+                    : ''
                 }   font-medium bg-transparent hover:bg-sky-900 ${
                   item.color1
                 } ${
@@ -72,14 +72,14 @@ export function more() {
               >
                 <motion.div
                   layout
-                  key="modal"
+                  key='modal'
                   // style={{ borderRadius: 20 }}
                   whileHover={{ scale: 1.1, transition: { duration: 0.7 } }}
                   whileTap={{ scale: 0.95 }}
                   whileFocus={{ scale: 1 }}
-                  className="w-full"
+                  className='w-full'
                 >
-                  <div className="content-center py-2 my-3 text-center">
+                  <div className='content-center py-2 my-3 text-center'>
                     {isTop ? (
                       <i
                         className={` flex fi justify-center  py-1 text-[15px]  ${item.logo}`}
@@ -87,7 +87,7 @@ export function more() {
                     ) : (
                       <></>
                     )}
-                    <div className="w-full h-full flex text-center justify-center lg:text-full text-[12px] md:text-[15px]">
+                    <div className='w-full h-full flex text-center justify-center lg:text-full text-[12px] md:text-[15px]'>
                       {!isTop ? (
                         windowWidth > 784 && (
                           <i
@@ -96,7 +96,7 @@ export function more() {
                         )
                       ) : (
                         <></>
-                      )}{" "}
+                      )}{' '}
                       {item.label[lang]}
                     </div>
                   </div>
