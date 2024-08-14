@@ -104,7 +104,7 @@ function Otherability() {
           filter: 'contrast(110%)',
         }}
       >
-        {/* Skill */}
+        {/* Skill */}v
         <motion.div className='  p-[20px] lg:p-[36px]  '>
           {Object.entries(Skill.skills[lang]).map(([category, list], index) => (
             <motion.div

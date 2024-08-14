@@ -10,6 +10,7 @@
     "@react-three/drei": "^9.108.3",
     "@react-three/fiber": "^8.16.8",
     "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/line-clamp": "^0.4.4",
     "@types/react": "^18.3.3",
     "apexcharts": "^3.49.0",
     "axios": "^1.7.2",
