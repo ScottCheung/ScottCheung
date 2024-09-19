@@ -103,7 +103,6 @@ function DockerBar(props) {
         const link = document.createElement('a');
         link.href = `
         https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Scott%20Cheung%20%7C%20sky.pdf`;
-        // https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Scott%20Cheung%20%7C%20${EmphasizeColorLists[ResumeView.forceColor]}.pdf`;
         link.download = "Xianzhe's CV.pdf";
         document.body.appendChild(link);
         link.click();
@@ -250,7 +249,7 @@ function DockerBar(props) {
         </Transition.Child>
 
         <div className='fixed inset-0 z-10 w-screen scrollbar-hide'>
-          <div className='flex items-start justify-center w-full min-h-full p-4 text-center md:items-center sm:p-0 '>
+          <div className='flex items-start justify-center w-screen h-screen p-12 text-center md:items-center sm:p-0 '>
             <Transition.Child
               as={Fragment}
               enter='transition ease-out duration-500'
@@ -260,11 +259,11 @@ function DockerBar(props) {
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-0'
             >
-              <Dialog.Panel className='animate__animated animate__zoomIn relative transform overflow-hidden rounded-[28px] bg-white text-left shadow-xl transition-all my-8 w-full  md:max-w-[800px]'>
+              <Dialog.Panel className='animate__animated animate__zoomIn relative transform  rounded-[28px] bg-white text-left shadow-xl transition-all m-12 w-full  md:max-w-[800px]'>
                 <div className=' p-[14px] md:p-[40px]'>
                   <div className='flex items-start'>
-                    <div className='text-center sm:ml-4 sm:mt-0 md:text-left w-full max-h-[100vh] overflow-y-auto'>
-                      <div className='flex justify-between w-full '>
+                    <div className='w-full text-center sm:ml-4 sm:mt-0 md:text-left '>
+                      <div className='sticky top-0 flex justify-between w-full py-4 bg-white'>
                         <Dialog.Title
                           as='h3'
                           className='text-[20px] md:text-[25px] font-[400] text-gray-900'
@@ -283,7 +282,7 @@ function DockerBar(props) {
                         </button>
                       </div>
 
-                      <div className='mt-8 '>
+                      <div className='flex flex-col mt-8 max-h-[60vh] overflow-y-auto'>
                         <div className='flex justify-between w-full '>
                           <label
                             htmlFor='steps-range'

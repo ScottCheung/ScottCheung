@@ -1,439 +1,902 @@
-{
-  "header": {
-    "name": "Scott Cheung",
-    "AIPrompt": "Based on the provided CV, this candidate is an excellent match for the position, with a fit of over 90%. The candidate possesses extensive experience and skills that align perfectly with the job requirements. This candidate is an ideal fit for the role.",
-    "contacts": [
+[
+  {
+    "header": {
+      "name": "Scott Cheung",
+      "AIPrompt": "Based on the provided CV, this candidate is an excellent match for the position, with a fit of over 90%. The candidate possesses extensive experience and skills that align perfectly with the job requirements. This candidate is an ideal fit for the role.",
+      "contacts": [
+        {
+          "name": "Front-end Developer",
+          "icon": "flex items-center fi fi-rr-briefcase"
+        },
+        {
+          "name": "+61 434344292",
+          "icon": "flex items-center fi fi-rr-mobile-notch",
+          "link": "tel:+61 434344292"
+        },
+        {
+          "name": "xianzhe.site@gmail.com",
+          "icon": "flex items-center fi fi-rr-envelope",
+          "link": "mailto:xianzhe.site@gmail.com"
+        },
+        {
+          "name": "xianzhe.site",
+          "icon": "flex items-center fi fi-rr-link-alt",
+          "link": "https://xianzhe.site"
+        },
+        {
+          "name": "scottcheung1110",
+          "icon": "flex items-center fi fi-brands-linkedin",
+          "link": "https://www.linkedin.com/in/scottcheung1110/"
+        },
+        {
+          "name": "Check Updates",
+          "update": "Sep 19",
+          "version": "20240919",
+          "icon": "flex items-center fi fi-rr-clock",
+          "link": "https://xianzhe.site/resumecheck/20240919"
+        }
+      ]
+    },
+    "sections": [
       {
-        "name": "Front-end Developer",
-        "icon": "flex items-center fi fi-rr-briefcase"
+        "title": "Summary",
+        "icon": "flex items-center fi fi-rr-user",
+        "content": "Highly skilled and results-driven <s>Front-End Developer<s> with over <s>two years<s> of development experience and <s>seven years<s> in design. Proven expertise in crafting engaging user experiences and enhancing user interaction using technologies such as <s>HTML<s>, <s>CSS<s>, <s>JavaScript<s>, <s>TypeScript<s>, <s>Next.js<s>, <s>React<s>, <s>Redux<s>, <s>Tailwind<s>, and <s>Framer Motion<s>. Committed to continuous learning and excellence in project delivery, with strong skills in <s>performance<s> and <s>SEO optimization<s>. Known for being <s>open-minded<s>, <s>friendly<s>, and <s>kind<s>, fostering a positive and inclusive team environment. Holds a Master's degree in IT with a focus on Front-End development and AI from <s>UNSW<s>. Possesses a <s>five-year visa<s>, eliminating the need for sponsorship. Discover more at https://xianzhe.site."
       },
       {
-        "name": "+61 434344292",
-        "icon": "flex items-center fi fi-rr-mobile-notch",
-        "link": "tel:+61 434344292"
+        "title": "Highlights",
+        "icon": "flex items-center fi fi-sr-star-shooting",
+        "highlights": [
+          {
+            "no": 3,
+            "keyfeature": "Degrees",
+            "href": "https://xianzhe.site/Degrees",
+            "icon": "fi-rr-graduation-cap"
+          },
+          {
+            "no": 17,
+            "keyfeature": "scholarships",
+            "href": "https://xianzhe.site/scholarships",
+            "icon": "fi-rr-trophy-star"
+          },
+          {
+            "no": 58,
+            "keyfeature": " Certificates",
+            "href": "https://xianzhe.site/Certificates",
+            "icon": "fi-rr-diploma"
+          },
+          {
+            "no": 59,
+            "keyfeature": " Skills",
+            "icon": "fi flex items-center fi-rr-tools"
+          },
+          {
+            "no": 23,
+            "keyfeature": " Applications",
+            "icon": "fi-sr-window-alt"
+          },
+          {
+            "no": 42,
+            "keyfeature": "HD courses",
+            "icon": "fi-rr-circle-a"
+          }
+        ]
       },
       {
-        "name": "xianzhe.site@gmail.com",
-        "icon": "flex items-center fi fi-rr-envelope",
-        "link": "mailto:xianzhe.site@gmail.com"
+        "title": "Skill",
+        "icon": "flex items-center fi fi-rr-tool-box",
+        "skills": {
+          "FrontEnd": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "Next.js",
+            "Node.js",
+            "React",
+            "Redux",
+            "Tailwind",
+            "Framer",
+            "Photoshop",
+            "GraphQL",
+            "Webpack",
+            "RESTful APIs",
+            "SEO Optimization",
+            "Performance Optimization",
+            "UI/UX design",
+            "CSS libs",
+            "Animation libs"
+          ],
+          "Backend": [
+            "NodeJS",
+            "XML",
+            "JSON",
+            "Postman",
+            "RESTful API",
+            "Redis",
+            "Docker",
+            "Kubernetes",
+            "GraphQL",
+            "AWS",
+            "CI/CD"
+          ],
+          "Database": [
+            "MySQL",
+            "PostgreSQL",
+            "Tableau",
+            "SQLite",
+            "PowerBI",
+            "Python",
+            "Neo4j",
+            "Pandas"
+          ],
+          "AI-Algorithm": [
+            "Machine Learning",
+            "Deep Learning",
+            "Natural Language",
+            "Recommender System"
+          ],
+          "IT-Tool": [
+            "Github",
+            "SSH",
+            "Docker",
+            "Zsh",
+            "Vim",
+            "Docker",
+            "Jira",
+            "Agile/Scrum",
+            "Jenkins",
+            "Kubernetes",
+            "Postman",
+            "Vagrant"
+          ]
+        }
       },
       {
-        "name": "xianzhe.site",
-        "icon": "flex items-center fi fi-rr-link-alt",
-        "link": "https://xianzhe.site"
+        "title": "Education",
+        "icon": "flex items-center fi fi-rr-graduation-cap",
+        "edus": [
+          {
+            "degree": "Master of IT",
+            "school": "UNSW",
+            "link": "https://xianzhe.site/major/ArtificalInteligence",
+            "major": "Artificial Intelligence",
+            "period": "Sep 2022 - May 2024"
+          },
+          {
+            "degree": "Bachelor of Management",
+            "school": "SWUST",
+            "link": "https://xianzhe.site/major/BusinessAdministration",
+            "major": "Administration Management",
+            "period": "Sep 2021 - May 2022"
+          },
+          {
+            "degree": "Bachelor of Engineer",
+            "school": "SWUST",
+            "link": "https://xianzhe.site/major/FunctionalMaterial",
+            "major": "Functional Material",
+            "gpa": "84/100",
+            "period": "Sep 2017 - May 2022"
+          }
+        ]
       },
       {
-        "name": "scottcheung1110",
-        "icon": "flex items-center fi fi-brands-linkedin",
-        "link": "https://www.linkedin.com/in/scottcheung1110/"
+        "title": "Work Experience",
+        "icon": "flex items-center fi fi-rr-city",
+        "WorkExperience": [
+          {
+            "company": "Gobell Group",
+            "title": "Front-end Development Engineer",
+            "name": "Gobell Membership System",
+            "des": "A comprehensive membership management system for Gobell, providing functionalities such as managing members, orders, products, processing payments, deposits, and validating vouchers.",
+            "tag": "Web Development",
+            "link": "http://m.gobell.au/",
+            "skill": [
+              "HTML",
+              "CSS",
+              "TypeScript",
+              "React",
+              "Next.js",
+              "Tailwind",
+              "Framer Motion",
+              "Redux",
+              "i18n",
+              "Figma",
+              "AWS Cloud",
+              "jsBarcode",
+              "QR Code"
+            ],
+            "contribution": [
+              {
+                "title": "Client-Side UI Design and Development",
+                "description": "Individually design the client-side UI for the Gobell membership system, creating an intuitive and visually appealing user interface. Leveraged React and Next.js to build reusable, modular components, reducing development time by <s>30%<s>. Implemented responsive design principles using Tailwind CSS to ensure compatibility across different devices and screen sizes. Collaborated with the design team to translate high-fidelity Figma mockups into pixel-perfect code, maintaining high alignment with design specifications and achieving a user satisfaction score of <s>95%<s> in usability tests."
+              },
+              {
+                "title": "Front-end Architecture and Component Development",
+                "description": "Architected and developed the front-end for the first phase of the Gobell membership system using TypeScript, React, and Next.js. Designed and implemented over <s>50<s> custom components, adhering to SOLID principles and best practices in front-end development to ensure maintainability, scalability, and testability. Integrated Redux for efficient state management, reducing redundant code by <s>40%<s> and enhancing data flow predictability. Conducted thorough code reviews and refactored code to reduce technical debt by <s>25%<s>."
+              },
+              {
+                "title": "Performance Optimization and Code Quality Assurance",
+                "description": "Optimized application performance by identifying and eliminating bottlenecks, such as reducing bundle size by <s>35%<s> through dynamic imports, lazy loading, and code splitting in Next.js. Leveraged React Profiler and Lighthouse to analyze component performance, resulting in a <s>50%<s> improvement in load times and a <s>30%<s> increase in runtime efficiency. Established a comprehensive testing suite using Jest and React Testing Library, achieving over <s>90%<s> code coverage and reducing production bugs by <s>70%<s>. Implemented CI/CD pipelines for automated testing, linting, and deployment, decreasing manual QA time by <s>60%<s>."
+              },
+              {
+                "title": "Membership Card Design and Integration",
+                "description": "Designed three types of membership cards with a focus on user experience and branding consistency, leading to a <s>20%<s> increase in user retention. Developed a seamless integration process for membership card issuance and management, ensuring compatibility with the system’s card management functionalities and real-time synchronization with backend services, reducing operational delays by <s>30%<s>."
+              },
+              {
+                "title": "Hardware Procurement and Integration",
+                "description": "Led the procurement and integration of essential hardware components, including <s>5<s> barcode scanners, <s>3<s> card readers, and <s>2<s> receipt printers. Developed a robust integration layer to ensure smooth communication between the front-end system and hardware devices, providing users with a reliable and efficient experience for card scanning and printing, which decreased transaction processing time by <s>40%<s>."
+              },
+              {
+                "title": "Promotional Materials Design",
+                "description": "Designed promotional flyers, brochures, and pull-up banners using Figma and Photoshop to enhance the brand's visual identity and support marketing campaigns. These efforts led to a <s>30%<s> increase in customer engagement during promotional events."
+              }
+            ],
+            "period": "Feb 2024 - Now"
+          }
+        ]
       },
       {
-        "name": "Check Updates",
-        "update": "July 27",
-        "version": "20240727",
-        "icon": "flex items-center fi fi-rr-clock",
-        "link": "https://xianzhe.site/resumecheck/20240727"
+        "title": "Projects",
+        "icon": "flex items-center fi fi-rr-folder",
+        "projects": [
+          {
+            "name": "Neo4j iGrapher (Graphical data code-zero analysis tool)",
+            "des": "A web tool for code-zero analysis and graphical representation of complex data relationships using Neo4j, React, and D3.js.",
+            "tag": "Web Development",
+            "link": "http://43.128.92.60/",
+            "skill": [
+              "HTML",
+              "CSS",
+              "Neo4j",
+              "JavaScript",
+              "React",
+              "D3",
+              "Tailwind",
+              "Framer Motion",
+              "Google Chrome DevTools",
+              "Figma",
+              "Tencent Cloud",
+              "Docker"
+            ],
+            "contribution": [
+              {
+                "title": "UI/UX Design",
+                "description": "Individually designed and implemented <s>3<s> complex interfaces, <s>5<s> medium interfaces and over <s>20<s> interaction logics, using <s>Figma<s> and <s>Photoshop<s> to enhance design, ensuring intuitive and smooth user experiences."
+              },
+              {
+                "title": "Web Components Development",
+                "description": "Using <s>HTML<s>, <s>CSS<s>, <s>Javascript<s>, <s>Tailwind<s>, <s>Framer Motion<s> developed <s>25<s> fully customized <s>React<s> and <s>D3.js<s> data visualization components from scratch, enabling real-time graphical representation of complex data relationships."
+              },
+              {
+                "title": "Animation and Visual Effects Design and Development",
+                "description": "Individually designed and implemented over <s>40<s> UI animations and visual effects using <s>Framer Motion<s> and other <s>animation libraries<s>, boosting user interaction satisfaction by <s>80%<s> and enhancing visual appeal. Optimized animation performance by <s>37%<s> using Google performance analysis tools."
+              },
+              {
+                "title": "Frontend-Backend Integration and Deployment",
+                "description": "Conducted over <s>10<s> large-scale data integration tests with backend services, ensuring <s>99%<s> system stability and data accuracy. Packed in <s>Docker<s> then deployed to <s>Tencent Cloud<s> server, ensuring high availability and accessibility."
+              }
+            ],
+            "period": "Feb 2024 - May 2024"
+          },
+          {
+            "name": "Personal Website (Portfolio)",
+            "des": "A personal portfolio website shows projects, skills and personality.",
+            "tag": "Web Development",
+            "link": "https://xianzhe.site/",
+            "skill": [
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "React",
+              "Tailwind",
+              "Framer Motion",
+              "Google LightHouse",
+              "Photoshop",
+              "Ali Cloud",
+              "Vercel",
+              "Webpack"
+            ],
+            "contribution": [
+              {
+                "title": "User Interface and Interactive Animation Design",
+                "description": "Designed and implemented visually appealing user interfaces and over <s>34<s> interactive animations using <s>Framer Motion<s> and other <s>animation libraries<s>. Used <s>Google Performance Analytics<s> to optimize performance and improve site performance by <s>62%<s>."
+              },
+              {
+                "title": "Web Development",
+                "description": "Developed entire website from scratch using <s>JavaScript<s>, <s>TypeScript<s>, <s>React<s>, <s>Tailwind<s>,<s>Redux<s>, <s>Webpack<s> and more. Created <s>46 adaptive components<s> for data visualization in React, adapted to desktop, mobile, and tablet to better showcase individuals."
+              },
+              {
+                "title": "Server Deployment and maintenance",
+                "description": "Deployed the website using <s>Webpack<s>, <s>Vercel<s> and <s>Ali Cloud<s> to a server with domain mapping set up to ensure high availability and accessibility. Regularly maintained the web pages with missing elements and fixed unanticipated bugs on a regular basis."
+              }
+            ],
+            "period": "Oct 2023 - Now"
+          },
+          {
+            "name": "Title Generater",
+            "des": "This NLP program generates titles for essays using a fine-tuned T-5 model.",
+            "tag": "Natural Language Processing",
+            "link": "https://www.youtube.com/watch?v=wCib64nB9g4&t=18s&ab_channel=zhangxianzhe",
+            "skill": [
+              "Python",
+              "NLP",
+              "Huggingface",
+              "T-5",
+              "LDA",
+              "Data Preprocessing"
+            ],
+            "contribution": [
+              {
+                "title": "Model Training",
+                "description": "Fine-tuned the <s>T-5 model<s> using a dataset of <s>5000 BBC news essays<s>, enhancing the model's ability to generate accurate and relevant essay titles. Employed <s>cross-entropy loss function<s> and <s>AdamW optimizer<s> for efficient training."
+              },
+              {
+                "title": "Data Preprocessing",
+                "description": "Processed and cleaned <s>5000 essays<s> from the BBC news dataset to ensure high-quality input for model training. Steps included <s>text normalization<s>, <s>tokenization<s>, <s>stop words removal<s>, and <s>lemmatization<s>."
+              },
+              {
+                "title": "Latent Dirichlet Allocation (LDA) Model",
+                "description": "Implemented the <s>LDA model<s> for topic modeling, which was used to extract keywords from the essays. These keywords were then fed into the T-5 model for title generation."
+              },
+              {
+                "title": "Model Evaluation",
+                "description": "Conducted extensive evaluations using <s>ROUGE<s>, <s>BLEU<s>, and <s>METEOR<s> metrics to ensure high accuracy and relevance in generated titles. Achieved a <s>95% satisfaction rate<s> in preliminary tests."
+              }
+            ],
+            "period": "Feb 2024 - May 2024"
+          },
+          {
+            "name": "Emotion Recognizer",
+            "des": "This neural network program recognizes 7 different emotions from facial images using a dataset of 35,000 facial expressions.",
+            "tag": "Neural Networks",
+            "link": "https://sway.cloud.microsoft/l5P6ErHXGJ37e2un?play",
+            "skill": [
+              "Python",
+              "TensorFlow",
+              "Keras",
+              "CNN",
+              "Data Augmentation",
+              "Inception V3",
+              "ResNet-50",
+              "DenseNet-169"
+            ],
+            "contribution": [
+              {
+                "title": "Data Collection and Preprocessing",
+                "description": "Collected and preprocessed a dataset of <s>35,000 facial expressions<s>, combining data from FER2013, RAF-DB, MMA, AffectNet, and Emotion-Domestic to ensure diverse and high-quality input data. The preprocessing steps included <s>face cropping<s>, <s>contrast stretching<s>, <s>image sharpening<s>, <s>resizing<s>, and <s>shuffling<s>."
+              },
+              {
+                "title": "Dataset Enhancement",
+                "description": "Enhanced the dataset by integrating diverse facial expressions from Asian and Western sources, specifically expanding 'disgust' expressions. Addressed potential biases by acknowledging limitations in age and ethnicity representation, noting the underrepresentation of certain ethnicities, babies, and elderly individuals. Applied <s>data augmentation<s> techniques to increase dataset variability."
+              },
+              {
+                "title": "Model Training and Evaluation",
+                "description": "Hyperparameter tuning involved comparing different <s>optimizers<s> (Adam, SGD), <s>loss functions<s> (categorical cross-entropy, MSE), <s>batch sizes<s> (16, 32, 64, 128), and <s>epochs<s> (20, 25, 30, 35) to determine the optimal configuration for the model. Trained the <s>CNN<s> model using <s>TensorFlow<s> and <s>Keras<s> on the preprocessed dataset and conducted extensive evaluations, achieving an accuracy of <s>73%<s> in emotion recognition. Used a combination of <s>batch normalization<s>, <s>ReLU activation functions<s>, and advanced optimizers to enhance the model's performance. Employed models like <s>Inception V3<s>, <s>ResNet-50<s>, and <s>DenseNet-169<s>."
+              }
+            ],
+            "period": "Sep 2023 - Nov 2023"
+          },
+          {
+            "name": "Stable Diffusion Graph to Prompts",
+            "des": "This machine learning program describes graphs generated by stable diffusion using a dataset of 20,000 graphs.",
+            "tag": "Machine Learning",
+            "link": "https://github.com/GATA-Chen/COMP9417_Project/blob/master/9417.pdf",
+            "skill": [
+              "Python",
+              "TensorFlow",
+              "Stable Diffusion",
+              "Image Processing",
+              "Feature Engineering",
+              "Hyperparameter Optimization"
+            ],
+            "contribution": [
+              {
+                "title": "Model Development",
+                "description": "Developed a machine learning model using <s>TensorFlow<s> to describe graphs generated by <s>stable diffusion<s>, incorporating <s>CLIP+GPT-2<s> and <s>ResNet_LSTM+GPT-2<s> models."
+              },
+              {
+                "title": "Data Collection and Annotation Feature Engineering",
+                "description": "Collected and annotated <s>20,000<s> graphs, with preprocessing steps like <s>image resizing<s>, <s>normalization<s>, and <s>augmentation<s>. Used <s>pre-trained models<s> for image encoding and text tokenization, and applied <s>data preprocessing<s> and <s>batching techniques<s>."
+              },
+              {
+                "title": "Model Training and Optimization",
+                "description": "Optimized model performance with <s>hyperparameter tuning<s>, achieving over <s>72% accuracy<s> by adjusting <s>batch sizes<s>, <s>optimizers<s>, and <s>learning rates<s>."
+              }
+            ],
+            "period": "May 2023 - Aug 2023"
+          }
+        ]
+      },
+      {
+        "title": "Why Me",
+        "icon": "<i className=\"flex items-center fi fi-rr-lightbulb-on",
+        "whymes": [
+          {
+            "id": "LearningAbility",
+            "advantage": ["Learning Ability"],
+            "href": "https://xianzhe.site/whyme/LearningAbility",
+            "icon": "fi-rr-graduation-cap"
+          },
+          {
+            "id": "Leadership",
+            "advantage": ["Leadership"],
+            "href": "https://xianzhe.site/whyme/Leadership",
+            "icon": "fi-rr-users-alt"
+          },
+          {
+            "id": "Communication",
+            "advantage": ["Communication Skills"],
+            "href": "https://xianzhe.site/whyme/Communication",
+            "icon": "fi-rr-comments"
+          },
+          {
+            "id": "ProblemSolving",
+            "advantage": ["Problem Solving"],
+            "href": "https://xianzhe.site/whyme/ProblemSolving",
+            "icon": "fi-rr-lightbulb-question"
+          },
+          {
+            "id": "AestheticAttitude",
+            "advantage": ["Aesthetic Attitude"],
+            "href": "https://xianzhe.site/whyme/AestheticAttitude",
+            "icon": "fi-rr-sparkles"
+          },
+          {
+            "id": "EmotionalStable",
+            "advantage": ["Emotional Stability"],
+            "href": "https://xianzhe.site/whyme/EmotionalStable",
+            "icon": "fi-rr-smile"
+          }
+        ]
       }
     ]
   },
-  "sections": [
-    {
-      "title": "Summary",
-      "icon": "flex items-center fi fi-rr-user",
-      "content": "Highly skilled and results-driven <s>Front-End Developer<s> with over <s>two years<s> of development experience and <s>seven years<s> in design. Proven expertise in crafting engaging user experiences and enhancing user interaction using technologies such as <s>HTML<s>, <s>CSS<s>, <s>JavaScript<s>, <s>TypeScript<s>, <s>Next.js<s>, <s>React<s>, <s>Redux<s>, <s>Tailwind<s>, and <s>Framer Motion<s>. Committed to continuous learning and excellence in project delivery, with strong skills in <s>performance<s> and <s>SEO optimization<s>. Known for being <s>open-minded<s>, <s>friendly<s>, and <s>kind<s>, fostering a positive and inclusive team environment. Holds a Master's degree in IT with a focus on Front-End development and AI from <s>UNSW<s>. Possesses a <s>five-year visa<s>, eliminating the need for sponsorship. Discover more at https://xianzhe.site."
-    },
-    {
-      "title": "Highlights",
-      "icon": "flex items-center fi fi-sr-star-shooting",
-      "highlights": [
+  {
+    "header": {
+      "name": "张贤哲",
+      "AIPrompt": "根据提供的简历，该候选人与职位的匹配度超过90%。候选人拥有丰富的经验和技能，与职位要求完全匹配。此候选人是该职位的理想人选。",
+      "contacts": [
         {
-          "no": 3,
-          "keyfeature": "Degrees",
-          "href": "https://xianzhe.site/Degrees",
-          "icon": "fi-rr-graduation-cap"
+          "name": "前端开发工程师",
+          "icon": "flex items-center fi fi-rr-briefcase"
         },
         {
-          "no": 17,
-          "keyfeature": "scholarships",
-          "href": "https://xianzhe.site/scholarships",
-          "icon": "fi-rr-trophy-star"
+          "name": "+61 434344292",
+          "icon": "flex items-center fi fi-rr-mobile-notch",
+          "link": "tel:+61 434344292"
         },
         {
-          "no": 58,
-          "keyfeature": " Certificates",
-          "href": "https://xianzhe.site/Certificates",
-          "icon": "fi-rr-diploma"
+          "name": "xianzhe.site@gmail.com",
+          "icon": "flex items-center fi fi-rr-envelope",
+          "link": "mailto:xianzhe.site@gmail.com"
         },
         {
-          "no": 59,
-          "keyfeature": " Skills",
-          "icon": "fi flex items-center fi-rr-tools"
+          "name": "xianzhe.site",
+          "icon": "flex items-center fi fi-rr-link-alt",
+          "link": "https://xianzhe.site"
         },
         {
-          "no": 23,
-          "keyfeature": " Applications",
-          "icon": "fi-sr-window-alt"
+          "name": "scottcheung1110",
+          "icon": "flex items-center fi fi-brands-linkedin",
+          "link": "https://www.linkedin.com/in/scottcheung1110/"
         },
         {
-          "no": 42,
-          "keyfeature": "HD courses",
-          "icon": "fi-rr-circle-a"
+          "name": "检查更新",
+          "update": "9月15日",
+          "version": "20240915",
+          "icon": "flex items-center fi fi-rr-clock",
+          "link": "https://xianzhe.site/resumecheck/20240915"
         }
       ]
     },
-    {
-      "title": "Skill",
-      "icon": "flex items-center fi fi-rr-tool-box",
-      "skills": {
-        "FrontEnd": [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "TypeScript",
-          "Next.js",
-          "Node.js",
-          "React",
-          "Redux",
-          "Tailwind",
-          "Framer",
-          "Photoshop",
-          "GraphQL",
-          "Webpack",
-          "RESTful APIs",
-          "SEO Optimization",
-          "Performance Optimization",
-          "UI/UX design",
-          "CSS libs",
-          "Animation libs"
-        ],
-        "Backend": [
-          "NodeJS",
-          "XML",
-          "JSON",
-          "Postman",
-          "RESTful API",
-          "Redis",
-          "Docker",
-          "Kubernetes",
-          "GraphQL",
-          "AWS",
-          "CI/CD"
-        ],
-        "Database": [
-          "MySQL",
-          "PostgreSQL",
-          "Tableau",
-          "SQLite",
-          "PowerBI",
-          "Python",
-          "Neo4j",
-          "Pandas"
-        ],
-        "AI-Algorithm": [
-          "Machine Learning",
-          "Deep Learning",
-          "Natural Language",
-          "Recommender System"
-        ],
-        "IT-Tool": [
-          "Github",
-          "SSH",
-          "Docker",
-          "Zsh",
-          "Vim",
-          "Docker",
-          "Jira",
-          "Agile/Scrum",
-          "Jenkins",
-          "Kubernetes",
-          "Postman",
-          "Vagrant"
+    "sections": [
+      {
+        "title": "总结",
+        "icon": "flex items-center fi fi-rr-user",
+        "content": "拥有超过<s>两年<s>开发经验和<s>七年<s>设计经验的高技能且成果导向的<s>前端开发工程师<s>。在使用技术如<s>HTML<s>、<s>CSS<s>、<s>JavaScript<s>、<s>TypeScript<s>、<s>Next.js<s>、<s>React<s>、<s>Redux<s>、<s>Tailwind<s>和<s>Framer Motion<s>打造引人入胜的用户体验和增强用户互动方面具有丰富经验。致力于持续学习和项目交付的卓越表现，擅长<s>性能<s>和<s>SEO优化<s>。以<s>开明<s>、<s>友好<s>和<s>善良<s>闻名，能够促进积极包容的团队环境。持有UNSW的IT硕士学位，主修前端开发和AI。拥有<s>五年签证<s>，无需担保。了解更多信息，请访问https://xianzhe.site。"
+      },
+      {
+        "title": "亮点",
+        "icon": "flex items-center fi fi-sr-star-shooting",
+        "highlights": [
+          {
+            "no": 3,
+            "keyfeature": "学位",
+            "href": "https://xianzhe.site/Degrees",
+            "icon": "fi-rr-graduation-cap"
+          },
+          {
+            "no": 17,
+            "keyfeature": "奖学金",
+            "href": "https://xianzhe.site/scholarships",
+            "icon": "fi-rr-trophy-star"
+          },
+          {
+            "no": 58,
+            "keyfeature": "证书",
+            "href": "https://xianzhe.site/Certificates",
+            "icon": "fi-rr-diploma"
+          },
+          {
+            "no": 59,
+            "keyfeature": "技能",
+            "icon": "fi flex items-center fi-rr-tools"
+          },
+          {
+            "no": 23,
+            "keyfeature": "应用程序",
+            "icon": "fi-sr-window-alt"
+          },
+          {
+            "no": 42,
+            "keyfeature": "高清课程",
+            "icon": "fi-rr-circle-a"
+          }
+        ]
+      },
+      {
+        "title": "技能",
+        "icon": "flex items-center fi fi-rr-tool-box",
+        "skills": {
+          "前端": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "Next.js",
+            "Node.js",
+            "React",
+            "Redux",
+            "Tailwind",
+            "Framer",
+            "Photoshop",
+            "GraphQL",
+            "Webpack",
+            "RESTful APIs",
+            "SEO优化",
+            "性能优化",
+            "UI/UX设计",
+            "CSS库",
+            "动画库"
+          ],
+          "后端": [
+            "NodeJS",
+            "XML",
+            "JSON",
+            "Postman",
+            "RESTful API",
+            "Redis",
+            "Docker",
+            "Kubernetes",
+            "GraphQL",
+            "AWS",
+            "CI/CD"
+          ],
+          "数据库": [
+            "MySQL",
+            "PostgreSQL",
+            "Tableau",
+            "SQLite",
+            "PowerBI",
+            "Python",
+            "Neo4j",
+            "Pandas"
+          ],
+          "AI算法": ["机器学习", "深度学习", "自然语言处理", "推荐系统"],
+          "IT工具": [
+            "Github",
+            "SSH",
+            "Docker",
+            "Zsh",
+            "Vim",
+            "Jira",
+            "敏捷/Scrum",
+            "Jenkins",
+            "Kubernetes",
+            "Postman",
+            "Vagrant"
+          ]
+        }
+      },
+      {
+        "title": "教育经历",
+        "icon": "flex items-center fi fi-rr-graduation-cap",
+        "edus": [
+          {
+            "degree": "IT硕士",
+            "school": "新南威尔士大学",
+            "link": "https://xianzhe.site/major/ArtificalInteligence",
+            "major": "人工智能",
+            "period": "2022年9月 - 2024年5月"
+          },
+          {
+            "degree": "管理学学士",
+            "school": "西南科技大学",
+            "link": "https://xianzhe.site/major/BusinessAdministration",
+            "major": "行政管理",
+            "period": "2021年9月 - 2022年5月"
+          },
+          {
+            "degree": "工程学学士",
+            "school": "西南科技大学",
+            "link": "https://xianzhe.site/major/FunctionalMaterial",
+            "major": "功能材料",
+            "gpa": "84/100",
+            "period": "2017年9月 - 2022年5月"
+          }
+        ]
+      },
+      {
+        "title": "工作经历",
+        "icon": "flex items-center fi fi-rr-city",
+        "WorkExperience": [
+          {
+            "company": "Gobell集团",
+            "title": "前端开发工程师",
+            "name": "Gobell会员系统",
+            "des": "为Gobell开发的全面会员管理系统，提供管理会员、订单、产品、处理付款、存款和验证凭证等功能。",
+            "tag": "Web开发",
+            "link": "http://m.gobell.au/",
+            "skill": [
+              "HTML",
+              "CSS",
+              "TypeScript",
+              "React",
+              "Next.js",
+              "Tailwind",
+              "Framer Motion",
+              "Redux",
+              "i18n",
+              "Figma",
+              "AWS云",
+              "jsBarcode",
+              "QR码"
+            ],
+            "contribution": [
+              {
+                "title": "客户端UI设计与开发",
+                "description": "独立设计Gobell会员系统的客户端UI，创建直观且视觉吸引力强的用户界面。利用React和Next.js构建可重用、模块化的组件，减少开发时间<s>30%<s>。使用Tailwind CSS实施响应式设计，确保不同设备和屏幕尺寸的兼容性。与设计团队合作，将高保真Figma模型转换为像素级代码，在设计规范上保持高度一致，在可用性测试中获得<s>95%<s>的用户满意度。"
+              },
+              {
+                "title": "前端架构与组件开发",
+                "description": "使用TypeScript、React和Next.js构建了Gobell会员系统第一阶段的前端架构和组件。设计并实现了超过<s>50<s>个自定义组件，遵循SOLID原则和前端开发最佳实践，确保可维护性、可扩展性和可测试性。集成Redux进行高效状态管理，减少了<s>40%<s>的冗余代码，增强了数据流的可预测性。进行了深入的代码审查和重构，减少了<s>25%<s>的技术债务。"
+              },
+              {
+                "title": "性能优化与代码质量保障",
+                "description": "通过动态导入、懒加载和Next.js中的代码分割，优化了应用程序性能，减少了<s>35%<s>的捆绑大小。利用React Profiler和Lighthouse分析组件性能，使加载时间提高了<s>50%<s>，运行效率提高了<s>30%<s>。建立了全面的测试套件，使用Jest和React Testing Library，代码覆盖率超过<s>90%<s>，减少了<s>70%<s>的生产错误。实施CI/CD流水线，实现自动化测试、代码检查和部署，减少了<s>60%<s>的手动QA时间。"
+              },
+              {
+                "title": "会员卡设计与集成",
+                "description": "设计了三种类型的会员卡，注重用户体验和品牌一致性，使用户留存率提高了<s>20%<s>。开发了无缝的会员卡发行和管理集成流程，确保与系统卡管理功能的兼容性，并与后端服务实时同步，减少了<s>30%<s>的操作延迟。"
+              },
+              {
+                "title": "硬件采购与集成",
+                "description": "领导了关键硬件组件的采购和集成，包括<s>5台<s>条码扫描器、<s>3台<s>读卡器和<s>2台<s>收据打印机。开发了一个强大的集成层，确保前端系统与硬件设备之间的通信顺畅，为用户提供可靠且高效的卡扫描和打印体验，使交易处理时间减少了<s>40%<s>。"
+              },
+              {
+                "title": "促销材料设计",
+                "description": "使用Figma和Photoshop设计促销传单、宣传册和拉杆海报，提升了品牌的视觉识别度并支持了营销活动。这些努力使促销活动期间的客户参与度提高了<s>30%<s>。"
+              }
+            ],
+            "period": "2024年2月 - 现在"
+          }
+        ]
+      },
+      {
+        "title": "项目",
+        "icon": "flex items-center fi fi-rr-folder",
+        "projects": [
+          {
+            "name": "Neo4j iGrapher（图形化数据零代码分析工具）",
+            "des": "一种使用Neo4j、React和D3.js进行零代码分析和复杂数据关系图形化表示的Web工具。",
+            "tag": "Web开发",
+            "link": "http://43.128.92.60/",
+            "skill": [
+              "HTML",
+              "CSS",
+              "Neo4j",
+              "JavaScript",
+              "React",
+              "D3",
+              "Tailwind",
+              "Framer Motion",
+              "Google Chrome开发者工具",
+              "Figma",
+              "腾讯云",
+              "Docker"
+            ],
+            "contribution": [
+              {
+                "title": "UI/UX设计",
+                "description": "独立设计并实现了<s>3个<s>复杂界面、<s>5个<s>中等复杂度界面和超过<s>20<s>个交互逻辑，使用<s>Figma<s>和<s>Photoshop<s>优化设计，确保直观且流畅的用户体验。"
+              },
+              {
+                "title": "Web组件开发",
+                "description": "使用<s>HTML<s>、<s>CSS<s>、<s>JavaScript<s>、<s>Tailwind<s>、<s>Framer Motion<s>开发了<s>25<s>个完全自定义的React和D3.js数据可视化组件，实现复杂数据关系的实时图形化表示。"
+              },
+              {
+                "title": "动画与视觉效果设计与开发",
+                "description": "独立设计并实现了超过<s>40个<s>UI动画和视觉效果，使用<s>Framer Motion<s>和其他动画库，用户互动满意度提高了<s>80%<s>，视觉吸引力增强。通过Google性能分析工具优化了<s>37%<s>的动画性能。"
+              },
+              {
+                "title": "前端与后端集成及部署",
+                "description": "与后端服务进行了超过<s>10次<s>的大规模数据集成测试，确保了<s>99%<s>的系统稳定性和数据准确性。打包为Docker镜像并部署到腾讯云服务器，确保高可用性和可访问性。"
+              }
+            ],
+            "period": "2024年2月 - 2024年5月"
+          },
+          {
+            "name": "个人网站（作品集）",
+            "des": "一个展示项目、技能和个性的个人作品集网站。",
+            "tag": "Web开发",
+            "link": "https://xianzhe.site/",
+            "skill": [
+              "HTML",
+              "CSS",
+              "JavaScript",
+              "React",
+              "Tailwind",
+              "Framer Motion",
+              "Google LightHouse",
+              "Photoshop",
+              "阿里云",
+              "Vercel",
+              "Webpack"
+            ],
+            "contribution": [
+              {
+                "title": "用户界面和交互动画设计",
+                "description": "设计并实现了视觉吸引力强的用户界面和超过<s>34个<s>交互动画，使用<s>Framer Motion<s>和其他动画库。使用<s>Google性能分析<s>优化性能，网站性能提升了<s>62%<s>。"
+              },
+              {
+                "title": "Web开发",
+                "description": "从零开始使用<s>JavaScript<s>、<s>TypeScript<s>、<s>React<s>、<s>Tailwind<s>、<s>Redux<s>、<s>Webpack<s>等技术开发了整个网站。创建了<s>46个<s>自适应组件用于React中的数据可视化，适应桌面、移动设备和平板，以更好展示个人形象。"
+              },
+              {
+                "title": "服务器部署与维护",
+                "description": "使用<s>Webpack<s>、<s>Vercel<s>和<s>阿里云<s>将网站部署到服务器，设置了域名映射，确保了高可用性和可访问性。定期维护网页，修复丢失元素和意外错误。"
+              }
+            ],
+            "period": "2023年10月 - 现在"
+          },
+          {
+            "name": "标题生成器",
+            "des": "这是一个使用微调后的T-5模型为论文生成标题的NLP程序。",
+            "tag": "自然语言处理",
+            "link": "https://www.youtube.com/watch?v=wCib64nB9g4&t=18s&ab_channel=zhangxianzhe",
+            "skill": [
+              "Python",
+              "NLP",
+              "Huggingface",
+              "T-5",
+              "LDA",
+              "数据预处理"
+            ],
+            "contribution": [
+              {
+                "title": "模型训练",
+                "description": "使用<s>5000篇BBC新闻文章<s>微调了<s>T-5模型<s>，提高了生成准确且相关标题的能力。采用了<s>交叉熵损失函数<s>和<s>AdamW优化器<s>进行高效训练。"
+              },
+              {
+                "title": "数据预处理",
+                "description": "处理并清理了<s>5000篇BBC新闻文章<s>，确保了高质量的输入数据。步骤包括<s>文本规范化<s>、<s>分词<s>、<s>去停用词<s>和<s>词形还原<s>。"
+              },
+              {
+                "title": "潜在狄利克雷分配（LDA）模型",
+                "description": "实现了<s>LDA模型<s>进行主题建模，用以从文章中提取关键词。将这些关键词输入T-5模型用于生成标题。"
+              },
+              {
+                "title": "模型评估",
+                "description": "使用<s>ROUGE<s>、<s>BLEU<s>和<s>METEOR<s>指标进行广泛评估，确保生成标题的高准确度和相关性。初步测试中达到了<s>95%<s>的满意率。"
+              }
+            ],
+            "period": "2024年2月 - 2024年5月"
+          },
+          {
+            "name": "情绪识别器",
+            "des": "该神经网络程序通过面部图像识别7种不同的情绪，使用了包含35000张面部表情的数据库。",
+            "tag": "神经网络",
+            "link": "https://sway.cloud.microsoft/l5P6ErHXGJ37e2un?play",
+            "skill": [
+              "Python",
+              "TensorFlow",
+              "Keras",
+              "CNN",
+              "数据增强",
+              "Inception V3",
+              "ResNet-50",
+              "DenseNet-169"
+            ],
+            "contribution": [
+              {
+                "title": "数据收集与预处理",
+                "description": "收集并预处理了<s>35000张面部表情<s>数据，结合了FER2013、RAF-DB、MMA、AffectNet和Emotion-Domestic的数据，确保了多样性和高质量的输入数据。预处理步骤包括<s>面部裁剪<s>、<s>对比度增强<s>、<s>图像锐化<s>、<s>调整大小<s>和<s>打乱顺序<s>。"
+              },
+              {
+                "title": "数据集增强",
+                "description": "通过整合来自亚洲和西方的多样化面部表情，特别是扩展了“厌恶”表情，增强了数据集。承认了在年龄和种族代表性上的潜在偏见，特别是某些种族、婴儿和老年人的代表性不足。应用了<s>数据增强<s>技术来增加数据集的多样性。"
+              },
+              {
+                "title": "模型训练与评估",
+                "description": "超参数调优比较了不同的<s>优化器<s>（Adam、SGD）、<s>损失函数<s>（分类交叉熵、MSE）、<s>批次大小<s>（16、32、64、128）和<s>训练轮数<s>（20、25、30、35），确定了模型的最佳配置。使用<s>TensorFlow<s>和<s>Keras<s>在预处理后的数据集上训练了CNN模型，并进行了广泛评估，情绪识别准确率达到了<s>73%<s>。使用了<s>批量归一化<s>、<s>ReLU激活函数<s>和高级优化器来提高模型性能。使用了<s>Inception V3<s>、<s>ResNet-50<s>和<s>DenseNet-169<s>等模型。"
+              }
+            ],
+            "period": "2023年9月 - 2023年11月"
+          },
+          {
+            "name": "稳定扩散图形生成描述器",
+            "des": "该机器学习程序使用包含20000张图像的数据集，描述由稳定扩散生成的图像。",
+            "tag": "机器学习",
+            "link": "https://github.com/GATA-Chen/COMP9417_Project/blob/master/9417.pdf",
+            "skill": [
+              "Python",
+              "TensorFlow",
+              "稳定扩散",
+              "图像处理",
+              "特征工程",
+              "超参数优化"
+            ],
+            "contribution": [
+              {
+                "title": "模型开发",
+                "description": "使用<s>TensorFlow<s>开发了一个机器学习模型，用于描述由<s>稳定扩散<s>生成的图像，结合了<s>CLIP+GPT-2<s>和<s>ResNet_LSTM+GPT-2<s>模型。"
+              },
+              {
+                "title": "数据收集与注释",
+                "description": "收集并注释了<s>20000张<s>图像，预处理步骤包括<s>图像调整大小<s>、<s>归一化<s>和<s>数据增强<s>。使用预训练模型进行图像编码和文本标记化，应用了数据预处理和批处理技术。"
+              },
+              {
+                "title": "模型训练与优化",
+                "description": "通过超参数调优优化了模型性能，通过调整批次大小、优化器和学习率，模型准确率超过<s>72%<s>。"
+              }
+            ],
+            "period": "2023年5月 - 2023年8月"
+          }
+        ]
+      },
+      {
+        "title": "为什么选择我",
+        "icon": "<i className=\"flex items-center fi fi-rr-lightbulb-on",
+        "whymes": [
+          {
+            "id": "学习能力",
+            "advantage": ["学习能力"],
+            "href": "https://xianzhe.site/whyme/LearningAbility",
+            "icon": "fi-rr-graduation-cap"
+          },
+          {
+            "id": "领导力",
+            "advantage": ["领导力"],
+            "href": "https://xianzhe.site/whyme/Leadership",
+            "icon": "fi-rr-users-alt"
+          },
+          {
+            "id": "沟通能力",
+            "advantage": ["沟通能力"],
+            "href": "https://xianzhe.site/whyme/Communication",
+            "icon": "fi-rr-comments"
+          },
+          {
+            "id": "问题解决能力",
+            "advantage": ["问题解决能力"],
+            "href": "https://xianzhe.site/whyme/ProblemSolving",
+            "icon": "fi-rr-lightbulb-question"
+          },
+          {
+            "id": "审美态度",
+            "advantage": ["审美态度"],
+            "href": "https://xianzhe.site/whyme/AestheticAttitude",
+            "icon": "fi-rr-sparkles"
+          },
+          {
+            "id": "情绪稳定性",
+            "advantage": ["情绪稳定性"],
+            "href": "https://xianzhe.site/whyme/EmotionalStable",
+            "icon": "fi-rr-smile"
+          }
         ]
       }
-    },
-    {
-      "title": "Education",
-      "icon": "flex items-center fi fi-rr-graduation-cap",
-      "edus": [
-        {
-          "degree": "Master of IT",
-          "school": "UNSW",
-          "link": "https://xianzhe.site/major/ArtificalInteligence",
-          "major": "Artificial Intelligence",
-          "period": "Sep 2022 - May 2024"
-        },
-        {
-          "degree": "Bachelor of Management",
-          "school": "SWUST",
-          "link": "https://xianzhe.site/major/BusinessAdministration",
-          "major": "Administration Management",
-          "period": "Sep 2021 - May 2022"
-        },
-        {
-          "degree": "Bachelor of Engineer",
-          "school": "SWUST",
-          "link": "https://xianzhe.site/major/FunctionalMaterial",
-          "major": "Functional Material",
-          "gpa": "84/100",
-          "period": "Sep 2017 - May 2022"
-        }
-      ]
-    },
-    {
-      "title": "Work Experience",
-      "icon": "flex items-center fi fi-rr-city",
-      "WorkExperience": [
-        {
-          "company": "Domi Group Buying",
-          "des": "A group buying platform for daily necessities like Temu.",
-          "title": "Web Developer",
-          "skill": [
-            "React",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "bootstrap",
-            "Figma",
-            "Photoshop(PS)",
-            "TypeScript"
-          ],
-          "contribution": [
-            {
-              "title": "UI/UX Interface Enhancement",
-              "description": "Enhanced <s>UI/UX<s> using <s>Photoshop<s> and <s>Figma<s>, integrating a Customer Behaviour Analytics module that increased user engagement by <s>54%<s> through improved <s>gaze metrics<s>."
-            },
-            {
-              "title": "E-commerce Platform Optimization",
-              "description": "Overhauled the e-commerce platform with <s>HTML<s>, <s>CSS<s>, <s>JavaScript<s>, <s>bootstrap<s> and <s>React<s>, enhancing user experience and payment processes. Designed dedicated product pages and promotional posters, significantly boosting product visibility and sales."
-            },
-            {
-              "title": "SEO and Performance Optimization",
-              "description": "Boosted website <s>performance<s> and <s>SEO<s> by <s>22%<s> and <s>14%<s> respectively, utilizing <s>Google Chrome DevTools<s> and <s>Lighthouse<s> for targeted optimizations like Improved website loading speed by optimising image loading and caching strategies."
-            },
-            {
-              "title": "Performance Reporting System Development",
-              "description": "Developed a dynamic performance reporting system using <s>HTML<s>, <s>CSS<s>, <s>Javascript<s>, <s>React<s> and <s>bootstrap<s>, enhanced with <s>CSS animation<s>. This system features Excel export capabilities, providing management with detailed, actionable insights."
-            }
-          ],
-
-          "period": "Aug 2018 - Sep 2019"
-        }
-      ]
-    },
-    {
-      "title": "Projects",
-
-      "icon": "flex items-center fi fi-rr-folder",
-      "projects": [
-        {
-          "name": "Neo4j iGrapher (Graphical data code-zero analysis tool)",
-          "des": "A web tool for code-zero analysis and graphical representation of complex data relationships using Neo4j, React, and D3.js.",
-          "tag": "Web Development",
-          "link": "http://43.128.92.60/",
-          "skill": [
-            "HTML",
-            "CSS",
-            "Neo4j",
-            "JavaScript",
-            "React",
-            "D3",
-            "Tailwind",
-            "Framer Motion",
-            "Google Chrome DevTools",
-            "Figma",
-            "Tencent Cloud",
-            "Docker"
-          ],
-          "contribution": [
-            {
-              "title": "UI/UX Design",
-              "description": "Individually designed and implemented <s>3<s> complex interfaces, <s>5<s> medium interfaces and over <s>20<s> interaction logics, using <s>Figma<s> and <s>Photoshop<s> to enhance design, ensuring intuitive and smooth user experiences."
-            },
-            {
-              "title": "Web Components Development",
-              "description": "Using <s>HTML<s>, <s>CSS<s>, <s>Javascript<s>, <s>Tailwind<s>, <s>Framer Motion<s> developed <s>25<s> fully customized <s>React<s> and <s>D3.js<s> data visualization components from scratch, enabling real-time graphical representation of complex data relationships."
-            },
-            {
-              "title": "Animation and Visual Effects Design and Development",
-              "description": "Individually designed and implemented over <s>40<s> UI animations and visual effects using <s>Framer Motion<s> and other <s>animation libraries<s>, boosting user interaction satisfaction by <s>80%<s> and enhancing visual appeal. Optimized animation performance by <s>37%<s> using Google performance analysis tools."
-            },
-            {
-              "title": "Frontend-Backend Integration and Deployment",
-              "description": "Conducted over <s>10<s> large-scale data integration tests with backend services, ensuring <s>99%<s> system stability and data accuracy. Packed in <s>Docker<s> then deployed to <s>Tencent Cloud<s> server, ensuring high availability and accessibility."
-            }
-          ],
-          "period": "Feb 2024 - May 2024"
-        },
-        {
-          "name": "Personal Website (Portfolio)",
-          "des": "A personal portfolio website shows projects, skills and personality.",
-          "tag": "Web Development",
-          "link": "https://xianzhe.site/",
-          "skill": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "React",
-            "Tailwind",
-            "Framer Motion",
-            "Google LightHouse",
-            "Photoshop",
-            "Ali Cloud",
-            "Vercel",
-            "Webpack"
-          ],
-          "contribution": [
-            {
-              "title": "User Interface and Interactive Animation Design",
-              "description": "Designed and implemented visually appealing user interfaces and over <s>34<s> interactive animations using <s>Framer Motion<s> and other <s>animation libraries<s>. Used <s>Google Performance Analytics<s> to optimize performance and improve site performance by <s>62%<s>."
-            },
-            {
-              "title": "Web Development",
-              "description": "Developed entire website from scratch using <s>JavaScript<s>, <s>TypeScript<s>, <s>React<s>, <s>Tailwind<s>,<s>Redux<s>, <s>Webpack<s> and more. Created <s>46 adaptive components<s> for data visualization in React, adapted to desktop, mobile, and tablet to better showcase individuals."
-            },
-            {
-              "title": "Server Deployment and maintenance",
-              "description": "Deployed the website using <s>Webpack<s>, <s>Vercel<s> and <s>Ali Cloud<s> to a server with domain mapping set up to ensure high availability and accessibility. Regularly maintained the web pages with missing elements and fixed unanticipated bugs on a regular basis."
-            }
-          ],
-          "period": "Oct 2023 - Now"
-        },
-        {
-          "name": "Title Generater",
-          "des": "This NLP program generates titles for essays using a fine-tuned T-5 model.",
-          "tag": "Natural Language Processing",
-          "link": "https://www.youtube.com/watch?v=wCib64nB9g4&t=18s&ab_channel=zhangxianzhe",
-          "skill": [
-            "Python",
-            "NLP",
-            "Huggingface",
-            "T-5",
-            "LDA",
-            "Data Preprocessing"
-          ],
-          "contribution": [
-            {
-              "title": "Model Training",
-              "description": "Fine-tuned the <s>T-5 model<s> using a dataset of <s>5000 BBC news essays<s>, enhancing the model's ability to generate accurate and relevant essay titles. Employed <s>cross-entropy loss function<s> and <s>AdamW optimizer<s> for efficient training."
-            },
-            {
-              "title": "Data Preprocessing",
-              "description": "Processed and cleaned <s>5000 essays<s> from the BBC news dataset to ensure high-quality input for model training. Steps included <s>text normalization<s>, <s>tokenization<s>, <s>stop words removal<s>, and <s>lemmatization<s>."
-            },
-            {
-              "title": "Latent Dirichlet Allocation (LDA) Model",
-              "description": "Implemented the <s>LDA model<s> for topic modeling, which was used to extract keywords from the essays. These keywords were then fed into the T-5 model for title generation."
-            },
-            {
-              "title": "Model Evaluation",
-              "description": "Conducted extensive evaluations using <s>ROUGE<s>, <s>BLEU<s>, and <s>METEOR<s> metrics to ensure high accuracy and relevance in generated titles. Achieved a <s>95% satisfaction rate<s> in preliminary tests."
-            }
-          ],
-          "period": "Feb 2024 - May 2024"
-        },
-        {
-          "name": "Emotion Recognizer",
-          "des": "This neural network program recognizes 7 different emotions from facial images using a dataset of 35,000 facial expressions.",
-          "tag": "Neural Networks",
-          "link": "https://sway.cloud.microsoft/l5P6ErHXGJ37e2un?play",
-          "skill": [
-            "Python",
-            "TensorFlow",
-            "Keras",
-            "CNN",
-            "Data Augmentation",
-            "Inception V3",
-            "ResNet-50",
-            "DenseNet-169"
-          ],
-          "contribution": [
-            {
-              "title": "Data Collection and Preprocessing",
-              "description": "Collected and preprocessed a dataset of <s>35,000 facial expressions<s>, combining data from FER2013, RAF-DB, MMA, AffectNet, and Emotion-Domestic to ensure diverse and high-quality input data. The preprocessing steps included <s>face cropping<s>, <s>contrast stretching<s>, <s>image sharpening<s>, <s>resizing<s>, and <s>shuffling<s>."
-            },
-            {
-              "title": "Dataset Enhancement",
-              "description": "Enhanced the dataset by integrating diverse facial expressions from Asian and Western sources, specifically expanding 'disgust' expressions. Addressed potential biases by acknowledging limitations in age and ethnicity representation, noting the underrepresentation of certain ethnicities, babies, and elderly individuals. Applied <s>data augmentation<s> techniques to increase dataset variability."
-            },
-            {
-              "title": "Model Training and Evaluation",
-              "description": "Hyperparameter tuning involved comparing different <s>optimizers<s> (Adam, SGD), <s>loss functions<s> (categorical cross-entropy, MSE), <s>batch sizes<s> (16, 32, 64, 128), and <s>epochs<s> (20, 25, 30, 35) to determine the optimal configuration for the model. Trained the <s>CNN<s> model using <s>TensorFlow<s> and <s>Keras<s> on the preprocessed dataset and conducted extensive evaluations, achieving an accuracy of <s>73%<s> in emotion recognition. Used a combination of <s>batch normalization<s>, <s>ReLU activation functions<s>, and advanced optimizers to enhance the model's performance. Employed models like <s>Inception V3<s>, <s>ResNet-50<s>, and <s>DenseNet-169<s>."
-            }
-          ],
-          "period": "Sep 2023 - Nov 2023"
-        },
-        {
-          "name": "Stable Diffusion Graph to Prompts",
-          "des": "This machine learning program describes graphs generated by stable diffusion using a dataset of 20,000 graphs.",
-          "tag": "Machine Learning",
-          "link": "https://github.com/GATA-Chen/COMP9417_Project/blob/master/9417.pdf",
-          "skill": [
-            "Python",
-            "TensorFlow",
-            "Stable Diffusion",
-            "Image Processing",
-            "Feature Engineering",
-            "Hyperparameter Optimization"
-          ],
-          "contribution": [
-            {
-              "title": "Model Development",
-              "description": "Developed a machine learning model using <s>TensorFlow<s> to describe graphs generated by <s>stable diffusion<s>, incorporating <s>CLIP+GPT-2<s> and <s>ResNet_LSTM+GPT-2<s> models."
-            },
-            {
-              "title": "Data Collection and Annotation Feature Engineering",
-              "description": "Collected and annotated <s>20,000<s> graphs, with preprocessing steps like <s>image resizing<s>, <s>normalization<s>, and <s>augmentation<s>. Used <s>pre-trained models<s> for image encoding and text tokenization, and applied <s>data preprocessing<s> and <s>batching techniques<s>."
-            },
-            {
-              "title": "Model Training and Optimization",
-              "description": "Optimized model performance with <s>hyperparameter tuning<s>, achieving over <s>72% accuracy<s> by adjusting <s>batch sizes<s>, <s>optimizers<s>, and <s>learning rates<s>."
-            }
-          ],
-          "period": "May 2023 - Aug 2023"
-        }
-      ]
-    },
-    {
-      "title": "Why Me",
-      "icon": "<i className=\"flex items-center fi fi-rr-lightbulb-on",
-      "whymes": [
-        {
-          "id": "LearningAbility",
-          "advantage": ["Learning Ability"],
-          "href": "https://xianzhe.site/whyme/LearningAbility",
-          "icon": "fi-rr-graduation-cap"
-        },
-        {
-          "id": "Leadership",
-          "advantage": ["Leadership"],
-          "href": "https://xianzhe.site/whyme/Leadership",
-          "icon": "fi-rr-users-alt"
-        },
-        {
-          "id": "Communication",
-          "advantage": ["Communication Skills"],
-          "href": "https://xianzhe.site/whyme/Communication",
-          "icon": "fi-rr-comments"
-        },
-        {
-          "id": "ProblemSolving",
-          "advantage": ["Problem Solving"],
-          "href": "https://xianzhe.site/whyme/ProblemSolving",
-          "icon": "fi-rr-lightbulb-question"
-        },
-        {
-          "id": "AestheticAttitude",
-          "advantage": ["Aesthetic Attitude"],
-          "href": "https://xianzhe.site/whyme/AestheticAttitude",
-          "icon": "fi-rr-sparkles"
-        },
-        {
-          "id": "EmotionalStable",
-          "advantage": ["Emotional Stability"],
-          "href": "https://xianzhe.site/whyme/EmotionalStable",
-          "icon": "fi-rr-smile"
-        }
-      ]
-    }
-  ]
-}
+    ]
+  }
+]
