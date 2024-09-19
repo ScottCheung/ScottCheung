@@ -483,10 +483,10 @@
         },
         {
           "name": "检查更新",
-          "update": "9月15日",
-          "version": "20240915",
+          "update": "9月19号",
+          "version": "20240919",
           "icon": "flex items-center fi fi-rr-clock",
-          "link": "https://xianzhe.site/resumecheck/20240915"
+          "link": "https://xianzhe.site/resumecheck/20240919"
         }
       ]
     },
