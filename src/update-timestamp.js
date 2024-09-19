@@ -6,8 +6,8 @@ const axios = require('axios');
 const currentTime = new Date().toISOString();
 
 // 读取 package.json 文件
-const packageJsonPath = path.resolve(__dirname, 'package.json');
-const logPath = path.resolve(__dirname, './src/data/update-log.json');
+const packageJsonPath = path.resolve(__dirname, '../package.json');
+const logPath = path.resolve(__dirname, './data/update-log.json');
 const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
 const log = JSON.parse(fs.readFileSync(logPath, 'utf8'));
 

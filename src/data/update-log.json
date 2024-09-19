@@ -2351,5 +2351,32 @@
       ]
     ],
     "impro": []
+  },
+  "2024-09-19T10:55:09.592Z": {
+    "version": "4.9.7",
+    "time": "2024-09-19T10:55:09.592Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
+    "new": [
+      [
+        "Add contents of skill part in CV page.",
+        "Adjust partial UI and Animations in Home and CV page."
+      ],
+      [
+        "新增内容，简历页。",
+        "调整部分在主页和简历页的 UI 和 动画。"
+      ]
+    ],
+    "fix": [],
+    "impro": []
   }
 }
