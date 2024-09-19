@@ -82,7 +82,7 @@ export default function Resume({ print }) {
   const divisionline = `flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:lg:opacity-100  opacity-50 transition-all duration-500`;
   const division = ` items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:lg:opacity-50  opacity-10 transition-all duration-500`;
   const divisionCol = `flex w-[1px] h-4 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
-  const h3 = `flex tracking-[1px] items-center text-[22px] font-bold flex group-hover:lg:text-[28px] transition-all duration-500`;
+  const h3 = `flex tracking-[1px] text-nowrap items-center text-[20px] font-bold flex group-hover:lg:text-[28px] transition-all duration-500`;
   const workPartTitle = `flex tracking-[1px] items-center text-[23px] group-hover:lg:text-[28px] transition-all duration-500 font-bold flex`;
   const h4 = `flex items-center text-[15px] text-gray-500 flex items-center`;
   const timetext = `flex items-center text-2xl font-[500] text-gray-400  transition-all duration-500  group-hover:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;

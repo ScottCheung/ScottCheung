@@ -1591,10 +1591,13 @@
     "header": ["Patch Update", "补丁更新"],
     "new": [
       [
-        "Add contents of skill part in CV page.",
+        "Add contents of skill part in CV page. And page can support Chinese viewing.",
         "Adjust partial UI and Animations in Home and CV page."
       ],
-      ["新增内容，简历页。", "调整部分在主页和简历页的 UI 和 动画。"]
+      [
+        "新增内容，简历页增加对中文的支持。",
+        "调整部分在主页和简历页的 UI 和 动画。"
+      ]
     ],
     "fix": [],
     "impro": []

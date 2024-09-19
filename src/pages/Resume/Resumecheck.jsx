@@ -13,7 +13,9 @@ export default function Errorpage() {
   document.body.style.overflow = 'hidden';
 
   const latestContact =
-    resumeData[lang].header.contacts[resumeData.header.contacts.length - 1];
+    resumeData[lang].header.contacts[
+      resumeData[lang].header.contacts.length - 1
+    ];
   const latestVersion = latestContact.version || '1.0.0';
   const Message = {
     FirstHeader: ['Resume Version', '简历版本'],
