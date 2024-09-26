@@ -3,7 +3,7 @@ import Navbar from '../../conponent/NavBar/Navbar';
 
 export default function igrapher() {
   return (
-    <div className='flex h-screen w-screen pt-[130px] justify-center '>
+    <div className='flex h-screen bg-gray-100 w-screen pt-[130px] justify-center'>
       <Navbar BG={'bg-white'} />
       <div className='flex w-full max-w-[1200px] justify-center'>
         {' '}

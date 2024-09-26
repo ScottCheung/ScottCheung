@@ -125,7 +125,7 @@ export default function Resume({ printMode }) {
             </h1>
 
             <div
-              className={`${printMode ? 'gap-x-[30px] ' : 'flex-wrap lg:flex-row flex-col gap-x-[60px] '} flex mt-[10px] items-center w-full justify-center   gap-y-[10px] `}
+              className={`${printMode ? 'gap-x-[30px] ' : 'flex-wrap hidden lg:flex-row flex-col gap-x-[60px] '} flex mt-[10px] items-center w-full justify-center   gap-y-[10px] `}
             >
               {' '}
               {cvData.header.contacts.map((contact, index) => (
@@ -441,7 +441,7 @@ export default function Resume({ printMode }) {
                               target='_blank'
                               rel='noopener noreferrer'
                               href={item.link}
-                              className='mb-4 text-left lg:text-justify group-hover:lg:my-[30px] transition-all duration-500'
+                              className='mb-4 text-left lg:text-justify group-hover:lg:my-[20px] transition-all duration-500'
                             >
                               <strong className={strong + 'flex items-center '}>
                                 <div className='flex'>▸ {item.title}</div>
@@ -450,10 +450,10 @@ export default function Resume({ printMode }) {
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     href={item.link}
-                                    className={`flex items-center  group-hover:lg:opacity-100  opacity-50 text-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
+                                    className={`flex items-center  group-hover:lg:opacity-100 group-hover:lg:my-[20px]  px-[5px] py-[5px] transition-all duration-500  group-hover:lg:text-green-700  group-hover:lg:bg-green-100 rounded-full group-hover:lg:px-[10px] mx-[10px]   opacity-50 text-${EmphasizeColorLists[forceColor]}-${colorDepth} `}
                                   >
                                     <p
-                                      className={`ml-[10px] text-[15px]  font-black group-hover:lg:my-[30px]  transition-all duration-500`}
+                                      className={`ml-[10px] text-[15px]  font-black   transition-all duration-500`}
                                     >
                                       Link
                                     </p>

@@ -20,7 +20,7 @@ export default function Resume({ print }) {
           className={
             print
               ? 'w-full h-full '
-              : 'my-[10%] max-w-[1200px] mt-[30vh] flex justify-center items-center  h-full '
+              : 'mt-[150px]  pb-[160px] max-w-[1200px]  flex justify-center items-center  h-full '
           }
         >
           <CV printMode={print} />
