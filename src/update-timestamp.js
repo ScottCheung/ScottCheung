@@ -54,20 +54,20 @@ const getGeolocation = async () => {
     author: 'Scott Cheung',
     address,
     // 自定义
-    // header: [
-    //   "Update CV page's UI and contents.",
-    //   '更新简历 UI 和内容，更新Skill部分内容。',
-    // ],
-    // new: [
-    //   [
-    //     'Add contents of skill part in Home and CV page.',
-    //     'Adjust partial UI and Animations in Home and CV page.',
-    //   ],
-    //   [
-    //     '新增内容，在主页的能力部分和简历页。',
-    //     '调整部分在主页和简历页的 UI 和 动画。',
-    //   ],
-    // ],
+    header: [
+      "Update CV page's UI and contents.",
+      '更新简历 UI 和内容，更新Skill部分内容。',
+    ],
+    new: [
+      [
+        'Add contents of skill part in Home and CV page.',
+        'Adjust partial UI and Animations in Home and CV page.',
+      ],
+      [
+        '新增内容，在主页的能力部分和简历页。',
+        '调整部分在主页和简历页的 UI 和 动画。',
+      ],
+    ],
     // fix: [['Fix some bugs of animation bugs.'], ['修复了动画 BUG.']],
     // impro: [
     //   [
@@ -91,10 +91,10 @@ const getGeolocation = async () => {
     impro: [],
 
     // 显示优化 💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅
-    header: ['Patch Update', '补丁更新'],
-    new: [],
-    fix: [['Fix  some bugs.'], ['修复部分异常']],
-    impro: [],
+    // header: ['Patch Update', '补丁更新'],
+    // new: [],
+    // fix: [['Fix  some bugs.'], ['修复部分异常']],
+    // impro: [],
 
     // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
     // header: ["Patch Update", "补丁更新"],

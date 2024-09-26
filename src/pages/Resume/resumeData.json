@@ -30,10 +30,10 @@
         },
         {
           "name": "Check for Updates",
-          "update": "19th September",
-          "version": "20240919",
+          "update": "27th September",
+          "version": "20240927",
           "icon": "flex items-center fi fi-rr-clock",
-          "link": "https://xianzhe.site/resumecheck/20240919"
+          "link": "https://xianzhe.site/resumecheck/20240927"
         }
       ]
     },
@@ -369,10 +369,10 @@
         },
         {
           "name": "检查更新",
-          "update": "9月19号",
-          "version": "20240919",
+          "update": "9月27号",
+          "version": "20240927",
           "icon": "flex items-center fi fi-rr-clock",
-          "link": "https://xianzhe.site/resumecheck/20240919"
+          "link": "https://xianzhe.site/resumecheck/20240927"
         }
       ]
     },
