@@ -78,23 +78,23 @@ const getGeolocation = async () => {
     // ],
 
     // 更新内容
-    header: ['Patch Update', '补丁更新'],
-    new: [
-      [
-        'Add contents of skill part in CV page.',
-        'Adjust partial UI and Animations in Home and CV page.',
-      ],
-      ['新增内容，简历页。', '调整部分在主页和简历页的 UI 和 动画。'],
-    ],
+    // header: ['Patch Update', '补丁更新'],
+    // new: [
+    //   [
+    //     'Add contents of skill part in CV page.',
+    //     'Adjust partial UI and Animations in Home and CV page.',
+    //   ],
+    //   ['新增内容，简历页。', '调整部分在主页和简历页的 UI 和 动画。'],
+    // ],
 
     fix: [],
     impro: [],
 
     // 显示优化 💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅💅
-    // header: ['Patch Update', '补丁更新'],
-    // new: [],
-    // fix: [['Fix  some bugs.'], ['修复部分异常']],
-    // impro: [],
+    header: ['Patch Update', '补丁更新'],
+    new: [],
+    fix: [['Fix  some bugs.'], ['修复部分异常']],
+    impro: [],
 
     // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
     // header: ["Patch Update", "补丁更新"],
