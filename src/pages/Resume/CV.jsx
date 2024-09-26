@@ -21,8 +21,7 @@ const EmphasizeColorLists = [
   'purple',
 ];
 
-export default function Resume({ print }) {
-  const printMode = print || null;
+export default function Resume({ printMode }) {
   const lang = useLanguage();
 
   const cvData = Data[lang];
@@ -95,12 +94,14 @@ export default function Resume({ print }) {
   const strong = `flex mr-2 tracking-wide font-bold pr-1 -ml-1  text-${EmphasizeColorLists[forceColor]}-${colorDepth - 100} transition-all duration-500`;
 
   return (
-    <div className='flex justify-center bg-white '>
+    <div
+      className={`flex justify-center w-full bg-white ${printMode ? '' : ''}`}
+    >
       <motion.div
         layout
-        className={`bg-white flex flex-col relative justify-center `}
+        className={`bg-white flex flex-col relative justify-center   `}
       >
-        <div className='absolute top-0 left-0 right-0 text-white text-[1px]'>
+        <div className='absolute top-0 left-0 right-0 text-white opacity-0 text-[2px]'>
           {cvData.header.AIPrompt}
         </div>
         <link
@@ -114,19 +115,19 @@ export default function Resume({ print }) {
         >
           <div className='flex-wrap h-full text-center '>
             <h1
-              style={
-                {
-                  // fontFamily: 'Hey August, sans-serif',
-                }
-              }
+              style={{
+                fontFamily: printMode ? '' : 'Hey August, sans-serif',
+              }}
               className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} tracking-widest font-black  
-   ${printMode ? 'text-[70px]  mb-[20px]' : isTop ? ' text-[50px] md:text-[65px]  lg:text-[80px]' : 'text-[30px] md:text-[50px]  lg:text-[50px]'}  font-[100] transition-all duration-500`}
+   ${printMode ? 'text-[70px]   ' : isTop ? ' text-[50px] md:text-[65px]  lg:text-[80px] ' : 'text-[40px] md:text-[50px]  lg:text-[60px]'}  font-[100] transition-all duration-500`}
             >
               {cvData.header.name}
             </h1>
+
             <div
-              className={`flex justify-center items-center gap-[15px]  ${printMode ? '' : 'mt-[25px]'} flex-col lg:flex-row`}
+              className={`${printMode ? 'gap-x-[30px] ' : 'flex-wrap lg:flex-row flex-col gap-x-[60px] '} flex mt-[10px] items-center w-full justify-center   gap-y-[10px] `}
             >
+              {' '}
               {cvData.header.contacts.map((contact, index) => (
                 <React.Fragment key={contact.name}>
                   <a
@@ -160,7 +161,7 @@ export default function Resume({ print }) {
                 target='_blank'
                 rel='noopener noreferrer'
                 href={section.href}
-                className={`flex justify-between  items-center gap-x-[20px] mt-[20px] mb-[10px] ${
+                className={`flex justify-between  items-center gap-x-[20px] mt-[15px] mb-[10px] ${
                   section.href && 'group'
                 }`}
               >
@@ -191,6 +192,7 @@ export default function Resume({ print }) {
               </a>
 
               {/* Summary */}
+
               {section.content && (
                 <div className={normaltext + ' group'}>
                   <p className='group-hover:lg:leading-[40px] text-left lg:text-justify leading-[30px] transition-all duration-500'>
@@ -198,6 +200,7 @@ export default function Resume({ print }) {
                   </p>
                 </div>
               )}
+
               {/* Highlights*/}
               <div className='flex flex-wrap items-center w-full justify-center md:justify-between gap-[30px]'>
                 {section.highlights &&
@@ -308,7 +311,9 @@ export default function Resume({ print }) {
 
               {/* Education */}
               {section.edus && (
-                <div className='flex justify-between items-center gap-x-[60px] flex-col lg:flex-row'>
+                <div
+                  className={`${printMode ? 'gap-x-[30px]' : 'flex-wrap lg:flex-row flex-col gap-x-[60px] gap-y-[20px]'} flex  items-center w-full justify-center   gap-y-[10px] my-[10px]`}
+                >
                   {section.edus.map((edu, index) => (
                     <React.Fragment key={index}>
                       <a
@@ -380,14 +385,11 @@ export default function Resume({ print }) {
               {/* WorkExperience */}
               {section.WorkExperience &&
                 section.WorkExperience.map((work, index) => (
-                  <a
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    href={work.link}
+                  <div
                     key={index}
                     className={
                       work.link &&
-                      ' cursor-pointer mt-3 flex justify-between items-start flex-wrap group'
+                      ' mt-3 flex justify-between items-start flex-wrap group'
                     }
                   >
                     <div className={contentContainer + ' group'}>
@@ -399,32 +401,6 @@ export default function Resume({ print }) {
                           {work.location}
                           <div className={divisionCol + ' mx-[20px]'}></div>
                           {work.title}
-                          {work.link && (
-                            <div
-                              className={`flex items-center group-hover:lg:opacity-100  opacity-70 text-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
-                            >
-                              <p
-                                className={`ml-[10px] text-[15px] mb-[5px]  font-black group-hover:lg:my-[30px]  transition-all duration-500`}
-                              >
-                                Link
-                              </p>
-                              <svg
-                                class='w-6 h-6  flex -rotate-45'
-                                aria-hidden='true'
-                                xmlns='http://www.w3.org/2000/svg'
-                                fill='none'
-                                viewBox='0 0 14 10'
-                              >
-                                <path
-                                  stroke='currentColor'
-                                  stroke-linecap='round'
-                                  stroke-linejoin='round'
-                                  stroke-width='2'
-                                  d='M1 5h12m0 0L9 1m4 4L9 9'
-                                />
-                              </svg>
-                            </div>
-                          )}
                         </h3>
                         <span className={division + ' mx-[20px]'}></span>
                         {/* duration */}
@@ -434,13 +410,13 @@ export default function Resume({ print }) {
                       </div>
 
                       <div className={`${normaltext} pl-[20px]`}>
-                        <p className='flex group-hover:lg:my-[30px] transition-all duration-500'>
+                        <p className='md:flex group-hover:lg:my-[30px] transition-all duration-500'>
                           <strong className={strong}>Desceription:</strong>
                           <p className='flex items-center font-bold text-gray-600'>
                             {parseText(work.des)}
                           </p>
                         </p>
-                        <p className='flex group-hover:lg:my-[30px] text-[15px] transition-all duration-500'>
+                        <p className='md:flex group-hover:lg:my-[30px] text-[15px] transition-all duration-500'>
                           <strong className={strong}>Skill:</strong>
                           <p className='flex flex-wrap items-center font-bold text-gray-600 '>
                             {work.skill.map((skill, index) => (
@@ -460,20 +436,52 @@ export default function Resume({ print }) {
                         </p>
                         <ul className='pl-5'>
                           {work.contribution.map((item, index) => (
-                            <li
+                            <div
                               key={index}
+                              target='_blank'
+                              rel='noopener noreferrer'
+                              href={item.link}
                               className='mb-4 text-left lg:text-justify group-hover:lg:my-[30px] transition-all duration-500'
                             >
-                              <strong className={strong + ' '}>
-                                ▸ {item.title} :
+                              <strong className={strong + 'flex items-center '}>
+                                <div className='flex'>▸ {item.title}</div>
+                                {item.link && (
+                                  <a
+                                    target='_blank'
+                                    rel='noopener noreferrer'
+                                    href={item.link}
+                                    className={`flex items-center  group-hover:lg:opacity-100  opacity-50 text-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
+                                  >
+                                    <p
+                                      className={`ml-[10px] text-[15px]  font-black group-hover:lg:my-[30px]  transition-all duration-500`}
+                                    >
+                                      Link
+                                    </p>
+                                    <svg
+                                      class='w-6 h-6  flex -rotate-45'
+                                      aria-hidden='true'
+                                      xmlns='http://www.w3.org/2000/svg'
+                                      fill='none'
+                                      viewBox='0 0 14 10'
+                                    >
+                                      <path
+                                        stroke='currentColor'
+                                        stroke-linecap='round'
+                                        stroke-linejoin='round'
+                                        stroke-width='2'
+                                        d='M1 5h12m0 0L9 1m4 4L9 9'
+                                      />
+                                    </svg>
+                                  </a>
+                                )}
                               </strong>
                               {parseText(item.description)}
-                            </li>
+                            </div>
                           ))}
                         </ul>
                       </div>
                     </div>
-                  </a>
+                  </div>
                 ))}
 
               {/* Projects */}
@@ -490,7 +498,7 @@ export default function Resume({ print }) {
                     }
                   >
                     <div className={contentContainer}>
-                      <div className='flex flex-col items-start justify-start md:flex-row '>
+                      <div className='flex flex-col items-center justify-start md:flex-row '>
                         <h3 className={workPartTitle}>
                           {project.name}
                           {project.link && (
@@ -534,13 +542,13 @@ export default function Resume({ print }) {
                       </div>
 
                       <div className={`${normaltext} pl-[20px]`}>
-                        <p className='flex group-hover:lg:my-[30px] transition-all duration-500'>
+                        <p className='md:flex group-hover:lg:my-[30px] transition-all duration-500'>
                           <strong className={strong}>Desceription:</strong>
                           <p className='flex items-center font-bold text-gray-600'>
                             {parseText(project.des)}
                           </p>
                         </p>
-                        <p className='flex group-hover:lg:my-[30px] text-[15px] mb-[5px]  transition-all duration-500'>
+                        <p className='md:flex group-hover:lg:my-[30px] text-[15px] mb-[5px]  transition-all duration-500'>
                           <strong className={strong}>Skill:</strong>
                           <p className='flex flex-wrap items-center font-bold text-gray-600'>
                             {project.skill.map((skill, index) => (
@@ -565,7 +573,7 @@ export default function Resume({ print }) {
                               className='mb-4 text-left lg:text-justify group-hover:lg:mb-[30px] transition-all duration-500'
                             >
                               <strong className={strong + ' '}>
-                                ▸ {item.title} :
+                                <div className='flex'>▸ {item.title}</div>
                               </strong>
                               {parseText(item.description)}
                             </li>

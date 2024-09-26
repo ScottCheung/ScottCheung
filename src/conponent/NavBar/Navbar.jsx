@@ -658,7 +658,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
             behavior: 'smooth',
           });
         }}
-        className={`fixed bottom-10 transition-all duration-1000 ${isTop || isScrolling || Components.NavBar !== 'visible' ? '-right-[80px]' : 'right-10 lg:right-12'} z-50  `}
+        className={`fixed bottom-10 md:bottom-14 lg:bottom-48 transition-all duration-1000 ${isTop || isScrolling || Components.NavBar !== 'visible' ? '-right-[80px]' : 'right-10 md:right-14 lg:right-48'} z-50  `}
       >
         <div className='px-4 py-2 text-white rounded-full lg:scale-150'>
           <div className='modal-trigger-visblecontainer '>

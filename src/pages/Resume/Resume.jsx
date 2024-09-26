@@ -20,10 +20,10 @@ export default function Resume({ print }) {
           className={
             print
               ? 'w-full h-full '
-              : 'my-[15%] max-w-[1200px]  flex justify-center items-center  h-full pb-[20%]'
+              : 'my-[15%] max-w-[1200px] mt-[30vh] flex justify-center items-center  h-full pb-[20%]'
           }
         >
-          <CV />
+          <CV printMode={print} />
         </div>
       </div>
     </div>
