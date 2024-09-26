@@ -22,8 +22,9 @@ import Project from './pages/project.jsx';
 import Tool from './pages/tool/Tools.jsx';
 import Coverletter from './pages/CoverLetter/coverletter.tsx';
 import TikTok from './pages/Empty.jsx';
-import Gobelldesign from './pages/gobelldesign/gobelldesign.jsx';
+import Gobelldesign from './pages/projects/gobelldesign.jsx';
 import Work from './pages/work.jsx';
+import Igrapher from './pages/projects/igrapher.jsx';
 
 const router = createBrowserRouter([
   {
@@ -120,6 +121,7 @@ const router = createBrowserRouter([
     path: '/tool',
     element: <Tool />,
   },
+
   {
     path: '/TikTok',
     element: <TikTok />,
@@ -127,6 +129,10 @@ const router = createBrowserRouter([
   {
     path: '/gobelldesign',
     element: <Gobelldesign />,
+  },
+  {
+    path: '/igrapher',
+    element: <Igrapher />,
   },
 ]);
 

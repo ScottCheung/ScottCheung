@@ -227,7 +227,7 @@
             "name": "Neo4j iGrapher (Zero-Code Graphical Data Analysis Tool)",
             "des": "A web tool using Neo4j, React, and D3.js to provide zero-code analysis and complex data relationship visualization.",
             "tag": "Web Development",
-            "link": "http://43.128.92.60/",
+            "link": "https://xianzhe.site/igrapher",
             "skill": [
               "HTML",
               "CSS",
@@ -553,7 +553,7 @@
             "name": "Neo4j iGrapher（图形化数据零代码分析工具）",
             "des": "一种使用Neo4j、React和D3.js进行零代码分析和复杂数据关系图形化表示的Web工具。",
             "tag": "Web开发",
-            "link": "http://43.128.92.60/",
+            "link": "https://xianzhe.site/igrapher",
             "skill": [
               "HTML",
               "CSS",
