@@ -208,7 +208,7 @@
               {
                 "title": "Front-end Architecture & Component Development",
                 "link": "http://m.gobell.au/",
-                "description": "Built the front-end architecture and components for the Gobell membership system using <s>TypeScript<s>, <s>React<s>, and <s>Next.js<s>. Designed and implemented over <s>50<s> custom components, following SOLID principles and best practices. Integrated Redux for efficient state management."
+                "description": "Built the <s>front-end architecture<s> and <s>components<s> for the Gobell membership system using <s>TypeScript<s>, <s>React<s>, and <s>Next.js<s>. Designed and implemented over <s>50<s> custom components, following SOLID principles and best practices. Integrated <s>Redux<s> for efficient state management."
               },
               {
                 "title": "Developed UI Animations",
