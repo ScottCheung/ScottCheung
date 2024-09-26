@@ -450,7 +450,7 @@ export default function Resume({ printMode }) {
                                     target='_blank'
                                     rel='noopener noreferrer'
                                     href={item.link}
-                                    className={`flex items-center  group-hover:lg:opacity-100 group-hover:lg:my-[20px]  px-[5px] py-[5px] transition-all duration-500  group-hover:lg:text-green-700  group-hover:lg:bg-green-100 rounded-full group-hover:lg:px-[10px] mx-[10px]   opacity-50 text-${EmphasizeColorLists[forceColor]}-${colorDepth} `}
+                                    className={`flex items-center  group-hover:lg:opacity-100 px-[5px] py-[5px] transition-all duration-500  group-hover:lg:text-green-700  group-hover:lg:bg-green-100 rounded-full group-hover:lg:px-[10px] mx-[10px]   opacity-50 text-${EmphasizeColorLists[forceColor]}-${colorDepth} `}
                                   >
                                     <p
                                       className={`ml-[10px] text-[15px]  font-black   transition-all duration-500`}
