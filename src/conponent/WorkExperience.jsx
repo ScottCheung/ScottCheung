@@ -14,6 +14,26 @@ const contentContainer = `flex-1 flex flex-col justify-between  animate__animate
 const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
 const divisionline = `flex duration-0 flex flex-1 h-[5px] w-[2px] rounded-full bg-sky-700  transition-all duration-1000`;
+const parseText = (text) => {
+  const parts = text.split(/(<s>.*?<s>)/).map((part, index) => {
+    if (part.startsWith('<s>') && part.endsWith('<s>')) {
+      return (
+        <span
+          key={index}
+          className={`text-sky-700 transition-all  duration-300   opacity-100 font-bold mx-[3px] `}
+        >
+          {part.replace(/<s>/g, '')}
+        </span>
+      );
+    }
+    return (
+      <span className='text-gray-700 transition-all duration-500 ' key={index}>
+        {part}
+      </span>
+    );
+  });
+  return parts;
+};
 
 const cardData = [
   {
@@ -78,7 +98,7 @@ const cardData = [
     endTime: 'Sep 2019',
     image:
       'https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg',
-    backgroundColor: 'bg-blue-300',
+    backgroundColor: 'bg-red-300',
     skill: [
       'React',
       'HTML',
@@ -122,8 +142,7 @@ const cardData = [
     id: 1,
     title: 'Financial Assistant',
     type: 'Part Time',
-    company:
-      'Southwest University of Science and Technology Analytical Testing Centre',
+    company: 'SWUST Analytical Testing Centre',
     startTime: 'Mar 2021',
     endTime: 'Feb 2022',
     image:
@@ -168,7 +187,7 @@ const cardData = [
     endTime: 'July 2023',
     image:
       'https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_1116,h_1116/v1670495515/assets/69/2878ac-8a8e-48fe-8e9a-cdcd73a3e263/original/Courier_With_Bags_v2.png',
-    backgroundColor: 'bg-blue-300',
+    backgroundColor: 'bg-green-300',
     skill: [
       'Time Management',
       'Customer Service',
@@ -199,6 +218,62 @@ const cardData = [
         point: 'Safety and Compliance',
         description:
           'Strictly adhered to traffic laws and safety guidelines, achieving a record of zero accidents or violations during the entire tenure.',
+      },
+    ],
+  },
+  {
+    company: 'Gobell Group',
+    title: 'Front-end Developer',
+    location: 'Sydney',
+    type: 'Full Time',
+    startTime: 'May 2024',
+    endTime: 'Present',
+    name: 'Gobell Membership System',
+    des: 'Developed a membership management system for Gobell from scratch, including features like member login, registration, orders, products, payment processing, deposits, and credential verification.',
+    tag: 'Web Development',
+    link: 'http://m.gobell.au/',
+    image:
+      'https://3o.hk/images/2024/09/27/WeChat62ee050df77fd51b13c8bbaf249afc78.jpg',
+    backgroundColor: 'bg-orange-300',
+    skill: [
+      'HTML',
+      'CSS',
+      'TypeScript',
+      'React',
+      'Next.js',
+      'Tailwind',
+      'Framer Motion',
+      'Redux',
+      'i18n',
+      'Figma',
+      'AWS Cloud',
+      'jsBarcode',
+      'QRcode',
+    ],
+    points: [
+      {
+        point: 'Independently responsible for visual design',
+        link: 'http://xianzhe.site/gobelldesign',
+        description:
+          'Led the visual design for the membership project using <s>Figma<s> and <s>Photoshop<s>, covering <s>UI/UX<s> for the Gobell client, <s>promotional flyers<s>, <s>brochures<s>, <s>pull-up banners<s>, and three <s>membership cards<s>. Also coordinated card production processes.',
+      },
+      {
+        point: 'Authored Front-end Guidelines',
+        link: 'http://m.gobell.au/test',
+        description:
+          'Created the <s>front-end UI guidelines<s> and <s>development documentation<s>, including <s>global color schemes<s>, <s>font guidelines<s>, <s>border-radius standards<s>, and <s>spacing rules<s>. Improved <s>maintainability<s>, <s>code scalability<s>, and <s>reduced team communication costs<s>.',
+      },
+      {
+        point: 'Front-end Architecture & Component Development',
+        link: 'http://m.gobell.au/',
+        description:
+          'Built the <s>front-end architecture<s> and <s>components<s> for the Gobell membership system using <s>TypeScript<s>, <s>React<s>, and <s>Next.js<s>. Designed and implemented over <s>50<s> custom components, following SOLID principles and best practices. Integrated <s>Redux<s> for efficient state management.',
+      },
+      {
+        point: 'Developed UI Animations',
+        link: 'http://m.gobell.au/',
+        description:
+          'Customized over <s>30<s> animations for the components using <s>Framer Motion<s> and <s>CSS Animation<s> to enhance user experience, including <s>error<s>, <s>loading indicators<s>, <s>scaling effects<s>, and <s>transitions<s>. Significantly improved user feedback and interface appeal.',
       },
     ],
   },
@@ -234,14 +309,14 @@ function Card({ card, onClick }) {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className='object-cover object-bottom w-full shadow-lg'
         />
-        <motion.kbd
+        {/* <motion.kbd
           layout
           layoutId={'card-type' + card.type + card.company}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           class=' absolute top-[20px] right-[20px]  lg:bottom-[20px] lg:right-[20px] flex-shrink-0 flex w-[35px] h-[35rpx] lg:w-[35px] lg:h-[35px]  items-center justify-center  lg:p-[20px] text-[18px] lg:text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500'
         >
           {card.type[0]}
-        </motion.kbd>
+        </motion.kbd> */}
       </div>
 
       <div className='flex flex-col  p-[14px] lg:p-[0px] lg:mt-[60%]  items-start justify-start h-[130px] animate__animated animate__fadeInUp'>
@@ -402,7 +477,7 @@ function WorkExperience() {
                   transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <motion.div className='relative  z-0 flex transform-gpuu lg:rounded-[28px] flex-wrap  max-h-[100vh] lg:max-h-[90vh]   w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg  overflow-auto '>
+                  <motion.div className='relative  z-0 flex transform-gpuu lg:rounded-[28px]  flex-wrap  max-h-[100vh] lg:max-h-[90vh] overflow-auto lg:overflow-hidden  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg   '>
                     <motion.div
                       layoutId={`card-img-${selectedCard.id}`}
                       transition={{
@@ -420,16 +495,15 @@ function WorkExperience() {
                     </motion.div>
 
                     <motion.div
-                      // layout
-
-                      className='flex flex-col w-full max-w-[800px] m-[40px] lg:pt-0 z-40 lg:pb-[10vh]'
+                      layout
+                      className='flex flex-col w-full max-w-[800px] m-[40px] lg:pt-0 z-40 pb-[50px]  h-[70vh]  lg:overflow-auto'
                     >
-                      <div className='flex flex-col gap-y-8 '>
-                        <div className='flex flex-wrap items-center gap-8'>
-                          <h1 className='font-bold text-7xl'>
+                      <div className='flex flex-col gap-8 '>
+                        <div className='flex items-baseline gap-12'>
+                          <div className='flex font-bold text-7xl'>
                             {selectedCard.title}
-                          </h1>
-                          <motion.kbd
+                          </div>
+                          {/* <motion.div
                             layoutId={
                               'card-type' +
                               selectedCard.type +
@@ -442,10 +516,10 @@ function WorkExperience() {
                             class='flex items-center justify-center px-[20px] py-[5px] text-xl font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500'
                           >
                             {selectedCard.type}
-                          </motion.kbd>
+                          </motion.div> */}
                         </div>
 
-                        <div className='flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-y-auto  h-[30%]  pb-8'>
+                        <div className='flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-hidden h-[30%]  pb-8'>
                           <h2 className='flex w-[70%] text-[13px] md:text-[16px] lg:text-[21px] text-gray-400'>
                             {selectedCard.company}
                           </h2>
@@ -461,7 +535,7 @@ function WorkExperience() {
                       </div>
 
                       <div className={contentContainer}>
-                        <div className={normaltext}>
+                        <div className={normaltext + ' pb-[10vh] md:pb-[0vh]'}>
                           <p>
                             <h3 className='text-[20px] font-black'>Skill:</h3>{' '}
                             {selectedCard.skill.join(',  ')}
@@ -475,7 +549,7 @@ function WorkExperience() {
                                 <strong className='block mr-2 font-semibold'>
                                   ▸ {item.point}
                                 </strong>
-                                {item.description}
+                                {parseText(item.description)}
                               </li>
                             ))}
                           </ul>
