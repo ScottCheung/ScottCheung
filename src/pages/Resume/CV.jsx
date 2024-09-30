@@ -125,7 +125,7 @@ export default function Resume({ printMode }) {
             </h1>
 
             <div
-              className={`${printMode ? 'gap-x-[30px] ' : 'flex-wrap hidden lg:flex-row flex-col gap-x-[60px] '} flex mt-[10px] items-center w-full justify-center   gap-y-[10px] `}
+              className={`${printMode ? 'gap-x-[30px] ' : 'flex-wrap  lg:flex-row flex-col gap-x-[20px] '} flex mt-[10px] items-center w-full justify-center   gap-y-[10px] `}
             >
               {' '}
               {cvData.header.contacts.map((contact, index) => (

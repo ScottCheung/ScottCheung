@@ -45,7 +45,7 @@ const updateTime = [
 
 const navbarItem = data.navbarItem;
 
-function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
+function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
   const { Components } = useAppContext();
   const [hoverTab, setHoverTab] = useState(-1);
   const handleTabChange = (index) => {
@@ -568,6 +568,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange }) {
                       ),
                   )}
                 </motion.div>
+                {extra}
               </motion.div>
             </motion.div>
           </motion.div>
