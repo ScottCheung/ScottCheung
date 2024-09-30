@@ -8,7 +8,7 @@ import CVs from './CVs';
 
 export default function Resume({ print }) {
   const lang = useLanguage();
-  const [isATSMode, setIsATSMode] = useState(false);
+  const [isATSMode, setIsATSMode] = useState(true);
 
   const toggleResumeMode = () => {
     setIsATSMode(!isATSMode);
