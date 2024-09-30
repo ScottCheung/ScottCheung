@@ -21,7 +21,7 @@ export default function Resume({ print }) {
           <Navbar
             // BG={'bg-sky-50'}
             extra={
-              <div className='fixed md:relative -top-8 z-50   flex pt-[10px] flex-col items-center justify-center lg:mt-12 group overflow-hidden'>
+              <div className='fixed md:relative -top-8 z-50   flex py-[10px] flex-col items-center justify-center lg:mt-12 group overflow-hidden'>
                 <div className='flex flex-col items-center justify-center mt-4 '>
                   <div
                     onClick={toggleResumeMode}
