@@ -5,13 +5,34 @@ import { useLanguage } from '../../help/helpFunction';
 import Navbar from '../../conponent/NavBar/Navbar';
 import CV from './CV';
 import CVs from './CVs';
+import { div } from 'three/examples/jsm/nodes/Nodes.js';
 
 export default function Resume({ print }) {
   const lang = useLanguage();
-  const [isATSMode, setIsATSMode] = useState(true);
+  const [isATSMode, setIsATSMode] = useState(false);
 
   const toggleResumeMode = () => {
     setIsATSMode(!isATSMode);
+  };
+
+  const resumeRef = useRef(null);
+
+  // 复制简历全文的函数
+  const handleCopyResume = () => {
+    const resumeText = resumeRef.current.innerText;
+    console.log(resumeText);
+    navigator.clipboard
+      .writeText(resumeText)
+      .then(() => {
+        alert(
+          ['Resume has been copy in your clipboard.', '简历已复制到剪贴板.'][
+            lang
+          ],
+        );
+      })
+      .catch((err) => {
+        console.error('Copy error:', err);
+      });
   };
 
   return (
@@ -21,11 +42,11 @@ export default function Resume({ print }) {
           <Navbar
             // BG={'bg-sky-50'}
             extra={
-              <div className='fixed md:relative -top-8 z-50   flex py-[10px] flex-col items-center justify-center lg:mt-12 group overflow-hidden'>
-                <div className='flex flex-col items-center justify-center mt-4 '>
+              <div className='sticky md:relative -top-8 z-50   flex py-[10px] flex-col items-center justify-center lg:mt-12 group overflow-hidden'>
+                <div className='flex items-center justify-center gap-8 mt-4 '>
                   <div
                     onClick={toggleResumeMode}
-                    className='inline-flex items-center justify-between px-1 py-1 overflow-hidden text-sm text-gray-700 bg-gray-200 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700'
+                    className='inline-flex items-center justify-between px-1 py-1 overflow-hidden text-sm text-gray-700 transition-all bg-gray-200 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700'
                   >
                     {/* HR Mode */}
                     <span className='text-[2em] relative rounded-full text-white px-6 py-6 cursor-pointer'>
@@ -65,12 +86,23 @@ export default function Resume({ print }) {
                       </span>
                     </span>
                   </div>
+                  {/* 复制按钮 */}
+                  {isATSMode && (
+                    <motion.button
+                      onClick={handleCopyResume}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      className='flex text-white bg-sky-800 text-[2em] relative rounded-full px-6 py-3 cursor-pointer'
+                    >
+                      Copy
+                    </motion.button>
+                  )}
                 </div>
 
                 {/* Display a brief introduction of the two resume modes */}
                 <motion.p
                   layout
-                  className='text-gray-600 mt-[5px] lg:flex hidden transition-all duration-500 opacity-40 group-hover:opacity-100 group-hover:lg:text-[15px]'
+                  className='text-gray-600 mt-[5px]  md:flex hidden transition-all duration-500 opacity-40 group-hover:opacity-100 group-hover:lg:text-[15px]'
                 >
                   {isATSMode
                     ? [
@@ -91,13 +123,20 @@ export default function Resume({ print }) {
 
       <div className='flex justify-center w-full h-full '>
         <div
+          ref={resumeRef}
           className={
             print
               ? 'w-full h-full '
               : 'mt-[220px] pb-[160px] max-w-[1200px] overflow-hidden flex justify-center items-center h-full flex-col'
           }
         >
-          {isATSMode ? <CVs /> : <CV printMode={print} />}
+          {isATSMode ? (
+            <div>
+              <CVs />
+            </div>
+          ) : (
+            <CV printMode={print} />
+          )}
         </div>
       </div>
     </div>
