@@ -57,7 +57,7 @@
           },
           {
             "no": 58,
-            "keyfeature": "Certificates",
+            "keyfeature": "Achievements",
             "href": "https://xianzhe.site/Certificates",
             "icon": "fi-rr-diploma"
           },
@@ -75,90 +75,6 @@
             "no": 42,
             "keyfeature": "HD Courses",
             "icon": "fi-rr-circle-a"
-          }
-        ]
-      },
-      {
-        "title": "Skills",
-        "icon": "flex items-center fi fi-rr-tool-box",
-        "skills": {
-          "Front-end": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "TypeScript",
-            "Next.js",
-            "React",
-            "Redux",
-            "Tailwind",
-            "Framer",
-            "Photoshop",
-            "RESTful APIs",
-            "UI/UX Design"
-          ],
-          "Back-end": [
-            "NodeJS",
-            "XML",
-            "JSON",
-            "Postman",
-            "RESTful API",
-            "Docker",
-            "GraphQL",
-            "AWS",
-            "CI/CD"
-          ],
-          "Database": [
-            "MySQL",
-            "PostgreSQL",
-            "Tableau",
-            "SQLite",
-            "PowerBI",
-            "Python",
-            "Neo4j",
-            "Pandas"
-          ],
-          "AI Algorithms": [
-            "Machine Learning",
-            "Deep Learning",
-            "Natural Language Processing",
-            "Recommendation Systems"
-          ],
-          "IT Tools": [
-            "Github",
-            "SSH",
-            "Docker",
-            "Zsh",
-            "Vim",
-            "Jira",
-            "Postman"
-          ]
-        }
-      },
-      {
-        "title": "Education",
-        "icon": "flex items-center fi fi-rr-graduation-cap",
-        "edus": [
-          {
-            "degree": "Master of IT",
-            "school": "UNSW",
-            "link": "https://xianzhe.site/major/ArtificalInteligence",
-            "major": "Artificial Intelligence",
-            "period": "September 2022 - May 2024"
-          },
-          {
-            "degree": "Bachelor of Management",
-            "school": "SWUST",
-            "link": "https://xianzhe.site/major/BusinessAdministration",
-            "major": "Business Administration",
-            "period": "September 2021 - May 2022"
-          },
-          {
-            "degree": "Bachelor of Engineering",
-            "school": "SWUST",
-            "link": "https://xianzhe.site/major/FunctionalMaterial",
-            "major": "Functional Materials",
-            "gpa": "84/100",
-            "period": "September 2017 - May 2022"
           }
         ]
       },
@@ -215,6 +131,80 @@
           }
         ]
       },
+      {
+        "title": "Skills",
+        "icon": "flex items-center fi fi-rr-tool-box",
+        "skills": {
+          "Front-end": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "TypeScript",
+            "React",
+            "Next.js",
+            "Redux",
+            "Tailwind",
+            "Framer",
+            "RESTful APIs",
+            "UI/UX Design"
+          ],
+          "Back-end": [
+            "NodeJS",
+            "Postman",
+            "RESTful API",
+            "GraphQL",
+            "Docker",
+            "AWS",
+            "CI/CD"
+          ],
+          "Database": [
+            "MySQL",
+            "PostgreSQL",
+            "Tableau",
+            "SQLite",
+            "PowerBI",
+            "Python",
+            "Neo4j",
+            "Pandas"
+          ],
+          "AI Algorithms": [
+            "Machine Learning",
+            "Deep Learning",
+            "Natural Language Processing",
+            "Recommendation Systems"
+          ],
+          "IT Tools": ["Github", "SSH", "Docker", "Shell", "Jira"]
+        }
+      },
+      {
+        "title": "Education",
+        "icon": "flex items-center fi fi-rr-graduation-cap",
+        "edus": [
+          {
+            "degree": "Master of IT",
+            "school": "UNSW",
+            "link": "https://xianzhe.site/major/ArtificalInteligence",
+            "major": "Artificial Intelligence",
+            "period": "Sep 2022 - May 2024"
+          },
+          {
+            "degree": "Bachelor of Management",
+            "school": "SWUST",
+            "link": "https://xianzhe.site/major/BusinessAdministration",
+            "major": "Business Administration",
+            "period": "Sep 2021 - May 2022"
+          },
+          {
+            "degree": "Bachelor of Engineering",
+            "school": "SWUST",
+            "link": "https://xianzhe.site/major/FunctionalMaterial",
+            "major": "Functional Materials",
+            "gpa": "84/100",
+            "period": "Sep 2017 - May 2022"
+          }
+        ]
+      },
+
       {
         "title": "Projects",
         "icon": "flex items-center fi fi-rr-folder",

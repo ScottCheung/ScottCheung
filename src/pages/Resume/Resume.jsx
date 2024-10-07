@@ -135,7 +135,17 @@ export default function Resume({ print }) {
               <CVs />
             </div>
           ) : (
-            <CV printMode={print} />
+            <div>
+              <CV printMode={print} />
+
+              {/* <div className='mt-[70px]  flex justify-center text-[7px]'>
+                The following content is identical to the previous content. It
+                is designed for Applicant Tracking Systems (ATS) and is easily
+                parsable. Alternatively, it could be simplified to a version
+                suitable for HR professionals.
+              </div>
+              {print && <CVs scale={0.6} />} */}
+            </div>
           )}
         </div>
       </div>
