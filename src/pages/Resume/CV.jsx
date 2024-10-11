@@ -19,6 +19,7 @@ const EmphasizeColorLists = [
   'sky',
   'blue',
   'purple',
+  'emerald',
 ];
 
 export default function Resume({ printMode }) {

@@ -26,10 +26,10 @@
         },
         {
           "name": "Check for Updates",
-          "update": "27th September",
-          "version": "20240927",
+          "update": "11th October",
+          "version": "20241011",
           "icon": "flex items-center fi fi-rr-clock",
-          "link": "https://xianzhe.site/resumecheck/20240927"
+          "link": "https://xianzhe.site/resumecheck/20241011"
         }
       ]
     },
@@ -37,7 +37,7 @@
       {
         "title": "Summary",
         "icon": "flex items-center fi fi-rr-user",
-        "content": "A <s>highly skilled<s> and <s>result-driven<s> developer with over <s>2 years<s> of development experience and <s>7 years<s> of design experience. Proficient in <s>HTML<s>, <s>CSS<s>, <s>JavaScript<s>, <s>TypeScript<s>, <s>Next.js<s>, <s>React<s>, <s>Redux<s>, <s>Tailwind<s>, and <s>Framer Motion<s>, having developed multiple efficient and maintainable front-end projects. Deeply experienced in <s>UI/UX design<s>, applying <s>Apple's<s> and <s>Google's<s> design <s>aesthetics<s> to various projects. Specializes in creating product interfaces that align with <s>brand identity<s> while <s>improving user experience<s> and <s>engagement<s>. Holds a Master's degree in IT from <s>UNSW<s>, focusing on <s>front-end development<s> and <s>AI<s> technologies. Visa-independent with a <s>five-year visa<s>. For more information, please visit https://xianzhe.site."
+        "content": "A <s>result-driven<s> developer with over <s>2 years<s> of development experience and <s>7 years<s> of design experience. Proficient in <s>HTML<s>, <s>CSS<s>, <s>JavaScript<s>, <s>TypeScript<s>, <s>Next.js<s>, <s>React<s>, <s>Redux<s>, <s>Tailwind<s>, and <s>Framer Motion<s>, having developed <s>5<s> front-end projects. Holds a Master's degree in IT from <s>UNSW<s>, focusing on <s>front-end development<s> and <s>AI<s> technologies. Visa-independent(Sub 485 Class) and Stable with a <s>five-year visa<s>."
       },
       {
         "title": "Highlights",
@@ -110,7 +110,7 @@
               {
                 "title": "Independently responsible for visual design",
                 "link": "http://xianzhe.site/gobelldesign",
-                "description": "Led the visual design for the membership project using <s>Figma<s> and <s>Photoshop<s>, covering <s>UI/UX<s> for the Gobell client, <s>promotional flyers<s>, <s>brochures<s>, <s>pull-up banners<s>, and three <s>membership cards<s>. Also coordinated card production processes."
+                "description": "Designed over <s>49<s> client/business <s>UI/UX interfaces<s>, <s>promotional flyers<s>, <s>brochures<s>, <s>pull-up banners<s>, and <s>3 membership cards<s> using <s>Figma<s> and <s>Photoshop<s>. Additionally, coordinated production details with the print factory for membership cards."
               },
               {
                 "title": "Authored Front-end Guidelines",
@@ -118,9 +118,9 @@
                 "description": "Created the <s>front-end UI guidelines<s> and <s>development documentation<s>, including <s>global color schemes<s>, <s>font guidelines<s>, <s>border-radius standards<s>, and <s>spacing rules<s>. Improved <s>maintainability<s>, <s>code scalability<s>, and <s>reduced team communication costs<s>."
               },
               {
-                "title": "Front-end Architecture & Component Development",
+                "title": "Front-end Architecture & Components Development",
                 "link": "http://m.gobell.au/",
-                "description": "Built the <s>front-end architecture<s> and <s>components<s> for the Gobell membership system using <s>TypeScript<s>, <s>React<s>, and <s>Next.js<s>. Designed and implemented over <s>50<s> custom components, following SOLID principles and best practices. Integrated <s>Redux<s> for efficient state management."
+                "description": "Built the <s>front-end architecture<s> and <s>components<s> using <s>TypeScript<s>, <s>React<s>, and <s>Next.js<s>. Designed and implemented over <s>50<s> custom components, following <s>SOLID principles<s> and best practices. Integrated <s>Redux<s> for efficient state management."
               },
               {
                 "title": "Developed UI Animations",
