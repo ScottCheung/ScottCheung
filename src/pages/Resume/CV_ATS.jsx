@@ -47,7 +47,7 @@ export default function Resume() {
         >
           {/* Header Section */}
           <header className='mb-12 text-center'>
-            <h1 className='text-5xl font-bold'>{cvData.header.name}</h1>
+            <h1 className='text-5xl font-bold '>{cvData.header.name}</h1>
             <p className='mt-4 text-lg'>
               {cvData.header.contacts.map((contact, index) => (
                 <span key={index}>
@@ -61,7 +61,9 @@ export default function Resume() {
           {/* Sections */}
           {cvData.sections.map((section, sectionIndex) => (
             <section key={sectionIndex} className='mb-12'>
-              <h2 className='mb-4 text-3xl font-semibold'>{section.title}</h2>
+              <h2 className='mb-4 text-3xl font-semibold my-[50px] text-[200px]'>
+                {section.title}
+              </h2>
 
               {section.content && (
                 <p className='mb-4'>{section.content.replace(/<s>/g, '')}</p>

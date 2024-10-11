@@ -2630,5 +2630,30 @@
       "补丁更新"
     ],
     "new": []
+  },
+  "2024-10-11T08:49:43.802Z": {
+    "version": "5.6.3",
+    "time": "2024-10-11T08:49:43.802Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "fix": [
+      [
+        "Fix  some bugs."
+      ],
+      [
+        "修复部分异常"
+      ]
+    ],
+    "impro": [],
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
+    "new": []
   }
 }

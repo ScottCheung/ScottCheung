@@ -138,13 +138,15 @@ export default function Resume({ print }) {
             <div>
               <CV printMode={print} />
 
-              {/* <div className='mt-[70px]  flex justify-center text-[7px]'>
-                The following content is identical to the previous content. It
-                is designed for Applicant Tracking Systems (ATS) and is easily
-                parsable. Alternatively, it could be simplified to a version
-                suitable for HR professionals.
+              <div className='mt-[70px]  flex justify-center text-[15px]'>
+                The above is optimized for human review, with more visual
+                elements to enhance readability.
               </div>
-              {print && <CVs scale={0.6} />} */}
+              <div className='mt-[10px]  flex justify-center text-[15px]'>
+                The following section is simplified for easy parsing by
+                automated systems(ATS). (Their contents are identical.)
+              </div>
+              {print && <CVs scale={0.6} />}
             </div>
           )}
         </div>

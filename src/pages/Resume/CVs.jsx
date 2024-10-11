@@ -2,23 +2,24 @@ import React, { useRef } from 'react';
 import Data from './resumeData.json';
 import { useLanguage } from '../../help/helpFunction';
 
-export default function Resume(scale = 1) {
+export default function Resume() {
   const lang = useLanguage();
   const cvData = Data[lang];
+  const scale = 1;
 
   // 统一管理 className 样式
   const styles = {
     container: `flex flex-col w-full p-4 md:p-12 lg:p-24 text-[${scale * 15}px]`,
-    header: `mb-${scale * 12} text-center`,
-    headerTitle: `text-5xl md:text-[30px]  lg:text-[${scale * 40}px] font-bold`,
-    headerContacts: `mt-${scale * 4} text-lg md:text-[${scale * 15}px]  lg:text-[${scale * 18}px]`,
+    header: `mb-${scale * 12} text-center w-full `,
+    headerTitle: `text-5xl md:text-[40px]  tracking-wide text-center  items-center lg:text-[${scale * 30}px] my-[30px] font-black `,
+    headerContacts: `mt-${scale * 4} text-[${scale * 15}px]`,
     section: `mb-${scale * 12}`,
-    sectionTitle: `mb-${scale * 4} text-${scale * 3}xl md:text-[${scale * 17}px]  lg:text-[${scale * 22}px] font-semibold`,
+    sectionTitle: `mb-${scale * 4} text-[${scale * 24}px] text-left font-bold  `,
     highlightsList: `pl-${scale * 5} mb-${scale * 4} list-disc`,
-    skillsCategory: `text-${scale * 2}xl md:text-[${scale * 15}px]  lg:text-[${scale * 17}px] font-medium`,
-    eduTitle: `text-${scale * 2}xl md:text-[${scale * 15}px]  lg:text-[${scale * 17}px] font-medium`,
-    workTitle: `text-${scale * 2}xl md:text-[${scale * 15}px]  lg:text-[${scale * 17}px] font-medium`,
-    projectTitle: `text-${scale * 2}xl md:text-[${scale * 15}px]  lg:text-[${scale * 17}px] font-medium`,
+    skillsCategory: `text-[${scale * 18}px] font-semibold`,
+    eduTitle: `text-[${scale * 20}px] font-medium`,
+    workTitle: `text-[${scale * 20}px] font-medium`,
+    projectTitle: `text-[${scale * 20}px] font-medium`,
     contributionList: `pl-${scale * 5} list-disc`,
     whyMeList: `pl-${scale * 5} list-disc`,
     copyButton: `bg-green-500 text-white py-${scale * 2} px-${scale * 4} rounded hover:bg-green-700 transition`,

@@ -202,7 +202,7 @@ function Contact({ isTopOut }) {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 2, delay: 0.6 }}
-                  className=' flex justify-center hidden items-center space-x-[90px]'
+                  className='  justify-center hidden items-center space-x-[90px]'
                 >
                   {codes.map((code, index) => (
                     <motion.div
