@@ -145,7 +145,6 @@
             "Redux",
             "Tailwind",
             "Framer",
-            "RESTful APIs",
             "UI/UX Design"
           ],
           "Back-end": [
@@ -291,8 +290,8 @@
             "icon": "fi-rr-graduation-cap"
           },
           {
-            "id": "Leadership",
-            "advantage": ["Leadership"],
+            "id": "Excellent Leadership",
+            "advantage": ["Excellent Leadership"],
             "href": "https://xianzhe.site/whyme/Leadership",
             "icon": "fi-rr-users-alt"
           },

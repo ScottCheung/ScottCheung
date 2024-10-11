@@ -84,13 +84,13 @@ export default function Resume({ printMode }) {
   }-${Math.max(colorDepth - 200 || 100)} gap-x-[${scale * 15}px] items-center transition-all duration-500`;
   const divisionline = `flex-1 h-[${scale * 2}px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:lg:opacity-100  opacity-50 transition-all duration-500`;
   const division = ` items-center md:flex md:flex-1 h-[${scale * 2}px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:lg:opacity-50  opacity-10 transition-all duration-500`;
-  const divisionCol = `flex w-[${1}px] h-4 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
+  const divisionCol = `flex w-[${1}px] h-2 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
   const h3 = `flex tracking-[1px] text-nowrap items-center text-[${scale * 20}px] font-bold flex group-hover:lg:text-[${scale * 28}px] transition-all  duration-500`;
   const workPartTitle = `flex tracking-[1px] items-center text-[${scale * 17}px] lg:text-[${scale * 23}px] group-hover:lg:text-[${scale * 28}px] transition-all duration-500 font-bold flex-wrap`;
   const h4 = `flex items-center text-[${scale * 15}px] text-gray-500 flex items-center`;
   const timetext = `flex items-center text-[${scale * 10}px]  font-[500] text-gray-400  transition-all duration-500  group-hover:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
   const whymeIcon = `text-[${scale * 20}px] flex justify-center items-center text-gray-400 group-hover:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth} `;
-  const whymelable = `text-[${scale * 15}px] text-gray-400  group-hover:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
+  const whymelable = `text-[${scale * 12}px] text-gray-400  group-hover:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
   const contentContainer = `flex-1 flex flex-col justify-between`;
   const strong = `flex mr-2 tracking-wide font-bold pr-1 -ml-1  text-${EmphasizeColorLists[forceColor]}-${colorDepth - 100} transition-all duration-500`;
 
@@ -172,7 +172,7 @@ export default function Resume({ printMode }) {
                   {section.link && (
                     <div className={`-ml-[${scale * 10}px] flex`}>
                       <svg
-                        class={`w-[${scale * 20}px] h-[${scale * 20}px] -rotate-45`}
+                        class={`ml-[${scale * 10}px] w-[${scale * 10}px] h-[${scale * 10}px] -rotate-45`}
                         aria-hidden='true'
                         xmlns='http://www.w3.org/2000/svg'
                         fill='none'
@@ -249,7 +249,7 @@ export default function Resume({ printMode }) {
                                 {KeyFeature.href && (
                                   <div className='flex '>
                                     <svg
-                                      class={`flex w-[${scale * 10}px] h-[${scale * 10}px] -rotate-45`}
+                                      class={`flex ml-[${scale * 10}px] w-[${scale * 10}px] h-[${scale * 10}px] -rotate-45`}
                                       aria-hidden='true'
                                       xmlns='http://www.w3.org/2000/svg'
                                       fill='none'
@@ -284,7 +284,7 @@ export default function Resume({ printMode }) {
                     ([category, list], index) => (
                       <div
                         key={index}
-                        className={`flex  group-hover:lg:my-[${scale * 30}px] transition-all duration-500 justify-between leading-${scale * 8} mb-${scale * 2} items-start md:items-center gap-x-[${scale * 30}px] py-[${scale * 15}px] md:py-[${scale * 3}px]`}
+                        className={`flex  group-hover:lg:my-[${scale * 30}px] transition-all duration-500 justify-between leading-${scale * 8} mb-[${scale * 10}px] items-start md:items-center gap-x-[${scale * 30}px] `}
                       >
                         <h2 className={h3}>{category}</h2>
 
@@ -355,7 +355,7 @@ export default function Resume({ printMode }) {
                             {edu.link && (
                               <div>
                                 <svg
-                                  class={`${h4} w-${scale * 4} h-${scale * 4} mx-${scale * 2} -rotate-45`}
+                                  class={`${h4} ml-[${scale * 10}px] w-[${scale * 10}px] h-[${scale * 10}px] mx-${scale * 2} -rotate-45`}
                                   aria-hidden='true'
                                   xmlns='http://www.w3.org/2000/svg'
                                   fill='none'
@@ -431,7 +431,7 @@ export default function Resume({ printMode }) {
 
                       <div className={`${normaltext} pl-[${scale * 20}px] `}>
                         <p
-                          className={`md:flex group-hover:lg:my-[${scale * 30}px] transition-all duration-500`}
+                          className={`${printMode ? 'flex' : ''} md:flex group-hover:lg:my-[${scale * 30}px] transition-all duration-500`}
                         >
                           <strong className={strong}>Desceription:</strong>
                           <p className='flex items-center font-bold text-gray-600'>
@@ -439,7 +439,7 @@ export default function Resume({ printMode }) {
                           </p>
                         </p>
                         <p
-                          className={`md:flex group-hover:lg:my-[${scale * 30}px] text-[${scale * 15}px] transition-all duration-500`}
+                          className={`${printMode ? 'flex' : ''}  md:flex group-hover:lg:my-[${scale * 30}px] text-[${scale * 15}px] transition-all duration-500`}
                         >
                           <strong className={strong}>Skill:</strong>
                           <p className='flex flex-wrap items-center font-bold text-gray-600 '>
@@ -484,7 +484,7 @@ export default function Resume({ printMode }) {
                                       Link
                                     </p>
                                     <svg
-                                      class='w-6 h-6  flex -rotate-45'
+                                      class={`ml-[${scale * 10}px] w-[${scale * 10}px] h-[${scale * 10}px]  flex -rotate-45`}
                                       aria-hidden='true'
                                       xmlns='http://www.w3.org/2000/svg'
                                       fill='none'
@@ -575,7 +575,7 @@ export default function Resume({ printMode }) {
 
                       <div className={`${normaltext} pl-[${scale * 20}px]`}>
                         <p
-                          className={`md:flex group-hover:lg:my-[${scale * 30}px] transition-all duration-500`}
+                          className={`${printMode ? 'flex' : ''} md:flex group-hover:lg:my-[${scale * 30}px] transition-all duration-500`}
                         >
                           <strong className={strong}>Desceription:</strong>
                           <p className='flex items-center font-bold text-gray-600'>
@@ -583,17 +583,17 @@ export default function Resume({ printMode }) {
                           </p>
                         </p>
                         <p
-                          className={`md:flex group-hover:lg:my-[${scale * 30}px] text-[${scale * 15}px] mb-[${scale * 5}px]  transition-all duration-500`}
+                          className={`${printMode ? 'flex' : ''}  md:flex group-hover:lg:my-[${scale * 30}px] text-[${scale * 15}px] transition-all duration-500`}
                         >
                           <strong className={strong}>Skill:</strong>
-                          <p className='flex flex-wrap items-center font-bold text-gray-600'>
+                          <p className='flex flex-wrap items-center font-bold text-gray-600 '>
                             {project.skill.map((skill, index) => (
                               <React.Fragment key={index}>
                                 {skill}
                                 {index < project.skill.length - 1 && (
                                   <div
                                     className={
-                                      divisionCol + `mx-[${scale * 10}px]`
+                                      divisionCol + ` mx-[${scale * 10}px]`
                                     }
                                   ></div>
                                 )}
@@ -624,7 +624,7 @@ export default function Resume({ printMode }) {
 
               {/* Whyme */}
               <div
-                className={`${printMode ? 'justify-between' : 'justify-center lg:justify-between w-full  '} flex flex-wrap items-center gap-[${scale * 30}px]`}
+                className={`${printMode ? 'justify-between' : 'justify-center lg:justify-between w-full flex-wrap  '} flex items-center gap-[${scale * 30}px]`}
               >
                 {section.whymes &&
                   section.whymes.map((whyme, index) => (
@@ -640,13 +640,13 @@ export default function Resume({ printMode }) {
                         </div>
                         <h3 className={whymelable}>
                           <p
-                            className={`flex items-center text-nonwarp gap-x-[${scale * 10}px]`}
+                            className={`flex items-center flex-nowarp gap-x-[${scale * 5}px]`}
                           >
                             {whyme.advantage}
                             {whyme.href && (
                               <div className='flex '>
                                 <svg
-                                  class={`flex w-[${scale * 10}px] h-[${scale * 10}px] -rotate-45`}
+                                  class={`flex ml-[${scale * 3}px] w-[${scale * 10}px] h-[${scale * 10}px] -rotate-45`}
                                   aria-hidden='true'
                                   xmlns='http://www.w3.org/2000/svg'
                                   fill='none'
