@@ -102,7 +102,7 @@ function DockerBar(props) {
       onClick: () => {
         const link = document.createElement('a');
         link.href = `
-        https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Scott%20Cheung%20%7C%20sky.pdf`;
+        https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Scott.pdf`;
         link.download = "Xianzhe's CV.pdf";
         document.body.appendChild(link);
         link.click();
