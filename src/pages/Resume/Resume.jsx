@@ -138,7 +138,7 @@ export default function Resume({ print }) {
             <div>
               <CV printMode={print} />
 
-              <div className='mt-[70px]  flex justify-center text-[7px] lg:text-[15px]'>
+              {/* <div className='mt-[70px]  flex justify-center text-[7px] lg:text-[15px]'>
                 The above is optimized for human review, with more visual
                 elements to enhance readability.
               </div>
@@ -146,7 +146,7 @@ export default function Resume({ print }) {
                 The following section is simplified for easy parsing by
                 automated systems(ATS). (Their contents are identical.)
               </div>
-              {print && <CVs scale={0.6} />}
+              {print && <CVs scale={0.6} />} */}
             </div>
           )}
         </div>
