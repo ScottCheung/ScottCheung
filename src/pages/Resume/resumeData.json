@@ -26,10 +26,10 @@
         },
         {
           "name": "Check for Updates",
-          "update": "11th October",
-          "version": "20241011",
+          "update": "15th October",
+          "version": "20241015",
           "icon": "flex items-center fi fi-rr-clock",
-          "link": "https://xianzhe.site/resumecheck/20241011"
+          "link": "https://xianzhe.site/resumecheck/20241015"
         }
       ]
     },
@@ -68,7 +68,7 @@
           },
           {
             "no": 23,
-            "keyfeature": "Applications",
+            "keyfeature": "Apps",
             "icon": "fi-sr-window-alt"
           },
           {
@@ -203,7 +203,6 @@
           }
         ]
       },
-
       {
         "title": "Projects",
         "icon": "flex items-center fi fi-rr-folder",
@@ -280,7 +279,7 @@
         ]
       },
       {
-        "title": "Why Choose Me",
+        "title": "Why Me",
         "icon": "flex items-center fi fi-rr-lightbulb-on",
         "whymes": [
           {

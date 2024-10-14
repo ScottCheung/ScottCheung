@@ -5,7 +5,7 @@ import { useLanguage } from '../../help/helpFunction';
 export default function Resume() {
   const lang = useLanguage();
   const cvData = Data[lang];
-  const scale = 1;
+  const scale = 0.6;
 
   // 统一管理 className 样式
   const styles = {
