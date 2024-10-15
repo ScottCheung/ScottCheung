@@ -196,7 +196,7 @@ export default function Resume({ printMode }) {
               {/* Summary */}
 
               {section.content && (
-                <div className={normaltext + ' group'}>
+                <div className={normaltext + ' '}>
                   <p
                     className={`group-hover:lg:leading-[${scale * 40}px] text-left lg:text-justify leading-[${scale * 30}px] transition-all duration-500`}
                   >
@@ -424,9 +424,7 @@ export default function Resume({ printMode }) {
                           ></div>
                           {work.title}
                         </h3>
-                        <span
-                          className={division + ` mx-[${scale * 20}px]`}
-                        ></span>
+                        <span className={division + ` mx-[20px]`}></span>
                         {/* duration */}
                         <div className='flex flex-col justify-end'>
                           <p className={timetext}>{work.period}</p>
@@ -568,9 +566,7 @@ export default function Resume({ printMode }) {
                             </span>
                           )}
                         </h3>
-                        <span
-                          className={division + `mx-[${scale * 20}px]`}
-                        ></span>
+                        <span className={division + ` mx-[20px]`}></span>
                         {/* duration */}
                         <div className='flex flex-col justify-end'>
                           <p className={timetext}>{project.period}</p>
