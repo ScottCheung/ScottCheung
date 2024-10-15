@@ -86,7 +86,7 @@ export default function Resume({ printMode }) {
   const divisionline = `flex-1 h-[${scale * 2}px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:lg:opacity-100  opacity-50 transition-all duration-500`;
   const division = ` items-center md:flex md:flex-1 h-[${scale * 2}px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:lg:opacity-50  opacity-10 transition-all duration-500`;
   const divisionCol = `flex w-[${1}px] h-2 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
-  const h3 = `flex tracking-[1px] text-nowrap items-center text-[${scale * 20}px] font-bold flex group-hover:lg:text-[${scale * 28}px] transition-all  duration-500`;
+  const h3 = `flex tracking-[1px] text-nowrap items-center text-[${scale * 20}px] font-bold flex group-hover:lg:text-[${scale * 22}px] transition-all  duration-500`;
   const workPartTitle = `flex tracking-[1px] items-center text-[${scale * 17}px] lg:text-[${scale * 23}px] group-hover:lg:text-[${scale * 28}px] transition-all duration-500 font-bold flex-wrap`;
   const h4 = `flex items-center text-[${scale * 15}px] text-gray-500 flex items-center`;
   const timetext = `flex items-center text-[${scale * 10}px]  font-[500] text-gray-400  transition-all duration-500  group-hover:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
@@ -278,14 +278,14 @@ export default function Resume({ printMode }) {
                   ))}
               </div>
               {/* Skills */}
-              <div className='group'>
+              <div className=' group'>
                 {' '}
                 {section.skills &&
                   Object.entries(section.skills).map(
                     ([category, list], index) => (
                       <div
                         key={index}
-                        className={`flex  group-hover:lg:my-[${scale * 30}px] transition-all duration-500 justify-between leading-${scale * 8} mb-[${scale * 10}px] items-start md:items-center gap-x-[${scale * 30}px] `}
+                        className={`flex relative group-hover:lg:my-[${scale * 20}px] my-[${scale * 15}px] transition-all duration-500 justify-between leading-${scale * 8} mb-[${scale * 10}px] items-start md:items-center gap-x-[${scale * 30}px] `}
                       >
                         <h2 className={h3}>{category}</h2>
 
@@ -295,8 +295,11 @@ export default function Resume({ printMode }) {
                           className={`text-right  flex flex-wrap justify-end items-center text-[${scale * 15}px] text-gray-600`}
                         >
                           {list.map((tag, index) => (
-                            <React.Fragment key={index} className=' group'>
-                              <p className='hidden hover:flex animate-animated animate-zoomIn'>
+                            <React.Fragment
+                              key={index}
+                              className='flex flex-col '
+                            >
+                              <p className='absolute top-0 left-0 z-50 hidden p-4 text-white opacity-0 bg-sky-800 hover:flex'>
                                 Click to search "{tag}" on Google
                               </p>
                               <a
@@ -521,7 +524,7 @@ export default function Resume({ printMode }) {
                     key={index}
                     className={
                       project.link &&
-                      'group cursor-pointer mb-6 flex justify-between '
+                      ' cursor-pointer mb-6 flex justify-between '
                     }
                   >
                     <div className={contentContainer}>

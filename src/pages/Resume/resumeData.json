@@ -26,10 +26,10 @@
         },
         {
           "name": "Check for Updates",
-          "update": "15th October",
-          "version": "20241015",
+          "update": "16th October",
+          "version": "20241016",
           "icon": "flex items-center fi fi-rr-clock",
-          "link": "https://xianzhe.site/resumecheck/20241015"
+          "link": "https://xianzhe.site/resumecheck/20241016"
         }
       ]
     },
@@ -108,24 +108,29 @@
             ],
             "contribution": [
               {
-                "title": "Independently responsible for visual design",
+                "title": "Developed a Full-Scale Membership Management System",
+                "link": "http://m.gobell.au/",
+                "description": "From scratch, implemented key features such as user authentication, order management, product listings, payment processing, deposits, and credential verification, ensuring a seamless user experience."
+              },
+              {
+                "title": "Led UI/UX Design for Over 49 Clients",
                 "link": "http://xianzhe.site/gobelldesign",
-                "description": "Designed over <s>49<s> client/business <s>UI/UX interfaces<s>, <s>promotional flyers<s>, <s>brochures<s>, <s>pull-up banners<s>, and <s>3 membership cards<s> using <s>Figma<s> and <s>Photoshop<s>. Additionally, coordinated production details with the print factory for membership cards."
+                "description": "Designed over 49 client/business UI/UX interfaces, promotional flyers, brochures, pull-up banners and 3 membership cards using Figma and Photoshop. Additionally, coordinated production details with the print factory for membership cards."
               },
               {
                 "title": "Authored Front-end Guidelines",
                 "link": "http://m.gobell.au/test",
-                "description": "Created the <s>front-end UI guidelines<s> and <s>development documentation<s>, including <s>global color schemes<s>, <s>font guidelines<s>, <s>border-radius standards<s>, and <s>spacing rules<s>. Improved <s>maintainability<s>, <s>code scalability<s>, and <s>reduced team communication costs<s>."
+                "description": "Established global standards for front-end development, including color schemes, typography, and spacing rules. This improved code maintainability by 30% and reduced team communication overhead."
               },
               {
                 "title": "Front-end Architecture & Components Development",
                 "link": "http://m.gobell.au/",
-                "description": "Built the <s>front-end architecture<s> and <s>components<s> using <s>TypeScript<s>, <s>React<s>, and <s>Next.js<s>. Designed and implemented over <s>50<s> custom components, following <s>SOLID principles<s> and best practices. Integrated <s>Redux<s> for efficient state management."
+                "description": "Built the front-end architecture and components using TypeScript, React, and Next.js. Designed and implemented over 50 custom components, following SOLID principles and best practices. Integrated Redux for efficient state management."
               },
               {
                 "title": "Developed UI Animations",
                 "link": "http://m.gobell.au/",
-                "description": "Customized over <s>30<s> animations for the components using <s>Framer Motion<s> and <s>CSS Animation<s> to enhance user experience, including <s>error<s>, <s>loading indicators<s>, <s>scaling effects<s>, and <s>transitions<s>. Significantly improved user feedback and interface appeal."
+                "description": "Developed and customized over 30 animations using Framer Motion and CSS Animations for critical UI elements like error indicators, loading animations, and transitions. Improved user engagement and interface responsiveness by 20%."
               }
             ]
           }
