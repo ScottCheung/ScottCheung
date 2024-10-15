@@ -119,17 +119,17 @@
               },
               {
                 "title": "Authored Front-end Guidelines",
-                "link": "http://m.gobell.au/test",
+                "link": "https://gobell.vercel.app/test",
                 "description": "Established global standards for front-end development, including color schemes, typography, and spacing rules. This improved code maintainability by 30% and reduced team communication overhead."
               },
               {
-                "title": "Front-end Architecture & Components Development",
-                "link": "http://m.gobell.au/",
+                "title": "Built Scalable Front-End Architecture",
+                "link": "https://github.com/Xianzhezhang97/gobell",
                 "description": "Built the front-end architecture and components using TypeScript, React, and Next.js. Designed and implemented over 50 custom components, following SOLID principles and best practices. Integrated Redux for efficient state management."
               },
               {
                 "title": "Developed UI Animations",
-                "link": "http://m.gobell.au/",
+                "link": "https://gobell.vercel.app",
                 "description": "Developed and customized over 30 animations using Framer Motion and CSS Animations for critical UI elements like error indicators, loading animations, and transitions. Improved user engagement and interface responsiveness by 20%."
               }
             ]
