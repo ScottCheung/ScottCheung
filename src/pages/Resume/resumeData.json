@@ -26,10 +26,10 @@
         },
         {
           "name": "Check for Updates",
-          "update": "16th October",
-          "version": "20241016",
+          "update": "27th October",
+          "version": "v20241027",
           "icon": "flex items-center fi fi-rr-clock",
-          "link": "https://xianzhe.site/resumecheck/20241016"
+          "link": "https://xianzhe.site/resumecheck/v20241027"
         }
       ]
     },
@@ -108,29 +108,52 @@
             ],
             "contribution": [
               {
-                "title": "Developed a Full-Scale Membership Management System",
-                "link": "http://m.gobell.au/",
-                "description": "From scratch, implemented key features such as user authentication, order management, product listings, payment processing, deposits, and credential verification, ensuring a seamless user experience."
+                "title": "Developed UI Components",
+                "link": "https://gobell.vercel.app/",
+                "description": "converted Figma designs into interactive and responsive react components using TypeScript, ReactJS, and Next.js base on best practices."
               },
               {
-                "title": "Led UI/UX Design for Over 49 Clients",
-                "link": "http://xianzhe.site/gobelldesign",
-                "description": "Designed over 49 client/business UI/UX interfaces, promotional flyers, brochures, pull-up banners and 3 membership cards using Figma and Photoshop. Additionally, coordinated production details with the print factory for membership cards."
+                "title": "Performance Optimization",
+                "description": "used Google Lighthouse for performance analysis to optimize the web application."
               },
               {
-                "title": "Authored Front-end Guidelines",
-                "link": "https://gobell.vercel.app/test",
-                "description": "Established global standards for front-end development, including color schemes, typography, and spacing rules. This improved code maintainability by 30% and reduced team communication overhead."
+                "title": "Integrated RESTful APIs",
+                "description": "Integrated RESTful APIs to facilitate communication ( APIs integration ) between the front-end and back-end, ensuring secure and efficient data transfer ensuring seamless user experiences."
               },
               {
-                "title": "Built Scalable Front-End Architecture",
+                "title": "Implemented unit tests",
                 "link": "https://github.com/Xianzhezhang97/gobell",
-                "description": "Built the front-end architecture and components using TypeScript, React, and Next.js. Designed and implemented over 50 custom components, following SOLID principles and best practices. Integrated Redux for efficient state management."
+                "description": "Implemented unit tests using Jest and React Testing Library to ensure component functionality and stability."
               },
               {
-                "title": "Developed UI Animations",
-                "link": "https://gobell.vercel.app",
-                "description": "Developed and customized over 30 animations using Framer Motion and CSS Animations for critical UI elements like error indicators, loading animations, and transitions. Improved user engagement and interface responsiveness by 20%."
+                "title": "Built the front-end architecture",
+                "link": "https://github.com/Xianzhezhang97/gobell",
+                "description": "Built the front-end architecture, using  Next.js to ensure SEO Friendly and integrated Redux for efficient state management, making the project scalable, using GIT easy to manage."
+              },
+              {
+                "title": "Error handling",
+                "link": "https://github.com/Xianzhezhang97/gobell",
+                "description": "Error handling, identifying and diagnosing root causes of errors in real-time. Collaborated with cross-functional teams to develop and test patches, ensuring minimal downtime and impact on users."
+              },
+              {
+                "title": "Led UI/UX Design",
+                "link": "https://github.com/Xianzhezhang97/gobell",
+                "description": "designed client/business UI/UX interfaces, promotional flyers, brochures, pull-up banners and 3 membership cards using  Figma and  Photoshop."
+              },
+              {
+                "title": "UI/UX Enchancement",
+                "link": "https://github.com/Xianzhezhang97/gobell",
+                "description": "UI/UX Enchancement. Developed and customized animations using  Framer Motion for UI. Improved interface responsiveness at least by 20%."
+              },
+              {
+                "title": "Established design system",
+                "link": "https://github.com/Xianzhezhang97/gobell",
+                "description": "for front-end development, including color schemes, typography, and spacing rules, reducing team communication overhead and cross-browser compatibility and responsiveness."
+              },
+              {
+                "title": "Implemented CI/CD",
+                "link": "https://github.com/Xianzhezhang97/gobell",
+                "description": "created script to deploy web application to AWS EC2, AWS S3 bucket."
               }
             ]
           }
