@@ -37,7 +37,7 @@
       {
         "title": "Summary",
         "icon": "flex items-center fi fi-rr-user",
-        "content": "A <s>result-driven<s> developer with over <s>2 years<s> of development experience and <s>7 years<s> of design experience. Proficient in <s>HTML<s>, <s>CSS<s>, <s>JavaScript<s>, <s>TypeScript<s>, <s>Next.js<s>, <s>React<s>, <s>Redux<s>, <s>Tailwind<s>, and <s>Framer Motion<s>, having developed <s>5<s> front-end projects. Holds a Master's degree in IT from <s>UNSW<s>, focusing on <s>front-end development<s> and <s>AI<s> technologies. Visa-independent(Sub 485 Class) with a <s>five-year visa<s>."
+        "content": "A result-driven developer with over <s>2 years<s> of development experience and <s>7 years<s> of design experience of web application development. Proficient in <s>React<s>, <s>TypeScript<s>, <s>Next.js<s>, <s>Redux<s>, Extensive experience on <s>Figma<s>, <s>UI/UX Design<s>, <s>Design system<s>, <s>CI/CD<s>, <s>DevOps<s>, <s>Cloud<s>. Demonstrate expertise in working within an <s>Agile<s> development environment and delivering projects on time."
       },
       {
         "title": "Highlights",
@@ -88,7 +88,7 @@
             "location": "Sydney",
             "name": "Gobell Membership System",
             "period": "May 2024 - Present",
-            "des": "Developed a membership management system for Gobell from scratch, including features like member login, registration, orders, products, payment processing, deposits, and credential verification.",
+            "des": "Developed a React and Redux based <s>web applications<s> for management system from scratch.",
             "tag": "Web Development",
             "link": "http://m.gobell.au/",
             "skill": [
@@ -110,50 +110,48 @@
               {
                 "title": "Developed UI Components",
                 "link": "https://gobell.vercel.app/",
-                "description": "converted Figma designs into interactive and responsive react components using TypeScript, ReactJS, and Next.js base on best practices."
+                "description": "converted <s>Figma<s> designs into interactive and responsive react components using <s>TypeScript<s>, <s>ReactJS<s>, and <s>Next.js<s> base on <s>best practices<s>."
               },
               {
                 "title": "Performance Optimization",
-                "description": "used Google Lighthouse for performance analysis to optimize the web application."
+                "description": "used Google <s>Lighthouse<s> for performance analysis to optimize the web application."
               },
               {
                 "title": "Integrated RESTful APIs",
-                "description": "Integrated RESTful APIs to facilitate communication ( APIs integration ) between the front-end and back-end, ensuring secure and efficient data transfer ensuring seamless user experiences."
+                "description": "Integrated RESTful APIs to facilitate communication ( <s>APIs integration<s> ) between the front-end and back-end, ensuring secure and efficient data transfer ensuring seamless user experiences."
               },
               {
                 "title": "Implemented unit tests",
-                "link": "https://github.com/Xianzhezhang97/gobell",
-                "description": "Implemented unit tests using Jest and React Testing Library to ensure component functionality and stability."
+                "description": "Implemented unit tests using <s>Jest<s> and <s>React Testing Library<s> to ensure component functionality and stability."
               },
               {
                 "title": "Built the front-end architecture",
                 "link": "https://github.com/Xianzhezhang97/gobell",
-                "description": "Built the front-end architecture, using  Next.js to ensure SEO Friendly and integrated Redux for efficient state management, making the project scalable, using GIT easy to manage."
+                "description": "Built the front-end architecture, using <s>Next.js<s> to ensure <s>SEO Friendly<s> and integrated <s>Redux<s> for efficient state management, making the project scalable, using <s>GIT<s> easy to manage."
               },
               {
                 "title": "Error handling",
-                "link": "https://github.com/Xianzhezhang97/gobell",
                 "description": "Error handling, identifying and diagnosing root causes of errors in real-time. Collaborated with cross-functional teams to develop and test patches, ensuring minimal downtime and impact on users."
               },
               {
                 "title": "Led UI/UX Design",
-                "link": "https://github.com/Xianzhezhang97/gobell",
-                "description": "designed client/business UI/UX interfaces, promotional flyers, brochures, pull-up banners and 3 membership cards using  Figma and  Photoshop."
+                "link": "xianzhe.site/gobelldesign",
+                "description": "designed client/business UI/UX interfaces, promotional flyers, brochures, pull-up banners and 3 membership cards using <s>Figma<s> and <s>Photoshop<s>."
               },
               {
                 "title": "UI/UX Enchancement",
-                "link": "https://github.com/Xianzhezhang97/gobell",
-                "description": "UI/UX Enchancement. Developed and customized animations using  Framer Motion for UI. Improved interface responsiveness at least by 20%."
+                "link": "https://gobell.vercel.app/",
+                "description": "UI/UX Enchancement. Developed and customized animations using  Framer Motion for UI. Improved interface responsiveness at least by <s>20%.<s>"
               },
               {
                 "title": "Established design system",
-                "link": "https://github.com/Xianzhezhang97/gobell",
+                "link": "https://gobell.vercel.app/test",
                 "description": "for front-end development, including color schemes, typography, and spacing rules, reducing team communication overhead and cross-browser compatibility and responsiveness."
               },
               {
                 "title": "Implemented CI/CD",
-                "link": "https://github.com/Xianzhezhang97/gobell",
-                "description": "created script to deploy web application to AWS EC2, AWS S3 bucket."
+                "link": "m.gobell.au/",
+                "description": "created script to deploy web application to <s>AWS EC2<s>, <s>AWS S3 bucket<s>."
               }
             ]
           }
