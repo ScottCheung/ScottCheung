@@ -26,10 +26,10 @@
         },
         {
           "name": "Check for Updates",
-          "update": "27th October",
-          "version": "v20241027",
+          "update": "1th Nov",
+          "version": "v20241101",
           "icon": "flex items-center fi fi-rr-clock",
-          "link": "https://xianzhe.site/resumecheck/v20241027"
+          "link": "https://xianzhe.site/resumecheck/v20241101"
         }
       ]
     },
@@ -83,11 +83,11 @@
         "icon": "flex items-center fi fi-rr-city",
         "WorkExperience": [
           {
-            "company": "Gobell Group",
-            "title": "Front-end Developer",
+            "company": "Wolli Software",
+            "title": "Web Developer",
             "location": "Sydney",
             "name": "Gobell Membership System",
-            "period": "May 2024 - Present",
+            "period": "Sep 2023 - Present",
             "des": "Developed a React and Redux based <s>web applications<s> for management system from scratch.",
             "tag": "Web Development",
             "link": "http://m.gobell.au/",
