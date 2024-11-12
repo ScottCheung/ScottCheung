@@ -95,16 +95,16 @@
               "HTML",
               "CSS",
               "TypeScript",
-              "C#",
               "React",
               "Next.js",
-              "ASP.NET",
               "Tailwind",
               "Framer Motion",
               "Redux",
               "i18n",
               "Figma",
-              "AWS Cloud"
+              "AWS Cloud",
+              "jsBarcode",
+              "QRcode"
             ],
             "contribution": [
               {
@@ -233,76 +233,6 @@
         "title": "Projects",
         "icon": "flex items-center fi fi-rr-folder",
         "projects": [
-          {
-            "name": "Gobell Membership System",
-            "des": "Developed a CRM single-page application (SPA) from the ground up, providing seamless user experiences for managing client relationships. This required high scalability, responsiveness, and comprehensive performance optimization.",
-            "tag": "Web Development",
-            "link": "https://gobell.vercel.app",
-            "skill": [
-              "HTML",
-              "CSS",
-              "JavaScript",
-              "C#",
-              ".NET",
-              "React",
-              "D3",
-              "Tailwind",
-              "Framer Motion",
-              "Google Chrome Developer Tools",
-              "Figma",
-              "Tencent Cloud",
-              "Docker"
-            ],
-            "contribution": [
-              {
-                "title": "UI/UX Design",
-                "description": "Independently designed and implemented <s>3<s> complex interfaces, <s>5<s> medium-complexity interfaces, and over <s>20<s> interaction logics, optimized using <s>Figma<s> and <s>Photoshop<s> to ensure an intuitive and smooth user experience."
-              },
-              {
-                "title": "Web Component Development",
-                "description": "Developed 25 fully custom <s>React<s> and <s>3.js<s> data visualization components using <s>HTML<s>, <s>CSS<s>, <s>JavaScript<s>, <s>Tailwind<s>, and <s>Framer Motion<s> to graphically represent complex data relationships in real-time."
-              },
-              {
-                "title": "Animation and Visual Effect Development",
-                "description": "Designed and implemented over <s>40<s> UI animations and visual effects using <s>Framer Motion<s> and <s>other animation libraries<s>. Enhanced visual appeal, and optimized animation performance by <s>37%<s> using Google performance tools."
-              }
-            ],
-            "period": "February 2024 - May 2024"
-          },
-          {
-            "name": "Spring ( A Perfume Web )",
-            "des": "Developed an SEO-optimized, high-performance landing pages of a e-commerce platform, tailored to enhance the online shopping experience for perfume customers through a sleek, mobile-friendly design.",
-            "tag": "Front End Developer",
-            "link": "https://perfume-pearl.vercel.app",
-            "skill": [
-              "HTML",
-              "CSS",
-              "Neo4j",
-              "JavaScript",
-              "React",
-              "Lighthouse",
-              "Tailwind",
-              "Framer Motion",
-              "Google Chrome Developer Tools",
-              "Figma",
-              "vercel"
-            ],
-            "contribution": [
-              {
-                "title": "End-to-end front-end development",
-                "description": "Built responsive, user-friendly interfaces using Next.js, TypeScript, and Tailwind, ensuring an optimized shopping journey across devices."
-              },
-              {
-                "title": "Performance optimization and testing",
-                "description": "Leveraged Google Lighthouse for performance analysis, enhancing SEO and improving FCP, LCP, FID, CLS, and TBT metrics, resulting in 34% faster load times and a more seamless browsing experience."
-              },
-              {
-                "title": "Implemented CI/CD pipeline",
-                "description": "Configured automated deployment workflows on Vercel, reducing deployment times and improving release frequency."
-              }
-            ],
-            "period": "Aug 2024 - Sep 2024"
-          },
           {
             "name": "Neo4j iGrapher (Zero-Code Graphical Data Analysis Tool)",
             "des": "A web tool using Neo4j, React, and D3.js to provide zero-code analysis and complex data relationship visualization.",

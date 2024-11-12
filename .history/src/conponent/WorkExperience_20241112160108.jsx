@@ -228,7 +228,7 @@ const cardData = [
     title: 'Web Developer',
     location: 'Sydney',
     type: 'Full Time',
-    startTime: 'Sep 2023',
+    startTime: 'May 2024',
     endTime: 'Present',
     name: 'Gobell Membership System',
     des: 'Developed a membership management system for Gobell from scratch, including features like member login, registration, orders, products, payment processing, deposits, and credential verification.',

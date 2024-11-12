@@ -1,5 +1,3 @@
-/** @format */
-
 const h1 = `font-sans tracking-wide text-sky-700 text-[30px] md:text-[50px]  font-bold  transition-all duration-1000`;
 const normaltext = 'text-[15px] text-jusify transition-all duration-1000';
 const h2 = `flex text-[30px]  font-black text-sky-700 group-hover:text-sky-400,
@@ -224,19 +222,19 @@ const cardData = [
     ],
   },
   {
-    company: 'Wolli Software',
-    title: 'Web Developer',
+    company: 'Gobell Group',
+    title: 'Front-end Developer',
     location: 'Sydney',
     type: 'Full Time',
-    startTime: 'Sep 2023',
+    startTime: 'May 2024',
     endTime: 'Present',
     name: 'Gobell Membership System',
     des: 'Developed a membership management system for Gobell from scratch, including features like member login, registration, orders, products, payment processing, deposits, and credential verification.',
     tag: 'Web Development',
-    link: 'https://www.linkedin.com/company/wolli-software/posts/?feedView=all',
+    link: 'http://m.gobell.au/',
     image:
-      'https://media.istockphoto.com/id/1492719675/photo/multicultural-professionals-driving-innovation-in-sydneys-office-environment.jpg?s=612x612&w=0&k=20&c=jv1hAPk8cTe3ryKMtdlvBXR3YaWmMFG8DS2GRBu1-1E=',
-    backgroundColor: 'bg-sky-300',
+      'https://3o.hk/images/2024/09/27/WeChat62ee050df77fd51b13c8bbaf249afc78.jpg',
+    backgroundColor: 'bg-orange-300',
     skill: [
       'HTML',
       'CSS',
@@ -319,7 +317,6 @@ function Card({ card, onClick }) {
         >
           {card.type[0]}
         </motion.kbd> */}
-        ``
       </div>
 
       <div className='flex flex-col  p-[14px] lg:p-[0px] lg:mt-[60%]  items-start justify-start h-[130px] animate__animated animate__fadeInUp'>

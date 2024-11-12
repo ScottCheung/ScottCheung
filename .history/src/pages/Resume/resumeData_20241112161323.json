@@ -234,16 +234,15 @@
         "icon": "flex items-center fi fi-rr-folder",
         "projects": [
           {
-            "name": "Gobell Membership System",
-            "des": "Developed a CRM single-page application (SPA) from the ground up, providing seamless user experiences for managing client relationships. This required high scalability, responsiveness, and comprehensive performance optimization.",
+            "name": "Neo4j iGrapher (Zero-Code Graphical Data Analysis Tool)",
+            "des": "A web tool using Neo4j, React, and D3.js to provide zero-code analysis and complex data relationship visualization.",
             "tag": "Web Development",
-            "link": "https://gobell.vercel.app",
+            "link": "https://xianzhe.site/igrapher",
             "skill": [
               "HTML",
               "CSS",
+              "Neo4j",
               "JavaScript",
-              "C#",
-              ".NET",
               "React",
               "D3",
               "Tailwind",

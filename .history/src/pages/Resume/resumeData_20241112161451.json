@@ -234,7 +234,7 @@
         "icon": "flex items-center fi fi-rr-folder",
         "projects": [
           {
-            "name": "Gobell Membership System",
+            "name": "Gobell CRM system",
             "des": "Developed a CRM single-page application (SPA) from the ground up, providing seamless user experiences for managing client relationships. This required high scalability, responsiveness, and comprehensive performance optimization.",
             "tag": "Web Development",
             "link": "https://gobell.vercel.app",
