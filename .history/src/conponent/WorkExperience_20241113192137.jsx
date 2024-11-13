@@ -60,32 +60,32 @@ const cardData = [
     ],
     points: [
       {
-        title: 'Student Recruitment',
+        point: 'Student Recruitment',
         description:
           'Successfully recruited over 100 students, enhancing enrollment numbers and contributing to the growth of the institution.',
       },
       {
-        title: 'Teacher Interviewing',
+        point: 'Teacher Interviewing',
         description:
           'Conducted interviews and evaluations for potential teachers, ensuring the hiring of qualified and competent staff.',
       },
       {
-        title: 'Customer Complaint Handling',
+        point: 'Customer Complaint Handling',
         description:
           'Efficiently resolved over 50 customer complaints, improving overall customer satisfaction and retention rates.',
       },
       {
-        title: 'Procurement Management',
+        point: 'Procurement Management',
         description:
           'Managed the procurement of desks, chairs, and other classroom necessities, ensuring timely and cost-effective acquisitions.',
       },
       {
-        title: 'Staff Management',
+        point: 'Staff Management',
         description:
           'Oversaw daily management of teachers, including meal coordination, sleep schedules, and shift planning, ensuring smooth operations and staff well-being.',
       },
       {
-        title: 'Scheduling',
+        point: 'Scheduling',
         description:
           'Developed and maintained teacher schedules, optimizing resource allocation and minimizing conflicts.',
       },
@@ -119,22 +119,22 @@ const cardData = [
     ],
     points: [
       {
-        title: 'UI/UX Interface Enhancement',
+        point: 'UI/UX Interface Enhancement',
         description:
           'Enhanced UI/UX using Photoshop and Figma, integrating a Customer Behaviour Analytics module that increased user engagement by 54% through improved gaze metrics.',
       },
       {
-        title: 'E-commerce Platform Optimization',
+        point: 'E-commerce Platform Optimization',
         description:
           'Overhauled the e-commerce platform with HTML, CSS, JavaScript, and React, enhancing user experience and payment processes. Designed dedicated product pages and promotional posters, significantly boosting product visibility and sales.',
       },
       {
-        title: 'SEO and Performance Optimization',
+        point: 'SEO and Performance Optimization',
         description:
           'Boosted website performance and SEO by 22% and 14% respectively, utilizing Google Chrome DevTools and Lighthouse for targeted optimizations.',
       },
       {
-        title: 'Performance Reporting System Development',
+        point: 'Performance Reporting System Development',
         description:
           'Developed a dynamic performance reporting system using React and Tailwind, enhanced with Framer Motion animations. This system features Excel export capabilities, providing management with detailed, actionable insights.',
       },
@@ -164,17 +164,17 @@ const cardData = [
     ],
     points: [
       {
-        title: 'Achieving Excellence in Business Audits',
+        point: 'Achieving Excellence in Business Audits',
         description:
           'Responsible for auditing the invoices of the business office up to RMB1,000,000, drawing up contracts up to RMB100,000, compliance review and signing. ',
       },
       {
-        title: 'Streamlined Business Audit Processes',
+        point: 'Streamlined Business Audit Processes',
         description:
           'The business is responsible for the assessment and audit of the business system and occasional audits of the accounts flow according to the monthly and annual reports of the business. ',
       },
       {
-        title: 'Efficiency Improvement through Office Automation Software',
+        point: 'Efficiency Improvement through Office Automation Software',
         description:
           'During the course of the work, it was found that the business progress audit was a single simple and time-consuming task, and with the help of office automation software, the business audit workload of this position for a year was completed in half a day, receiving high praise and commendation from the Business Office Director.',
       },
@@ -202,22 +202,22 @@ const cardData = [
     ],
     points: [
       {
-        title: 'Efficient Delivery Management',
+        point: 'Efficient Delivery Management',
         description:
           'Completed over 500 deliveries with an average delivery time of under 30 minutes, ensuring timely and accurate service to customers.',
       },
       {
-        title: 'Customer Interaction',
+        point: 'Customer Interaction',
         description:
           'Maintained high customer satisfaction through professional and courteous communication, resolving any issues promptly to ensure positive experiences.By editing some messages in advance, it improves the response time of interaction with customers and significantly increases user satisfaction.',
       },
       {
-        title: 'Route Optimization',
+        point: 'Route Optimization',
         description:
           'Utilized navigation tools and local knowledge to optimize delivery routes, reducing costs and improving delivery efficiency.',
       },
       {
-        title: 'Safety and Compliance',
+        point: 'Safety and Compliance',
         description:
           'Strictly adhered to traffic laws and safety guidelines, achieving a record of zero accidents or violations during the entire tenure.',
       },
@@ -582,7 +582,7 @@ function WorkExperience() {
                             {selectedCard.points.map((item, index) => (
                               <li key={index} className='mb-2 text-justify'>
                                 <strong className='block mr-2 font-semibold'>
-                                  ▸ {item.title}:
+                                  ▸ {item.point}
                                 </strong>
                                 {parseText(item.description)}
                               </li>
