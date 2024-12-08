@@ -3173,7 +3173,7 @@
         {
           "label": "fi-sr-puzzle-alt",
           "cont": "Habit",
-          "icon": "Piano | Song | Sleep | Be loved"
+          "icon": "Piano | Song | Sleep"
         },
         {
           "label": "fi-sr-dog",
@@ -3240,11 +3240,11 @@
         {
           "label": "fi-sr-cursor-finger",
           "icon": "无名指 [22]   |   食指 [23]",
-          "cont": "指围"
+          "cont": "手指"
         },
         {
           "label": "fi-sr-shoe-prints",
-          "icon": "43 EU | 8.5-9 UK",
+          "icon": "43 EU | 9 UK",
           "cont": "鞋码"
         },
         {
@@ -3259,7 +3259,7 @@
         },
         {
           "label": "fi-sr-puzzle-alt",
-          "icon": "钢琴 | 唱歌 | 睡觉 | 被爱",
+          "icon": "钢琴 | 唱歌 | 睡觉",
           "cont": "爱好"
         },
         {
