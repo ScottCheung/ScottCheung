@@ -1,15 +1,13 @@
-/** @format */
-
-import React, { useEffect } from 'react';
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
+import React, { useEffect } from "react";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function Num({ n, d, o }) {
   // Ensure that n is treated as a string
   const stringValue = n.toString();
 
   // Extract the numeric part from the string
-  const numberValue = parseFloat(stringValue.replace(/[^\d.]/g, '')) || 0;
+  const numberValue = parseFloat(stringValue.replace(/[^\d.]/g, "")) || 0;
 
   const count = useMotionValue(0);
   const rounded = useTransform(count, Math.round);
@@ -21,7 +19,7 @@ export default function Num({ n, d, o }) {
     if (inView) {
       const animation = animate(count, numberValue, {
         duration: d && d > 0 ? d : 2,
-        ease: 'easeInOut',
+        ease: "easeOut",
         Mass: 1,
         Stiffness: 1000,
         Damping: 40,

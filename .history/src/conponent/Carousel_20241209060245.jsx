@@ -106,6 +106,10 @@ const Carousel = ({ interval, HomeCarousel }) => {
       {...handlers}
       style={{
         height: `${viewportHeight}px`,
+        maskImage:
+          'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
+        WebkitMaskImage:
+          'linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) 5%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
       }}
       className='relative w-full h-[100vh] bg-white overflow-hidden z-30'
       onKeyDown={(e) => {

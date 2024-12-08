@@ -21,7 +21,7 @@ export default function Num({ n, d, o }) {
     if (inView) {
       const animation = animate(count, numberValue, {
         duration: d && d > 0 ? d : 2,
-        ease: 'easeInOut',
+        ease: 'easeOut',
         Mass: 1,
         Stiffness: 1000,
         Damping: 40,

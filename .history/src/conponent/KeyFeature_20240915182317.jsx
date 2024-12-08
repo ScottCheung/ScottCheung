@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { useState, useEffect, useRef } from 'react';
 import Database from '../data/Database.json';
 import { Link } from 'react-router-dom';
@@ -72,11 +70,6 @@ function KeyFeature() {
         width: isMobile ? `${viewwidth}px` : width,
         y: isMobile ? 0 : y,
         borderRadius: isMobile ? 28 : borderRadius,
-
-        maskImage:
-          'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
-        WebkitMaskImage:
-          'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
       }}
       className={` flex h-[1000px] md:h-[150vh] overflow-hidden justify-center transform-gpuu`}
     >
@@ -96,9 +89,9 @@ function KeyFeature() {
             transition={StagerFadeInUp}
             style={{
               paddingInline:
-                windowWidth > 1024 ?
-                  'calc(50vw - min(1680px, var(--global-viewport-content-responsive)) / 2)'
-                : '10px',
+                windowWidth > 1024
+                  ? 'calc(50vw - min(1680px, var(--global-viewport-content-responsive)) / 2)'
+                  : '10px',
             }}
             className='z-40 grid w-full grid-cols-12 gap-8'
           >
