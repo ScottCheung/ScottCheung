@@ -30,20 +30,21 @@ export default function Example() {
               className='w-full h-full animate__animated animate__fadeInDown '
             ></div>
           </motion.span>
-          <div className=' flex font-black mt-[15vh] lg:mt-[30vh] text-[30px] justify-center items-center animate__animated animate__fadeInUp md:text-[70px] lg:text-[150px]'>
-            I have 4 majors
-          </div>
+
           <div
             style={{
               ...bgPic(
                 'https://img.picgo.net/2024/12/10/Learning-Abilityd823c7aa8e6b7814.png',
-                window.innerWidth > 960 ? '500px auto' : '400px auto',
+                '400px auto',
                 'bottom right',
               ),
-              filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.7))',
             }}
-            className='z-20 w-full h-[400px] lg:h-full overflow-visible animate__animated animate__fadeInUp'
-          ></div>
+            className='z-20 w-full h-[400px] lg:h-full'
+          >
+            <div className=' flex font-black  text-[30px] justify-center items-center animate__animated animate__fadeInUp md:text-[70px] lg:text-[150px]'>
+              I have 4 majors
+            </div>
+          </div>
         </motion.div>
       </div>
       <Education hideTittle={true} simpleVer={true} />

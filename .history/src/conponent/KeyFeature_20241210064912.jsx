@@ -72,7 +72,7 @@ function KeyFeature() {
         width: isMobile ? `${viewwidth}px` : width,
         y: isMobile ? 0 : y,
         borderRadius: isMobile ? 28 : borderRadius,
-        ...(window.location.pathname == '/' && {
+        ...( && {
           maskImage:
             'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
           WebkitMaskImage:

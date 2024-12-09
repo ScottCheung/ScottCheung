@@ -21,7 +21,7 @@ const Welcomevisblecontainer =
 const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
 const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 
-function KeyFeature() {
+function KeyFeature(ishome) {
   const lang = useLanguage();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1080); // 初始值
@@ -72,7 +72,7 @@ function KeyFeature() {
         width: isMobile ? `${viewwidth}px` : width,
         y: isMobile ? 0 : y,
         borderRadius: isMobile ? 28 : borderRadius,
-        ...(window.location.pathname == '/' && {
+        ...(ishome && {
           maskImage:
             'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
           WebkitMaskImage:

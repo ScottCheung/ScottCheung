@@ -37,12 +37,12 @@ export default function Example() {
             style={{
               ...bgPic(
                 'https://img.picgo.net/2024/12/10/Learning-Abilityd823c7aa8e6b7814.png',
-                window.innerWidth > 960 ? '500px auto' : '400px auto',
+                window.innerWidth > 1080 ? '600px auto' : '100% auto',
                 'bottom right',
               ),
               filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.7))',
             }}
-            className='z-20 w-full h-[400px] lg:h-full overflow-visible animate__animated animate__fadeInUp'
+            className='z-20 w-full h-[400px] lg:h-full overflow-visible'
           ></div>
         </motion.div>
       </div>
