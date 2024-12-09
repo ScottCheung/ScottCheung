@@ -2755,5 +2755,32 @@
       "补丁更新"
     ],
     "new": []
+  },
+  "2024-12-09T17:50:22.824Z": {
+    "version": "6.0.0",
+    "time": "2024-12-09T17:50:22.824Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Hello, long time no see, hope you are all good, lovely to see you. I'm back with a new update. This time I've made some changes to the home page and resume page, and updated the partial UI. I hope you like it.",
+      "大家好，好久不见，希望你们一切都好，很高兴再次见到你们。我回来了，这次我对主页和简历页进行了一些更改，并更新了部分 UI。希望你们喜欢。"
+    ],
+    "new": [
+      [
+        "Replace a lot of picture on the home page.",
+        "Adjust partial UI and Animations in Home and CV page."
+      ],
+      [
+        "替换了主页的很多图片。",
+        "调整部分在主页和简历页的 UI 和 动画。"
+      ]
+    ],
+    "fix": [],
+    "impro": []
   }
 }
