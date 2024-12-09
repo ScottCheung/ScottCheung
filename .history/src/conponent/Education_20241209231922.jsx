@@ -66,7 +66,7 @@ function Education({ hideTittle, simpleVer }) {
             <img
               src='https://img.picgo.net/2024/12/06/4la21798afeaf25655.jpg'
               alt=''
-              className='object-cover w-auto h-auto lg:h-full'
+              className='object-cover w-auto h-auto h-full'
             />
             <a
               target='_blank'

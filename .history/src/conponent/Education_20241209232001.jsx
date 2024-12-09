@@ -59,7 +59,7 @@ function Education({ hideTittle, simpleVer }) {
           className='col-span-12 group'
         >
           <div
-            className={`${simpleVer ? 'hidden' : ''} rounded-[14px] lg:rounded-[28px] w-full h-auto transition-all duration-300 relative  lg:w-[800px]  lg:h-full overflow-hidden ${
+            className={`${simpleVer ? 'hidden' : ''} rounded-[14px] lg:rounded-[28px] w-full h-auto transition-all duration-300 relative  lg:w-[700px]  lg:h-full overflow-hidden ${
               hideTittle ? 'bg-gray-50 hover:bg-sky-100/50' : 'bg-white/80'
             }`}
           >
