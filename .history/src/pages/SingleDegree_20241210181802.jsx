@@ -89,14 +89,14 @@ export default function Example() {
                   style={{ top: `calc(${navbarHeight}px + 10px)` }}
                 >
                   <div className='flex flex-wrap items-center justify-center'>
-                    <img
+                    {/* <img
                       className='w-[130px] px-7'
-                      src='https://img.picgo.net/2024/12/10/swustlogo70d687130fbd9af2.png'
+                      src='https://english.swust.edu.cn/_upload/tpl/04/75/1141/template1141/images/logo.svg'
                       alt='swustPng'
-                    />
+                    /> */}
                     <img
                       className='max-w-[80vw] lg:max-w-[400px] h-auto py-12 px-7'
-                      src='https://img.picgo.net/2024/12/10/swustname843d2b9c22b1f8d9.png'
+                      src='https://www.swust.edu.cn/_upload/tpl/01/e7/487/template487/images/logo_1.png'
                       alt='swustName'
                     />
                   </div>

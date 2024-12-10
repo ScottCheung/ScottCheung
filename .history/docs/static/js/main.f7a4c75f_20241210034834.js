@@ -60009,7 +60009,7 @@
                                     'flex flex-row items-center justify-center',
                                   children: (0, Tt.jsx)('img', {
                                     className: 'w-[110px] h-auto',
-                                    src: 'https://3o.hk/images/2024/05/25/logo.png',
+                                    src: 'https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png',
                                     alt: 'UNSW',
                                   }),
                                 }),

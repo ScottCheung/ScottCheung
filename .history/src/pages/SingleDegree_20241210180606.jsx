@@ -91,12 +91,12 @@ export default function Example() {
                   <div className='flex flex-wrap items-center justify-center'>
                     <img
                       className='w-[130px] px-7'
-                      src='https://img.picgo.net/2024/12/10/swustlogo70d687130fbd9af2.png'
+                      src='https://3o.hk/images/2024/05/25/817d5684-7ac9-491b-8752-60cfa0809adc.png'
                       alt='swustPng'
                     />
                     <img
                       className='max-w-[80vw] lg:max-w-[400px] h-auto py-12 px-7'
-                      src='https://img.picgo.net/2024/12/10/swustname843d2b9c22b1f8d9.png'
+                      src='https://3o.hk/images/2024/05/25/ea60b2ce-3079-4e5f-ad4d-440410ae50af.png'
                       alt='swustName'
                     />
                   </div>
@@ -110,7 +110,7 @@ export default function Example() {
                   style={{
                     top: `calc(${navbarHeight}px + 10px)`,
                     backgroundImage:
-                      'url(https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png)',
+                      'url(https://3o.hk/images/2024/05/25/unsw-students-banner.png)',
                   }}
                 >
                   <div className='flex flex-row items-center justify-center'>

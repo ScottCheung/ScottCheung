@@ -91,7 +91,7 @@ export default function Example() {
                   <div className='flex flex-wrap items-center justify-center'>
                     <img
                       className='w-[130px] px-7'
-                      src='https://img.picgo.net/2024/12/10/swustlogo70d687130fbd9af2.png'
+                      src='https://english.swust.edu.cn/_upload/tpl/04/75/1141/template1141/images/logo.svg'
                       alt='swustPng'
                     />
                     <img
