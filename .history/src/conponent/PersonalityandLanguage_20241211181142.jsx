@@ -285,7 +285,7 @@ function PersonalityandLanguage() {
                           className={`${
                             personality.color1 + ' ' + personality.color2
                           } bg-gradient-to-r  h-[15px] rounded-full`}
-                          style={{ width: `0%` }}
+                          style={{ width: `100%` }}
                         ></motion.div>
                       </motion.div>
                     </motion.div>

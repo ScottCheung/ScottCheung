@@ -271,21 +271,21 @@ function PersonalityandLanguage() {
                           <N n={personality.label} d={3} />
                         </motion.div>
                       </motion.div>
-                      <motion.div className='w-full h-[15px] mb-4 rounded-full bg-white/20 darrk:bg-gray-700'>
+                      <motion.div className='w-full h-[15px] justify-start flex mb-4 rounded-full bg-white/20 darrk:bg-gray-700'>
                         <motion.div
                           key={index}
                           variants={{
-                            hidden: { opacity: 0, width: '0%' },
+                            hidden: { opacity: 0, scaleX: '0%' },
                             visible: {
                               opacity: 1,
-                              width: `${personality.column}`,
+                              scaleX: `${personality.column}`,
                             },
                           }}
                           transition={{ duration: 1, delay: (index + 4) * 0.1 }}
-                          className={`${
+                          className={`flex ${
                             personality.color1 + ' ' + personality.color2
-                          } bg-gradient-to-r  h-[15px] rounded-full`}
-                          style={{ width: `0%` }}
+                          } bg-gradient-to-r justify-start h-[15px] rounded-full`}
+                          style={{ width: personality.column }}
                         ></motion.div>
                       </motion.div>
                     </motion.div>

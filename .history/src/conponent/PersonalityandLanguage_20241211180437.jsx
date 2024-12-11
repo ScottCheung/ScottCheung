@@ -169,7 +169,7 @@ function PersonalityandLanguage() {
                         hidden: { opacity: 0, width: '0%' },
                         visible: {
                           opacity: 1,
-                          width: `${per.column}`,
+                          width: `${per.column}%`,
                         },
                       }}
                       transition={{ duration: 1, delay: index * 0.1 }}
@@ -278,7 +278,7 @@ function PersonalityandLanguage() {
                             hidden: { opacity: 0, width: '0%' },
                             visible: {
                               opacity: 1,
-                              width: `${personality.column}`,
+                              width: `${personality.column}%`,
                             },
                           }}
                           transition={{ duration: 1, delay: (index + 4) * 0.1 }}

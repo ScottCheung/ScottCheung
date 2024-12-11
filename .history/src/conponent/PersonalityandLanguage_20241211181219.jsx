@@ -275,17 +275,17 @@ function PersonalityandLanguage() {
                         <motion.div
                           key={index}
                           variants={{
-                            hidden: { opacity: 0, width: '0%' },
+                            hidden: { opacity: 0, scaleX: '0%' },
                             visible: {
                               opacity: 1,
-                              width: `${personality.column}`,
+                              scaleX: `${personality.column}`,
                             },
                           }}
                           transition={{ duration: 1, delay: (index + 4) * 0.1 }}
                           className={`${
                             personality.color1 + ' ' + personality.color2
                           } bg-gradient-to-r  h-[15px] rounded-full`}
-                          style={{ width: `0%` }}
+                          style={{ width: `100%` }}
                         ></motion.div>
                       </motion.div>
                     </motion.div>
