@@ -135,7 +135,7 @@ function WhymeCard() {
           initial={{ opacity: 0, scale: 0.98, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.98, y: 30 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.7 }}
           className='fixed bottom-0 right-0 z-10 w-full h-full '
           style={
             {
@@ -160,7 +160,7 @@ function WhymeCard() {
                 event.stopPropagation();
               }}
               layoutId={whymeCard.advantage}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              transition={{ duration: 1, ease: [0.3, 1, 0.3, 1] }}
               className='flex relative  bg-white h-[100vh] lg:ml-[10vw] ml-[50px] mr-[200px] lg:mr-[35vw] -mb-[20vh] rounded-[40px] py-[40px] px-[28px] z-50 '
             >
               <div className='flex gap-x-[20px]'>

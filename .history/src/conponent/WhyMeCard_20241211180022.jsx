@@ -135,7 +135,7 @@ function WhymeCard() {
           initial={{ opacity: 0, scale: 0.98, y: 30 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
           exit={{ opacity: 0, scale: 0.98, y: 30 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          transition={{ duration: 1, delay: 0.7 }}
           className='fixed bottom-0 right-0 z-10 w-full h-full '
           style={
             {
