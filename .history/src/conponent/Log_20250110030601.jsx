@@ -162,7 +162,7 @@ export default function Log() {
       onClick={handleClose}
     >
       <motion.div
-        className={`relative lg:w-3/4 w-full md:max-w-5xl lg:max-h-[90vh]  lg:max-w-7xl bg-white ${globalBradius} ${globalBpadding} shadow-lg overflow-hidden`}
+        className={`relative lg:w-3/4 w-full md:max-w-5xl lg:max-h-[90vh]  lg:max-w-7xl bg-white ${globalBradius} ${globalBpadding} shadow-lg`}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
@@ -181,7 +181,7 @@ export default function Log() {
         </div>
 
         <div
-          className='flex flex-col max-h-[60vh]  w-full overflow-y-auto mt-[50px] scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100'
+          className='flex flex-col max-h-[70vh]  w-full overflow-y-auto mt-[50px] scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100'
           id='log-entries'
           style={{ imageMask: 'transparent' }}
         >
@@ -189,7 +189,7 @@ export default function Log() {
             <LogEntry entry={latestEntry} />
           </ol>
         </div>
-        <div className='absolute bottom-0 left-0 text-[25px] bg-gradient-to-b from-white/0 via-[10%] via-white/70 to-white right-0 flex items-center justify-between lg:p-[40px] p-[28px]'>
+        <div className='absolute bottom-0 left-0 text-[25px]  right-0 flex items-center justify-between lg:p-[40px] p-[28px]'>
           <div className='flex gap-x-[30px] justify-between w-full'>
             <motion.a
               href='/info'

@@ -162,7 +162,7 @@ export default function Log() {
       onClick={handleClose}
     >
       <motion.div
-        className={`relative lg:w-3/4 w-full md:max-w-5xl lg:max-h-[90vh]  lg:max-w-7xl bg-white ${globalBradius} ${globalBpadding} shadow-lg overflow-hidden`}
+        className={`relative lg:w-3/4 w-full md:max-w-5xl lg:max-h-[90vh]  lg:max-w-7xl bg-white ${globalBradius} ${globalBpadding} shadow-lg`}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.3 }}
@@ -189,7 +189,7 @@ export default function Log() {
             <LogEntry entry={latestEntry} />
           </ol>
         </div>
-        <div className='absolute bottom-0 left-0 text-[25px] bg-gradient-to-b from-white/0 via-[10%] via-white/70 to-white right-0 flex items-center justify-between lg:p-[40px] p-[28px]'>
+        <div className='absolute bottom-0 left-0 text-[25px] bg-white right-0 flex items-center justify-between lg:p-[40px] p-[28px]'>
           <div className='flex gap-x-[30px] justify-between w-full'>
             <motion.a
               href='/info'
