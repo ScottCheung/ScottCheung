@@ -2868,5 +2868,50 @@
         "优化了部分动画的性能。"
       ]
     ]
+  },
+  "2025-01-09T19:03:00.780Z": {
+    "version": "6.2.0",
+    "time": "2025-01-09T19:03:00.780Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Shanghai",
+      "state": "Shanghai",
+      "zipcode": "200000",
+      "loc": "31.2222,121.4581"
+    },
+    "header": [
+      "Optimised the performance of some device's animations that were not smooth, using progressive technology to optimise the animation performance.",
+      "优化部分设备动画性能不佳的体验，使用了渐进式技术优化动画性能。"
+    ],
+    "new": [
+      [
+        "Change some animation effects, such as the hover of the Good user part, adjust the animation method, and optimize performance.",
+        "By implementing Progressive Image Loading, low-resolution images are prioritized during the animation process to reduce rendering overhead. After the animation completes, high-resolution images are dynamically swapped in, achieving a smooth transition effect while significantly optimizing first-screen loading performance and overall rendering efficiency. This approach greatly enhances the smoothness and stability of card transition animations."
+      ],
+      [
+        "更改部分动画效果，例如Good user部分的 hover，调整动画方式，优化性能。",
+        "使用渐进式图片加载（Progressive Image Loading）技术，通过优先显示低分辨率图片并附带动画效果，动画完成后切换为高分辨率图片，既实现了流畅的过渡效果，又优化了首屏加载性能与动画渲染效率，大幅提升了卡片 transition 动画的流畅性与稳定性。"
+      ]
+    ],
+    "fix": [
+      [
+        "Fix some bugs of animation bugs.",
+        "Fix the bug of pic CDN problem that leads picture disappear"
+      ],
+      [
+        "修复了动画 BUG.",
+        "修复了图片 CDN 问题导致图片消失的问题。"
+      ]
+    ],
+    "impro": [
+      [
+        "Improve some info of the transition.",
+        "Improve some performance of the animation."
+      ],
+      [
+        "修复了翻译不佳的情况.",
+        "优化了部分动画的性能。"
+      ]
+    ]
   }
 }

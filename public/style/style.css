@@ -1,3 +1,5 @@
+/** @format */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -182,13 +184,22 @@ span.shine {
   }
 }
 
-@keyframes welcomeMoveIno {
+@keyframes welcomeMoveInYo {
   0% {
     transform: translateY(0);
   }
 
   to {
     transform: translateY(var(---global-staggered-translate-y));
+  }
+}
+@keyframes welcomeMoveInXo {
+  0% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(var(---global-staggered-translate-y));
   }
 }
 
@@ -203,7 +214,24 @@ span.shine {
 }
 
 .welcomeanimation {
-  animation: welcomeFadeIn, welcomeMoveIn, welcomeScaleUp;
+  animation: welcomeFadeIn, welcomeMoveInYo, welcomeScaleUp;
+  animation-duration: calc(var(--global-staggered-opacity-duration) * 1s),
+    calc(var(--global-staggered-translate-y-duration) * 1s),
+    calc(var(--global-staggered-translate-scale-duration) * 1s);
+  animation-timing-function: var(--global-animation-easing-function);
+  animation-fill-mode: both;
+}
+
+.stageY {
+  animation: welcomeFadeIn, welcomeMoveInYo, welcomeScaleUp;
+  animation-duration: calc(var(--global-staggered-opacity-duration) * 1s),
+    calc(var(--global-staggered-translate-y-duration) * 1s),
+    calc(var(--global-staggered-translate-scale-duration) * 1s);
+  animation-timing-function: var(--global-animation-easing-function);
+  animation-fill-mode: both;
+}
+.stageX {
+  animation: welcomeFadeIn, welcomeMoveInXo, welcomeScaleUp;
   animation-duration: calc(var(--global-staggered-opacity-duration) * 1s),
     calc(var(--global-staggered-translate-y-duration) * 1s),
     calc(var(--global-staggered-translate-scale-duration) * 1s);
