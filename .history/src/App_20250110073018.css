@@ -1,0 +1,206 @@
+/** @format */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  --global-card-corner-radius: 28px;
+  --global-card-padding: 32px;
+  --global-section-padding: 150px;
+  --global-section-background-color: rgb(255, 255, 255);
+  --global-section-background-color-darrk: rgb(0, 0, 0);
+  --global-section-background-color-alt: rgb(245, 245, 247);
+  --global-section-background-color-alt-darrk: #101010;
+  --global-scrim-background-color: rgb(250, 250, 252);
+  --global-scrim-background-color-darrk: rgb(22, 22, 23);
+  --global-scrim-background-color-alt: rgb(255, 255, 255);
+  --global-scrim-background-color-alt-darrk: rgb(0, 0, 0);
+  --global-spacing-img-to-headline: 100px;
+  --global-staggered-delay: 0.15;
+  --global-staggered-opacity-duration: 0.9;
+  --global-staggered-translate-y: 30px;
+  --global-staggered-translate-y-duration: 0.7;
+  --global-viewport-content-responsive: 87.5vw;
+  --global-animation-easing-function: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --global-select-column-space: 20px;
+}
+
+.grid-item {
+  background-color: #f0f0f0;
+  border-radius: 14px;
+  grid-row-end: span 1;
+  height: auto; /* 自动根据内容调整高度 */
+  overflow: hidden; /* 确保内容不溢出 */
+}
+
+iframe {
+  width: 100%; /* 确保 iframe 占满宽度 */
+  height: auto; /* 自动根据内容调整 */
+  border: none; /* 去掉边框 */
+}
+
+@keyframes stagerY {
+  from {
+    opacity: 0;
+    y: 30;
+  }
+  to {
+    opacity: 1;
+    y: 0;
+  }
+}
+@keyframes stagerX {
+  from {
+    /* opacity: 0; */
+    transform: translateY(30);
+  }
+  to {
+    /* opacity: 1; */
+    transform: translateY(0);
+  }
+}
+.stagerY {
+  animation: stagerY 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+.stagerX {
+  animation: stagerX 0.9s cubic-bezier(0.455, 0.03, 0.515, 0.955) both;
+}
+
+[transition-style='in:square:bottom-left'] {
+  animation: 2.5s cubic-bezier(0.25, 1, 0.3, 1) square-in-bottom-left both;
+}
+
+@keyframes wipe-in-down {
+  from {
+    clip-path: inset(0 0 100% 0);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.wipe-in-down {
+  animation: 2s wipe-in-down both;
+}
+
+.gradient-border {
+  position: relative;
+  overflow: hidden; /* 确保伪元素不会超出容器 */
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(
+    circle,
+    white 0%,
+    rgba(255, 255, 255, 1) 40%,
+    transparent 60%
+  );
+  z-index: 0;
+  pointer-events: none; /* 确保伪元素不会影响鼠标事件 */
+}
+
+.gradient-border > * {
+  position: relative;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 1441px) {
+  .welcome-video-wall-container {
+    --corner-radius: 44px;
+  }
+}
+
+@media only screen and (max-width: 1068px) {
+  .welcome-video-wall-container {
+    --corner-radius: 36px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .welcome-video-wall-container {
+    --corner-radius: 28px;
+    max-height: 960px;
+  }
+}
+
+.section-welcome {
+  padding-top: 90px;
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-welcome {
+    padding-top: 82px;
+  }
+}
+
+.section .welcomeanimation {
+  animation-name: welcomeFadeIn, welcomeMoveIn;
+  animation-duration: calc(var(--global-staggered-opacity-duration) * 1s),
+    calc(var(--global-staggered-translate-y-duration) * 1s);
+  animation-timing-function: var(--global-animation-easing-function);
+  animation-fill-mode: both;
+}
+
+@media only screen and (max-width: 734px) {
+  .section-welcome {
+    padding-top: 59px;
+  }
+}
+
+.section-welcome .section-header {
+  padding-bottom: 80px;
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-welcome .section-header {
+    padding-bottom: 72px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-welcome .section-header {
+    grid-gap: 0;
+    gap: 0;
+    padding-bottom: 56px;
+  }
+}
+
+.section-welcome .section-header-copy-container {
+  margin: 0;
+  position: relative;
+  top: -8px;
+}
+
+@media only screen and (max-width: 1068px) {
+  .section-welcome .section-header-copy-container {
+    top: -5px;
+  }
+}
+
+@media only screen and (max-width: 734px) {
+  .section-welcome .section-header-copy-container {
+    top: 0;
+    margin-top: 8px;
+  }
+}
+
+@keyframes chapternav-slidein {
+  0% {
+    opacity: 0;
+  }
+
+  1% {
+    transform: translateX(160px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

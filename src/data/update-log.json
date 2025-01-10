@@ -2913,5 +2913,43 @@
         "优化了部分动画的性能。"
       ]
     ]
+  },
+  "2025-01-10T01:07:43.194Z": {
+    "version": "6.3.0",
+    "time": "2025-01-10T01:07:43.194Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Shanghai",
+      "state": "Shanghai",
+      "zipcode": "200000",
+      "loc": "31.2222,121.4581"
+    },
+    "header": [
+      "Optimised the performance of some device's animations. Added the story module of the life column, which is now officially open and will be updated with more personal stories.",
+      "优化部分设备动画性能不佳的体验。新增了生活栏目的故事模块，现在正式开放，之后会更新更多个人故事。"
+    ],
+    "new": [
+      [
+        "Added the story module of the life column, which is now officially open and will be updated with more personal stories.",
+        "Change some animation effects, such as the hover of the Good user part, adjust the animation method, and optimize performance.",
+        "By implementing Progressive Image Loading, low-resolution images are prioritized during the animation process to reduce rendering overhead. After the animation completes, high-resolution images are dynamically swapped in, achieving a smooth transition effect while significantly optimizing first-screen loading performance and overall rendering efficiency. This approach greatly enhances the smoothness and stability of card transition animations."
+      ],
+      [
+        "新增了生活栏目的故事模块，现在正式开放，之后会更新更多个人故事。",
+        "更改部分动画效果，例如Good user部分的 hover，调整动画方式，优化性能。",
+        "使用渐进式图片加载（Progressive Image Loading）技术，通过优先显示低分辨率图片并附带动画效果，动画完成后切换为高分辨率图片，既实现了流畅的过渡效果，又优化了首屏加载性能与动画渲染效率，大幅提升了卡片 transition 动画的流畅性与稳定性。"
+      ]
+    ],
+    "fix": [],
+    "impro": [
+      [
+        "Improve some info of the transition.",
+        "Improve some performance of the animation."
+      ],
+      [
+        "修复了翻译不佳的情况.",
+        "优化了部分动画的性能。"
+      ]
+    ]
   }
 }

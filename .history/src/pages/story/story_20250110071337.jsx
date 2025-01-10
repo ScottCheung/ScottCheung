@@ -1,0 +1,67 @@
+/** @format */
+
+import React from 'react';
+import Navbar from '../../conponent/NavBar/Navbar';
+const posts = [
+  'https://www.instagram.com/p/DEP-NTcvgrC/',
+  'https://www.instagram.com/p/DEFAn3fPb1V/',
+  'https://www.instagram.com/p/DEAraw0Th6A/',
+  'https://www.instagram.com/p/DDKZBeXviBs/',
+  'https://www.instagram.com/p/DDBcdmvvlCX/?img_index=1',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  '',
+  'https://www.instagram.com/sydneyscottcheung/p/Cl8132qyNoO/',
+  'https://www.instagram.com/sydneyscottcheung/p/Cl81l1kyZlW/',
+  'https://www.instagram.com/sydneyscottcheung/p/Cl81jjNykdf/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjqilCxPiIe/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjqiitpP3Bv/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjqigThPbUM/',
+  'https://www.instagram.com/sydneyscottcheung/p/Cjqierrvzqj/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjNuXbZvl97/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjNuVu6PnZB/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjNuMYnPf1k/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjNuHzBvdxX/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjNuFP6PB2t/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjNt_cIvHi-/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjC44_cvnIb/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjC4u2mPEWP/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjC4emdP8SX/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjC4Qi2v0BO/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjC4JdwPyfG/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjC3otpOgs7/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjC3d1XuUbd/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjC3MKRuW1G/',
+  'https://www.instagram.com/sydneyscottcheung/p/CjCG_DsPxb9/',
+  'https://www.instagram.com/p/CjCFri8PW80/',
+];
+
+export default function gobelldesign() {
+  return (
+    <div className='flex p-3 '>
+      <Navbar BG={'bg-white'} />
+      <div className='pt-[140px] flex flex-col w-screen h-full overflow-x-hidden items-center justify-start'>
+        <h1 className='text-[40px] font-bold text-center mb-8'>Story</h1>
+        <div className='max-w-[1400px] w-full masonry-grid'>
+          <script async src='//www.instagram.com/embed.js'></script>
+
+          {posts.map((post, index) => (
+            <div
+              key={index}
+              className='flex overflow-hidden bg-red-500 grid-item ratio-6/19'
+            >
+              <iframe src={`${post}embed`} className=''></iframe>,
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
