@@ -104,7 +104,7 @@
           "icon": "fi-sr-followcollection",
           "name": ["Story", "故 事"],
           "link": "/story",
-          "status": "fi-sr-eye-crossed"
+          "status": "fi-sr-eye"
         }
       ]
     },

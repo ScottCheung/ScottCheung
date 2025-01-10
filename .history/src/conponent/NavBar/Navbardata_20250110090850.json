@@ -104,7 +104,7 @@
           "icon": "fi-sr-followcollection",
           "name": ["Story", "故 事"],
           "link": "/story",
-          "status": "fi-sr-eye-crossed"
+          "status": "fi-sr-eye"
         }
       ]
     },
@@ -313,5 +313,5 @@
     "hello": ["Welcome! I'm Scott.", "好久不见，我是贤哲"],
     "word": ["Sidere mens eadem mutato", "繁星纵变，智慧永存"]
   },
-  "dialog": "http://3o.hk/images/2024/04/21/infj.png"
+  "dialog": "https://img.picgo.net/2024/12/06/infp488c51d979c4420e.png"
 }
