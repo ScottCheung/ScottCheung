@@ -1264,8 +1264,8 @@
         {
           "type": ["E-mail", "邮件"],
           "icon": "fi-rr-envelope",
-          "link": "https://outlook.office365.com/mail/",
-          "name": "z5443003@ad.unsw.edu.au"
+          "link": "mailto:xianzhe.site@gmail.com",
+          "name": "xianzhe.site@gmail.com"
         },
         {
           "type": ["Facebook", " Facebook"],
@@ -1282,7 +1282,7 @@
         {
           "type": ["Instagram", "Instagram"],
           "icon": "fi-brands-instagram",
-          "link": "https://www.instagram.com/invites/contact/?i=er73s6a2y80u&utm_content=pblnb0t",
+          "link": "https://www.instagram.com/sydneyscottcheung",
           "name": "scottzhang9779"
         },
         {
