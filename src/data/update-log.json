@@ -3051,5 +3051,30 @@
       ]
     ],
     "impro": []
+  },
+  "2025-02-04T07:20:02.109Z": {
+    "version": "6.3.5",
+    "time": "2025-02-04T07:20:02.109Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Shanghai",
+      "state": "Shanghai",
+      "zipcode": "200000",
+      "loc": "31.2222,121.4581"
+    },
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
+    "new": [],
+    "fix": [
+      [
+        "Fix some bugs."
+      ],
+      [
+        "修复部分异常"
+      ]
+    ],
+    "impro": []
   }
 }
