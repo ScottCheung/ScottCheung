@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Database from '../data/Database.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
-import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
+import { useLanguage } from '../help/helpFunction';
 import { Link } from 'react-router-dom';
 import N from './Num';
 import Toggle from './Toggle';

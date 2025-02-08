@@ -4,10 +4,10 @@ import React, { useState, useEffect } from 'react';
 import Database from '../data/Database.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
-import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
+import { useLanguage } from '../help/helpFunction';
 import { Link } from 'react-router-dom';
 import N from './Num';
-import BG from './gfBG';
+import Toggle from './Toggle';
 
 // loaddata
 const language = Database.PersonalInfo.Capability.language;
@@ -88,7 +88,7 @@ function PersonalityandLanguage() {
         <motion.div
           // initial={{ opacity: 0 }}
           // whileInView={{ opacity: 1 }}
-          layout='size'
+          layout
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           viewport={{ once: true }}
           style={{
@@ -97,16 +97,12 @@ function PersonalityandLanguage() {
           }}
           className='flex-1 rounded-[28px] relative overflow-hidden lg:overflow-visible'
         >
-          <div className='flex-grow mb-[300px]'>
+          <div className='flex-grow mb-[230px]'>
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
-              transition={{
-                ease: [0.455, 0.03, 0.515, 0.955],
-                duration: 2,
-                delayChildren: 0,
-              }}
-              layout='position'
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              layout='false'
               className='flex  px-[20px] lg:px-[40px] pt-[40px]  flex-wrap items-center justify-between overflow-hidden mb-[20px]'
             >
               <h3
@@ -156,17 +152,30 @@ function PersonalityandLanguage() {
                       per.color1 + ' ' + per.color2
                     } flex justify-between  bg-gradient-to-r text-transparent bg-clip-text pb-[10px]`}
                   >
-                    <motion.div className='text-[23px] font-[500]  flex items-baseline '>
-                      <div> {per.right}</div>
-                      <motion.div className=' ml-[10px]  text-[15px] flex items-baseline '>
+                    <motion.div className='flex flex-col items-start '>
+                      <div className='text-[23px] font-[600]'> {per.right}</div>
+
+                      <motion.div className='text-white/5 text-[15px] flex items-baseline'>
                         <div className='flex mb-2'>{per.name}</div>
                         <i className='flex ml-2 fi text-[12px] fi-rr-interrogation'></i>
                       </motion.div>
                     </motion.div>
-                    <motion.div className='flex text-[20px]  font-[600]'>
-                      <N className='' n={per.label} d={3} /> %
+
+                    <motion.div className='flex flex-col text-[20px] items-end  font-[600]'>
+                      <div className='flex mb-[10px]'>
+                        <N className='' n={per.label} d={3} /> %
+                      </div>
+                      <Toggle
+                        text={' '}
+                        onlyicon={true}
+                        textStyle='text-[1px] font-[600] '
+                        isExpanded={current === per.name}
+                        size={'w-6 h-6 lg:w-8 lg:h-8  stroke-[2px]'}
+                        isborder={false}
+                      />
                     </motion.div>
                   </motion.div>
+
                   <motion.div className='w-full h-[15px] mb-4 rounded-full bg-white/20 darrk:bg-gray-700'>
                     <motion.div
                       key={index}
@@ -193,17 +202,23 @@ function PersonalityandLanguage() {
                       animate={{ height: '100%', opacity: 1 }}
                       exit={{ height: '0%', opacity: 0 }}
                       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                      className='bg-white/5 transition-all over-hidden p-[20px]  my-[20px] rounded-[14px]'
+                      className='bg-white/5 transition-all text-white/70 over-hidden p-[20px]  my-[20px] rounded-[14px]'
                     >
                       <motion.div
                         className={`${
                           per.color1 + ' ' + per.color2
-                        }  flex-col flex bg-gradient-to-r text-transparent bg-clip-text pb-[10px] gap-y-[20px]`}
+                        }  flex-col flex  pb-[10px] gap-y-[20px]`}
                       >
-                        <motion.div className='text-[20px] font-black flex'>
+                        <motion.div
+                          style={{ animationDelay: '0.15s' }}
+                          className='text-[20px] font-black flex stageX'
+                        >
                           {per.name}
                         </motion.div>
-                        <div className='flex justify-start  text-[15px] gap-[10px] items-baseline'>
+                        <motion.div
+                          style={{ animationDelay: '0.3s' }}
+                          className='flex justify-start  text-[15px] gap-[10px] items-baseline stageX'
+                        >
                           <motion.div className='flex  font-[600] '>
                             {per.right}
                             <N className='mx-[10px]' n={per.label} d={1} /> %
@@ -221,17 +236,28 @@ function PersonalityandLanguage() {
                             />{' '}
                             %
                           </motion.div>
-                        </div>
-                        <motion.div className='flex text-[15px]  font-[600]'>
+                        </motion.div>
+                        <motion.div
+                          style={{ animationDelay: '0.45s' }}
+                          className='flex text-[15px]  font-[600] stageX'
+                        >
                           {per.defi}
                         </motion.div>
-                        <motion.div className='flex text-[15px]  font-[600]'>
+                        <motion.div
+                          style={{ animationDelay: '0.6s' }}
+                          className='flex text-[15px]  font-[600] stageX'
+                        >
                           {per.des}
                         </motion.div>
                         <img
+                          style={{ animationDelay: '0.75s' }}
                           src={per.despic}
                           alt={per.name}
-                          className='p-[20px]'
+                          className='p-[20px] stageY'
+                        />
+                        <Toggle
+                          isExpanded={current === per.name}
+                          size={'w-6 h-6 lg:w-8 lg:h-8  stroke-[2px]'}
                         />
                       </motion.div>
                     </motion.div>
@@ -249,7 +275,7 @@ function PersonalityandLanguage() {
             }}
             viewport={{ once: true }}
             layout='position'
-            className='absolute bottom-[50px] w-full left-[50px]  right-0 h-[250px] overflow-hidden lg:overflow-visible'
+            className='absolute bottom-0 w-full left-0  right-0 h-[250px] overflow-hidden lg:overflow-visible'
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             src='https://www.16personalities.com/static/images/types/headers/campaigner-mobile.svg'
             alt=''
@@ -290,10 +316,7 @@ function PersonalityandLanguage() {
                 <motion.div
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{
-                    ease: [0.455, 0.03, 0.515, 0.955],
-                    duration: 2,
-                  }}
+                  transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                   className='flex justify-between'
                 >
                   <h3
@@ -344,7 +367,7 @@ function PersonalityandLanguage() {
                           transition={{ duration: 1, delay: (index + 4) * 0.1 }}
                           className={`${
                             personality.color1 + ' ' + personality.color2
-                          } bg-gradient-to-r  h-[15px] rounded-full`}
+                          } bg-gradient-to-br  h-[15px] rounded-full`}
                           style={{ width: `0%` }}
                         ></motion.div>
                       </motion.div>
