@@ -83,21 +83,29 @@ function Gooduser() {
 
   const Gooduser = (
     // {/* Good User */}
-    <motion.div className='col-span-12 md:col-span-6 lg:col-span-8'>
+    <motion.div className='col-span-12 md:col-span-6 lg:col-span-8 group'>
       <motion.div
+        layout
+        transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         style={{
           backgroundImage: `url(https://img.picgo.net/2024/12/06/gooduserab13df0e7b6d38c8.jpg)`,
-          backgroundSize: open ? '150% auto' : '120% auto',
+          backgroundSize: open ? '100% 120%' : '100% 100%',
+          backgroundRepeat: 'no-repeat',
           backgroundPosition: 'bottom center ',
         }}
-        className='h-full rounded-[28px]  overflow-hidden bg-gradient-to-br to-[30%] hover:to-[25%] transition-all from-blue-900 to-black '
+        className='h-full rounded-[28px]  overflow-hidden  transition-all duration-1000'
       >
-        <motion.div layout className='relative w-full h-full bg-cover'>
-          <div className='absolute z-0 w-full h-full bg-black/50'></div>
+        <motion.div
+          layout
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+          className='relative w-full h-full bg-cover'
+        >
+          <div className='absolute z-0 w-full h-full  bg-gradient-to-br via-[30%]  to-[120%]  transition-all duration-1000 from-blue-900 via-black to-purple-950/60  group-hover:opacity-30'></div>
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: '10px' }}
             whileInView={{ opacity: 1, scale: 1, y: '0px' }}
             // style={{ background: 'linear-gradient(45deg,#767676,#1d1d1f)' }}
+
             transition={{
               ease: [0.455, 0.03, 0.515, 0.955],
               duration: 1.3,
@@ -171,7 +179,7 @@ function Gooduser() {
             </motion.div>
           </motion.div>
           <motion.div
-            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
             className='mb-[30px] relative rounded-[28px] z-30'
           >
             <motion.div

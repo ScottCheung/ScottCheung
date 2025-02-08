@@ -105,6 +105,7 @@ function Gooduser() {
             initial={{ opacity: 0, scale: 0.95, y: '10px' }}
             whileInView={{ opacity: 1, scale: 1, y: '0px' }}
             // style={{ background: 'linear-gradient(45deg,#767676,#1d1d1f)' }}
+
             transition={{
               ease: [0.455, 0.03, 0.515, 0.955],
               duration: 1.3,
