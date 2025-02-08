@@ -9,7 +9,7 @@ import {
   useTransform,
   easeInOut,
 } from 'framer-motion';
-import { useLanguage } from '../help/helpFunction';
+import { hideRow, bgPic, useLanguage } from '../help/helpFunction';
 const data = Database.PersonalInfo.SelfDescribing;
 
 function SelfDescribing() {

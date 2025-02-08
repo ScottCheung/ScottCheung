@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Database from '../data/Database.json';
+import { Link } from 'react-router-dom';
 import {
   motion,
   AnimatePresence,
@@ -9,7 +10,7 @@ import {
   useTransform,
   easeInOut,
 } from 'framer-motion';
-import { useLanguage } from '../help/helpFunction';
+import { hideRow, bgPic, useLanguage } from '../help/helpFunction';
 const data = Database.PersonalInfo.SelfDescribing;
 
 function SelfDescribing() {
