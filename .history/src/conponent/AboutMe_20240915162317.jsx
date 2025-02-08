@@ -1,5 +1,3 @@
-/** @format */
-
 import React, { useState, useEffect, useRef } from 'react';
 import Database from '../data/Database.json';
 import { Link } from 'react-router-dom';
