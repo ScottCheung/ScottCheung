@@ -1,9 +1,20 @@
-/** @format */
+import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import Database from "../data/Database.json";
+import { useLanguage } from "../help/helpFunction";
 
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import Database from '../data/Database.json';
-import { useLanguage } from '../help/helpFunction';
+const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
+const Welcomevisblecontainer = {
+  hidden: {
+    transition: {},
+  },
+  visible: {
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+};
+const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 
 function CertificateGallery() {
   const lang = useLanguage();
@@ -11,7 +22,7 @@ function CertificateGallery() {
   const [rowHeights, setRowHeights] = useState([]);
 
   useEffect(() => {
-    const items = document.querySelectorAll('.certificate-item');
+    const items = document.querySelectorAll(".certificate-item");
     const rows = [];
     let currentRow = [];
     let currentTop = items[0]?.offsetTop || 0;
@@ -33,7 +44,7 @@ function CertificateGallery() {
   }, [picturesDate]);
 
   return (
-    <div className='flex w-full py-[20vh] items-center justify-center'>
+    <div className="flex w-full py-[20vh] items-center justify-center">
       <motion.div
         // variants={Welcomevisblecontainer}
         // initial="hidden"
@@ -41,8 +52,8 @@ function CertificateGallery() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         Transition={{ duration: 2 }}
-        viewport={{ once: true, margin: '-30%' }}
-        className='w-full grid px-[20px] grid-cols-12 relative lg:gap-[20px]'
+        viewport={{ once: true, margin: "-30%" }}
+        className="w-full grid px-[20px] grid-cols-12 relative lg:gap-[20px]"
       >
         {picturesDate.map((item, index) => (
           <motion.a
@@ -52,33 +63,33 @@ function CertificateGallery() {
 
             whileHover={{ scale: 1.001 }}
             whileTap={{ scale: 0.99 }}
-            target='_blank'
-            rel='noopener noreferrer'
+            target="_blank"
+            rel="noopener noreferrer"
             className={`flex-1 items-start justify-center lg:col-span-2 md:col-span-3 col-span-6  certificate-item`}
             style={{
-              height: `${rowHeights[Math.floor(index / 6)] || 'auto'}px`,
+              height: `${rowHeights[Math.floor(index / 6)] || "auto"}px`,
             }}
           >
             <motion.div
               key={index}
-              className='flex flex-col items-start justify-start '
+              className="flex flex-col items-start justify-start "
             >
-              <div className=' flex h-[200px] w-full justify-center items-center '>
+              <div className=" flex h-[200px] w-full justify-center items-center ">
                 <img
-                  className='flex rounded-[14px] w-auto max-h-[200px] overflow-hidden'
+                  className="flex rounded-[14px] w-auto max-h-[200px] overflow-hidden"
                   src={item.src.replace(
                     /\.(png|jpg|jpeg|gif|bmp|svg|webp)$/,
-                    '.md.$1',
+                    ".md.$1",
                   )}
                   alt={item.name}
                 />
               </div>
 
-              <div className='flex flex-col pt-[20px] gap-[10px]'>
-                <p className='flex-1 font-[600] text-gray-900 text-[20px] '>
+              <div className="flex flex-col pt-[20px] gap-[10px]">
+                <p className="flex-1 font-[600] text-gray-900 text-[20px] ">
                   {item.award}
                 </p>
-                <p className='flex-1 text-gray-500 text-[13px]'>
+                <p className="flex-1 text-gray-500 text-[13px]">
                   {item.activity}
                 </p>
               </div>
