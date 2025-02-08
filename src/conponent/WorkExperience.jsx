@@ -267,7 +267,7 @@ const cardData = [
       {
         title: 'Integrated RESTful APIs',
         description:
-          'Developed <s>RESTful APIs<s> using <s>C#<s> and <s>ASP.NET<s> to facilitate communication ( APIs integration ) between the front-end and back-end, ensuring secure and efficient data transfer ensuring seamless user experiences.',
+          'Developed <s>RESTful APIs<s> using <s>Java<s> and <s>Spring Boot<s> to facilitate communication ( APIs integration ) between the front-end and back-end, ensuring secure and efficient data transfer ensuring seamless user experiences.',
       },
       {
         title: 'Implemented unit tests',

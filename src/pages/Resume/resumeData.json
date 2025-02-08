@@ -95,10 +95,10 @@
               "HTML",
               "CSS",
               "TypeScript",
-              "C#",
+              "Java",
               "React",
               "Next.js",
-              "ASP.NET",
+              "Spring Boot",
               "Tailwind",
               "Framer Motion",
               "Redux",
@@ -117,8 +117,8 @@
                 "description": "used Google <s>Lighthouse<s> for performance analysis to optimize the web application."
               },
               {
-                "title": "Integrated RESTful APIs",
-                "description": "Developed <s>RESTful APIs<s> using <s>C#<s> and <s>ASP.NET<s> to facilitate communication ( APIs integration ) between the front-end and back-end, ensuring secure and efficient data transfer ensuring seamless user experiences."
+                "title": "Develop RESTful APIs",
+                "description": "Developed <s>RESTful APIs<s> using <s>Java<s> and <s>Spring Boot<s> to facilitate communication ( APIs integration ) between the front-end and back-end, ensuring secure and efficient data transfer ensuring seamless user experiences."
               },
               {
                 "title": "Implemented unit tests",
@@ -174,9 +174,11 @@
             "UI/UX Design"
           ],
           "Back-end": [
+            "Java",
+            "Spring Boot",
             "NodeJS",
-            "Postman",
             "RESTful API",
+            "Postman",
             "GraphQL",
             "Docker",
             "AWS",
@@ -185,11 +187,13 @@
           "Database": [
             "MySQL",
             "PostgreSQL",
+            "Redies",
+            "MongoDB",
+            "Neo4j",
+            "Navicat",
             "Tableau",
-            "SQLite",
             "PowerBI",
             "Python",
-            "Neo4j",
             "Pandas"
           ],
           "AI Algorithms": [
@@ -242,7 +246,7 @@
               "HTML",
               "CSS",
               "JavaScript",
-              "C#",
+              "Java",
               ".NET",
               "React",
               "D3",
@@ -304,7 +308,7 @@
             "period": "Aug 2024 - Sep 2024"
           },
           {
-            "name": "Neo4j iGrapher (Zero-Code Graphical Data Analysis Tool)",
+            "name": "Neo4j iGrapher (Data Analysis Tool)",
             "des": "A web tool using Neo4j, React, and D3.js to provide zero-code analysis and complex data relationship visualization.",
             "tag": "Web Development",
             "link": "https://xianzhe.site/igrapher",

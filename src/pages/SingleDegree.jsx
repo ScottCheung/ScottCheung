@@ -72,7 +72,7 @@ export default function Example() {
             <section className='section section-welcome no-pad-bottom welcomeanimation'>
               <div className='mt-24 section-content-responsive'>
                 <header className='flex flex-col items-center justify-between px-8 lg:flex-row section-header'>
-                  <h1 className='flex items-center welcomeanimation font-[600] text-[40px] text-gray-900'>
+                  <h1 className='flex items-center welcomeanimation font-[600] text-[25px] md:text-[30px] lg:text-[40px] text-gray-900'>
                     {data[0].major[lang][0]}
                     {lang == 0 && ' '}
                     {data[0].major[lang][1]}
@@ -124,13 +124,15 @@ export default function Example() {
               )}
               <div className='h-auto space-y-6 welcome-video-wall-visblecontainer visblecontainer'>
                 <div className='pt-24 pb-4 text-gray-500'>
-                  <h2 className='flex items-center welcomeanimation font-[600] text-[40px] text-gray-900 section-intro-headline'>
+                  <h2 className='flex items-center welcomeanimation font-[600] text-[25px] md:text-[30px] lg:text-[40px] text-gray-900 section-intro-headline'>
                     {lang == 0 && 'University Status'}
                     {lang == 1 && '学校信息'}
                   </h2>
                 </div>
-                <p className=''>{data[0].unides[lang][0]}</p>
-                <p className=''>
+                <p className='text-[13px] md:text-[17px] lg:text-[20px]'>
+                  {data[0].unides[lang][0]}
+                </p>
+                <p className='text-[13px] md:text-[17px] lg:text-[20px]'>
                   {data[0].unides[lang][1]}
                   <a className='text-sky-500' href={data[0].web}>
                     {' '}
@@ -139,14 +141,16 @@ export default function Example() {
                   </a>
                 </p>
                 <div className='pt-24 pb-4 text-gray-500'>
-                  <h2 className='flex items-center welcomeanimation font-[600] text-[40px] text-gray-900 section-intro-headline'>
+                  <h2 className='flex items-center welcomeanimation font-[600] text-[25px] md:text-[30px] lg:text-[40px] text-gray-900 section-intro-headline'>
                     {data[0].major[lang][0]}
                     {lang == 0 && ' '}
                     {data[0].major[lang][1]}
                   </h2>
                 </div>
-                <p className=''>{data[0].majordes[lang][0]}</p>
-                <p className=''>
+                <p className='text-[13px] md:text-[17px] lg:text-[20px]'>
+                  {data[0].majordes[lang][0]}
+                </p>
+                <p className='text-[13px] md:text-[17px] lg:text-[20px]'>
                   {data[0].majordes[lang][1]}
                   <a className='text-sky-500' href={data[0].majorweb}>
                     {' '}
@@ -158,69 +162,52 @@ export default function Example() {
             </section>
             <section className=' section section-welcome no-pad-bottom visblecontainer'>
               <div className='welcome-video-wall-visblecontainer  space-y-6 h-auto w-[100%]'>
-                <div className='w-[100%] text-gray-500 pt-24 pb-4  bg-gradient-to-br from-white from-10% via-white via-90% to-white/0 z-50'>
-                  <h2 className='flex items-center welcomeanimation font-[600] text-[40px] text-gray-900 section-intro-headline '>
+                <div className='w-[100%] text-gray-500 pt-24 pb-4  bg-gradient-to-br  from-white from-10% via-white via-90% to-white/0 z-50'>
+                  <h2 className='flex items-center welcomeanimation font-[600] text-[25px] md:text-[30px] lg:text-[40px] text-gray-900 section-intro-headline '>
                     {lang == 1 && '主要课程'}
                     {lang == 0 && 'Main Course'}
                   </h2>
-                  {lang == 0 && (
-                    <thead
-                      className={`${
-                        windowWidth > 786 ? '' : 'hidden'
-                      } pb-[15px] w-[100%] flex justify-between text-gray-700 uppercase  darrk:bg-gray-700 darrk:text-gray-400`}
-                    >
-                      <th className='pl-[2%] py-3 text-center w-[5%]'>
-                        Serial
-                      </th>
-                      <th className='pl-[4%] py-3 w-[34%]'>Course</th>
-                      <th className='px-6 py-3 text-center w-[12.5%]'>Type</th>
-                      <th className='pr-[2%] py-3 text-center w-[12.5%]'>
-                        descrition
-                      </th>
-                    </thead>
-                  )}
-                  {lang == 1 && (
-                    <thead
-                      className={`${
-                        windowWidth > 786 ? '' : 'hidden'
-                      } pb-[15px] w-[100%] flex justify-between text-gray-700 uppercase  darrk:bg-gray-700 darrk:text-gray-400`}
-                    >
-                      <th className='pl-[2%] py-3 text-center w-[10%]'>序号</th>
-                      <th className='pl-[4%] py-3 w-[34%]'>课程</th>
-                      <th className='px-6 py-3 text-center w-[12.5%]'>类型</th>
-                      <th className='pr-[2%] py-3 text-center w-[12.5%]'>
-                        其他
-                      </th>
-                    </thead>
-                  )}
                 </div>
 
-                <p className=''>{data[0].description[lang]}</p>
+                <p className='text-[13px] md:text-[17px] lg:text-[20px]'>
+                  {data[0].description[lang]}
+                </p>
+
                 <div className='relative flex pb-48 overflow-x-auto md:'>
                   <motion.table
                     variants={visblecontainer}
                     initial='hidden'
                     whileInView='visible'
                     viewport={{ once: true }}
-                    className='w-full text-left text-gray-500 rtl:text-right darrk:text-gray-40 '
+                    className='w-full text-left text-[13px] md:text-[17px] lg:text-[20px] text-gray-500 rtl:text-right darrk:text-gray-40 '
                   >
                     {lang == 0 && (
                       <thead
-                        className={`${
-                          windowWidth <= 786 ? '' : 'hidden'
-                        } text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400 `}
+                        className={` text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400 `}
                       >
                         <tr>
-                          <th scope='col' className='px-6 py-3 text-center'>
+                          <th
+                            scope='col'
+                            className='px-2 py-3 text-center lg:lg:px-6'
+                          >
                             Serial
                           </th>
-                          <th scope='col' className='px-6 py-3'>
+                          <th
+                            scope='col'
+                            className='px-2 py-3 text-center lg:lg:px-6'
+                          >
                             Course
                           </th>
-                          <th scope='col' className='px-6 py-3 text-center'>
+                          <th
+                            scope='col'
+                            className='px-2 py-3 text-center lg:lg:px-6'
+                          >
                             Type
                           </th>
-                          <th scope='col' className='px-6 py-3 text-center'>
+                          <th
+                            scope='col'
+                            className='px-2 py-3 text-center lg:lg:px-6'
+                          >
                             descrition
                           </th>
                         </tr>
@@ -236,7 +223,7 @@ export default function Example() {
                           序号
                         </th>
                         <th className='pl-[4%] py-3 w-[34%]'>课程</th>
-                        <th className='px-6 py-3 text-center w-[12.5%]'>
+                        <th className='lg:px-6  px-2 py-3 text-center w-[12.5%]'>
                           类型
                         </th>
                         <th className='pr-[2%] py-3 text-center w-[12.5%]'>
@@ -257,20 +244,20 @@ export default function Example() {
                         <tr className='max-w-full text-center bg-white border-b darrk:bg-gray-800 darrk:border-gray-700 '>
                           <th
                             scope='row'
-                            className='px-6 py-4 font-medium text-center text-gray-900 whitespace-nowrap darrk:text-white'
+                            className='px-2 py-4 font-medium text-center text-gray-900 lg:px-6 whitespace-nowrap darrk:text-white'
                           >
                             {index + 1}
                           </th>
                           <td
                             scope='row'
-                            className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white'
+                            className='lg:px-6  px-2 py-4 font-medium text-gray-900 whitespace-wrap darrk:text-white w-[30%]'
                           >
                             {subject.CourseName}
                           </td>
-                          <td className='px-6 py-4 text-center'>
+                          <td className='px-2 py-4 text-center lg:px-6'>
                             {subject.Type}
                           </td>
-                          <td className='px-6 py-4 text-center'>
+                          <td className='px-2 py-4 text-center lg:px-6'>
                             {subject.Description}
                           </td>
                         </tr>
