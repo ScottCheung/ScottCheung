@@ -64,6 +64,9 @@ function KeyFeature() {
     [`${viewwidth * 0.5}px`, `${viewwidth * 0}px`],
   );
   const borderRadius = useTransform(scrollYProgress, [0, 1], [500, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.9, 1], [0, 0.3, 1], {
+    ease: easeInOut,
+  });
 
   const KeyFeature = (
     <motion.div
@@ -71,7 +74,8 @@ function KeyFeature() {
       style={{
         width: isMobile ? `${viewwidth}px` : width,
         y: isMobile ? 0 : y,
-        borderRadius: isMobile ? 28 : borderRadius,
+        borderTopLeftRadius: isMobile ? 28 : borderRadius,
+        borderTopRightRadius: isMobile ? 28 : borderRadius,
         ...(window.location.pathname == '/' && {
           maskImage:
             'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
@@ -88,7 +92,19 @@ function KeyFeature() {
           className='absolute top-0 left-0 object-cover object-bottom w-full h-full transition-all'
           src={bg[0]}
         />
-        <motion.span className='absolute z-0 w-full h-full transition-all bg-black/60'></motion.span>
+        <motion.span
+          style={{
+            opacity: isMobile ? 1 : opacity,
+
+            ...(window.location.pathname == '/' && {
+              maskImage:
+                'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
+              WebkitMaskImage:
+                'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
+            }),
+          }}
+          className='absolute z-0 w-full h-full transition-all bg-black/60'
+        ></motion.span>
         <div className='flex items-center justify-center w-full h-full'>
           <motion.div
             variants={Welcomevisblecontainer}
