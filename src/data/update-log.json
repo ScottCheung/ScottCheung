@@ -3103,5 +3103,32 @@
       ]
     ],
     "impro": []
+  },
+  "2025-02-21T00:20:57.603Z": {
+    "version": "6.3.7",
+    "time": "2025-02-21T00:20:57.603Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Shanghai",
+      "state": "Shanghai",
+      "zipcode": "200000",
+      "loc": "31.2222,121.4581"
+    },
+    "header": [
+      "Table visual Patch Update",
+      "表格显示优化更新"
+    ],
+    "new": [],
+    "fix": [
+      [
+        "Fix some font display issues.",
+        "Fix some table overflow issues."
+      ],
+      [
+        "修复表格溢出，调整行比例。",
+        "修复部分字体显示问题。"
+      ]
+    ],
+    "impro": []
   }
 }

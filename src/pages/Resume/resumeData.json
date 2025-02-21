@@ -26,10 +26,10 @@
         },
         {
           "name": "Check for Updates",
-          "update": "1th Nov",
-          "version": "v20241101",
+          "update": "19th Feb",
+          "version": "v20240219",
           "icon": "flex items-center fi fi-rr-clock",
-          "link": "https://xianzhe.site/resumecheck/v20241101"
+          "link": "https://xianzhe.site/resumecheck/v20240219"
         }
       ]
     },
