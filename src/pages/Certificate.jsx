@@ -69,9 +69,9 @@ export default function material() {
                       <th scope='col' className='lg:px-6 px-2py-3'>
                         奖项
                       </th>
-                      <th scope='col' className='lg:px-6 px-2py-3'>
+                      {/* <th scope='col' className='lg:px-6 px-2py-3'>
                         链接
-                      </th>
+                      </th> */}
                     </tr>
                   </thead>
                 )}
@@ -87,9 +87,9 @@ export default function material() {
                       <th scope='col' className='text-center lg:px-6 px-2py-3'>
                         Award
                       </th>
-                      <th scope='col' className='lg:px-6 px-2py-3'>
+                      {/* <th scope='col' className='lg:px-6 px-2py-3'>
                         Link
-                      </th>
+                      </th> */}
                     </tr>
                   </thead>
                 )}
@@ -100,12 +100,12 @@ export default function material() {
                     whileHover={{ scale: 1.001 }}
                     whileTap={{ scale: 0.99 }}
                     layout
-                    className='lg:py-16 py-[3px]'
+                    className=''
                   >
-                    <tr className='bg-white border-b darrk:bg-gray-800 darrk:border-gray-700'>
+                    <tr className='bg-white border-b darrk:bg-gray-800 darrk:border-gray-700 '>
                       <th
                         scope='row'
-                        className='font-medium text-center text-gray-900 lg:px-6 px-2py-4 whitespace-nowrap darrk:text-white'
+                        className='px-2  font-medium text-center text-gray-900 lg:py-[10px] py-[25px] whitespace-nowrap darrk:text-white'
                       >
                         {index + 1}
                       </th>
@@ -118,7 +118,7 @@ export default function material() {
                       <td className='lg:px-6  px-2py-4 w-[30%] text-center'>
                         {Certificate.award}
                       </td>
-                      <td className='lg:px-6 px-2py-4'>
+                      {/* <td className='lg:px-6 px-2py-4'>
                         <a
                           target='_blank'
                           rel='noopener noreferrer'
@@ -127,14 +127,14 @@ export default function material() {
                         >
                           {lang == 0 ? 'Link ' : '链接'}
                         </a>
-                      </td>
+                      </td> */}
                     </tr>
                   </motion.tbody>
                 ))}
               </motion.table>
             </div>
           </div>
-          <CertificateGallery />
+          {/* <CertificateGallery /> */}
           <div className='flex justify-center w-full'>
             <KeyFeature />
           </div>

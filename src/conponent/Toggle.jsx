@@ -8,6 +8,7 @@ const SvgSwitcher = ({
   size,
   isborder = true,
   text,
+  onToggle,
   textStyle,
   onlyicon,
 }) => {
@@ -15,6 +16,9 @@ const SvgSwitcher = ({
   return (
     <motion.div
       layout
+      onClick={onToggle}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={`${isborder && 'hover:lg:border-white/70'} ${onlyicon ? 'flex text-white/30' : 'flex  border-transparent gap-2 lg:gap-4 text-white/50 text-[15px] lg:text-[20px] border-[2px] items-center  justify-center space-x-2 cursor-pointer   rounded-full px-3 py-1.5 md:px-4 md:py-2 lg:px-6 lg:py-3'}`}
     >

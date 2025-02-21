@@ -4526,14 +4526,31 @@
       },
       "fastWelcomevisblecontainer": {
         "hidden": {
-          "opacity": 0
+          "opacity": 0,
+          "y": 30,
+          "transition": {
+            "opacity": {
+              "ease": [0.455, 0.03, 0.515, 0.955],
+              "duration": 0.1
+            },
+            "y": {
+              "ease": [0.455, 0.03, 0.515, 0.955],
+              "duration": 0.1
+            }
+          }
         },
         "visible": {
           "opacity": 1,
           "y": 0,
           "transition": {
-            "delayChildren": 0.06,
-            "staggerChildren": 0.06
+            "opacity": {
+              "ease": [0.455, 0.03, 0.515, 0.955],
+              "duration": 0.9
+            },
+            "y": {
+              "ease": [0.455, 0.03, 0.515, 0.955],
+              "duration": 0.7
+            }
           }
         }
       },

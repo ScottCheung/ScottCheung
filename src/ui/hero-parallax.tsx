@@ -1,6 +1,8 @@
+/** @format */
+
 'use client';
 import React from 'react';
-import TextAnimate from './TextAnimate.tsx';
+import TextAnimate from './TextAnimate';
 import {
   motion,
   useScroll,

@@ -1,6 +1,8 @@
+/** @format */
+
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Toggle from './Toggle.tsx';
+import Toggle from './Toggle';
 
 interface NavbarItem {
   name: string[];
@@ -32,7 +34,7 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-  const BTN = (functionName) => {
+  const BTN = (functionName: keyof typeof functions) => {
     const functions = {
       lang0: () => {
         localStorage.setItem('lang', '0');
@@ -77,9 +79,9 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
               <div
                 style={{ animationDelay: `${index * 0.2}s` }}
                 className={`flex py-5 animate__animated animate__zoomIn place-items-center items-center px-4 cursor-pointer ${
-                  isTop
-                    ? 'hover:bg-gray-900/50 rounded-l-full'
-                    : 'hover:bg-gray-300/50 rounded-l-full'
+                  isTop ?
+                    'hover:bg-gray-900/50 rounded-l-full'
+                  : 'hover:bg-gray-300/50 rounded-l-full'
                 }`}
               >
                 <div className='flex-shrink-0'>
@@ -111,9 +113,9 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
                 <Toggle
                   isExpanded={openIndex === index}
                   style={
-                    textColor && isTop
-                      ? 'text-white w-9 h-9  stroke-[2px]'
-                      : 'text-gray-900 w-9 h-9  stroke-[2px]'
+                    textColor && isTop ?
+                      'text-white w-9 h-9  stroke-[2px]'
+                    : 'text-gray-900 w-9 h-9  stroke-[2px]'
                   }
                 />
               </div>
@@ -131,7 +133,7 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
                 transition={{ duration: 0.5 }}
               >
                 <div className='pl-[30px]  py-[30px] space-y-[20px] '>
-                  {item.scondMenu.map((subItem, subIndex) => (
+                  {item.scondMenu.map((subItem: any, subIndex: any) => (
                     <a
                       key={subItem.name[0] + subIndex}
                       href={subItem.link}
@@ -143,9 +145,9 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
                         setIsOpened(false);
                       }}
                       className={`pl-[33px] flex py-6 items-center justify-between  ${
-                        isTop
-                          ? 'hover:bg-gray-900/50 rounded-l-full'
-                          : 'hover:bg-gray-300/50 rounded-l-full'
+                        isTop ?
+                          'hover:bg-gray-900/50 rounded-l-full'
+                        : 'hover:bg-gray-300/50 rounded-l-full'
                       }`}
                     >
                       <div className='flex items-center'>
@@ -153,18 +155,18 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
                         <div className='flex items-center justify-center w-12 h-12 rounded-full'>
                           <i
                             className={`${
-                              textColor && isTop
-                                ? 'text-white'
-                                : 'text-gray-900'
+                              textColor && isTop ? 'text-white' : (
+                                'text-gray-900'
+                              )
                             } text-3xl flex fi ${subItem.icon}`}
                           ></i>
                         </div>
                         <div className='w-full ps-2'>
                           <div
                             className={`${
-                              textColor && isTop
-                                ? 'text-white'
-                                : 'text-gray-900'
+                              textColor && isTop ? 'text-white' : (
+                                'text-gray-900'
+                              )
                             } font-bold text-2xl`}
                           >
                             {subItem.name[lang]}

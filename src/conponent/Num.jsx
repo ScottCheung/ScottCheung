@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-export default function Num({ n, d, o, className }) {
+export default function Num({ n, d, o, className, from }) {
   // Ensure that n is treated as a string
   const stringValue = n.toString();
 
@@ -21,10 +21,9 @@ export default function Num({ n, d, o, className }) {
     if (inView) {
       const animation = animate(count, numberValue, {
         duration: d && d > 0 ? d : 2,
-        ease: 'easeInOut',
-        Mass: 1,
-        Stiffness: 1000,
-        Damping: 40,
+        ease: [0.25, 0.1, 0.25, 1], // easeOutQuad，可以根据效果调整
+        stiffness: 400, // 控制动画刚度
+        damping: 30, // 控制衰减速度
       });
       return animation.stop;
     }
