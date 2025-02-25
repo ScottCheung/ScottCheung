@@ -34,7 +34,7 @@ const tabs = [
     contentKey: 'database',
   },
   {
-    label: ['Algorithm & AI', '算法 & AI'],
+    label: ['Algorithm', '算法 & AI'],
     color1: '[#CB2C14]',
     ratio1: '[-50%]',
     ratio2: '[150%]',
@@ -115,7 +115,7 @@ function Skill() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 30 }}
-                transition={{ duration: 1, delay: (index % 12) * 0.07 }}
+                transition={{ duration: 1, delay: (index % 12) * 0.12 }}
                 className='flex items-start  col-span-12 pb-2 md:col-span-6 lg:col-span-4 xl:col-span-3 gap-x-[20px]'
               >
                 <motion.div
@@ -227,7 +227,7 @@ function Skill() {
                 initial='hidden'
                 whileInView='visible'
                 viewport={{ once: true }}
-                className='flex justify-between text-center w-full gap-x-[3%] lg:gap-x-[10%] overflow-auto scrollbar-hide pb-[30px]'
+                className='flex justify-between w-[100%] text-center gap-x-[3%] lg:gap-x-[10%] overflow-auto scrollbar-hide pb-[30px]'
               >
                 {tabs.map((tab, index) => (
                   <motion.button
@@ -237,22 +237,33 @@ function Skill() {
                       visible: { opacity: 1, pointerEvents: 'auto' },
                     }}
                     transition={{ duration: 1, delay: index * 0.15 }}
-                    className='inline-flex items-start text-[15px] md:text-[20px] lg:text-[25px] font-[600]'
+                    className='inline-flex items-start w-[12%]  text-[13px]  md:text-[20px] lg:text-[25px] font-[700]'
                     onClick={() => handleTabChange(tab)}
                   >
                     <div className='flex flex-col'>
                       <div
                         className={`flex md:flex-row flex-col-reverse  bg-gradient-to-br gap-[10px] items-center text-transparent bg-clip-text from-${tab.ratio1} to-${tab.ratio2} from-${tab.color1} to-${tab.color2}`}
                       >
-                        <h3>{tab.label[lang]}</h3>
+                        <h3 className=''>{tab.label[lang]}</h3>
                         <AnimatePresence>
-                          {tab === selectedTab && (
+                          <motion.div
+                            initial={{ opacity: 0, scale: 0 }}
+                            animate={{
+                              opacity: tab === selectedTab ? 1 : 0,
+                              scale: tab === selectedTab ? 1 : 0,
+                            }}
+                            transition={{
+                              duration: 1,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
+                            className={`bg-gradient-to-r w-[50px] from-[-100%] to-[200%] from-${tab.color1} to-${tab.color2} rounded-full`}
+                          >
                             <N
-                              className='text-[15px]  md:text-[20px] lg:text-[25px]'
+                              className={`text-[15px] bg-black text-transparent bg-clip-text  px-[10px] font-[700] rounded-full  p-[1px] md:text-[13px] lg:text-[15px]`}
                               n={content.skills.length}
                               d={2}
                             />
-                          )}
+                          </motion.div>
                         </AnimatePresence>
                       </div>
 
@@ -272,7 +283,10 @@ function Skill() {
                   initial={{ x: -direction * 30, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   exit={{ x: direction * 30, opacity: 0 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{
+                    duration: 1,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
                 >
                   {renderContent()}
                 </motion.div>

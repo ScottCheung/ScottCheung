@@ -21,7 +21,7 @@ export default function Num({ n, d, o, className, from }) {
     if (inView) {
       const animation = animate(count, numberValue, {
         duration: d && d > 0 ? d : 2,
-        ease: [0.25, 0.1, 0.25, 1], // easeOutQuad，可以根据效果调整
+        ease: [0.22, 1, 0.36, 1], // easeOutQuad，可以根据效果调整
         stiffness: 400, // 控制动画刚度
         damping: 30, // 控制衰减速度
       });

@@ -110,7 +110,7 @@ function Home() {
 
   return (
     <div
-      className={`relative flex flex-col items-center w-[${viewwidth}px] transition-all bg-gray-200 ${windowWidth < 1080 ? 'overflow-x-hidden' : ''} `}
+      className={`relative flex flex-col items-center w-[${viewwidth}px] transition-all bg-[#f5f5f7] ${windowWidth < 1080 ? 'overflow-x-hidden' : ''} `}
     >
       <Navbar topTextColor={true} />
       <Log />
