@@ -1,4 +1,6 @@
-import React, { useEffect, useRef } from "react";
+/** @format */
+
+import React, { useEffect, useRef } from 'react';
 
 const CanvasBackground = () => {
   const canvasRef = useRef(null);
@@ -10,7 +12,7 @@ const CanvasBackground = () => {
 
   useEffect(() => {
     const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     let w, h;
 
     const resizeCanvas = () => {
@@ -29,22 +31,22 @@ const CanvasBackground = () => {
     };
 
     const drawStaticStars = () => {
-      ctx.globalCompositeOperation = "source-over";
+      ctx.globalCompositeOperation = 'source-over';
       ctx.globalAlpha = 0.8;
-      ctx.fillStyle = "hsla(" + 217 + ", 64%, 6%, 1)";
+      ctx.fillStyle = 'hsla(' + 217 + ', 64%, 6%, 1)';
       ctx.fillRect(0, 0, w, h);
 
-      ctx.globalCompositeOperation = "lighter";
+      ctx.globalCompositeOperation = 'lighter';
       stars.current.forEach((star) => star.draw(ctx));
     };
 
     const animation = () => {
-      ctx.globalCompositeOperation = "source-over";
+      ctx.globalCompositeOperation = 'source-over';
       ctx.globalAlpha = 0.8;
-      ctx.fillStyle = "hsla(" + 217 + ", 64%, 6%, 1)";
+      ctx.fillStyle = 'hsla(' + 217 + ', 64%, 6%, 1)';
       ctx.fillRect(0, 0, w, h);
 
-      ctx.globalCompositeOperation = "lighter";
+      ctx.globalCompositeOperation = 'lighter';
       stars.current.forEach((star) => {
         star.update();
         star.draw(ctx);
@@ -66,7 +68,7 @@ const CanvasBackground = () => {
         this.orbitX = w / 2;
         this.orbitY = h / 2;
         this.timePassed = random(0, maxStars);
-        this.speed = random(this.orbitRadius) / 5000000;
+        this.speed = random(this.orbitRadius) / 500000;
         this.alpha = random(2, 10) / 10;
       }
 
@@ -93,8 +95,8 @@ const CanvasBackground = () => {
       }
     }
 
-    const offScreenCanvas = document.createElement("canvas");
-    const offCtx = offScreenCanvas.getContext("2d");
+    const offScreenCanvas = document.createElement('canvas');
+    const offCtx = offScreenCanvas.getContext('2d');
     offScreenCanvas.width = 100;
     offScreenCanvas.height = 100;
     const half = offScreenCanvas.width / 2;
@@ -106,10 +108,10 @@ const CanvasBackground = () => {
       half,
       half,
     );
-    gradient2.addColorStop(0.025, "#fff");
-    gradient2.addColorStop(0.1, "hsl(" + hue + ", 61%, 33%)");
-    gradient2.addColorStop(0.25, "hsl(" + hue + ", 64%, 6%)");
-    gradient2.addColorStop(1, "transparent");
+    gradient2.addColorStop(0.025, '#fff');
+    gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+    gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+    gradient2.addColorStop(1, 'transparent');
 
     offCtx.fillStyle = gradient2;
     offCtx.beginPath();
@@ -138,11 +140,11 @@ const CanvasBackground = () => {
     }
 
     resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
+    window.addEventListener('resize', resizeCanvas);
     animation();
 
     return () => {
-      window.removeEventListener("resize", resizeCanvas);
+      window.removeEventListener('resize', resizeCanvas);
       stopAnimation();
     };
   }, []);
@@ -151,11 +153,11 @@ const CanvasBackground = () => {
     <canvas
       ref={canvasRef}
       style={{
-        position: "absolute",
+        position: 'absolute',
         top: 0,
         left: 0,
-        width: "100%",
-        height: "100%",
+        width: '100%',
+        height: '100%',
         zIndex: -1,
       }}
     ></canvas>

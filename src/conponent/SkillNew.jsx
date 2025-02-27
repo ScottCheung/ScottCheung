@@ -246,6 +246,7 @@ function Skill() {
                       >
                         <h3 className=''>{tab.label[lang]}</h3>
                         <AnimatePresence>
+                          {/* {tab === selectedTab && ( */}
                           <motion.div
                             initial={{ opacity: 0, scale: 0 }}
                             animate={{
@@ -256,14 +257,16 @@ function Skill() {
                               duration: 1,
                               ease: [0.22, 1, 0.36, 1],
                             }}
+                            layoutId='fdfd'
                             className={`bg-gradient-to-r w-[50px] from-[-100%] to-[200%] from-${tab.color1} to-${tab.color2} rounded-full`}
                           >
                             <N
                               className={`text-[15px] bg-black text-transparent bg-clip-text  px-[10px] font-[700] rounded-full  p-[1px] md:text-[13px] lg:text-[15px]`}
                               n={content.skills.length}
-                              d={2}
+                              d={3}
                             />
                           </motion.div>
+                          {/* )} */}
                         </AnimatePresence>
                       </div>
 
@@ -292,7 +295,7 @@ function Skill() {
                 </motion.div>
                 <button
                   disabled={content.skills.length <= 12}
-                  className='max-w-3xl flex items-center gap-[20px] mx-auto my-4 text-white/50 text-[15px] lg:text-[20px]'
+                  className='max-w-3xl h-0 flex items-center gap-[20px] mx-auto my-4 text-white/50 text-[15px] lg:text-[20px]'
                 >
                   {content.skills.length > 12 && (
                     <Toggle

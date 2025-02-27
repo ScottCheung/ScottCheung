@@ -222,7 +222,7 @@ function PersonalityandLanguage() {
                         >
                           <motion.div className='flex  font-[600] '>
                             {per.right}
-                            <N className='mx-[10px]' n={per.label} d={1} /> %
+                            <N className='mx-[10px]' n={per.label} d={2} /> %
                           </motion.div>
                           <p className='flex font-[600] '>+</p>
                           <motion.div
@@ -233,7 +233,7 @@ function PersonalityandLanguage() {
                             <N
                               className='mx-[10px]'
                               n={100 - per.label}
-                              d={1}
+                              d={2}
                             />{' '}
                             %
                           </motion.div>
