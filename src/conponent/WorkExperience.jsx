@@ -332,10 +332,11 @@ function Card({ card, onClick }) {
       whileHover={{ scale: 1.001, y: -5 }}
       whileTap={{ scale: 0.99 }}
       layoutId={`card-container-${card.type + card.company + card.id}`}
-      className={`relative bg-white transform-gpuu cursor-pointer w-auto h-auto flex flex-col lg:w-[350px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:hover:${card.backgroundColor}/20`}
+      className={`relative bg-white transform-gpuu cursor-pointer w-auto h-auto flex flex-col lg:w-[350px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:group-hover:${card.backgroundColor}/20`}
       onClick={() => onClick(card.id)}
     >
       <motion.div
+        layout
         layoutId={`card-img-${card.id}`}
         transition={{ duration: 1.3, ease: [0.22, 1, 0.36, 1] }}
         className='lg:absolute  -left-[30px] -top-[30px] right-[60px] lg:rounded-[28px]  overflow-hidden aspect-[16/9] z-30'
@@ -373,11 +374,21 @@ function Period({ period }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      className='-mx-[18%] mt-[10vh] hidden relative lg:flex  items-center justify-between'
+      className='-mx-[18%] mt-[120px] hidden relative lg:flex  items-center justify-between'
     >
-      <div className='absolute  -mt-[100px]  flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-500 font-serif'>
-        <div>{period.startTime}</div>
-        <div>{period.endTime}</div>
+      <div className='absolute  -mt-[100px]  flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-400 font-serif'>
+        <motion.div
+          layout
+          className=' font-[500] group-hover:text-black group-hover:mb-7 mb-0 transition-all duration-500'
+        >
+          {period.startTime}
+        </motion.div>
+        <motion.div
+          layout
+          className='font-[500] group-hover:text-black transition-all duration-500'
+        >
+          {period.endTime}
+        </motion.div>
       </div>
       <span className={divisionline}></span>
       <div className='absolute right-0 bg-sky-700 rounded-full w-[30px] h-[30px]'></div>
@@ -469,7 +480,7 @@ function WorkExperience() {
               key={card.id}
               variants={WelcomeItem}
               transition={StagerFadeInUp}
-              className='col-span-6'
+              className='col-span-6 group'
             >
               <Card card={card} onClick={() => handleCardClick(card)} />
               <Period period={card} />
@@ -504,7 +515,7 @@ function WorkExperience() {
 
               {isOpen && (
                 <motion.div
-                  className='sticky top-0 flex'
+                  className='sticky top-0 flex '
                   layout
                   layoutId={`card-container-${
                     selectedCard.type + selectedCard.company + selectedCard.id
@@ -529,7 +540,7 @@ function WorkExperience() {
                       />
                     </motion.div>
 
-                    <motion.div className='flex flex-col w-full max-w-[800px] z-10 m-[40px] lg:pt-0 pb-[50px]  h-[70vh]  lg:overflow-auto scroll-smooth scrollbar-hide'>
+                    <motion.div className='flex flex-col w-full max-w-[800px] z-10 m-[40px] lg:pt-0 pb-[150px]  h-[70vh]  scroll-smooth scrollbar-hide'>
                       <div className='flex flex-col gap-8 '>
                         <div className='flex items-baseline gap-12'>
                           <motion.div

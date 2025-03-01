@@ -64,9 +64,7 @@ function KeyFeature() {
     [`${viewwidth * 0.5}px`, `${viewwidth * 0}px`],
   );
   const borderRadius = useTransform(scrollYProgress, [0, 1], [500, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.9, 1], [0, 0.5, 1], {
-    ease: easeInOut,
-  });
+  const opacity = useTransform(scrollYProgress, [0, 0.6, 1], [0, 0.5, 1]);
 
   const KeyFeature = (
     <motion.div
