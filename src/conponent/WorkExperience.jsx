@@ -327,40 +327,40 @@ function Card({ card, onClick }) {
     <motion.div
       layout
       key={card.id}
-      transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
       initial={{ scale: 1, y: 0 }}
       whileHover={{ scale: 1.001, y: -5 }}
       whileTap={{ scale: 0.99 }}
       layoutId={`card-container-${card.type + card.company + card.id}`}
-      className={`relative bg-white transform-gpuu cursor-pointer w-auto h-auto flex flex-col lg:w-[400px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:hover:${card.backgroundColor}/20`}
+      className={`relative bg-white transform-gpuu cursor-pointer w-auto h-auto flex flex-col lg:w-[350px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:hover:${card.backgroundColor}/20`}
       onClick={() => onClick(card.id)}
     >
-      <div className='lg:absolute  -left-[30px] -top-[30px] right-[60px] lg:rounded-[28px]  overflow-hidden aspect-[16/9] '>
+      <motion.div
+        layoutId={`card-img-${card.id}`}
+        transition={{ duration: 1.3, ease: [0.22, 1, 0.36, 1] }}
+        className='lg:absolute  -left-[30px] -top-[30px] right-[60px] lg:rounded-[28px]  overflow-hidden aspect-[16/9] z-30'
+      >
         <motion.img
-          layout
-          layoutId={`card-img-${card.id}`}
           src={card.image}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           className='object-cover object-bottom w-full shadow-lg'
         />
-        {/* <motion.kbd
-          layout
-          layoutId={'card-type' + card.type + card.company}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          class=' absolute top-[20px] right-[20px]  lg:bottom-[20px] lg:right-[20px] flex-shrink-0 flex w-[35px] h-[35rpx] lg:w-[35px] lg:h-[35px]  items-center justify-center  lg:p-[20px] text-[18px] lg:text-[20px] font-semibold text-sky-800 bg-sky-100 border border-sky-200 rounded-full darrk:bg-sky-600 darrk:text-sky-100 darrk:border-sky-500'
-        >
-          {card.type[0]}
-        </motion.kbd> */}
-        ``
-      </div>
+      </motion.div>
 
-      <div className='flex flex-col  p-[14px] lg:p-[0px] lg:mt-[60%]  items-start justify-start h-[130px] animate__animated animate__fadeInUp'>
-        <h1 className='font-bold  text-[17px] md:text-[25px] lg:text-[28px] text-gray'>
+      <div className='flex flex-col  p-[14px] lg:p-[0px] lg:mt-[50%]  items-start justify-start h-[100px] '>
+        <motion.h1
+          layoutId={`card-${card.title + card.id}`}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className='font-bold  text-[15px] md:text-[17px] lg:text-[23px] text-gray'
+        >
           {card.title}
-        </h1>
-        <h2 className='flex  text-[11px] md:text-[16px] lg:text-[21px] text-gray-400'>
+        </motion.h1>
+        <motion.h2
+          layoutId={`card-${card.company}`}
+          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+          className='flex  text-[11px] md:text-[12px] lg:text-[17px] text-gray-400'
+        >
           {card.company}
-        </h2>
+        </motion.h2>
       </div>
     </motion.div>
   );
@@ -514,30 +514,34 @@ function WorkExperience() {
                 >
                   <motion.div className='relative  z-0 flex transform-gpuu lg:rounded-[28px]  flex-wrap  max-h-[100vh] lg:max-h-[90vh] overflow-auto lg:overflow-hidden  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg   '>
                     <motion.div
-                      layoutId={`card-img-${selectedCard.id}`}
-                      transition={{
-                        duration: 1.2,
-                        ease: [0.22, 1, 0.36, 1],
-                      }}
                       className={`${windowWidth > 1440 ? 'lg:max-w-[400px] w-full h-full' : 'w-full h-[300px]'} object-center  object-cover flex md:p-0 aspect-[4/3] z-50`}
                     >
                       <motion.img
-                        layout
+                        // layout
+                        layoutId={`card-img-${selectedCard.id}`}
+                        transition={{
+                          duration: 1.4,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
                         src={selectedCard.image}
                         alt='detail'
-                        className='object-cover object-center w-full h-full'
+                        className='z-20 object-cover object-center w-full h-full'
                       />
                     </motion.div>
 
-                    <motion.div
-                      layout
-                      className='flex flex-col w-full max-w-[800px] m-[40px] lg:pt-0 z-40 pb-[50px]  h-[70vh]  lg:overflow-auto'
-                    >
+                    <motion.div className='flex flex-col w-full max-w-[800px] z-10 m-[40px] lg:pt-0 pb-[50px]  h-[70vh]  lg:overflow-auto scroll-smooth scrollbar-hide'>
                       <div className='flex flex-col gap-8 '>
                         <div className='flex items-baseline gap-12'>
-                          <div className='flex font-bold text-7xl'>
+                          <motion.div
+                            layoutId={`card-${selectedCard.title + selectedCard.id}`}
+                            transition={{
+                              duration: 1,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
+                            className='flex font-bold text-7xl'
+                          >
                             {selectedCard.title}
-                          </div>
+                          </motion.div>
                           {/* <motion.div
                             layoutId={
                               'card-type' +
@@ -554,10 +558,17 @@ function WorkExperience() {
                           </motion.div> */}
                         </div>
 
-                        <div className='flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-hidden h-[30%]  pb-8'>
-                          <h2 className='flex w-[70%] text-[13px] md:text-[16px] lg:text-[21px] text-gray-400'>
+                        <div className='flex-col items-start justify-start md:flex md:flex-row md:justify-between overflow-hidden  h-[30%]  pb-8'>
+                          <motion.h2
+                            layoutId={`card-${selectedCard.company}`}
+                            transition={{
+                              duration: 1,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
+                            className='flex w-[70%] text-[13px] md:text-[16px] lg:text-[21px] text-gray-400'
+                          >
                             {selectedCard.company}
-                          </h2>
+                          </motion.h2>
                           {/* duration */}
                           <div className='flex justify-end '>
                             <p className={timetext}>

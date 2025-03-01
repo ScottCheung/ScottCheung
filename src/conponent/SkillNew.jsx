@@ -34,7 +34,7 @@ const tabs = [
     contentKey: 'database',
   },
   {
-    label: ['Algorithm', '算法 & AI'],
+    label: ['Algorithm', '算法'],
     color1: '[#CB2C14]',
     ratio1: '[-50%]',
     ratio2: '[150%]',

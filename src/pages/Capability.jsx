@@ -10,16 +10,11 @@ import {
   useLanguage,
   SelectText,
 } from '../help/helpFunction.js';
-import { Link } from 'react-router-dom';
-import N from '../conponent/Num.jsx';
 import Skill from '../conponent/SkillNew.jsx';
 import Gooduser from '../conponent/Gooduser.jsx';
 import Otherability from '../conponent/Otherability.jsx';
 import PersonalityandLanguage from '../conponent/PersonalityandLanguage.jsx';
 import Highquality from '../conponent/Highquality.jsx';
-import Keyfeature2 from '../conponent/Keyfeature2.jsx';
-import Highlight from '../conponent/Highlight.jsx';
-import { div } from 'three/examples/jsm/nodes/Nodes';
 
 // loaddata
 const language = Database.PersonalInfo.Capability.language;

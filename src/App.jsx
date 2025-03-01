@@ -29,6 +29,7 @@ import Work from './pages/work.jsx';
 import Igrapher from './pages/projects/igrapher.jsx';
 import Design from './pages/projects/design.jsx';
 import Story from './pages/story/story.jsx';
+import PP from './pages/pp.jsx';
 
 const router = createBrowserRouter([
   {
@@ -145,6 +146,10 @@ const router = createBrowserRouter([
   {
     path: '/story',
     element: <Story />,
+  },
+  {
+    path: '/pp',
+    element: <PP />,
   },
 ]);
 
