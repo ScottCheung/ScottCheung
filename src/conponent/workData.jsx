@@ -53,9 +53,9 @@ function Card({ card }) {
       layout
       key={card.id}
       transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ y: -5 }}
+      whileHover={{ y: -5, opacity: 0.7 }}
       layoutId={`card-container-${card.type + card.company + card.id}`}
-      className={`relative bg-white transform-gppu cursor-pointer w-auto group-hover:animate-pulse h-auto flex flex-col lg:w-[350px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:group-hover:${card.backgroundColor}/20`}
+      className={`relative bg-white transform-gppu cursor-pointer w-auto h-auto flex flex-col lg:w-[350px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:group-hover:${card.backgroundColor}/20`}
     >
       <motion.div
         layout
