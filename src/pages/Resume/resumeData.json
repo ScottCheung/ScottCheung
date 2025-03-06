@@ -37,7 +37,7 @@
       {
         "title": "Summary",
         "icon": "flex items-center fi fi-rr-user",
-        "content": "A result-driven developer with over <s>1 year<s> of development experience. Proficient in <s>React<s>, <s>TypeScript<s>, <s>Next.js<s>, <s>Redux<s>, Extensive experience with <s>Figma<s>, <s>UI/UX Design<s>, <s>Design system<s>, <s>CI/CD<s>, <s>DevOps<s>, <s>Cloud<s>. No matter the design complexity, I can transform any design into a top-quality web. Demonstrate expertise in working within an <s>Agile<s> development environment."
+        "content": "A result-driven developer with over <s>3 year<s> of development experience. Proficient in <s>React<s>, <s>TypeScript<s>, <s>Next.js<s>, <s>Redux<s>, Extensive experience with <s>Figma<s>, <s>UI/UX Design<s>, <s>Design system<s>, <s>CI/CD<s>, <s>DevOps<s>, <s>Cloud<s>. No matter the design complexity, I can transform any design into a top-quality web. Demonstrate expertise in working within an <s>Agile<s> development environment."
       },
       {
         "title": "Highlights",
@@ -249,7 +249,7 @@
               "Java",
               ".NET",
               "React",
-              "D3",
+              "3.js",
               "Tailwind",
               "Framer Motion",
               "Google Chrome Developer Tools",
@@ -309,7 +309,7 @@
           },
           {
             "name": "Neo4j iGrapher (Data Analysis Tool)",
-            "des": "A web tool using Neo4j, React, and D3.js to provide zero-code analysis and complex data relationship visualization.",
+            "des": "A web tool using Neo4j, React, and 3.js to provide zero-code analysis and complex data relationship visualization.",
             "tag": "Web Development",
             "link": "https://xianzhe.site/igrapher",
             "skill": [
@@ -318,7 +318,7 @@
               "Neo4j",
               "JavaScript",
               "React",
-              "D3",
+              "3.js",
               "Tailwind",
               "Framer Motion",
               "Google Chrome Developer Tools",
@@ -635,7 +635,7 @@
         "projects": [
           {
             "name": "Neo4j iGrapher（图形化数据零代码分析工具）",
-            "des": "一种使用Neo4j、React和D3.js进行零代码分析和复杂数据关系图形化表示的Web工具。",
+            "des": "一种使用Neo4j、React和3.js进行零代码分析和复杂数据关系图形化表示的Web工具。",
             "tag": "Web开发",
             "link": "https://xianzhe.site/igrapher",
             "skill": [
@@ -644,7 +644,7 @@
               "Neo4j",
               "JavaScript",
               "React",
-              "D3",
+              "3.js",
               "Tailwind",
               "Framer Motion",
               "Google Chrome开发者工具",
@@ -659,7 +659,7 @@
               },
               {
                 "title": "Web组件开发",
-                "description": "使用<s>HTML<s>、<s>CSS<s>、<s>JavaScript<s>、<s>Tailwind<s>、<s>Framer Motion<s>开发了<s>25<s>个完全自定义的React和D3.js数据可视化组件，实现复杂数据关系的实时图形化表示。"
+                "description": "使用<s>HTML<s>、<s>CSS<s>、<s>JavaScript<s>、<s>Tailwind<s>、<s>Framer Motion<s>开发了<s>25<s>个完全自定义的React和3.js数据可视化组件，实现复杂数据关系的实时图形化表示。"
               },
               {
                 "title": "动画与视觉效果设计与开发",
