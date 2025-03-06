@@ -81,7 +81,7 @@ function KeyFeature() {
             'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
         }),
       }}
-      className={` flex h-[1000px] md:h-[150vh] overflow-hidden justify-center transform-gpu`}
+      className={` flex h-[1000px] md:h-[150vh] overflow-hidden justify-center transform-gppu`}
     >
       <motion.section
         className={`relative flex items-center w-[${viewwidth}px] overflow-hidden bg-gradient-to-r from-lime-500 to-emerald-500`}

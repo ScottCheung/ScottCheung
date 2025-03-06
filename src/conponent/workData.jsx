@@ -53,10 +53,9 @@ function Card({ card }) {
       layout
       key={card.id}
       transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-      whileHover={{ scale: 1.01, y: -5 }}
-      whileTap={{ scale: 0.99 }}
+      whileHover={{ y: -5 }}
       layoutId={`card-container-${card.type + card.company + card.id}`}
-      className={`relative bg-white transform-gpu cursor-pointer w-auto h-auto flex flex-col lg:w-[350px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:group-hover:${card.backgroundColor}/20`}
+      className={`relative bg-white transform-gppu cursor-pointer w-auto group-hover:animate-pulse h-auto flex flex-col lg:w-[350px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:group-hover:${card.backgroundColor}/20`}
     >
       <motion.div
         layout
@@ -188,7 +187,7 @@ function WorkExperience() {
       <ScrollableContainer
         toRight={true}
         gap={80}
-        containerPY={50}
+        containerPY={80}
         header={{
           cont: lang == 0 ? 'Work Experience' : '工作经验',
           icon: 'fi-rr-tool-box',
@@ -242,7 +241,7 @@ function WorkExperience() {
                   transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <motion.div className='relative  z-0 flex transform-gpuu lg:rounded-[28px]  flex-wrap  max-h-[100vh] lg:max-h-[90vh] overflow-auto lg:overflow-hidden  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg   '>
+                  <motion.div className='relative  z-0 flex transform-gppuu lg:rounded-[28px]  flex-wrap  max-h-[100vh] lg:max-h-[90vh] overflow-auto lg:overflow-hidden  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg   '>
                     <motion.div
                       className={`${windowWidth > 1440 ? 'lg:max-w-[400px] w-full h-full' : 'w-full h-[300px]'} object-center  object-cover flex md:p-0 aspect-[4/3] z-50`}
                     >
