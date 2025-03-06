@@ -322,18 +322,16 @@ import CtButton from './ctButton';
 import { useAppContext } from '../help/ContextManager';
 import ScrollableContainer from './ScrollableContainer';
 
-function Card({ card, onClick }) {
+function Card({ card }) {
   return (
     <motion.div
       layout
       key={card.id}
       transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-      initial={{ scale: 1, y: 0 }}
-      whileHover={{ scale: 1.001, y: -5 }}
+      whileHover={{ scale: 1.01, y: -5 }}
       whileTap={{ scale: 0.99 }}
       layoutId={`card-container-${card.type + card.company + card.id}`}
       className={`relative bg-white transform-gpuu cursor-pointer w-auto h-auto flex flex-col lg:w-[350px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:group-hover:${card.backgroundColor}/20`}
-      onClick={() => onClick(card.id)}
     >
       <motion.div
         layout
@@ -371,12 +369,9 @@ function Period({ period }) {
   return (
     <motion.div
       layout
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className='-mx-[18%] mt-[120px] hidden relative lg:flex  items-center justify-between'
+      className='-mx-[18%] mt-[120px] hidden  relative lg:flex  items-center justify-between'
     >
-      <div className='absolute  -mt-[100px]  flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-400 font-serif'>
+      <div className='absolute  -mt-[100px] opacity-60 group-hover:opacity-100 flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-400 font-serif'>
         <motion.div
           layout
           className=' font-[500] group-hover:text-black group-hover:mb-7 mb-0 transition-all duration-500'
@@ -475,16 +470,19 @@ function WorkExperience() {
         }}
       >
         <AnimatePresence mode='wait'>
-          {cardData.map((card) => (
-            <motion.div
+          {cardData.map((card, index) => (
+            <motion.button
               key={card.id}
               variants={WelcomeItem}
               transition={StagerFadeInUp}
               className='col-span-6 group'
+              onClick={() => handleCardClick(card)}
+              onMouseEnter={() => SetAnimation(index)}
+              onMouseLeave={() => SetAnimation(null)}
             >
-              <Card card={card} onClick={() => handleCardClick(card)} />
+              <Card card={card} />
               <Period period={card} />
-            </motion.div>
+            </motion.button>
           ))}
         </AnimatePresence>
       </ScrollableContainer>

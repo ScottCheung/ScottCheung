@@ -63,8 +63,8 @@ function KeyFeature() {
     [0, 1],
     [`${viewwidth * 0.5}px`, `${viewwidth * 0}px`],
   );
-  const borderRadius = useTransform(scrollYProgress, [0, 1], [500, 0]);
-  const opacity = useTransform(scrollYProgress, [0, 0.6, 1], [0, 0.5, 1]);
+  const borderRadius = useTransform(scrollYProgress, [0, 1], [300, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
   const KeyFeature = (
     <motion.div
@@ -81,7 +81,7 @@ function KeyFeature() {
             'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
         }),
       }}
-      className={` flex h-[1000px] md:h-[150vh] overflow-hidden justify-center transform-gpuu`}
+      className={` flex h-[1000px] md:h-[150vh] overflow-hidden justify-center transform-gpu`}
     >
       <motion.section
         className={`relative flex items-center w-[${viewwidth}px] overflow-hidden bg-gradient-to-r from-lime-500 to-emerald-500`}
@@ -101,7 +101,7 @@ function KeyFeature() {
                 'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
             }),
           }}
-          className='absolute z-0 w-full h-full transition-all bg-black/60'
+          className='absolute z-0 w-full h-full transition-all bg-black/40'
         ></motion.span>
         <div className='flex items-center justify-center w-full h-full'>
           <motion.div

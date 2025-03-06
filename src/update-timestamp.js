@@ -116,19 +116,19 @@ const getGeolocation = async () => {
      * 补丁更新
      *
      ******************/
-    // header: ['Patch Update', '补丁更新'],
-    // new: [],
-    // fix: [['Fix some bugs.'], ['修复部分异常']],
-    // impro: [],
+    header: ['Patch Update', '补丁更新'],
+    new: [],
+    fix: [['Fix some bugs.'], ['修复部分异常']],
+    impro: [],
 
     // 视觉优化
-    header: ['Table visual Patch Update', '表格显示优化更新'],
-    new: [],
-    fix: [
-      ['Fix some font display issues.', 'Fix some table overflow issues.'],
-      ['修复表格溢出，调整行比例。', '修复部分字体显示问题。'],
-    ],
-    impro: [],
+    // header: ['Table visual Patch Update', '表格显示优化更新'],
+    // new: [],
+    // fix: [
+    //   ['Fix some font display issues.', 'Fix some table overflow issues.'],
+    //   ['修复表格溢出，调整行比例。', '修复部分字体显示问题。'],
+    // ],
+    // impro: [],
 
     // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
     // header: ['Table visual Patch Update', '表格显示优化更新'],
