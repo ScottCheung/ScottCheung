@@ -1,0 +1,243 @@
+[
+  {
+    "id": 3,
+    "title": "Project Manager",
+    "type": "Full Time",
+    "company": "Zhaoshi Education",
+    "startTime": "July 2018",
+    "endTime": "May 2018",
+    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg",
+    "backgroundColor": "bg-blue-300",
+    "skill": [
+      "Student Recruitment",
+      "Teacher Interviewing",
+      "Customer Complaint Handling",
+      "Procurement Management",
+      "Staff Management",
+      "Scheduling",
+      "Time Management",
+      "Communication Skills"
+    ],
+    "points": [
+      {
+        "title": "Student Recruitment",
+        "description": "Successfully recruited over 100 students, enhancing enrollment numbers and contributing to the growth of the institution."
+      },
+      {
+        "title": "Teacher Interviewing",
+        "description": "Conducted interviews and evaluations for potential teachers, ensuring the hiring of qualified and competent staff."
+      },
+      {
+        "title": "Customer Complaint Handling",
+        "description": "Efficiently resolved over 50 customer complaints, improving overall customer satisfaction and retention rates."
+      },
+      {
+        "title": "Procurement Management",
+        "description": "Managed the procurement of desks, chairs, and other classroom necessities, ensuring timely and cost-effective acquisitions."
+      },
+      {
+        "title": "Staff Management",
+        "description": "Oversaw daily management of teachers, including meal coordination, sleep schedules, and shift planning, ensuring smooth operations and staff well-being."
+      },
+      {
+        "title": "Scheduling",
+        "description": "Developed and maintained teacher schedules, optimizing resource allocation and minimizing conflicts."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Web Developer",
+    "type": "Contract",
+    "company": "Domi Group Buying",
+    "startTime": "Aug 2018",
+    "endTime": "Sep 2019",
+    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg",
+    "backgroundColor": "bg-red-300",
+    "skill": [
+      "React",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Framer Motion",
+      "Tailwind",
+      "Data Analysis",
+      "Shopify",
+      "Google Chrome DevTools",
+      "Figma",
+      "Photoshop(PS)",
+      "TypeScript",
+      "SEO Optimization",
+      "Performance Optimization"
+    ],
+    "points": [
+      {
+        "title": "UI/UX Interface Enhancement",
+        "description": "Enhanced UI/UX using Photoshop and Figma, integrating a Customer Behaviour Analytics module that increased user engagement by 54% through improved gaze metrics."
+      },
+      {
+        "title": "E-commerce Platform Optimization",
+        "description": "Overhauled the e-commerce platform with HTML, CSS, JavaScript, and React, enhancing user experience and payment processes. Designed dedicated product pages and promotional posters, significantly boosting product visibility and sales."
+      },
+      {
+        "title": "SEO and Performance Optimization",
+        "description": "Boosted website performance and SEO by 22% and 14% respectively, utilizing Google Chrome DevTools and Lighthouse for targeted optimizations."
+      },
+      {
+        "title": "Performance Reporting System Development",
+        "description": "Developed a dynamic performance reporting system using React and Tailwind, enhanced with Framer Motion animations. This system features Excel export capabilities, providing management with detailed, actionable insights."
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Financial Assistant",
+    "type": "Part Time",
+    "company": "SWUST Analytical Testing Centre",
+    "startTime": "Mar 2021",
+    "endTime": "Feb 2022",
+    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg",
+    "backgroundColor": "bg-blue-300",
+    "skill": [
+      "Financial Auditing",
+      "Contract Management",
+      "Compliance Review",
+      "Business Process Automation",
+      "Report Analysis",
+      "Time Management",
+      "Attention to Detail",
+      "Communication Skills",
+      "Problem-Solving Skills",
+      "Office Automation Software Proficiency"
+    ],
+    "points": [
+      {
+        "title": "Achieving Excellence in Business Audits",
+        "description": "Responsible for auditing the invoices of the business office up to RMB1,000,000, drawing up contracts up to RMB100,000, compliance review and signing. "
+      },
+      {
+        "title": "Streamlined Business Audit Processes",
+        "description": "The business is responsible for the assessment and audit of the business system and occasional audits of the accounts flow according to the monthly and annual reports of the business. "
+      },
+      {
+        "title": "Efficiency Improvement through Office Automation Software",
+        "description": "During the course of the work, it was found that the business progress audit was a single simple and time-consuming task, and with the help of office automation software, the business audit workload of this position for a year was completed in half a day, receiving high praise and commendation from the Business Office Director."
+      }
+    ]
+  },
+  {
+    "id": 0,
+    "title": "Uber Eats Delivery Driver",
+    "type": "Part Time",
+    "company": "Uber Eats",
+    "startTime": "Dec 2022",
+    "endTime": "July 2023",
+    "image": "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_1116,h_1116/v1670495515/assets/69/2878ac-8a8e-48fe-8e9a-cdcd73a3e263/original/Courier_With_Bags_v2.png",
+    "backgroundColor": "bg-green-300",
+    "skill": [
+      "Time Management",
+      "Customer Service",
+      "Navigation and Route Planning",
+      "Problem-Solving Skills",
+      "Attention to Detail",
+      "Communication Skills",
+      "Physical Stamina",
+      "Safety Awareness"
+    ],
+    "points": [
+      {
+        "title": "Efficient Delivery Management",
+        "description": "Completed over 500 deliveries with an average delivery time of under 30 minutes, ensuring timely and accurate service to customers."
+      },
+      {
+        "title": "Customer Interaction",
+        "description": "Maintained high customer satisfaction through professional and courteous communication, resolving any issues promptly to ensure positive experiences.By editing some messages in advance, it improves the response time of interaction with customers and significantly increases user satisfaction."
+      },
+      {
+        "title": "Route Optimization",
+        "description": "Utilized navigation tools and local knowledge to optimize delivery routes, reducing costs and improving delivery efficiency."
+      },
+      {
+        "title": "Safety and Compliance",
+        "description": "Strictly adhered to traffic laws and safety guidelines, achieving a record of zero accidents or violations during the entire tenure."
+      }
+    ]
+  },
+  {
+    "company": "Wolli Software",
+    "title": "Web Developer",
+    "location": "Sydney",
+    "type": "Full Time",
+    "startTime": "Sep 2023",
+    "endTime": "Present",
+    "name": "Gobell Membership System",
+    "des": "Developed a membership management system for Gobell from scratch, including features like member login, registration, orders, products, payment processing, deposits, and credential verification.",
+    "tag": "Web Development",
+    "link": "https://www.linkedin.com/company/wolli-software/posts/?feedView=all",
+    "image": "https://media.istockphoto.com/id/1492719675/photo/multicultural-professionals-driving-innovation-in-sydneys-office-environment.jpg?s=612x612&w=0&k=20&c=jv1hAPk8cTe3ryKMtdlvBXR3YaWmMFG8DS2GRBu1-1E=",
+    "backgroundColor": "bg-sky-300",
+    "skill": [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind",
+      "Framer Motion",
+      "Redux",
+      "i18n",
+      "Figma",
+      "AWS Cloud",
+      "jsBarcode",
+      "QRcode"
+    ],
+    "points": [
+      {
+        "title": "Developed UI Components",
+        "link": "https://gobell.vercel.app/",
+        "description": "converted <s>Figma<s> designs into interactive and responsive react components using <s>TypeScript<s>, <s>ReactJS<s>, and <s>Next.js<s> base on <s>best practices<s>."
+      },
+      {
+        "title": "Performance Optimization",
+        "description": "used Google <s>Lighthouse<s> for performance analysis to optimize the web application."
+      },
+      {
+        "title": "Integrated RESTful APIs",
+        "description": "Developed <s>RESTful APIs<s> using <s>Java<s> and <s>Spring Boot<s> to facilitate communication ( APIs integration ) between the front-end and back-end, ensuring secure and efficient data transfer ensuring seamless user experiences."
+      },
+      {
+        "title": "Implemented unit tests",
+        "description": "Implemented unit tests using <s>Jest<s> and <s>React Testing Library<s> to ensure component functionality and stability."
+      },
+      {
+        "title": "Built the front-end architecture",
+        "link": "https://github.com/Xianzhezhang97/gobell",
+        "description": "Built the front-end architecture, using <s>Next.js<s> to ensure <s>SEO Friendly<s> and integrated <s>Redux<s> for efficient state management, making the project scalable, using <s>GIT<s> easy to manage."
+      },
+      {
+        "title": "Error handling",
+        "description": "Error handling, identifying and diagnosing root causes of errors in real-time. Collaborated with cross-functional teams to develop and test patches, ensuring minimal downtime and impact on users."
+      },
+      {
+        "title": "Led UI/UX Design",
+        "link": "xianzhe.site/gobelldesign",
+        "description": "designed client/business UI/UX interfaces, promotional flyers, brochures, pull-up banners and 3 membership cards using <s>Figma<s> and <s>Photoshop<s>."
+      },
+      {
+        "title": "UI/UX Enchancement",
+        "link": "https://gobell.vercel.app/",
+        "description": "UI/UX Enchancement. Developed and customized animations using  Framer Motion for UI. Improved interface responsiveness at least by <s>20%.<s>"
+      },
+      {
+        "title": "Established design system",
+        "link": "https://gobell.vercel.app/test",
+        "description": "for front-end development, including color schemes, typography, and spacing rules, reducing team communication overhead and cross-browser compatibility and responsiveness."
+      },
+      {
+        "title": "Implemented CI/CD",
+        "link": "m.gobell.au/",
+        "description": "created script to deploy web application to <s>AWS EC2<s>, <s>AWS S3 bucket<s>."
+      }
+    ]
+  }
+]

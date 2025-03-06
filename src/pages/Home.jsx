@@ -12,7 +12,7 @@ import Navbar from '../conponent/NavBar/Navbar';
 import Education from '../conponent/Education';
 import WhyMe from '../conponent/WhyMe';
 import AboutMe from '../conponent/AboutMe';
-import WorkExperience from '../conponent/WorkExperience';
+import WorkExperience from '../conponent/workData';
 import Capability from './Capability';
 import KeyFeature from '../conponent/KeyFeature';
 import Welcome from '../conponent/Welocome';

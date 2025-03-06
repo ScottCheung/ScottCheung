@@ -1,6 +1,8 @@
+/** @format */
+
 import React from 'react';
 import Navbar from '../conponent/NavBar/Navbar';
-import WorkExperience from '../conponent/WorkExperience';
+import WorkExperience from '../conponent/workData';
 
 export default function work() {
   return (
