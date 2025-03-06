@@ -1,4 +1,5 @@
 node_modules
+history
 dist
 # local env files
 .env.local
@@ -11,5 +12,6 @@ npm-debug.log*
 **/.cache/
 .history
 .vscode
+
 
 

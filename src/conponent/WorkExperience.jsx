@@ -477,8 +477,6 @@ function WorkExperience() {
               transition={StagerFadeInUp}
               className='col-span-6 group'
               onClick={() => handleCardClick(card)}
-              onMouseEnter={() => SetAnimation(index)}
-              onMouseLeave={() => SetAnimation(null)}
             >
               <Card card={card} />
               <Period period={card} />
@@ -538,7 +536,7 @@ function WorkExperience() {
                       />
                     </motion.div>
 
-                    <motion.div className='flex flex-col w-full max-w-[800px] z-10 m-[40px] lg:pt-0 pb-[150px]  h-[70vh]  scroll-smooth scrollbar-hide'>
+                    <motion.div className='flex flex-col w-full max-w-[800px] z-10 m-[40px] lg:pt-0 pb-[150px] lg:overflow-auto h-[70vh]  scroll-smooth scrollbar-hide'>
                       <div className='flex flex-col gap-8 '>
                         <div className='flex items-baseline gap-12'>
                           <motion.div
