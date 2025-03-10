@@ -1,8 +1,11 @@
+/** @format */
+
 import React from 'react';
 import Navbar from '../conponent/NavBar/Navbar';
 import { motion } from 'framer-motion';
 import { HeroParallax } from '../ui/hero-parallax.tsx';
 import Contact from '../conponent/Contact';
+import Project from '../conponent/project';
 const products = [
   {
     title: 'Moonbeam',
@@ -163,16 +166,21 @@ const products = [
 
 export default function project() {
   return (
-    <div className='relative bg-black'>
+    <div className='relative bg-gray-100'>
       <Navbar topTextColor={true} />
       <div className='md:vh-[200vh]'>
         {' '}
         <HeroParallax Items={products} />
       </div>
       <div className='relative flex w-full h-full min-h-[100vh]'>
-        <span className='absolute -top-[30vh]  left-0 right-0 w-full flex h-[30vh] bg-gradient-to-t from-[0%] to-[100%] from-black to-transparent'></span>
-        sdsd
-        <span className='absolute -bottom-[10vh] z-30 left-0 right-0 w-full flex h-[10vh] bg-gradient-to-b from-[0%] to-[100%] from-black to-transparent'></span>
+        <span className='absolute -top-[30vh] z-0 left-0 right-0 w-full flex h-[30vh] bg-gradient-to-t from-[0%] to-[100%]  from-gray-100 to-transparent'></span>
+        <span className='absolute -top-[30vh]  z-0 left-0 right-0 w-full flex h-[50vh] bg-gradient-to-t from-[0%] to-[100%]  from-gray-100 to-transparent'></span>
+        <div className='z-30'>
+          {' '}
+          <Project />
+        </div>
+
+        <span className='absolute -bottom-[10vh] z-0 left-0 right-0 w-full flex h-[10vh] bg-gradient-to-b from-[0%] to-[100%] from-gray-100 to-transparent'></span>
       </div>
       <Contact />
     </div>

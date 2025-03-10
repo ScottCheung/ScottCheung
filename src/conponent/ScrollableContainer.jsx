@@ -185,7 +185,7 @@ const ScrollableContainer = ({
         }}
         className={`${
           windowWidth > 1024 ?
-            `flex overflow-x-auto gap-[${gap}px] ${containerPY ? `${containerPY} py-[${containerPY}px]` : 'py-[30px]'} z-30 overflow-hidden`
+            `flex overflow-x-auto gap-[${gap}px] ${containerPY ? `${containerPY} py-[${containerPY}px]` : 'py-[30px]'} z-30 `
           : 'grid grid-cols-12 gap-4 w-full p-[20px] px-[10px]'
         } w-full scroll-smooth scrollbar-hide flex-shrink-0`}
         onScroll={handleScroll}

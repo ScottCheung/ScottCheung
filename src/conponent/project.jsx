@@ -117,10 +117,7 @@ function WhyMe({ hideTittle }) {
   // );
 
   const WhyMe = (
-    <motion.div
-      ref={ref1}
-      className={`lg:-mt-[50vh] pb-[10vh] w-[${viewwidth}px]`}
-    >
+    <motion.div ref={ref1} className={` pb-[10vh] w-[${viewwidth}px]`}>
       <motion.div
         style={{
           backgroundImage: `url(${data.pic})`,
@@ -156,35 +153,44 @@ function WhyMe({ hideTittle }) {
                 <motion.div
                   layout
                   layoutId={feature.advantage}
-                  // whileHover={{ scale: 1.01 }}
-                  transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                 >
-                  <motion.div className='group'>
+                  <motion.div className=''>
                     <motion.div
-                      className={` ${hideTittle ? 'bg-gray-50' : 'bg-white/80'} backdrop-blur-2xl  hover:scale-[1.01] transition-all p-[14px] lg:p-[35px] rounded-[14px] lg:rounded-[28px] relative flex-shrink-0  w-auto h-auto ${hideTittle ? 'lg:w-[250px]' : 'lg:w-[350px] '}  md:h-auto `}
+                      className={` ${hideTittle ? 'bg-gray-50' : 'bg-white/80'} backdrop-blur-2xl  hover:scale-[1.01] transition-all duration-300 p-[14px] lg:p-[35px] rounded-[14px] lg:rounded-[28px] relative flex-shrink-0  w-auto h-auto ${hideTittle ? 'lg:w-[250px]' : 'lg:w-[350px] '}  md:h-auto `}
                     >
                       <motion.div
+                        // layoutId={feature.advantage + 'bg'}
                         style={{
                           ...(!hideTittle && windowWidth > 1024 ?
                             bgPic(feature.pic[0], '100% auto', 'center bottom')
                           : {}),
+                          // filter:
+                          //   'drop-shadow(0px 10px 16px rgba(0, 0, 0, 0.1))',
                         }}
                         className='absolute bottom-0 left-0 right-0 w-full h-full lg:p-[35px] rounded-[14px] lg:rounded-[28px] '
                       ></motion.div>
                       <motion.div>
-                        <img src={feature.pic[1]} alt='' className='hidden' />
+                        <img
+                          src={feature.pic[1]}
+                          alt=''
+                          className='h-0 opacity-0'
+                        />
                         <motion.div
                           layoutId={feature.advantage + 'icon'}
                           transition={{
-                            duration: 1,
+                            duration: 0.9,
                             ease: [0.22, 1, 0.36, 1],
                           }}
                           className='flex items-center justify-start transform-gppu'
                         >
                           <i
+                            style={{
+                              animationDelay: `${index * 0.2}s`,
+                            }}
                             className={`${
                               feature.icon
-                            } fi from-[-20%] to-[120%] ${hideTittle ? 'text-[20px] lg:text-[30px]' : 'text-[25px] lg:text-[30px] xl:text-[35px]'}  ${
+                            } fi animate__animated  animate__zoomIn from-[-20%] to-[120%] ${hideTittle ? 'text-[20px] lg:text-[30px]' : 'text-[25px] lg:text-[30px] xl:text-[35px]'}  ${
                               feature.color1 + ' ' + feature.color2
                             } flex items-center lg:pb-[5px] xl:pb-[10px] bg-clip-text text-transparent bg-gradient-to-br`}
                           ></i>
@@ -193,10 +199,13 @@ function WhyMe({ hideTittle }) {
                           <motion.div
                             layoutId={feature.advantage + 'title'}
                             transition={{
-                              duration: 1.3,
+                              duration: 0.9,
                               ease: [0.22, 1, 0.36, 1],
                             }}
-                            className={` font-[700] ${hideTittle ? 'text-[15px] md:text-[17px] lg:text-[20px]' : 'text-[12px] md:text-[17px] lg:text-[25px]'}   ${
+                            style={{
+                              animationDelay: `${index * 0.2}s`,
+                            }}
+                            className={`animate__animated   animate__zoomIn  font-[700] ${hideTittle ? 'text-[15px] md:text-[17px] lg:text-[20px]' : 'text-[12px] md:text-[17px] lg:text-[25px]'}   ${
                               feature.color1 + ' ' + feature.color2
                             } flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
                           >
@@ -205,31 +214,26 @@ function WhyMe({ hideTittle }) {
                         </div>
                       </motion.div>
 
-                      <motion.div
-                        // layoutId={feature.description}
-                        transition={{
-                          duration: 1,
-                          ease: [0.22, 1, 0.36, 1],
-                        }}
+                      <div
                         className={`${
                           hideTittle || windowWidth < 1024 ? 'hidden' : ''
                         } copy-visblecontainer md:h-[480px] h-[200px] overflow-hidden`}
                       >
-                        <motion.div
+                        <div
                           style={{
                             ...hideRow(3),
+                            animationDelay: `${index * 0.3}s`,
                           }}
-                          className={`text-full  my-7  text-gray-500  text-[19px] `}
+                          className={`text-full  my-7 animate__animated  animate__fadeInUp text-gray-500  text-[19px]`}
                         >
                           {feature.description}
-                        </motion.div>
+                        </div>
                         <More
-                          id={feature.color2}
                           color={`  ${
                             feature.color1 + ' ' + feature.color2
-                          } bg-gradient-to-br  text-transparent bg-clip-text `}
+                          } bg-gradient-to-br text-transparent bg-clip-text `}
                         />
-                      </motion.div>
+                      </div>
                       {(windowWidth < 1024 || hideTittle) && (
                         <a
                           href={feature.href}

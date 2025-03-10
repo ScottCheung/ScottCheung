@@ -135,41 +135,15 @@ function WhymeCard() {
 
           event.stopPropagation();
         }}
-        className={`absolute top-0 left-0 right-0 bottom-0 w-full h-full ESC  z-0 ${
+        className={`flex w-full h-full ESC justify-end items-end z-0 ${
           whymeCard.color1 + '/50' + ' ' + whymeCard.color2 + '/50'
         } bg-gradient-to-br  backdrop-blur-[20px]   `}
       >
         <AnimatePresence>
-          {showLowRes && (
-            <motion.span
-              layoutId={whymeCard.advantage + 'bg'}
-              initial={{ opacity: 0, scale: 0.95, y: 30 }}
-              animate={{ opacity: 1, scale: 1, y: 0 }}
-              exit={{ opacity: 0, transition: { duration: 1, delay: 1 } }}
-              transition={{ duration: 2, ease: [0.22, 1, 0.36, 1] }}
-              className='fixed bottom-0 right-0 z-50 w-full h-full'
-              style={
-                {
-                  ...bgPic(whymeCard.pic[0], '35% auto', 'bottom right'),
-                } || null
-              }
-            ></motion.span>
-          )}
-          {!showLowRes && (
-            <motion.span
-              layoutId={whymeCard.advantage + 'bg'}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1], delay: 0.5 }}
-              className='fixed bottom-0 right-0 z-50 w-full h-full '
-              style={
-                {
-                  ...bgPic(whymeCard.pic[1], '35% auto', 'bottom right'),
-                  filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))',
-                } || null
-              }
-            ></motion.span>
-          )}
+          <motion.img
+            src={whymeCard.pic[showLowRes ? 0 : 1]}
+            className='w-[35%]  h-auto   '
+          />
         </AnimatePresence>
 
         <motion.div
@@ -188,9 +162,9 @@ function WhymeCard() {
               }}
               layoutId={whymeCard.advantage}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className='flex relative  bg-white h-[100vh] lg:ml-[10vw] ml-[50px] mr-[200px] lg:mr-[35vw] -mb-[20vh] rounded-[40px] py-[40px] px-[28px] z-50 '
+              className='flex relative bg-white  h-[100vh] lg:ml-[10vw] ml-[50px] mr-[200px] lg:mr-[35vw] -mb-[20vh] rounded-[40px] overflow-hidden z-50 '
             >
-              <div className='flex gap-x-[20px]'>
+              <div className='flex gap-x-[20px] bg-yellow-50/50 py-[40px] px-[28px]'>
                 <motion.div
                   layout
                   className='flex flex-col h-full gap-y-[35px] z-50'
@@ -205,7 +179,7 @@ function WhymeCard() {
                         openCard(feature);
                       }}
                       style={
-                        { animationDelay: `${index * 0.05 + 0.3}s` } || null
+                        { animationDelay: `${index * 0.05 + 0.15}s` } || null
                       }
                       className={`${
                         whymeCard.advantage === feature.advantage ?
@@ -252,7 +226,7 @@ function WhymeCard() {
                         <motion.div
                           layoutId={whymeCard.advantage + 'icon'}
                           transition={{
-                            duration: 0.9,
+                            duration: 0.7,
                             ease: [0.22, 1, 0.36, 1],
                           }}
                           className='text-white text-wrap text-[30px] mt-[10px]'
@@ -262,7 +236,7 @@ function WhymeCard() {
                       </div>
                       <motion.h3
                         transition={{
-                          duration: 0.9,
+                          duration: 1,
                           ease: [0.22, 1, 0.36, 1],
                         }}
                         layoutId={whymeCard.advantage + 'title'}
@@ -274,6 +248,10 @@ function WhymeCard() {
                       </motion.h3>
                       <motion.a
                         layout
+                        transition={{
+                          duration: 1,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
                         className='flex  w-[50px] h-[50px] rounded-full bg-gray-400/20  justify-center items-center  hover:scale-105   z-50'
                         href={whymeCard.href}
                       >
@@ -299,12 +277,17 @@ function WhymeCard() {
                     <div
                       className={`pb-[30px] relative flex flex-col  break-words`}
                     >
-                      <motion.div children=' '>
+                      <motion.div
+                        // layoutId={whymeCard.description}
+                        transition={{
+                          duration: 1,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
+                      >
                         <motion.div
-                          // style={{ animationDelay: "0.5s" }}
                           className={` ${
                             whymeCard.color1 + ' ' + whymeCard.color2
-                          } bg-clip-text text-transparent bg-gradient-to-br text-[15px] md:text-[23px] animate__animated animate__fadeInUp`}
+                          } bg-clip-text text-transparent bg-gradient-to-br text-[15px] md:text-[23px] `}
                         >
                           {whymeCard.description
                             .split('\n')

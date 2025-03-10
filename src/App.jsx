@@ -21,7 +21,6 @@ import AutoText from './pages/AutoText/AutoText.jsx';
 import Navbar from './conponent/NavBar/Navbar.jsx';
 import Resumecheck from './pages/Resume/Resumecheck.jsx';
 import Project from './pages/project.jsx';
-import Tool from './pages/tool/Tools.jsx';
 import TikTok from './pages/Empty.jsx';
 import Gobelldesign from './pages/projects/gobelldesign.jsx';
 import Work from './pages/work.jsx';
@@ -121,11 +120,6 @@ const router = createBrowserRouter([
     path: '/project',
     element: <Project />,
   },
-  {
-    path: '/tool',
-    element: <Tool />,
-  },
-
   {
     path: '/TikTok',
     element: <TikTok />,
