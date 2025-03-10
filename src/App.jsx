@@ -114,6 +114,10 @@ const router = createBrowserRouter([
     element: <Resumecheck />,
   },
   {
+    path: '/cvcheck/:version',
+    element: <Resumecheck />,
+  },
+  {
     path: '/project',
     element: <Project />,
   },

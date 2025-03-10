@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Navbar from '../../conponent/NavBar/Navbar';
@@ -13,12 +15,10 @@ export default function Errorpage() {
   document.body.style.overflow = 'hidden';
 
   const latestContact =
-    resumeData[lang].header.contacts[
-      resumeData[lang].header.contacts.length - 1
-    ];
+    resumeData[0].header.contacts[resumeData[0].header.contacts.length - 1];
   const latestVersion = latestContact.version || '1.0.0';
   const Message = {
-    FirstHeader: ['Resume Version', '简历版本'],
+    FirstHeader: ['Resume Check: ', '简历验证：'],
     SecondHeader: [
       'We are checking the resume version.',
       '我们正在检查简历版本',
@@ -50,9 +50,9 @@ export default function Errorpage() {
       setIsLatestVersion(false);
     }
   }, [version, latestVersion]);
-  const button = `${isLatestVersion ? 'text-green-800 border-green-700 hover:bg-green-700' : 'text-yellow-800 border-yellow-700 hover:bg-yellow-700'} items-center gap-x-[10px] hover:gap-x-[30px] inline-flex px-[20px] hover:px-[50px] py-2 text-[10px] md:text-[20px] border rounded-full hover:font-semibold  hover:text-white  transition-all animate__animated animate__fadeInUp `;
+  const button = `${isLatestVersion ? 'text-green-800 border-green-700 hover:bg-green-700' : 'text-yellow-800 border-yellow-700 hover:bg-yellow-700'} items-center gap-x-[10px] hover:gap-x-[30px] inline-flex px-[20px] hover:px-[50px] py-2 text-[10px] md:text-[20px] border rounded-full hover:font-semibold  hover:text-white  transition-all duration-500 animate__animated animate__fadeInUp `;
   const h2 =
-    'flex animate__animated animate__fadeInUp mt-4 py-[10px] font-bold tracking-tight text-gray-700 text-[15px] md:text-[20px] ';
+    'flex animate__animated transition-all duration-500  animate__fadeInUp mt-4 py-[10px] font-bold tracking-tight text-gray-700 text-[15px] md:text-[20px] ';
   return (
     <div className='min-h-screen overflow-hidden'>
       <Navbar />
@@ -66,7 +66,7 @@ export default function Errorpage() {
         href='.../style/uicons/css/all/all.css'
         type='text/css'
       />
-      <main className='h-[100vh] animate__animated animate__fadeIn  place-items-center flex justify-center  px-6 py-24 sm:py-32 lg:px-8 '>
+      <main className='h-[100vh] animate__animated animate__fadeIn transition-all duration-500   place-items-center flex justify-center  px-6 py-24 sm:py-32 lg:px-8 '>
         <div className='text-center '>
           <motion.i
             initial={{ scale: 0, y: '-90px', opacity: 0 }}
@@ -90,9 +90,9 @@ export default function Errorpage() {
                 initial={{ scale: 0.5, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.7 }}
-                className='animate__animated animate__zoomIn animate__slow'
+                className='transition-all duration-500 animate__animated animate__zoomIn '
               >
-                {isLatestVersion ? (
+                {isLatestVersion ?
                   <motion.div className='flex gap-x-[30px] items-center'>
                     <i class='flex text-5xl text-green-500 fi fi-br-check'></i>
                     <motion.h1
@@ -105,8 +105,7 @@ export default function Errorpage() {
                       {Message.LatestVersion[lang]}
                     </motion.h1>
                   </motion.div>
-                ) : (
-                  <motion.div className='flex gap-x-[30px] items-center'>
+                : <motion.div className='flex gap-x-[30px] items-center'>
                     <i class='flex text-5xl text-yellow-500 fi fi-br-cross'></i>
                     <motion.h1
                       initial={{ scale: 0.9, y: '60px', opacity: 0 }}
@@ -118,7 +117,7 @@ export default function Errorpage() {
                       {Message.OldVersion[lang]}
                     </motion.h1>
                   </motion.div>
-                )}
+                }
               </motion.div>
             )}
           </div>
