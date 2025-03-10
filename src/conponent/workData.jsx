@@ -52,7 +52,7 @@ function Card({ card }) {
     <motion.div
       layout
       key={card.id}
-      transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
       whileHover={{ y: -5, opacity: 0.7 }}
       layoutId={`card-container-${card.type + card.company + card.id}`}
       className={`relative bg-white transform-gppu cursor-pointer w-auto h-auto flex flex-col lg:w-[350px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:group-hover:${card.backgroundColor}/20`}
@@ -60,7 +60,7 @@ function Card({ card }) {
       <motion.div
         layout
         layoutId={`card-img-${card.id}`}
-        transition={{ duration: 1.3, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className='lg:absolute  -left-[30px] -top-[30px] right-[60px] lg:rounded-[28px]  overflow-hidden aspect-[16/9] z-30'
       >
         <motion.img
@@ -72,14 +72,14 @@ function Card({ card }) {
       <div className='flex flex-col  p-[14px] lg:p-[0px] lg:mt-[50%]  items-start justify-start h-[100px] '>
         <motion.h1
           layoutId={`card-${card.title + card.id}`}
-          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
           className='font-bold  text-[15px] md:text-[17px] lg:text-[23px] text-gray'
         >
           {card.title}
         </motion.h1>
         <motion.h2
           layoutId={`card-${card.company}`}
-          transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
           className='flex  text-[11px] md:text-[12px] lg:text-[17px] text-gray-400'
         >
           {card.company}
@@ -207,7 +207,7 @@ function WorkExperience() {
         ))}
       </ScrollableContainer>
       {/* </motion.div> */}
-      <AnimatePresence>
+      <AnimatePresence mode='sync'>
         {isOpen && (
           <motion.div
             layout
