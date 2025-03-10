@@ -3180,5 +3180,30 @@
       ]
     ],
     "impro": []
+  },
+  "2025-03-10T03:16:37.503Z": {
+    "version": "6.3.10",
+    "time": "2025-03-10T03:16:37.503Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Patch Update",
+      "补丁更新"
+    ],
+    "new": [],
+    "fix": [
+      [
+        "Fix some bugs."
+      ],
+      [
+        "修复部分异常"
+      ]
+    ],
+    "impro": []
   }
 }

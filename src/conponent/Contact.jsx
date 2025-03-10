@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Database from '../data/Database.json';
@@ -25,7 +27,7 @@ function Contact({ isTopOut }) {
   const infos = Database.PersonalInfo.Infos[lang];
   const isOut = isTopOut; //True of false
   const Contact = (
-    <div className={` h-auto flex w-full`}>
+    <div className={`h-full  flex w-full`}>
       <div
         className='w-full h-full relative overflow-hidden z-0  bg-center bg-cover pb-[50px]'
         style={{
@@ -60,10 +62,10 @@ function Contact({ isTopOut }) {
                   layout
                   // className=""
                   className={
-                    isOut
-                      ? 'bg-black/50 backdrop-blur-[80px] shadow-xl '
-                      : 'backdrop-blur-lg bg-white/20 ' +
-                        'col-span-6 group p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] relative flex-shrink-0 lg:w-[300px] h-auto md:h-auto'
+                    isOut ?
+                      'bg-black/50 backdrop-blur-[80px] shadow-xl '
+                    : 'backdrop-blur-lg bg-white/20 ' +
+                      'col-span-6 group p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] relative flex-shrink-0 lg:w-[300px] h-auto md:h-auto'
                   }
                 >
                   <div>
@@ -124,9 +126,9 @@ function Contact({ isTopOut }) {
                       >
                         <span
                           className={
-                            innerWidth < 1024
-                              ? `w-[15px] h-[15px]`
-                              : `w-[20px] h-[20px]`
+                            innerWidth < 1024 ? `w-[15px] h-[15px]` : (
+                              `w-[20px] h-[20px]`
+                            )
                           }
                         >
                           <svg
@@ -249,8 +251,8 @@ function Contact({ isTopOut }) {
                 </motion.div>
               </div>
             </div>
-            <footer className='flex justify-center my-12 text-[15px] text-white text-base-content'>
-              <p>Copyright © 2023-2024 - All rights reserved by Xianzhe</p>
+            <footer className='flex justify-center mb-12 text-[15px] text-white/60 text-base-content'>
+              <p>{`Copyright © 2023-${new Date().getFullYear()} - All rights reserved by Scott Cheung`}</p>
             </footer>
 
             {/* <Toast type={"success"} message={"ssss"}/> */}
