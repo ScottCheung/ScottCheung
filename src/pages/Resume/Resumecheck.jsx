@@ -83,7 +83,6 @@ export default function Errorpage() {
           >
             {Message.FirstHeader[lang]} {version}
           </motion.p>
-
           <div className='flex items-center justify-center mt-10 place-items-center gap-x-24'>
             {isLatestVersion !== null && (
               <motion.div
@@ -121,24 +120,55 @@ export default function Errorpage() {
               </motion.div>
             )}
           </div>
-          <div className='flex gap-x-[30px] justify-center py-[40px]'>
-            <motion.a
-              style={{ animationDelay: '0.2s' }}
-              href={Message.btn1web}
-              className={button}
-            >
-              <i class='flex fi fi-sr-galaxy-star text-[20px]'></i>
-              {Message.btn1[lang]}
-            </motion.a>
-            <motion.a
-              style={{ animationDelay: '0.4s' }}
-              href={`https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Scott%20Cheung.pdf`}
-              className={button}
-            >
-              <i class='flex fi fi-rr-file-download text-[20px]'></i>
-              {Message.btn2[lang]}
-            </motion.a>
-          </div>
+          {isLatestVersion === true && (
+            <div className='flex gap-[15px] justify-center py-[40px] flex-wrap'>
+              <motion.a
+                style={{ animationDelay: '0.2s' }}
+                href='/'
+                className={button}
+              >
+                <i class='flex fi fi-rr-home text-[20px]'></i>
+                {['Home', '主页'][lang]}
+              </motion.a>
+              <motion.a
+                style={{ animationDelay: '0.2s' }}
+                href='/award'
+                className={button}
+              >
+                <i class='flex fi fi-rr-diploma text-[20px]'></i>
+                {['Awards', '荣誉'][lang]}
+              </motion.a>
+              <motion.a
+                style={{ animationDelay: '0.2s' }}
+                href='/scholarship'
+                className={button}
+              >
+                <i class='flex fi fi-rr-trophy-star text-[20px]'></i>
+                {['Scholarships', '奖学金'][lang]}
+              </motion.a>
+            </div>
+          )}
+          {isLatestVersion === false && (
+            <div className='flex gap-[30px] justify-center py-[40px]'>
+              <motion.a
+                style={{ animationDelay: '0.2s' }}
+                href={Message.btn1web}
+                className={button}
+              >
+                <i class='flex fi fi-sr-galaxy-star text-[20px]'></i>
+
+                {Message.btn1[lang]}
+              </motion.a>
+              <motion.a
+                style={{ animationDelay: '0.4s' }}
+                href={`https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Scott%20Cheung.pdf`}
+                className={button}
+              >
+                <i class='flex fi fi-rr-file-download text-[20px]'></i>
+                {Message.btn2[lang]}
+              </motion.a>
+            </div>
+          )}
         </div>
       </main>
       <div
