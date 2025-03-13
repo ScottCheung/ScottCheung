@@ -122,7 +122,7 @@ function Skill() {
                   className={`flex flex-shrink-0 justify-center items-center w-[50px] h-[50px] p-[10px] from-[-200%] to-[200%] bg-gradient-to-br rounded-[9px]`}
                   transition={{ duration: 1, delay: index * 0.15 }}
                 >
-                  <img src={skill.image} alt={skill.name} />
+                  <img loading='lazy' src={skill.image} alt={skill.name} />
                 </motion.div>
 
                 <div

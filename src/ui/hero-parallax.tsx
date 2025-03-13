@@ -190,6 +190,7 @@ export const ProductCard = ({
         className='block group-hover/Item:shadow-2xl'
       >
         <img
+          loading='lazy'
           src={Item.thumbnail}
           height='600'
           width='600'

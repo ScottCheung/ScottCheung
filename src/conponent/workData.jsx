@@ -64,6 +64,7 @@ function Card({ card }) {
         className='lg:absolute  -left-[30px] -top-[30px] right-[60px] lg:rounded-[28px]  overflow-hidden aspect-[16/9] z-30'
       >
         <motion.img
+          loading='lazy'
           src={card.image}
           className='object-cover object-bottom w-full shadow-lg'
         />
@@ -246,6 +247,7 @@ function WorkExperience() {
                       className={`${windowWidth > 1440 ? 'lg:max-w-[400px] w-full h-full' : 'w-full h-[300px]'} object-center  object-cover flex md:p-0 aspect-[4/3] z-50`}
                     >
                       <motion.img
+                        loading='lazy'
                         // layout
                         layoutId={`card-img-${selectedCard.id}`}
                         transition={{

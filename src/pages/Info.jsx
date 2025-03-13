@@ -72,6 +72,7 @@ export default function Profile() {
           >
             <div className='flex justify-center w-full'>
               <img
+                loading='lazy'
                 alt='...'
                 src='https://img.picgo.net/2024/12/06/profile26fe37ccfe6ad6d7.png'
                 className=' rounded-full h-auto absolute -m-[75px] lg:-m-[150px] animate__animated animate__zoomIn'

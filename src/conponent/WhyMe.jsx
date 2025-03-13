@@ -172,7 +172,12 @@ function WhyMe({ hideTittle }) {
                         className='absolute bottom-0 left-0 right-0 w-full h-full lg:p-[35px] rounded-[14px] lg:rounded-[28px] '
                       ></motion.div>
                       <motion.div>
-                        <img src={feature.pic[1]} alt='' className='hidden' />
+                        <img
+                          loading='lazy'
+                          src={feature.pic[1]}
+                          alt=''
+                          className='hidden'
+                        />
                         <motion.div
                           layoutId={feature.advantage + 'icon'}
                           transition={{

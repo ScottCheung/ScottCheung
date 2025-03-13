@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react";
-import Database from "../data/Database.json";
-import { Link } from "react-router-dom";
+/** @format */
+
+import React, { useState, useEffect } from 'react';
+import Database from '../data/Database.json';
+import { Link } from 'react-router-dom';
 
 const data = Database.PersonalInfo.SelfDescribing;
 
@@ -10,44 +12,45 @@ function SelfDescribing() {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   const SelfDescribing = (
-    <div id="SelfDescribing" className="rounded-3xl">
+    <div id='SelfDescribing' className='rounded-3xl'>
       <section
-        className="hestia-about section-image "
-        id="about"
-        data-sorder="hestia_about"
-        style={{ backgroundImage: "url(./contact.jpg)" }}
+        className='hestia-about section-image '
+        id='about'
+        data-sorder='hestia_about'
+        style={{ backgroundImage: 'url(./contact.jpg)' }}
       >
-        <div className="visblecontainer">
-          <h2 className="animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono">
+        <div className='visblecontainer'>
+          <h2 className='animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono'>
             About me
           </h2>
-          <div className="row hestia-about-content">
+          <div className='row hestia-about-content'>
             <blockquote
-              className="wp-block-quote has-text-align-left is-style-plain has-text-color"
-              style={{ color: "#abb7c29e" }}
+              className='wp-block-quote has-text-align-left is-style-plain has-text-color'
+              style={{ color: '#abb7c29e' }}
             >
-              <div className="animate__animated animate__zoomIn wp-block-image is-style-rounded">
-                <figure className="animate__animated animate__slideInUp alignright size-full is-resized wp-duotone-unset-1">
+              <div className='animate__animated animate__zoomIn wp-block-image is-style-rounded'>
+                <figure className='animate__animated animate__slideInUp alignright size-full is-resized wp-duotone-unset-1'>
                   <img
-                    decoding="async"
-                    src="./Xianzhe&#39;s Personal Page – Welcome to my Page_files/IMG_6753-2.jpg"
-                    alt=""
-                    className="wp-image-13"
-                    style={{ width: "200px" }}
-                    width="200"
-                    srcset="./avatar.jpg 1290w, ./avatar.jpg 160w, ./avatar.jpg 600w, ./avatar.jpg 300w, ./avatar.jpg 1024w, ./avatar.jpg 150w, ./avatar.jpg 768w"
-                    sizes="(max-width: 1290px) 100vw, 1290px"
+                    loading='lazy'
+                    decoding='async'
+                    src='./Xianzhe&#39;s Personal Page – Welcome to my Page_files/IMG_6753-2.jpg'
+                    alt=''
+                    className='wp-image-13'
+                    style={{ width: '200px' }}
+                    width='200'
+                    srcset='./avatar.jpg 1290w, ./avatar.jpg 160w, ./avatar.jpg 600w, ./avatar.jpg 300w, ./avatar.jpg 1024w, ./avatar.jpg 150w, ./avatar.jpg 768w'
+                    sizes='(max-width: 1290px) 100vw, 1290px'
                   ></img>
                 </figure>
               </div>
-              <p className="animate__animated animate__slideInUp text-white mb-12">
+              <p className='animate__animated animate__slideInUp text-white mb-12'>
                 “I am a person who is positive about every aspect of life. There
                 are many things I like to do, to see, and to experience. I like
                 to read, I like to write; I like to think, I like to dream; I

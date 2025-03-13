@@ -210,6 +210,7 @@ function Gooduser() {
                 >
                   <motion.div className='flex justify-center flex-shrink-0'>
                     <img
+                      loading='lazy'
                       key={index}
                       className='w-[50px] h-[50px] md:w-[60px] md:h-[60px]   p-2  rounded-[9px]'
                       src={app.src}

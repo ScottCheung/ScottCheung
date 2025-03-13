@@ -64,6 +64,7 @@ function Education({ hideTittle, simpleVer }) {
             }`}
           >
             <img
+              loading='lazy'
               src='https://img.picgo.net/2024/12/06/4la21798afeaf25655.jpg'
               alt=''
               className='object-cover w-auto h-auto lg:h-full'
@@ -122,6 +123,7 @@ function Education({ hideTittle, simpleVer }) {
                 }  `}
               >
                 <img
+                  loading='lazy'
                   src={Experience.logo}
                   alt={Experience.university}
                   className={`rounded-xl  `}

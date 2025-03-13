@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { Fragment, useEffect, useState, useRef, navigate } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useAppContext } from '../help/ContextManager';
@@ -324,9 +326,9 @@ function DockerBar(props) {
                                   animationDelay: ` ${index * AnimationDelay}s`,
                                 }}
                                 className={`${
-                                  hasEntered === 0
-                                    ? 'animate__animated animate__fadeInUp'
-                                    : ''
+                                  hasEntered === 0 ?
+                                    'animate__animated animate__fadeInUp'
+                                  : ''
                                 } ${PanelButtonStyle} 
                                 transition-all duration-50
                                 
@@ -335,11 +337,13 @@ function DockerBar(props) {
                                 <motion.div
                                   layout
                                   className={` ${
-                                    EmphasizeColorLists[
-                                      ResumeView.forceColor
-                                    ] === label
-                                      ? ` w-[45px] h-[45px] rounded-[10px]`
-                                      : `w-[30px] h-[30px] rounded-full`
+                                    (
+                                      EmphasizeColorLists[
+                                        ResumeView.forceColor
+                                      ] === label
+                                    ) ?
+                                      ` w-[45px] h-[45px] rounded-[10px]`
+                                    : `w-[30px] h-[30px] rounded-full`
                                   }    cursor-pointer  text-gray-500 darrk:text-white  bg-${label}-${ResumeView.colorDepth} darrk:bg-${label}-900/50`}
                                 ></motion.div>
                               </motion.div>
@@ -490,13 +494,13 @@ function DockerBar(props) {
           }}
           transition={{ duration: 0.7 }}
           className={` ${dockerbarContainer}  ${
-            currentIndex === -99
-              ? `px-[7.5px]   ${
-                  DockerBarPosition === 'center'
-                    ? 'h-[70px]'
-                    : 'h-[40px] flex items-center justify-center opacity-40'
-                }`
-              : `h-[80px]  px-[20px] rounded-full `
+            currentIndex === -99 ?
+              `px-[7.5px]   ${
+                DockerBarPosition === 'center' ? 'h-[70px]' : (
+                  'h-[40px] flex items-center justify-center opacity-40'
+                )
+              }`
+            : `h-[80px]  px-[20px] rounded-full `
           }`}
         >
           <motion.div
@@ -517,9 +521,9 @@ function DockerBar(props) {
                         key={tool.name}
                         className={
                           'flex  flex-col justify-center items-center transition-all duration-50 ' +
-                          (!laptopMode && tool.name === 'Color Picker (C)'
-                            ? ' hidden'
-                            : '')
+                          (!laptopMode && tool.name === 'Color Picker (C)' ?
+                            ' hidden'
+                          : '')
                         }
                       >
                         <motion.div
@@ -527,16 +531,16 @@ function DockerBar(props) {
                           exit={{ width: 0 }}
                           style={{
                             animationDelay: ` ${
-                              hasEntered === 0
-                                ? `${index * AnimationDelay}s`
-                                : undefined
+                              hasEntered === 0 ?
+                                `${index * AnimationDelay}s`
+                              : undefined
                             }`,
                           }}
                           onMouseEnter={() => setCurrentIndex(index)}
                           className={`p-[7.5px] ${
-                            hasEntered === 0
-                              ? 'animate__animated animate__fadeInUp'
-                              : ''
+                            hasEntered === 0 ?
+                              'animate__animated animate__fadeInUp'
+                            : ''
                           } `}
                         >
                           <motion.div
@@ -558,9 +562,9 @@ function DockerBar(props) {
                                   BaseScale,
                                 ),
                               boxShadow:
-                                laptopMode && currentIndex === index
-                                  ? '0px 0px 20px 0px rgba(0,0,0,0.1)'
-                                  : '0px 0px 0px 0px rgba(0,0,0,0)',
+                                laptopMode && currentIndex === index ?
+                                  '0px 0px 20px 0px rgba(0,0,0,0.1)'
+                                : '0px 0px 0px 0px rgba(0,0,0,0)',
                               y:
                                 laptopMode &&
                                 -Math.max(
@@ -598,6 +602,7 @@ function DockerBar(props) {
                                 className={`p-[7px] bg-gray-900/10  darrk:bg-gray-100/50 backdrop-blur-[5px]   w-full h-full  flex justify-center items-center rounded-[10px]`}
                               >
                                 <motion.img
+                                  loading='lazy'
                                   layoutId='QueryComponentCaptureAnimation'
                                   layout
                                   className='darrk:invert'
@@ -669,15 +674,15 @@ function DockerBar(props) {
                       BaseScale,
                     ),
                     animationDelay: ` ${
-                      hasEntered === 0
-                        ? `${(Tools.length + 1) * AnimationDelay}s`
-                        : undefined
+                      hasEntered === 0 ?
+                        `${(Tools.length + 1) * AnimationDelay}s`
+                      : undefined
                     }`,
                   }}
                   className={`${
-                    hasEntered === 0
-                      ? 'animate__animated animate__fadeInUp'
-                      : ''
+                    hasEntered === 0 ?
+                      'animate__animated animate__fadeInUp'
+                    : ''
                   } w-[2px] h-[35px] border-[1px] darrk:border-gray-500  border-gray-300 mx-[10px] transition-all duration-50`}
                 ></motion.div>
               )}
@@ -702,15 +707,15 @@ function DockerBar(props) {
                     layout
                     style={{
                       animationDelay: ` ${
-                        hasEntered === 0
-                          ? `${(index + Tools.length) * AnimationDelay}s`
-                          : undefined
+                        hasEntered === 0 ?
+                          `${(index + Tools.length) * AnimationDelay}s`
+                        : undefined
                       }`,
                     }}
                     className={`p-[7.5px] ${
-                      hasEntered === 0
-                        ? 'animate__animated animate__fadeInUp'
-                        : ''
+                      hasEntered === 0 ?
+                        'animate__animated animate__fadeInUp'
+                      : ''
                     } `}
                   >
                     <motion.div
@@ -724,9 +729,9 @@ function DockerBar(props) {
                           BaseScale,
                         ),
                         boxShadow:
-                          currentIndex === index + Tools.length
-                            ? '0px 0px 20px 0px rgba(0,0,0,0.1)'
-                            : '0px 0px 0px 0px rgba(0,0,0,0)',
+                          currentIndex === index + Tools.length ?
+                            '0px 0px 20px 0px rgba(0,0,0,0.1)'
+                          : '0px 0px 0px 0px rgba(0,0,0,0)',
                         y: -Math.max(
                           InitialY -
                             Distance(currentIndex, index + Tools.length) *
@@ -754,15 +759,17 @@ function DockerBar(props) {
                     >
                       <motion.div
                         className={` ${
-                          currentIndex === index + Tools.length
-                            ? 'w-[30px] h-[30px]'
-                            : `${
+                          currentIndex === index + Tools.length ?
+                            'w-[30px] h-[30px]'
+                          : `${
+                              (
                                 label ===
                                   EmphasizeColorLists[ResumeView.forceColor] ||
                                 hasEntered
-                                  ? ''
-                                  : 'blur-[5px] '
-                              } rounded-full   w-[20px] h-[20px] `
+                              ) ?
+                                ''
+                              : 'blur-[5px] '
+                            } rounded-full   w-[20px] h-[20px] `
                         } 
                       
                       cursor-pointer rounded-full text-gray-500 darrk:text-white duration-300 transition-all bg-${label}-${

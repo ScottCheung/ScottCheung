@@ -251,6 +251,7 @@ function PersonalityandLanguage() {
                           {per.des}
                         </motion.div>
                         <img
+                          loading='lazy'
                           style={{ animationDelay: '0.75s' }}
                           src={per.despic}
                           alt={per.name}
@@ -268,6 +269,7 @@ function PersonalityandLanguage() {
             </motion.div>
           </div>
           <motion.img
+            loading='lazy'
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{
               opacity: 1,
@@ -378,6 +380,7 @@ function PersonalityandLanguage() {
               </div>
             </div>
             <motion.img
+              loading='lazy'
               layout='position'
               style={{
                 filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))',

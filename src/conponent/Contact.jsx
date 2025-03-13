@@ -218,6 +218,7 @@ function Contact({ isTopOut }) {
                       <div className='flex flex-col items-center'>
                         <div className='p-3 bg-gray-100 rounded-[10px]'>
                           <img
+                            loading='lazy'
                             src={code.codepic}
                             style={{
                               animationDelay: `${index * 0.3}s`,

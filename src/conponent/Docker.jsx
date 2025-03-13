@@ -1,3 +1,5 @@
+/** @format */
+
 import React from 'react';
 import { FloatingDock } from '../ui/floating-dock';
 
@@ -23,6 +25,7 @@ export default function Docker() {
       title: 'Aceternity UI',
       icon: (
         <img
+          loading='lazy'
           src='https://assets.aceternity.com/logo-dark.png'
           width={20}
           height={20}

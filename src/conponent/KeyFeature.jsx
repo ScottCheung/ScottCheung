@@ -87,6 +87,7 @@ function KeyFeature() {
         className={`relative flex items-center w-[${viewwidth}px] overflow-hidden bg-gradient-to-r from-lime-500 to-emerald-500`}
       >
         <img
+          loading='lazy'
           className='absolute top-0 left-0 object-cover object-bottom w-full h-full transition-all'
           src={bg[0]}
         />

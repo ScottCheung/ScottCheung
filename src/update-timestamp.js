@@ -116,10 +116,10 @@ const getGeolocation = async () => {
      * 补丁更新
      *
      ******************/
-    header: ['Patch Update', '补丁更新'],
-    new: [],
-    fix: [['Fix some bugs.'], ['修复部分异常']],
-    impro: [],
+    // header: ['Patch Update', '补丁更新'],
+    // new: [],
+    // fix: [['Fix some bugs.'], ['修复部分异常']],
+    // impro: [],
 
     // 视觉优化
     // header: ['Table visual Patch Update', '表格显示优化更新'],
@@ -131,13 +131,15 @@ const getGeolocation = async () => {
     // impro: [],
 
     // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-    // header: ['Table visual Patch Update', '表格显示优化更新'],
-    // new: [],
-    // fix: [
-    //   ['Fix performance issues, Optimise long task.', 'Fix some bugs.', ,],
-    //   ['修复性能问题。', '修复部分性能问题。'],
-    // ],
-    // impro: [],
+    header: ['Optimise First Page loading time', '优化首屏加载时间'],
+    new: [],
+    fix: [
+      [
+        'Fix performance issues, Optimise First page loading time, using lazy loading.',
+      ],
+      ['修复性能问题,优化首屏加载时间，使用懒加载。'],
+    ],
+    impro: [],
   };
 
   // 将新日志条目添加到日志字典中，以时间戳作为键

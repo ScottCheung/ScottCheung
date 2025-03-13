@@ -90,11 +90,13 @@ export default function Example() {
                 >
                   <div className='flex flex-wrap items-center justify-center'>
                     <img
+                      loading='lazy'
                       className='w-[130px] px-7'
                       src='https://img.picgo.net/2024/12/10/swustlogo70d687130fbd9af2.png'
                       alt='swustPng'
                     />
                     <img
+                      loading='lazy'
                       className='max-w-[80vw] lg:max-w-[400px] h-auto py-12 px-7'
                       src='https://img.picgo.net/2024/12/10/swustname843d2b9c22b1f8d9.png'
                       alt='swustName'
@@ -115,6 +117,7 @@ export default function Example() {
                 >
                   <div className='flex flex-row items-center justify-center'>
                     <img
+                      loading='lazy'
                       className='w-[110px] h-auto'
                       src='https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png'
                       alt='UNSW'

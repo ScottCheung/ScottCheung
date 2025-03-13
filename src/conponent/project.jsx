@@ -172,6 +172,7 @@ function WhyMe({ hideTittle }) {
                       ></motion.div>
                       <motion.div>
                         <img
+                          loading='lazy'
                           src={feature.pic[1]}
                           alt=''
                           className='h-0 opacity-0'

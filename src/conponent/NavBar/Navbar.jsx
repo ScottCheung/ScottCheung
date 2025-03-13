@@ -240,6 +240,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                       className='inline-flex items-center gap-x-[10px] justify-center h-full animate__animated animate__fadeInUp'
                     >
                       <motion.img
+                        loading='lazy'
                         layout
                         className={`flex items-center required justify-center m-4  animate__animated animate__zoomIn   ${isTop ? 'w-32 h-32 rounded-lg' : 'w-[30px] h-[30px] md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-[7px]'} shadow-lg`}
                         src='https://img.picgo.net/2024/12/06/avatar16e4aacd08d86884.th.jpg'
@@ -588,6 +589,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                     className='lg::mx-[10%] mt-[30px]  flex relative gap-x-[20px] duration-200 '
                   >
                     <img
+                      loading='lazy'
                       style={{
                         filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))',
                         // height: "400px",
@@ -635,6 +637,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                             </button>
                           </div>
                           <img
+                            loading='lazy'
                             src='/docs/images/blog/image-1.jpg'
                             className='rounded-lg'
                           />
@@ -747,6 +750,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                           </button>
                         </div>
                         <img
+                          loading='lazy'
                           src='/docs/images/blog/image-1.jpg'
                           className='rounded-lg'
                         />

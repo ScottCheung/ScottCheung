@@ -1,3 +1,5 @@
+/** @format */
+
 import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -166,6 +168,7 @@ function Card({ item, index }) {
       className={`bg-white rounded-[14px] shadow-sm min-w-[150px] lg:min-w-[200px]   w-full pb-[20px] text-[30px]  overflow-hidden justify-center  items-center col-span-6 md:col-span-3 lg:rounded-[28px] lg:col-span-${item.col}  `}
     >
       <img
+        loading='lazy'
         src={`https://picsum.photos/1920/1080?${index % 8}`}
         alt={item.title}
       />

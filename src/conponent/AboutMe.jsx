@@ -166,6 +166,7 @@ function SelfDescribing() {
               >
                 <motion.div className='flex'>
                   <motion.img
+                    loading='lazy'
                     className='rounded-full w-[200px] h-[200px] md:w-[250px] md:h-[250px]'
                     src={Database.PersonalInfo.Avatar[0]}
                   ></motion.img>

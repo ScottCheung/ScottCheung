@@ -1,56 +1,60 @@
-import Navbar from "../conponent/Navbar/Navbar";
-import Database from "../data/Database.json";
-import { motion, AnimatePresence } from "framer-motion";
-import Education from "../conponent/Education";
-import { Link } from "react-router-dom";
+/** @format */
+
+import Navbar from '../conponent/Navbar/Navbar';
+import Database from '../data/Database.json';
+import { motion, AnimatePresence } from 'framer-motion';
+import Education from '../conponent/Education';
+import { Link } from 'react-router-dom';
 const course = Database.PersonalInfo.Education;
-const FM = course.filter((item) => item.major.includes("Material"));
+const FM = course.filter((item) => item.major.includes('Material'));
 const visblecontainer = Database.Animation.Variant.fastWelcomevisblecontainer;
 const LeftappearBar = Database.Animation.Transition.LeftappearBar;
 const item = Database.Animation.Variant.LeftWelcomeItem;
 export default function material() {
   return (
-    <div className="overflow-hidden">
+    <div className='overflow-hidden'>
       <div
-        className="page-overview "
-        data-component-list="PageXpController"
-        data-anim-scroll-group="body"
+        className='page-overview '
+        data-component-list='PageXpController'
+        data-anim-scroll-group='body'
       >
         <Navbar />
 
-        <main id="main" className="main" role="main">
-          <section className="section section-welcome no-pad-bottom">
-            <div className="section-content-responsive mt-24">
-              <header className="section-header row">
-                <h1 className=" welcomeanimation section-header-headline">
+        <main id='main' className='main' role='main'>
+          <section className='section section-welcome no-pad-bottom'>
+            <div className='section-content-responsive mt-24'>
+              <header className='section-header row'>
+                <h1 className=' welcomeanimation section-header-headline'>
                   Functional Material
                 </h1>
-                <div className="section-header-copy-visblecontainer">
+                <div className='section-header-copy-visblecontainer'>
                   <p>Bacholor degree</p>
                 </div>
               </header>
             </div>
-            <div className="welcome-video-wall-visblecontainer w-full flex justify-center py-16 flex-col z-50 bg-sky-100 bgrid-colsover bgrid-colsenter sticky top-0 shadow-2xl">
-              <div className="flex flex-row justify-center items-center">
+            <div className='welcome-video-wall-visblecontainer w-full flex justify-center py-16 flex-col z-50 bg-sky-100 bgrid-colsover bgrid-colsenter sticky top-0 shadow-2xl'>
+              <div className='flex flex-row justify-center items-center'>
                 <img
-                  className="w-[130px] "
-                  src="https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/817d5684-7ac9-491b-8752-60cfa0809adc.png"
-                  alt=""
+                  loading='lazy'
+                  className='w-[130px] '
+                  src='https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/817d5684-7ac9-491b-8752-60cfa0809adc.png'
+                  alt=''
                 />
                 <img
-                  className="w-[400px] h-[130px] py-12 px-7"
-                  src="https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/ea60b2ce-3079-4e5f-ad4d-440410ae50af.png"
-                  alt=""
+                  loading='lazy'
+                  className='w-[400px] h-[130px] py-12 px-7'
+                  src='https://www.swust.edu.cn/_upload/article/images/a2/be/26cda87e40859fc995162c402b1e/ea60b2ce-3079-4e5f-ad4d-440410ae50af.png'
+                  alt=''
                 />
               </div>
             </div>
-            <div className="welcome-video-wall-visblecontainer visblecontainer space-y-6 h-auto">
-              <div className=" text-gray-500 pt-24 pb-4 sticky top-0">
-                <h2 className="typography-section-intro-headline section-intro-headline">
+            <div className='welcome-video-wall-visblecontainer visblecontainer space-y-6 h-auto'>
+              <div className=' text-gray-500 pt-24 pb-4 sticky top-0'>
+                <h2 className='typography-section-intro-headline section-intro-headline'>
                   University Status
                 </h2>
               </div>
-              <p className=" text-justify">
+              <p className=' text-justify'>
                 Southwest University of Science and Technology is located in
                 Mianyang City, Sichuan Province, a science and technology city
                 in China. The school is a university jointly built by the
@@ -68,7 +72,7 @@ export default function material() {
                 own characteristics. The current party secretary of the school
                 is Dong Faqin and the principal Huang Qi.
               </p>
-              <p className=" text-justify">
+              <p className=' text-justify'>
                 The school currently has more than 39,000 students. It has 16
                 colleges including the National Defense Science and Technology
                 Institute, with 85 undergraduate majors in 9 major disciplines
@@ -91,23 +95,23 @@ export default function material() {
                 environment/ecology, have entered the top 1% of ESI rankings,
                 among which three disciplines of materials science, engineering
                 science, and chemistry have entered the top 5‰ of ESI rankings.
-                <a className="text-sky-500" href={FM[0].web}>
-                  {" "}
+                <a className='text-sky-500' href={FM[0].web}>
+                  {' '}
                   [ Offical Website ]
                 </a>
               </p>
-              <div className=" text-gray-500 pt-24 pb-4 sticky top-0">
-                <h2 className="typography-section-intro-headline section-intro-headline">
+              <div className=' text-gray-500 pt-24 pb-4 sticky top-0'>
+                <h2 className='typography-section-intro-headline section-intro-headline'>
                   Functional Material
                 </h2>
               </div>
-              <p className=" text-justify">
+              <p className=' text-justify'>
                 Functional materials are generally characterised as those
                 materials which possess particular native properties and
                 functions of their own. For example, ferroelectricity,
                 piezoelectricity, magnetism or energy storage functions.
               </p>
-              <p className=" text-justify">
+              <p className=' text-justify'>
                 Functional materials are found in all classes of materials:
                 ceramics, metals, polymers and organic molecules. Functional
                 materials are often used in electromagnetic applications from
@@ -117,44 +121,44 @@ export default function material() {
                 energy such as electro- and magnetocaloric materials, for energy
                 storage and for solar harvesting functions.
                 <a
-                  className="text-sky-500"
-                  href="https://en.wikipedia.org/wiki/Functional_materials"
+                  className='text-sky-500'
+                  href='https://en.wikipedia.org/wiki/Functional_materials'
                 >
-                  {" "}
+                  {' '}
                   [ weki ]
                 </a>
               </p>
             </div>
           </section>
-          <section className="section section-welcome no-pad-bottom">
-            <div className="welcome-video-wall-visblecontainer visblecontainer space-y-6 h-auto ">
-              <div className=" text-gray-500 pt-24 pb-4 sticky top-0 z-50 bg-white">
-                <h2 className="typography-section-intro-headline section-intro-headline">
+          <section className='section section-welcome no-pad-bottom'>
+            <div className='welcome-video-wall-visblecontainer visblecontainer space-y-6 h-auto '>
+              <div className=' text-gray-500 pt-24 pb-4 sticky top-0 z-50 bg-white'>
+                <h2 className='typography-section-intro-headline section-intro-headline'>
                   Main Course
                 </h2>
-                <p className=" text-justify">{FM[0].description[0]}</p>
-                <p className=" text-justify">{FM[0].description[1]}</p>
+                <p className=' text-justify'>{FM[0].description[0]}</p>
+                <p className=' text-justify'>{FM[0].description[1]}</p>
               </div>
-              <div className="pb-48 relative overflow-x-auto">
+              <div className='pb-48 relative overflow-x-auto'>
                 <motion.table
                   variants={visblecontainer}
-                  initial="hidden"
-                  whileInView="visible"
+                  initial='hidden'
+                  whileInView='visible'
                   viewport={{ once: true }}
-                  className="w-full  text-left rtl:text-right text-gray-500 darrk:text-gray-40 "
+                  className='w-full  text-left rtl:text-right text-gray-500 darrk:text-gray-40 '
                 >
-                  <thead className="text-xs text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400">
+                  <thead className='text-xs text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400'>
                     <tr>
-                      <th scope="col" className="px-6 py-3 text-center">
+                      <th scope='col' className='px-6 py-3 text-center'>
                         Serial
                       </th>
-                      <th scope="col" className="px-6 py-3">
+                      <th scope='col' className='px-6 py-3'>
                         Course
                       </th>
-                      <th scope="col" className="px-6 py-3 text-center">
+                      <th scope='col' className='px-6 py-3 text-center'>
                         Type
                       </th>
-                      <th scope="col" className="px-6 py-3 text-center">
+                      <th scope='col' className='px-6 py-3 text-center'>
                         descrition
                       </th>
                     </tr>
@@ -168,23 +172,23 @@ export default function material() {
                       whileTap={{ scale: 0.99 }}
                       layout
                     >
-                      <tr className="bg-white border-b darrk:bg-gray-800 darrk:border-gray-700">
+                      <tr className='bg-white border-b darrk:bg-gray-800 darrk:border-gray-700'>
                         <th
-                          scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white text-center"
+                          scope='row'
+                          className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white text-center'
                         >
                           {index + 1}
                         </th>
                         <td
-                          scope="row"
-                          className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white"
+                          scope='row'
+                          className='px-6 py-4 font-medium text-gray-900 whitespace-nowrap darrk:text-white'
                         >
                           {subject.CourseName}
                         </td>
-                        <td className="px-6 py-4 text-center">
+                        <td className='px-6 py-4 text-center'>
                           {subject.Type}
                         </td>
-                        <td className="px-6 py-4 text-center">
+                        <td className='px-6 py-4 text-center'>
                           {subject.Description}
                         </td>
                       </tr>
@@ -194,7 +198,7 @@ export default function material() {
               </div>
             </div>
           </section>
-          <Education hideTittle={true} className="h-[100vh]" />
+          <Education hideTittle={true} className='h-[100vh]' />
         </main>
       </div>
     </div>

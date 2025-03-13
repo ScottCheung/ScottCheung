@@ -141,6 +141,7 @@ function WhymeCard() {
       >
         <AnimatePresence>
           <motion.img
+            loading='lazy'
             src={whymeCard.pic[showLowRes ? 0 : 1]}
             className='w-[35%]  h-auto   '
           />

@@ -64,6 +64,7 @@ function CertificateGallery() {
             >
               <div className=' flex h-[200px] w-full justify-center items-center '>
                 <img
+                  loading='lazy'
                   className='flex rounded-[14px] w-auto max-h-[200px] overflow-hidden'
                   src={item.src.replace(
                     /\.(png|jpg|jpeg|gif|bmp|svg|webp)$/,

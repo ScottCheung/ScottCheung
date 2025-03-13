@@ -3205,5 +3205,30 @@
       ]
     ],
     "impro": []
+  },
+  "2025-03-13T12:48:54.189Z": {
+    "version": "6.3.11",
+    "time": "2025-03-13T12:48:54.189Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Optimise First Page loading time",
+      "优化首屏加载时间"
+    ],
+    "new": [],
+    "fix": [
+      [
+        "Fix performance issues, Optimise First page loading time, using lazy loading."
+      ],
+      [
+        "修复性能问题,优化首屏加载时间，使用懒加载。"
+      ]
+    ],
+    "impro": []
   }
 }
