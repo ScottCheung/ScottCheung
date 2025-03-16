@@ -36,7 +36,7 @@ export default function Example() {
           <div
             style={{
               ...bgPic(
-                'https://img.picgo.net/2024/12/10/Learning-Ability3ff64320371f7623.png',
+                'https://img.picgo.net/2025/03/17/Learning-Ability760866a761496ab2.png',
                 window.innerWidth > 960 ? '500px auto' : '400px auto',
                 'bottom right',
               ),

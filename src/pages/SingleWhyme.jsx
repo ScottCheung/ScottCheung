@@ -79,7 +79,7 @@ export default function WhyM() {
             className='absolute top-0 bottom-0 left-0 w-full h-full bg-left bg-no-repeat bg-cover'
             style={{
               backgroundImage:
-                "url('https://img.picgo.net/2024/12/08/long-banner6b6fc2858fd99033.jpg')",
+                "url('https://img.picgo.net/2025/03/17/long-banner007133549fbba964.jpg')",
             }}
           >
             <span
