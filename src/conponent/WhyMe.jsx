@@ -166,7 +166,7 @@ function WhyMe({ hideTittle }) {
                       <motion.div
                         style={{
                           ...(!hideTittle && windowWidth > 1024 ?
-                            bgPic(feature.pic[0], '100% auto', 'center bottom')
+                            bgPic(feature.pic[1], '100% auto', 'center bottom')
                           : {}),
                         }}
                         className='absolute bottom-0 left-0 right-0 w-full h-full lg:p-[35px] rounded-[14px] lg:rounded-[28px] '
