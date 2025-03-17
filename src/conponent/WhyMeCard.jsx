@@ -27,7 +27,6 @@ function WhymeCard() {
   const [showLowRes, setShowLowRes] = useState(true);
   const { Components, setComponents, whymeCard, setWhymeCard } =
     useAppContext();
-  const data = Database.PersonalInfo.Education;
   const lang = useLanguage();
   const keyfeature = Database.PersonalInfo.WhyMe[lang];
   const adjustPaddingForScrollbar = () => {
@@ -83,7 +82,7 @@ function WhymeCard() {
       setShowLowRes(false);
     }, 1200);
 
-    return () => clearTimeout(timer); // 清理计时器
+    return () => clearTimeout(timer);
   }, []);
 
   const BanScroll = () => {
@@ -139,13 +138,11 @@ function WhymeCard() {
           whymeCard.color1 + '/50' + ' ' + whymeCard.color2 + '/50'
         } bg-gradient-to-br  backdrop-blur-[20px]   `}
       >
-        <AnimatePresence>
-          <motion.img
-            loading='lazy'
-            src={whymeCard.pic[showLowRes ? 1 : 1]}
-            className='w-[35%]  h-auto   '
-          />
-        </AnimatePresence>
+        <motion.img
+          loading='lazy'
+          src={whymeCard.pic[showLowRes ? 1 : 1]}
+          className='w-[35%]  h-auto   '
+        />
 
         <motion.div
           onClick={(event) => {
@@ -313,7 +310,6 @@ function WhymeCard() {
       </motion.span>
     </div>
   );
-
   return WhymeCard;
 }
 
