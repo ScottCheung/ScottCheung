@@ -111,7 +111,7 @@ const posts = [
   'https://www.instagram.com/p/CjCFri8PW80/',
 ];
 // const posts = [];
-export default function Ins() {
+export default function Ins(nav) {
   const lang = localStorage.getItem('lang') || 0;
   const [isLoading, setIsLoading] = useState(false);
   const [items, setItems] = useState([]); // Initialize items as an empty array
@@ -134,8 +134,7 @@ export default function Ins() {
 
   return (
     <div className='flex min-h-screen p-3 bg-gray-100'>
-      <Navbar BG={'bg-gray-100'} />
-
+      {nav && <Navbar BG={'bg-gray-100'} />}
       <div className='pt-[140px] flex flex-col w-screen h-full overflow-x-hidden items-center justify-start'>
         <h1 className='text-[40px] font-bold text-center mb-8'>Story</h1>
         <div className='max-w-[1400px] grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'>

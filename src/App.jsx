@@ -138,7 +138,7 @@ const router = createBrowserRouter([
   },
   {
     path: '/story',
-    element: <Story />,
+    element: <Story nav={true} />,
   },
   {
     path: '/pp',

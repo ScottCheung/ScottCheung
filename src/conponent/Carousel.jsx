@@ -112,7 +112,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
       tabIndex='0'
     >
       <span
-        className={`absolute z-20 top-0 bottom-0 left-0 right-0 object-cover h-${viewportHeight}px bg-black/20 overflow-hidden`}
+        className={`z-20 h-${viewportHeight}px absolute w-full h-full bg-gradient-to-b from-black/30 via-black/10 via-[300px] to-transparent  overflow-hidden`}
       ></span>
       <svg
         data-v-226d292e=''
