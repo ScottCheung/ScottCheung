@@ -40,7 +40,7 @@ function KeyFeature() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['-100%', '0%'],
+    offset: ['-1000px', '0px'],
   });
 
   useEffect(() => {
@@ -58,11 +58,11 @@ function KeyFeature() {
     [0, 1],
     [`${viewwidth * 0.5}px`, `${viewwidth}px`],
   );
-  const y = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [`${viewwidth * 0.5}px`, `${viewwidth * 0}px`],
-  );
+  // const y = useTransform(
+  //   scrollYProgress,
+  //   [0, 1],
+  //   [`${viewwidth * 0.5}px`, `${viewwidth * 0}px`],
+  // );
   const borderRadius = useTransform(scrollYProgress, [0, 1], [300, 0]);
   const opacity = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
@@ -71,7 +71,7 @@ function KeyFeature() {
       ref={ref}
       style={{
         width: isMobile ? `${viewwidth}px` : width,
-        y: isMobile ? 0 : y,
+        y: isMobile ? 0 : 200,
         borderTopLeftRadius: isMobile ? 28 : borderRadius,
         borderTopRightRadius: isMobile ? 28 : borderRadius,
         ...(window.location.pathname == '/' && {
@@ -93,7 +93,7 @@ function KeyFeature() {
         />
         <motion.span
           style={{
-            opacity: isMobile ? 1 : opacity,
+            // opacity: isMobile ? 1 : opacity,
 
             ...(window.location.pathname == '/' && {
               maskImage:

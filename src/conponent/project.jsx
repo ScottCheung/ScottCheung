@@ -1,278 +1,264 @@
 /** @format */
 
 import React, { useState, useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
 import Database from '../data/Database.json';
-import {
-  motion,
-  AnimatePresence,
-  useScroll,
-  useTransform,
-  easeInOut,
-} from 'framer-motion';
-import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
-import More from './More';
-import { useAppContext } from '../help/ContextManager';
-import WhyMeCard from '../conponent/WhyMeCard';
-import ScrollableContainer from './ScrollableContainer';
+import Data from '../conponent/NavBar/Navbardata.json';
+import { hideRow, useLanguage } from '../help/helpFunction';
+import { useInView } from 'react-intersection-observer';
 
-const Welcomevisblecontainer =
-  Database.Animation.Variant.Welcomevisblecontainer;
-const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
-const WelcomeItem = Database.Animation.Variant.WelcomeItem;
+const educationData = Data.navbarItem[3].scondMenu;
 
-function WhyMe({ hideTittle }) {
-  const { Components, setComponents, whymeCard, setWhymeCard } =
-    useAppContext();
-  const data = Database.PersonalInfo.Education;
+function Education({ hideTittle, simpleVer }) {
   const lang = useLanguage();
-  const keyfeature = Database.PersonalInfo.WhyMe[lang];
-
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [isMobile, setIsMobile] = useState(false);
-  const [scrollbarWidth, setScrollbarWidth] = useState(0);
-  useEffect(() => {
-    const div = document.createElement('div');
-    div.style.visibility = 'hidden';
-    div.style.overflow = 'scroll';
-    document.body.appendChild(div);
-    const scrollbarWidth = div.offsetWidth - div.clientWidth;
-    document.body.removeChild(div);
-    setScrollbarWidth(scrollbarWidth);
-  }, []);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const scrollContainerRef = useRef(null);
 
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 1080px)');
-    const handleMediaQueryChange = (e) => setIsMobile(e.matches);
-    handleMediaQueryChange(mediaQuery);
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
-    return () =>
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
-  }, []);
+  // Animation variants
+  const WelcomeItem = Database.Animation.Variant.WelcomeItem;
+  const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
+
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
     };
+
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
 
-  const adjustPaddingForScrollbar = () => {
-    const scrollbarWidth =
-      window.innerWidth - document.documentElement.clientWidth;
-    return scrollbarWidth;
+  // Handle scroll events to update progress bar
+  const handleScroll = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } =
+        scrollContainerRef.current;
+      const maxScroll = scrollWidth - clientWidth;
+      const progress = maxScroll <= 0 ? 0 : scrollLeft / maxScroll;
+      setScrollProgress(progress);
+    }
   };
 
-  const BanScroll = () => {
-    const scrollbarWidth = adjustPaddingForScrollbar(); // 获取滚动条宽度
-    document.body.style.overflow = 'hidden';
-    document.body.style.paddingRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
-    // document.getElementById('navbar').style.marginRight = `${scrollbarWidth}px`; // 应用动态计算的滚动条宽度
-    // document.getElementById('navbar').style.opacity = 0;
+  // Handle progress bar drag
+  const handleProgressDrag = (e) => {
+    if (scrollContainerRef.current) {
+      const progressBar = e.currentTarget;
+      const progressRect = progressBar.getBoundingClientRect();
+      const clickPosition =
+        (e.clientX - progressRect.left) / progressRect.width;
+      const newPosition = Math.max(0, Math.min(1, clickPosition));
+
+      const { scrollWidth, clientWidth } = scrollContainerRef.current;
+      const maxScroll = scrollWidth - clientWidth;
+      scrollContainerRef.current.scrollLeft = newPosition * maxScroll;
+    }
   };
 
-  const UnBanScroll = () => {
-    document.body.style.overflow = 'auto';
-    document.body.style.paddingRight = '0px'; // 重置paddingRight
-    // document.getElementById('navbar').style.marginRight = '0px'; // 重置paddingRight
-    // document.getElementById('navbar').style.opacity = 1;
+  // Handle progress bar thumb drag
+  const handleThumbDrag = (_, info) => {
+    if (scrollContainerRef.current) {
+      const { scrollWidth, clientWidth } = scrollContainerRef.current;
+      const maxScroll = scrollWidth - clientWidth;
+      const newProgress = Math.max(
+        0,
+        Math.min(1, scrollProgress + info.delta.x / 200),
+      );
+      setScrollProgress(newProgress);
+      scrollContainerRef.current.scrollLeft = newProgress * maxScroll;
+    }
   };
 
-  const openCard = (feature) => {
-    setWhymeCard(feature);
-    BanScroll();
-    setComponents((prevComponents) => ({
-      ...prevComponents,
-      NavBar: 'hide',
-      whymeCard: 'visible',
-    }));
-  };
+  return (
+    <div className='w-screen'>
+      {!simpleVer && (
+        <div className='flex justify-center group  py-[10px] '>
+          <div
+            className='relative w-[60vw] h-[8px] bg-gray-300/70 rounded-full cursor-pointer group-hover:transition-all group-hover:duration-1000 '
+            onClick={handleProgressDrag}
+          >
+            {/* 进度条 */}
+            <motion.div
+              className='absolute top-0 left-0 h-full rounded-full shadow-md group-hover:duration-1000 group-hover:transition-all bg-gradient-to-r from-sky-400 to-sky-600'
+              style={{ width: `${scrollProgress * 100}%` }}
+            />
 
-  const closeCard = () => {
-    setComponents((prevComponents) => ({
-      ...prevComponents,
-      NavBar: 'visible',
-      whymeCard: 'hide',
-    }));
-    setWhymeCard(null);
-    UnBanScroll();
-  };
-  const ref1 = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref1,
-    offset: ['-300vh', '-15vh'],
-  });
+            {/* 滑块 */}
+            <motion.div
+              drag='x'
+              dragConstraints={{ left: 0, right: 0 }}
+              dragElastic={0}
+              dragMomentum={false}
+              onDrag={handleThumbDrag}
+              whileHover={{ scale: 1.2 }}
+              whileTap={{ scale: 0.9 }}
+              className='absolute top-[-6px] h-[20px] w-[20px] bg-white  border-2 border-sky-500 rounded-full cursor-grab group-hover:duration-1000 group-hover:transition-all'
+              style={{ left: `calc(${scrollProgress * 100}% - 10px)` }}
+            ></motion.div>
+          </div>
+        </div>
+      )}
 
-  const viewwidth = window.innerWidth - scrollbarWidth;
-  const width = useTransform(
-    scrollYProgress,
-    [0, 1],
-    [`0px`, `${viewwidth}px`],
-  );
-  // const width = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.65, 1],
-  //   ["-100vw", "-100vw", "0vw"],
-  // );
-
-  const WhyMe = (
-    <motion.div ref={ref1} className={` pb-[10vh] w-[${viewwidth}px]`}>
-      <motion.div
-        style={{
-          backgroundImage: `url(${data.pic})`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center center',
-          width: isMobile || hideTittle ? `${viewwidth}px` : width,
-        }}
-      >
-        {/* Item 容器 */}
-
-        <ScrollableContainer
-          headerStyle={isMobile ? `${viewwidth}px` : width}
-          headerPY='py-[10px]'
-          id='WhyMe'
-          gap={20}
-          header={{
-            cont: lang == 0 ? 'Why me?' : '优势',
-            icon: 'fi-rr-lightbulb-on',
-          }}
+      <motion.div layout className='flex justify-center w-screen'>
+        <motion.div
+          layout
+          ref={scrollContainerRef}
+          onScroll={handleScroll}
+          variants={
+            windowWidth > 1024 ?
+              Database.Animation.Variant.Welcomevisblecontainer
+            : undefined
+          }
+          initial='hidden'
+          whileInView='visible'
+          viewport={{ once: false, margin: '-30%' }}
+          className={
+            simpleVer ?
+              'grid grid-cols-12 w-full gap-[20px] px-[20px] '
+            : 'flex overflow-x-auto gap-[20px] py-[20px] scrollbar-hide w-full px-[20vw]  '
+          }
         >
-          <AnimatePresence mode='wait'>
-            {keyfeature.map((feature, index) => (
-              <motion.div
-                onClick={() => {
-                  if (windowWidth > 1024 && hideTittle == null) {
-                    openCard(feature);
-                  }
-                }}
-                key={index + feature.advantage}
-                className='z-40 col-span-6'
+          {educationData.map((experience, index) => (
+            <motion.div
+              layout
+              key={index}
+              variants={WelcomeItem}
+              transition={StagerFadeInUp}
+              whileTap={{ scale: 0.95 }}
+              className='col-span-6 lg:col-span-3 md:col-span-4 group'
+            >
+              <div
+                className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] h-full transition-all duration-300 relative  ${
+                  simpleVer ? 'w-full' : 'lg:w-[300px]'
+                }  ${
+                  simpleVer ?
+                    'bg-white hover:bg-sky-100'
+                  : 'bg-gray-200 hover:invert'
+                }`}
               >
-                <motion.div
-                  layout
-                  layoutId={feature.advantage}
-                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                <div
+                  className={simpleVer || windowWidth < 1024 ? '' : 'pb-[40px]'}
                 >
-                  <motion.div className=''>
-                    <motion.div
-                      className={` ${hideTittle ? 'bg-gray-50' : 'bg-white/80'} backdrop-blur-2xl  hover:scale-[1.01] transition-all duration-300 p-[14px] lg:p-[35px] rounded-[14px] lg:rounded-[28px] relative flex-shrink-0  w-auto h-auto ${hideTittle ? 'lg:w-[250px]' : 'lg:w-[350px] '}  md:h-auto `}
+                  <div className='items-start justify-start mt-[10px] mb-[6px] flex md:flex gap-x-4 md:flex-col'>
+                    <i
+                      className={`${experience.icon} fi from-[-20%] to-[120%] ${
+                        simpleVer ?
+                          'text-[15px] md:text-[17px] lg:text-[25px]'
+                        : 'text-[12px] md:text-[17px] lg:text-[25px]'
+                      } flex items-center pb-[10px]`}
+                    ></i>
+                    <div
+                      className={
+                        windowWidth > 1024 ?
+                          `typography-card-headline font-[600] duration-300 transition-all text-sky-950 gap-x-[10px] ${
+                            simpleVer ?
+                              'text-[15px] md:text-[17px] lg:text-[20px]'
+                            : 'text-[12px] md:text-[17px] lg:text-[25px]'
+                          }`
+                        : 'text-[13px] md:text-[18px] font-[600] transition-all flex flex-col md:flex-row gap-x-[5px]'
+                      }
                     >
-                      <motion.div
-                        // layoutId={feature.advantage + 'bg'}
-                        style={{
-                          ...(!hideTittle && windowWidth > 1024 ?
-                            bgPic(feature.pic[0], '100% auto', 'center bottom')
-                          : {}),
-                          // filter:
-                          //   'drop-shadow(0px 10px 16px rgba(0, 0, 0, 0.1))',
-                        }}
-                        className='absolute bottom-0 left-0 right-0 w-full h-full lg:p-[35px] rounded-[14px] lg:rounded-[28px] '
-                      ></motion.div>
-                      <motion.div>
-                        <img
-                          loading='lazy'
-                          src={feature.pic[1]}
-                          alt=''
-                          className='h-0 opacity-0'
-                        />
-                        <motion.div
-                          layoutId={feature.advantage + 'icon'}
-                          transition={{
-                            duration: 0.9,
-                            ease: [0.22, 1, 0.36, 1],
-                          }}
-                          className='flex items-center justify-start transform-gppu'
-                        >
-                          <i
-                            style={{
-                              animationDelay: `${index * 0.2}s`,
-                            }}
-                            className={`${
-                              feature.icon
-                            } fi animate__animated  animate__zoomIn from-[-20%] to-[120%] ${hideTittle ? 'text-[20px] lg:text-[30px]' : 'text-[25px] lg:text-[30px] xl:text-[35px]'}  ${
-                              feature.color1 + ' ' + feature.color2
-                            } flex items-center lg:pb-[5px] xl:pb-[10px] bg-clip-text text-transparent bg-gradient-to-br`}
-                          ></i>
-                        </motion.div>
-                        <div className='flex justify-start pb-6 sm:pb-3'>
-                          <motion.div
-                            layoutId={feature.advantage + 'title'}
-                            transition={{
-                              duration: 0.9,
-                              ease: [0.22, 1, 0.36, 1],
-                            }}
-                            style={{
-                              animationDelay: `${index * 0.2}s`,
-                            }}
-                            className={`animate__animated   animate__zoomIn  font-[700] ${hideTittle ? 'text-[15px] md:text-[17px] lg:text-[20px]' : 'text-[12px] md:text-[17px] lg:text-[25px]'}   ${
-                              feature.color1 + ' ' + feature.color2
-                            } flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
-                          >
-                            {feature.advantage}
-                          </motion.div>
-                        </div>
-                      </motion.div>
-
-                      <div
-                        className={`${
-                          hideTittle || windowWidth < 1024 ? 'hidden' : ''
-                        } copy-visblecontainer md:h-[480px] h-[200px] overflow-hidden`}
-                      >
-                        <div
-                          style={{
-                            ...hideRow(3),
-                            animationDelay: `${index * 0.3}s`,
-                          }}
-                          className={`text-full  my-7 animate__animated  animate__fadeInUp text-gray-500  text-[19px]`}
-                        >
-                          {feature.description}
-                        </div>
-                        <More
-                          color={`  ${
-                            feature.color1 + ' ' + feature.color2
-                          } bg-gradient-to-br text-transparent bg-clip-text `}
-                        />
+                      <div className={`flex items-center `}>
+                        {experience.name[lang]}
                       </div>
-                      {(windowWidth < 1024 || hideTittle) && (
-                        <a
-                          href={feature.href}
-                          className='absolute top-0 bottom-0 left-0 right-0 w-full h-full'
-                        >
-                          <button
-                            className={`absolute right-[14px] top-[14px] lg:right-[28px] lg:top-[28px] ${
-                              feature.color1 + ' ' + feature.color2
-                            } bg-gradient-to-br  rounded-full w-[30px] h-[30px] flex justify-center items-center`}
-                            type='link'
-                          >
-                            <span className={`w-[15px] h-[15px]`}>
-                              <svg
-                                xmlns='http://www.w3.org/2000/svg'
-                                viewBox='8 8 20 20'
-                                className='fill-white'
-                              >
-                                <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
-                              </svg>
-                            </span>
-                          </button>
-                        </a>
-                      )}
-                    </motion.div>
-                  </motion.div>
-                </motion.div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </ScrollableContainer>
-      </motion.div>
-      <AnimatePresence>
-        {Components.whymeCard === 'visible' && <WhyMeCard />}
-      </AnimatePresence>
-    </motion.div>
-  );
+                    </div>
+                  </div>
 
-  return WhyMe;
+                  <div>
+                    <p
+                      style={{
+                        animationDelay: `${index * 0.3}s`,
+                      }}
+                      className={`text-gray-400 ${
+                        simpleVer || windowWidth < 1024 ? '' : 'lg:h-[60px]'
+                      } group-hover:text-gray-700 text-[15px] darrk:text-gray-50`}
+                    >
+                      {experience.des[lang]}
+                    </p>
+                  </div>
+                </div>
+
+                <a
+                  href={experience.link}
+                  target={experience.blank && '_blank'}
+                  rel={experience.blank && 'noopener noreferrer'}
+                  className='absolute top-0 bottom-0 left-0 right-0 w-full h-full'
+                >
+                  <button
+                    className={`absolute ${
+                      windowWidth < 1024 || simpleVer ?
+                        'top-[14px] right-[14px] lg:top-[28px] lg:right-[28px]'
+                      : 'right-[28px] bottom-[28px]'
+                    } w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] bg-gray-900/30 group-hover:bg-gray-900 transition-all duration-300 rounded-full flex justify-center items-center`}
+                    type='link'
+                  >
+                    <span
+                      className={
+                        windowWidth < 1024 ? 'w-[15px] h-[15px]' : (
+                          'w-[20px] h-[20px]'
+                        )
+                      }
+                    >
+                      <svg
+                        xmlns='http://www.w3.org/2000/svg'
+                        viewBox='8 8 20 20'
+                        className='fill-white'
+                      >
+                        <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
+                      </svg>
+                    </span>
+                  </button>
+                </a>
+              </div>
+            </motion.div>
+          ))}
+
+          <motion.div
+            layout
+            key='expect-more'
+            variants={WelcomeItem}
+            transition={StagerFadeInUp}
+            whileTap={{ scale: 0.95 }}
+            className='col-span-12 lg:col-span-3 md:col-span-12 group'
+          >
+            <div
+              className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] transition-all duration-300 relative min-w-[300px] h-full ${
+                simpleVer ?
+                  'bg-white hover:bg-sky-100'
+                : 'bg-gray-200 hover:invert'
+              } w-full`}
+            >
+              <div className='pb-[40px]'>
+                <div className='items-start justify-start mt-[10px] mb-[6px] flex md:flex gap-x-4 md:flex-col'>
+                  <i className='fi fi-rr-hourglass-end text-[15px] md:text-[17px] lg:text-[25px] flex items-center pb-[10px]'></i>
+                  <div className='text-[13px] md:text-[18px] font-[600] transition-all flex flex-col md:flex-row gap-x-[5px] text-sky-950'>
+                    <div className='flex items-center'>
+                      {['Looking forward to more...', '期待更多内容...'][lang]}
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <p className='text-gray-400 text-[15px] text-wrap'>
+                    {
+                      [
+                        'More exciting content will be online soon, stay tuned!',
+                        '更多精彩内容即将上线，敬请期待！',
+                      ][lang]
+                    }
+                  </p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </motion.div>
+      </motion.div>
+    </div>
+  );
 }
 
-export default WhyMe;
+export default Education;

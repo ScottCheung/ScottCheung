@@ -62,36 +62,33 @@ const getGeolocation = async () => {
      *
      ******************/
 
-    // header: [
-    //   "Optimised the performance of some device's animations. Added the story module of the life column, which is now officially open and will be updated with more personal stories.",
-    //   '优化部分设备动画性能不佳的体验。新增了生活栏目的故事模块，现在正式开放，之后会更新更多个人故事。',
-    // ],
-    // new: [
-    //   [
-    //     'Added the story module of the life column, which is now officially open and will be updated with more personal stories.',
-    //     'Change some animation effects, such as the hover of the Good user part, adjust the animation method, and optimize performance.',
-    //     'By implementing Progressive Image Loading, low-resolution images are prioritized during the animation process to reduce rendering overhead. After the animation completes, high-resolution images are dynamically swapped in, achieving a smooth transition effect while significantly optimizing first-screen loading performance and overall rendering efficiency. This approach greatly enhances the smoothness and stability of card transition animations.',
-    //   ],
-    //   [
-    //     '新增了生活栏目的故事模块，现在正式开放，之后会更新更多个人故事。',
-    //     '更改部分动画效果，例如Good user部分的 hover，调整动画方式，优化性能。',
-    //     '使用渐进式图片加载（Progressive Image Loading）技术，通过优先显示低分辨率图片并附带动画效果，动画完成后切换为高分辨率图片，既实现了流畅的过渡效果，又优化了首屏加载性能与动画渲染效率，大幅提升了卡片 transition 动画的流畅性与稳定性。',
-    //   ],
-    // ],
-    // fix: [
-    // [
-    //   'Fix some bugs of animation bugs.',
-    //   'Fix the bug of pic CDN problem that leads picture disappear',
-    // ],
-    // ['修复了动画 BUG.', '修复了图片 CDN 问题导致图片消失的问题。'],
-    // ],
-    // impro: [
-    //   [
-    //     'Improve some info of the transition.',
-    //     'Improve some performance of the animation.',
-    //   ],
-    //   ['修复了翻译不佳的情况.', '优化了部分动画的性能。'],
-    // ],
+    header: [
+      'Optimized animation curves, characteristics (duration, intervals, interaction triggers). Improved mobile layout (home, buttons, carousel). Adjusted desktop UI (education, abilities). Added project module to navbar (6 demos). Fixed translation/overflow issues. Adjusted/cropped images, re-uploaded with lazy loading for faster speeds. Component layout adjustments for different devices.',
+      '优化了动画曲线、特性（时长、间隔、交互触发）。改进了移动端布局（首页、按钮、轮播图）。调整了桌面端 UI（教育、能力）。导航栏新增项目模块（6个演示）。修复了翻译/溢出问题。调整/裁剪了图片，重新上传并使用懒加载以加快速度。针对不同设备调整了组件布局。',
+    ],
+    new: [
+      [
+        'Optimized animation curves, characteristics (duration, intervals, interaction triggers). Improved mobile layout (home, buttons, carousel). Added project module to navbar (6 demos).',
+        'Adjusted desktop UI (education, abilities).',
+        'Adjusted/cropped images, re-uploaded with lazy loading for faster speeds. Component layout adjustments for different devices.',
+      ],
+      [
+        '优化了动画曲线、特性（时长、间隔、交互触发）。改进了移动端布局（首页、按钮、轮播图）。导航栏新增项目模块（6个演示）。',
+        '调整了桌面端 UI（教育、能力）。',
+        '调整/裁剪了图片，重新上传并使用懒加载以加快速度。针对不同设备调整了组件布局。',
+      ],
+    ],
+    fix: [
+      ['Fixed translation/overflow issues.', 'Fixed minor UI display errors.'],
+      ['修复了翻译/溢出问题。', '修复了细小的UI显示错误。'],
+    ],
+    impro: [
+      [
+        'Improved animation performance.',
+        'Improved loading speed with optimized images and lazy loading.',
+      ],
+      ['优化了动画性能。', '通过优化图片和懒加载提高了加载速度。'],
+    ],
 
     /****************
      *
@@ -131,15 +128,15 @@ const getGeolocation = async () => {
     // impro: [],
 
     // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
-    header: ['Optimise First Page loading time', '优化首屏加载时间'],
-    new: [],
-    fix: [
-      [
-        'Fix performance issues, Optimise First page loading time, using lazy loading.',
-      ],
-      ['修复性能问题,优化首屏加载时间，使用懒加载。'],
-    ],
-    impro: [],
+    // header: ['Optimise First Page loading time', '优化首屏加载时间'],
+    // new: [],
+    // fix: [
+    //   [
+    //     'Fix performance issues, Optimise First page loading time, using lazy loading.',
+    //   ],
+    //   ['修复性能问题,优化首屏加载时间，使用懒加载。'],
+    // ],
+    // impro: [],
   };
 
   // 将新日志条目添加到日志字典中，以时间戳作为键

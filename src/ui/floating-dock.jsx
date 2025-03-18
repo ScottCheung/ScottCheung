@@ -2,7 +2,9 @@
  * Note: Use position fixed according to your needs
  * Desktop navbar is better positioned at the bottom
  * Mobile navbar is better positioned at bottom right.
- **/
+ *
+ * @format
+ */
 
 import { cn } from '../lib/utils';
 import {
@@ -14,84 +16,53 @@ import {
 } from 'framer-motion';
 
 import { useRef, useState } from 'react';
+import { div } from 'three/examples/jsm/nodes/Nodes';
 
-export const FloatingDock = ({ items, desktopClassName, mobileClassName }) => {
+export const FloatingDock = ({
+  items,
+  desktopClassName,
+  mobileClassName,
+  themeColor,
+}) => {
   return (
     <>
-      <FloatingDockDesktop items={items} className={desktopClassName} />
-      <FloatingDockMobile items={items} className={mobileClassName} />
+      <FloatingDockDesktop
+        items={items}
+        className={desktopClassName}
+        themeColor={themeColor}
+      />
     </>
   );
 };
 
-const FloatingDockMobile = ({ items, className }) => {
-  const [open, setOpen] = useState(false);
-  return (
-    <div className={cn('relative block md:hidden', className)}>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            layoutId='nav'
-            className='absolute inset-x-0 flex flex-col gap-2 mb-2 bottom-full'
-          >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-              >
-                <Link
-                  href={item.href}
-                  key={item.title}
-                  className='flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 dark:bg-neutral-900'
-                >
-                  <div className='w-4 h-4'>{item.icon}</div>
-                </Link>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <button
-        onClick={() => setOpen(!open)}
-        className='flex items-center justify-center w-10 h-10 rounded-full bg-gray-50 dark:bg-neutral-800'
-      >
-        {/* <IconLayoutNavbarCollapse className='w-5 h-5 text-neutral-500 dark:text-neutral-400' /> */}
-      </button>
-    </div>
-  );
-};
-
-const FloatingDockDesktop = ({ items, className }) => {
+const FloatingDockDesktop = ({ items, className, themeColor }) => {
   let mouseX = useMotionValue(Infinity);
+  const theme = themeColor ? themeColor : 'white';
+
   return (
     <motion.div
+      // layout
+      // transition={{ duration: 1 }}
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        'mx-auto hidden md:flex h-16 gap-4 items-end  rounded-2xl bg-gray-50 dark:bg-neutral-900 px-4 pb-3',
+        `mx-auto group pb-[20px] hidden md:flex transition-all duration-1000 h-[100px] gap-[50px] hover:gap-[45px] items-end  ${theme !== 'white' ? `hover:bg-sky-200/50` : `hover:bg-${theme}/30 `} rounded-full  dark:bg-neutral-900 px-[20px]`,
         className,
       )}
     >
       {items.map((item) => (
-        <IconContainer mouseX={mouseX} key={item.title} {...item} />
+        <IconContainer
+          mouseX={mouseX}
+          key={item.title}
+          {...item}
+          theme={theme}
+        />
       ))}
     </motion.div>
   );
 };
 
-function IconContainer({ mouseX, title, icon, href }) {
+function IconContainer({ mouseX, title, icon, href, blank, theme }) {
   let ref = useRef(null);
 
   let distance = useTransform(mouseX, (val) => {
@@ -100,14 +71,14 @@ function IconContainer({ mouseX, title, icon, href }) {
     return val - bounds.x - bounds.width / 2;
   });
 
-  let widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
-  let heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
+  let widthTransform = useTransform(distance, [-150, 0, 150], [60, 120, 60]);
+  let heightTransform = useTransform(distance, [-150, 0, 150], [60, 120, 60]);
 
-  let widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
+  let widthTransformIcon = useTransform(distance, [-150, 0, 150], [1, 2, 1]);
   let heightTransformIcon = useTransform(
     distance,
     [-150, 0, 150],
-    [20, 40, 20],
+    [30, 70, 30],
   );
 
   let width = useSpring(widthTransform, {
@@ -135,13 +106,17 @@ function IconContainer({ mouseX, title, icon, href }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a href={href}>
+    <motion.a
+      target={blank && '_blank'}
+      rel={blank && 'noopener noreferrer'}
+      href={href}
+    >
       <motion.div
         ref={ref}
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className='relative flex items-center justify-center bg-gray-200 rounded-full aspect-square dark:bg-neutral-800'
+        className={`relative flex items-center justify-center rounded-[28px]  ${theme !== 'white' ? `group-hover:bg-white` : `group-hover:bg-${theme}/30`}     group-hover:backdrop-blur-[20px] aspect-square dark:bg-neutral-800`}
       >
         <AnimatePresence>
           {hovered && (
@@ -149,19 +124,20 @@ function IconContainer({ mouseX, title, icon, href }) {
               initial={{ opacity: 0, y: 10, x: '-50%' }}
               animate={{ opacity: 1, y: 0, x: '-50%' }}
               exit={{ opacity: 0, y: 2, x: '-50%' }}
-              className='px-2 py-0.5 whitespace-pre rounded-md bg-gray-100 border dark:bg-neutral-800 dark:border-neutral-900 dark:text-white border-gray-200 text-neutral-700 absolute left-1/2 -translate-x-1/2 -top-8 w-fit text-xs'
+              className={`absolute flex text-${theme}-100 z-50  text-${theme} first-line:space-pre -translate-x-1/2 ${theme !== 'white' ? `bg-white` : `bg-${theme}/30`}  rounded-full left-1/2 -top-[60px] w-fit z-50justify-center backdrop-blur-md bg-${theme}/20 bg-${theme}-900 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800`}
             >
-              {title}
+              <p className='px-6 py-4    duration-100  text-center w-full text-nowrap  text-[10px] lg:text-[15px] '>
+                {title}
+              </p>
             </motion.div>
           )}
         </AnimatePresence>
-        <motion.div
-          style={{ width: widthIcon, height: heightIcon }}
-          className='flex items-center justify-center'
-        >
-          {icon}
-        </motion.div>
+        <motion.i
+          layout
+          style={{ fontSizeAdjust: widthIcon }}
+          className={`fi ${icon} text-[20px] group-hover:text-${theme}-100 group-hover:text-${theme}  text-${theme} text-${theme}-50`}
+        ></motion.i>
       </motion.div>
-    </a>
+    </motion.a>
   );
 }

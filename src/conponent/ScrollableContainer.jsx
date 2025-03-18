@@ -14,6 +14,7 @@ const ScrollableContainer = ({
   headerPY,
   headerStyle,
   containerPY,
+  noPaddingInline = true,
   header = { cont: '', icon: '' },
 }) => {
   const containerRef = useRef(null);
@@ -76,38 +77,39 @@ const ScrollableContainer = ({
   return (
     <div className='flex flex-col items-start justify-start w-full p-4 lg:p-0'>
       {/* Header & Control Buttons */}
-      <div id={id} className='h-[5vh]'></div>
+      {header && <div id={id} className='h-[5vh]'></div>}
       <motion.div
         style={{
           width: headerStyle,
           paddingInline:
-            windowWidth > 1024 ?
+            windowWidth > 1024 && noPaddingInline ?
               'calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)'
             : '0',
         }}
-        className={`flex w-full justify-between items-center px-[10px] gap-[20px]  ${headerPY ? headerPY : 'my-[50px]'}`}
+        className={`flex ${header ? 'justify-between w-full  ' : 'max-w-[1680px] justify-start '} items-center px-[10px] gap-[20px]  ${headerPY ? headerPY : 'mt-[50px] mb-[20px]'}`}
       >
         {/* Header */}
-        <div
-          className={`flex items-center justify-center w-full lg:w-auto ${textColor ? textColor : 'text-gray-800'}`}
-        >
-          <motion.div className='flex items-center justify-center gap-x-[20px]'>
-            <motion.i
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 0.5 }}
-              className={`flex items-center text-5xl fi lg:text-6xl xl:text-8xl ${header.icon}`}
-            ></motion.i>
+        {header && (
+          <div
+            className={`flex items-center justify-center w-full lg:w-auto ${textColor ? textColor : 'text-gray-800'}`}
+          >
+            <motion.div className='flex items-center justify-center gap-x-[20px]'>
+              <motion.i
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+                className={`flex items-center text-5xl fi lg:text-6xl xl:text-8xl ${header.icon}`}
+              ></motion.i>
 
-            <TextAnimate
-              transition={{ duration: 0.3 }}
-              className='flex items-center font-mono text-5xl font-black text-nowrap lg:text-6xl xl:text-8xl'
-              text={header.cont}
-              type='fadeIn'
-            />
-          </motion.div>
-        </div>
-
+              <TextAnimate
+                transition={{ duration: 0.3 }}
+                className='flex items-center font-mono text-5xl font-black text-nowrap lg:text-6xl xl:text-8xl'
+                text={header.cont}
+                type='fadeIn'
+              />
+            </motion.div>
+          </div>
+        )}
         {/* Button Group */}
         <div
           className={`${
@@ -164,7 +166,6 @@ const ScrollableContainer = ({
           </motion.button>
         </div>
       </motion.div>
-
       {/* Container */}
       <motion.div
         layout
@@ -179,7 +180,7 @@ const ScrollableContainer = ({
         onAnimationComplete={scrollToRight}
         style={{
           paddingInline:
-            windowWidth > 1024 ?
+            windowWidth > 1024 && noPaddingInline ?
               'calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)'
             : '0',
         }}

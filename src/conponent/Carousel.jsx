@@ -104,10 +104,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
   return (
     <motion.div
       {...handlers}
-      style={{
-        height: `${viewportHeight}px`,
-      }}
-      className='relative w-full h-[100vh] bg-white overflow-hidden z-30'
+      className={`h-[${viewportHeight * 0.4}px] lg:h-[${viewportHeight * 1.1}px] relative z-30 w-full overflow-hidden bg-white`}
       onKeyDown={(e) => {
         if (e.key === 'ArrowRight') nextSlide();
         if (e.key === 'ArrowLeft') prevSlide();
@@ -115,8 +112,21 @@ const Carousel = ({ interval, HomeCarousel }) => {
       tabIndex='0'
     >
       <span
-        className={`absolute z-20 top-0 bottom-0 left-0 right-0 object-cover h-${viewportHeight}px bg-black/30`}
+        className={`absolute z-20 top-0 bottom-0 left-0 right-0 object-cover h-${viewportHeight}px bg-black/20 overflow-hidden`}
       ></span>
+      <svg
+        data-v-226d292e=''
+        viewBox='0 0 1440 62'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+        className={`absolute bottom-0 left-0 right-0 z-50 scale-105`}
+      >
+        <path
+          data-v-226d292e=' '
+          d='M0 0c106.167 13.333 399.8 62 725 62s612.17-48.667 715-62v62H0V0z'
+          fill='#f5f5f7'
+        ></path>
+      </svg>
       <div
         className={`flex z-10 w-full h-full ${isTransitioning ? 'transition-transform duration-500' : ''}`}
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
@@ -131,9 +141,9 @@ const Carousel = ({ interval, HomeCarousel }) => {
               {item.type === 'image' && (
                 <img
                   loading='lazy'
-                  src={window.innerWidth < 768 ? item.minisrc : item.src}
+                  src={item.src}
                   alt=''
-                  className='object-cover w-full h-full '
+                  className='object-cover object-bottom w-full h-full '
                 />
               )}
               {item.type === 'video' && (
@@ -148,6 +158,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
           </motion.div>
         ))}
       </div>
+
       <div className='z-30 flex justify-between'>
         <span
           onMouseEnter={() => {
@@ -214,11 +225,11 @@ const Carousel = ({ interval, HomeCarousel }) => {
           }}
           initial={{ width: 0 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className={`w-full h-[30px] rounded-lg absolute  top-[${viewportHeight * 0.8}px] gap-y-[30px] flex flex-col justify-center items-center z-50`}
+          className={`w-full h-[30px] rounded-lg absolute  bottom-[${viewportHeight * 0.07}px] lg:bottom-[${viewportHeight * 0.25}px] gap-y-[30px] flex flex-col justify-center items-center z-50`}
         >
           <motion.div className='w-auto flex gap-x-[20px]'>
             <div
-              className='bg-white/200 hover:bg-black/30  transition-all rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
+              className='bg-white/200 hover:bg-black/30 hidden lg:flex  transition-all rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
               style={{ animationDelay: '0.15s' }}
             >
               <motion.button
@@ -237,7 +248,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
               </motion.button>
             </div>
             <div
-              className='bg-white/200 hover:bg-black/30  transition-all  rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
+              className='bg-white/200 hover:bg-black/30 hidden lg:flex   transition-all  rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
               style={{ animationDelay: '0.3s' }}
             >
               <motion.button
@@ -269,7 +280,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
                   <div key={index}>
                     <div
                       onClick={() => setActiveIndex(index + 1)}
-                      style={{ animationDelay: `${(index + 3) * 0.25}s` }}
+                      style={{ animationDelay: `${(index + 3) * 0.2}s` }}
                       className={`bg-gray-200/50 hover:bg-gray-50/50 animate__animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[15px] ${index + 1 === activeIndex ? 'w-[50px]' : 'w-[15px]'}`}
                     >
                       {index + 1 === activeIndex &&
@@ -286,7 +297,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
               </motion.div>
             </div>
             <div
-              className='bg-white/200 hover:bg-black/30  transition-all  rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
+              className='bg-white/200 hover:bg-black/30 transition-all  rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
               style={{ animationDelay: '0.6s' }}
             >
               <motion.button
@@ -311,7 +322,9 @@ const Carousel = ({ interval, HomeCarousel }) => {
               </motion.button>
             </div>
           </motion.div>
-          <SubNav />
+          <div className='hidden w-full lg:flex'>
+            <SubNav />
+          </div>
         </motion.div>
       </AnimatePresence>
     </motion.div>

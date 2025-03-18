@@ -10,6 +10,7 @@ import {
   useSpring,
   MotionValue,
 } from 'framer-motion';
+import { useLanguage } from '../help/helpFunction';
 
 // Define the type for the items to be displayed
 interface ItemType {
@@ -129,6 +130,7 @@ export const HeroParallax = ({ Items }: { Items: ItemType[] }) => {
 
 // Header component
 export const Header = () => {
+  const lang: any = useLanguage();
   return (
     <div className='absolute top-[30vh] left-[1vw] lg:left-[15vw] w-full px-4  max-w-7xl '>
       <script src='https://cdn.tailwindcss.com'></script>
@@ -137,19 +139,16 @@ export const Header = () => {
           duration={-3}
           delay={-0.5}
           className='flex w-full z-20 text-[50px] md:text-[80px] lg:text-[100px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-100 font-[700]'
-          text='The Projects'
-          type='fadeIn'
-        />
-        <TextAnimate
-          duration={0.5}
-          delay={-0.5}
-          className='flex w-full z-30 text-[60px] md:text-[90px] lg:text-[110px] bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-100 font-bold'
-          text='I contribute to'
+          text={['My Projects', '我的项目'][lang]}
           type='fadeIn'
         />
         <p className='relative z-20 max-w-5xl mt-8 text-[20px]  bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-100 '>
-          This page is under development. Datas are not correct. Open time is
-          not expected. Please check back later. Thank you!
+          {
+            [
+              "Welcome to my world, a dream woven with code and creativity. Every line of code, every click, shines like a star, illuminating the future we explore together. May this romance touch the softest corner of your heart, and together, let's find that unique emotion in the digital sea.",
+              '欢迎来到我的世界，这里是我用代码和创意编织的梦想。每一行代码，每一次点击，都如同星光闪烁，照亮我们共同探索的未来。愿这份浪漫，能触动你心中最柔软的角落，与我一同，在数字的海洋里，寻找那份独一无二的感动。',
+            ][lang]
+          }
         </p>
       </div>
     </div>

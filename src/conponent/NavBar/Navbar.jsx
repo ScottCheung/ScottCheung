@@ -11,6 +11,8 @@ import ContactCate from '../contactCategory.jsx';
 import packageinfo from '../../../package.json';
 import Log from '../Log.jsx';
 import Underline from '../../ui/underline.tsx';
+import ContactDocker from '../contactDocker';
+import Project from '../project.jsx';
 import MenuButtonsSmall from './MenuButtonsSmall.tsx';
 
 import Toast from '../toast.jsx';
@@ -242,7 +244,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                       <motion.img
                         loading='lazy'
                         layout
-                        className={`flex items-center required justify-center m-4  animate__animated animate__zoomIn   ${isTop ? 'w-32 h-32 rounded-lg' : 'w-[30px] h-[30px] md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-[7px]'} shadow-lg`}
+                        className={`flex items-center required justify-center m-4  animate__animated animate__zoomIn   ${isTop ? 'w-16 h-16 lg:w-32 lg:h-32 rounded-lg' : 'w-[30px] h-[30px] md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-[7px]'} shadow-lg`}
                         src='https://img.picgo.net/2024/12/06/avatar16e4aacd08d86884.th.jpg'
                         alt="Xianzhe's Page"
                       />
@@ -384,7 +386,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                     {windowWidth < 1024 && (
                       <button
                         style={{
-                          animationDelay: `${navbarItem.length * 0.2}s`,
+                          animationDelay: `${navbarItem.length * 0.07}s`,
                         }}
                         type='button'
                         className={`py-6 pl-6 transition-none animate__animated animate__fadeInUp `}
@@ -461,29 +463,36 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                     lang={lang}
                   />
                 )}
-                <motion.div
-                  layout
-                  className='relative flex w-full  max-w-[1200px] '
-                >
+                <motion.div className='relative flex justify-center w-full'>
                   {/* 二级菜单 */}
+
                   {navbarItem.map(
                     (navItem, navIndex) =>
                       navItem.scondMenu &&
-                      selectedTab === navItem.name[0] && (
-                        <motion.div
-                          layout
-                          key={'isExpanded' + navIndex}
-                          layoutId='isExp'
-                          className={`w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  ${
-                            !isExpanded && selectedTab !== navItem.name[1] ?
-                              ' items-center justify-center'
-                            : 'items-center justify-center'
-                          }`}
-                        >
+                      selectedTab === navItem.name[0] &&
+                      navItem.name[0] !== 'Project' &&
+                      navItem.name[0] !== 'Contact' && (
+                        <AnimatePresence>
                           <motion.div
-                            className={`w-full justify-between flex items-center ${
-                              isExpanded ? 'my-8' : ''
-                            }
+                            key={'isExpanded' + navIndex}
+                            initial={{ y: 30, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: 30, opacity: 0 }}
+                            transition={{
+                              duration: 1,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
+                            layoutId='isExp'
+                            className={`w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  ${
+                              !isExpanded && selectedTab !== navItem.name[1] ?
+                                ' items-center justify-center'
+                              : 'items-center justify-center'
+                            }`}
+                          >
+                            <motion.div
+                              className={`w-full justify-between flex items-center ${
+                                isExpanded ? 'my-8' : ''
+                              }
                            ${
                              isTop ?
                                `${
@@ -491,162 +500,113 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                                    ' text-sky-950 bg-sky-200/30 border border-sky-950'
                                  )
                                }  backdrop-blur-md  mt-[50px] rounded-[28px]`
-                             : ' divide-x border-2 bg-sky-200/30 mt-[50px] divide-gray-900/0 rounded-full border-gray-700'
+                             : ' divide-x border bg-sky-200/30 mt-[50px] divide-gray-900/0 rounded-full border-gray-400'
                            }`}
-                          >
-                            {navItem.scondMenu.map((item, index) => (
-                              <motion.a
-                                layout
-                                key={index}
-                                href={item.link}
-                                animate={{ width: '100%' }}
-                                whileHover={{ width: '120%' }}
-                                whileTap={{ width: '100%' }}
-                                style={{
-                                  animationDelay: `${index * 0.15}s`,
-                                  animationDuration: `${0.7}s`,
-                                }}
-                                className={`flex w-full ${!isTop && `rounded-full`} justify-center welcomeanimation ${index === 0 && (isTop ? `rounded-l-[28px]` : `rounded-full`)} ${
-                                  index === navItem.scondMenu.length - 1 &&
-                                  (isTop ? `rounded-r-[28px]` : `rounded-full`)
-                                } opacity-80 hover:opacity-100 font-medium hover:shadow-2xl hover:bg-sky-900 hover:text-white focus:z-10 `}
-                              >
-                                <motion.button
+                            >
+                              {navItem.scondMenu.map((item, index) => (
+                                <motion.a
                                   layout
-                                  style={{ borderRadius: 20 }}
-                                  whileHover={{ scale: 1.05 }}
-                                  whileTap={{ scale: 0.95 }}
-                                  whileFocus={{ scale: 1 }}
-                                  onClick={BTN(item.button)}
-                                  className='w-full'
+                                  target={item.blank && '_blank'}
+                                  rel={item.blank && 'noopener noreferrer'}
+                                  key={index}
+                                  href={item.link}
+                                  animate={{ width: '100%' }}
+                                  whileHover={{ width: '120%' }}
+                                  whileTap={{ width: '100%' }}
+                                  style={{
+                                    animationDelay: `${index * 0.1}s`,
+                                    animationDuration: `${0.7}s`,
+                                  }}
+                                  className={`flex w-full ${!isTop && `rounded-full`} justify-center welcomeanimation ${index === 0 && (isTop ? `rounded-l-[28px]` : `rounded-full`)} ${
+                                    index === navItem.scondMenu.length - 1 &&
+                                    (isTop ? `rounded-r-[28px]` : (
+                                      `rounded-full`
+                                    ))
+                                  } opacity-80 hover:opacity-100 font-medium hover:shadow-2xl hover:bg-sky-900 hover:text-white focus:z-10 `}
                                 >
-                                  <div className='flex flex-col items-center justify-center px-2 py-[20px] my-3 text-center gap-y-2 '>
-                                    {(isTop || item.detail) && (
-                                      <i
-                                        className={`flex fi justify-center ${
-                                          isTop &&
-                                          ' text-[17px] md:text-[20px] lg:text-[23px]'
-                                        } ${item.icon}`}
-                                      ></i>
-                                    )}
+                                  <motion.button
+                                    layout
+                                    style={{ borderRadius: 20 }}
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    whileFocus={{ scale: 1 }}
+                                    onClick={BTN(item.button)}
+                                    className='w-full'
+                                  >
+                                    <div className='flex flex-col items-center justify-center px-2 py-[20px] my-3 text-center gap-y-2 '>
+                                      {(isTop || item.detail) && (
+                                        <i
+                                          className={`flex fi justify-center ${
+                                            isTop &&
+                                            ' text-[17px] md:text-[20px] lg:text-[23px]'
+                                          } ${item.icon}`}
+                                        ></i>
+                                      )}
 
-                                    {item.name && (
-                                      <div
-                                        className={`gap-x-4 gap-y-2 flex h-full justify-center items-center w-full ${
-                                          isTop &&
-                                          'text-[17px] md:text-[20px] lg:text-[23px] gap-x-0'
-                                        }`}
-                                      >
-                                        {!isTop && window.innerWidth > 784 && (
-                                          <i
-                                            className={`flex fi justify-center  text-[14px] md:text-[15px] lg:text-[18px]  ${item.icon}`}
-                                          ></i>
-                                        )}
+                                      {item.name && (
+                                        <div
+                                          className={`gap-x-4 gap-y-2 flex h-full justify-center items-center w-full ${
+                                            isTop &&
+                                            'text-[17px] md:text-[20px] lg:text-[23px] gap-x-0'
+                                          }`}
+                                        >
+                                          {!isTop &&
+                                            window.innerWidth > 784 && (
+                                              <i
+                                                className={`flex fi justify-center  text-[14px] md:text-[15px] lg:text-[18px]  ${item.icon}`}
+                                              ></i>
+                                            )}
 
-                                        <p className='flex items-center justify-center text-[14px] md:text-[15px] lg:text-[18px]'>
-                                          {item.name[lang]}
+                                          <p className='flex items-center justify-center text-[14px] md:text-[15px] lg:text-[18px]'>
+                                            {item.name[lang]}
+                                          </p>
+
+                                          {item.status && (
+                                            <i
+                                              className={` flex ${
+                                                isTop && ' lg:mx-2'
+                                              } justify-center items-center text-[15px] pb-[10px] ${item.status}`}
+                                            ></i>
+                                          )}
+                                        </div>
+                                      )}
+
+                                      {item.detail && (
+                                        <p className='flex items-center justify-center w-full text-base'>
+                                          {item.detail[lang]}
                                         </p>
-
-                                        {item.status && (
-                                          <i
-                                            className={` flex ${
-                                              isTop && ' lg:mx-2'
-                                            } justify-center items-center text-[15px] pb-[10px] ${item.status}`}
-                                          ></i>
-                                        )}
-                                      </div>
-                                    )}
-
-                                    {item.detail && (
-                                      <p className='flex items-center justify-center w-full text-base'>
-                                        {item.detail[lang]}
-                                      </p>
-                                    )}
-                                  </div>
-                                </motion.button>
-                              </motion.a>
-                            ))}
+                                      )}
+                                    </div>
+                                  </motion.button>
+                                </motion.a>
+                              ))}
+                            </motion.div>
                           </motion.div>
-                        </motion.div>
+                        </AnimatePresence>
                       ),
+                  )}
+
+                  {selectedTab === 'Contact' && (
+                    <motion.div
+                      layoutId='isExp'
+                      className={`${isTop ? 'bg-white/30 ' : 'bg-sky-200/30 border-gray-400 border hover:border-0'} mt-[50px] transition-all duration-300  w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  hover:bg-transparent rounded-[28px]`}
+                    >
+                      <ContactDocker themeColor={isTop ? 'white' : ' sky'} />
+                    </motion.div>
+                  )}
+
+                  {selectedTab === 'Project' && (
+                    <motion.div
+                      layoutId='isExp'
+                      className={` overflow-visible  w-full flex mt-[20px]   rounded-[28px]`}
+                    >
+                      <Project />
+                    </motion.div>
                   )}
                 </motion.div>
                 {extra}
               </motion.div>
             </motion.div>
-          </motion.div>
-
-          {/* 人物对话弹窗 */}
-          <motion.div
-            layout
-            className='relative lg:hidden  w-full  max-w-[1200px] '
-          >
-            {navbarItem.map(
-              (item, index) =>
-                selectedTab === item.name[0] && (
-                  <motion.div
-                    key={item.name[0] + index + 'introduction'}
-                    className='lg::mx-[10%] mt-[30px]  flex relative gap-x-[20px] duration-200 '
-                  >
-                    <img
-                      loading='lazy'
-                      style={{
-                        filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))',
-                        // height: "400px",
-                        maskImage:
-                          'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
-                        WebkitMaskImage:
-                          'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
-                      }}
-                      className=' max-w-[320px] px-[30px] lg:max-w-[420px]  absolute top-[100%] left-0 transition-all'
-                      src={data.dialog}
-                    ></img>
-                    <motion.div
-                      // layoutId="des"
-                      key={item.name[0] + index}
-                      className='absolute top-[10px] left-[320px] lg:left-[420px] animate__animated animate__fadeInUp bg-sky-900 transition-all inline-flex  rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  '
-                    >
-                      <div className='p-[28px] lg:p-[40px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20'>
-                        <p className='text-[20px] lg:text-[30px]  darrk:text-gray-900 text-white  '>
-                          {item.des[lang]}
-                        </p>
-                        <span className='text-center text-[30px] darrk:text-gray-900 text-white '>
-                          {item.expression}{' '}
-                        </span>
-                        <div className='group relative my-2.5 hidden'>
-                          <div className='absolute flex items-center justify-center w-full transition-opacity duration-300 rounded-lg opacity-0 bg-gray-900/50 group-hover:opacity-100'>
-                            <button
-                              data-tooltip-target='download-image'
-                              className='inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 hover:bg-white/50 focus:ring-4 focus:outline-none darrk:text-white focus:ring-gray-50'
-                            >
-                              <svg
-                                className='w-5 h-5 text-white'
-                                aria-hidden='true'
-                                xmlns='http://www.w3.org/2000/svg'
-                                fill='none'
-                                viewBox='0 0 16 18'
-                              >
-                                <path
-                                  stroke='currentColor'
-                                  strokeLinecap='round'
-                                  strokeLinejoin='round'
-                                  strokeWidth={2}
-                                  d='M8 1v11m0 0 4-4m-4 4L4 8m11 4v3a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-3'
-                                />
-                              </svg>
-                            </button>
-                          </div>
-                          <img
-                            loading='lazy'
-                            src='/docs/images/blog/image-1.jpg'
-                            className='rounded-lg'
-                          />
-                        </div>
-                      </div>
-                    </motion.div>
-                  </motion.div>
-                ),
-            )}
           </motion.div>
         </motion.nav>
       </motion.div>
@@ -694,6 +654,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
         ></div>
       </div>
       <AnimatePresence>
+        {/* 人物对话弹窗 */}
         {selectedTab != null && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -701,23 +662,26 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
             exit={{ opacity: 0 }}
             className={`fixed top-0 left-0 z-40  bottom-0  right-0  w-full h-full  backdrop-blur-[20px] ${isTopTextColorWhite && isTop ? 'bg-gray-900/40' : 'bg-white/40'} `}
           >
-            <div
+            <motion.div
               style={{
                 backgroundImage: `url(${windowWidth > 1024 && data.dialog})`,
-                backgroundSize: '25% auto',
+                backgroundSize:
+                  selectedTab === 'Project' || selectedTab === 'Contact' ?
+                    `15% auto`
+                  : `25% auto`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'left bottom',
                 filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0))',
               }}
-              className='hidden w-full h-full lg:flex'
-            ></div>
+              className='hidden w-full h-full transition-all duration-500 lg:flex'
+            ></motion.div>
 
             {navbarItem.map(
               (item, index) =>
                 selectedTab === item.name[0] && (
                   <motion.div
                     key={item.name[0] + index + 'introduction'}
-                    className='absolute hidden  lg:inline-flex bottom-[10vw] left-[25%] lg:left-[25%] animate__animated animate__fadeInUp bg-sky-900 transition-all   rounded-r-[35px] rounded-tl-[35px] max-w-[420px] overflow-hidden  '
+                    className={`absolute hidden  lg:inline-flex  ${selectedTab === 'Project' || selectedTab === 'Contact' ? `left-[15%] bottom-[3vw] scale-[0.6] max-w-[420px]` : `left-[25%] bottom-[10vw] max-w-[420px] `}  animate__animated animate__fadeInUp animate__fast transition-all bg-sky-900   rounded-r-[35px] rounded-tl-[35px] overflow-hidden  `}
                   >
                     <div className='p-[28px] lg:p-[40px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20'>
                       <p className='text-[20px] lg:text-[25px]  darrk:text-gray-900 text-white  '>

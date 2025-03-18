@@ -35,12 +35,12 @@ export default function Profile() {
         <section
           style={{
             height: windowWidth > 1080 ? '600px' : '400px',
-            maskImage:
-              'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
-            WebkitMaskImage:
-              'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
+            // maskImage:
+            //   'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
+            // WebkitMaskImage:
+            //   'linear-gradient(to bottom, rgba(0, 0, 0, 1) 3%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
           }}
-          className='relative'
+          className='relative overflow-hidden'
         >
           <motion.div
             layout
@@ -65,6 +65,19 @@ export default function Profile() {
               }}
               className='absolute w-full h-full bg-black opacity-0'
             ></span> */}
+            <svg
+              data-v-226d292e=''
+              viewBox='0 0 1440 62'
+              fill='none'
+              xmlns='http://www.w3.org/2000/svg'
+              className={`absolute bottom-0 left-0 right-0 z-50 scale-105`}
+            >
+              <path
+                data-v-226d292e=' '
+                d='M0 0c106.167 13.333 399.8 62 725 62s612.17-48.667 715-62v62H0V0z'
+                fill='#f5f5f7'
+              ></path>
+            </svg>
           </motion.div>
         </section>
         <div className='visblecontainer flex flex-col gap-[28px] pb-[30vh]'>

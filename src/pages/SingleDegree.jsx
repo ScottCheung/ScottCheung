@@ -11,6 +11,7 @@ import { useLanguage } from '../help/helpFunction';
 import { useParams } from 'react-router';
 import { motion, AnimatePresence } from 'framer-motion';
 import Contact from '../conponent/Contact.jsx';
+import WhyMe from '../conponent/WhyMe.jsx';
 
 // if (pathname === '/major/ArtificalInteligence') {
 //   data = course.filter((item) => item.id === "AI");
@@ -53,7 +54,9 @@ export default function Example() {
     };
   }, []);
   return (
-    <div className='relative flex flex-col w-full overflow-y-scroll bg-white'>
+    <div
+      className={`relative flex flex-col w-full overflow-y-scroll bg-gradient-to-b ${data[0].type[0] == 'Master degree' ? 'from-[#f9dd4a]/20' : 'from-[#e3f1fd]'}  from-0% via-white via-[100px] to-gray-100`}
+    >
       <link
         rel='stylesheet'
         href='../style/uicons/css/all/all.css'
@@ -62,7 +65,7 @@ export default function Example() {
       <AnimatePresence>
         <motion.div layout layoutId={localStorage.getItem('currenStu')}>
           <Navbar className='z-50' onHeightChange={handleNavbarHeightChange} />
-          <script src='https://cdn.tailwindcss.com'></script>
+          {/* <script src='https://cdn.tailwindcss.com'></script> */}
 
           <main
             id='main'
@@ -82,49 +85,7 @@ export default function Example() {
                   </div>
                 </header>
               </div>
-              {data[0].type[0] == 'Bacholor degree' && (
-                <a
-                  href={data[0].web}
-                  className={`welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky z-30 `}
-                  style={{ top: `calc(${navbarHeight}px + 10px)` }}
-                >
-                  <div className='flex flex-wrap items-center justify-center'>
-                    <img
-                      loading='lazy'
-                      className='w-[130px] px-7'
-                      src='https://img.picgo.net/2024/12/10/swustlogo70d687130fbd9af2.png'
-                      alt='swustPng'
-                    />
-                    <img
-                      loading='lazy'
-                      className='max-w-[80vw] lg:max-w-[400px] h-auto py-12 px-7'
-                      src='https://img.picgo.net/2024/12/10/swustname843d2b9c22b1f8d9.png'
-                      alt='swustName'
-                    />
-                  </div>
-                </a>
-              )}
 
-              {data[0].type[0] == 'Master degree' && (
-                <a
-                  href={data[0].web}
-                  className={`welcome-video-wall-visblecontainer w-full flex justify-center  py-9 flex-col bg-sky-100 bg-cover bg-center sticky z-30 `}
-                  style={{
-                    top: `calc(${navbarHeight}px + 10px)`,
-                    backgroundImage:
-                      'url(https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png)',
-                  }}
-                >
-                  <div className='flex flex-row items-center justify-center'>
-                    <img
-                      loading='lazy'
-                      className='w-[110px] h-auto'
-                      src='https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png'
-                      alt='UNSW'
-                    />
-                  </div>
-                </a>
-              )}
               <div className='h-auto space-y-6 welcome-video-wall-visblecontainer visblecontainer'>
                 <div className='pt-24 pb-4 text-gray-500'>
                   <h2 className='flex items-center welcomeanimation font-[600] text-[25px] md:text-[30px] lg:text-[40px] text-gray-900 section-intro-headline'>
@@ -132,6 +93,49 @@ export default function Example() {
                     {lang == 1 && '学校信息'}
                   </h2>
                 </div>
+                {data[0].type[0] == 'Bacholor degree' && (
+                  <a
+                    href={data[0].web}
+                    className={`welcome-video-wall-visblecontainer w-full flex justify-center  h-full rounded-[28px] lg:rounded-[40px] overflow-hidden py-[40px]   bg-sky-100 bg-cover bg-center sticky z-30 `}
+                    // style={{ top: `calc(${navbarHeight}px + 10px)` }}
+                  >
+                    <div className='flex items-center justify-center '>
+                      <img
+                        loading='lazy'
+                        className='w-[130px] px-7'
+                        src='https://img.picgo.net/2024/12/10/swustlogo70d687130fbd9af2.png'
+                        alt='swustPng'
+                      />
+                      <img
+                        loading='lazy'
+                        className='max-w-[50vw] lg:max-w-[400px] h-auto py-12 px-7'
+                        src='https://img.picgo.net/2024/12/10/swustname843d2b9c22b1f8d9.png'
+                        alt='swustName'
+                      />
+                    </div>
+                  </a>
+                )}
+
+                {data[0].type[0] == 'Master degree' && (
+                  <a
+                    href={data[0].web}
+                    className={`welcome-video-wall-visblecontainer w-full flex h-[230px] justify-center rounded-[28px] lg:rounded-[40px] overflow-hidden mb-[80px]   bg-[#f9dd4a] bg-cover bg-center sticky z-30 `}
+                    style={{
+                      top: `calc(${navbarHeight}px + 10px)`,
+                      backgroundImage:
+                        'url(https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png)',
+                    }}
+                  >
+                    <div className='flex flex-row items-center justify-center'>
+                      <img
+                        loading='lazy'
+                        className=' h-[80px]'
+                        src='https://www.unsw.edu.au/content/dam/images/graphics/logos/unsw/unsw_0.png'
+                        alt='UNSW'
+                      />
+                    </div>
+                  </a>
+                )}
                 <p className='text-[13px] md:text-[17px] lg:text-[20px]'>
                   {data[0].unides[lang][0]}
                 </p>
@@ -165,8 +169,8 @@ export default function Example() {
             </section>
             <section className=' section section-welcome no-pad-bottom visblecontainer'>
               <div className='welcome-video-wall-visblecontainer  space-y-6 h-auto w-[100%]'>
-                <div className='w-[100%] text-gray-500 pt-24 pb-4  bg-gradient-to-br  from-white from-10% via-white via-90% to-white/0 z-50'>
-                  <h2 className='flex items-center welcomeanimation font-[600] text-[25px] md:text-[30px] lg:text-[40px] text-gray-900 section-intro-headline '>
+                <div className='w-[100%] text-gray-500 pt-24 pb-4   z-50'>
+                  <h2 className='flex items-center welcomeanimation font-[600] text-[25px] md:text-[30px] lg:text-[40px] text-gray-900 '>
                     {lang == 1 && '主要课程'}
                     {lang == 0 && 'Main Course'}
                   </h2>
@@ -186,7 +190,7 @@ export default function Example() {
                   >
                     {lang == 0 && (
                       <thead
-                        className={` text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400 `}
+                        className={` text-gray-700 uppercase  darrk:bg-gray-700 darrk:text-gray-400 `}
                       >
                         <tr>
                           <th
@@ -220,7 +224,7 @@ export default function Example() {
                       <thead
                         className={`${
                           windowWidth <= 786 ? '' : 'hidden'
-                        } text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400 `}
+                        } text-gray-700 uppercase  darrk:bg-gray-700 darrk:text-gray-400 `}
                       >
                         <th className='pl-[2%] py-3 text-center w-[10%]'>
                           序号
@@ -244,7 +248,7 @@ export default function Example() {
                         layout
                         className=''
                       >
-                        <tr className='max-w-full text-center bg-white border-b darrk:bg-gray-800 darrk:border-gray-700 '>
+                        <tr className='max-w-full text-center border-b darrk:bg-gray-800 darrk:border-gray-700 '>
                           <th
                             scope='row'
                             className='px-2 py-4 font-medium text-center text-gray-900 lg:px-6 whitespace-nowrap darrk:text-white'
@@ -271,6 +275,7 @@ export default function Example() {
               </div>
             </section>
             <Education hideTittle={true} simpleVer={true} />
+            <WhyMe />
           </main>
         </motion.div>
       </AnimatePresence>

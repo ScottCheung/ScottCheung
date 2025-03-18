@@ -20,7 +20,7 @@ const Welcomevisblecontainer =
 const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
 const WelcomeItem = Database.Animation.Variant.WelcomeItem;
 
-function WhyMe({ hideTittle }) {
+function WhyMe({ hideTittle, mt }) {
   const { Components, setComponents, whymeCard, setWhymeCard } =
     useAppContext();
   const data = Database.PersonalInfo.Education;
@@ -119,7 +119,7 @@ function WhyMe({ hideTittle }) {
   const WhyMe = (
     <motion.div
       ref={ref1}
-      className={`lg:-mt-[50vh] pb-[10vh] w-[${viewwidth}px]`}
+      className={mt && 'lg:-mt-[50vh]' + ` mb-[100px] w-[${viewwidth}px]`}
     >
       <motion.div
         style={{
@@ -191,7 +191,7 @@ function WhyMe({ hideTittle }) {
                               feature.icon
                             } fi from-[-20%] to-[120%] ${hideTittle ? 'text-[20px] lg:text-[30px]' : 'text-[25px] lg:text-[30px] xl:text-[35px]'}  ${
                               feature.color1 + ' ' + feature.color2
-                            } flex items-center lg:pb-[5px] xl:pb-[10px] bg-clip-text text-transparent bg-gradient-to-br`}
+                            } flex items-center pb-[10px] bg-clip-text text-transparent bg-gradient-to-br`}
                           ></i>
                         </motion.div>
                         <div className='flex justify-start pb-6 sm:pb-3'>

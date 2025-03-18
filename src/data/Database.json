@@ -1258,44 +1258,65 @@
         {
           "type": ["Linkedin", "领英"],
           "icon": "fi-brands-linkedin",
-          "link": "https://www.linkedin.com/in/scottcheung1110/",
-          "name": "scottcheung1110"
+          "blank": "true",
+          "name": "scottcheung1110",
+          "link": "https://www.linkedin.com/in/scottcheung1110/"
         },
         {
-          "type": ["E-mail", "邮件"],
+          "type": ["Email", "邮件"],
           "icon": "fi-rr-envelope",
-          "link": "https://mailto:xianzhe.site@gmail.com",
-          "name": "xianzhe.site@gmail.com"
+          "blank": "true",
+          "name": "xianzhe.site@gmail.com",
+          "link": "https://mailto:xianzhe.site@gmail.com"
         },
         {
-          "type": ["Facebook", " Facebook"],
+          "type": ["Facebook", "脸书"],
           "icon": "fi-brands-facebook",
-          "link": "https://www.facebook.com/profile.php?id=100085874466260",
-          "name": "Xianzhe Zhang"
+          "blank": "true",
+          "name": "Xianzhe Zhang",
+          "link": "https://www.facebook.com/profile.php?id=100085874466260"
         },
         {
           "type": ["Phone", "电话"],
           "icon": "fi-sr-circle-phone-flip",
-          "link": "tel:+61434344292",
-          "name": "+61 0434344292"
+          "blank": "true",
+          "name": "+61 0434344292",
+          "link": "tel:+61434344292"
         },
         {
           "type": ["Instagram", "Instagram"],
           "icon": "fi-brands-instagram",
-          "link": "https://www.instagram.com/sydneyscottcheung",
-          "name": "scottzhang9779"
+          "blank": "true",
+          "name": "scottzhang9779",
+          "link": "https://www.instagram.com/sydneyscottcheung"
         },
         {
-          "type": ["XiaoHongShu", "小红书"],
+          "type": ["Red book", "小红书"],
           "icon": "fi-sr-book-alt",
-          "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579",
-          "name": "贤哲scott"
+          "blank": "true",
+          "name": "贤哲scott",
+          "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579"
+        },
+        {
+          "type": ["Youtube", "油管"],
+          "icon": "fi-brands-youtube",
+          "blank": "true",
+          "name": "sydneyscottcheung",
+          "link": "https://www.youtube.com/@sydneyscottcheung"
+        },
+        {
+          "type": ["Ticktok", "Tiktok"],
+          "icon": "fi-brands-tik-tok",
+          "blank": "true",
+          "name": "scottcheung1110",
+          "link": "https://www.tiktok.com/@scottcheung1110"
         },
         {
           "type": ["Wechat", "微信"],
           "icon": "fi-sr-comments",
-          "link": "https://www.wechat.com/",
-          "name": "Scottt1110"
+          "blank": "true",
+          "name": "Scottt1110",
+          "link": "https://www.wechat.com/"
         }
       ]
     },

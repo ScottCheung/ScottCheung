@@ -149,7 +149,7 @@ function Capability() {
   );
 
   return (
-    <motion.div className='z-30 md:-mt-[250px] w-full flex'>
+    <motion.div className='z-30 md:-mt-[100px] lg:-mt-[20px] w-full flex'>
       {Capability}
     </motion.div>
   );

@@ -53,7 +53,7 @@ export default function WhyM() {
         className=''
         style={
           (windowWidth < 768 && {
-            ...bgPic(selectedWhyMeItem.pic[0], '600px auto', 'bottom center'),
+            ...bgPic(selectedWhyMeItem.pic[1], '600px auto', 'bottom center'),
           }) ||
           null
         }
@@ -119,7 +119,7 @@ export default function WhyM() {
               style={
                 {
                   ...bgPic(
-                    selectedWhyMeItem.pic[0],
+                    selectedWhyMeItem.pic[1],
                     windowWidth > 768 ? '500px auto' : '350px auto',
                     'bottom right',
                   ),

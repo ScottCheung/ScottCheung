@@ -50,6 +50,7 @@
         },
         {
           "link": "https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Scott%20Cheung.pdf",
+          "blank": true,
           "name": ["Download CV", "简历下载"],
           "icon": "fi-rr-memo-pad",
           "status": "fi-br-download"
@@ -61,10 +62,10 @@
           "status": "fi-sr-lock"
         },
         {
-          "link": "/project",
-          "name": ["Project", "作品"],
-          "icon": "fi-rr-folder",
-          "status": "fi-sr-eye"
+          "link": "/workbench",
+          "name": ["Workbench", "工具"],
+          "icon": "fi-rr-corporate-alt",
+          "status": "fi-sr-lock"
         },
         {
           "link": "/networkingmsg",
@@ -109,30 +110,80 @@
       ]
     },
     {
-      "name": ["Workbench", "工具"],
-      "href": "/workbench",
-      "icon": "fi-rr-corporate-alt",
-      "des": [" Personal Workbench  ~ ", " 个人工作台 ~ "],
+      "href": "/project",
+      "name": ["Project", "项目"],
+      "icon": "fi-rr-folder",
+      "status": "fi-sr-eye",
+
+      "des": [" Personal project demo ~ ", " 参与的项目 demo ~ "],
       "expression": "(⌐■_■) 💻",
       "isTopShow": true,
       "scondMenu": [
         {
-          "link": "/rentmsg",
-          "name": ["House Rental", "租房系统"],
-          "icon": "fi-rr-house-building",
-          "status": "fi-sr-lock"
+          "link": "https://igrapher.vercel.app",
+          "blank": true,
+          "name": ["Igrapher", "数据可视化工具"],
+          "icon": "fi-rr-network-analytic",
+          "des": [
+            "Interactive data visualization platform to easily explore data insights.",
+            "交互式数据可视化平台，轻松探索数据洞察。"
+          ],
+          "status": "fi-sr-eye"
         },
         {
-          "link": "/tool",
+          "link": "https://gobell.vercel.app",
+          "blank": true,
+          "name": ["E-Com", "电子商务平台"],
+          "icon": "fi-rr-shopping-cart",
+          "des": [
+            "Modern online shopping experience, easy to browse and buy goods.",
+            "现代化的在线购物体验，便捷浏览和购买商品。"
+          ],
+          "status": "fi-sr-eye"
+        },
+        {
+          "link": "https://perfume-pearl.vercel.app",
+          "blank": true,
+          "name": ["Perfume", "香水首页"],
+          "icon": "fi-rr-air-freshener",
+          "des": [
+            "Elegant perfume display page, presenting exquisite product details and brand story.",
+            "优雅香水展示页面，呈现精致的产品细节和品牌故事。"
+          ],
+          "status": "fi-sr-eye"
+        },
+        {
+          "link": "https://toolslib-delta.vercel.app/",
+          "blank": true,
           "name": ["Tools panel", "工具仪表"],
           "icon": "fi-rr-tools",
+          "des": [
+            "A versatile collection of tools that provide easy daily productivity tools.",
+            "多功能工具集合，提供便捷的日常效率工具。"
+          ],
           "status": "fi-sr-eye"
         },
         {
           "link": "/table2json",
+          "blank": true,
           "name": ["Data converter", "数据转换"],
           "icon": "fi-rr-database",
+          "des": [
+            "Easy to use data format conversion tool that supports multiple data types.",
+            "简单易用的数据格式转换工具，支持多种数据类型。"
+          ],
           "status": "fi-sr-eye"
+        },
+        {
+          "link": "/rentmsg",
+          "blank": true,
+          "name": ["House Rental", "租房系统"],
+          "icon": "fi-rr-house-building",
+          "des": [
+            "An efficient rental management system that connects tenants and landlords.",
+            "高效的房屋租赁管理系统，连接租客和房东。"
+          ],
+          "status": "fi-sr-lock"
         }
       ]
     },
@@ -150,36 +201,55 @@
         {
           "name": ["Linkedin", "领英"],
           "icon": "fi-brands-linkedin",
+          "blank": true,
           "link": "https://www.linkedin.com/in/scottcheung1110/"
         },
         {
-          "name": ["E-mail", "邮件"],
+          "name": ["Email", "邮件"],
           "icon": "fi-rr-envelope",
+          "blank": true,
           "link": "https://mailto:xianzhe.site@gmail.com"
         },
         {
           "name": ["Facebook", " Facebook"],
           "icon": "fi-brands-facebook",
+          "blank": true,
           "link": "https://www.facebook.com/profile.php?id=100085874466260"
         },
         {
           "name": ["Phone", "电话"],
           "icon": "fi-sr-circle-phone-flip",
+          "blank": true,
           "link": "tel:+61434344292"
         },
         {
           "name": ["Instagram", "Instagram"],
           "icon": "fi-brands-instagram",
+          "blank": true,
           "link": "https://www.instagram.com/sydneyscottcheung"
         },
         {
-          "name": ["Xiaohongshu", "小红书"],
+          "name": ["Red book", "小红书"],
           "icon": "fi-sr-book-alt",
+          "blank": true,
           "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579"
+        },
+        {
+          "name": ["Youtube", "Youtube"],
+          "icon": "fi-brands-youtube",
+          "blank": true,
+          "link": "https://www.youtube.com/@sydneyscottcheung"
+        },
+        {
+          "name": ["Ticktok", "Tiktok"],
+          "icon": "fi-brands-tik-tok",
+          "blank": true,
+          "link": "https://www.tiktok.com/@scottcheung1110"
         },
         {
           "name": ["Wechat", "微信"],
           "icon": "fi-sr-comments",
+          "blank": true,
           "link": "https://www.wechat.com/"
         }
       ]

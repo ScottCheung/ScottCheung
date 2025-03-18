@@ -60,7 +60,7 @@ function Education({ hideTittle, simpleVer }) {
         >
           <div
             className={`${simpleVer ? 'hidden' : ''} rounded-[14px] lg:rounded-[28px] w-full h-auto transition-all duration-300 relative  lg:w-[800px]  lg:h-full overflow-hidden ${
-              hideTittle ? 'bg-gray-50 hover:bg-sky-100/50' : 'bg-white/80'
+              hideTittle ? 'bg-white hover:bg-sky-100/50' : 'bg-white'
             }`}
           >
             <img
@@ -112,7 +112,7 @@ function Education({ hideTittle, simpleVer }) {
           >
             <div
               className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] transition-all duration-300 relative  w-auto h-auto ${simpleVer ? 'lg:w-[300px]' : 'lg:w-[500px]'}  md:h-auto ${
-                hideTittle ? 'bg-gray-50 hover:bg-sky-100/50' : 'bg-white/80'
+                hideTittle ? 'bg-white hover:bg-sky-100/50' : 'bg-white'
               }`}
             >
               <div
