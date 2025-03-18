@@ -111,7 +111,7 @@ const Section = ({ title, items, Icon }) => (
 );
 
 export default function Log() {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
   const latestEntryKey = Object.keys(packageinfo).sort().pop();
   const latestEntry = packageinfo[latestEntryKey];
@@ -143,8 +143,8 @@ export default function Log() {
 
   useEffect(() => {
     const savedVersion = localStorage.getItem('version');
-    if (savedVersion === latestEntry.version) {
-      setIsOpen(false);
+    if (savedVersion !== latestEntry.version) {
+      setIsOpen(true);
     }
   }, [latestEntry.version]);
 
