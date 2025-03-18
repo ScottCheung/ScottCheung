@@ -13,7 +13,7 @@ export default function Life() {
   const [Index, setIndex] = useState(null);
 
   return (
-    <div className='-my-[20px] mb-[50px] z-40'>
+    <div className='-my-[0px] mb-[50px] z-40'>
       <div
         style={{
           paddingInline:
