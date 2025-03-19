@@ -1,12 +1,51 @@
 [
   {
+    "id": 53478,
+    "title": "Street Market Sales",
+    "type": "Contract",
+    "company": "Retail Entrepreneur",
+    "startTime": "Jun 2015",
+    "endTime": "Sep 2015",
+    "image": "https://cdn.pixabay.com/photo/2016/11/22/19/08/hangers-1850082_1280.jpg",
+    "backgroundColor": "bg-yellow-300",
+    "skill": [
+      "Sales",
+      "Customer service",
+      "Inventory management",
+      "Negotiation",
+      "Social media promotion"
+    ],
+    "points": [
+      {
+        "title": "Independent Sales Management",
+        "description": "Handled everything from sourcing, pricing, and selling clothes independently, building strong customer relationships to ensure steady sales."
+      },
+      {
+        "title": "High Sales Achievement",
+        "description": "Sold up to 134 items in one day, increasing sales through understanding customer needs and effective pitching."
+      },
+      {
+        "title": "Customer Engagement",
+        "description": "Engaged with customers to help them find the right clothes, ensuring they were satisfied and likely to return."
+      },
+      {
+        "title": "Inventory Management",
+        "description": "Managed inventory and adjusted prices to keep the stall stocked with popular items, boosting profits."
+      },
+      {
+        "title": "Social Media Promotion",
+        "description": "Used social media and word-of-mouth to attract more customers and increase visibility."
+      }
+    ]
+  },
+  {
     "id": 3,
     "title": "Project Manager",
     "type": "Full Time",
     "company": "Zhaoshi Education",
     "startTime": "July 2018",
     "endTime": "May 2018",
-    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-03.jpg",
+    "image": "https://cdn.pixabay.com/photo/2017/08/27/02/42/children-2685070_1280.jpg",
     "backgroundColor": "bg-blue-300",
     "skill": [
       "Student Recruitment",
@@ -46,14 +85,53 @@
     ]
   },
   {
+    "id": 32642,
+    "title": "Waiter",
+    "type": "Contract",
+    "company": "Ying Restaurant",
+    "startTime": "Oct 2024",
+    "endTime": "Dec 2024",
+    "image": "https://cdn.pixabay.com/photo/2016/08/21/14/49/cafe-1609795_1280.jpg",
+    "backgroundColor": "bg-red-300",
+    "skill": [
+      "Customer service",
+      "Complaint resolution",
+      "Teamwork",
+      "Time management",
+      "Communication"
+    ],
+    "points": [
+      {
+        "title": "Exceptional Customer Service",
+        "description": "Consistently provided exceptional customer service, ensuring a positive dining experience by anticipating customer needs and addressing any concerns promptly."
+      },
+      {
+        "title": "Proactive Complaint Handling",
+        "description": "Effectively managed customer complaints, resolving issues quickly and professionally to ensure customer satisfaction and loyalty."
+      },
+      {
+        "title": "Menu Expertise & Recommendations",
+        "description": "Developed a deep understanding of the menu, offering tailored recommendations to enhance customer satisfaction and guide them in their selections."
+      },
+      {
+        "title": "Efficient Order Processing & Coordination",
+        "description": "Processed orders efficiently and communicated seamlessly with kitchen staff to ensure timely and accurate food delivery."
+      },
+      {
+        "title": "Maintaining Hygiene & Cleanliness",
+        "description": "Upheld the highest standards of cleanliness, ensuring a safe and hygienic environment for customers and staff alike."
+      }
+    ]
+  },
+  {
     "id": 2,
-    "title": "Web Developer",
+    "title": "UI Designer",
     "type": "Contract",
     "company": "Domi Group Buying",
     "startTime": "Aug 2018",
-    "endTime": "Sep 2019",
-    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-02.jpg",
-    "backgroundColor": "bg-red-300",
+    "endTime": "Sep 2020",
+    "image": "https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg",
+    "backgroundColor": "bg-orange-300",
     "skill": [
       "React",
       "HTML",
@@ -73,22 +151,23 @@
     "points": [
       {
         "title": "UI/UX Interface Enhancement",
-        "description": "Enhanced UI/UX using Photoshop and Figma, integrating a Customer Behaviour Analytics module that increased user engagement by 54% through improved gaze metrics."
+        "description": "Enhanced UI/UX using <s>Photoshop<s> and <s>Figma<s>, integrating a Customer Behaviour Analytics module that increased user engagement by 54% through improved gaze metrics."
       },
       {
         "title": "E-commerce Platform Optimization",
-        "description": "Overhauled the e-commerce platform with HTML, CSS, JavaScript, and React, enhancing user experience and payment processes. Designed dedicated product pages and promotional posters, significantly boosting product visibility and sales."
+        "description": "Overhauled the e-commerce platform with <s>HTML<s>, <s>CSS<s>, <s>JavaScript<s>, and <s>React<s>, enhancing user experience and payment processes. Designed dedicated product pages and promotional posters, significantly boosting product visibility and sales."
       },
       {
         "title": "SEO and Performance Optimization",
-        "description": "Boosted website performance and SEO by 22% and 14% respectively, utilizing Google Chrome DevTools and Lighthouse for targeted optimizations."
+        "description": "Boosted website performance and SEO by 22% and 14% respectively, utilizing <s>Google Chrome DevTools<s> and <s>Lighthouse<s> for targeted optimizations."
       },
       {
         "title": "Performance Reporting System Development",
-        "description": "Developed a dynamic performance reporting system using React and Tailwind, enhanced with Framer Motion animations. This system features Excel export capabilities, providing management with detailed, actionable insights."
+        "description": "Developed a dynamic performance reporting system using <s>React<s> and <s>Tailwind<s>, enhanced with <s>Framer Motion<s> animations. This system features Excel export capabilities, providing management with detailed, actionable insights."
       }
     ]
   },
+
   {
     "id": 1,
     "title": "Financial Assistant",
@@ -96,7 +175,7 @@
     "company": "SWUST Analytical Testing Centre",
     "startTime": "Mar 2021",
     "endTime": "Feb 2022",
-    "image": "https://s3-us-west-2.amazonaws.com/s.cdpn.io/53148/deathtostock-00.jpg",
+    "image": "https://cdn.pixabay.com/photo/2019/12/02/08/04/city-4667143_1280.jpg",
     "backgroundColor": "bg-blue-300",
     "skill": [
       "Financial Auditing",
@@ -125,12 +204,13 @@
       }
     ]
   },
+
   {
     "id": 0,
     "title": "Uber Eats Delivery Driver",
     "type": "Part Time",
     "company": "Uber Eats",
-    "startTime": "Dec 2022",
+    "startTime": "Oct 2022",
     "endTime": "July 2023",
     "image": "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_1116,h_1116/v1670495515/assets/69/2878ac-8a8e-48fe-8e9a-cdcd73a3e263/original/Courier_With_Bags_v2.png",
     "backgroundColor": "bg-green-300",
@@ -150,7 +230,7 @@
         "description": "Completed over 500 deliveries with an average delivery time of under 30 minutes, ensuring timely and accurate service to customers."
       },
       {
-        "title": "Customer Interaction",
+        "title": "Customer Communication",
         "description": "Maintained high customer satisfaction through professional and courteous communication, resolving any issues promptly to ensure positive experiences.By editing some messages in advance, it improves the response time of interaction with customers and significantly increases user satisfaction."
       },
       {
@@ -160,6 +240,30 @@
       {
         "title": "Safety and Compliance",
         "description": "Strictly adhered to traffic laws and safety guidelines, achieving a record of zero accidents or violations during the entire tenure."
+      },
+      {
+        "title": "Efficient Delivery",
+        "description": "Efficiently completed takeout delivery tasks, ensuring punctual and safe delivery of meals, and improving customer satisfaction."
+      },
+      {
+        "title": "Pre-Edited Text Templates",
+        "description": "Prepared and edited a variety of text templates in advance to quickly communicate with customers when problems arise and improve service efficiency."
+      },
+      {
+        "title": "Emergency Response",
+        "description": "Quickly responded to emergencies by using pre-edited text templates to promptly inform customers about order progress, ensuring timely communication while safeguarding customer privacy during delivery."
+      },
+      {
+        "title": "Handling Multiple Orders",
+        "description": "Handled multiple order tasks during peak hours to maintain efficient operations and increase daily order deliveries."
+      },
+      {
+        "title": "Traffic & Safety Compliance",
+        "description": "Complied with traffic regulations to ensure safe and proper operation during delivery."
+      },
+      {
+        "title": "Vehicle Maintenance",
+        "description": "Maintained good vehicle condition and checked equipment regularly to ensure smooth delivery."
       }
     ]
   },
@@ -193,50 +297,52 @@
     ],
     "points": [
       {
-        "title": "Developed UI Components",
-        "link": "https://gobell.vercel.app/",
-        "description": "converted <s>Figma<s> designs into interactive and responsive react components using <s>TypeScript<s>, <s>ReactJS<s>, and <s>Next.js<s> base on <s>best practices<s>."
+        "title": "Developed and maintained Apps",
+        "description": "Developed and maintained Apps using <s>HTML<s>, <s>CSS<s>, <s>React.js<s>, <s>Next.js<s>, <s>Redux<s>, improving web performance by 20%."
       },
       {
-        "title": "Performance Optimization",
-        "description": "used Google <s>Lighthouse<s> for performance analysis to optimize the web application."
+        "title": "Developed and maintained RESTful APIs",
+        "description": "Developed and maintained <s>RESTful APIs<s> using <s>Node.js<s>, <s>Express.js<s>,<s>Python<s>, <s>C#<s> and <s>.NET<s>, following best practices."
       },
       {
-        "title": "Integrated RESTful APIs",
-        "description": "Developed <s>RESTful APIs<s> using <s>Java<s> and <s>Spring Boot<s> to facilitate communication ( APIs integration ) between the front-end and back-end, ensuring secure and efficient data transfer ensuring seamless user experiences."
+        "title": "Integrated third-party services",
+        "description": "Integrated third-party services such as <s>Twilio<s>, <s>Shopify<s>, <s>Mapbox<s>, <s>Strapi<s> and <s>Stripe<s>, enhancing functionality."
       },
       {
-        "title": "Implemented unit tests",
-        "description": "Implemented unit tests using <s>Jest<s> and <s>React Testing Library<s> to ensure component functionality and stability."
+        "title": "Wrote and optimized SQL queries",
+        "description": "Wrote and optimized <s>SQL<s> queries to improve database performance."
       },
       {
-        "title": "Built the front-end architecture",
-        "link": "https://github.com/Xianzhezhang97/gobell",
-        "description": "Built the front-end architecture, using <s>Next.js<s> to ensure <s>SEO Friendly<s> and integrated <s>Redux<s> for efficient state management, making the project scalable, using <s>GIT<s> easy to manage."
+        "title": "Implemented unit and end-to-end tests",
+        "description": "Implemented unit and end-to-end tests using <s>Jest<s> and <s>Cypress<s>, reducing errors by 30%."
       },
       {
-        "title": "Error handling",
-        "description": "Error handling, identifying and diagnosing root causes of errors in real-time. Collaborated with cross-functional teams to develop and test patches, ensuring minimal downtime and impact on users."
+        "title": "Optimized deployment pipeline",
+        "description": "Optimized <s>GitHub Actions<s>, <s>Docker<s> and <s>AWS<s>, cutting deployment time by 50%."
       },
       {
-        "title": "Led UI/UX Design",
-        "link": "xianzhe.site/gobelldesign",
-        "description": "designed client/business UI/UX interfaces, promotional flyers, brochures, pull-up banners and 3 membership cards using <s>Figma<s> and <s>Photoshop<s>."
+        "title": "Authentication and security",
+        "description": "Experienced with <s>OAuth<s>, <s>JWT<s> authentication, and security best practices."
       },
       {
-        "title": "UI/UX Enchancement",
-        "link": "https://gobell.vercel.app/",
-        "description": "UI/UX Enchancement. Developed and customized animations using  Framer Motion for UI. Improved interface responsiveness at least by <s>20%.<s>"
+        "title": "Implemented i18n solutions",
+        "description": "Implemented <s>i18n<s> solutions using <s>react-i18next<s>, enabling seamless multi-language support."
       },
       {
-        "title": "Established design system",
-        "link": "https://gobell.vercel.app/test",
-        "description": "for front-end development, including color schemes, typography, and spacing rules, reducing team communication overhead and cross-browser compatibility and responsiveness."
+        "title": "AWS and cloud technologies",
+        "description": "Experienced with <s>AWS<s> (<s>EC2<s>, <s>S3<s>, <s>Lambda<s>, <s>Terraform<s>), eager to upskill in <s>Azure<s> cloud technologies."
       },
       {
-        "title": "Implemented CI/CD",
-        "link": "m.gobell.au/",
-        "description": "created script to deploy web application to <s>AWS EC2<s>, <s>AWS S3 bucket<s>."
+        "title": "Designed UI and implemented design system",
+        "description": "Designed UI in <s>Figma<s> and implemented inner design system using <s>Tailwind<s>, <s>Framer Motion<s>, <s>GSAP<s>, and <s>3.js<s>."
+      },
+      {
+        "title": "Optimized SEO",
+        "description": "Optimized <s>SEO<s> by improving web elements like <s>meta tags<s>, <s>headers<s> and <s>content structure<s> using <s>Google Analytics<s> and <s>Lighthouse<s>."
+      },
+      {
+        "title": "Worked in Agile environments",
+        "description": "Worked in <s>Agile<s> environments using <s>Jira<s> or <s>Scrum<s>, collaborating cross-functionally for efficient development."
       }
     ]
   }

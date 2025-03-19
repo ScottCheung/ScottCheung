@@ -295,7 +295,7 @@ function Skill() {
                 </motion.div>
                 <button
                   disabled={content.skills.length <= 12}
-                  className='max-w-3xl h-0 flex items-center gap-[20px] mx-auto my-4 text-white/50 text-[15px] lg:text-[20px]'
+                  className='max-w-3xl h-[30px] flex items-center gap-[20px] mx-auto my-4 text-white/50 text-[15px] lg:text-[20px]'
                 >
                   {content.skills.length > 12 && (
                     <Toggle
