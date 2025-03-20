@@ -124,7 +124,7 @@ function KeyFeature() {
                 key={index}
                 variants={WelcomeItem}
                 transition={StagerFadeInUp}
-                viewport={{ once: true, margin: '-10%' }}
+                viewport={{ once: true, margin: '-30%' }}
                 layout
                 className='flex group relative px-[20px] rounded-[28px] hover:bg-gradient-to-t from-lime-500/20 to-emerald-500/20 hover:backdrop-blur-md hover:shadow-2xl focus:shadow-2xl  col-span-6 md:col-span-4 lg:col-span-4'
               >
@@ -136,7 +136,7 @@ function KeyFeature() {
                     style={{ fontFamily: 'Hey August, sans-serif' }}
                     className='flex items-center text-[100px] lg:text-[150px] text-white'
                   >
-                    <N n={KeyFeature.no} d={2} />
+                    <N n={KeyFeature.no} d={1.3 * (index + 1)} />
                   </div>
                   <div className='flex items-center justify-center w-full -mt-[30px]'>
                     <div className='flex gap-[20px] items-center text-transparent bg-gradient-to-br bg-clip-text from-[-20%] to-[120%] from-lime-500 to-emerald-500'>

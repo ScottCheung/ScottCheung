@@ -28,6 +28,7 @@ import Igrapher from './pages/projects/igrapher.jsx';
 import Design from './pages/projects/design.jsx';
 import Story from './pages/story/story.jsx';
 import PP from './pages/pp.jsx';
+import Music from './pages/Music';
 
 const router = createBrowserRouter([
   {
@@ -143,6 +144,10 @@ const router = createBrowserRouter([
   {
     path: '/pp',
     element: <PP />,
+  },
+  {
+    path: '/music',
+    element: <Music />,
   },
 ]);
 

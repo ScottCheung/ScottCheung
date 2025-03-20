@@ -87,7 +87,7 @@
           "icon": "fi-sr-music-alt",
           "name": ["Music", "音 乐"],
           "link": "/music",
-          "status": "fi-sr-eye-crossed"
+          "status": "fi-sr-eye"
         },
         {
           "icon": "fi-sr-user-music",

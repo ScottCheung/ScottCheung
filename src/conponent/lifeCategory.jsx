@@ -37,7 +37,7 @@ export default function Life() {
             </div>
             <div
               className={`absolute bottom-0 left-0 right-0 transition-all duration-500 flex flex-col  w-full  h-[100px]  ${
-                HoverColor && Index == index ? 'bg-gray-950' : ' bg-white'
+                HoverColor && Index == index ? 'bg-sky-900' : ' bg-white'
               } rounded-[12px] `}
             >
               <div className='flex-auto px-6 py-6 text-gray-750 hover:text-white'>

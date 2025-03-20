@@ -8,19 +8,21 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../help/helpFunction';
 import Story from '../pages/story/story';
 import LifeCategory from '../conponent/lifeCategory';
+import Music from '../conponent/music';
 
 const Lifes = database.PersonalInfo.Lifes;
 const introText = [
   {
     title: 'Embracing Life, Creating My Story',
     quato:
-      'Life is not just about passing time, but about filling every moment with meaning.',
+      'Life is not just about passing time, but about filling every moment with meaning.I believe that in this world, there is always a beam of light belongs to me, there is always a stage belongs to me, and there is always a person who comes for me.',
     content:
-      'I believe in living passionately, in embracing every sunrise with curiosity and every challenge with courage. Life is not just a journey—it’s a masterpiece that I create with my own hands, filled with adventure, laughter, and love. I cherish the people who walk this path with me, those who bring warmth, inspiration, and strength. Every connection, every moment, every experience shapes the story I tell. And I choose to make it extraordinary. This is my life—bold, vibrant, and deeply felt. 🌿',
+      'I believe in living passionately, in embracing every sunrise with curiosity and every challenge with courage. Life is not just a journey—it’s a masterpiece that I create with my own hands, filled with adventure, laughter, and love. I cherish the people who walk this path with me, those who bring warmth, inspiration, and strength. Every connection, every moment, every experience shapes the story I tell. And I choose to make it extraordinary. This is my life—bold, vibrant, and deeply felt. 🌿✨',
   },
   {
     title: '热爱生活，书写我的故事',
-    quato: '人生不仅仅是时间的流逝，而是赋予每一刻真正的意义。',
+    quato:
+      '人生不仅仅是时间的流逝，而是赋予每一刻真正的意义。我相信这个世界上，总有一束光是属于我的，总有一个舞台是属于我的，总有一个人是为我而来的。',
     content:
       '我热爱生活，喜欢用好奇去迎接每一个清晨，用勇气去面对每一次挑战。人生不是一场简单的旅程，而是一幅我亲手描绘的画卷，充满探索、欢笑与热爱。我珍惜那些与我同行的人，他们带来温暖、灵感与力量。每一段关系、每一个瞬间、每一次经历，都是构成我故事的重要篇章。而我选择，让它熠熠生辉。这就是我的人生——大胆、鲜活、充满力量。🌿✨',
   },
@@ -91,7 +93,7 @@ export default function Life() {
         className='py-[50px] bg-gray-100 px-[10px] lg:px-[30px]'
       >
         <LifeCategory />
-        <div>
+        {/* <div>
           <div className='flex items-center justify-between '>
             <div className='relative z-20 w-full h-full'>
               <div className='right-0 w-full '>
@@ -107,11 +109,27 @@ export default function Life() {
               </div>
             </div>
           </div>
+        </div> */}
+
+        <div className='flex items-center justify-center min-h-screen px-6 text-left'>
+          <div className='relative z-20 w-full max-w-4xl  lg:max-w-[1200px] gap-y-[20px]'>
+            <h1 className='animate__animated animate__zoomIn text-black font-black lg:text-[50px] text-[35px] mb-6'>
+              {text.title}
+            </h1>
+            <blockquote className='animate__animated my-[50px] border-sky-500 animate__fadeInUp mt-4 sm:text-[20px] text-[15px] text-gray-600 italic border-l-4  pl-[30px]'>
+              {text.quato}
+            </blockquote>
+            <p className='animate__animated animate__fadeInUp mb-[50px] mt-4 sm:text-[20px] text-[15px] text-gray-600 leading-relaxed'>
+              {text.content}
+            </p>
+            <Music />
+          </div>
         </div>
       </div>
+
       <Story />
 
-      <Contact />
+      {/* <Contact /> */}
     </div>
   );
 }
