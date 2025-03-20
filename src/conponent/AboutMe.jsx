@@ -64,7 +64,7 @@ function SelfDescribing() {
 
   const { scrollYProgress } = useScroll({
     target: ref1,
-    offset: ['0vh', '80vh', '280vh', '350vh'], // 调整偏移量使滚动效果更平缓
+    offset: ['0vh', '80vh', '280vh', '360vh'], // 调整偏移量使滚动效果更平缓
   });
 
   // 根据滚动进度计算位移
@@ -76,7 +76,7 @@ function SelfDescribing() {
   const y = useTransform(
     scrollYProgress,
     [0, 0.4, 0.5, 1.3, 1],
-    ['20vh', '10vh', '0vh', '-60vw', '-145vh'],
+    ['20vh', '10vh', '0vh', '-90vw', '-145vh'],
   );
   const width = useTransform(
     scrollYProgress,
@@ -116,7 +116,10 @@ function SelfDescribing() {
 
   return (
     <AnimatePresence>
-      <motion.div ref={ref1} className=' lg:h-[500vh]  relative w-full block'>
+      <motion.div
+        ref={ref1}
+        className=' lg:h-[360vh]  w-full flex flex-col overflow-y-scrollW'
+      >
         <motion.div
           style={{
             backgroundImage: `url(${data.pic})`,
@@ -128,7 +131,7 @@ function SelfDescribing() {
             borderBottomRightRadius: isMobile ? 0 : borderBottomRightRadius,
             y: isMobile ? 0 : y,
           }}
-          className='sticky top-0 z-20 flex flex-col items-center justify-center w-full transform-gppuu'
+          className='sticky top-0 z-20 flex flex-col h-[150vh] items-center justify-center w-full'
         >
           <motion.span
             style={{

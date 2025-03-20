@@ -179,7 +179,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
     <AnimatePresence>
       <motion.div
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className={`w-full z-50 h-0 duration-700 fixed   ${
+        className={`w-screen  z-50 h-0 duration-700 fixed   ${
           isScrolling || Components.NavBar === 'hide' ?
             '  -top-[100px]'
           : ' top-0 '
