@@ -31,17 +31,22 @@ export default function Life() {
   const text = introText[lang];
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
-  useLayoutEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
+  // useLayoutEffect(() => {
+  //   const handleResize = () => {
+  //     setWindowWidth(window.innerWidth);
+  //   };
+  //   window.addEventListener('resize', handleResize);
+  //   return () => {
+  //     window.removeEventListener('resize', handleResize);
+  //   };
+  // }, []);
+
+  document.body.style.overflowX = 'hidden';
   return (
-    <div className={`w-[${windowWidth}px]`}>
+    <div
+      draggable={false}
+      className={`w-screen h-full overflow-hidden flex flex-col`}
+    >
       <Navbar topTextColor={true} />
 
       <div className='relative flex items-center  h-[50vh] lg:h-[110vh] content-center justify-center '>
@@ -77,7 +82,7 @@ export default function Life() {
         </motion.div>
       </div>
 
-      <section
+      <div
         style={{
           paddingInline:
             window.innerWidth > 1024 &&
@@ -103,7 +108,7 @@ export default function Life() {
             </div>
           </div>
         </div>
-      </section>
+      </div>
       <Story />
 
       <Contact />

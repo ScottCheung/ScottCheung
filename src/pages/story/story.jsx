@@ -124,7 +124,7 @@ export default function Ins(nav) {
 
     setIsLoading(true);
     setTimeout(() => {
-      const nextItems = posts.slice(items.length, items.length + 20);
+      const nextItems = posts.slice(items.length, items.length + 10);
       if (nextItems.length === 0) {
         setHasMoreItems(false);
       }
@@ -134,7 +134,7 @@ export default function Ins(nav) {
   };
 
   return (
-    <div className='flex min-h-screen p-3 bg-gray-100'>
+    <div className='flex w-full p-3 overflow-x-hidden bg-gray-100'>
       {/* <Navbar BG={'bg-gray-100'} /> */}
 
       <div className='pt-[140px] flex flex-col w-screen h-full overflow-x-hidden items-center justify-start'>

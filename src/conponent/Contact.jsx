@@ -57,7 +57,7 @@ function Contact({ isTopOut }) {
           isOut ? 'opacity-50' : 'opacity-60'
         }  `}
       ></span>
-      <div className='z-20 lg:pt-[100px]'>
+      <div className='z-20 lg:pt-[100px] px-[10px]'>
         <AnimatePresence>
           <ScrollableContainer
             gap={10}
@@ -226,7 +226,7 @@ function Contact({ isTopOut }) {
                   <motion.div
                     className='flex h-full bg-white rounded-full'
                     animate={{ width: `${5 + scrollProgress * 100}%` }}
-                    transition={{ duration: 0.2 }}
+                    transition={{ duration: 0 }}
                   />
                 </div>
               </div>

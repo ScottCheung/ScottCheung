@@ -179,7 +179,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
     <AnimatePresence>
       <motion.div
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className={`w-screen  z-50 h-0 duration-700 fixed   ${
+        className={` z-50 h-0 duration-700 fixed   overflow-x-clip ${
           isScrolling || Components.NavBar === 'hide' ?
             '  -top-[100px]'
           : ' top-0 '
@@ -199,7 +199,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             layout
-            className={`flex flex-col w-full   ${BG} overflow-hidden
+            className={`flex flex-col w-screen  ${BG} overflow-hidden
         ${
           windowWidth < 768 ?
             ` pr-[5%]  ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`
