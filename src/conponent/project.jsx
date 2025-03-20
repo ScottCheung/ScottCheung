@@ -116,7 +116,7 @@ function Education({ hideTittle, simpleVer }) {
           }
           initial='hidden'
           whileInView='visible'
-          viewport={{ once: false, margin: '-30%' }}
+          viewport={{ once: true, margin: '-30%' }}
           className={
             simpleVer ?
               'grid grid-cols-12 w-full gap-[20px] px-[20px] '

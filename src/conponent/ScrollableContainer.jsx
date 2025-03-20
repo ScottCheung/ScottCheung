@@ -176,7 +176,7 @@ const ScrollableContainer = ({
         }
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: false, margin: '-30%' }}
+        viewport={{ once: true, margin: '-30%' }}
         onAnimationComplete={scrollToRight}
         style={{
           paddingInline:
