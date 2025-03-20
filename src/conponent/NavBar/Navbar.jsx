@@ -203,7 +203,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
         ${
           windowWidth < 768 ?
             ` pr-[5%]  ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`
-          : ` ${isTop && isHomeOrRoot ? 'px-[5%] lg:pt-[50px] ' : ''} 
+          : ` ${isTop && isHomeOrRoot ? ' lg:pt-[50px] ' : ''} 
               `
         }
         ${

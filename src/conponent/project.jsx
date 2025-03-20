@@ -75,7 +75,7 @@ function Education({ hideTittle, simpleVer }) {
   };
 
   return (
-    <div className='w-screen'>
+    <div className='w-full'>
       {!simpleVer && (
         <div className='flex justify-center group  py-[10px] '>
           <div

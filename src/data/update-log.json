@@ -3277,5 +3277,32 @@
         "通过优化图片和懒加载提高了加载速度。"
       ]
     ]
+  },
+  "2025-03-20T05:46:27.125Z": {
+    "version": "7.0.1",
+    "time": "2025-03-20T05:46:27.125Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Project Navbar visual Patch Update",
+      "项目顶端栏显示优化更新"
+    ],
+    "new": [],
+    "fix": [
+      [
+        "Fix some Card Animation disppear issues.",
+        "Fix Project Cards overflow issues."
+      ],
+      [
+        "修复卡片溢出，调整比例。",
+        "修复卡片动画消失显示问题。"
+      ]
+    ],
+    "impro": []
   }
 }

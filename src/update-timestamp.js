@@ -62,33 +62,33 @@ const getGeolocation = async () => {
      *
      ******************/
 
-    header: [
-      'Optimized animation curves, characteristics (duration, intervals, interaction triggers). Improved mobile layout (home, buttons, carousel). Adjusted desktop UI (education, abilities). Added project module to navbar (6 demos). Fixed translation/overflow issues. Adjusted/cropped images, re-uploaded with lazy loading for faster speeds. Component layout adjustments for different devices.',
-      '优化了动画曲线、特性（时长、间隔、交互触发）。改进了移动端布局（首页、按钮、轮播图）。调整了桌面端 UI（教育、能力）。导航栏新增项目模块（6个演示）。修复了翻译/溢出问题。调整/裁剪了图片，重新上传并使用懒加载以加快速度。针对不同设备调整了组件布局。',
-    ],
-    new: [
-      [
-        'Optimized animation curves, characteristics (duration, intervals, interaction triggers). Improved mobile layout (home, buttons, carousel). Added project module to navbar (6 demos).',
-        'Adjusted desktop UI (education, abilities).',
-        'Adjusted/cropped images, re-uploaded with lazy loading for faster speeds. Component layout adjustments for different devices.',
-      ],
-      [
-        '优化了动画曲线、特性（时长、间隔、交互触发）。改进了移动端布局（首页、按钮、轮播图）。导航栏新增项目模块（6个演示）。',
-        '调整了桌面端 UI（教育、能力）。',
-        '调整/裁剪了图片，重新上传并使用懒加载以加快速度。针对不同设备调整了组件布局。',
-      ],
-    ],
-    fix: [
-      ['Fixed translation/overflow issues.', 'Fixed minor UI display errors.'],
-      ['修复了翻译/溢出问题。', '修复了细小的UI显示错误。'],
-    ],
-    impro: [
-      [
-        'Improved animation performance.',
-        'Improved loading speed with optimized images and lazy loading.',
-      ],
-      ['优化了动画性能。', '通过优化图片和懒加载提高了加载速度。'],
-    ],
+    // header: [
+    //   'Optimized animation curves, characteristics (duration, intervals, interaction triggers). Improved mobile layout (home, buttons, carousel). Adjusted desktop UI (education, abilities). Added project module to navbar (6 demos). Fixed translation/overflow issues. Adjusted/cropped images, re-uploaded with lazy loading for faster speeds. Component layout adjustments for different devices.',
+    //   '优化了动画曲线、特性（时长、间隔、交互触发）。改进了移动端布局（首页、按钮、轮播图）。调整了桌面端 UI（教育、能力）。导航栏新增项目模块（6个演示）。修复了翻译/溢出问题。调整/裁剪了图片，重新上传并使用懒加载以加快速度。针对不同设备调整了组件布局。',
+    // ],
+    // new: [
+    //   [
+    //     'Optimized animation curves, characteristics (duration, intervals, interaction triggers). Improved mobile layout (home, buttons, carousel). Added project module to navbar (6 demos).',
+    //     'Adjusted desktop UI (education, abilities).',
+    //     'Adjusted/cropped images, re-uploaded with lazy loading for faster speeds. Component layout adjustments for different devices.',
+    //   ],
+    //   [
+    //     '优化了动画曲线、特性（时长、间隔、交互触发）。改进了移动端布局（首页、按钮、轮播图）。导航栏新增项目模块（6个演示）。',
+    //     '调整了桌面端 UI（教育、能力）。',
+    //     '调整/裁剪了图片，重新上传并使用懒加载以加快速度。针对不同设备调整了组件布局。',
+    //   ],
+    // ],
+    // fix: [
+    //   ['Fixed translation/overflow issues.', 'Fixed minor UI display errors.'],
+    //   ['修复了翻译/溢出问题。', '修复了细小的UI显示错误。'],
+    // ],
+    // impro: [
+    //   [
+    //     'Improved animation performance.',
+    //     'Improved loading speed with optimized images and lazy loading.',
+    //   ],
+    //   ['优化了动画性能。', '通过优化图片和懒加载提高了加载速度。'],
+    // ],
 
     /****************
      *
@@ -119,13 +119,16 @@ const getGeolocation = async () => {
     // impro: [],
 
     // 视觉优化
-    // header: ['Table visual Patch Update', '表格显示优化更新'],
-    // new: [],
-    // fix: [
-    //   ['Fix some font display issues.', 'Fix some table overflow issues.'],
-    //   ['修复表格溢出，调整行比例。', '修复部分字体显示问题。'],
-    // ],
-    // impro: [],
+    header: ['Project Navbar visual Patch Update', '项目顶端栏显示优化更新'],
+    new: [],
+    fix: [
+      [
+        'Fix some Card Animation disppear issues.',
+        'Fix Project Cards overflow issues.',
+      ],
+      ['修复卡片溢出，调整比例。', '修复卡片动画消失显示问题。'],
+    ],
+    impro: [],
 
     // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
     // header: ['Optimise First Page loading time', '优化首屏加载时间'],
