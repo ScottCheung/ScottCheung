@@ -13,15 +13,12 @@ export default function Life() {
   const [Index, setIndex] = useState(null);
 
   return (
-    <div className='-my-[0px] mb-[50px] z-40'>
+    <div
+      className='
+    mt-[50px] lg:-mt-[80px] mb-[10vh]  z-40  w-full h-full '
+    >
       <div
-        style={{
-          paddingInline:
-            window.innerWidth > 1024 ?
-              'calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)'
-            : '0',
-        }}
-        className={`grid grid-cols-12 gap-8 animate__animated animate__fadeIn  w-full`}
+        className={`grid grid-cols-12 gap-[10px] lg:gap-[30px] animate__animated animate__fadeIn  w-full `}
       >
         {Lifes.map((life, index) => (
           <motion.a
@@ -33,27 +30,17 @@ export default function Life() {
               setIndex(index);
             }}
             onMouseLeave={() => setHoverColor(false)}
-            className='welcomeanimation lg:col-span-3  md:col-span-6 col-span-6  w-full duration-500 smoothchange pt-[75px] text-center rounded-[12px] overflow-visible'
-            style={{
-              backgroundImage: `url(${life.pic})`,
-              backgroundSize: '70% auto',
-              backgroundRepeat: 'no-repeat',
-              backgroundPosition: 'left bottom',
-              animationDelay: `${index * 0.15}s`,
-            }}
+            className='welcomeanimation lg:col-span-3 flex  md:col-span-6 col-span-6  relative w-full duration-500 h-[100px] lg:max-h-[150px]   rounded-[12px] '
           >
+            <div className='absolute bottom-0 left-0 z-50 w-[40%] lg:w-[70%] overflow-hidden rounded-bl-[14px] '>
+              <img src={life.pic} alt='' />
+            </div>
             <div
-              className={`relative transition-all duration-500 flex flex-col min-w-0 break-words  ${
-                HoverColor && Index == index ? 'bg-gray-950/70' : ' bg-white/50'
-              }  w-full rounded-[12px] overflow-visible`}
-              style={{
-                backgroundImage: `url(${life.pic})`,
-                backgroundSize: '70% auto',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'left bottom',
-              }}
+              className={`absolute bottom-0 left-0 right-0 transition-all duration-500 flex flex-col  w-full  h-[100px]  ${
+                HoverColor && Index == index ? 'bg-gray-950' : ' bg-white'
+              } rounded-[12px] `}
             >
-              <div className='flex-auto px-6 py-6 text-gray-750 hover:text-white/50'>
+              <div className='flex-auto px-6 py-6 text-gray-750 hover:text-white'>
                 <div className='flex justify-end'>
                   <div className='flex flex-col'>
                     <div className='flex-shrink-0 '>
@@ -63,7 +50,7 @@ export default function Life() {
                         <i
                           className={`fi text-[25px] ${
                             HoverColor && Index == index ?
-                              'text-white/50'
+                              'text-white'
                             : 'text-gray-750'
                           } ${life.icon}`}
                         />
@@ -72,7 +59,7 @@ export default function Life() {
                     <h6
                       className={`text-3xl ${
                         HoverColor && Index == index ?
-                          'text-white/50'
+                          'text-white'
                         : 'text-gray-750'
                       } font-semibold text-right`}
                     >

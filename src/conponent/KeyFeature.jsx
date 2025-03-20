@@ -109,6 +109,7 @@ function KeyFeature() {
             variants={Welcomevisblecontainer}
             initial='hidden'
             whileInView='visible'
+            viewport={{ once: true, margin: '-40%' }}
             transition={StagerFadeInUp}
             style={{
               paddingInline:
@@ -123,7 +124,7 @@ function KeyFeature() {
                 key={index}
                 variants={WelcomeItem}
                 transition={StagerFadeInUp}
-                viewport={{ margin: '-30%' }}
+                viewport={{ once: true, margin: '-10%' }}
                 layout
                 className='flex group relative px-[20px] rounded-[28px] hover:bg-gradient-to-t from-lime-500/20 to-emerald-500/20 hover:backdrop-blur-md hover:shadow-2xl focus:shadow-2xl  col-span-6 md:col-span-4 lg:col-span-4'
               >

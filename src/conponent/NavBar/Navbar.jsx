@@ -188,7 +188,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
         <motion.nav
           layout='position'
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className={`  w-full flex flex-col`}
+          className={` w-[${windowWidth}px] overflow-hidden flex flex-col`}
         >
           <motion.div
             onMouseLeave={() => {
@@ -199,7 +199,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             layout
-            className={`flex flex-col w-full   ${BG}
+            className={`flex flex-col w-full   ${BG} overflow-hidden
         ${
           windowWidth < 768 ?
             ` pr-[5%]  ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`

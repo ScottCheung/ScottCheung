@@ -15,6 +15,7 @@ export default function Num({ n, d, o, className, from }) {
   const rounded = useTransform(count, Math.round);
   const [ref, inView] = useInView({
     triggerOnce: o ? o : false,
+    margin: '-10%',
   });
 
   useEffect(() => {

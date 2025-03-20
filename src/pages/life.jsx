@@ -41,30 +41,25 @@ export default function Life() {
     };
   }, []);
   return (
-    <div className=''>
+    <div className={`w-[${windowWidth}px]`}>
       <Navbar topTextColor={true} />
 
-      <div
-        className='relative flex items-center content-center justify-center pt-16 pb-32'
-        style={{
-          minHeight: '100vh',
-        }}
-      >
+      <div className='relative flex items-center  h-[50vh] lg:h-[110vh] content-center justify-center '>
         <motion.div
           initial={{ opacity: 0.95, y: '60px', scale: 0.95 }}
           transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 0.7 }}
           whileInView={{ opacity: 1, y: '0px', scale: 1 }}
-          className='absolute top-0 w-full h-[110%]'
+          className='absolute top-0 w-full h-full overflow-hidden'
           style={{
             backgroundImage:
               "url('https://img.picgo.net/2025/03/19/IMG_48462ed652b541841a51.jpg')",
-            backgroundPosition: 'top',
+            backgroundPosition: 'bottom',
             backgroundSize: 'cover',
           }}
         >
           <span
             id='blackOverlay'
-            className='absolute w-full h-full bg-gradient-to-b from-black/40 via-black/10 via-[200px] to-transparent '
+            className='absolute w-full h-full bg-gradient-to-b from-black/40 via-transparent via-70% to-black/30 '
           ></span>
           <svg
             data-v-226d292e=''
@@ -82,13 +77,20 @@ export default function Life() {
         </motion.div>
       </div>
 
-      <section className='py-[50px] bg-gray-100 '>
+      <section
+        style={{
+          paddingInline:
+            window.innerWidth > 1024 &&
+            'calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)',
+        }}
+        className='py-[50px] bg-gray-100 px-[10px] lg:px-[30px]'
+      >
         <LifeCategory />
-        <div className='visblecontainer'>
+        <div>
           <div className='flex items-center justify-between '>
             <div className='relative z-20 w-full h-full'>
               <div className='right-0 w-full '>
-                <h1 className='animate__animated animate__zoomIn text-black font-semibold lg:text-[70px] text-[35px]'>
+                <h1 className='animate__animated animate__zoomIn text-black font-black lg:text-[50px] text-[35px] mb-[30px]'>
                   {text.title}
                 </h1>
                 <quato className='animate__animated animate__fadeInUp mt-4 sm:text-[20px] text-[15px] text-gray-600 text-justify'>

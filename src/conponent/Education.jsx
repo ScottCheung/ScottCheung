@@ -53,7 +53,7 @@ function Education({ hideTittle, simpleVer }) {
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
           whileTap={{ scale: 0.95 }}
-          viewport={{ once: false, margin: '-10%' }}
+          viewport={{ once: true, margin: '-10%' }}
           variants={WelcomeItem}
           transition={StagerFadeInUp}
           className='col-span-12 group'
