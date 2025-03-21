@@ -47,6 +47,7 @@ function Contact({ isTopOut }) {
   }, []);
   const Contact = (
     <div
+      draggable={false}
       className='relative z-0 w-screen h-full overflow-hidden bg-center bg-cover '
       style={{
         backgroundImage: `url(${data.bg})`,
@@ -239,6 +240,7 @@ function Contact({ isTopOut }) {
           </footer>
         </AnimatePresence>
       </div>
+      <div className='absolute bg-black h-[300px] w-full -bottom-[300]'></div>
     </div>
   );
 

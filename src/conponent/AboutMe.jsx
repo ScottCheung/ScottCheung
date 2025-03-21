@@ -131,7 +131,7 @@ function SelfDescribing() {
             borderBottomRightRadius: isMobile ? 0 : borderBottomRightRadius,
             y: isMobile ? 0 : y,
           }}
-          className='sticky top-0 z-20 flex flex-col h-[150vh] items-center justify-center w-full'
+          className='sticky top-0 z-20 flex flex-col h-[1520px]  lg:h-[120vh] items-center justify-center w-full'
         >
           <motion.span
             style={{

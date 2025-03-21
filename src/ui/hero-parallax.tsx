@@ -94,10 +94,10 @@ export const HeroParallax = ({ Items }: { Items: ItemType[] }) => {
       className='h-[300vh] relative overflow-hidden antialiased flex flex-col self-auto [perspective:1000px] [transform-style:preserve-3d]'
     >
       <Header />
-      <span className='absolute w-full flex h-[100vh] bg-gradient-to-b from-[0%] to-[90%] from-black via-[30%] via-black/50 to-transparent'></span>
+      <span className='absolute w-full flex h-full bg-gradient-to-b from-[0%] to-[90%] from-black via-[30%] via-black/50 to-transparent'></span>
       <motion.span
         style={{ opacity: opacitySpan }}
-        className='absolute w-[100vw] h-[100vh] z-10 bg-gradient-to-tr from-[0%] to-[100%] from-black via-[40%] via-black to-transparent'
+        className='absolute w-[100vw] h-full z-10 bg-gradient-to-tr from-[0%] to-[100%] from-black via-[40%] via-black to-transparent'
       ></motion.span>
       <motion.div
         style={{

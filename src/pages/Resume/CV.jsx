@@ -115,7 +115,7 @@ export default function Resume({ printMode }) {
         />
         <link rel='stylesheet' href='../style/style.css' type='text/css' />
         <div
-          className={` min-h-[100vh] justify-center px-4   h-full flex flex-col`}
+          className={` min-h-full justify-center px-4   h-full flex flex-col`}
         >
           <div className='flex-wrap h-full text-center '>
             <h1

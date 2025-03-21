@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState, useEffect } from 'react';
 import Navbar from '../conponent/NavBar/Navbar';
 import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
@@ -29,9 +31,9 @@ export default function Errorpage() {
     const timeoutId = setTimeout(() => {
       Toast(
         'error',
-        lang == 0
-          ? 'You can not get access to the database at present.'
-          : '您暂时无法访问数据库。',
+        lang == 0 ?
+          'You can not get access to the database at present.'
+        : '您暂时无法访问数据库。',
         10000,
       );
     }, 1000); // 1000 毫秒延时，你可以根据需要调整
@@ -43,7 +45,7 @@ export default function Errorpage() {
   return (
     <div className='min-h-screen overflow-hidden'>
       <Navbar topTextColor={true} />
-      <main className='h-[100vh] bg-gray-900/40 animate__animated animate__fadeIn  place-items-center flex justify-center  px-6 py-24 sm:py-32 lg:px-8 '>
+      <main className='h-full bg-gray-900/40 animate__animated animate__fadeIn  place-items-center flex justify-center  px-6 py-24 sm:py-32 lg:px-8 '>
         <div className='text-center '>
           <motion.p
             initial={{ scale: 0, y: '-90px', opacity: 0 }}

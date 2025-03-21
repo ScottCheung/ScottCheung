@@ -140,7 +140,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
             <a href={item.href} className='flex justify-center w-full h-full'>
               {item.type === 'image' && (
                 <img
-                  loading='lazy'
+                  loading='eager'
                   src={item.src}
                   alt=''
                   className='object-cover object-bottom w-full h-full '

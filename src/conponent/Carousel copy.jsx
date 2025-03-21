@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
-import CtButton from "./ctButton";
-import { motion, useTime, AnimatePresence } from "framer-motion";
-import { useLanguage } from "../help/helpFunction";
-import PlayButton from "./Playbutton";
-import SubNav from "../conponent/subNav";
+/** @format */
+
+import React, { useState, useEffect, useRef } from 'react';
+import CtButton from './ctButton';
+import { motion, useTime, AnimatePresence } from 'framer-motion';
+import { useLanguage } from '../help/helpFunction';
+import PlayButton from './Playbutton';
+import SubNav from '../conponent/subNav';
 
 const Carousel = ({ interval, children }) => {
   const lang = useLanguage();
@@ -12,16 +14,16 @@ const Carousel = ({ interval, children }) => {
   const [showToast, setshowToast] = useState(false);
   const timeoutRef = useRef(null);
   const [progress, setProgress] = useState(0);
-  const [animate, setAnimate] = useState("animate__fadeInRight");
+  const [animate, setAnimate] = useState('animate__fadeInRight');
   const [showleftbutton, setshowleftbutton] = useState(false);
   const [showrightbutton, setshowrightbutton] = useState(false);
   const [isTop, setIsTop] = useState(true);
 
   const iconVariants = {
     paused:
-      "M27,33 L27,15 Q27,12 30,12 L30,12 Q33,12 33,15 L33,33 Q33,36 30,36 L30,36 Q27,36 27,33 M15,33 L15,15 Q15,12 18,12 L18,12 Q21,12 21,15 L21,33 Q21,36 18,36 L18,36 Q15,36 15,33",
+      'M27,33 L27,15 Q27,12 30,12 L30,12 Q33,12 33,15 L33,33 Q33,36 30,36 L30,36 Q27,36 27,33 M15,33 L15,15 Q15,12 18,12 L18,12 Q21,12 21,15 L21,33 Q21,36 18,36 L18,36 Q15,36 15,33',
     playing:
-      "M15,33 L15,15 Q15,11 18,12 L24,16 Q24,16 24,16 L24,32 Q24,32 24,32 L18,36 Q15,37 15,33 M24,32 L24,16 Q24,16 24,16 L33,22 Q35,23.3 35,24 L35,24 Q35,24.7 33,26 L24,32 Q24,32 24,32",
+      'M15,33 L15,15 Q15,11 18,12 L24,16 Q24,16 24,16 L24,32 Q24,32 24,32 L18,36 Q15,37 15,33 M24,32 L24,16 Q24,16 24,16 L33,22 Q35,23.3 35,24 L35,24 Q35,24.7 33,26 L24,32 Q24,32 24,32',
   };
 
   useEffect(() => {
@@ -40,12 +42,12 @@ const Carousel = ({ interval, children }) => {
       }
     }
 
-    window.addEventListener("scroll", handleScroll1);
-    window.addEventListener("scroll", handleScroll2);
+    window.addEventListener('scroll', handleScroll1);
+    window.addEventListener('scroll', handleScroll2);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll1);
-      window.removeEventListener("scroll", handleScroll2);
+      window.removeEventListener('scroll', handleScroll1);
+      window.removeEventListener('scroll', handleScroll2);
     };
   }, []);
 
@@ -66,14 +68,14 @@ const Carousel = ({ interval, children }) => {
   }, [activeIndex, interval]);
 
   const nextSlide = () => {
-    setAnimate("animate__fadeInRight");
+    setAnimate('animate__fadeInRight');
     setActiveIndex((prevIndex) =>
       prevIndex === children.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const prevSlide = () => {
-    setAnimate("animate__fadeInLeft");
+    setAnimate('animate__fadeInLeft');
     setActiveIndex((prevIndex) =>
       prevIndex === 0 ? children.length - 1 : prevIndex - 1,
     );
@@ -81,7 +83,7 @@ const Carousel = ({ interval, children }) => {
 
   const goToSlide = (index) => {
     const newAnimate =
-      index > activeIndex ? "animate__fadeInRight" : "animate__fadeInLeft";
+      index > activeIndex ? 'animate__fadeInRight' : 'animate__fadeInLeft';
     setAnimate(newAnimate);
     setActiveIndex(index);
   };
@@ -95,15 +97,15 @@ const Carousel = ({ interval, children }) => {
 
   return (
     <motion.div
-      className="flex relative w-full h-[100vh]  overflow-hidden z-30"
+      className='flex relative w-full h-full  overflow-hidden z-30'
       onKeyDown={(e) => {
-        if (e.key === "ArrowRight") nextSlide();
-        if (e.key === "ArrowLeft") prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+        if (e.key === 'ArrowLeft') prevSlide();
       }}
-      tabIndex="0"
+      tabIndex='0'
     >
-      <span className="absolute z-20 object-cover w-full h-full bg-black/30"></span>
-      <div className="carousel-container">
+      <span className='absolute z-20 object-cover w-full h-full bg-black/30'></span>
+      <div className='carousel-container'>
         {React.Children.map(children, (child, index) => (
           <div
             // className={`w-full h-full ${
@@ -118,7 +120,7 @@ const Carousel = ({ interval, children }) => {
           </div>
         ))}
       </div>
-      <div className="z-30 flex justify-between">
+      <div className='z-30 flex justify-between'>
         <span
           onMouseEnter={() => {
             setshowleftbutton(true);
@@ -129,7 +131,7 @@ const Carousel = ({ interval, children }) => {
             isTop && setIsPaused(false);
           }}
           onClick={prevSlide}
-          className="absolute left-0 w-[20%] h-full z-40 bg-gradient-to-r hover:from-black/20 to-transparent cursor-pointer"
+          className='absolute left-0 w-[20%] h-full z-40 bg-gradient-to-r hover:from-black/20 to-transparent cursor-pointer'
         >
           {showleftbutton && (
             <motion.button
@@ -137,11 +139,11 @@ const Carousel = ({ interval, children }) => {
               className={`  absolute top-[50%] left-[10%]`}
             >
               <svg
-                className="rotate-180 fill-white/50 w-[60px] h-[60px]"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="8 8 20 20"
+                className='rotate-180 fill-white/50 w-[60px] h-[60px]'
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='8 8 20 20'
               >
-                <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+                <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
               </svg>
             </motion.button>
           )}
@@ -156,7 +158,7 @@ const Carousel = ({ interval, children }) => {
             isTop && setIsPaused(false);
           }}
           onClick={nextSlide}
-          className="absolute right-0 w-[20%] h-full z-50 bg-gradient-to-l hover:from-black/20 to-transparent cursor-pointer"
+          className='absolute right-0 w-[20%] h-full z-50 bg-gradient-to-l hover:from-black/20 to-transparent cursor-pointer'
         >
           {showrightbutton && (
             <motion.button
@@ -164,11 +166,11 @@ const Carousel = ({ interval, children }) => {
               className={`  absolute top-[50%] right-[10%]`}
             >
               <svg
-                className="rotate-0 fill-white/50 w-[60px] h-[60px]"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="8 8 20 20"
+                className='rotate-0 fill-white/50 w-[60px] h-[60px]'
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='8 8 20 20'
               >
-                <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+                <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
               </svg>
             </motion.button>
           )}
@@ -178,12 +180,12 @@ const Carousel = ({ interval, children }) => {
         {isTop && (
           <motion.div
             layout
-            className="w-full h-[30px] opacity-70 hover:opacity-100  rounded-lg absolute bottom-[120px] gap-y-[30px] flex flex-col justify-center items-center z-50  transition-all"
+            className='w-full h-[30px] opacity-70 hover:opacity-100  rounded-lg absolute bottom-[120px] gap-y-[30px] flex flex-col justify-center items-center z-50  transition-all'
           >
-            <motion.div className="w-auto flex gap-x-[20px]">
+            <motion.div className='w-auto flex gap-x-[20px]'>
               <div
                 style={{ animationDelay: `0.15s` }}
-                className="animate__animated animate__fadeInUp bg-white/20 rounded-full backdrop-blur-[5px]"
+                className='animate__animated animate__fadeInUp bg-white/20 rounded-full backdrop-blur-[5px]'
               >
                 <motion.button
                   onMouseEnter={() => {
@@ -196,17 +198,17 @@ const Carousel = ({ interval, children }) => {
                   className={`bg-black/20 backdrop-blur-[5px] w-[45px] h-[45px] animate__animated animate__zoomIn  flex rounded-full justify-center items-center transition-all transform duration-1000`}
                 >
                   <svg
-                    className="hover:fill-white rotate-180 fill-gray-200 w-[20px] h-[20px]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="8 8 20 20"
+                    className='hover:fill-white rotate-180 fill-gray-200 w-[20px] h-[20px]'
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='8 8 20 20'
                   >
-                    <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+                    <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
                   </svg>
                 </motion.button>
               </div>
               <div
                 style={{ animationDelay: `0.3s` }}
-                className="animate__animated animate__fadeInUp bg-white/20 rounded-full backdrop-blur-[5px]"
+                className='animate__animated animate__fadeInUp bg-white/20 rounded-full backdrop-blur-[5px]'
               >
                 <motion.button
                   onMouseEnter={() => {
@@ -219,17 +221,17 @@ const Carousel = ({ interval, children }) => {
                   className={`bg-black/20 backdrop-blur-[5px] w-[45px] h-[45px] animate__animated animate__zoomIn  flex rounded-full justify-center items-center transition-all transform duration-1000`}
                 >
                   <svg
-                    className="hover:fill-white fill-gray-200 w-[20px] h-[20px]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="8 8 20 20"
+                    className='hover:fill-white fill-gray-200 w-[20px] h-[20px]'
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='8 8 20 20'
                   >
-                    <path d="M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z"></path>
+                    <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
                   </svg>
                 </motion.button>
               </div>
               <div
                 style={{ animationDelay: `0.45s` }}
-                className="bg-white/20 rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp"
+                className='bg-white/20 rounded-full backdrop-blur-[5px] animate__animated animate__fadeInUp'
               >
                 <motion.div
                   layout
@@ -239,7 +241,7 @@ const Carousel = ({ interval, children }) => {
                   onMouseLeave={() => {
                     setIsPaused(false);
                   }}
-                  className="bg-black/20 p-[15px]  backdrop-blur-[5px] flex rounded-full gap-x-[20px] justify-center items-center transition-all"
+                  className='bg-black/20 p-[15px]  backdrop-blur-[5px] flex rounded-full gap-x-[20px] justify-center items-center transition-all'
                 >
                   {React.Children.map(children, (_, index) => (
                     <div>
@@ -249,7 +251,7 @@ const Carousel = ({ interval, children }) => {
                         }}
                         style={{ animationDelay: `${(index + 3) * 0.25}s` }}
                         className={`bg-gray-200/50 hover:bg-gray-50/50 animate__animated animate__zoomIn cursor-pointer h-[15px] overflow-hidden transition-all duration-500 rounded-full ${
-                          index === activeIndex ? "w-[50px]" : "w-[15px]"
+                          index === activeIndex ? 'w-[50px]' : 'w-[15px]'
                         }`}
                       >
                         {index === activeIndex &&
@@ -267,7 +269,7 @@ const Carousel = ({ interval, children }) => {
               </div>
               <div
                 style={{ animationDelay: `0.6s` }}
-                className="animate__animated animate__fadeInUp bg-white/20 rounded-full backdrop-blur-[5px]"
+                className='animate__animated animate__fadeInUp bg-white/20 rounded-full backdrop-blur-[5px]'
               >
                 <motion.button
                   layout
@@ -288,11 +290,11 @@ const Carousel = ({ interval, children }) => {
                       whileTap={{ scale: 1.1 }}
                       whileHover={{ scale: 1.2 }}
                       class={` w-[35px]  h-[35px] ${
-                        showToast ? "fill-white" : "fill-gray-200"
+                        showToast ? 'fill-white' : 'fill-gray-200'
                       } ${
-                        isPaused ? "animate__rotateIn" : "animate__rotateIn"
+                        isPaused ? 'animate__rotateIn' : 'animate__rotateIn'
                       } animate__animated  transition-all ring-0  outline-none`}
-                      viewBox="0 0 48 48"
+                      viewBox='0 0 48 48'
                     >
                       {/* {isPaused&&<path d="M20.8,36V20c0-1.6,1-2.5,2.3-2.5c0.7,0,1.1,0.1,1.7,0.5l13.4,7.7c1.2,0.7,1.8,1.2,1.8,2.3 c0,1.1-0.6,1.6-1.8,2.3L24.8,38c-0.6,0.4-1,0.5-1.7,0.5C21.8,38.5,20.8,37.6,20.8,36"></path>} */}
                       {/* {!isPaused&&<path d="M23.9,38.5h-2.3c-1.3,0-2.3-1-2.3-2.2V19.7c0-1.3,1.1-2.3,2.3-2.2h2.3c1.3,0,2.3,1,2.3,2.2v16.5 C26.2,37.5,25.2,38.5,23.9,38.5 M34.4,38.5c1.3,0,2.3-1,2.3-2.2V19.7c0-1.3-1.1-2.3-2.3-2.2h-2.3c-1.3,0-2.3,1-2.3,2.2v16.5 c0,1.3,1.1,2.3,2.3,2.2H34.4z"></path>} */}
@@ -302,8 +304,9 @@ const Carousel = ({ interval, children }) => {
                           !isPaused ? iconVariants.playing : iconVariants.paused
                         }
                         animate={{
-                          d: isPaused
-                            ? iconVariants.playing
+                          d:
+                            isPaused ?
+                              iconVariants.playing
                             : iconVariants.paused,
                         }}
                         transition={{ duration: 0.3 }}
@@ -313,22 +316,22 @@ const Carousel = ({ interval, children }) => {
                   {!showToast && (
                     <motion.svg
                       class={` ${
-                        isPaused
-                          ? "animate__zoomIn"
-                          : "animate-spin animate__slower animate__rotateIn"
+                        isPaused ? 'animate__zoomIn' : (
+                          'animate-spin animate__slower animate__rotateIn'
+                        )
                       } animate__animated hidden w-[40px] h-[40px] ${
-                        showToast ? "fill-white" : "fill-gray-200"
+                        showToast ? 'fill-white' : 'fill-gray-200'
                       }  transition-all`}
-                      viewBox="0 0 56 56"
+                      viewBox='0 0 56 56'
                     >
                       {!isPaused && (
                         <path
-                          className=""
-                          d="M37.3,26.7c-1,0.1-1.8,1-1.8,2c0,4.1-3.4,7.4-7.5,7.4c-4.1,0-7.4-3.4-7.4-7.5c0-4.1,3.3-7.4,7.5-7.4l0.1,0l0.2,0l0.5,0 l-2.2,2.2c-0.8,0.8-0.8,2.1,0,2.9c0.7,0.7,1.9,0.8,2.7,0.2l0.2-0.2l5.3-5.3c0.7-0.7,0.8-1.9,0.2-2.7l-0.2-0.2l-5.3-5.3 c-0.8-0.8-2.1-0.8-2.8,0c0,0,0,0,0,0c-0.7,0.7-0.8,1.9-0.1,2.7l0.1,0.2l1.4,1.4l-0.5,0c-6.4,0.2-11.3,5.6-11.1,11.9 S22,40.5,28.4,40.2c6.2-0.2,11.1-5.3,11.1-11.5c0-1-0.8-1.9-1.8-2l-0.2,0L37.3,26.7z"
+                          className=''
+                          d='M37.3,26.7c-1,0.1-1.8,1-1.8,2c0,4.1-3.4,7.4-7.5,7.4c-4.1,0-7.4-3.4-7.4-7.5c0-4.1,3.3-7.4,7.5-7.4l0.1,0l0.2,0l0.5,0 l-2.2,2.2c-0.8,0.8-0.8,2.1,0,2.9c0.7,0.7,1.9,0.8,2.7,0.2l0.2-0.2l5.3-5.3c0.7-0.7,0.8-1.9,0.2-2.7l-0.2-0.2l-5.3-5.3 c-0.8-0.8-2.1-0.8-2.8,0c0,0,0,0,0,0c-0.7,0.7-0.8,1.9-0.1,2.7l0.1,0.2l1.4,1.4l-0.5,0c-6.4,0.2-11.3,5.6-11.1,11.9 S22,40.5,28.4,40.2c6.2-0.2,11.1-5.3,11.1-11.5c0-1-0.8-1.9-1.8-2l-0.2,0L37.3,26.7z'
                         ></path>
                       )}
                       {isPaused && (
-                        <path d="M23.9,38.5h-2.3c-1.3,0-2.3-1-2.3-2.2V19.7c0-1.3,1.1-2.3,2.3-2.2h2.3c1.3,0,2.3,1,2.3,2.2v16.5 C26.2,37.5,25.2,38.5,23.9,38.5 M34.4,38.5c1.3,0,2.3-1,2.3-2.2V19.7c0-1.3-1.1-2.3-2.3-2.2h-2.3c-1.3,0-2.3,1-2.3,2.2v16.5 c0,1.3,1.1,2.3,2.3,2.2H34.4z"></path>
+                        <path d='M23.9,38.5h-2.3c-1.3,0-2.3-1-2.3-2.2V19.7c0-1.3,1.1-2.3,2.3-2.2h2.3c1.3,0,2.3,1,2.3,2.2v16.5 C26.2,37.5,25.2,38.5,23.9,38.5 M34.4,38.5c1.3,0,2.3-1,2.3-2.2V19.7c0-1.3-1.1-2.3-2.3-2.2h-2.3c-1.3,0-2.3,1-2.3,2.2v16.5 c0,1.3,1.1,2.3,2.3,2.2H34.4z'></path>
                       )}
                     </motion.svg>
                   )}

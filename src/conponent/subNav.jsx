@@ -11,14 +11,14 @@ export function more() {
   const lang = useLanguage();
   const [isTop, setIsTop] = useState(true);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [bgStyle, setBgStyle] = useState('bg-white/10 backdrop-blur-[15px]');
+  const [bgStyle, setBgStyle] = useState('bg-black/30 backdrop-blur-[15px]');
 
   useEffect(() => {
     function handleScroll() {
       if (window.scrollY < 700) {
         setIsTop(true);
         setTimeout(() => {
-          setBgStyle('bg-white/10 backdrop-blur-[15px] ');
+          setBgStyle('bg-black/30 backdrop-blur-[15px] ');
         }, 1000);
       } else {
         setIsTop(false);
@@ -46,12 +46,12 @@ export function more() {
       {isTop && (
         <motion.div
           layout
-          className={`items-center justify-center  z-30 flex md:px-[10%] mx-auto  container  `}
+          className={`items-center flex-auto justify-center  z-30 flex md:px-[10%] mx-auto    container  `}
         >
           <motion.div
             // layout
             // transition={{ type: 'spring', duration: 0.3 }}
-            className={`w-full  flex justify-between md:rounded-full rounded-[12px] items-center  shadow-xl transition-all  ${bgStyle}`}
+            className={`w-full  flex justify-between md:rounded-full rounded-[12px] items-center shadow-xl transition-all  ${bgStyle}`}
           >
             {navLocation.map((item, index) => (
               <motion.a

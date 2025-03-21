@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
 import Data from './resumeData.json';
@@ -29,7 +31,7 @@ export default function Resume() {
   return (
     <div className='flex flex-col items-center py-[200px]'>
       {/* Resume content */}
-      <div className='relative w-full max-w-screen-md rounded-md shadow-2xl col bg-sky-50 min-h-[100vh]'>
+      <div className='relative w-full max-w-screen-md rounded-md shadow-2xl col bg-sky-50 min-h-full'>
         {/* Sticky Button to download PDF */}
         <button
           className='sticky top-0 left-0 right-0 z-[1000] px-8 py-4 mb-6 text-white bg-blue-500 rounded-md'

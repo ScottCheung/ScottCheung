@@ -160,7 +160,7 @@ function WhymeCard() {
               }}
               layoutId={whymeCard.advantage}
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-              className='flex relative  h-[100vh] lg:ml-[10vw] bg-[#fefdf3] rounded-[40px] ml-[50px] mr-[200px] lg:mr-[35vw] -mb-[20vh]   z-50 '
+              className='flex relative  h-full lg:ml-[10vw] bg-[#fefdf3] rounded-[40px] ml-[50px] mr-[200px] lg:mr-[35vw] -mb-[20vh]   z-50 '
             >
               <div className='flex gap-x-[20px]  py-[40px] px-[28px]'>
                 <motion.div
@@ -270,7 +270,7 @@ function WhymeCard() {
                       WebkitMaskImage:
                         'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 1) 50px, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
                     }}
-                    className=' max-h-[80vh] overflow-y-auto  scrollbar-hide scroll-smooth gradient-mask pt-[50px] pb-[30vh]'
+                    className=' max-h-[80vh] overflow-y-auto  scrollbar-hide   gradient-mask pt-[50px] pb-[30vh]'
                   >
                     <div
                       className={`pb-[30px] relative flex flex-col  break-words`}

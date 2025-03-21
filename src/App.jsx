@@ -155,6 +155,7 @@ function Router() {
   return (
     <AppContextProvider>
       <div>
+        {/* <Navbar /> */}
         <RouterProvider router={router} />
       </div>
     </AppContextProvider>

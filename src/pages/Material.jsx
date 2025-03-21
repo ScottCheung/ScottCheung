@@ -198,7 +198,7 @@ export default function material() {
               </div>
             </div>
           </section>
-          <Education hideTittle={true} className='h-[100vh]' />
+          <Education hideTittle={true} className='h-full' />
         </main>
       </div>
     </div>

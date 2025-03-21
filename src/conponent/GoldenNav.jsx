@@ -17,7 +17,7 @@ export function more() {
       <motion.div
         // layout
         // transition={{ type: 'spring', duration: 0.3 }}
-        className={`w-full lg:hidden grid  grid-cols-10  pt-[50px] transition-all  ${bgStyle}`}
+        className={`w-full lg:hidden grid  grid-cols-10  pt-[50px] -mb-[30px] transition-all  ${bgStyle}`}
       >
         {navLocation.map((item, index) => (
           <motion.a

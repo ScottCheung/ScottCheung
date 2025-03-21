@@ -119,7 +119,7 @@ function Home() {
   return (
     <div
       draggable={false}
-      className={`relative flex flex-col items-center w-[${viewwidth}px]  overflow-x-clip bg-[#f5f5f7] `}
+      className={`relative flex flex-col items-center w-[${viewwidth}px]  overflow-x-clip  bg-[#f5f5f7]`}
     >
       <Navbar topTextColor={true} />
       <Log />

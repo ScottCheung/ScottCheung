@@ -6,10 +6,7 @@ import { motion, useTime, AnimatePresence } from 'framer-motion';
 import { useAppContext } from '../../help/ContextManager.js';
 import data from './Navbardata.json';
 import { scrollToHash } from '../../help/helpFunction.js';
-import LifeCate from '../lifeCategory.jsx';
-import ContactCate from '../contactCategory.jsx';
 import packageinfo from '../../../package.json';
-import Log from '../Log.jsx';
 import Underline from '../../ui/underline.tsx';
 import ContactDocker from '../contactDocker';
 import Project from '../project.jsx';
@@ -182,11 +179,11 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
         className={` z-50 h-0 duration-700 fixed   overflow-x-clip ${
           isScrolling || Components.NavBar === 'hide' ?
             '  -top-[100px]'
-          : ' top-0 '
+          : ' -top-[2px] lg:top-0 '
         }  `}
       >
         <motion.nav
-          layout='position'
+          layout
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
           className={` w-[${windowWidth}px] overflow-hidden flex flex-col`}
         >
@@ -211,7 +208,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
             ` backdrop-blur-[20px]  bg-white/90`
           : `${
               !isTop &&
-              `backdrop-blur-[20px]  border-b-[1px] border-gray-300 bg-white bg-opacity-90 `
+              `backdrop-blur-[20px]  border-b-[1px] border-gray-300 bg-white lg:bg-opacity-90 `
             }`
         }`}
           >
@@ -479,7 +476,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: 30, opacity: 0 }}
                             transition={{
-                              duration: 1,
+                              duration: 1.2,
                               ease: [0.22, 1, 0.36, 1],
                             }}
                             layoutId='isExp'
@@ -516,6 +513,10 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                                   style={{
                                     animationDelay: `${index * 0.1}s`,
                                     animationDuration: `${0.7}s`,
+                                  }}
+                                  transition={{
+                                    duration: 1.2,
+                                    ease: [0.22, 1, 0.36, 1],
                                   }}
                                   className={`flex w-full ${!isTop && `rounded-full`} justify-center welcomeanimation ${index === 0 && (isTop ? `rounded-l-[28px]` : `rounded-full`)} ${
                                     index === navItem.scondMenu.length - 1 &&
@@ -589,7 +590,8 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                   {selectedTab === 'Contact' && (
                     <motion.div
                       layoutId='isExp'
-                      className={`${isTop ? 'bg-white/30 ' : 'bg-sky-200/30 border-gray-400 border hover:border-0'} mt-[50px] transition-all duration-300  w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  hover:bg-transparent rounded-[28px]`}
+                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                      className={`${isTop ? 'bg-white/30 ' : 'bg-sky-200/30 border-gray-400 border hover:border-0'} mt-[50px] w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  hover:bg-transparent rounded-[28px]`}
                     >
                       <ContactDocker themeColor={isTop ? 'white' : ' sky'} />
                     </motion.div>
@@ -598,6 +600,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                   {selectedTab === 'Project' && (
                     <motion.div
                       layoutId='isExp'
+                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                       className={` overflow-visible  w-full flex mt-[20px]   rounded-[28px]`}
                     >
                       <Project />
@@ -660,6 +663,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             className={`fixed top-0 left-0 z-40  bottom-0  right-0  w-full h-full  backdrop-blur-[20px] ${isTopTextColorWhite && isTop ? 'bg-gray-900/40' : 'bg-white/40'} `}
           >
             <motion.div

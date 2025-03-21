@@ -183,7 +183,7 @@ function WorkExperience() {
     <motion.div
       layout
       id='WorkExperience'
-      className='flex flex-col items-center justify-center w-full min-h-[100vh]'
+      className='flex flex-col items-center justify-center w-full min-h-full'
     >
       <ScrollableContainer
         toRight={true}
@@ -242,7 +242,7 @@ function WorkExperience() {
                   transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                   onClick={(e) => e.stopPropagation()}
                 >
-                  <motion.div className='relative  z-0 flex transform-gppuu lg:rounded-[28px]  flex-wrap  max-h-[100vh] lg:max-h-[90vh] overflow-auto lg:overflow-hidden  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg   '>
+                  <motion.div className='relative  z-0 flex transform-gppuu lg:rounded-[28px]  flex-wrap  max-h-full lg:max-h-[90vh] overflow-auto lg:overflow-hidden  w-full gap-y-[50px]  justify-center items-start bg-white shadow-lg   '>
                     <motion.div
                       className={`${windowWidth > 1440 ? 'lg:max-w-[400px] w-full h-full' : 'w-full h-[300px]'} object-center  object-cover flex md:p-0 aspect-[4/3] z-50`}
                     >
@@ -260,7 +260,7 @@ function WorkExperience() {
                       />
                     </motion.div>
 
-                    <motion.div className='flex flex-col w-full max-w-[800px] z-10 m-[40px] lg:pt-0 pb-[150px] lg:overflow-auto h-[70vh]  scroll-smooth scrollbar-hide'>
+                    <motion.div className='flex flex-col w-full max-w-[800px] z-10 m-[40px] lg:pt-0 pb-[150px] lg:overflow-auto h-[70vh]    scrollbar-hide'>
                       <div className='flex flex-col gap-8 '>
                         <div className='flex items-baseline gap-12'>
                           <motion.div

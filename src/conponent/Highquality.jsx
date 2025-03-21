@@ -226,7 +226,7 @@ function Highquality() {
                   fontWeight: 600,
                   letterSpacing: '0.011em',
                 }}
-                className='text-white py-4 text-[30px]'
+                className='text-white py-4 text-[30px] capitalize'
               >
                 {item.title}
               </h3>

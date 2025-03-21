@@ -93,7 +93,13 @@ const ScrollableContainer = ({
           <div
             className={`flex items-center justify-center w-full lg:w-auto ${textColor ? textColor : 'text-gray-800'}`}
           >
-            <motion.div className='flex items-center justify-center gap-x-[20px]'>
+            <motion.div
+              // style={{
+              //   fontFamily:
+              //     'ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji',
+              // }}
+              className='flex items-center justify-center gap-x-[20px]'
+            >
               <motion.i
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -103,7 +109,7 @@ const ScrollableContainer = ({
 
               <TextAnimate
                 transition={{ duration: 0.3 }}
-                className='flex items-center font-mono text-5xl font-black text-nowrap lg:text-6xl xl:text-8xl'
+                className='flex items-center font-mono text-5xl italic font-black tracking-widest uppercase text-nowrap lg:text-6xl xl:text-8xl'
                 text={header.cont}
                 type='fadeIn'
               />
@@ -188,7 +194,7 @@ const ScrollableContainer = ({
           windowWidth > 1024 ?
             `flex overflow-x-auto gap-[${gap}px] ${containerPY ? `${containerPY} py-[${containerPY}px]` : 'py-[30px]'} z-30 `
           : 'grid grid-cols-12 gap-4 w-full p-[20px] px-[10px]'
-        } w-full scroll-smooth scrollbar-hide flex-shrink-0`}
+        } w-full   scrollbar-hide flex-shrink-0`}
         onScroll={handleScroll}
         ref={containerRef}
       >
