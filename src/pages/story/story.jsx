@@ -154,7 +154,7 @@ export default function Ins(nav) {
                 style={{
                   width: '100%',
                 }}
-                className='flex w-[100%] p-0 scrollbar-hide h-[800px] sm:h-[660px] md:h-[620px] lg:h-[600px]  xl:h-[550px] '
+                className='flex w-[100%] p-0 scrollbar-hide h-[800px] md:h-[620px] lg:h-[600px]  xl:h-[550px] '
               ></iframe>
             </a>
           ))}
