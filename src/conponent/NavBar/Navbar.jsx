@@ -316,7 +316,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                                 opacity: 1,
                                 y: 0,
                                 transition: {
-                                  duration: 0.7,
+                                  duration: 1,
                                   delay: 0.15 * index,
                                 },
                               }}
@@ -476,7 +476,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                             animate={{ y: 0, opacity: 1 }}
                             exit={{ y: 30, opacity: 0 }}
                             transition={{
-                              duration: 1.2,
+                              duration: 1,
                               ease: [0.22, 1, 0.36, 1],
                             }}
                             layoutId='isExp'
@@ -515,7 +515,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                                     animationDuration: `${0.7}s`,
                                   }}
                                   transition={{
-                                    duration: 1.2,
+                                    duration: 1,
                                     ease: [0.22, 1, 0.36, 1],
                                   }}
                                   className={`flex w-full ${!isTop && `rounded-full`} justify-center welcomeanimation ${index === 0 && (isTop ? `rounded-l-[28px]` : `rounded-full`)} ${
@@ -590,7 +590,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                   {selectedTab === 'Contact' && (
                     <motion.div
                       layoutId='isExp'
-                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                       className={`${isTop ? 'bg-white/30 ' : 'bg-sky-200/30 border-gray-400 border hover:border-0'} mt-[50px] w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  hover:bg-transparent rounded-[28px]`}
                     >
                       <ContactDocker themeColor={isTop ? 'white' : ' sky'} />
@@ -600,7 +600,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                   {selectedTab === 'Project' && (
                     <motion.div
                       layoutId='isExp'
-                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                       className={` overflow-visible  w-full flex mt-[20px]   rounded-[28px]`}
                     >
                       <Project />
