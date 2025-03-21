@@ -161,7 +161,7 @@ export default function Errorpage() {
               </motion.a>
               <motion.a
                 style={{ animationDelay: '0.4s' }}
-                href={`https://github.com/Xianzhezhang97/CV/raw/main/CV%20%7C%20Scott%20Cheung.pdf`}
+                href={`https://github.com/Xianzhezhang97/JobFinding/raw/main/src/CV/Download/CV%20%7C%20Scott%20Cheung.pdf`}
                 className={button}
               >
                 <i class='flex fi fi-rr-file-download text-[20px]'></i>
