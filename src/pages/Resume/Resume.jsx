@@ -1,10 +1,12 @@
+/** @format */
+
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion'; // 导入 framer-motion
 import DockerBar from '../../conponent/DockerBar';
 import { useLanguage } from '../../help/helpFunction';
 import Navbar from '../../conponent/NavBar/Navbar';
-import CV from './CV';
-import CVs from './CVs';
+import CV from './CV_HR';
+import CVs from './CV_ATS';
 import { div } from 'three/examples/jsm/nodes/Nodes.js';
 
 export default function Resume({ print }) {
@@ -51,9 +53,9 @@ export default function Resume({ print }) {
         <div
           ref={resumeRef}
           className={
-            print
-              ? 'w-full h-full '
-              : 'mt-[220px] pb-[160px] max-w-[1200px] overflow-hidden flex justify-center items-center h-full flex-col'
+            print ? 'w-full h-full ' : (
+              'mt-[220px] pb-[160px] max-w-[1200px] overflow-hidden flex justify-center items-center h-full flex-col'
+            )
           }
         >
           <div className='sticky md:relative -top-8 z-0   flex py-[10px] flex-col items-center justify-center lg:mt-12 group overflow-hidden'>
@@ -118,23 +120,23 @@ export default function Resume({ print }) {
               layout
               className='text-gray-600 mt-[5px]  md:flex hidden transition-all duration-500 opacity-40 group-hover:opacity-100 group-hover:lg:text-[15px]'
             >
-              {isATSMode
-                ? [
-                    'ATS mode is simplified for easy parsing by automated systems. You can copy and paste the text into an ATS system directly.',
-                    'ATS 模式为极简设计，便于自动化筛选系统解析简历。您可以直接复制粘贴文本到 ATS 系统中。',
-                  ][lang]
-                : [
-                    'HR mode is optimized for human review, with more visual elements to enhance readability.',
-                    'HR 模式专为人工审核优化，包含更多视觉元素以提升简历的可读性。',
-                  ][lang]}
+              {isATSMode ?
+                [
+                  'ATS mode is simplified for easy parsing by automated systems. You can copy and paste the text into an ATS system directly.',
+                  'ATS 模式为极简设计，便于自动化筛选系统解析简历。您可以直接复制粘贴文本到 ATS 系统中。',
+                ][lang]
+              : [
+                  'HR mode is optimized for human review, with more visual elements to enhance readability.',
+                  'HR 模式专为人工审核优化，包含更多视觉元素以提升简历的可读性。',
+                ][lang]
+              }
             </motion.p>
           </div>
-          {isATSMode ? (
+          {isATSMode ?
             <div>
               <CVs />
             </div>
-          ) : (
-            <div>
+          : <div>
               <CV printMode={print} />
 
               {/* <div className='mt-[70px]  flex justify-center text-[7px] lg:text-[15px]'>
@@ -147,7 +149,7 @@ export default function Resume({ print }) {
               </div>
               {print && <CVs scale={0.6} />} */}
             </div>
-          )}
+          }
         </div>
       </div>
     </div>

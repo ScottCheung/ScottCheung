@@ -446,7 +446,6 @@ export default function Resume({ printMode }) {
                       <div
                         className={`${normaltext} pl-[10px] lg:pl-[${scale * 20}px] `}
                       >
-                        <strong className={strong}>Desceription:</strong>
                         <p
                           className={
                             normaltext +
@@ -455,7 +454,6 @@ export default function Resume({ printMode }) {
                         >
                           {parseText(work.des)}
                         </p>
-                        <strong className={strong}>Skills:</strong>
                         <p
                           className={`${printMode ? 'flex' : ''}  md:flex group-hover:lg:my-[${scale * 30}px] text-[10px] lg:text-[${scale * 15}px] transition-all duration-500`}
                         >
@@ -467,7 +465,7 @@ export default function Resume({ printMode }) {
                                   <div
                                     className={
                                       divisionCol +
-                                      ` mx-[5px] lg:mx-[${scale * 10}px]`
+                                      ` mx-[5px] lg:mx-[${scale * 15}px]`
                                     }
                                   ></div>
                                 )}
@@ -475,50 +473,14 @@ export default function Resume({ printMode }) {
                             ))}
                           </p>
                         </p>
-                        <strong className={strong}>Contribution:</strong>
-                        <ul className='pl-5'>
+                        <ul className='p-5'>
                           {work.contribution.map((item, index) => (
-                            <div
+                            <li
                               key={index}
-                              target='_blank'
-                              rel='noopener noreferrer'
-                              href={item.link}
-                              className='mb-4 text-left lg:text-justify group-hover:lg:my-[20px] transition-all duration-500'
+                              className='ml-[40px] mb-4 text-left lg:text-justify list-disc group-hover:lg:my-[20px] transition-all duration-500'
                             >
-                              <strong className={strong + 'flex items-center '}>
-                                <div className='flex'>▸ {item.title}</div>
-                                {item.link && (
-                                  <a
-                                    target='_blank'
-                                    rel='noopener noreferrer'
-                                    href={item.link}
-                                    className={`flex items-center  group-hover:lg:opacity-100 px-[${scale * 5}px] py-[${scale * 5}px] transition-all duration-500  group-hover:lg:text-green-700  group-hover:lg:bg-green-100 rounded-full group-hover:lg:px-[10px] mx-[10px]   opacity-50 text-${EmphasizeColorLists[forceColor]}-${colorDepth} `}
-                                  >
-                                    <p
-                                      className={`ml-[${scale * 10}px] text-[10px] lg:text-[${scale * 15}px]  lg:font-black   transition-all duration-500`}
-                                    >
-                                      Link
-                                    </p>
-                                    <svg
-                                      class={`ml-[${scale * 10}px] w-[5px] h-[5px] lg:w-[${scale * 10}px] lg:h-[${scale * 10}px]  flex -rotate-45`}
-                                      aria-hidden='true'
-                                      xmlns='http://www.w3.org/2000/svg'
-                                      fill='none'
-                                      viewBox='0 0 14 10'
-                                    >
-                                      <path
-                                        stroke='currentColor'
-                                        stroke-linecap='round'
-                                        stroke-linejoin='round'
-                                        stroke-width='2'
-                                        d='M1 5h12m0 0L9 1m4 4L9 9'
-                                      />
-                                    </svg>
-                                  </a>
-                                )}
-                              </strong>
-                              {parseText(item.description)}
-                            </div>
+                              {parseText(item)}
+                            </li>
                           ))}
                         </ul>
                       </div>

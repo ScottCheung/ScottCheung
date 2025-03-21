@@ -54,7 +54,7 @@ export default function Errorpage() {
   const h2 =
     'flex animate__animated transition-all duration-500  animate__fadeInUp mt-4 py-[10px] font-bold tracking-tight text-gray-700 text-[15px] md:text-[20px] ';
   return (
-    <div className='min-h-screen overflow-hidden'>
+    <div className='min-h-screen overflow-hidden bg-white'>
       <Navbar />
       <link
         rel='stylesheet'
@@ -66,7 +66,7 @@ export default function Errorpage() {
         href='.../style/uicons/css/all/all.css'
         type='text/css'
       />
-      <main className='h-full animate__animated animate__fadeIn transition-all duration-500   place-items-center flex justify-center  px-6 py-24 sm:py-32 lg:px-8 '>
+      <main className='flex justify-center h-full px-6 py-24 transition-all duration-500 animate__animated animate__fadeIn place-items-center sm:py-32 lg:px-8 '>
         <div className='text-center '>
           <motion.i
             initial={{ scale: 0, y: '-90px', opacity: 0 }}
