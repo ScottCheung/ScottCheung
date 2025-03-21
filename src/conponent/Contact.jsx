@@ -91,7 +91,7 @@ function Contact({ isTopOut }) {
                   <div className={`items-center flex justify-start `}>
                     <i
                       style={{
-                        animationDelay: `${index * 0.3}s`,
+                        animationDelay: `${index * 0.1}s`,
                       }}
                       className={`${type.icon} text-white text-[23px] lg:text-6xl  animate__animated  animate__zoomIn  `}
                     ></i>
@@ -104,7 +104,7 @@ function Contact({ isTopOut }) {
                   </div>
                   <p
                     style={{
-                      animationDelay: `${index * 0.3}s`,
+                      animationDelay: `${index * 0.1}s`,
                     }}
                     className={` animate__animated text-[13px]  animate__fadeInUp   text-justify 
                                             text-white/50`}
@@ -202,7 +202,7 @@ function Contact({ isTopOut }) {
                       <div className='flex items-center justify-center'>
                         <i
                           style={{
-                            animationDelay: `${index * 0.15}s`,
+                            animationDelay: `${index * 0.1}s`,
                           }}
                           className={`${type.icon} text-white text-5xl animate__animated  animate__zoomIn `}
                         ></i>

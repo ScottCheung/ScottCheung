@@ -104,7 +104,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
   return (
     <motion.div
       {...handlers}
-      className={`h-[${viewportHeight * 0.4}px] lg:h-[${viewportHeight * 1.1}px] relative z-30 w-full overflow-hidden bg-white`}
+      className={`h-[${viewportHeight * 0.4}px] flex lg:h-[${viewportHeight * 1.1}px] relative z-30 w-full overflow-hidden bg-white`}
       onKeyDown={(e) => {
         if (e.key === 'ArrowRight') nextSlide();
         if (e.key === 'ArrowLeft') prevSlide();
@@ -225,7 +225,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
           }}
           initial={{ width: 0 }}
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className={`w-full h-[30px] rounded-lg absolute  bottom-[${viewportHeight * 0.07}px] lg:bottom-[${viewportHeight * 0.25}px] gap-y-[30px] flex flex-col justify-center items-center z-50`}
+          className={`w-full h-[30px] rounded-lg absolute  bottom-[50px] lg:bottom-[200px] gap-y-[30px] flex flex-col justify-center items-center z-50`}
         >
           <motion.div className='w-auto flex gap-x-[20px]'>
             <div

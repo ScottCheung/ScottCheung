@@ -35,7 +35,7 @@ function Education({ hideTittle, simpleVer }) {
   });
 
   const Education = (
-    <div className='z-30 lg:min-h-full flex w-full items-center'>
+    <div className='z-30 -mt-[60px] lg:mt-0 lg:min-h-full flex w-full items-center'>
       {/* Item 容器 */}
       <ScrollableContainer
         id='Education'
