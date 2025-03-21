@@ -593,7 +593,9 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                       transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
                       className={`${isTop ? 'bg-white/30 ' : 'bg-sky-200/30 border-gray-400 border hover:border-0'} mt-[50px] w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  hover:bg-transparent rounded-[28px]`}
                     >
-                      <ContactDocker themeColor={isTop ? 'white' : ' sky'} />
+                      <ContactDocker
+                        themeColor={isTop && topTextColor ? 'white' : ' sky'}
+                      />
                     </motion.div>
                   )}
 
