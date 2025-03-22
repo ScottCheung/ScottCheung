@@ -38,9 +38,24 @@ const ScrollableContainer = ({
 
   const scrollToRight = () => {
     const container = containerRef.current;
-    if (toRight) {
-      container.scrollLeft = containerRef.current.scrollWidth;
-    }
+    const scrollDuration = 1000; // 滚动持续时间（毫秒）
+    const targetScroll = container.scrollWidth;
+    const startScroll = container.scrollLeft;
+    const startTime = Date.now();
+
+    const scroll = () => {
+      const elapsedTime = Date.now() - startTime;
+      const progress = Math.min(elapsedTime / scrollDuration, 1); // 计算滚动进度
+
+      container.scrollLeft =
+        startScroll + (targetScroll - startScroll) * progress; // 更新滚动位置
+
+      if (progress < 1) {
+        requestAnimationFrame(scroll); // 如果滚动还没完成，继续更新
+      }
+    };
+
+    requestAnimationFrame(scroll); // 开始动画
   };
 
   const handleScroll = () => {
