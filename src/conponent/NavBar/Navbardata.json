@@ -174,6 +174,29 @@
           ],
           "status": "fi-sr-eye"
         },
+
+        {
+          "link": "https://gobell.vercel.app/test",
+          "blank": true,
+          "name": ["Design Syetem", "设计系统"],
+          "icon": "fi-sr-pencil-paintbrush",
+          "des": [
+            "A design system with Tailwind configuration based on UI drafts helps improve team communication.",
+            "设计系统结合 Tailwind 配置，根据 UI 设计稿，帮助团队更好沟通，提升效率。"
+          ],
+          "status": "fi-sr-lock"
+        },
+        {
+          "link": "https://xianzhe.site",
+          "blank": true,
+          "name": ["Personal Website", "个人网页"],
+          "icon": "fi-rr-browser",
+          "des": [
+            "Personal web page, the whole process is responsible for web page, design, development, deployment, maintenance.",
+            "个人网页，全流程负责网页，设计，开发，部署，维护。"
+          ],
+          "status": "fi-sr-lock"
+        },
         {
           "link": "/rentmsg",
           "blank": true,
