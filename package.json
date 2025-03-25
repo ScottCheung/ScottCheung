@@ -14,7 +14,6 @@
     "@types/react": "^18.3.3",
     "apexcharts": "^3.49.0",
     "axios": "^1.7.2",
-    "eslint": "8.57.0",
     "html2canvas": "^1.4.1",
     "html2pdf.js": "^0.10.2",
     "jspdf": "^2.5.2",
@@ -29,8 +28,10 @@
     "react-modal": "^3.16.1",
     "react-router-dom": "^6.20.1",
     "react-scripts": "^5.0.1",
+    "react-slick": "^0.30.3",
     "react-swipeable": "^7.0.1",
     "react-to-print": "^3.0.1",
+    "slick-carousel": "^1.8.1",
     "three": "^0.166.1",
     "three-globe": "^2.31.1"
   },

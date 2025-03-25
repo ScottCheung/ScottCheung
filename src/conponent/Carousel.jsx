@@ -5,6 +5,9 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useLanguage } from '../help/helpFunction';
 import { useSwipeable } from 'react-swipeable';
 import SubNav from '../conponent/subNav';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 const Carousel = ({ interval, HomeCarousel }) => {
   const lang = useLanguage();
@@ -100,6 +103,13 @@ const Carousel = ({ interval, HomeCarousel }) => {
     preventDefaultTouchmoveEvent: true,
     trackMouse: true,
   });
+  const settings = {
+    verticalSwiping: false, // 禁用上下滑动
+    swipeToSlide: true, // 滑动到下一张
+    infinite: true, // 无限循环
+    slidesToShow: 1, // 每次显示一张
+    slidesToScroll: 1, // 每次滚动一张
+  };
 
   return (
     <motion.div
@@ -112,7 +122,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
       tabIndex='0'
     >
       <span
-        className={`z-20 h-${viewportHeight}px absolute w-full h-full bg-gradient-to-b from-black/30 via-black/10 via-[300px] to-transparent  overflow-hidden`}
+        className={`z-20 h-${viewportHeight}px hidden md:flex absolute w-full h-full bg-gradient-to-b from-black/30 via-black/10 via-[300px] to-transparent  overflow-hidden`}
       ></span>
       <svg
         data-v-226d292e=''
