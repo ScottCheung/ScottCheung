@@ -147,24 +147,24 @@ const Carousel = ({ interval, HomeCarousel }) => {
           HomeCarousel[0],
         ].map((item, index) => (
           <motion.div className={`flex-none w-full `} key={index}>
-            <a href={item.href} className='flex justify-center w-full h-full'>
-              {item.type === 'image' && (
-                <img
-                  loading='eager'
-                  src={item.src}
-                  alt=''
-                  className='object-cover object-bottom w-full h-full '
-                />
-              )}
-              {item.type === 'video' && (
-                <video
-                  src={item.src}
-                  alt={item.src}
-                  autoPlay='true'
-                  className='object-cover w-full h-full '
-                />
-              )}
-            </a>
+            {/* <a href={item.href} className='flex justify-center w-full h-full'> */}
+            {item.type === 'image' && (
+              <img
+                loading='eager'
+                src={item.src}
+                alt=''
+                className='object-cover object-bottom w-full h-full '
+              />
+            )}
+            {item.type === 'video' && (
+              <video
+                src={item.src}
+                alt={item.src}
+                autoPlay='true'
+                className='object-cover w-full h-full '
+              />
+            )}
+            {/* </a> */}
           </motion.div>
         ))}
       </div>
