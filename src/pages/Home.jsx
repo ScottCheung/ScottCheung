@@ -15,17 +15,31 @@ import AboutMe from '../conponent/AboutMe';
 import WorkExperience from '../conponent/workData';
 import Capability from './Capability';
 import KeyFeature from '../conponent/KeyFeature';
-import Welcome from '../conponent/Welocome';
 import Contact from '../conponent/Contact';
 import GoldenNav from '../conponent/GoldenNav';
-import Carousel from '../conponent/Carousel';
+import Carousel from '../conponent/Carousel2';
 import Log from '../conponent/Log';
 import Database from '../data/Database.json';
 import { useAppContext } from '../help/ContextManager';
 import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
 
 const bg = Database.PersonalInfo.Welcomebg[0];
+// const path = '../';
 const HomeCarousel = [
+  {
+    href: '/life',
+    type: 'video',
+    duration: 38,
+    src: `video/swimming.mov`,
+  },
+  {
+    href: '/life',
+    type: 'image',
+    duration: null,
+    minisrc: 'https://img.picgo.net/2024/12/06/15cb61b12c6e29e02.jpg',
+    src: 'https://img.picgo.net/2024/12/06/1lbc776b9e142932e9.jpg',
+  },
+
   {
     href: '/life',
     type: 'image',
@@ -35,11 +49,11 @@ const HomeCarousel = [
   },
   {
     href: '/life',
-    type: 'image',
-    duration: null,
-    minisrc: 'https://img.picgo.net/2024/12/06/15cb61b12c6e29e02.jpg',
-    src: 'https://img.picgo.net/2024/12/06/1lbc776b9e142932e9.jpg',
+    type: 'video',
+    duration: 38,
+    src: `video/22.MOV`,
   },
+
   {
     href: '/life',
     type: 'image',
@@ -69,13 +83,6 @@ const HomeCarousel = [
     minisrc: 'https://img.picgo.net/2024/12/09/4ad634cc94fd1b09f.jpg',
     src: 'https://img.picgo.net/2024/12/09/4lf9c1d356de742391.jpg',
   },
-
-  // {
-  //   href: '/life',
-  //   type: 'video',
-  //   duration: '50s',
-  //   src: 'http://www.flowbite.com/docs/videos/flowbite.mp4',
-  // },
 ];
 
 function Home() {

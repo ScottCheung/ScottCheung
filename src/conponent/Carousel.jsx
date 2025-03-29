@@ -115,7 +115,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
   return (
     <motion.div
       {...handlers}
-      className={`h-[${viewportHeight * 0.4}px] flex lg:h-[${viewportHeight * 1.1}px] relative z-30 w-full overflow-hidden bg-white`}
+      className={`h-[${viewportHeight * 0.4}px] flex lg:h-[${viewportHeight * 1.1}px] relative z-30 w-full ${!top && 'cursor-none'} overflow-hidden bg-white`}
       onKeyDown={(e) => {
         if (e.key === 'ArrowRight') nextSlide();
         if (e.key === 'ArrowLeft') prevSlide();
@@ -138,16 +138,21 @@ const Carousel = ({ interval, HomeCarousel }) => {
           fill='#f5f5f7'
         ></path>
       </svg>
-      <div
-        className={`flex z-10 w-full h-full ${isTransitioning ? 'transition-transform duration-500' : ''}`}
-        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
+      <motion.div
+        layout
+        initial={{ x: `-${activeIndex * 100}%` }}
+        animate={{ x: 0 }}
+        exit={{ x: `${activeIndex * 100}%` }}
+        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+        className={`flex z-10 w-full  h-full ${isTransitioning ? 'transi' : ''}`}
+        style={{ translateX: `-${activeIndex * 100}%` }}
       >
         {[
           HomeCarousel[HomeCarousel.length - 1],
           ...HomeCarousel,
           HomeCarousel[0],
         ].map((item, index) => (
-          <motion.div className={`flex-none w-full `} key={index}>
+          <motion.div className={`flex-none w-full h-full`} key={index}>
             {/* <a href={item.href} className='flex justify-center w-full h-full'> */}
             {item.type === 'image' && (
               <img
@@ -168,7 +173,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
             {/* </a> */}
           </motion.div>
         ))}
-      </div>
+      </motion.div>
 
       <div className='z-30 flex justify-between'>
         <span
@@ -248,6 +253,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
               style={{ animationDelay: '0.15s' }}
             >
               <motion.button
+                disabled={!isTop}
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
                 onClick={prevSlide}
@@ -267,6 +273,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
               style={{ animationDelay: '0.15s' }}
             >
               <motion.button
+                disabled={!isTop}
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
                 onClick={nextSlide}
@@ -292,22 +299,22 @@ const Carousel = ({ interval, HomeCarousel }) => {
                 className='bg-black/20 p-[15px] flex rounded-full gap-x-[20px] justify-center items-center transition-all'
               >
                 {HomeCarousel.map((item, index) => (
-                  <div key={index}>
-                    <div
-                      onClick={() => setActiveIndex(index + 1)}
-                      style={{ animationDelay: `${(index + 3) * 0.11}s` }}
-                      className={`bg-gray-200/50 hover:bg-gray-50/50 animate_animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[15px] ${index + 1 === activeIndex ? 'w-[50px]' : 'w-[15px]'}`}
-                    >
-                      {index + 1 === activeIndex &&
-                        progress >= 0 &&
-                        isPaused === false && (
-                          <div
-                            className='h-full bg-white rounded-full'
-                            style={{ width: `${progress}%` }}
-                          />
-                        )}
-                    </div>
-                  </div>
+                  <motion.button
+                    key={index}
+                    disabled={!isTop}
+                    onClick={() => setActiveIndex(index + 1)}
+                    style={{ animationDelay: `${(index + 3) * 0.11}s` }}
+                    className={`bg-gray-200/50 hover:bg-gray-50/50 animate_animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[15px] ${index + 1 === activeIndex ? 'w-[50px]' : 'w-[15px]'}`}
+                  >
+                    {index + 1 === activeIndex &&
+                      progress >= 0 &&
+                      isPaused === false && (
+                        <div
+                          className='h-full bg-white rounded-full'
+                          style={{ width: `${progress}%` }}
+                        />
+                      )}
+                  </motion.button>
                 ))}
               </motion.div>
             </div>
@@ -317,6 +324,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
             >
               <motion.button
                 layout
+                disabled={!isTop}
                 onClick={() => setIsPaused(!isPaused)}
                 className='bg-black/20 w-[45px] h-[45px] animate_animated animate__fadeIn flex rounded-full justify-center items-center transition-all ring-0 outline-none duration-1000'
               >
@@ -350,7 +358,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
             }}
             className='hidden w-full lg:flex'
           >
-            <SubNav />
+            <SubNav isTop={isTop} />
           </motion.div>
         </motion.div>
       </AnimatePresence>
