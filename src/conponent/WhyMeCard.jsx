@@ -182,7 +182,7 @@ function WhymeCard() {
                       className={`${
                         whymeCard.advantage === feature.advantage ?
                           'hidden'
-                        : 'animate__animated animate__fadeInUp'
+                        : 'animate_animated animate__fadeInUp'
                       } flex hover:shadow-6xl shadow-md items-start py-[20px] justify-center bg-gradient-to-br from-[-20%] to-[120%] w-[10vw] mr-[30px] -ml-[28px] rounded-r-full ${
                         feature.color1 + ' ' + feature.color2
                       } `}

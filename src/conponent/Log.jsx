@@ -6,7 +6,7 @@ import packageinfo from '../data/update-log.json';
 
 const globalBradius = 'lg:rounded-[28px] md:rounded-[14px]';
 const globalBpadding = 'lg:p-[40px] p-[28px]';
-const button = `text-sky-800 border-sky-700 hover:bg-sky-700 items-center gap-x-[20px] justify-center items-center w-full flex  px-[20px] hover:px-[50px] py-2 text-[10px] md:text-[20px] border rounded-full hover:font-semibold  hover:text-white  transition-all animate__animated animate__fadeInUp `;
+const button = `text-sky-800 border-sky-700 hover:bg-sky-700 items-center gap-x-[20px] justify-center items-center w-full flex  px-[20px] hover:px-[50px] py-2 text-[10px] md:text-[20px] border rounded-full hover:font-semibold  hover:text-white  transition-all animate_animated animate__fadeInUp `;
 const headerHeight =
   'h-[30px]  w-[30px] text-[15px] lg:h-[50px]  lg:w-[50px] lg:text-[25px]';
 const lang = localStorage.getItem('lang') || 0;

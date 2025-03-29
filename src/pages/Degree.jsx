@@ -15,7 +15,7 @@ export default function Example() {
       <div className='flex relative min-w-full rounded-[28px] p-[28px] '>
         {/* PlannetBackground */}
 
-        <motion.div className='flex flex-col z-20  rounded-[28px] overflow-hidden lg:h-[130vh]  mt-[100px]  w-full animate__animated animate__zoomIn relative'>
+        <motion.div className='flex flex-col z-20  rounded-[28px] overflow-hidden lg:h-[130vh]  mt-[100px]  w-full animate_animated animate__zoomIn relative'>
           <motion.span
             layout
             className={`absolute  flex blur-[5px] top-0 bottom-0 opacity-50 left-0 right-0  z-10 `}
@@ -27,10 +27,10 @@ export default function Example() {
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'center bottom',
               }}
-              className='w-full h-full animate__animated animate__fadeInDown '
+              className='w-full h-full animate_animated animate__fadeInDown '
             ></div>
           </motion.span>
-          <div className=' flex font-black mt-[15vh] lg:mt-[30vh] text-[30px] justify-center items-center animate__animated animate__fadeInUp md:text-[70px] lg:text-[150px]'>
+          <div className=' flex font-black mt-[15vh] lg:mt-[30vh] text-[30px] justify-center items-center animate_animated animate__fadeInUp md:text-[70px] lg:text-[150px]'>
             I have 4 majors
           </div>
           <div
@@ -42,7 +42,7 @@ export default function Example() {
               ),
               filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.7))',
             }}
-            className='z-20 w-full h-[400px] lg:h-full overflow-visible animate__animated animate__fadeInUp'
+            className='z-20 w-full h-[400px] lg:h-full overflow-visible animate_animated animate__fadeInUp'
           ></div>
         </motion.div>
       </div>

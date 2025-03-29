@@ -261,7 +261,7 @@ function DockerBar(props) {
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-0'
             >
-              <Dialog.Panel className='animate__animated animate__zoomIn relative transform  rounded-[28px] bg-white text-left shadow-xl transition-all m-12 w-full  md:max-w-[800px]'>
+              <Dialog.Panel className='animate_animated animate__zoomIn relative transform  rounded-[28px] bg-white text-left shadow-xl transition-all m-12 w-full  md:max-w-[800px]'>
                 <div className=' p-[14px] md:p-[40px]'>
                   <div className='flex items-start'>
                     <div className='w-full text-center sm:ml-4 sm:mt-0 md:text-left '>
@@ -327,7 +327,7 @@ function DockerBar(props) {
                                 }}
                                 className={`${
                                   hasEntered === 0 ?
-                                    'animate__animated animate__fadeInUp'
+                                    'animate_animated animate__fadeInUp'
                                   : ''
                                 } ${PanelButtonStyle} 
                                 transition-all duration-50
@@ -539,7 +539,7 @@ function DockerBar(props) {
                           onMouseEnter={() => setCurrentIndex(index)}
                           className={`p-[7.5px] ${
                             hasEntered === 0 ?
-                              'animate__animated animate__fadeInUp'
+                              'animate_animated animate__fadeInUp'
                             : ''
                           } `}
                         >
@@ -680,9 +680,7 @@ function DockerBar(props) {
                     }`,
                   }}
                   className={`${
-                    hasEntered === 0 ?
-                      'animate__animated animate__fadeInUp'
-                    : ''
+                    hasEntered === 0 ? 'animate_animated animate__fadeInUp' : ''
                   } w-[2px] h-[35px] border-[1px] darrk:border-gray-500  border-gray-300 mx-[10px] transition-all duration-50`}
                 ></motion.div>
               )}
@@ -714,7 +712,7 @@ function DockerBar(props) {
                     }}
                     className={`p-[7.5px] ${
                       hasEntered === 0 ?
-                        'animate__animated animate__fadeInUp'
+                        'animate_animated animate__fadeInUp'
                       : ''
                     } `}
                   >

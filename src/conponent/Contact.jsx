@@ -93,7 +93,7 @@ function Contact({ isTopOut }) {
                       style={{
                         animationDelay: `${index * 0.1}s`,
                       }}
-                      className={`${type.icon} text-white text-[23px] lg:text-6xl  animate__animated  animate__zoomIn  `}
+                      className={`${type.icon} text-white text-[23px] lg:text-6xl  animate_animated  animate__zoomIn  `}
                     ></i>
                   </div>
 
@@ -106,7 +106,7 @@ function Contact({ isTopOut }) {
                     style={{
                       animationDelay: `${index * 0.1}s`,
                     }}
-                    className={` animate__animated text-[13px]  animate__fadeInUp   text-justify 
+                    className={` animate_animated text-[13px]  animate__fadeInUp   text-justify 
                                             text-white/50`}
                   >
                     {type.name}
@@ -162,7 +162,7 @@ function Contact({ isTopOut }) {
                   </button>
                 </div>
 
-                <div className='absolute -top-[50px] left-0 right-0 z-50 group-hover:flex overflow-visible justify-center w-full animate__fast text-white rounded-full shadow-2xl hidden animate__animated animate__fadeInUp backdrop-blur-md bg-black/80 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800'>
+                <div className='absolute -top-[50px] left-0 right-0 z-50 group-hover:flex overflow-visible justify-center w-full animate__fast text-white rounded-full shadow-2xl hidden animate_animated animate__fadeInUp backdrop-blur-md bg-black/80 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800'>
                   <p className='px-6 py-4 text-center text-[15px]'>
                     {lang == 0 && 'Copy '}
                     {lang == 1 && '复制 '}
@@ -204,7 +204,7 @@ function Contact({ isTopOut }) {
                           style={{
                             animationDelay: `${index * 0.1}s`,
                           }}
-                          className={`${type.icon} text-white text-5xl animate__animated  animate__zoomIn `}
+                          className={`${type.icon} text-white text-5xl animate_animated  animate__zoomIn `}
                         ></i>
                       </div>
                       <motion.div

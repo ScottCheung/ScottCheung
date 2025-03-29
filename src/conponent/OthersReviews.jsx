@@ -27,7 +27,7 @@ function SelfDescribing() {
         style={{ backgroundImage: 'url(./contact.jpg)' }}
       >
         <div className='visblecontainer'>
-          <h2 className='animate__animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono'>
+          <h2 className='animate_animated animate__slideInUp text-8xl font-bold my-12 py-24 font-mono'>
             About me
           </h2>
           <div className='row hestia-about-content'>
@@ -35,8 +35,8 @@ function SelfDescribing() {
               className='wp-block-quote has-text-align-left is-style-plain has-text-color'
               style={{ color: '#abb7c29e' }}
             >
-              <div className='animate__animated animate__zoomIn wp-block-image is-style-rounded'>
-                <figure className='animate__animated animate__slideInUp alignright size-full is-resized wp-duotone-unset-1'>
+              <div className='animate_animated animate__zoomIn wp-block-image is-style-rounded'>
+                <figure className='animate_animated animate__slideInUp alignright size-full is-resized wp-duotone-unset-1'>
                   <img
                     loading='lazy'
                     decoding='async'
@@ -50,7 +50,7 @@ function SelfDescribing() {
                   ></img>
                 </figure>
               </div>
-              <p className='animate__animated animate__slideInUp text-white mb-12'>
+              <p className='animate_animated animate__slideInUp text-white mb-12'>
                 “I am a person who is positive about every aspect of life. There
                 are many things I like to do, to see, and to experience. I like
                 to read, I like to write; I like to think, I like to dream; I

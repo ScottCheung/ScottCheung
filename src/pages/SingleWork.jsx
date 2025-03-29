@@ -92,7 +92,7 @@ export default function singleWork() {
             }}
             whileInView={{ opacity: 1, y: '0px', scale: 1 }}
             viewport={{ once: true }}
-            className='min-h-[800px] lg:min-h-[900px] relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-[28px] -mt-[150px] animate__animated animate__fadeInUp'
+            className='min-h-[800px] lg:min-h-[900px] relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-[28px] -mt-[150px] animate_animated animate__fadeInUp'
           >
             <div className='px-6'>
               <div className='flex  justify-center mb-15 -mt-[75px]'>
@@ -133,7 +133,7 @@ export default function singleWork() {
                 viewport={{ once: true }}
                 className='text-center mt-12'
               >
-                <h3 className='text-[32px] font-semibold leading-normal mb-2 text-gray-800 mb-2 animate__animated animate__zoomIn'>
+                <h3 className='text-[32px] font-semibold leading-normal mb-2 text-gray-800 mb-2 animate_animated animate__zoomIn'>
                   {selectedWhyMeItem.advantage}
                 </h3>
               </motion.div>
@@ -154,7 +154,7 @@ export default function singleWork() {
                                 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className='tile-headline typography-subsection-headline text-gray text-[28px] animate__animated animate__zoomIn'
+                                className='tile-headline typography-subsection-headline text-gray text-[28px] animate_animated animate__zoomIn'
                               >
                                 {selectedWhyMeItem.description}
                               </motion.div>

@@ -52,7 +52,7 @@ function SinglPic() {
       {
         <motion.div>
           <Lightbox
-            className='animate__animated animate__zoomIn duration-500'
+            className='animate_animated animate__zoomIn duration-500'
             mainSrc={item}
             nextSrc={nextItem}
             prevSrc={preItem}

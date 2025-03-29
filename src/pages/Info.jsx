@@ -85,14 +85,14 @@ export default function Profile() {
             initial={{ height: '0px', opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             transition={{ duration: 0.8, ease: [0.455, 0.03, 0.515, 0.955] }}
-            className='relative flex flex-col bg-white pt-[14px] md:pt-[28px] lg:pt-[40px] px-[14px] md:px-[28px] lg:px-[40px] pb-[80px] rounded-[28px]  -mt-[80px] animate__animated animate__fadeInUp '
+            className='relative flex flex-col bg-white pt-[14px] md:pt-[28px] lg:pt-[40px] px-[14px] md:px-[28px] lg:px-[40px] pb-[80px] rounded-[28px]  -mt-[80px] animate_animated animate__fadeInUp '
           >
             <div className='flex justify-center w-full'>
               <img
                 loading='lazy'
                 alt='...'
                 src='https://img.picgo.net/2024/12/06/profile26fe37ccfe6ad6d7.png'
-                className=' rounded-full h-auto absolute -m-[75px] lg:-m-[150px] animate__animated animate__zoomIn'
+                className=' rounded-full h-auto absolute -m-[75px] lg:-m-[150px] animate_animated animate__zoomIn'
                 style={{
                   maxWidth: windowWidth > 1080 ? '200px' : '100px',
                   filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))',
@@ -102,7 +102,7 @@ export default function Profile() {
             <div className='text-center '>
               <h3
                 style={{ fontFamily: 'Hey August, sans-serif' }}
-                className='mt-32 mb-12 text-[40px] lg:text-[60px] font-[600] leading-normal text-gray-800 animate__animated animate__zoomIn'
+                className='mt-32 mb-12 text-[40px] lg:text-[60px] font-[600] leading-normal text-gray-800 animate_animated animate__zoomIn'
               >
                 {['Scott Cheung', '张贤哲'][lang]}
               </h3>
@@ -127,7 +127,7 @@ export default function Profile() {
                       '请不要随意传播个人信息，请尊重他人隐私，谢谢。'}
                   </p>
                   <button
-                    className='font-normal text-pink-500 text-[15px] animate__animated animate__zoomIn'
+                    className='font-normal text-pink-500 text-[15px] animate_animated animate__zoomIn'
                     onClick={(e) =>
                       e.preventDefault() & setIsExpanded(!isExpanded)
                     }
@@ -136,7 +136,7 @@ export default function Profile() {
                       layout
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.9 }}
-                      className={`animate__animated  animate__zoomIn`}
+                      className={`animate_animated  animate__zoomIn`}
                     >
                       {isExpanded ?
                         ['Collapse', '收起'][lang]
@@ -160,7 +160,7 @@ export default function Profile() {
                       fontWeight: 600,
                       letterSpacing: '0.011em',
                     }}
-                    className='py-4 text-[30px] text-gray-900 animate__animated animate__zoomIn'
+                    className='py-4 text-[30px] text-gray-900 animate_animated animate__zoomIn'
                   >
                     {lang == 0 && 'Basic Information'}
                     {lang == 1 && '基本信息'}
@@ -186,7 +186,7 @@ export default function Profile() {
                           whileTap={{ scale: 0.99 }}
                           layout
                           style={{ animationDelay: `${0.05 * index}s` }}
-                          className='flex justify-between col-span-12 py-4 border-b lg:col-span-6 md:py-8 animate__animated animate__zoomIn'
+                          className='flex justify-between col-span-12 py-4 border-b lg:col-span-6 md:py-8 animate_animated animate__zoomIn'
                         >
                           <div className='flex gap-4 lg:gap-8'>
                             <i

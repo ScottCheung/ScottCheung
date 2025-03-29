@@ -92,7 +92,7 @@ export function more() {
               href={item.href}
               onClick={handleClick}
               style={{ animationDelay: `${index * 0.07}s` }}
-              className={`col-span-2 flex group w-full h-full  justify-center animate__zoomIn animate__animated  text-black `}
+              className={`col-span-2 flex group w-full h-full  justify-center animate__zoomIn animate_animated  text-black `}
             >
               <motion.div layout whileTap={{ scale: 0.95 }} className=''>
                 <div className='rounded-full bg-sky-100 w-[50px] h-[50px] flex justify-center items-center active:text-white active:bg-sky-900  '>

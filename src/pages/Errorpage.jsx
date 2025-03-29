@@ -45,13 +45,13 @@ export default function Errorpage() {
   return (
     <div className='min-h-screen overflow-hidden'>
       <Navbar topTextColor={true} />
-      <main className='h-full bg-gray-900/40 animate__animated animate__fadeIn  place-items-center flex justify-center  px-6 py-24 sm:py-32 lg:px-8 '>
+      <main className='h-full bg-gray-900/40 animate_animated animate__fadeIn  place-items-center flex justify-center  px-6 py-24 sm:py-32 lg:px-8 '>
         <div className='text-center '>
           <motion.p
             initial={{ scale: 0, y: '-90px', opacity: 0 }}
             animate={{ scale: 1, y: '0px', opacity: 1 }}
             transition={{ duration: 0.7 }}
-            className='animate__animated animate__fadeInUp text-[150px] font-semibold text-white'
+            className='animate_animated animate__fadeInUp text-[150px] font-semibold text-white'
           >
             {Message.FirstHeader[lang]}
           </motion.p>
@@ -60,7 +60,7 @@ export default function Errorpage() {
             animate={{ scale: 1, y: '0px', opacity: 1 }}
             transition={{ duration: 0.8 }}
             style={{ animationDelay: `0.2s` }}
-            className='animate__animated animate__fadeInUp mt-4 py-[10px] text-6xl font-bold tracking-tight text-gray-200 sm:text-4xl'
+            className='animate_animated animate__fadeInUp mt-4 py-[10px] text-6xl font-bold tracking-tight text-gray-200 sm:text-4xl'
           >
             {Message.SecondHeader[lang]}
           </motion.h1>
@@ -69,7 +69,7 @@ export default function Errorpage() {
             animate={{ scale: 1, y: '0px', opacity: 1 }}
             transition={{ duration: 0.9 }}
             style={{ animationDelay: `0.3s` }}
-            className='animate__animated animate__fadeInUp mt-6 text-[15px] py-[15px] leading-7 text-gray-200'
+            className='animate_animated animate__fadeInUp mt-6 text-[15px] py-[15px] leading-7 text-gray-200'
           >
             {Message.Status[lang]}
           </motion.p>
@@ -81,12 +81,12 @@ export default function Errorpage() {
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7 }}
-              className='animate__animated animate__zoomIn animate__slow'
+              className='animate_animated animate__zoomIn animate__slow'
             >
               <a
                 style={{ animationDelay: `0.4s` }}
                 href='/'
-                className='animate__animated animate__fadeInUp rounded-lg text-3xl  bg-sky-900 px-10 py-6 font-semibold text-white shadow-sm hover:bg-sky-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:scale-[1.05]'
+                className='animate_animated animate__fadeInUp rounded-lg text-3xl  bg-sky-900 px-10 py-6 font-semibold text-white shadow-sm hover:bg-sky-700 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 hover:scale-[1.05]'
               >
                 <i className={`fi  mr-6 mt-3 ${Message.btn1Icon} `}></i>
                 {Message.btn1[lang]}
@@ -95,7 +95,7 @@ export default function Errorpage() {
             <a
               href={Message.btn2web}
               style={{ animationDelay: `0.6s` }}
-              className='animate__animated animate__fadeInUp text-3xl  font-semibold text-gray-200 hover:text-white hover:scale-[1.05]'
+              className='animate_animated animate__fadeInUp text-3xl  font-semibold text-gray-200 hover:text-white hover:scale-[1.05]'
             >
               <motion.div
                 whileHover={{ scale: 1.05 }}

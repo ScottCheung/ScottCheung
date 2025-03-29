@@ -112,7 +112,7 @@ export default function WhyM() {
             }}
             whileInView={{ opacity: 1, y: '0px', scale: 1 }}
             viewport={{ once: true }}
-            className={`pb-[350px] lg:pb-[30vw] relative flex flex-col  break-words bg-yellow-50 w-full  rounded-[28px] -mt-[80px] animate__animated animate__fadeInUp`}
+            className={`pb-[350px] lg:pb-[30vw] relative flex flex-col  break-words bg-yellow-50 w-full  rounded-[28px] -mt-[80px] animate_animated animate__fadeInUp`}
           >
             <div
               className='absolute top-0 bottom-0 left-0 right-0 w-full h-full'
@@ -167,7 +167,7 @@ export default function WhyM() {
                 <h3
                   className={`text-[32px] md:text-[42px] lg:text-[50px] font-semibold leading-normal mb-2 ${
                     selectedWhyMeItem.color1 + ' ' + selectedWhyMeItem.color2
-                  } bg-clip-text text-transparent bg-gradient-to-br mb-2 animate__animated animate__zoomIn`}
+                  } bg-clip-text text-transparent bg-gradient-to-br mb-2 animate_animated animate__zoomIn`}
                 >
                   {selectedWhyMeItem.advantage}
                 </h3>
@@ -202,7 +202,7 @@ export default function WhyM() {
                                   //   textJustify: "inter-word",
                                   //   width: "100%",
                                   // }}
-                                  className={`  mb-2 text-left  bg-clip-text text-transparent bg-gradient-to-br   animate__animated animate__fadeInUp`}
+                                  className={`  mb-2 text-left  bg-clip-text text-transparent bg-gradient-to-br   animate_animated animate__fadeInUp`}
                                 >
                                   {SelectText(paragraph)}
                                 </p>

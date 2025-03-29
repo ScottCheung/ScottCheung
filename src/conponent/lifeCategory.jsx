@@ -18,7 +18,7 @@ export default function Life() {
     mt-[50px] lg:-mt-[80px] mb-[10vh]  z-40  w-full h-full '
     >
       <div
-        className={`grid grid-cols-12 gap-[10px] lg:gap-[30px] animate__animated animate__fadeIn  w-full `}
+        className={`grid grid-cols-12 gap-[10px] lg:gap-[30px] animate_animated animate__fadeIn  w-full `}
       >
         {Lifes.map((life, index) => (
           <motion.a

@@ -78,7 +78,7 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
             >
               <div
                 style={{ animationDelay: `${index * 0.2}s` }}
-                className={`flex py-5 animate__animated animate__zoomIn place-items-center items-center px-4 cursor-pointer ${
+                className={`flex py-5 animate_animated animate__zoomIn place-items-center items-center px-4 cursor-pointer ${
                   isTop ?
                     'hover:bg-gray-900/50 rounded-l-full'
                   : 'hover:bg-gray-300/50 rounded-l-full'

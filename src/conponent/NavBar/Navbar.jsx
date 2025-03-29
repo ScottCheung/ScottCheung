@@ -225,7 +225,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                   className='flex items-center justify-between w-full max-w-[1200px] '
                 >
                   <motion.button
-                    layout='position'
+                    layout
                     transition={{
                       duration: 1.2,
                       ease: [0.22, 1, 0.36, 1],
@@ -236,13 +236,12 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                   >
                     <a
                       href='/info'
-                      className='inline-flex items-center gap-x-[10px] justify-center h-full animate__animated animate__fadeInUp'
+                      className='inline-flex items-center gap-x-[10px] justify-center h-full welcomeanimation'
                     >
                       <motion.img
-                        loading='lazy'
                         layout
-                        className={`flex items-center required justify-center m-4  animate__animated animate__zoomIn   ${isTop ? 'w-16 h-16 lg:w-32 lg:h-32 rounded-lg' : 'w-[30px] h-[30px] md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-[7px]'} shadow-lg`}
-                        src='https://img.picgo.net/2024/12/06/avatar16e4aacd08d86884.th.jpg'
+                        className={`flex items-center required justify-center m-4    ${isTop ? 'w-16 h-16 lg:w-32 lg:h-32 rounded-lg' : 'w-[30px] h-[30px] md:w-20 md:h-20 lg:w-28 lg:h-28 rounded-[7px]'} shadow-lg`}
+                        src='https://img.picgo.net/2024/12/06/avatar16e4aacd08d86884.jpg'
                         alt="Xianzhe's Page"
                       />
 
@@ -251,14 +250,14 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                       >
                         <motion.div
                           style={{ fontFamily: 'Hey August, sans-serif' }}
-                          className={`flex flex-1 mb-2 text-nowrap text-left tracking-widest items-start justify-start animate__animated animate__zoomIn duration-1000 transition-all  ${isTop ? `${isTopTextColorWhite ? 'text-white' : ''} text-[17px]  md:text-[30px] lg:text-[35px] ` : 'text-[20px] lg:text-[25px]'}`}
+                          className={`flex flex-1 mb-2 text-nowrap text-left tracking-widest items-start justify-start  duration-1000 transition-all  ${isTop ? `${isTopTextColorWhite ? 'text-white' : ''} text-[17px]  md:text-[30px] lg:text-[35px] ` : 'text-[20px] lg:text-[25px]'}`}
                         >
                           {data.Avatar.Webname[lang]}
                         </motion.div>
                         <motion.div
                           href='/info'
                           style={{ animationDelay: '0.5s' }}
-                          className={`flex text-nowrap animate__animated animate__zoomIn transition-all  duration-1000 text-left ${isTop ? `${isTopTextColorWhite ? 'text-white' : ''} text-[13px]` : 'text-[10px]'}`}
+                          className={`flex text-nowrap  transition-all  duration-1000 text-left ${isTop ? `${isTopTextColorWhite ? 'text-white' : ''} text-[13px]` : 'text-[10px]'}`}
                         >
                           {data.Avatar.helloword[lang]}
                           <p
@@ -386,7 +385,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                           animationDelay: `${navbarItem.length * 0.07}s`,
                         }}
                         type='button'
-                        className={`py-6 pl-6 transition-none animate__animated animate__fadeInUp `}
+                        className={`py-6 pl-6  welcomeanimation `}
                         onClick={(e) =>
                           e.preventDefault() &
                           setIsOpened(!isOpened) &
@@ -687,7 +686,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                 selectedTab === item.name[0] && (
                   <motion.div
                     key={item.name[0] + index + 'introduction'}
-                    className={`absolute hidden  lg:inline-flex  ${selectedTab === 'Project' || selectedTab === 'Contact' ? `left-[15%] bottom-[3vw] scale-[0.6] max-w-[420px]` : `left-[25%] bottom-[10vw] max-w-[420px] `}  animate__animated animate__fadeInUp animate__fast transition-all bg-sky-900   rounded-r-[35px] rounded-tl-[35px] overflow-hidden  `}
+                    className={`absolute hidden  lg:inline-flex  ${selectedTab === 'Project' || selectedTab === 'Contact' ? `left-[15%] bottom-[3vw] scale-[0.6] max-w-[420px]` : `left-[25%] bottom-[10vw] max-w-[420px] `}  welcomeanimation transition-all bg-sky-900   rounded-r-[35px] rounded-tl-[35px] overflow-hidden  `}
                   >
                     <div className='p-[28px] lg:p-[40px] flex rounded-e-[28px] rounded-es-[28px] flex-col w-full  leading-1.5    darrk:bg-gray-700/20'>
                       <p className='text-[20px] lg:text-[25px]  darrk:text-gray-900 text-white  '>

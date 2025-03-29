@@ -182,24 +182,24 @@ function GridHouseCard() {
       <div className={`flex justify-between w-[100%]`}>
         <div className='mt-24 px-[20px] w-[100%]'>
           <AnimatePresence>
-            <header className='py-12 animate__animated animate__fadeIn w-[100%] px-auto'>
+            <header className='py-12 animate_animated animate__fadeIn w-[100%] px-auto'>
               <div className='items-end justify-between lg:flex'>
                 <div className='flex-col justify-start'>
-                  <h1 className='text-[40px] font-[500]  animate__animated animate__fadeInLeft'>
+                  <h1 className='text-[40px] font-[500]  animate_animated animate__fadeInLeft'>
                     {lang == '0' && 'Life Gallery'}
                     {lang == '1' && '生活图库'}
                   </h1>
-                  <p className='animate__animated animate__fadeInRight text-[15px]'>
+                  <p className='animate_animated animate__fadeInRight text-[15px]'>
                     {Database.PersonalInfo.Picture.pictureNotify[lang]}
                   </p>
                 </div>
                 <div className='flex flex-col text-right'>
-                  <h1 className='text-[27px] font-[500]  animate__animated animate__fadeInRight'>
+                  <h1 className='text-[27px] font-[500]  animate_animated animate__fadeInRight'>
                     {lang == '0' &&
                       (FavSecMode ? 'Favorite Pictures' : 'All Pictures')}
                     {lang == '1' && (FavSecMode ? '精选图片' : '全部图片')}
                   </h1>
-                  <p className='animate__animated animate__fadeInLeft text-[20px] flex justify-end'>
+                  <p className='animate_animated animate__fadeInLeft text-[20px] flex justify-end'>
                     <i className='pt-1 mr-3 fi fi-sr-picture'></i>
                     <N className='w-[200px]' n={totalPictures} d={1} />
                   </p>
@@ -218,7 +218,7 @@ function GridHouseCard() {
                   <div className='inline-flex items-center'>
                     {/* {con} */}
                     <div
-                      className={`animate__animated animate__fadeInLeft w-20 h-12   flex  items-center rounded-full p-2 cursor-pointer ${
+                      className={`animate_animated animate__fadeInLeft w-20 h-12   flex  items-center rounded-full p-2 cursor-pointer ${
                         !reverseOrder == true ?
                           'justify-end bg-gradient-to-br from-sky-500 to-emerald-500'
                         : 'justify-start bg-gray-300'
@@ -234,7 +234,7 @@ function GridHouseCard() {
                         transition={spring}
                       />
                     </div>
-                    <span className='animate__animated animate__fadeInRight ms-3 text-[15px] font-medium text-gray-900 darrk:text-gray-200'>
+                    <span className='animate_animated animate__fadeInRight ms-3 text-[15px] font-medium text-gray-900 darrk:text-gray-200'>
                       {lang == '0' ? 'Sequential' : '时间正序'}
                     </span>
                   </div>
@@ -246,11 +246,11 @@ function GridHouseCard() {
               >
                 {!lightboxIsOpen && Components.NavBar === 'visible' && (
                   <div className='inline-flex items-center'>
-                    <span className='animate__animated animate__fadeInLeft mr-3 text-[15px] font-medium text-gray-900 darrk:text-gray-200'>
+                    <span className='animate_animated animate__fadeInLeft mr-3 text-[15px] font-medium text-gray-900 darrk:text-gray-200'>
                       {lang == '0' ? 'Favorite' : '精选'}
                     </span>
                     <div
-                      className={`animate__animated animate__fadeInRight w-20 h-12 flex items-center rounded-full p-2 cursor-pointer ${
+                      className={`animate_animated animate__fadeInRight w-20 h-12 flex items-center rounded-full p-2 cursor-pointer ${
                         FavSecMode == true ?
                           'justify-end bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500'
                         : 'justify-start bg-gray-300'
@@ -298,7 +298,7 @@ function GridHouseCard() {
                         animationDelay: `${0.04 * (index % 12)}s`,
                         zIndex: zIndexes[index],
                       }}
-                      className='transition-all duration-500 flex w-full  aspect-square justify-center items-center  overflow-hidden bg-gray-500/90  rounded-[14px] shadow-lg animate__animated animate__zoomIn darrk:bg-gray-700 '
+                      className='transition-all duration-500 flex w-full  aspect-square justify-center items-center  overflow-hidden bg-gray-500/90  rounded-[14px] shadow-lg animate_animated animate__zoomIn darrk:bg-gray-700 '
                     >
                       <motion.div
                         initial={{ scale: 1.2 }}
@@ -334,7 +334,7 @@ function GridHouseCard() {
                           animationDelay: `${0.05 * (index % 36)}s`,
                           zIndex: zIndexes[index],
                         }}
-                        className='absolute inset-0 flex items-center justify-center animate__animated animate__fadeIn'
+                        className='absolute inset-0 flex items-center justify-center animate_animated animate__fadeIn'
 
                         // target="_blank" rel="noopener noreferrer"
                       >
@@ -501,7 +501,7 @@ function GridHouseCard() {
 
                     {/* <Lightbox
 
-            className='hidden duration-300 animate__animated animate__zoomIn'
+            className='hidden duration-300 animate_animated animate__zoomIn'
             mainSrc={item}
             nextSrc={nextItem}
             prevSrc={preItem}

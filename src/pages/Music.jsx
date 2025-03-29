@@ -50,13 +50,13 @@ export default function Life() {
       >
         <div className='flex items-center justify-center min-h-screen px-6 text-left'>
           <div className='relative z-20 w-full max-w-4xl  lg:max-w-[1200px] gap-y-[20px]'>
-            <h1 className='animate__animated animate__zoomIn text-black font-black lg:text-[50px] text-[35px] mb-6'>
+            <h1 className='animate_animated animate__zoomIn text-black font-black lg:text-[50px] text-[35px] mb-6'>
               {text.title}
             </h1>
-            <blockquote className='animate__animated my-[50px] border-sky-500 animate__fadeInUp mt-4 sm:text-[20px] text-[15px] text-gray-600 italic border-l-4  pl-[30px]'>
+            <blockquote className='animate_animated my-[50px] border-sky-500 animate__fadeInUp mt-4 sm:text-[20px] text-[15px] text-gray-600 italic border-l-4  pl-[30px]'>
               {text.quato}
             </blockquote>
-            <p className='animate__animated animate__fadeInUp mb-[50px] mt-4 sm:text-[20px] text-[15px] text-gray-600 leading-relaxed'>
+            <p className='animate_animated animate__fadeInUp mb-[50px] mt-4 sm:text-[20px] text-[15px] text-gray-600 leading-relaxed'>
               {text.content}
             </p>
             <Music />

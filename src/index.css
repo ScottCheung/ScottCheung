@@ -1,3 +1,5 @@
+/** @format */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -38,7 +40,6 @@
 .scrollbar-hide::-webkit-scrollbar-track {
   background-color: transparent;
 }
-
 
 @keyframes welcomeFadeIn {
   0% {
@@ -169,7 +170,7 @@ html {
   --animate-delay: 1s;
   --animate-repeat: 1;
 }
-.animate__animated {
+.animate_animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-duration: var(--animate-duration);
@@ -177,84 +178,84 @@ html {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-.animate__animated.animate__infinite {
+.animate_animated.animate__infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
-.animate__animated.animate__repeat-1 {
+.animate_animated.animate__repeat-1 {
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-iteration-count: var(--animate-repeat);
   animation-iteration-count: var(--animate-repeat);
 }
-.animate__animated.animate__repeat-2 {
+.animate_animated.animate__repeat-2 {
   -webkit-animation-iteration-count: 2;
   animation-iteration-count: 2;
   -webkit-animation-iteration-count: calc(var(--animate-repeat) * 2);
   animation-iteration-count: calc(var(--animate-repeat) * 2);
 }
-.animate__animated.animate__repeat-3 {
+.animate_animated.animate__repeat-3 {
   -webkit-animation-iteration-count: 3;
   animation-iteration-count: 3;
   -webkit-animation-iteration-count: calc(var(--animate-repeat) * 3);
   animation-iteration-count: calc(var(--animate-repeat) * 3);
 }
-.animate__animated.animate__delay-1s {
+.animate_animated.animate__delay-1s {
   -webkit-animation-delay: 1s;
   animation-delay: 1s;
   -webkit-animation-delay: var(--animate-delay);
   animation-delay: var(--animate-delay);
 }
-.animate__animated.animate__delay-2s {
+.animate_animated.animate__delay-2s {
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
   -webkit-animation-delay: calc(var(--animate-delay) * 2);
   animation-delay: calc(var(--animate-delay) * 2);
 }
-.animate__animated.animate__delay-3s {
+.animate_animated.animate__delay-3s {
   -webkit-animation-delay: 3s;
   animation-delay: 3s;
   -webkit-animation-delay: calc(var(--animate-delay) * 3);
   animation-delay: calc(var(--animate-delay) * 3);
 }
-.animate__animated.animate__delay-4s {
+.animate_animated.animate__delay-4s {
   -webkit-animation-delay: 4s;
   animation-delay: 4s;
   -webkit-animation-delay: calc(var(--animate-delay) * 4);
   animation-delay: calc(var(--animate-delay) * 4);
 }
-.animate__animated.animate__delay-5s {
+.animate_animated.animate__delay-5s {
   -webkit-animation-delay: 5s;
   animation-delay: 5s;
   -webkit-animation-delay: calc(var(--animate-delay) * 5);
   animation-delay: calc(var(--animate-delay) * 5);
 }
-.animate__animated.animate__faster {
+.animate_animated.animate__faster {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
   -webkit-animation-duration: calc(var(--animate-duration) / 2);
   animation-duration: calc(var(--animate-duration) / 2);
 }
-.animate__animated.animate__fast {
+.animate_animated.animate__fast {
   -webkit-animation-duration: 0.8s;
   animation-duration: 0.8s;
   -webkit-animation-duration: calc(var(--animate-duration) * 0.8);
   animation-duration: calc(var(--animate-duration) * 0.8);
 }
-.animate__animated.animate__slow {
+.animate_animated.animate__slow {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
   -webkit-animation-duration: calc(var(--animate-duration) * 2);
   animation-duration: calc(var(--animate-duration) * 2);
 }
-.animate__animated.animate__slower {
+.animate_animated.animate__slower {
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
   -webkit-animation-duration: calc(var(--animate-duration) * 3);
   animation-duration: calc(var(--animate-duration) * 3);
 }
 @media (prefers-reduced-motion: reduce), print {
-  .animate__animated {
+  .animate_animated {
     -webkit-animation-duration: 1ms !important;
     animation-duration: 1ms !important;
     -webkit-transition-duration: 1ms !important;
@@ -262,7 +263,7 @@ html {
     -webkit-animation-iteration-count: 1 !important;
     animation-iteration-count: 1 !important;
   }
-  .animate__animated[class*="Out"] {
+  .animate_animated[class*='Out'] {
     opacity: 0;
   }
 }
@@ -2512,7 +2513,7 @@ html {
     animation-timing-function: ease-in;
   }
 }
-.animate__animated.animate__flip {
+.animate_animated.animate__flip {
   -webkit-backface-visibility: visible;
   backface-visibility: visible;
   -webkit-animation-name: flip;

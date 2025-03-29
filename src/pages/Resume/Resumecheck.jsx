@@ -50,9 +50,9 @@ export default function Errorpage() {
       setIsLatestVersion(false);
     }
   }, [version, latestVersion]);
-  const button = `${isLatestVersion ? 'text-green-800 border-green-700 hover:bg-green-700' : 'text-yellow-800 border-yellow-700 hover:bg-yellow-700'} items-center gap-x-[10px] hover:gap-x-[30px] inline-flex px-[20px] hover:px-[50px] py-2 text-[10px] md:text-[20px] border rounded-full hover:font-semibold  hover:text-white  transition-all duration-500 animate__animated animate__fadeInUp `;
+  const button = `${isLatestVersion ? 'text-green-800 border-green-700 hover:bg-green-700' : 'text-yellow-800 border-yellow-700 hover:bg-yellow-700'} items-center gap-x-[10px] hover:gap-x-[30px] inline-flex px-[20px] hover:px-[50px] py-2 text-[10px] md:text-[20px] border rounded-full hover:font-semibold  hover:text-white  transition-all duration-500 animate_animated animate__fadeInUp `;
   const h2 =
-    'flex animate__animated transition-all duration-500  animate__fadeInUp mt-4 py-[10px] font-bold tracking-tight text-gray-700 text-[15px] md:text-[20px] ';
+    'flex animate_animated transition-all duration-500  animate__fadeInUp mt-4 py-[10px] font-bold tracking-tight text-gray-700 text-[15px] md:text-[20px] ';
   return (
     <div className='flex items-center justify-center h-screen overflow-hidden bg-white'>
       <Navbar />
@@ -74,13 +74,13 @@ export default function Errorpage() {
           initial={{ scale: 0, y: '-90px', opacity: 0 }}
           animate={{ scale: 1, y: '0px', opacity: 1 }}
           transition={{ duration: 0.7 }}
-          className={`animate__animated animate__fadeInUp text-[70px] md:text-[150px] font-semibold fi ${isLatestVersion ? ' fi-rr-check-circle text-green-700 ' : 'text-yellow-700 fi-rs-exclamation'}`}
+          className={`animate_animated animate__fadeInUp text-[70px] md:text-[150px] font-semibold fi ${isLatestVersion ? ' fi-rr-check-circle text-green-700 ' : 'text-yellow-700 fi-rs-exclamation'}`}
         ></motion.i>
         <motion.p
           initial={{ scale: 0, y: '-90px', opacity: 0 }}
           animate={{ scale: 1, y: '0px', opacity: 1 }}
           transition={{ duration: 0.7 }}
-          className='animate__animated animate__fadeInUp text-[30px] md:text-[50px] font-semibold text-gray-700'
+          className='animate_animated animate__fadeInUp text-[30px] md:text-[50px] font-semibold text-gray-700'
         >
           {Message.FirstHeader[lang]} {version}
         </motion.p>
@@ -90,7 +90,7 @@ export default function Errorpage() {
               initial={{ scale: 0.5, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.7 }}
-              className='transition-all duration-500 animate__animated animate__zoomIn '
+              className='transition-all duration-500 animate_animated animate__zoomIn '
             >
               {isLatestVersion ?
                 <motion.div className='flex gap-x-[30px] items-center'>

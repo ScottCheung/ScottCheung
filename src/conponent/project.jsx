@@ -79,12 +79,12 @@ function Education({ hideTittle, simpleVer }) {
       {!simpleVer && (
         <div className='flex justify-center group  py-[10px] '>
           <div
-            className='relative w-[60vw] h-[8px] bg-gray-300/70 rounded-full cursor-pointer group-hover:transition-all group-hover:duration-1000 '
+            className='relative w-[60vw] h-[8px] bg-gray-300/70 rounded-full cursor-pointer group-hover:transition-all group-hover:duration-300 '
             onClick={handleProgressDrag}
           >
             {/* 进度条 */}
             <motion.div
-              className='absolute top-0 left-0 h-full rounded-full shadow-md group-hover:duration-1000 group-hover:transition-all bg-gradient-to-r from-sky-400 to-sky-600'
+              className='absolute top-0 left-0 h-full rounded-full shadow-md group-hover:duration-300 group-hover:transition-all bg-gradient-to-r from-sky-400 to-sky-600'
               style={{ width: `${scrollProgress * 100}%` }}
             />
 
@@ -97,7 +97,7 @@ function Education({ hideTittle, simpleVer }) {
               onDrag={handleThumbDrag}
               whileHover={{ scale: 1.2 }}
               whileTap={{ scale: 0.9 }}
-              className='absolute top-[-6px] h-[20px] w-[20px] bg-white  border-2 border-sky-500 rounded-full cursor-grab group-hover:duration-1000 group-hover:transition-all'
+              className='absolute top-[-6px] h-[20px] w-[20px] bg-white  border-2 border-sky-500 rounded-full cursor-grab group-hover:duration-300 group-hover:transition-all'
               style={{ left: `calc(${scrollProgress * 100}% - 10px)` }}
             ></motion.div>
           </div>
@@ -129,7 +129,7 @@ function Education({ hideTittle, simpleVer }) {
               key={index}
               variants={WelcomeItem}
               transition={StagerFadeInUp}
-              whileTap={{ scale: 0.95 }}
+              whileTap={{ scale: 0.75 }}
               className='col-span-6 lg:col-span-3 md:col-span-4 group'
             >
               <div

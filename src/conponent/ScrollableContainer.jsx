@@ -86,7 +86,7 @@ const ScrollableContainer = ({
     container.scrollBy({ left: childWidth, behavior: 'smooth' });
   };
 
-  const buttonStyle = `group bg-black/70 group-hover:bg-black/30 backdrop-blur-[5px] w-[50px] h-[50px] animate__animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-300`;
+  const buttonStyle = `group bg-black/70 group-hover:bg-black/30 backdrop-blur-[5px] w-[50px] h-[50px] animate_animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-300`;
   const svg = ` fill-gray-300 w-[25px] h-[25px]  ${isAtEnd || isAtStart ? '' : 'group-hover:fill-white'}`;
 
   return (
