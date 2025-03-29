@@ -233,7 +233,7 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
                   disabled={!isTop}
                   onClick={() => goToSlide(index)}
                   style={{ animationDelay: `${(index + 3) * 0.11}s` }}
-                  className={`bg-gray-200/50 hover:bg-gray-50/50 animate_animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[7.5px] lg:h-[15px] ${index === activeIndex ? 'w-[25px] lg:w-[50px]' : 'w-[7.5px] lg:w-[15px]'}`}
+                  className={`bg-gray-200/50 hover:bg-gray-50/50 animate_animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[10px] lg:h-[15px] ${index === activeIndex ? 'w-[30px] lg:w-[50px]' : 'w-[10px] lg:w-[15px]'}`}
                 >
                   {index === activeIndex && isPaused === false && (
                     <div
@@ -263,7 +263,7 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
                   duration: 1.2,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className={`w-[17.5px] h-[17.5px] lg:w-[35px] lg:h-[35px]  fill-white ${isPaused ? 'animate__rotateIn' : 'animate__rotateIn'} animate_animated transition-all ring-0 outline-none`}
+                className={`w-[22px] h-[22px] lg:w-[35px] lg:h-[35px]  fill-white ${isPaused ? 'animate__rotateIn' : 'animate__rotateIn'} animate_animated transition-all ring-0 outline-none`}
                 viewBox='0 0 48 48'
               >
                 <motion.path
