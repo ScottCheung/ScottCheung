@@ -1,7 +1,13 @@
 /** @format */
 
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, AnimatePresence, easeIn } from 'framer-motion';
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useMemo,
+  useCallback,
+} from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import VideoPlayer from './videoPlayer';
 import Slider from 'react-slick';
 import SubNav from '../conponent/subNav';
@@ -15,7 +21,10 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
   const [progress, setProgress] = useState(0);
   const sliderRef = useRef(null);
   const [isTop, setIsTop] = useState(true);
+  // Use the current slide's duration or fallback to the default interval
+  // const [duration, setDuration] = useState(interval);
   const view = useRef(null);
+
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -35,6 +44,7 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
       }
     };
   }, []);
+
   const delayTime = 0.17;
 
   const iconVariants = {
@@ -44,57 +54,63 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
       'M15,33 L15,15 Q15,11 18,12 L24,16 Q24,16 24,16 L24,32 Q24,32 24,32 L18,36 Q15,37 15,33 M24,32 L24,16 Q24,16 24,16 L33,22 Q35,23.3 35,24 L35,24 Q35,24.7 33,26 L24,32 Q24,32 24,32',
   };
 
+  // Update the duration when active slide changes
   // useEffect(() => {
-  //   const handleScroll = () => {
-  //     // setIsPaused(window.scrollY > 500);
-  //     // setIsTop(window.scrollY < 1000);
-  //   };
+  // Get current slide's duration or use the default
+  //   const currentDuration = HomeCarousel[activeIndex]?.duration || interval;
+  //   setDuration(currentDuration * 1000);
+  // }, [activeIndex, interval, HomeCarousel]);
 
-  //   window.addEventListener('scroll', handleScroll);
-  //   return () => window.removeEventListener('scroll', handleScroll);
-  // }, []);
-
-  // Update viewport height on window resize
+  const prevDurationRef = useRef(null);
+  const duration = useMemo(() => {
+    const newDuration =
+      (HomeCarousel[activeIndex]?.duration || interval) * 1000;
+    if (prevDurationRef.current !== newDuration) {
+      prevDurationRef.current = newDuration;
+    }
+    return prevDurationRef.current;
+  }, [activeIndex]);
 
   // Properly connected slide navigation
-  const nextSlide = () => {
+  const nextSlide = useCallback(() => {
     if (sliderRef.current) {
       sliderRef.current.slickNext();
     }
-  };
+  });
 
-  const prevSlide = (index) => {
+  const prevSlide = useCallback(() => {
     if (sliderRef.current) {
-      sliderRef.current.slickPrev(index);
+      sliderRef.current.slickPrev();
     }
-  };
+  });
 
-  const goToSlide = (index) => {
+  const goToSlide = useCallback((index) => {
     if (sliderRef.current) {
       sliderRef.current.slickGoTo(index);
     }
-  };
+  });
 
   // Progress bar logic
   useEffect(() => {
     if (isPaused) return;
+    let startTime = performance.now();
+    let frame;
 
-    setProgress(0); // Reset progress when slide changes
-
-    const timer = setInterval(() => {
-      setProgress((prev) => {
-        const nextProgress = prev + (100 * 10) / interval;
-        return nextProgress > 100 ? 0 : nextProgress;
-      });
-    }, 10);
-
-    const slideTimer = setTimeout(nextSlide, interval);
-
-    return () => {
-      clearInterval(timer);
-      clearTimeout(slideTimer);
+    const updateProgress = (timestamp) => {
+      let elapsed = timestamp - startTime;
+      let progress = (elapsed / duration) * 100;
+      if (progress >= 100) {
+        nextSlide();
+      } else {
+        setProgress(progress);
+        frame = requestAnimationFrame(updateProgress);
+      }
     };
-  }, [activeIndex, interval, isPaused]);
+
+    frame = requestAnimationFrame(updateProgress);
+
+    return () => cancelAnimationFrame(frame);
+  }, [activeIndex, duration, isPaused]);
 
   // Slider settings
   const sliderSettings = {
@@ -103,8 +119,7 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: !isPaused,
-    autoplaySpeed: interval,
+    autoplay: false, // Manage our own autoplay with custom duration
     beforeChange: (_, next) => setActiveIndex(next),
     pauseOnHover: false,
   };
@@ -112,14 +127,14 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
   return (
     <div
       ref={view}
-      className='relative w-full -mb-[10px] overflow-hidden bg-black'
+      className={`relative h-[${viewportHeight * 0.4}px] lg:h-[${viewportHeight * 1.1}px] w-full  overflow-hidden bg-black`}
     >
       <svg
         data-v-226d292e=''
         viewBox='0 0 1440 62'
         fill='none'
         xmlns='http://www.w3.org/2000/svg'
-        className='absolute bottom-0 left-0 right-0 z-50 scale-105 '
+        className='absolute bottom-0 left-0 right-0 z-30 scale-105 '
       >
         <path
           data-v-226d292e=''
@@ -156,7 +171,7 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
           opacity: isTop ? 1 : 0,
           y: isTop ? 0 : 30,
         }}
-        className={`w-full h-[30px] rounded-lg absolute  bottom-[50px] lg:bottom-[200px] gap-x-[10px] gap-[30px] flex flex-col  justify-center items-center z-50`}
+        className={`w-full h-[30px] rounded-lg absolute  bottom-[50px] lg:bottom-[200px] gap-x-[10px] gap-[30px] flex flex-col  justify-center items-center z-30`}
       >
         <motion.div
           className={`w-full h-[30px] rounded-lg  gap-x-[10px] lg:gap-x-[20px] flex  justify-center items-center z-50`}
@@ -210,8 +225,6 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
           >
             <motion.div
               layout
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
               className='bg-black/20 p-[15px] flex rounded-full gap-x-[10px] lg:gap-x-[20px] justify-center items-center transition-all'
             >
               {HomeCarousel.map((item, index) => (
@@ -222,14 +235,12 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
                   style={{ animationDelay: `${(index + 3) * 0.11}s` }}
                   className={`bg-gray-200/50 hover:bg-gray-50/50 animate_animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[7.5px] lg:h-[15px] ${index === activeIndex ? 'w-[25px] lg:w-[50px]' : 'w-[7.5px] lg:w-[15px]'}`}
                 >
-                  {index === activeIndex &&
-                    progress >= 0 &&
-                    isPaused === false && (
-                      <div
-                        className='h-full bg-white rounded-full'
-                        style={{ width: `${progress}%` }}
-                      />
-                    )}
+                  {index === activeIndex && isPaused === false && (
+                    <div
+                      className='h-full bg-white rounded-full'
+                      style={{ width: `${progress}%` }}
+                    />
+                  )}
                 </motion.button>
               ))}
             </motion.div>
@@ -248,6 +259,10 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
               <motion.svg
                 whileTap={{ scale: 1.1 }}
                 whileHover={{ scale: 1.2 }}
+                transition={{
+                  duration: 1.2,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
                 className={`w-[17.5px] h-[17.5px] lg:w-[35px] lg:h-[35px]  fill-white ${isPaused ? 'animate__rotateIn' : 'animate__rotateIn'} animate_animated transition-all ring-0 outline-none`}
                 viewBox='0 0 48 48'
               >
@@ -256,7 +271,10 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
                   animate={{
                     d: isPaused ? iconVariants.playing : iconVariants.paused,
                   }}
-                  transition={{ duration: 0.3 }}
+                  transition={{
+                    duration: 1.2,
+                    ease: [0.22, 1, 0.36, 1],
+                  }}
                 />
               </motion.svg>
             </motion.button>

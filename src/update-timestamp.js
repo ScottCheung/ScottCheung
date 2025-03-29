@@ -119,16 +119,16 @@ const getGeolocation = async () => {
     // impro: [],
 
     // 视觉优化
-    header: ['Project Navbar visual Patch Update', '项目顶端栏显示优化更新'],
-    new: [],
-    fix: [
-      [
-        'Fix some Card Animation disppear issues.',
-        'Fix Project Cards overflow issues.',
-      ],
-      ['修复卡片溢出，调整比例。', '修复卡片动画消失显示问题。'],
-    ],
-    impro: [],
+    // header: ['Project Navbar visual Patch Update', '项目顶端栏显示优化更新'],
+    // new: [],
+    // fix: [
+    //   [
+    //     'Fix some Card Animation disppear issues.',
+    //     'Fix Project Cards overflow issues.',
+    //   ],
+    //   ['修复卡片溢出，调整比例。', '修复卡片动画消失显示问题。'],
+    // ],
+    // impro: [],
 
     // 性能优化 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
     // header: ['Optimise First Page loading time', '优化首屏加载时间'],
@@ -140,6 +140,24 @@ const getGeolocation = async () => {
     //   ['修复性能问题,优化首屏加载时间，使用懒加载。'],
     // ],
     // impro: [],
+
+    header: ['Carousel Component Update', 'Carousel 组件更新'],
+    new: [],
+    fix: [],
+    impro: [
+      [
+        'Optimize Carousel to use less memory.',
+        'Support dynamic durations for different slides.',
+        'Enable dynamic video loading and autoplay.',
+        'Improve Carousel performance on mobile devices.',
+      ],
+      [
+        '优化 Carousel 内存占用，减少资源消耗。',
+        '支持不同幻灯片的动态时长调整。',
+        '支持视频动态加载与自动播放。',
+        '优化 Carousel 在移动端的播放流畅度。',
+      ],
+    ],
   };
 
   // 将新日志条目添加到日志字典中，以时间戳作为键

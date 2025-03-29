@@ -28,36 +28,38 @@ const bg = Database.PersonalInfo.Welcomebg[0];
 const HomeCarousel = [
   {
     href: '/life',
+    type: 'image',
+    duration: 3,
+
+    minisrc: 'https://img.picgo.net/2024/12/09/3d2edd6b52c4ac6f0.jpg',
+    src: 'https://img.picgo.net/2024/12/09/3l8b1011477c0506cc.jpg',
+  },
+
+  {
+    href: '/life',
     type: 'video',
-    duration: 38,
+    duration: 7,
     src: `video/swimming.mov`,
   },
   {
     href: '/life',
     type: 'image',
-    duration: null,
+    duration: 3,
+
     minisrc: 'https://img.picgo.net/2024/12/06/15cb61b12c6e29e02.jpg',
     src: 'https://img.picgo.net/2024/12/06/1lbc776b9e142932e9.jpg',
-  },
-
-  {
-    href: '/life',
-    type: 'image',
-    duration: null,
-    minisrc: 'https://img.picgo.net/2024/12/09/3d2edd6b52c4ac6f0.jpg',
-    src: 'https://img.picgo.net/2024/12/09/3l8b1011477c0506cc.jpg',
   },
   {
     href: '/life',
     type: 'video',
-    duration: 38,
+    duration: 3,
     src: `video/22.MOV`,
   },
 
   {
     href: '/life',
     type: 'image',
-    duration: null,
+    duration: 3,
     minisrc: 'https://img.picgo.net/2024/12/09/5e39d2ea1a917a07b.jpg',
     src: 'https://img.picgo.net/2025/03/18/5l163d3bf3a2f2c513.jpg',
   },
@@ -65,21 +67,21 @@ const HomeCarousel = [
   {
     href: '/life',
     type: 'image',
-    duration: null,
+    duration: 3,
     minisrc: 'https://img.picgo.net/2024/12/09/4ad634cc94fd1b09f.jpg',
     src: 'https://img.picgo.net/2025/03/18/home3793114672391e8ca.jpg',
   },
   {
     href: '/life',
     type: 'image',
-    duration: null,
+    duration: 3,
     minisrc: 'https://img.picgo.net/2024/12/06/2560312f7ac7f2885.jpg',
     src: 'https://img.picgo.net/2024/12/06/2l5853d37bc2e76060.jpg',
   },
   {
     href: '/life',
     type: 'image',
-    duration: null,
+    duration: 3,
     minisrc: 'https://img.picgo.net/2024/12/09/4ad634cc94fd1b09f.jpg',
     src: 'https://img.picgo.net/2024/12/09/4lf9c1d356de742391.jpg',
   },

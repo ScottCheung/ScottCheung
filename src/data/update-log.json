@@ -3304,5 +3304,36 @@
       ]
     ],
     "impro": []
+  },
+  "2025-03-29T20:23:18.901Z": {
+    "version": "7.1.0",
+    "time": "2025-03-29T20:23:18.901Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Carousel Component Update",
+      "Carousel 组件更新"
+    ],
+    "new": [],
+    "fix": [],
+    "impro": [
+      [
+        "Optimize Carousel to use less memory.",
+        "Support dynamic durations for different slides.",
+        "Enable dynamic video loading and autoplay.",
+        "Improve Carousel performance on mobile devices."
+      ],
+      [
+        "优化 Carousel 内存占用，减少资源消耗。",
+        "支持不同幻灯片的动态时长调整。",
+        "支持视频动态加载与自动播放。",
+        "优化 Carousel 在移动端的播放流畅度。"
+      ]
+    ]
   }
 }
