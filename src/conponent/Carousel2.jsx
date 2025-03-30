@@ -31,7 +31,7 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
         setIsPaused(!entry.isIntersecting);
         setIsTop(entry.isIntersecting);
       },
-      { threshold: 0.5 },
+      { threshold: 0.7 },
     );
 
     if (view.current) {
