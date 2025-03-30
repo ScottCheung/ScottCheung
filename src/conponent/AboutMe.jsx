@@ -1,6 +1,7 @@
 /** @format */
 
 import React, { useState, useEffect, useRef } from 'react';
+import TextAnimate from '../ui/TextAnimate.tsx';
 import Database from '../data/Database.json';
 import {
   motion,
@@ -8,6 +9,7 @@ import {
   useScroll,
   useTransform,
   easeInOut,
+  LazyMotion,
 } from 'framer-motion';
 import { useLanguage } from '../help/helpFunction';
 const data = Database.PersonalInfo.SelfDescribing;
@@ -28,12 +30,12 @@ function SelfDescribing() {
   const viewwidth = window.innerWidth - scrollbarWidth;
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 1080px)');
-    const handleMediaQueryChange = (e) => setIsMobile(e.matches);
-    handleMediaQueryChange(mediaQuery);
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
-    return () =>
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    const userAgent = navigator.userAgent.toLowerCase();
+    const mobileKeywords = ['mobile', 'android', 'iphone', 'ipad', 'ipod'];
+
+    if (mobileKeywords.some((keyword) => userAgent.includes(keyword))) {
+      setIsMobile(true);
+    }
   }, []);
 
   const parseText = (text) => {
@@ -42,7 +44,7 @@ function SelfDescribing() {
         return (
           <span
             key={index}
-            className='text-white mx-[3px] text-[15px] md:text-[20px] lg:text-[22px]'
+            className='text-white mx-[3px] font-[600] text-[15px] md:text-[20px] lg:text-[22px]'
           >
             {part.replace(/{bold}/g, '')}
           </span>
@@ -50,7 +52,7 @@ function SelfDescribing() {
       }
       return (
         <span
-          className='text-white/50 text-[13px]  md:text-[18px] lg:text-[20px]'
+          className='text-white/70 text-[13px] font-[500]  md:text-[18px] lg:text-[20px]'
           key={index}
         >
           {part}
@@ -113,6 +115,51 @@ function SelfDescribing() {
     [0, 0.4, 0.6, 1],
     [0.5, 1, 1, 0.5],
   );
+  if (isMobile) {
+    return (
+      <motion.blockquote
+        style={{
+          backgroundImage: `url(${data.pic})`,
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center center',
+        }}
+        className='relative flex flex-col items-center justify-center w-full px-[20px] py-[10vw] bg-black'
+      >
+        <motion.span className='absolute z-0 w-full h-full bg-black/75'></motion.span>
+
+        <motion.div className='flex items-center justify-center gap-x-[20px] text-white z-10'>
+          <motion.i
+            id='AboutMe'
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className={`flex items-center text-5xl fi lg:text-6xl xl:text-8xl fi-rr-comment-heart`}
+          ></motion.i>
+
+          <TextAnimate
+            transition={{ duration: 0.3 }}
+            className='flex items-center font-mono text-5xl italic font-black tracking-widest uppercase text-nowrap lg:text-6xl xl:text-8xl'
+            text={lang === 0 || '0' ? 'About me' : '自述'}
+            type='fadeIn'
+          />
+        </motion.div>
+
+        <div className='z-10 mt-[50px] text-left text-white/75'>
+          <img
+            loading='lazy'
+            className='rounded-full float-right z-10  w-[200px] h-[200px] mb-[10vw]'
+            src={Database.PersonalInfo.Avatar[0]}
+          />
+          {data.description[lang].map((item, index) => (
+            <div key={index} className='mb-[30px]'>
+              {parseText(item)}
+            </div>
+          ))}
+        </div>
+      </motion.blockquote>
+    );
+  }
 
   return (
     <AnimatePresence>
@@ -126,18 +173,18 @@ function SelfDescribing() {
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
             backgroundPosition: 'center center',
-            width: isMobile ? '100vw' : width,
-            borderTopRightRadius: isMobile ? 0 : borderTopRightRadius,
-            borderBottomRightRadius: isMobile ? 0 : borderBottomRightRadius,
-            y: isMobile ? 0 : y,
+            width: width,
+            borderTopRightRadius: borderTopRightRadius,
+            borderBottomRightRadius: borderBottomRightRadius,
+            y: y,
           }}
           className='sticky top-0 z-20 flex flex-col h-[1520px]  lg:h-[120vh] items-center justify-center w-full'
         >
           <motion.span
             style={{
-              borderTopRightRadius: isMobile ? 1 : borderTopRightRadius,
-              borderBottomRightRadius: isMobile ? 1 : borderBottomRightRadius,
-              opacity: isMobile ? 1 : opacity,
+              borderTopRightRadius: borderTopRightRadius,
+              borderBottomRightRadius: borderBottomRightRadius,
+              opacity: opacity,
             }}
             className='absolute w-full h-full bg-black/75'
           ></motion.span>
@@ -145,9 +192,9 @@ function SelfDescribing() {
           <div className='visblecontainer py-[20vh] z-30'>
             <motion.div
               style={{
-                opacity: isMobile ? 1 : opacity,
-                scale: isMobile ? 1 : scale,
-                y: isMobile ? 0 : y,
+                opacity: opacity,
+                scale: scale,
+                y: y,
               }}
               className='z-10 flex items-center mb-12 font-mono font-bold text-white transform-gppuu text-8xl'
             >
@@ -157,13 +204,13 @@ function SelfDescribing() {
               ></i>
               <p className='flex'>{lang === 0 || '0' ? 'About me' : '自述'}</p>
             </motion.div>
-            <motion.blockquote className=''>
+            <motion.blockquote className='text-white'>
               <motion.div
                 style={{
-                  x: isMobile ? 0 : x,
-                  opacity: isMobile ? 1 : opacity,
-                  scale: isMobile ? 1 : scale,
-                  y: isMobile ? 0 : y,
+                  x: x,
+                  opacity: opacity,
+                  scale: scale,
+                  y: y,
                 }}
                 className='float-right transform-gppuu'
               >
@@ -177,9 +224,9 @@ function SelfDescribing() {
               </motion.div>
               <motion.div
                 style={{
-                  x: isMobile ? 0 : target,
-                  opacity: isMobile ? 1 : opacity,
-                  y: isMobile ? 0 : y,
+                  x: target,
+                  opacity: opacity,
+                  y: y,
                 }}
                 className='block transform-gppuu'
               >

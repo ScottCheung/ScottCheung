@@ -17,7 +17,7 @@ export function more({ color, id }) {
         duration: 1.3,
         ease: [0.22, 1, 0.36, 1],
       }}
-      className={`inline-flex text-${color}-700 group-hover:text-${color}-500 hover:text-${color}-500 text-[15px] text-${color} hover:text-${color}`}
+      className={`inline-flex text-${color}-700 group-hover:text-${color}-500 hover:text-${color}-500 text-[12px] md:text-[15px] text-${color} hover:text-${color}`}
     >
       [ {lang == 1 ? '更多' : 'more'} ]
     </motion.div>

@@ -2251,10 +2251,15 @@
     "header": ["Carousel Component Update", "Carousel 组件更新"],
     "new": [
       [
+        "Mobile terminal new UI, details adjustments, about some new card layout.",
         "Support dynamic durations for different slides.",
         "Enable dynamic video loading and autoplay."
       ],
-      ["支持不同幻灯片的动态时长调整。", "支持视频动态加载与自动播放。"]
+      [
+        "移动端全新UI，细节调整，关于部分新卡片布局。",
+        "支持不同幻灯片的动态时长调整。",
+        "支持视频动态加载与自动播放。"
+      ]
     ],
     "fix": [
       ["Improve Carousel performance on mobile devices."],

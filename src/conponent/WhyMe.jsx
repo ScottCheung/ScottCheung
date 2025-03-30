@@ -1,6 +1,8 @@
 /** @format */
 
 import React, { useState, useEffect, useRef } from 'react';
+import TextAnimate from '../ui/TextAnimate.tsx';
+
 import Database from '../data/Database.json';
 import {
   motion,
@@ -14,6 +16,7 @@ import More from './More';
 import { useAppContext } from '../help/ContextManager';
 import WhyMeCard from '../conponent/WhyMeCard';
 import ScrollableContainer from './ScrollableContainer';
+import SliderWithCards from './SliderWithCards';
 
 const Welcomevisblecontainer =
   Database.Animation.Variant.Welcomevisblecontainer;
@@ -30,24 +33,16 @@ function WhyMe({ hideTittle, mt }) {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [isMobile, setIsMobile] = useState(false);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
-  useEffect(() => {
-    const div = document.createElement('div');
-    div.style.visibility = 'hidden';
-    div.style.overflow = 'scroll';
-    document.body.appendChild(div);
-    const scrollbarWidth = div.offsetWidth - div.clientWidth;
-    document.body.removeChild(div);
-    setScrollbarWidth(scrollbarWidth);
-  }, []);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 1080px)');
-    const handleMediaQueryChange = (e) => setIsMobile(e.matches);
-    handleMediaQueryChange(mediaQuery);
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
-    return () =>
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+    const userAgent = navigator.userAgent.toLowerCase();
+    const mobileKeywords = ['mobile', 'android', 'iphone', 'ipad', 'ipod'];
+
+    if (mobileKeywords.some((keyword) => userAgent.includes(keyword))) {
+      setIsMobile(true);
+    }
   }, []);
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -72,13 +67,6 @@ function WhyMe({ hideTittle, mt }) {
     // document.getElementById('navbar').style.opacity = 0;
   };
 
-  const UnBanScroll = () => {
-    document.body.style.overflow = 'auto';
-    document.body.style.paddingRight = '0px'; // 重置paddingRight
-    // document.getElementById('navbar').style.marginRight = '0px'; // 重置paddingRight
-    // document.getElementById('navbar').style.opacity = 1;
-  };
-
   const openCard = (feature) => {
     setWhymeCard(feature);
     BanScroll();
@@ -89,15 +77,6 @@ function WhyMe({ hideTittle, mt }) {
     }));
   };
 
-  const closeCard = () => {
-    setComponents((prevComponents) => ({
-      ...prevComponents,
-      NavBar: 'visible',
-      whymeCard: 'hide',
-    }));
-    setWhymeCard(null);
-    UnBanScroll();
-  };
   const ref1 = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref1,
@@ -110,12 +89,144 @@ function WhyMe({ hideTittle, mt }) {
     [0, 1],
     [`0px`, `${viewwidth}px`],
   );
-  // const width = useTransform(
-  //   scrollYProgress,
-  //   [0, 0.65, 1],
-  //   ["-100vw", "-100vw", "0vw"],
-  // );
 
+  if (isMobile) {
+    return (
+      <motion.div className='my-[10vw] flex flex-col items-center lg:hidden  w-full '>
+        <motion.div className=' flex items-center justify-center w-full  gap-x-[20px] text-black z-10'>
+          <motion.i
+            id='AboutMe'
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className={`flex items-center text-5xl fi lg:text-6xl xl:text-8xl fi-rr-comment-heart`}
+          ></motion.i>
+
+          <TextAnimate
+            transition={{ duration: 0.3 }}
+            className='flex items-center font-mono text-5xl italic font-black tracking-widest uppercase text-nowrap lg:text-6xl xl:text-8xl'
+            text={lang === 0 || '0' ? 'About me' : '自述'}
+            type='fadeIn'
+          />
+        </motion.div>
+
+        {/* Item 容器 */}
+        <SliderWithCards>
+          {keyfeature.map((feature, index) => (
+            <motion.div
+              layout
+              key={index + feature.advantage}
+              className='z-30   flex mt-[20px]'
+            >
+              <motion.div
+                layout
+                layoutId={feature.advantage}
+                // whileHover={{ scale: 1.01 }}
+                transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <motion.div className='group'>
+                  <motion.div
+                    className={` bg-white backdrop-blur-2xl  hover:scale-[1.01] transition-all overflow-hidden p-[28px] lg:p-[35px] rounded-[28px] lg:rounded-[28px] relative flex-shrink-0  h-[380px]  w-[250px]  `}
+                  >
+                    <motion.div
+                      style={{
+                        ...bgPic(feature.pic[1], '80% auto', 'left bottom'),
+                      }}
+                      className='absolute bottom-0 left-0 right-0 w-full h-full lg:p-[35px] rounded-[14px] lg:rounded-[28px] '
+                    ></motion.div>
+                    <motion.div>
+                      <img
+                        loading='lazy'
+                        src={feature.pic[1]}
+                        alt=''
+                        className='hidden'
+                      />
+                      <motion.div
+                        layoutId={feature.advantage + 'icon'}
+                        transition={{
+                          duration: 1,
+                          ease: [0.22, 1, 0.36, 1],
+                        }}
+                        className='flex items-center justify-start transform-gppu'
+                      >
+                        <i
+                          className={`${
+                            feature.icon
+                          } fi from-[-20%] to-[120%]  text-[25px] lg:text-[30px] xl:text-[35px] ${
+                            feature.color1 + ' ' + feature.color2
+                          } flex items-center pb-[10px] bg-clip-text text-transparent bg-gradient-to-br`}
+                        ></i>
+                      </motion.div>
+                      <div className='flex justify-start pb-[10px]'>
+                        <motion.div
+                          layoutId={feature.advantage + 'title'}
+                          transition={{
+                            duration: 1.3,
+                            ease: [0.22, 1, 0.36, 1],
+                          }}
+                          className={` font-[700] ${hideTittle ? 'text-[15px] md:text-[17px] lg:text-[20px]' : 'text-[17px] md:text-[17px] lg:text-[25px]'}   ${
+                            feature.color1 + ' ' + feature.color2
+                          } flex-shrink-0 bg-clip-text text-transparent bg-gradient-to-br`}
+                        >
+                          {feature.advantage}
+                        </motion.div>
+                      </div>
+                    </motion.div>
+
+                    <motion.div
+                      // layoutId={feature.description}
+                      transition={{
+                        duration: 1,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className={` overflow-hidden gap-y-[10px] flex flex-col`}
+                    >
+                      <motion.div
+                        style={{
+                          ...hideRow(3),
+                        }}
+                        className={`text-full   text-gray-500  text-[10px] `}
+                      >
+                        {feature.description}
+                      </motion.div>
+                      <More
+                        id={feature.color2}
+                        color={`  ${
+                          feature.color1 + ' ' + feature.color2
+                        } bg-gradient-to-br  text-transparent bg-clip-text `}
+                      />
+                    </motion.div>
+
+                    <a
+                      href={feature.href}
+                      className='absolute top-0 bottom-0 left-0 right-0 w-full h-full'
+                    >
+                      <button
+                        className={`absolute right-[28px] bottom-[28px] lg:right-[28px] lg:top-[28px] ${
+                          feature.color1 + ' ' + feature.color2
+                        } bg-gradient-to-br  rounded-full w-[30px] h-[30px] flex justify-center items-center`}
+                        type='link'
+                      >
+                        <span className={`w-[15px] h-[15px]`}>
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            viewBox='8 8 20 20'
+                            className='fill-white'
+                          >
+                            <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
+                          </svg>
+                        </span>
+                      </button>
+                    </a>
+                  </motion.div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
+          ))}
+        </SliderWithCards>
+      </motion.div>
+    );
+  }
   const WhyMe = (
     <motion.div
       ref={ref1}
@@ -272,7 +383,7 @@ function WhyMe({ hideTittle, mt }) {
     </motion.div>
   );
 
-  return WhyMe;
+  if (!isMobile) return WhyMe;
 }
 
 export default WhyMe;

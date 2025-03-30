@@ -38,14 +38,14 @@ const Carousel = ({ interval, HomeCarousel }) => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    const handleResize = () => {
-      // setViewportHeight(window.innerHeight);
-    };
+  // useEffect(() => {
+  //   const handleResize = () => {
+  //     // setViewportHeight(window.innerHeight);
+  //   };
 
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  //   window.addEventListener('resize', handleResize);
+  //   return () => window.removeEventListener('resize', handleResize);
+  // }, []);
 
   useEffect(() => {
     setProgress(0);

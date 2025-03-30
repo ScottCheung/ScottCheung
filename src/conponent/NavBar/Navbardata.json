@@ -4,7 +4,7 @@
       "name": ["Home", "主页"],
       "href": "/",
       "icon": "fi-rr-home-heart",
-      "des": ["Key information is here ~", "主要信息在这里 ~"],
+      "des": ["This is Home Page ~", "这个是主页 ~"],
       "expression": "❤٩ (◕‿◕｡)۶ 🏠",
       "isTopShow": false,
       "scondMenu": [
@@ -39,7 +39,7 @@
       "name": ["Work", "工作"],
       "href": "/work",
       "icon": "fi-rr-tool-box",
-      "des": ["Here is my work part~", "这里是我的工作模块~"],
+      "des": ["Here is my Career part~", "这里是我的工作部分~"],
       "expression": "(｡◕‿◕｡) 📧",
       "scondMenu": [
         {
@@ -79,7 +79,7 @@
       "name": ["Life", "生活"],
       "href": "/life",
       "icon": "fi-rr-mountains",
-      "des": ["It captures my wonderful life ~", "记录我的精彩生活 ~"],
+      "des": ["My wonderful life ~", "我的精彩生活 ~"],
       "expression": "(＾◡＾) 🌄",
       "isTopShow": true,
       "scondMenu": [
@@ -115,7 +115,7 @@
       "icon": "fi-rr-folder",
       "status": "fi-sr-eye",
 
-      "des": [" Personal project demo ~ ", " 参与的项目 demo ~ "],
+      "des": ["My Project demo ~ ", "参与的项目 demo ~ "],
       "expression": "(⌐■_■) 💻",
       "isTopShow": true,
       "scondMenu": [
@@ -214,10 +214,7 @@
       "name": ["Contact", "联络"],
       "href": "/Contact",
       "icon": "fi-rr-following",
-      "des": [
-        "You can contact me through the following methods ~",
-        "您可以通过以下方式找到我 ~"
-      ],
+      "des": ["Contact me ~", "网络一线牵，珍惜这段缘 ~"],
       "expression": "(｡♥‿♥｡) ☎️",
       "isTopShow": true,
       "scondMenu": [
@@ -282,7 +279,7 @@
       "button": "LangToggle",
       "icon": "fi-rr-globe",
       "des": [
-        "Select your preferred language for displaying the webpage ~",
+        "Select your preferred language ~",
         "请选择你喜欢的语言来显示网页 ~"
       ],
       "expression": "◕ ‿ ◕  🎈",

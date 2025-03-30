@@ -1,6 +1,6 @@
 /** @format */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Toggle from './Toggle';
 
@@ -55,33 +55,33 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
       }
     };
   };
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, []);
 
   return (
-    <div
-      className={`pl-[15px] w-full -mr-[30px] py-[30px] max-h-[95vh] overflow-auto`}
+    <motion.div
+      layout
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className={`flex flex-col pl-[15px] w-full -mr-[30px] py-[30px] h-screen overflow-y-auto`}
     >
       {data.map((item, index) => (
         <div key={item.name[0]}>
           <AnimatePresence>
             <motion.div
               layout
-              exit={{
-                opacity: 0,
-                scale: 0,
-                transition: { duration: 0.7 },
-              }}
-              transition={{
-                duration: 0.9,
-                ease: [0.22, 1, 0.36, 1],
-              }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               onClick={() => toggleAccordion(index)}
             >
               <div
-                style={{ animationDelay: `${index * 0.2}s` }}
+                style={{ animationDelay: `${index * 0.07}s` }}
                 className={`flex py-5 animate_animated animate__zoomIn place-items-center items-center px-4 cursor-pointer ${
                   isTop ?
-                    'hover:bg-gray-900/50 rounded-l-full'
-                  : 'hover:bg-gray-300/50 rounded-l-full'
+                    'active:bg-gray-900/50 rounded-l-full'
+                  : 'active:bg-gray-300/50 rounded-l-full'
                 }`}
               >
                 <div className='flex-shrink-0'>
@@ -121,81 +121,87 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
               </div>
             </motion.div>
           </AnimatePresence>
-          <AnimatePresence>
-            {openIndex === index && item.scondMenu && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                exit={{
-                  height: 0,
-                  opacity: 0,
-                }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className='pl-[30px]  py-[30px] space-y-[20px] '>
-                  {item.scondMenu.map((subItem: any, subIndex: any) => (
-                    <a
-                      key={subItem.name[0] + subIndex}
-                      href={subItem.link}
-                      onClick={() => {
-                        const buttonFunction = BTN(subItem.button);
-                        if (typeof buttonFunction === 'function') {
-                          buttonFunction();
-                        }
-                        setIsOpened(false);
-                      }}
-                      className={`pl-[33px] flex py-6 items-center justify-between  ${
-                        isTop ?
-                          'hover:bg-gray-900/50 rounded-l-full'
-                        : 'hover:bg-gray-300/50 rounded-l-full'
-                      }`}
-                    >
-                      <div className='flex items-center'>
-                        {' '}
-                        <div className='flex items-center justify-center w-12 h-12 rounded-full'>
-                          <i
-                            className={`${
-                              textColor && isTop ? 'text-white' : (
-                                'text-gray-900'
-                              )
-                            } text-3xl flex fi ${subItem.icon}`}
-                          ></i>
-                        </div>
-                        <div className='w-full ps-2'>
-                          <div
-                            className={`${
-                              textColor && isTop ? 'text-white' : (
-                                'text-gray-900'
-                              )
-                            } font-bold text-2xl`}
-                          >
-                            {subItem.name[lang]}
+          <div className='h-auto overflow-hidden'>
+            <AnimatePresence>
+              {openIndex === index && item.scondMenu && (
+                <motion.div
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{ height: 'auto', opacity: 1 }}
+                  exit={{
+                    height: 0,
+                    opacity: 0,
+                  }}
+                  transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                >
+                  <div className='pl-[30px]  py-[30px] space-y-[20px] '>
+                    {item.scondMenu.map((subItem: any, subIndex: any) => (
+                      <a
+                        key={subItem.name[0] + subIndex}
+                        href={subItem.link}
+                        onClick={() => {
+                          const buttonFunction = BTN(subItem.button);
+                          if (typeof buttonFunction === 'function') {
+                            buttonFunction();
+                          }
+                          setIsOpened(false);
+                        }}
+                        className={`pl-[33px] flex py-6 items-center justify-between  ${
+                          isTop ?
+                            'active:bg-gray-900/50 rounded-l-full'
+                          : 'active:bg-gray-300/50 rounded-l-full'
+                        }`}
+                      >
+                        <div className='flex items-center'>
+                          {' '}
+                          <div className='flex items-center justify-center w-12 h-12 rounded-full'>
+                            <i
+                              className={`${
+                                textColor && isTop ? 'text-white' : (
+                                  'text-gray-900'
+                                )
+                              } text-3xl flex fi ${subItem.icon}`}
+                            ></i>
+                          </div>
+                          <div className='w-full ps-2'>
+                            <div
+                              className={`${
+                                textColor && isTop ? 'text-white' : (
+                                  'text-gray-900'
+                                )
+                              } font-bold text-2xl`}
+                            >
+                              {subItem.name[lang]}
+                            </div>
                           </div>
                         </div>
-                      </div>
-                      {subItem.status && (
-                        <i
-                          className={`flex pr-[20px]  justify-center items-center text-[15px] ${
-                            textColor && isTop ? 'text-white' : 'text-gray-900'
-                          }  ${subItem.status}`}
-                        ></i>
-                      )}
-                      {!subItem.status && (
-                        <i
-                          className={`flex pr-[20px]  justify-center items-center text-[25px] ${
-                            textColor && isTop ? 'text-white' : 'text-gray-900'
-                          }  fi fi-rr-angle-small-right`}
-                        ></i>
-                      )}
-                    </a>
-                  ))}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                        {subItem.status && (
+                          <i
+                            className={`flex pr-[20px]  justify-center items-center text-[15px] ${
+                              textColor && isTop ? 'text-white' : (
+                                'text-gray-900'
+                              )
+                            }  ${subItem.status}`}
+                          ></i>
+                        )}
+                        {!subItem.status && (
+                          <i
+                            className={`flex pr-[20px]  justify-center items-center text-[25px] ${
+                              textColor && isTop ? 'text-white' : (
+                                'text-gray-900'
+                              )
+                            }  fi fi-rr-angle-small-right`}
+                          ></i>
+                        )}
+                      </a>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
         </div>
       ))}
-    </div>
+    </motion.div>
   );
 };
 

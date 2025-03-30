@@ -225,7 +225,7 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
           >
             <motion.div
               layout
-              className='bg-black/20 p-[15px] flex rounded-full gap-x-[10px] lg:gap-x-[20px] justify-center items-center transition-all'
+              className='bg-black/20 p-[15px] flex rounded-full gap-x-[16px] lg:gap-x-[20px] justify-center items-center transition-all'
             >
               {HomeCarousel.map((item, index) => (
                 <motion.button

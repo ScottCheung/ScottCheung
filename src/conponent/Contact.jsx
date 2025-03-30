@@ -45,6 +45,7 @@ function Contact({ isTopOut }) {
       return () => container.removeEventListener('scroll', handleScroll);
     }
   }, []);
+
   const Contact = (
     <div
       draggable={false}
@@ -162,7 +163,7 @@ function Contact({ isTopOut }) {
                   </button>
                 </div>
 
-                <div className='absolute -top-[50px] left-0 right-0 z-50 group-hover:flex overflow-visible justify-center w-full animate__fast text-white rounded-full shadow-2xl hidden animate_animated animate__fadeInUp backdrop-blur-md bg-black/80 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800'>
+                <div className='absolute -top-[50px] left-0 right-0 z-50 lg:group-hover:flex overflow-visible justify-center w-full animate__fast text-white rounded-full shadow-2xl hidden animate_animated animate__fadeInUp backdrop-blur-md bg-black/80 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800'>
                   <p className='px-6 py-4 text-center text-[15px]'>
                     {lang == 0 && 'Copy '}
                     {lang == 1 && '复制 '}

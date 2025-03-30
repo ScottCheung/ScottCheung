@@ -1406,7 +1406,7 @@
               "despic": "https://www.16personalities.com/static/images/theory/traits/16personalities_trait_assertive.svg",
               "des": "Assertive individuals are self-assured, calm, and resilient to stress. They avoid over-worrying and confidently pursue their goals.",
               "color1": "from-red-500",
-              "color2": "to-red-300"
+              "color2": "to-red-500"
             }
           ],
           [
@@ -1468,7 +1468,7 @@
               "despic": "https://www.16personalities.com/static/images/theory/traits/16personalities_trait_assertive.svg",
               "des": "坚决型的人自信、性情平和，能抵抗压力。他们拒绝过度担心，在努力实现目标时往往会自信面对。",
               "color1": "from-red-500",
-              "color2": "to-red-300"
+              "color2": "to-red-500"
             }
           ]
         ]
