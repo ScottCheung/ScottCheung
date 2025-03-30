@@ -46,7 +46,13 @@ const updateTime = [
 
 const navbarItem = data.navbarItem;
 
-function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
+function Navbar({
+  topTextColor,
+  BG,
+
+  extra,
+  setIsPaused,
+}) {
   const { Components } = useAppContext();
   const [hoverTab, setHoverTab] = useState(-1);
   const handleTabChange = (index) => {
@@ -191,6 +197,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
             onMouseLeave={() => {
               setSelectedTab(null);
               handleTabChange(-1);
+              setIsPaused(false);
             }}
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
@@ -309,6 +316,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
                           {navbarItem.map((item, index) => (
                             <motion.div
                               layout='position'
+                              onMouseEnter={() => setIsPaused(true)}
                               key={item.name}
                               initial={{ opacity: 0, y: 30 }}
                               animate={{
@@ -665,7 +673,7 @@ function Navbar({ topTextColor, BG, ExpandElement, onHeightChange, extra }) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-            className={`fixed top-0 left-0 z-40  bottom-0  right-0  w-full h-full  backdrop-blur-[20px] ${isTopTextColorWhite && isTop ? 'bg-gray-900/40' : 'bg-white/40'} `}
+            className={`fixed top-0 left-0 z-40  bottom-0  right-0  w-full h-full  backdrop-blur-[30px] ${isTopTextColorWhite && isTop ? 'bg-gray-900/50' : 'bg-white/70'} `}
           >
             <motion.div
               style={{

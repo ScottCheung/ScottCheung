@@ -95,6 +95,7 @@ function Home() {
   const keyfeature = Database.PersonalInfo.WhyMe[lang];
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   useEffect(() => {
     const div = document.createElement('div');
     div.style.visibility = 'hidden';
@@ -130,9 +131,14 @@ function Home() {
       draggable={false}
       className={`relative flex flex-col items-center w-[${viewwidth}px]  overflow-x-clip  bg-[#f5f5f7]`}
     >
-      <Navbar topTextColor={true} />
+      <Navbar topTextColor={true} setIsPaused={setIsPaused} />
       <Log />
-      <Carousel HomeCarousel={HomeCarousel} interval={3000}></Carousel>
+      <Carousel
+        HomeCarousel={HomeCarousel}
+        interval={3000}
+        isPaused={isPaused}
+        setIsPaused={setIsPaused}
+      ></Carousel>
 
       <GoldenNav />
 

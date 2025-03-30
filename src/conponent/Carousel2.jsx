@@ -14,9 +14,9 @@ import SubNav from '../conponent/subNav';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const Carousel = ({ interval = 5000, HomeCarousel }) => {
+const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [progress, setProgress] = useState(0);
   const sliderRef = useRef(null);
@@ -148,6 +148,11 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
             key={index}
             className={`object-cover h-[${viewportHeight * 0.4}px] lg:h-[${viewportHeight * 1.1}px] relative w-full `}
           >
+            {item.type !== 'image' && isPaused && isTop && (
+              <span
+                className={`absolute z-20 hidden w-full h-full md:flex  bg-black/50`}
+              ></span>
+            )}
             <span className='z-20 hidden md:flex h-[20vh] absolute w-full bg-gradient-to-b from-black/40 via-black/30 via-[10vh] to-transparent overflow-hidden'></span>
             <a className='w-full h-full overflow-hidden'>
               {item.type === 'image' ?
@@ -164,27 +169,25 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
       <AnimatePresence>
         {isTop && (
           <motion.div
-            transition={{
-              duration: 1.2,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            initial={{ opacity: 0, y: 30 }}
-            animate={{
-              opacity: 1,
-              y: 0,
-            }}
-            exit={{ opacity: 0, y: 30 }}
             className={`w-full h-[30px] rounded-lg absolute  bottom-[50px] lg:bottom-[200px] gap-x-[10px] gap-[30px] flex flex-col  justify-center items-center z-30`}
           >
             <motion.div
+              transition={{
+                duration: 1.2,
+                delay: isTop ? 0 : 0.2,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              initial={{ opacity: 0, y: 115 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{ opacity: 0, y: 30 }}
               className={`w-full h-[30px] rounded-lg  gap-x-[10px] lg:gap-x-[20px] flex  justify-center items-center z-50`}
             >
               {' '}
               {/* Navigation Controls */}
-              <div
-                className='bg-white/200 hover:bg-black/30 hidden lg:flex  transition-all rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
-                style={{ animationDelay: '0.15s' }}
-              >
+              <div className='bg-white/200 hover:bg-black/30 hidden lg:flex  transition-all rounded-full backdrop-blur-[5px] '>
                 <motion.button
                   disabled={!isTop}
                   // onMouseEnter={() => setIsPaused(true)}
@@ -201,10 +204,7 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
                   </svg>
                 </motion.button>
               </div>
-              <div
-                className='bg-white/200 hover:bg-black/30 hidden lg:flex   transition-all  rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
-                style={{ animationDelay: '0.15s' }}
-              >
+              <div className='bg-white/200 hover:bg-black/30 hidden lg:flex   transition-all  rounded-full backdrop-blur-[5px]  '>
                 <motion.button
                   disabled={!isTop}
                   // onMouseEnter={() => setIsPaused(true)}
@@ -222,10 +222,7 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
                 </motion.button>
               </div>
               {/* Indication */}
-              <div
-                className='bg-white/200 hover:bg-black/30  transition-all   rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
-                style={{ animationDelay: '0.3s' }}
-              >
+              <div className='bg-white/200 hover:bg-black/30  transition-all   rounded-full backdrop-blur-[5px]  '>
                 <motion.div
                   layout
                   className='bg-black/20 p-[15px] flex rounded-full gap-x-[16px] lg:gap-x-[20px] justify-center items-center transition-all'
@@ -250,7 +247,7 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
               </div>
               {/* Play/Pause button */}
               <div
-                className='bg-white/200 hover:bg-black/30 transition-all  rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
+                className='bg-white/200 hover:bg-black/30 transition-all  rounded-full backdrop-blur-[5px]  '
                 style={{ animationDelay: '0.45s' }}
               >
                 <motion.button
@@ -284,7 +281,20 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
                 </motion.button>
               </div>
             </motion.div>
-            <motion.div className='hidden w-full lg:flex'>
+            <motion.div
+              transition={{
+                duration: 1.2,
+                delay: isTop ? 0.2 : 0,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              initial={{ opacity: 0, y: 15 }}
+              animate={{
+                opacity: 1,
+                y: 0,
+              }}
+              exit={{ opacity: 0, y: 30 }}
+              className='hidden w-full lg:flex'
+            >
               <SubNav isTop={isTop} />
             </motion.div>
           </motion.div>
