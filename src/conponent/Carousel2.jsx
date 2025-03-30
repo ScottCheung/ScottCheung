@@ -161,129 +161,135 @@ const Carousel = ({ interval = 5000, HomeCarousel }) => {
           </div>
         ))}
       </Slider>
-      <motion.div
-        transition={{
-          duration: 1.2,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-        initial={{ opacity: 0, y: 30 }}
-        animate={{
-          opacity: isTop ? 1 : 0,
-          y: isTop ? 0 : 30,
-        }}
-        className={`w-full h-[30px] rounded-lg absolute  bottom-[50px] lg:bottom-[200px] gap-x-[10px] gap-[30px] flex flex-col  justify-center items-center z-30`}
-      >
-        <motion.div
-          className={`w-full h-[30px] rounded-lg  gap-x-[10px] lg:gap-x-[20px] flex  justify-center items-center z-50`}
-        >
-          {' '}
-          {/* Navigation Controls */}
-          <div
-            className='bg-white/200 hover:bg-black/30 hidden lg:flex  transition-all rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
-            style={{ animationDelay: '0.15s' }}
-          >
-            <motion.button
-              disabled={!isTop}
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
-              onClick={prevSlide}
-              className='bg-black/20 w-[45px] h-[45px] animate_animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-1000'
-            >
-              <svg
-                className='hover:fill-white rotate-180 fill-gray-200 w-[20px] h-[20px]'
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='8 8 20 20'
-              >
-                <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
-              </svg>
-            </motion.button>
-          </div>
-          <div
-            className='bg-white/200 hover:bg-black/30 hidden lg:flex   transition-all  rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
-            style={{ animationDelay: '0.15s' }}
-          >
-            <motion.button
-              disabled={!isTop}
-              onMouseEnter={() => setIsPaused(true)}
-              onMouseLeave={() => setIsPaused(false)}
-              onClick={nextSlide}
-              className='bg-black/20  w-[45px] h-[45px] animate_animated animate__zoomIn flex rounded-full justify-center items-center transition-all duration-1000'
-            >
-              <svg
-                className='hover:fill-white fill-gray-200 w-[20px] h-[20px]'
-                xmlns='http://www.w3.org/2000/svg'
-                viewBox='8 8 20 20'
-              >
-                <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
-              </svg>
-            </motion.button>
-          </div>
-          {/* Indication */}
-          <div
-            className='bg-white/200 hover:bg-black/30  transition-all   rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
-            style={{ animationDelay: '0.3s' }}
+      <AnimatePresence>
+        {isTop && (
+          <motion.div
+            transition={{
+              duration: 1.2,
+              ease: [0.22, 1, 0.36, 1],
+            }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            exit={{ opacity: 0, y: 30 }}
+            className={`w-full h-[30px] rounded-lg absolute  bottom-[50px] lg:bottom-[200px] gap-x-[10px] gap-[30px] flex flex-col  justify-center items-center z-30`}
           >
             <motion.div
-              layout
-              className='bg-black/20 p-[15px] flex rounded-full gap-x-[16px] lg:gap-x-[20px] justify-center items-center transition-all'
+              className={`w-full h-[30px] rounded-lg  gap-x-[10px] lg:gap-x-[20px] flex  justify-center items-center z-50`}
             >
-              {HomeCarousel.map((item, index) => (
-                <motion.button
-                  key={index}
-                  disabled={!isTop}
-                  onClick={() => goToSlide(index)}
-                  style={{ animationDelay: `${(index + 3) * 0.11}s` }}
-                  className={`bg-gray-200/50 hover:bg-gray-50/50 animate_animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[10px] lg:h-[15px] ${index === activeIndex ? 'w-[30px] lg:w-[50px]' : 'w-[10px] lg:w-[15px]'}`}
-                >
-                  {index === activeIndex && isPaused === false && (
-                    <div
-                      className='h-full bg-white rounded-full'
-                      style={{ width: `${progress}%` }}
-                    />
-                  )}
-                </motion.button>
-              ))}
-            </motion.div>
-          </div>
-          {/* Play/Pause button */}
-          <div
-            className='bg-white/200 hover:bg-black/30 transition-all  rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
-            style={{ animationDelay: '0.45s' }}
-          >
-            <motion.button
-              layout
-              disabled={!isTop}
-              onClick={() => setIsPaused(!isPaused)}
-              className='bg-black/20 w-[37.5px] h-[37.5px] lg:w-[45px] lg:h-[45px] animate_animated animate__fadeIn flex rounded-full justify-center items-center transition-all ring-0 outline-none duration-1000'
-            >
-              <motion.svg
-                whileTap={{ scale: 1.1 }}
-                whileHover={{ scale: 1.2 }}
-                transition={{
-                  duration: 1.2,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className={`w-[22px] h-[22px] lg:w-[35px] lg:h-[35px]  fill-white ${isPaused ? 'animate__rotateIn' : 'animate__rotateIn'} animate_animated transition-all ring-0 outline-none`}
-                viewBox='0 0 48 48'
+              {' '}
+              {/* Navigation Controls */}
+              <div
+                className='bg-white/200 hover:bg-black/30 hidden lg:flex  transition-all rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
+                style={{ animationDelay: '0.15s' }}
               >
-                <motion.path
-                  d={!isPaused ? iconVariants.playing : iconVariants.paused}
-                  animate={{
-                    d: isPaused ? iconVariants.playing : iconVariants.paused,
-                  }}
-                  transition={{
-                    duration: 1.2,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                />
-              </motion.svg>
-            </motion.button>
-          </div>
-        </motion.div>
-        <motion.div className='hidden w-full lg:flex'>
-          <SubNav isTop={isTop} />
-        </motion.div>
-      </motion.div>
+                <motion.button
+                  disabled={!isTop}
+                  // onMouseEnter={() => setIsPaused(true)}
+                  // onMouseLeave={() => setIsPaused(false)}
+                  onClick={prevSlide}
+                  className='bg-black/20 w-[45px] h-[45px] animate_animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-1000'
+                >
+                  <svg
+                    className='hover:fill-white rotate-180 fill-gray-200 w-[20px] h-[20px]'
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='8 8 20 20'
+                  >
+                    <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
+                  </svg>
+                </motion.button>
+              </div>
+              <div
+                className='bg-white/200 hover:bg-black/30 hidden lg:flex   transition-all  rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
+                style={{ animationDelay: '0.15s' }}
+              >
+                <motion.button
+                  disabled={!isTop}
+                  // onMouseEnter={() => setIsPaused(true)}
+                  // onMouseLeave={() => setIsPaused(false)}
+                  onClick={nextSlide}
+                  className='bg-black/20  w-[45px] h-[45px] animate_animated animate__zoomIn flex rounded-full justify-center items-center transition-all duration-1000'
+                >
+                  <svg
+                    className='hover:fill-white fill-gray-200 w-[20px] h-[20px]'
+                    xmlns='http://www.w3.org/2000/svg'
+                    viewBox='8 8 20 20'
+                  >
+                    <path d='M23.5587,16.916 C24.1447,17.4999987 24.1467,18.446 23.5647,19.034 L16.6077,26.056 C16.3147,26.352 15.9287,26.4999987 15.5427,26.4999987 C15.1607,26.4999987 14.7787,26.355 14.4867,26.065 C13.8977,25.482 13.8947,24.533 14.4777,23.944 L20.3818,17.984 L14.4408,12.062 C13.8548,11.478 13.8528,10.5279 14.4378,9.941 C15.0218,9.354 15.9738,9.353 16.5588,9.938 L23.5588,16.916 L23.5587,16.916 Z'></path>
+                  </svg>
+                </motion.button>
+              </div>
+              {/* Indication */}
+              <div
+                className='bg-white/200 hover:bg-black/30  transition-all   rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
+                style={{ animationDelay: '0.3s' }}
+              >
+                <motion.div
+                  layout
+                  className='bg-black/20 p-[15px] flex rounded-full gap-x-[16px] lg:gap-x-[20px] justify-center items-center transition-all'
+                >
+                  {HomeCarousel.map((item, index) => (
+                    <motion.button
+                      key={index}
+                      disabled={!isTop}
+                      onClick={() => goToSlide(index)}
+                      style={{ animationDelay: `${(index + 3) * 0.11}s` }}
+                      className={`bg-gray-200/50 hover:bg-gray-50/50 animate_animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[10px] lg:h-[15px] ${index === activeIndex ? 'w-[30px] lg:w-[50px]' : 'w-[10px] lg:w-[15px]'}`}
+                    >
+                      {index === activeIndex && isPaused === false && (
+                        <div
+                          className='h-full bg-white rounded-full'
+                          style={{ width: `${progress}%` }}
+                        />
+                      )}
+                    </motion.button>
+                  ))}
+                </motion.div>
+              </div>
+              {/* Play/Pause button */}
+              <div
+                className='bg-white/200 hover:bg-black/30 transition-all  rounded-full backdrop-blur-[5px] animate_animated animate__fadeInUp'
+                style={{ animationDelay: '0.45s' }}
+              >
+                <motion.button
+                  layout
+                  disabled={!isTop}
+                  onClick={() => setIsPaused(!isPaused)}
+                  className='bg-black/20 w-[37.5px] h-[37.5px] lg:w-[45px] lg:h-[45px] animate_animated animate__fadeIn flex rounded-full justify-center items-center transition-all ring-0 outline-none duration-1000'
+                >
+                  <motion.svg
+                    whileTap={{ scale: 1.1 }}
+                    whileHover={{ scale: 1.2 }}
+                    transition={{
+                      duration: 1.2,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className={`w-[22px] h-[22px] lg:w-[35px] lg:h-[35px]  fill-white ${isPaused ? 'animate__rotateIn' : 'animate__rotateIn'} animate_animated transition-all ring-0 outline-none`}
+                    viewBox='0 0 48 48'
+                  >
+                    <motion.path
+                      d={!isPaused ? iconVariants.playing : iconVariants.paused}
+                      animate={{
+                        d:
+                          isPaused ? iconVariants.playing : iconVariants.paused,
+                      }}
+                      transition={{
+                        duration: 1.2,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                    />
+                  </motion.svg>
+                </motion.button>
+              </div>
+            </motion.div>
+            <motion.div className='hidden w-full lg:flex'>
+              <SubNav isTop={isTop} />
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

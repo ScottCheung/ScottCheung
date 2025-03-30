@@ -7,7 +7,7 @@ import data from '../data/Database.json';
 import { Link } from 'react-router-dom';
 const navLocation = data.Navbar.Location;
 
-export function subNav(isTop) {
+export function subNav() {
   const lang = useLanguage();
 
   return (
@@ -19,8 +19,7 @@ export function subNav(isTop) {
           className={`w-full  flex justify-between rounded-full  items-center shadow-xl transition-all bg-black/30 backdrop-blur-[15px]`}
         >
           {navLocation.map((item, index) => (
-            <motion.button
-              disabled={!isTop}
+            <motion.a
               initial={{ width: '100%' }}
               whileHover={{ width: '120%' }}
               key={index}
@@ -52,7 +51,7 @@ export function subNav(isTop) {
                   </div>
                 </div>
               </motion.div>
-            </motion.button>
+            </motion.a>
           ))}
         </motion.div>
       </motion.div>
