@@ -208,10 +208,12 @@ function GridHouseCard() {
             </header>
             <motion.div
               layout
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
               className='w-[100%] px-auto flex justify-between lg:z-50 sticky top-[12px] mt-[20px] h-0 mb-[50px]'
             >
               <motion.label
                 layout
+                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                 className='relative inline-flex flex-col mb-12 cursor-pointer lg:z-50'
               >
                 {!lightboxIsOpen && Components.NavBar === 'visible' && (
@@ -231,7 +233,7 @@ function GridHouseCard() {
                       <motion.div
                         className={`w-8 h-8 bg-white/50 rounded-full`}
                         layout
-                        transition={spring}
+                        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                       />
                     </div>
                     <span className='animate_animated animate__fadeInRight ms-3 text-[15px] font-medium text-gray-900 darrk:text-gray-200'>
@@ -242,6 +244,7 @@ function GridHouseCard() {
               </motion.label>
               <motion.label
                 layout
+                transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                 className='relative inline-flex flex-col mb-12 cursor-pointer lg:z-50'
               >
                 {!lightboxIsOpen && Components.NavBar === 'visible' && (
@@ -264,7 +267,7 @@ function GridHouseCard() {
                       <motion.div
                         className={`w-8 h-8 bg-white/50 rounded-full`}
                         layout
-                        transition={spring}
+                        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                       />
                     </div>
                   </div>
@@ -276,12 +279,13 @@ function GridHouseCard() {
               className={` w-[100%] px-auto grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 md:gap-8 lg:gap-12  z-0`}
               style={{ display: 'grid' }}
             >
-              <LayoutGroup>
+              <AnimatePresence>
                 {picturesToDisplay.map((item, index) => (
                   <AnimatePresence>
                     <motion.div
                       layoutId={item + 'container'}
                       layout
+                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                       whileHover={{
                         opacity: 0.9,
                         transition: { duration: 0.2 },
@@ -292,23 +296,23 @@ function GridHouseCard() {
                         scale: 0,
                         transition: { duration: 0.7 },
                       }}
-                      transition={{ duration: 0.6 }}
                       key={item}
                       style={{
                         animationDelay: `${0.04 * (index % 12)}s`,
                         zIndex: zIndexes[index],
                       }}
-                      className='transition-all duration-500 flex w-full  aspect-square justify-center items-center  overflow-hidden bg-gray-500/90  rounded-[14px] shadow-lg animate_animated animate__zoomIn darrk:bg-gray-700 '
+                      className=' flex w-full  aspect-square justify-center items-center  overflow-hidden bg-gray-500/90  rounded-[14px] shadow-lg animate_animated animate__zoomIn darrk:bg-gray-700 '
                     >
                       <motion.div
                         initial={{ scale: 1.2 }}
                         animate={{ scale: 1, transition: { duration: 1 } }}
-                        whileHover={{
-                          scale: 1.2,
-                          rotate: 2,
-                          transition: { duration: 1 },
-                        }}
-                        transition={{ duration: 3 }}
+                        transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+                        // whileHover={{
+                        //   scale: 1.2,
+                        //   rotate: 2,
+                        //   transition: { duration: 1 },
+                        // }}
+
                         onClick={() => {
                           setSelectedImage(item);
                           setcurrentImage(item);
@@ -340,7 +344,7 @@ function GridHouseCard() {
                       >
                         <motion.img
                           loading='lazy'
-                          layoutId={item}
+                          // layoutId={item}
                           // transition={{ duration: 0.55, ease: "easeInOut"}}
                           animate={{
                             opacity: 1,
@@ -356,7 +360,7 @@ function GridHouseCard() {
                       </motion.div>
                       <div
                         role='status'
-                        className='flex items-center justify-center w-full h-full rounded-lg -z-10 bg-gray-300/30 animate__faster darrk:bg-gray-700/30'
+                        className='flex items-center justify-center w-full h-full rounded-lg -z-10 bg-gray-300/30 darrk:bg-gray-700/30'
                         style={{
                           imageBackground: `url(${item.replace(
                             /\.(png|jpg|jpeg|gif|bmp|svg|webp)$/,
@@ -378,8 +382,8 @@ function GridHouseCard() {
                     </motion.div>
                   </AnimatePresence>
                 ))}
-                <div ref={ref} />
-              </LayoutGroup>
+              </AnimatePresence>
+              <div ref={ref} />
             </motion.div>
 
             <AnimatePresence>
@@ -387,7 +391,7 @@ function GridHouseCard() {
                 <motion.div
                   layout
                   layoutId={selectedImage + 'container'}
-                  transition={{ duration: 0.7, ease: [0.68, 0.05, 0.005, 1] }}
+                  transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                   className={
                     '  fixed top-0 left-0 w-screen h-screen z-50 bg-gray-950/90 bg-blur-md'
                   }
@@ -397,11 +401,12 @@ function GridHouseCard() {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     // transition={{ duration: 0.7, ease: "easeInOut"}}
+                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                     className={' w-full h-full object-contain'}
                   >
                     <motion.img
                       loading='lazy'
-                      transition={{ duration: 0.7, ease: 'easeInOut' }}
+                      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                       layoutId={currentImage}
                       className={`transition-all duration-700 z-10 w-full h-full object-contain overflow-scroll`}
                       src={item}
