@@ -34,13 +34,13 @@ const HomeCarousel = [
     minisrc: 'https://img.picgo.net/2024/12/09/3d2edd6b52c4ac6f0.jpg',
     src: 'https://img.picgo.net/2024/12/09/3l8b1011477c0506cc.jpg',
   },
-
   {
     href: '/life',
     type: 'video',
-    duration: 7,
-    src: `video/swimming.mov`,
+    duration: 3,
+    src: `video/22.MOV`,
   },
+
   {
     href: '/life',
     type: 'image',
@@ -52,8 +52,8 @@ const HomeCarousel = [
   {
     href: '/life',
     type: 'video',
-    duration: 3,
-    src: `video/22.MOV`,
+    duration: 7,
+    src: `video/swimming.mov`,
   },
 
   {

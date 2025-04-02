@@ -93,7 +93,7 @@ function SelfDescribing() {
   const target = useTransform(
     scrollYProgress,
     [0, 0.4, 0.7, 1],
-    ['-50vw', '0vw', '0vw', '-50vw'],
+    ['50vw', '0vw', '0vw', '50vw'],
   );
   const borderBottomRightRadius = useTransform(
     scrollYProgress,
@@ -145,14 +145,27 @@ function SelfDescribing() {
           />
         </motion.div>
 
-        <div className='z-10 mt-[50px] text-left text-white/75'>
-          <img
-            loading='lazy'
-            className='rounded-full float-right z-10  w-[200px] h-[200px] mb-[10vw]'
-            src={Database.PersonalInfo.Avatar[0]}
-          />
+        <iframe
+          width='100%'
+          height='300px'
+          src='https://www.youtube.com/embed/Cll-4cW1UdA?si=XEiP7HgYLe-GCPwy'
+          title='YouTube video player'
+          frameborder='0'
+          className='my-[20px] z-30 rounded-[14px] flex'
+          // allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+          allowfullscreen
+        ></iframe>
+
+        <div className='z-10 mt-[0px] text-left text-white/75'>
           {data.description[lang].map((item, index) => (
             <div key={index} className='mb-[30px]'>
+              {index === 3 && (
+                <img
+                  loading='lazy'
+                  className='rounded-full float-right z-10  w-[100px] h-[100px] mb-[10vw]'
+                  src={Database.PersonalInfo.Avatar[0]}
+                />
+              )}
               {parseText(item)}
             </div>
           ))}
@@ -204,34 +217,62 @@ function SelfDescribing() {
               ></i>
               <p className='flex'>{lang === 0 || '0' ? 'About me' : '自述'}</p>
             </motion.div>
-            <motion.blockquote className='text-white'>
+
+            <motion.blockquote className='relative text-white'>
               <motion.div
                 style={{
-                  x: x,
                   opacity: opacity,
                   scale: scale,
                   y: y,
                 }}
-                className='float-right transform-gppuu'
+                className='z-40 float-right absolute right-0 transform-gppuu flex flex-col gap-[20px]'
               >
-                <motion.div className='flex'>
-                  <motion.img
-                    loading='lazy'
-                    className='rounded-full w-[200px] h-[200px] md:w-[250px] md:h-[250px]'
-                    src={Database.PersonalInfo.Avatar[0]}
-                  ></motion.img>
-                </motion.div>
+                <iframe
+                  width='500px'
+                  height='400px'
+                  src='https://www.youtube.com/embed/Cll-4cW1UdA?si=XEiP7HgYLe-GCPwy'
+                  title='YouTube video player'
+                  frameborder='0'
+                  className='my-[20px] ml-[40px] rounded-[28px] flex'
+                  allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
+                  allowfullscreen
+                ></iframe>
               </motion.div>
               <motion.div
                 style={{
-                  x: target,
+                  opacity: opacity,
+                  scale: scale,
+                  y: y,
+                }}
+                className='z-40 float-right  invisible transform-gppuu flex flex-col gap-[20px]'
+              >
+                <div className='w-[500px] h-[400px] my-[20px] ml-[40px] rounded-[28px] flex'></div>
+              </motion.div>
+
+              <motion.div
+                style={{
                   opacity: opacity,
                   y: y,
                 }}
-                className='block transform-gppuu'
+                className='block -z-10 transform-gppuu'
               >
                 {data.description[lang].map((item, index) => (
                   <motion.div className='block mb-[30px] ' key={index + item}>
+                    {index === 3 && (
+                      <motion.div
+                        style={{
+                          opacity: opacity,
+                          scale: scale,
+                        }}
+                        className='z-40  float-left transform-gppuu flex flex-col gap-[20px]'
+                      >
+                        <motion.img
+                          loading='lazy'
+                          className='rounded-full flex w-[200px] h-[200px] md:w-[250px] md:h-[250px]'
+                          src={Database.PersonalInfo.Avatar[0]}
+                        ></motion.img>
+                      </motion.div>
+                    )}
                     <p
                       style={{
                         lineHeight: 1.2353641176,

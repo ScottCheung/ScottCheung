@@ -41,6 +41,11 @@ export default function material() {
 
           <div className='h-auto md:mx-[10%] p-[10px] text-[13px] md:text-[17px] lg:text-[20px] z-0 welcomeanimation'>
             <div className=' text-gray-500  pb-4 sticky   top-0 z-0 bg-gradient-to-br from-white from-10% via-white via-90% to-white/10  '>
+              <img
+                src='https://img.picgo.net/2025/04/03/71F6840E-701F-4957-BAA4-904922B25CA4-45114-00001CFEFCBB9186593d9e13aa52b49a.png'
+                alt='all'
+                className=' contrast-more:'
+              />
               <p className=' text-justify py-[30px]'>
                 {lang == 1 &&
                   '所有证书真实有效。请注意，所有证书均为真实有效，并已在 2024 年 5 月 13 日进行更新。未经授权，请不要复制或保存。'}
@@ -60,18 +65,21 @@ export default function material() {
                 {lang == 1 && (
                   <thead className='text-gray-700 uppercase bg-gray-50 darrk:bg-gray-700 darrk:text-gray-400'>
                     <tr>
-                      <th scope='col' className='lg:px-6 px-2py-3'>
+                      <th scope='col' className='text-center lg:px-6 px-2py-3'>
                         序
                       </th>
-                      <th scope='col' className='lg:px-6 px-2py-3'>
+                      <th scope='col' className='text-center lg:px-6 px-2py-3'>
                         活动
                       </th>
-                      <th scope='col' className='lg:px-6 px-2py-3'>
+                      <th scope='col' className='text-center lg:px-6 px-2py-3'>
                         奖项
                       </th>
-                      {/* <th scope='col' className='lg:px-6 px-2py-3'>
+                      <th scope='col' className='text-center lg:px-6 px-2py-3'>
+                        类型
+                      </th>
+                      <th scope='col' className='lg:px-6 px-2py-3'>
                         链接
-                      </th> */}
+                      </th>
                     </tr>
                   </thead>
                 )}
@@ -87,54 +95,62 @@ export default function material() {
                       <th scope='col' className='text-center lg:px-6 px-2py-3'>
                         Award
                       </th>
-                      {/* <th scope='col' className='lg:px-6 px-2py-3'>
+                      <th scope='col' className='text-center lg:px-6 px-2py-3'>
+                        Type
+                      </th>
+                      <th scope='col' className='lg:px-6 px-2py-3'>
                         Link
-                      </th> */}
+                      </th>
                     </tr>
                   </thead>
                 )}
-                {Certificates[lang].map((Certificate, index) => (
-                  <motion.tbody
-                    key={index}
-                    variants={item}
-                    whileHover={{ scale: 1.001 }}
-                    whileTap={{ scale: 0.99 }}
-                    layout
-                    className=''
-                  >
-                    <tr className='bg-white border-b darrk:bg-gray-800 darrk:border-gray-700 '>
-                      <th
-                        scope='row'
-                        className='px-2  font-medium text-center text-gray-900 lg:py-[10px] py-[25px] whitespace-nowrap darrk:text-white'
-                      >
-                        {index + 1}
-                      </th>
-                      <td
-                        scope='row'
-                        className='lg:px-6  px-2py-4 font-medium text-gray-900 w-[50%] text-center whitespace-wrap darrk:text-white'
-                      >
-                        {Certificate.activity}
-                      </td>
-                      <td className='lg:px-6  px-2py-4 w-[30%] text-center'>
-                        {Certificate.award}
-                      </td>
-                      {/* <td className='lg:px-6 px-2py-4'>
-                        <a
-                          target='_blank'
-                          rel='noopener noreferrer'
-                          href={Certificate.src}
-                          className='text-sky-500 hover:text-sky-700 hover:underline darrk:text-sky-400 darrk:hover:text-sky-700'
+                {Certificates[lang]
+                  .sort((a, b) => a.type.localeCompare(b.type))
+                  .map((Certificate, index) => (
+                    <motion.tbody
+                      key={index}
+                      variants={item}
+                      whileHover={{ scale: 1.001 }}
+                      whileTap={{ scale: 0.99 }}
+                      layout
+                      className={index % 2 === 0 ? 'bg-sky-50 ' : ''}
+                    >
+                      <tr className='border-b darrk:bg-gray-800 darrk:border-gray-700'>
+                        <th
+                          scope='row'
+                          className='px-2  font-medium text-center text-gray-900 lg:py-[10px] py-[25px] whitespace-nowrap darrk:text-white'
                         >
-                          {lang == 0 ? 'Link ' : '链接'}
-                        </a>
-                      </td> */}
-                    </tr>
-                  </motion.tbody>
-                ))}
+                          {index + 1}
+                        </th>
+                        <td
+                          scope='row'
+                          className='lg:px-6  px-2py-4 font-medium text-gray-900 w-[50%] text-center whitespace-wrap darrk:text-white'
+                        >
+                          {Certificate.activity}
+                        </td>
+                        <td className='lg:px-6  px-2py-4 w-[10%] text-center'>
+                          {Certificate.award}
+                        </td>
+                        <td className='lg:px-6  px-2py-4 w-[10%] text-center'>
+                          {Certificate.type}
+                        </td>
+                        <td className='lg:px-6 px-2py-4'>
+                          <a
+                            target='_blank'
+                            rel='noopener noreferrer'
+                            href={Certificate.src}
+                            className='text-sky-500 hover:text-sky-700 hover:underline darrk:text-sky-400 darrk:hover:text-sky-700'
+                          >
+                            {lang == 0 ? 'Link ' : '链接'}
+                          </a>
+                        </td>
+                      </tr>
+                    </motion.tbody>
+                  ))}
               </motion.table>
             </div>
           </div>
-          {/* <CertificateGallery /> */}
+          <CertificateGallery />
           <div className='flex justify-center w-full'>
             <KeyFeature />
           </div>

@@ -100,8 +100,8 @@ export default function Scholarship() {
                     </thead>
                   )}
                   {Scholarships[lang].map((Scholarship, index) => (
-                    <tbody>
-                      <tr className='bg-white border-b darrk:bg-gray-800 darrk:border-gray-700 '>
+                    <tbody className={index % 2 === 0 ? 'bg-sky-50 ' : ''}>
+                      <tr className='border-b darrk:bg-gray-800 darrk:border-gray-700'>
                         <th
                           scope='row'
                           className='px-2 py-4 font-medium text-gray-900 lg:px-6 whitespace-nowrap darrk:text-white'
@@ -114,7 +114,7 @@ export default function Scholarship() {
                         >
                           {Scholarship.CourseName}
                         </td>
-                        <td className='lg:px-6 px-2 py-4 w-[5%] text-center'>
+                        <td className='lg:px-6 px-2 py-4 w-[15%] text-center'>
                           {Scholarship.Type}
                         </td>
                         <td className='px-2 py-4 lg:px-6 '>

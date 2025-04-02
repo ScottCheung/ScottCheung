@@ -41,7 +41,7 @@ function CertificateGallery() {
         whileInView={{ opacity: 1 }}
         Transition={{ duration: 2 }}
         viewport={{ once: true, margin: '-30%' }}
-        className='w-full grid px-[20px] grid-cols-12 relative lg:gap-[20px]'
+        className='w-full grid px-[20px] grid-cols-12 relative gap-[10px] md:gap-[20px] lg:gap-[40px]'
       >
         {picturesDate.map((item, index) => (
           <motion.a
@@ -53,19 +53,19 @@ function CertificateGallery() {
             whileTap={{ scale: 0.99 }}
             target='_blank'
             rel='noopener noreferrer'
-            className={`flex-1 items-start justify-center lg:col-span-2 md:col-span-3 col-span-6  certificate-item`}
-            style={{
-              height: `${rowHeights[Math.floor(index / 6)] || 'auto'}px`,
-            }}
+            className={`h-full  w-full items-start justify-center lg:col-span-2 md:col-span-3 col-span-6  certificate-item`}
+            // style={{
+            //   height: `${rowHeights[Math.floor(index / 6)] || 'auto'}px`,
+            // }}
           >
             <motion.div
               key={index}
-              className='flex flex-col items-start justify-start '
+              className='flex flex-col items-center justify-center '
             >
-              <div className=' flex h-[200px] w-full justify-center items-center '>
+              <div className='flex items-center justify-center '>
                 <img
                   loading='lazy'
-                  className='flex rounded-[14px] w-auto max-h-[200px] overflow-hidden'
+                  className='flex rounded-[14px]  w-auto h-[200px] overflow-hidden'
                   src={item.src.replace(
                     /\.(png|jpg|jpeg|gif|bmp|svg|webp)$/,
                     '.md.$1',
@@ -74,12 +74,18 @@ function CertificateGallery() {
                 />
               </div>
 
-              <div className='flex flex-col pt-[20px] gap-[10px]'>
-                <p className='flex-1 font-[600] text-gray-900 text-[20px] '>
-                  {item.award}
-                </p>
-                <p className='flex-1 text-gray-500 text-[13px]'>
-                  {item.activity}
+              <div className='flex flex-col pt-[20px] justify-start gap-[10px]'>
+                <div className='flex gap-[10px]'>
+                  <h4 className='flex-1 font-[600] text-gray-900 text-[20px] '>
+                    {item.award}
+                  </h4>{' '}
+                </div>
+
+                <p className='flex text-gray-500 text-[13px]'>
+                  {item.activity}{' '}
+                  {/* <span className='border flex items-center justify-center rounded-full bg-sky-50 border-sky-900 px-3 py-2 text-sky-900 text-[10px]'>
+                    {item.type}
+                  </span> */}
                 </p>
               </div>
             </motion.div>

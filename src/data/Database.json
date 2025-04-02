@@ -43,7 +43,7 @@
     "KeyFeaturebg": [
       "https://img.picgo.net/2024/12/06/home2a1e676af79e3ccb5.jpg"
     ],
-    "selfdesbg": ["https://3o.hk/images/2024/01/14/selfdesbg.jpg"],
+
     "welcomebg": ["https://3o.hk/images/2024/01/14/welcomebg.jpg"],
     "contactbg": ["https://3o.hk/images/2024/01/14/contactbg.jpg"],
     "Avatar": ["https://img.picgo.net/2024/12/06/profile26fe37ccfe6ad6d7.png"],
@@ -1161,30 +1161,34 @@
       "pic": "https://cdn.pixabay.com/photo/2014/05/26/09/58/sydney-opera-house-354375_1280.jpg",
       "description": [
         [
-          "Hello, I'm {bold}Scott Cheung{bold}, a passionate and multifaceted individual who loves {bold}life{bold} and {bold}exploring new things{bold}. I excel in adopting new methods to improve efficiency in work and study. My {bold}intelligence{bold}, {bold}strong learning ability{bold}, and {bold}fearlessness{bold} in the face of challenges have enabled me to achieve {bold}three degrees{bold}, including a double major in my undergraduate studies and an {bold}IT master's degree{bold} from {bold}UNSW{bold}, All degrees completed {bold}ahead of schedule{bold}.",
+          "Hello, I am {bold}Scott{bold}, I have {bold}2 years{bold} of web development experience and {bold}3 years{bold} of UI/UX design experience and hold a Master’s degree in IT (AI) from {bold}UNSW{bold}. Additionally, I have {bold}dual Bachelor{bold}’s degrees in Management and Engineering. I am proficient in {bold}HTML, CSS, JavaScript, React, Redux, Node.js, Next.js, and Python (Django){bold}, with extensive skills in {bold}GitHub, Figma, UI/UX design, ZSH, CI/CD, AWS (EC2, S3, Lambda), Nginx, and Google Apigee{bold}. I believe I can bring significant value to your company.",
 
-          "I have a solid background in management studies, which allows me to {bold}systematically solve problems{bold}. My {bold}flexible thinking{bold} enables me to embrace new methods while maintaining {bold}high standards for detail{bold} and {bold}aesthetics{bold}. Throughout my academic and professional journey, I have garnered {bold}58 awards{bold} and {bold}17 scholarships{bold}. During my undergraduate years, I also designed posters and logos as a side hustle.",
+          "What value can I bring to your company?",
 
-          "My {bold}excellent communication skills{bold} enable me to collaborate efficiently with team members and understand client preferences. My {bold}keen aesthetic sense{bold} and {bold}ability to quickly capture industry trends{bold} have allowed me to design {bold}commercially valuable{bold} and {bold}aesthetically pleasing{bold} layouts, interactions, and interfaces.",
+          "1. {bold}Technical Expertise{bold} – I can develop, optimize, and maintain your website. Whether it’s improving performance, fixing issues, or building a new website from scratch, I can handle it.",
 
-          "In the IT field, I hold a master's degree from UNSW, specializing in AI. I have comprehensive knowledge in {bold}neural networks{bold}, {bold}deep learning{bold}, {bold}machine learning{bold}, {bold}natural language processing{bold}, and {bold}recommendation systems{bold}. My expertise also extends to {bold}front-end development{bold}. I am proficient in {bold}JavaScript{bold} and {bold}Python{bold}, and familiar with frameworks and tools such as {bold}React{bold}, {bold}Git{bold}, {bold}Tailwind{bold}, {bold}Framer{bold}, and {bold}Redux{bold}.",
+          "2. {bold}Aesthetic Value{bold} – I have a background in UI/UX design and have independently delivered design projects before. This allows me to pay attention to aesthetic details that many developers might overlook.",
 
-          "My {bold}diverse interests{bold}, including {bold}piano{bold}, {bold}calligraphy{bold}, {bold}painting{bold}, {bold}Tai Chi{bold}, {bold}taekwondo{bold}, {bold}photography{bold}, {bold}singing{bold}, {bold}guitar{bold}, {bold}ballet{bold}, and {bold}violin{bold}, have all contributed to my deep appreciation for work that embodies my {bold}aesthetic vision{bold} and {bold}analytical thinking{bold}.",
+          "3. {bold}Business Impact{bold} – As a web developer, I don’t just focus on coding; I also care about your product and business goals. With my management background, I can analyze data to track user behavior and help you understand what content attracts users the most.",
 
-          "Front-end development is the perfect job for me, as it allows me to help companies better present their content while expressing my own {bold}aesthetic attitude{bold}. It is the perfect combination of art and engineering. After developing a new component, I get instant feedback, unlike training an AI model, which typically requires a significant amount of time for feedback. This immediate positive feedback from front-end development stimulates me. I often lose track of time while developing web pages and can easily stay up all night coding. I immerse myself in the world of code. It seems I was born for front-end development, and my passion sustains me and enables me to achieve excellent results. I am grateful that my broad interests and continuous exploration have given me a clear understanding of {bold}who I am{bold} and {bold}what I love{bold}."
+          "What is the status of my visa?",
+
+          "I hold {bold}sub-class 485{bold}. My visa will expire on {bold}11/10/2029{bold}, the same period as {bold}PR{bold}. I don’t need sponsorship."
         ],
         [
-          "你好，我是{bold}张贤哲{bold}，一个充满{bold}热情{bold}且{bold}多才多艺{bold}的人，热爱{bold}生活{bold}和{bold}探索新事物{bold}。我擅长采用新方法来提高工作和学习的效率。我的{bold}聪明{bold}、{bold}强大的学习能力{bold}和面对挑战的{bold}无畏精神{bold}使我获得了{bold}三个学位{bold}，包括本科期间的双学位和来自{bold}UNSW{bold}的{bold}IT硕士学位{bold}，这些学位都{bold}提前{bold}完成，是不是超棒！",
+          "你好，我是{bold}Scott{bold}，我有{bold}2年{bold}的Web开发经验和{bold}3年{bold}的UI/UX设计经验，并拥有{bold}UNSW{bold}的IT（人工智能）硕士学位。此外，我还拥有{bold}管理和工程{bold}双学士学位。我精通{bold}HTML、CSS、JavaScript、React、Redux、Node.js、Next.js和Python（Django）{bold}，并具备{bold}GitHub、Figma、UI/UX设计、ZSH、CI/CD、AWS（EC2、S3、Lambda）、Nginx和Google Apigee{bold}等方面的丰富技能。我相信我能为贵公司带来重要价值。",
 
-          "我在管理学方面有着扎实的背景，这使我能够{bold}系统地解决问题{bold}。我的{bold}灵活思维{bold}让我能够接受新方法并保持{bold}高标准的细节{bold}和{bold}美感{bold}。在我的学术和职业生涯中，我获得了{bold}58个奖项{bold}和{bold}17个奖学金{bold}，在本科期间，我还通过设计海报和标志作为副业。",
+          "我能为贵公司带来哪些价值？",
 
-          "我的{bold}优秀的沟通技巧{bold}使我能够高效地与团队成员合作，并了解客户的偏好。我的{bold}敏锐美学感知{bold}和{bold}快速捕捉行业趋势的能力{bold}使我能够设计出具有{bold}商业价值{bold}和{bold}美轮美奂{bold}的布局互动和界面。",
+          "1. {bold}技术专长{bold} – 我可以开发、优化和维护您的网站。无论是提升性能、修复问题，还是从零开始构建新网站，我都能胜任。",
 
-          "在IT领域，我拥有UNSW的硕士学位，专攻人工智能，广泛掌握{bold}神经网络{bold}、{bold}深度学习{bold}、{bold}机器学习{bold}、{bold}自然语言处理{bold}和{bold}推荐系统{bold}的知识。我的专业知识还扩展到{bold}前端开发{bold}，我熟练掌握{bold}JavaScript{bold}和{bold}Python{bold}，并熟悉{bold}React{bold}、{bold}Git{bold}、{bold}Tailwind{bold}、{bold}Framer{bold}和{bold}Redux{bold}等框架和工具。",
+          "2. {bold}美学价值{bold} – 我有UI/UX设计背景，并曾独立完成设计项目。这使我能关注许多开发者可能忽略的美学细节。",
 
-          "我的{bold}多种兴趣{bold}，包括{bold}钢琴{bold}、{bold}书法{bold}、{bold}绘画{bold}、{bold}太极{bold}、{bold}跆拳道{bold}、{bold}摄影{bold}、{bold}唱歌{bold}、{bold}吉他{bold}、{bold}芭蕾{bold}和{bold}小提琴{bold}，都使我对体现我{bold}美学视野{bold}和{bold}分析思维{bold}的工作有了深刻的理解。",
+          "3. {bold}商业影响{bold} – 作为一名Web开发者，我不仅关注编码，还关心产品和业务目标。凭借我的管理背景，我可以分析数据，跟踪用户行为，并帮助您了解哪些内容最能吸引用户。",
 
-          "前端开发于我是完美的工作，我可以帮助公司更好地展示内容，同时表达我自己的{bold}美学态度{bold}，这是艺术和工程的完美结合。在开发一个新组件后，它能给我即时反馈，这与训练AI模型不同，后者通常需要大量时间才能收到反馈。前端这种积极即使的反馈激励着我。我经常在开发网页时忘记时间，彻夜不眠地编写代码。我沉浸在代码的世界里，我似乎为前端开发而生，我的热爱可以支撑我，不断取得优秀的成果。我很感激我的兴趣广泛和不断探索，让我清楚地知道{bold}我是谁{bold}以及{bold}我所热爱的{bold}。"
+          "我的签证状态是什么？",
+
+          "我持有{bold}485子类签证{bold}。我的签证将于{bold}2029年10月11日{bold}到期，与{bold}PR{bold}的有效期相同。我不需要担保。"
         ]
       ]
     },
@@ -2388,700 +2392,700 @@
     "Certificates": [
       [
         {
-          "src": "https://3o.hk/images/2024/04/29/0DDCECF1-5FFB-467E-BCDE-1DC7C7FA1242-45114-00001D06D7EA5874.jpg",
-          "type": "Entrepreneurship",
-          "activity": "The 5th 'Internet Plus' Innovation and Entrepreneurship Competition for University Students",
+          "src": "https://img.picgo.net/2025/04/02/0DDCECF1-5FFB-467E-BCDE-1DC7C7FA1242-45114-00001D06D7EA587447ea982a525c5653.jpg",
+          "type": "Innovation and Entrepreneurship",
+          "activity": "5th 'Internet+' College Students Innovation and Entrepreneurship Competition",
           "award": "Third Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/0E4B8618-A778-4A0B-BC21-6F6DDDFF58F7-45114-00001D072CEB0D9C.jpg",
-          "type": "Knowledge",
-          "activity": "The 3rd National University Students' Environmental Knowledge Competition",
+          "src": "https://img.picgo.net/2025/04/02/0E4B8618-A778-4A0B-BC21-6F6DDDFF58F7-45114-00001D072CEB0D9Cba2df1b37fd1f93e.jpg",
+          "type": "Knowledge Awards",
+          "activity": "3rd National College Students Environmental Protection Knowledge Competition",
           "award": "Excellence Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/2DECE824-29D0-43FD-A341-AF99D2C97CE0-45114-00001D06A33838C7.jpg",
-          "type": "Honor",
+          "src": "https://img.picgo.net/2025/04/02/2DECE824-29D0-43FD-A341-AF99D2C97CE0-45114-00001D06A33838C74fd8808630a71ed0.jpg",
+          "type": "Outstanding Evaluation",
           "activity": "2018-2019 'Role Model Power'",
           "award": "Outstanding Class Leader"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/2E3F1DF6-ACE1-419A-B2DD-58FDC43D9191-45114-00001D05E493426E.jpg",
+          "src": "https://img.picgo.net/2025/04/02/2E3F1DF6-ACE1-419A-B2DD-58FDC43D9191-45114-00001D05E493426Eabecf4ea0f0c66b1.jpg",
           "type": "Scholarship",
           "activity": "Southwest University of Science and Technology 2019-2020 Scholarship",
-          "award": "Art Specialty Award"
+          "award": "Artistic Talent Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/2EAE6603-858F-44B5-B196-E866F74842E0-45114-00001D0663AA379F.jpg",
-          "type": "Technology",
-          "activity": "'Golden Energy Cup' Photovoltaic Product Design Competition Finals",
+          "src": "https://img.picgo.net/2025/04/02/2EAE6603-858F-44B5-B196-E866F74842E0-45114-00001D0663AA379F4821e64d80ee7368.jpg",
+          "type": "Technology Competition",
+          "activity": "'Golden Energy Cup' Photovoltaic Product Design Competition Final",
           "award": "Second Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/03AAA681-6765-41AA-8020-A42DC71162A7-45114-00001D06E508A18F.jpg",
-          "type": "Technology",
-          "activity": "Southwest University of Science and Technology 4th University Student Entrepreneurship Competition",
+          "src": "https://img.picgo.net/2025/04/02/03AAA681-6765-41AA-8020-A42DC71162A7-45114-00001D06E508A18F3ce78dc08bbe2823.jpg",
+          "type": "Technology Competition",
+          "activity": "Southwest University of Science and Technology 4th College Student Entrepreneurship Competition",
           "award": "Bronze Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/5BEF2DF4-09AD-4BEF-ABA8-357E4C3B252A-45114-00001D068BD72133.jpg",
-          "type": "Art",
+          "src": "https://img.picgo.net/2025/04/02/5BEF2DF4-09AD-4BEF-ABA8-357E4C3B252A-45114-00001D068BD72133a0836c52e9d3fcd9.jpg",
+          "type": "Art and Design",
           "activity": "2019 Freshman Admission Notice Design Competition",
           "award": "First Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/5FF0E884-7D14-4A5E-A579-826930F18C7C-45114-00001D071C6E8A0D.jpg",
-          "type": "Sports",
-          "activity": "2019 College Sports Games Go Project",
+          "src": "https://img.picgo.net/2025/04/02/5FF0E884-7D14-4A5E-A579-826930F18C7C-45114-00001D071C6E8A0Dfc1d202ba527dc87.jpg",
+          "type": "Sports Competition",
+          "activity": "2019 College Sports Meet Go Event",
           "award": "Second Place"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/51F92EA6-4FA9-4E3E-9EB4-38B15AE06F2D-45114-00001D05DCDFC7C5.jpg",
+          "src": "https://img.picgo.net/2025/04/02/51F92EA6-4FA9-4E3E-9EB4-38B15AE06F2D-45114-00001D05DCDFC7C535b2aaebdf0ae97f.jpg",
           "type": "Scholarship",
           "activity": "Southwest University of Science and Technology 2018-2019 Scholarship",
           "award": "Entrepreneurship Practice Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/59C72B82-C522-4E6B-AEF3-7D549787675E-45114-00001D062A66B3B5.jpg",
-          "type": "Entrepreneurship",
-          "activity": "The 14th iCAN International Innovation and Entrepreneurship Competition China Finals",
+          "src": "https://img.picgo.net/2025/04/02/59C72B82-C522-4E6B-AEF3-7D549787675E-45114-00001D062A66B3B5eb5597b25b1ff686.jpg",
+          "type": "Innovation and Entrepreneurship",
+          "activity": "14th iCAN International Innovation and Entrepreneurship Competition China Finals",
           "award": "Third Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/69DA8251-003D-4587-B73E-8CDA71972A6B-45114-00001D05D900AA8E.jpg",
+          "src": "https://img.picgo.net/2025/04/02/69DA8251-003D-4587-B73E-8CDA71972A6B-45114-00001D05D900AA8E6fa959e2a6d6c5b2.jpg",
           "type": "Scholarship",
           "activity": "Southwest University of Science and Technology 2019-2020 Scholarship",
-          "award": "Entrepreneurship Practice Award"
+          "award": "Entrepreneurship Achievement Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/86F95023-670D-4D49-A501-24ABC48F9D4C-45114-00001D0632E1AA4E.jpg",
-          "type": "Honor",
-          "activity": "Entrepreneurship Training Student Certificate of Completion",
+          "src": "https://img.picgo.net/2025/04/02/86F95023-670D-4D49-A501-24ABC48F9D4C-45114-00001D0632E1AA4Eefc116f2614ed9fa.jpg",
+          "type": "Student Leadership",
+          "activity": "Entrepreneurship Training Program Certificate of Completion",
           "award": "Certificate of Completion"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/95A0A467-F6A4-48A4-A0D3-A562CD1DCBB0-45114-00001D064AFEAA6E.jpg",
-          "type": "Honor",
-          "activity": "College 2019-2020 'May Fourth' Evaluation",
-          "award": "Outstanding Youth League Member"
+          "src": "https://img.picgo.net/2025/04/02/95A0A467-F6A4-48A4-A0D3-A562CD1DCBB0-45114-00001D064AFEAA6E2837d46527ab3037.jpg",
+          "type": "Outstanding Evaluation",
+          "activity": "College 2019-2020 'May 4th' Outstanding Evaluation",
+          "award": "Outstanding League Member"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/587C6C4F-B46A-450D-A39D-5FAFF3F54991-45114-00001D06260FB642.jpg",
-          "type": "Honor",
-          "activity": "2018-2019 Virtue, Wisdom, Sports May Fourth Evaluation",
-          "award": "Outstanding Youth League Member"
+          "src": "https://img.picgo.net/2025/04/02/587C6C4F-B46A-450D-A39D-5FAFF3F54991-45114-00001D06260FB642742f87b25004f657.jpg",
+          "type": "Outstanding Evaluation",
+          "activity": "2018-2019 'May 4th' Evaluation in Morality, Wisdom, and Sports",
+          "award": "Outstanding League Member"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/880D0E87-D929-44AD-9336-FBCC492B4C8B-45114-00001D05E0F14BA0.jpg",
+          "src": "https://img.picgo.net/2025/04/02/880D0E87-D929-44AD-9336-FBCC492B4C8B-45114-00001D05E0F14BA0c3dc1bbd23034d1c.jpg",
           "type": "Scholarship",
           "activity": "Southwest University of Science and Technology 2018-2019 Scholarship",
-          "award": "Art Specialty Award"
+          "award": "Artistic Talent Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/977D096F-FBFB-4C25-A711-35E23E82D4BF-45114-00001D0722FCF496.jpg",
-          "type": "Knowledge",
-          "activity": "The 2nd National University Students' AIDS Prevention Knowledge Competition",
+          "src": "https://img.picgo.net/2025/04/02/977D096F-FBFB-4C25-A711-35E23E82D4BF-45114-00001D0722FCF496bfb5984c0b11aa42.jpg",
+          "type": "Knowledge Awards",
+          "activity": "2nd National College Students AIDS Prevention Knowledge Competition",
           "award": "Excellence Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/9642B465-4F83-4262-9BB5-688849F3B22C-45114-00001D067473899F.jpg",
-          "type": "Technology",
-          "activity": "The 11th Comprehensive Chemistry Design Competition",
+          "src": "https://img.picgo.net/2025/04/02/9642B465-4F83-4262-9BB5-688849F3B22C-45114-00001D067473899Fb4677ff0c3e236c5.jpg",
+          "type": "Technology Competition",
+          "activity": "11th Chemical Comprehensive Competition",
           "award": "First Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/35768A3B-D574-481B-889E-C206E50EF4B5-45114-00001D06847F4823.jpg",
-          "type": "Knowledge",
-          "activity": "The 6th Home Professor Lecture Competition",
+          "src": "https://img.picgo.net/2025/04/02/35768A3B-D574-481B-889E-C206E50EF4B5-45114-00001D06847F48238fe781fdb102d4cd.jpg",
+          "type": "Knowledge Awards",
+          "activity": "6th 'Home Professor' Competition",
           "award": "First Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/63153EB6-F91B-4E8A-9A12-8CA143C04B66-45114-00001D06F3FE4DAB.jpg",
-          "type": "Honor",
-          "activity": "The 17th Cadre Training",
+          "src": "https://img.picgo.net/2025/04/02/63153EB6-F91B-4E8A-9A12-8CA143C04B66-45114-00001D06F3FE4DABc936423fbefdf2f6.jpg",
+          "type": "Student Leadership",
+          "activity": "17th Leadership Training",
           "award": "Certificate of Completion"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/581135B0-BD2E-4017-947D-61F8766711DA-45114-00001D067C795B4E.jpg",
-          "type": "Art",
+          "src": "https://img.picgo.net/2025/04/02/581135B0-BD2E-4017-947D-61F8766711DA-45114-00001D067C795B4Ecc71bd05601608c3.jpg",
+          "type": "Art and Design",
           "activity": "Image Wall Design Competition",
           "award": "Second Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/4300261E-9EB4-4ED0-8528-909AED6A3069-45114-00001D069065EC56.jpg",
+          "src": "https://img.picgo.net/2025/04/02/4300261E-9EB4-4ED0-8528-909AED6A3069-45114-00001D069065EC56490a0d8b1501e3d1.jpg",
           "type": "Scholarship",
           "activity": "Southwest University of Science and Technology 2020 Scholarship",
-          "award": "Advanced Individual"
+          "award": "Advanced Individual in Science, Technology, and Cultural Sports"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/4721622D-2855-42E4-95C0-720DEC9DDB19-45114-00001D06C5F62431.jpg",
-          "type": "Entrepreneurship",
+          "src": "https://img.picgo.net/2025/04/02/4721622D-2855-42E4-95C0-720DEC9DDB19-45114-00001D06C5F62431b9aea3b3fb684d2d.jpg",
+          "type": "Innovation and Entrepreneurship",
           "activity": "L'Oréal Paris 2019 Brainstorming Business Competition",
-          "award": "Certificate of Completion"
+          "award": "Certificate of Participation"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/BF66EB74-B02D-420C-B25F-F09BAD48DF03-45114-00001D064F9C18F4.jpg",
-          "type": "Honor",
-          "activity": "2019-2020 'May Fourth' Evaluation",
-          "award": "Outstanding Student Cadre"
+          "src": "https://img.picgo.net/2025/04/02/BF66EB74-B02D-420C-B25F-F09BAD48DF03-45114-00001D064F9C18F4c5083f4d386469a6.jpg",
+          "type": "Outstanding Evaluation",
+          "activity": "2019-2020 'May 4th' Outstanding Evaluation",
+          "award": "Outstanding Student Leader"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/BF68AE98-2B4F-4CAE-A624-FFEC07958E95-45114-00001D06D3590E22.jpg",
-          "type": "Art",
-          "activity": "The 9th National University Student E-commerce 'Innovation, Creativity, and Entrepreneurship' Competition",
+          "src": "https://img.picgo.net/2025/04/02/BF68AE98-2B4F-4CAE-A624-FFEC07958E95-45114-00001D06D3590E226defedd4d1b61c2f.jpg",
+          "type": "Art and Design",
+          "activity": "9th National College Students E-commerce 'Innovation, Creativity, and Entrepreneurship' Competition",
           "award": "First Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/CF6CDC2D-8151-4A4D-841A-8DA12621D949-45114-00001D06E916B7EC.jpg",
-          "type": "Technology",
-          "activity": "The 4th Safety Science and Engineering Professional Practice and Innovation Work Competition",
+          "src": "https://img.picgo.net/2025/04/02/CF6CDC2D-8151-4A4D-841A-8DA12621D949-45114-00001D06E916B7EC4753d03f3f59913b.jpg",
+          "type": "Technology Competition",
+          "activity": "4th Safety Science and Engineering Professional Practice and Innovation Competition",
           "award": "Second Place"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/E1B6297D-A9D5-4DF1-8C09-B8B4E694FBFF-45114-00001D05CCA417D1.jpg",
-          "type": "Public Welfare",
+          "src": "https://img.picgo.net/2025/04/02/E1B6297D-A9D5-4DF1-8C09-B8B4E694FBFF-45114-00001D05CCA417D16d26bcaf0b753e95.jpg",
+          "type": "Public Welfare Activities",
           "activity": "LGBT Care Volunteer Activity",
           "award": "Outstanding Volunteer"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/E32396B4-89BC-4744-A9D2-1CFF07E2A359-45114-00001D070EB105E5.jpg",
-          "type": "Technology",
-          "activity": "The 9th Concrete Design Competition",
+          "src": "https://img.picgo.net/2025/04/02/E32396B4-89BC-4744-A9D2-1CFF07E2A359-45114-00001D070EB105E588a963e5fed1bb2a.jpg",
+          "type": "Technology Competition",
+          "activity": "9th Concrete Design Competition",
           "award": "Third Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/EAFE88F5-E5DD-4FC6-BD8C-98AA6D9F80C4-45114-00001D069D3ABD72.jpg",
-          "type": "Honor",
-          "activity": "2018-2019 Class Construction Management",
+          "src": "https://img.picgo.net/2025/04/03/EAFE88F5-E5DD-4FC6-BD8C-98AA6D9F80C4-45114-00001D069D3ABD72a62fcc27d7f0dd11.jpg",
+          "type": "Outstanding Evaluation",
+          "activity": "2018-2019 Construction Management",
           "award": "Outstanding Class Leader"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/EE7B77BA-9FA2-4BFD-AC73-EBF1CED192CF-45114-00001D07048DBDB3.jpg",
-          "type": "Technology",
-          "activity": "The 1st 'Golden Energy Cup' Photovoltaic Product Design Competition 2018",
+          "src": "https://img.picgo.net/2025/04/02/2EAE6603-858F-44B5-B196-E866F74842E0-45114-00001D0663AA379F4821e64d80ee7368.jpg",
+          "type": "Technology Competition",
+          "activity": "1st 'Golden Energy Cup' Photovoltaic Product Design Competition",
           "award": "Second Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/EF1B4F2F-45BC-4722-B2F3-B9381001BF05-45114-00001D06E0A46BBE.jpg",
-          "type": "Entrepreneurship",
-          "activity": "The 4th 'China Wings' Entrepreneurship and Innovation Competition",
+          "src": "https://img.picgo.net/2025/04/03/EF1B4F2F-45BC-4722-B2F3-B9381001BF05-45114-00001D06E0A46BBEa81a5e46d124dd52.jpg",
+          "type": "Innovation and Entrepreneurship",
+          "activity": "4th 'China Chuangyi' Entrepreneurship and Innovation Competition",
           "award": "Excellence Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/2DB618D3-DE8D-4CB7-8010-6DC84C38F44D-45114-00001D05D53BA170.png",
-          "type": "Honor",
-          "activity": "Member of the Student Union Study Department",
-          "award": "Position Certificate"
+          "src": "https://img.picgo.net/2025/04/02/2DB618D3-DE8D-4CB7-8010-6DC84C38F44D-45114-00001D05D53BA170e693489b93348480.jpg",
+          "type": "Student Leadership",
+          "activity": "Member of the School Student Union Learning Department",
+          "award": "Certificate of Appointment"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/7B41B493-2C7F-4A91-91DD-2E41CB01144E-45114-00001D0694AB4A53.png",
-          "type": "Honor",
-          "activity": "2017 New and Old Students Exchange Meeting",
+          "src": "https://img.picgo.net/2025/04/02/7B41B493-2C7F-4A91-91DD-2E41CB01144E-45114-00001D0694AB4A5365c18532bb6b6193.jpg",
+          "type": "Outstanding Evaluation",
+          "activity": "2017 New and Returning Students Exchange Meeting",
           "award": "Outstanding Individual Title"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/7B93C3D8-4194-4D3E-BAF6-F643B53B5C93-45114-00001D0688447623.png",
-          "type": "Honor",
-          "activity": "The 16th Student Cadre Training",
+          "src": "https://img.picgo.net/2025/04/02/7B93C3D8-4194-4D3E-BAF6-F643B53B5C93-45114-00001D0688447623ea4016b652f77e04.jpg",
+          "type": "Student Leadership",
+          "activity": "16th Student Leadership Training",
           "award": "Certificate of Completion"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/9A7C5A7C-7AAC-4E50-A3CB-1D23EC264182-45114-00001D06542385A0.png",
-          "type": "Honor",
-          "activity": "2018-2019 'Role Model Power' Selection",
+          "src": "https://img.picgo.net/2025/04/02/9A7C5A7C-7AAC-4E50-A3CB-1D23EC264182-45114-00001D06542385A059a45a9f1de369cb.jpg",
+          "type": "Outstanding Evaluation",
+          "activity": "2018-2019 'Role Model Power' Evaluation",
           "award": "Outstanding Class Leader"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/11A64271-B780-4679-849E-5E552DB05F6D-45114-00001D0698D217E8.png",
-          "type": "Entrepreneurship",
-          "activity": "University Students Innovation and Entrepreneurship Club",
+          "src": "https://img.picgo.net/2025/04/02/11A64271-B780-4679-849E-5E552DB05F6D-45114-00001D0698D217E8018d7a653e5d9f75.jpg",
+          "type": "Innovation and Entrepreneurship",
+          "activity": "College Students Innovation and Entrepreneurship Club",
           "award": "Best Organization Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/31BFA708-E0D2-4A45-B576-DBA6DB0C5CA3-45114-00001D072733BE02.png",
-          "type": "Knowledge",
-          "activity": "The 3rd National University Students' AIDS Prevention Knowledge Competition",
+          "src": "https://img.picgo.net/2025/04/02/31BFA708-E0D2-4A45-B576-DBA6DB0C5CA3-45114-00001D072733BE023ea72cdc3d1e71ed.jpg",
+          "type": "Knowledge Awards",
+          "activity": "3rd National College Students AIDS Prevention Knowledge Competition",
           "award": "Excellence Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/47D78420-6151-4730-98BB-11AB1D8DCE43-45114-00001D066C580F56.png",
-          "type": "Honor",
-          "activity": "Science and Technology Entrepreneurship Guidance Station 2017-2018",
-          "award": "Star Officer Award"
+          "src": "https://img.picgo.net/2025/04/02/47D78420-6151-4730-98BB-11AB1D8DCE43-45114-00001D066C580F5697d9359d81cece1f.jpg",
+          "type": "Outstanding Evaluation",
+          "activity": "2017-2018 Technology and Entrepreneurship Guidance Station",
+          "award": "Star Staff Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/99B7D052-D658-4B68-95A7-71BC3EFC7344-45114-00001D062052A691.png",
-          "type": "Honor",
-          "activity": "2017-2018 'May Fourth' Evaluation",
-          "award": "Outstanding Youth League Member"
+          "src": "https://img.picgo.net/2025/04/02/99B7D052-D658-4B68-95A7-71BC3EFC7344-45114-00001D062052A6913d2d9949d9408b01.jpg",
+          "type": "Outstanding Evaluation",
+          "activity": "2017-2018 'May 4th' Outstanding Evaluation",
+          "award": "Outstanding League Member"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/5867CC60-9359-4FD9-AA66-A43FB4DB45CE-45114-00001D063B8DE659.png",
-          "type": "Compulsory",
-          "activity": "'Material Cup' Freshman Debate Competition",
+          "src": "https://img.picgo.net/2025/04/02/5867CC60-9359-4FD9-AA66-A43FB4DB45CE-45114-00001D063B8DE659a5f127f943688bda.jpg",
+          "type": "Knowledge Awards",
+          "activity": "'Cai Zi Cup' Freshman Debate Competition",
           "award": "Best Debater"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/7245C317-B439-40F4-B630-D9A971B9245F-45114-00001D0670712E97.png",
-          "type": "Compulsory",
-          "activity": "2017-2018 University Students' Innovation and Entrepreneurship Practice Training Class",
+          "src": "https://img.picgo.net/2025/04/02/7245C317-B439-40F4-B630-D9A971B9245F-45114-00001D0670712E97ad2c36b32d3b9cf3.jpg",
+          "type": "Outstanding Evaluation",
+          "activity": "2017-2018 College Students Innovation and Entrepreneurship Practice Training Course",
           "award": "Outstanding Member Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/8158C929-45E2-41FC-B1DA-2E999384CD12-45114-00001D06CF024FB5.png",
-          "type": "Compulsory",
-          "activity": "The 2nd National University Students' Environmental Knowledge Competition",
+          "src": "https://img.picgo.net/2025/04/02/8158C929-45E2-41FC-B1DA-2E999384CD12-45114-00001D06CF024FB534bfc1f12e206da4.jpg",
+          "type": "Knowledge Awards",
+          "activity": "2nd National College Students Environmental Protection Knowledge Competition",
           "award": "Excellence Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/93977CA8-0E2A-43E4-89D7-78D125DBF2EA-45114-00001D06DC75F4DB.png",
-          "type": "Compulsory",
-          "activity": "The 15th Structural Design Competition",
+          "src": "https://img.picgo.net/2025/04/02/93977CA8-0E2A-43E4-89D7-78D125DBF2EA-45114-00001D06DC75F4DB9cba7689a73b5fdd.jpg",
+          "type": "Technology Competition",
+          "activity": "15th Structural Design Competition",
           "award": "Third Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/4673492C-C8BE-48EA-B655-78E01C6A7251-45114-00001D062EA478A2.png",
-          "type": "Compulsory",
-          "activity": "The 14th iCAN International Innovation and Entrepreneurship Competition",
+          "src": "https://img.picgo.net/2025/04/02/4673492C-C8BE-48EA-B655-78E01C6A7251-45114-00001D062EA478A24a309af97f3fd363.jpg",
+          "type": "Innovation and Entrepreneurship",
+          "activity": "14th iCAN International Innovation and Entrepreneurship Competition",
           "award": "Second Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/17219480-B6C1-4313-8956-E38FA755708A-45114-00001D05D11ACF60.png",
-          "type": "Compulsory",
-          "activity": "Member of University Students' Science and Technology Entrepreneurship Guidance Station",
-          "award": "Position Certificate"
+          "src": "https://img.picgo.net/2025/04/02/17219480-B6C1-4313-8956-E38FA755708A-45114-00001D05D11ACF60604d7e32fb024db7.jpg",
+          "type": "Student Leadership",
+          "activity": "Member of College Students Technology and Entrepreneurship Guidance Station",
+          "award": "Certificate of Appointment"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/D8CC147E-2022-4DB0-A755-542F058BF9B3-45114-00001D0658BC820F.png",
-          "type": "Compulsory",
-          "activity": "2018 'Outstanding Class Notes Selection Activity'",
+          "src": "https://img.picgo.net/2025/04/02/D8CC147E-2022-4DB0-A755-542F058BF9B3-45114-00001D0658BC820Fa826b1976b30ff8f.jpg",
+          "type": "Knowledge Awards",
+          "activity": "2018 'Outstanding Classroom Notes Evaluation' Activity",
           "award": "Outstanding Individual Title"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/D29DF7E7-9314-4E87-B128-274770D7CBF5-45114-00001D06807F831E.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/D29DF7E7-9314-4E87-B128-274770D7CBF5-45114-00001D06807F831E446388644aa55027.jpg",
+          "type": "Knowledge Awards",
           "activity": "Southwest University of Science and Technology Laboratory Safety Knowledge Assessment",
-          "award": "Certificate of Completion"
+          "award": "Certificate of Qualification"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/D38B3678-9676-4C6D-9673-CDD0A0D0DC37-45114-00001D0640A4D08C.png",
-          "type": "Compulsory",
-          "activity": "The 9th 'Third Eye' Photography Competition Camera Group",
+          "src": "https://img.picgo.net/2025/04/02/D38B3678-9676-4C6D-9673-CDD0A0D0DC37-45114-00001D0640A4D08C9c0503a9e4ac2f4b.jpg",
+          "type": "Art and Design",
+          "activity": "9th Third Eye Photography Competition - Camera Group",
           "award": "Excellence Award"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/DA813F49-B59A-4EC6-97D4-73169EDBB2AA-45114-00001D063729EFB9.png",
-          "type": "Compulsory",
-          "activity": "'Material Cup' Freshman Debate Competition Activity",
+          "src": "https://img.picgo.net/2025/04/02/DA813F49-B59A-4EC6-97D4-73169EDBB2AA-45114-00001D063729EFB9a87dcf8d2fde0dc8.jpg",
+          "type": "Knowledge Awards",
+          "activity": "'Cai Zi Cup' Freshman Debate Competition",
           "award": "Champion"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/317FCB5E-8252-4628-A671-89DEE0611691-45114-00001D067878950F.jpg",
-          "type": "Compulsory",
-          "activity": "2019 Sichuan Province University Students Environmental Science Popularization and Creativity Competition",
+          "src": "https://img.picgo.net/2025/04/02/317FCB5E-8252-4628-A671-89DEE0611691-45114-00001D067878950F71d26d7928b572a7.jpg",
+          "type": "Art and Design",
+          "activity": "2019 Sichuan Province College Students Environmental Protection Science Popularization and Creativity Competition",
           "award": "First Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/1C6B1B18-A81F-4E54-9A0F-7EF8BB574659-45114-00001D065CF5ED3D.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/4FE03F2D-3715-4ADA-BB47-D8181B73B014-45114-00001D06676C285E381670f70ebcf949.jpg",
+          "type": "Outstanding Evaluation",
           "activity": "Zhaoshi Education Enterprise Evaluation",
           "award": "Outstanding Employee"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/93031B6B-CC7A-4D9B-AA09-4C8973B5AABF-45114-00001D0714D32558.jpg",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/93031B6B-CC7A-4D9B-AA09-4C8973B5AABF-45114-00001D0714D32558d9257f9c93df5580.jpg",
+          "type": "Sports Competition",
           "activity": "China Taekwondo Association Rank Certificate",
-          "award": "Eighth Rank"
+          "award": "Taekwondo 8th Dan"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/274DA9EE-0C5F-496A-AF90-737CE53FBA85-45114-00001D06F83794C2.png",
-          "type": "Compulsory",
-          "activity": "'Yucai Cup' Teacher Lecture Competition",
+          "src": "https://img.picgo.net/2025/04/02/274DA9EE-0C5F-496A-AF90-737CE53FBA85-45114-00001D06F83794C2b28fe4a991294ccc.jpg",
+          "type": "Knowledge Awards",
+          "activity": "Yucai Cup Teacher Lecture Competition",
           "award": "First Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/AAF71A73-4186-476B-968C-A2754CED26B4-45114-00001D06036AD13F.jpg",
-          "type": "Compulsory",
-          "activity": "2018-2019 May Fourth Evaluation Nomination",
+          "src": "https://img.picgo.net/2025/04/02/AAF71A73-4186-476B-968C-A2754CED26B4-45114-00001D06036AD13F43046a648779df13.jpg",
+          "type": "Outstanding Evaluation",
+          "activity": "2018-2019 'May 4th' Outstanding Evaluation Nomination",
           "award": "Top Ten Class Leaders"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/C1D3054A-0AE2-48F8-8C20-67316F3B28D3-45114-00001D05F07E5120.jpg",
-          "type": "Compulsory",
-          "activity": "The 4th University Student Entrepreneurship Competition",
+          "src": "https://img.picgo.net/2025/04/02/C1D3054A-0AE2-48F8-8C20-67316F3B28D3-45114-00001D05F07E5120417f64c4226f7ffd.jpg",
+          "type": "Innovation and Entrepreneurship",
+          "activity": "4th College Student Entrepreneurship Competition",
           "award": "First Prize"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/E60BE89D-B482-482F-8E52-24296D35E58D-45114-00001D05ECA25FEE.jpg",
-          "type": "Compulsory",
-          "activity": "One Foundation Warm Pack Project",
+          "src": "https://img.picgo.net/2025/04/02/E60BE89D-B482-482F-8E52-24296D35E58D-45114-00001D05ECA25FEE128db8365d76dd77.jpg",
+          "type": "Public Welfare Activities",
+          "activity": "One Foundation Warm Package Project",
           "award": "Volunteer Certificate"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/EB3D48DA-847E-442B-B63F-7ADEEB3C5842-45114-00001D061BCECD33.jpg",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/03/EB3D48DA-847E-442B-B63F-7ADEEB3C5842-45114-00001D061BCECD337d020bebc13c0b27.jpg",
+          "type": "Knowledge Awards",
           "activity": "Project Certification",
           "award": "Project Certification"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/53241757-26D6-42AB-8CDF-ED5F1F85291A-45114-00001D06CA52034C.png",
-          "type": "Compulsory",
-          "activity": "10th Anniversary Memorial of Wenchuan Earthquake Relief",
+          "src": "https://img.picgo.net/2025/04/02/53241757-26D6-42AB-8CDF-ED5F1F85291A-45114-00001D06CA52034Cc6e903404d752566.jpg",
+          "type": "Public Welfare Activities",
+          "activity": "Wenchuan Earthquake Relief 10th Anniversary Commemoration",
           "award": "Volunteer Certificate"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/A7FBAD97-1B4F-4D91-A93D-64BB7C8A49B5-45114-00001D05E842F244.png",
-          "type": "Compulsory",
-          "activity": "Image Wall Design Recognition (won 2 second prizes, 2 third prizes)",
-          "award": "Recognition Document"
+          "src": "https://img.picgo.net/2025/04/02/A7FBAD97-1B4F-4D91-A93D-64BB7C8A49B5-45114-00001D05E842F244390a2af53a9e7ce1.jpg",
+          "type": "Art and Design",
+          "activity": "Image Wall Mural Design Award (Received 2 Second Prizes and 2 Third Prizes)",
+          "award": "Award Certificate"
         }
       ],
       [
         {
-          "src": "https://3o.hk/images/2024/04/29/0DDCECF1-5FFB-467E-BCDE-1DC7C7FA1242-45114-00001D06D7EA5874.jpg",
-          "type": "创业",
+          "src": "https://img.picgo.net/2025/04/02/0DDCECF1-5FFB-467E-BCDE-1DC7C7FA1242-45114-00001D06D7EA587447ea982a525c5653.jpg",
+          "type": "创新创业",
           "activity": "第五届“互联网＋”大学生创新创业大赛",
           "award": "三等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/0E4B8618-A778-4A0B-BC21-6F6DDDFF58F7-45114-00001D072CEB0D9C.jpg",
-          "type": "知识",
+          "src": "https://img.picgo.net/2025/04/02/0E4B8618-A778-4A0B-BC21-6F6DDDFF58F7-45114-00001D072CEB0D9Cba2df1b37fd1f93e.jpg",
+          "type": "知识类奖项",
           "activity": "第三届全国大学生环保知识竞赛",
           "award": "优秀奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/2DECE824-29D0-43FD-A341-AF99D2C97CE0-45114-00001D06A33838C7.jpg",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/2DECE824-29D0-43FD-A341-AF99D2C97CE0-45114-00001D06A33838C74fd8808630a71ed0.jpg",
+          "type": "优秀评定",
           "activity": "2018-2019年度“榜样力量”",
           "award": "优秀班长"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/2E3F1DF6-ACE1-419A-B2DD-58FDC43D9191-45114-00001D05E493426E.jpg",
+          "src": "https://img.picgo.net/2025/04/02/2E3F1DF6-ACE1-419A-B2DD-58FDC43D9191-45114-00001D05E493426Eabecf4ea0f0c66b1.jpg",
           "type": "奖学金",
           "activity": "西南科技大学2019-2020奖学金",
           "award": "艺术特长奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/2EAE6603-858F-44B5-B196-E866F74842E0-45114-00001D0663AA379F.jpg",
-          "type": "科技",
+          "src": "https://img.picgo.net/2025/04/02/2EAE6603-858F-44B5-B196-E866F74842E0-45114-00001D0663AA379F4821e64d80ee7368.jpg",
+          "type": "科技竞赛",
           "activity": "“金能杯”光伏产品设计大赛决赛",
           "award": "二等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/03AAA681-6765-41AA-8020-A42DC71162A7-45114-00001D06E508A18F.jpg",
-          "type": "科技",
+          "src": "https://img.picgo.net/2025/04/02/03AAA681-6765-41AA-8020-A42DC71162A7-45114-00001D06E508A18F3ce78dc08bbe2823.jpg",
+          "type": "科技竞赛",
           "activity": "西南科技大学第四届大学生创业大赛",
           "award": "铜奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/5BEF2DF4-09AD-4BEF-ABA8-357E4C3B252A-45114-00001D068BD72133.jpg",
-          "type": "艺术",
-          "activity": "2019 年新生录取通知书设计大赛",
+          "src": "https://img.picgo.net/2025/04/02/5BEF2DF4-09AD-4BEF-ABA8-357E4C3B252A-45114-00001D068BD72133a0836c52e9d3fcd9.jpg",
+          "type": "艺术设计",
+          "activity": "2019年新生录取通知书设计大赛",
           "award": "一等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/5FF0E884-7D14-4A5E-A579-826930F18C7C-45114-00001D071C6E8A0D.jpg",
-          "type": "体育",
+          "src": "https://img.picgo.net/2025/04/02/5FF0E884-7D14-4A5E-A579-826930F18C7C-45114-00001D071C6E8A0Dfc1d202ba527dc87.jpg",
+          "type": "体育竞技",
           "activity": "2019学院运动会围棋项目",
           "award": "第二名"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/51F92EA6-4FA9-4E3E-9EB4-38B15AE06F2D-45114-00001D05DCDFC7C5.jpg",
+          "src": "https://img.picgo.net/2025/04/02/51F92EA6-4FA9-4E3E-9EB4-38B15AE06F2D-45114-00001D05DCDFC7C535b2aaebdf0ae97f.jpg",
           "type": "奖学金",
           "activity": "西南科技大学2018-2019奖学金",
           "award": "创业实践奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/59C72B82-C522-4E6B-AEF3-7D549787675E-45114-00001D062A66B3B5.jpg",
-          "type": "创业",
+          "src": "https://img.picgo.net/2025/04/02/59C72B82-C522-4E6B-AEF3-7D549787675E-45114-00001D062A66B3B5eb5597b25b1ff686.jpg",
+          "type": "创新创业",
           "activity": "第十四届iCAN国际创新创业大赛中国总决赛",
           "award": "三等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/69DA8251-003D-4587-B73E-8CDA71972A6B-45114-00001D05D900AA8E.jpg",
+          "src": "https://img.picgo.net/2025/04/02/69DA8251-003D-4587-B73E-8CDA71972A6B-45114-00001D05D900AA8E6fa959e2a6d6c5b2.jpg",
           "type": "奖学金",
           "activity": "西南科技大学2019-2020奖学金",
-          "award": "创业实践奖"
+          "award": "创业实残奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/86F95023-670D-4D49-A501-24ABC48F9D4C-45114-00001D0632E1AA4E.jpg",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/86F95023-670D-4D49-A501-24ABC48F9D4C-45114-00001D0632E1AA4Eefc116f2614ed9fa.jpg",
+          "type": "学生干部",
           "activity": "创业培训学员合格证书",
           "award": "合格证书"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/95A0A467-F6A4-48A4-A0D3-A562CD1DCBB0-45114-00001D064AFEAA6E.jpg",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/95A0A467-F6A4-48A4-A0D3-A562CD1DCBB0-45114-00001D064AFEAA6E2837d46527ab3037.jpg",
+          "type": "优秀评定",
           "activity": "学院2019-2020年度“五•四”评优",
           "award": "优秀团员"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/587C6C4F-B46A-450D-A39D-5FAFF3F54991-45114-00001D06260FB642.jpg",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/587C6C4F-B46A-450D-A39D-5FAFF3F54991-45114-00001D06260FB642742f87b25004f657.jpg",
+          "type": "优秀评定",
           "activity": "2018-2019年度中，德行、智慧、体育五四评优",
           "award": "优秀团员"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/880D0E87-D929-44AD-9336-FBCC492B4C8B-45114-00001D05E0F14BA0.jpg",
+          "src": "https://img.picgo.net/2025/04/02/880D0E87-D929-44AD-9336-FBCC492B4C8B-45114-00001D05E0F14BA0c3dc1bbd23034d1c.jpg",
           "type": "奖学金",
           "activity": "西南科技大学2018-2019奖学金",
           "award": "艺术特长奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/977D096F-FBFB-4C25-A711-35E23E82D4BF-45114-00001D0722FCF496.jpg",
-          "type": "知识",
-          "activity": "第二届全国大学生预防艾滋病知识竞赛",
+          "src": "https://img.picgo.net/2025/04/02/977D096F-FBFB-4C25-A711-35E23E82D4BF-45114-00001D0722FCF496bfb5984c0b11aa42.jpg",
+          "type": "知识类奖项",
+          "activity": "第二届全国大学生预防艾激病知识竞赛",
           "award": "优秀奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/9642B465-4F83-4262-9BB5-688849F3B22C-45114-00001D067473899F.jpg",
-          "type": "科技",
-          "activity": "第十一届化学综合设计大赛",
+          "src": "https://img.picgo.net/2025/04/02/9642B465-4F83-4262-9BB5-688849F3B22C-45114-00001D067473899Fb4677ff0c3e236c5.jpg",
+          "type": "科技竞赛",
+          "activity": "第十一届化学综合涉及大赛",
           "award": "一等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/35768A3B-D574-481B-889E-C206E50EF4B5-45114-00001D06847F4823.jpg",
-          "type": "知识",
+          "src": "https://img.picgo.net/2025/04/02/35768A3B-D574-481B-889E-C206E50EF4B5-45114-00001D06847F48238fe781fdb102d4cd.jpg",
+          "type": "知识类奖项",
           "activity": "第六届家教授课大赛",
           "award": "一等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/63153EB6-F91B-4E8A-9A12-8CA143C04B66-45114-00001D06F3FE4DAB.jpg",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/63153EB6-F91B-4E8A-9A12-8CA143C04B66-45114-00001D06F3FE4DABc936423fbefdf2f6.jpg",
+          "type": "学生干部",
           "activity": "第17届干部培训",
           "award": "结业证"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/581135B0-BD2E-4017-947D-61F8766711DA-45114-00001D067C795B4E.jpg",
-          "type": "艺术",
+          "src": "https://img.picgo.net/2025/04/02/581135B0-BD2E-4017-947D-61F8766711DA-45114-00001D067C795B4Ecc71bd05601608c3.jpg",
+          "type": "艺术设计",
           "activity": "形象墙设计大赛",
           "award": "二等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/4300261E-9EB4-4ED0-8528-909AED6A3069-45114-00001D069065EC56.jpg",
+          "src": "https://img.picgo.net/2025/04/02/4300261E-9EB4-4ED0-8528-909AED6A3069-45114-00001D069065EC56490a0d8b1501e3d1.jpg",
           "type": "奖学金",
           "activity": "西南科技大学2020奖学金",
           "award": "科技文体先进个人"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/4721622D-2855-42E4-95C0-720DEC9DDB19-45114-00001D06C5F62431.jpg",
-          "type": "创业",
+          "src": "https://img.picgo.net/2025/04/02/4721622D-2855-42E4-95C0-720DEC9DDB19-45114-00001D06C5F62431b9aea3b3fb684d2d.jpg",
+          "type": "创新创业",
           "activity": "巴黎欧莱雅2019头脑风暴商业赛",
           "award": "结赛证"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/BF66EB74-B02D-420C-B25F-F09BAD48DF03-45114-00001D064F9C18F4.jpg",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/BF66EB74-B02D-420C-B25F-F09BAD48DF03-45114-00001D064F9C18F4c5083f4d386469a6.jpg",
+          "type": "优秀评定",
           "activity": "2019-2020年度“五•四”评优",
           "award": "优秀学生干部"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/BF68AE98-2B4F-4CAE-A624-FFEC07958E95-45114-00001D06D3590E22.jpg",
-          "type": "艺术",
+          "src": "https://img.picgo.net/2025/04/02/BF68AE98-2B4F-4CAE-A624-FFEC07958E95-45114-00001D06D3590E226defedd4d1b61c2f.jpg",
+          "type": "艺术设计",
           "activity": "第九届全国大学生电子商务“创新、创意及创业赛",
           "award": "一等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/CF6CDC2D-8151-4A4D-841A-8DA12621D949-45114-00001D06E916B7EC.jpg",
-          "type": "科技",
+          "src": "https://img.picgo.net/2025/04/02/CF6CDC2D-8151-4A4D-841A-8DA12621D949-45114-00001D06E916B7EC4753d03f3f59913b.jpg",
+          "type": "科技竞赛",
           "activity": "第四届安全科学与工程类专业实践与创新作品大赛",
           "award": "第二名"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/E1B6297D-A9D5-4DF1-8C09-B8B4E694FBFF-45114-00001D05CCA417D1.jpg",
-          "type": "公益",
+          "src": "https://img.picgo.net/2025/04/02/E1B6297D-A9D5-4DF1-8C09-B8B4E694FBFF-45114-00001D05CCA417D16d26bcaf0b753e95.jpg",
+          "type": "公益活动",
           "activity": "LGBT关爱志愿活动",
           "award": "优秀志愿者"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/E32396B4-89BC-4744-A9D2-1CFF07E2A359-45114-00001D070EB105E5.jpg",
-          "type": "科技",
+          "src": "https://img.picgo.net/2025/04/02/E32396B4-89BC-4744-A9D2-1CFF07E2A359-45114-00001D070EB105E588a963e5fed1bb2a.jpg",
+          "type": "科技竞赛",
           "activity": "第九届混凝土设计大赛",
           "award": "三等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/EAFE88F5-E5DD-4FC6-BD8C-98AA6D9F80C4-45114-00001D069D3ABD72.jpg",
-          "type": "荣誉",
-          "activity": "2018-2019年度班级建设管理",
+          "src": "https://img.picgo.net/2025/04/03/EAFE88F5-E5DD-4FC6-BD8C-98AA6D9F80C4-45114-00001D069D3ABD72a62fcc27d7f0dd11.jpg",
+          "type": "优秀评定",
+          "activity": "2018-2019 年度建设管理",
           "award": "优秀班长"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/EE7B77BA-9FA2-4BFD-AC73-EBF1CED192CF-45114-00001D07048DBDB3.jpg",
-          "type": "科技",
+          "src": "https://img.picgo.net/2025/04/02/2EAE6603-858F-44B5-B196-E866F74842E0-45114-00001D0663AA379F4821e64d80ee7368.jpg",
+          "type": "科技竞赛",
           "activity": "2018年首届“金能杯”光伏产品设计大赛",
           "award": "二等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/EF1B4F2F-45BC-4722-B2F3-B9381001BF05-45114-00001D06E0A46BBE.jpg",
-          "type": "创业",
+          "src": "https://img.picgo.net/2025/04/03/EF1B4F2F-45BC-4722-B2F3-B9381001BF05-45114-00001D06E0A46BBEa81a5e46d124dd52.jpg",
+          "type": "创新创业",
           "activity": "第四届“中国创翼” 创业创新大寨",
           "award": "优秀奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/2DB618D3-DE8D-4CB7-8010-6DC84C38F44D-45114-00001D05D53BA170.png",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/2DB618D3-DE8D-4CB7-8010-6DC84C38F44D-45114-00001D05D53BA170e693489b93348480.jpg",
+          "type": "学生干部",
           "activity": "校学生会学习部成员",
           "award": "任职证明"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/7B41B493-2C7F-4A91-91DD-2E41CB01144E-45114-00001D0694AB4A53.png",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/7B41B493-2C7F-4A91-91DD-2E41CB01144E-45114-00001D0694AB4A5365c18532bb6b6193.jpg",
+          "type": "优秀评定",
           "activity": "2017级新老生交流会",
           "award": "优秀个人称号"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/7B93C3D8-4194-4D3E-BAF6-F643B53B5C93-45114-00001D0688447623.png",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/7B93C3D8-4194-4D3E-BAF6-F643B53B5C93-45114-00001D0688447623ea4016b652f77e04.jpg",
+          "type": "学生干部",
           "activity": "第十六届学生干部培训",
           "award": "结业证"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/9A7C5A7C-7AAC-4E50-A3CB-1D23EC264182-45114-00001D06542385A0.png",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/9A7C5A7C-7AAC-4E50-A3CB-1D23EC264182-45114-00001D06542385A059a45a9f1de369cb.jpg",
+          "type": "优秀评定",
           "activity": "2018-2019年度“榜样力量” 评选",
           "award": "优秀班长"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/11A64271-B780-4679-849E-5E552DB05F6D-45114-00001D0698D217E8.png",
-          "type": "创业",
+          "src": "https://img.picgo.net/2025/04/02/11A64271-B780-4679-849E-5E552DB05F6D-45114-00001D0698D217E8018d7a653e5d9f75.jpg",
+          "type": "创新创业",
           "activity": "大学生创新创业俱乐部",
           "award": "最佳组织奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/31BFA708-E0D2-4A45-B576-DBA6DB0C5CA3-45114-00001D072733BE02.png",
-          "type": "知识",
+          "src": "https://img.picgo.net/2025/04/02/31BFA708-E0D2-4A45-B576-DBA6DB0C5CA3-45114-00001D072733BE023ea72cdc3d1e71ed.jpg",
+          "type": "知识类奖项",
           "activity": "第三届全国大学生预防艾滋病知识竞赛",
           "award": "优秀奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/47D78420-6151-4730-98BB-11AB1D8DCE43-45114-00001D066C580F56.png",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/47D78420-6151-4730-98BB-11AB1D8DCE43-45114-00001D066C580F5697d9359d81cece1f.jpg",
+          "type": "优秀评定",
           "activity": "2017至2018年科技创业指导站",
           "award": "明星干事奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/99B7D052-D658-4B68-95A7-71BC3EFC7344-45114-00001D062052A691.png",
-          "type": "荣誉",
+          "src": "https://img.picgo.net/2025/04/02/99B7D052-D658-4B68-95A7-71BC3EFC7344-45114-00001D062052A6913d2d9949d9408b01.jpg",
+          "type": "优秀评定",
           "activity": "2017-2018年度五四评优",
           "award": "优秀团员"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/5867CC60-9359-4FD9-AA66-A43FB4DB45CE-45114-00001D063B8DE659.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/5867CC60-9359-4FD9-AA66-A43FB4DB45CE-45114-00001D063B8DE659a5f127f943688bda.jpg",
+          "type": "知识类奖项",
           "activity": "“材子杯”新生辩论赛",
           "award": "最佳辩手"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/7245C317-B439-40F4-B630-D9A971B9245F-45114-00001D0670712E97.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/7245C317-B439-40F4-B630-D9A971B9245F-45114-00001D0670712E97ad2c36b32d3b9cf3.jpg",
+          "type": "优秀评定",
           "activity": "2017-2018年大学生创新创业实践训练班",
           "award": "优秀会员奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/8158C929-45E2-41FC-B1DA-2E999384CD12-45114-00001D06CF024FB5.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/8158C929-45E2-41FC-B1DA-2E999384CD12-45114-00001D06CF024FB534bfc1f12e206da4.jpg",
+          "type": "知识类奖项",
           "activity": "第二届全国大学生环保知识竞赛",
           "award": "优秀奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/93977CA8-0E2A-43E4-89D7-78D125DBF2EA-45114-00001D06DC75F4DB.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/93977CA8-0E2A-43E4-89D7-78D125DBF2EA-45114-00001D06DC75F4DB9cba7689a73b5fdd.jpg",
+          "type": "科技竞赛",
           "activity": "第十五届结构设计竞赛",
           "award": "三等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/4673492C-C8BE-48EA-B655-78E01C6A7251-45114-00001D062EA478A2.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/4673492C-C8BE-48EA-B655-78E01C6A7251-45114-00001D062EA478A24a309af97f3fd363.jpg",
+          "type": "创新创业",
           "activity": "第十四届iCAN国际创新创业大赛",
           "award": "二等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/17219480-B6C1-4313-8956-E38FA755708A-45114-00001D05D11ACF60.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/17219480-B6C1-4313-8956-E38FA755708A-45114-00001D05D11ACF60604d7e32fb024db7.jpg",
+          "type": "学生干部",
           "activity": "大学生科技创业指导站成员",
           "award": "任职证明"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/D8CC147E-2022-4DB0-A755-542F058BF9B3-45114-00001D0658BC820F.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/D8CC147E-2022-4DB0-A755-542F058BF9B3-45114-00001D0658BC820Fa826b1976b30ff8f.jpg",
+          "type": "知识类奖项",
           "activity": "2018年度“优秀课堂笔记评选活动”",
           "award": "优秀个人称号"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/D29DF7E7-9314-4E87-B128-274770D7CBF5-45114-00001D06807F831E.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/D29DF7E7-9314-4E87-B128-274770D7CBF5-45114-00001D06807F831E446388644aa55027.jpg",
+          "type": "知识类奖项",
           "activity": "西南科技大学实验室安全知识考核",
           "award": "合格证书"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/D38B3678-9676-4C6D-9673-CDD0A0D0DC37-45114-00001D0640A4D08C.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/D38B3678-9676-4C6D-9673-CDD0A0D0DC37-45114-00001D0640A4D08C9c0503a9e4ac2f4b.jpg",
+          "type": "艺术设计",
           "activity": "第 9 届第三只眼摄影大赛相机组",
           "award": "优秀奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/DA813F49-B59A-4EC6-97D4-73169EDBB2AA-45114-00001D063729EFB9.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/DA813F49-B59A-4EC6-97D4-73169EDBB2AA-45114-00001D063729EFB9a87dcf8d2fde0dc8.jpg",
+          "type": "知识类奖项",
           "activity": "“材子杯”新生辩论赛活动",
           "award": "冠军"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/317FCB5E-8252-4628-A671-89DEE0611691-45114-00001D067878950F.jpg",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/317FCB5E-8252-4628-A671-89DEE0611691-45114-00001D067878950F71d26d7928b572a7.jpg",
+          "type": "艺术设计",
           "activity": "2019年四川省大学生环保科普创意大赛",
           "award": "一等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/1C6B1B18-A81F-4E54-9A0F-7EF8BB574659-45114-00001D065CF5ED3D.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/4FE03F2D-3715-4ADA-BB47-D8181B73B014-45114-00001D06676C285E381670f70ebcf949.jpg",
+          "type": "优秀评定",
           "activity": "兆式教育企业评优",
           "award": "优秀员工"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/93031B6B-CC7A-4D9B-AA09-4C8973B5AABF-45114-00001D0714D32558.jpg",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/93031B6B-CC7A-4D9B-AA09-4C8973B5AABF-45114-00001D0714D32558d9257f9c93df5580.jpg",
+          "type": "体育竞技",
           "activity": "中国跆拳道协会级位证书",
-          "award": "八级"
+          "award": "跆拳道八级"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/274DA9EE-0C5F-496A-AF90-737CE53FBA85-45114-00001D06F83794C2.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/274DA9EE-0C5F-496A-AF90-737CE53FBA85-45114-00001D06F83794C2b28fe4a991294ccc.jpg",
+          "type": "知识类奖项",
           "activity": "育才杯”教师授课比赛",
           "award": "一等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/AAF71A73-4186-476B-968C-A2754CED26B4-45114-00001D06036AD13F.jpg",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/AAF71A73-4186-476B-968C-A2754CED26B4-45114-00001D06036AD13F43046a648779df13.jpg",
+          "type": "优秀评定",
           "activity": "2018-2019 年度五 四评优提名",
           "award": "十佳班长"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/C1D3054A-0AE2-48F8-8C20-67316F3B28D3-45114-00001D05F07E5120.jpg",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/C1D3054A-0AE2-48F8-8C20-67316F3B28D3-45114-00001D05F07E5120417f64c4226f7ffd.jpg",
+          "type": "创新创业",
           "activity": "第四届大学生创业大赛",
           "award": "一等奖"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/E60BE89D-B482-482F-8E52-24296D35E58D-45114-00001D05ECA25FEE.jpg",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/E60BE89D-B482-482F-8E52-24296D35E58D-45114-00001D05ECA25FEE128db8365d76dd77.jpg",
+          "type": "公益活动",
           "activity": "壹基金温暖包项目",
           "award": "志愿者证明"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/EB3D48DA-847E-442B-B63F-7ADEEB3C5842-45114-00001D061BCECD33.jpg",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/03/EB3D48DA-847E-442B-B63F-7ADEEB3C5842-45114-00001D061BCECD337d020bebc13c0b27.jpg",
+          "type": "知识类奖项",
           "activity": "项目认证",
           "award": "项目认证"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/53241757-26D6-42AB-8CDF-ED5F1F85291A-45114-00001D06CA52034C.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/53241757-26D6-42AB-8CDF-ED5F1F85291A-45114-00001D06CA52034Cc6e903404d752566.jpg",
+          "type": "公益活动",
           "activity": "汶川抗震救灾十周年纪念活动",
           "award": "志愿者证明"
         },
         {
-          "src": "https://3o.hk/images/2024/04/29/A7FBAD97-1B4F-4D91-A93D-64BB7C8A49B5-45114-00001D05E842F244.png",
-          "type": "Compulsory",
+          "src": "https://img.picgo.net/2025/04/02/A7FBAD97-1B4F-4D91-A93D-64BB7C8A49B5-45114-00001D05E842F244390a2af53a9e7ce1.jpg",
+          "type": "艺术设计",
           "activity": "形象墻墻绘设计表彰（荣获2个二等奖，2个三等奖）",
           "award": "表彰文件"
         }
@@ -3482,7 +3486,366 @@
       ]
     ],
     "Picture": {
-      "AllPicture": ["https://img.picgo.net/2024/12/06/11b97c58ca5cbd822.jpg"],
+      "AllPicture": [
+        "https://img.picgo.net/2025/04/02/IMG_8990110cf1f4931bfe66.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8988e74da31479ae55d5.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8982b76578976ea62cdf.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8991f9a5736bfe87dcb1.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_898434392fcf5dce0605.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_898324676c1a5de17895.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8985a385673e99237bf6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_898620d5f8163f578592.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_90039f54bb63e0c2b455.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_9001e0cc3ab8da68aa0d.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_900263623d52208d1d3f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89986226e0ad9f00e1ed.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8997c3995e9c9f049241.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_899945b2aa377a8f93ac.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8996a0aaf30ebe94f803.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8995d5d46a797a079c35.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89946ca34ed22c694a85.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8989722d6e3b20ba2f5a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8987192e49abac5f9bbe.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8992c87ffad998ead9dd.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8993b8fdc3ab48a8d292.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_898183cda2187df62e80.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_897901510f31174d4497.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8980a1eb353bea5cd413.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8978584f32c84e4b5e75.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8974b15ad5e9e542e24e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8977a0506f713eb0e0dd.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8973d3e3c82a3bbc68ec.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8970b0f1ad0f35db48ce.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8976bb40d87e5866faad.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_897511e69726deaf74df.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89698e466ffe7b803b13.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_897225d5a1f08c215766.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8968b7cc24052daa2b07.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8971beedfc5f5eeb3810.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_896690b6b33fc4b5483d.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89658f12322066a460ba.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89675d8b3ee339712a7d.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8964dc539f8abb21a2d9.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89636c73d1cca7951f44.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8962a5e4379a8747c72b.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8958eae664c6e9b20d6a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89603d22a90d26d4687f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8957c244931cdad059a7.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_896156d5802158c3b022.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8959de38c01bbdc80d6f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_895692b75d8ef06fc6b7.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89541e4a77209efdbbcd.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_895348dbef0643dc66ce.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89552a87ba88b4061728.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8949baecee89586522d3.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_895225782ae33b7d296a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_895140cb4312ca0502f3.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89501f0e1a84c155296c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8948cd245bb4a82c5b2a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89474eacaec1fbe18911.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8944243c2cc6e988a700.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8946f6aa0fdedfc5880f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_894546d241bb3503080c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89423f3886369078f3ac.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_894007b1999c2e6a1dbf.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_894149e59818536367fa.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89393baaf011f5e0ec3f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89439980651a12472ce9.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89389198e27a48fb8f94.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_893740c5e365a698c4db.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89333e48271802dab0ae.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8935d1debe54de1a8216.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_893441acf363dbefe00b.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89369ed392ff65ed80ea.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8932472a0c9c215b351c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8930aa0ebea8a4bd73ec.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8931a5210da732472f01.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8929b5e46da0f391bb3f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8928d27feba9752e442f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89279458bb16da9a535e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88685f6bfb24b90037ee.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8869e3c0041c30d502f0.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_887107277ea7b6412ef0.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8872f3ed3ae5442fd08e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8875f96d323eb94423ce.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_887339c3dbdf9f368a58.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_886518ffaa483fd60f4a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88640bf20719ceeb7cdd.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8863ccd14a1d8f841294.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8861a9292f5905529a27.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_885988e7158b19dd6b3d.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88600933dcd03ec71cbd.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_886206ce8e17caf8adb6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_885753ded99126bd048f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8856cf888770c52e86e7.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88581131fa559292c0ed.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8854d2d48b3952a33262.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88553c5c49cfde1d6ee0.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88532a82826875492835.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8852e0229af13e1eddab.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8851e3523c855c7d9638.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8848402eeda2317acf41.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8849b8464cd22606d6f9.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8847a2347d42576ef1f6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88501b665e218510b4df.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8845c548a3f528ba399c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88464a9f201b48e755dc.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88446c93ef94c3fb8f70.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88438ff8fb7694917aeb.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88427755dd28f9e06375.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8834be997e1789ac820a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_884150c2b38c0fef7369.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8840b738a9919ef9bc62.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_883942a017dc701f9360.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88382f9a78e98c5367f6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8836457dcc0097dec631.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8833c99a1a1fbf783f98.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88327552e0e4087216e4.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8835ed14f59f8dd81749.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88379c324e1a7dab4412.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88315a0eb892b8114f15.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8830637a9eac0d1ca98c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8827713bd6e0409bfbd8.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_882695e955e5ad27dc78.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88296ed53a61ceb3e903.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8825ec7ad25f417ba2db.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_882851279597cda9d804.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_882346eb8edc144d135f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8821ad48a316b115c5cc.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8824597cb2180ee8c8a1.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8822775692746cb0d083.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88202ce24d62369b64a5.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_881159719982b2da4758.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_881664d032279ff44b32.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8810551a25048c9607b4.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_881703531c9eba91c13b.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88192f44c812ac187ca9.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88189850f77cb189cf4c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_881562da3e383b66d677.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8812bdfc5a1c16af5c2a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88133030dcce16bf3d9b.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_881498ad4118a2822163.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_880789d0a324f4e6283f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8809d85d5b10c8714159.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8806676b88e5a42bc54a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8808cc255757c597b608.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8805ad612dbb3724c01e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8804f63300395592aef5.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88034ba705e5373d7332.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8802f00a0a380292b7c1.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88019fcdc10ec397448b.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88007dd8e399b49688a9.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87999bab5941696b616f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8797970ced18a7fdcf27.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87986b5b94ad0488c62f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8795be227a83f9ab0c62.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87963745676a2c0fb327.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_879428431b045cd70f66.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8792a703a07f94b210bc.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87936a581a97d237845e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8791424ec16c1efad491.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8790ab79733c76605a8f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8789ebc38a4b5d9a9c3d.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8788a569f8b5049f072c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8787456435262753571d.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87861aa85d272edf3df1.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87851f608241a71fdcb6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8783675a8c50352a4c87.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87848e39ff8e9e741db6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87810fef9582b7ca8af5.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_878219180f4447598de8.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_877631bf77fe50b072b8.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8779a99b82b99b0496a0.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8777b0de2f2babdf2a2e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8775bceb2bc01cd524c1.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_877825d3e238feaa5512.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8774feac1632efdf071f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8773837f4b5b1a522e82.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87726d403a9164830380.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8762342b3512af27eb02.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87686176246111e72613.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8767b4525b1a6170fa7e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8770e71d217493fb807c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8765577eea41bb6df964.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_876483f0cf90d8082069.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8769b08bc6ca8f271043.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87639c6990df4042e743.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8766357d560ce2e73fdb.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8771b30c40f211c86887.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87590534b7996f756022.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8760cc11ba18d7d9a720.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_875676f58ba09570bc09.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8761fe4de9c6b1deea05.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_875335349aac23d5040e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8757be2c9c47f51310ec.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87529938f04c85cc281f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8758642c8ef30b794f84.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_875541505731a16c9e88.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87541ead73f919eb59ed.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8751efff7324fb746737.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8750e2e6f834edb31790.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_874849a1644566dc5f33.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8749b661739d89af9e98.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8745e8b3d1a780228019.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87475555149cff0f18c3.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87439a7b0368617925ff.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87440dd3deef170b6c15.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87460127e896ec721ab2.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8742ca4a911f549e1c29.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8738623d6dbdd73eb79f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8741be5c28e0c1ef5c7a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87403d4a1dfb39558c1e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8739b66f65e0c72d8481.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8737e0fdea88ce5cf925.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87351bc8be40e8f4c1fb.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87328d7eb21ab747a256.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_873302053e0eaeacc5cc.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8731454cd32a9b1fcaab.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_873469669b93b7e70951.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8728e816fcbc3aaa78f1.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8736d573954d79d9e628.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8730a421e4d392efee8f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8729cb61c7954e689a35.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87232932f823ee71e9ec.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8727da518bed88790e73.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87240aac18aff962c047.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87269ca03f38f39925c7.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87250372f479889ca4c3.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87193125263f253fb488.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_872248424c7f2085d295.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_872133c393a92685b5b1.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8718417b30f241e28227.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8720bc8669231f6d46c2.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87175137f609df96bbd0.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_871512a6f6537306d9cd.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8716fdeb744e8bf4dd39.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87145d667218aa5f72b6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_871362495a912456068b.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8710839f4331ca0cc001.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8711b6c40350d1ef0856.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8709cc3b5c5d9f4915c7.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8712f04a46e9dfa95452.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87080e5dfb3e465bbef4.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86985c40a0f71827ba7b.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8701e6e771c0a35de2ec.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_870219609e108ab7df75.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_870045637b64e8bdd062.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87036fb86fd8a7bf3a06.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_869987bb10006a83107e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_87052608060f53e7fdd3.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8706dc760d6566c1d9e7.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_870448ecc70ad407fa2d.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8707fa1fdb742263ff45.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_892686189f3d27738a8f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8925695932d6f05e944f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8924207473b6418aba7a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89227d060ebfa7c94448.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_892369d8eb9222e1ceff.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89213a061bbe39b945c3.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_891983086cfa838fe0f1.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8918484ab6e12d8121e6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_892037c10f4a5c980360.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8917cf32c0a1d52eef56.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8916512e4e181678c209.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8915ebfa54237175cf22.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8914e19a50113a85281e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8913c9a28d34d7d2dead.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8911270214e7f2140669.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8912cc0756433ce7ad0d.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8909e26aa89d3d0163f6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8907502a7b7bba742332.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_890875b90df0a3e5b5d8.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_891025bf94c28d3ef38c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89063e9bf2615f3a0ce6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8905f0257e36ec730d8c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8904da6efb3f3de08b0a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_89036e6afa7e63e3b864.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8902e70b2ed67852565c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_890146bfd4f064801cda.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8895e4d5f05dc45d92eb.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8900581074334097422d.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88961279a4e47261bd4f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88998b72116b5dc17371.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8898981e0d8fd2e47434.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_889747b4851c32a05b03.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8894b316231136c8f7f2.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_889361aad730f1cc47c4.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88924cac0d1265d3a72e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_889070194f43bf68d9c6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8891431e219cc3543e47.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88883f0c8a37718a80f9.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8886481b1e5531026735.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_888911995e003ae4443e.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8885771de8421e7f6856.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8887d9fe53f7de3f1bc5.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88849b9f4f2d0e6505fa.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8882bc13c7e1b1f73ead.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8883028e70b824de4bef.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8878cba5e4db65c446a5.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8879c3e4ea62a00b778c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8881d324e3756c561d85.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_888044958f6fd2274358.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8866fec551734fcc6bc7.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8870f745804df73006cc.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_886793f057014d88ca0c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88764c61dd71d505d57d.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88773640ee56c0ba8958.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_88740772d80be68b931a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8696e542072f0cf59599.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8697ee66b02f1ca46565.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_869539a17319e7010596.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8694469c5e976e34f0c1.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8692ad02a6dc3e079ba3.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8693056d36061875aae3.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_869193f423af4859d721.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8690a680718ed5167bbd.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8689ec01fd1d169054d8.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_868770511ddbeae4b1eb.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86889c8618588b2b2951.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8686e4829d193f60b7a8.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_868558bddb4d4f2256ab.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8684b0f6711e8c587d1f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8683c4f9deeddf4664a4.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_868267523ff43fc1650f.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8681812338e240c8db47.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8679726739bc3721e9df.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8680c3bd7660c35e38f0.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86780409f7d84f591c08.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_867716e6d37eae351c4c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86762ec4213cc1ba6818.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86756db659bd8a9e2b5c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86743c99c04400223958.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86731aeb78355a264484.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8671806387914df0aab6.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8672f16cd943119d10de.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8670bb3ee7b0156577e4.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86691c95d1683b9e25a5.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8668befab88fccf2b02a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8667e727d629f5fcebd5.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8666e617dcfc1064d91c.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8664c82af59ac3fbf406.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86656f5bf3251cfe6fdd.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86638e612cfc0d48e9e2.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8662889b211091573d50.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8661b7ef4ec4dd80daa5.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_865742969754ed1f5542.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_865981db5c80fdd89690.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86603257e2ffbc09032b.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_865822affe64b71adccf.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_865668f5759509832f4a.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8654f113d2de7a2fb542.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8655868d3b6ee3e0d9d9.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86477db538579d360b29.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_864960d1b9827e0fe800.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8648c12ebaa1a2548c72.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8645113b0188227dd774.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86440607ab7472d887b7.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8650aaeb334b82fb1af3.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8651460e3444baa8eb87.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_86463d1c436ddd93b3c4.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8652901368f1fba05650.jpg",
+        "https://img.picgo.net/2025/04/02/IMG_8653d417bc120fc34f17.jpg"
+      ],
       "Favorite": [
         "https://3o.hk/images/2024/01/21/IMG_1040.png",
         "https://3o.hk/images/2024/01/21/IMG_1039.png",
@@ -3675,356 +4038,6 @@
         "https://3o.hk/images/2024/02/03/IMG_1193.jpg",
         "https://3o.hk/images/2024/02/03/IMG_1194.jpg",
         "https://3o.hk/images/2024/02/03/IMG_1196.jpg"
-      ],
-      "Certificates": [
-        {
-          "src": "https://3o.hk/images/2024/04/29/0DDCECF1-5FFB-467E-BCDE-1DC7C7FA1242-45114-00001D06D7EA5874.jpg",
-          "type": "创业",
-          "activity": "第五届“互联网＋”大学生创新创业大赛",
-          "award": "三等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/0E4B8618-A778-4A0B-BC21-6F6DDDFF58F7-45114-00001D072CEB0D9C.jpg",
-          "type": "知识",
-          "activity": "第三届全国大学生环保知识竞赛",
-          "award": "优秀奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/2DECE824-29D0-43FD-A341-AF99D2C97CE0-45114-00001D06A33838C7.jpg",
-          "type": "荣誉",
-          "activity": "2018-2019年度“榜样力量”",
-          "award": "优秀班长"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/2E3F1DF6-ACE1-419A-B2DD-58FDC43D9191-45114-00001D05E493426E.jpg",
-          "type": "奖学金",
-          "activity": "西南科技大学2019-2020奖学金",
-          "award": "艺术特长奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/2EAE6603-858F-44B5-B196-E866F74842E0-45114-00001D0663AA379F.jpg",
-          "type": "科技",
-          "activity": "“金能杯”光伏产品设计大赛决赛",
-          "award": "二等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/03AAA681-6765-41AA-8020-A42DC71162A7-45114-00001D06E508A18F.jpg",
-          "type": "科技",
-          "activity": "西南科技大学第四届大学生创业大赛",
-          "award": "铜奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/5BEF2DF4-09AD-4BEF-ABA8-357E4C3B252A-45114-00001D068BD72133.jpg",
-          "type": "艺术",
-          "activity": "2019 年新生录取通知书设计大赛",
-          "award": "一等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/5FF0E884-7D14-4A5E-A579-826930F18C7C-45114-00001D071C6E8A0D.jpg",
-          "type": "体育",
-          "activity": "2019学院运动会围棋项目",
-          "award": "第二名"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/51F92EA6-4FA9-4E3E-9EB4-38B15AE06F2D-45114-00001D05DCDFC7C5.jpg",
-          "type": "奖学金",
-          "activity": "西南科技大学2018-2019奖学金",
-          "award": "创业实残奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/59C72B82-C522-4E6B-AEF3-7D549787675E-45114-00001D062A66B3B5.jpg",
-          "type": "创业",
-          "activity": "第十四届iCAN国际创新创业大赛中国总决赛",
-          "award": "三等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/69DA8251-003D-4587-B73E-8CDA71972A6B-45114-00001D05D900AA8E.jpg",
-          "type": "奖学金",
-          "activity": "西南科技大学2019-2020奖学金",
-          "award": "创业实残奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/86F95023-670D-4D49-A501-24ABC48F9D4C-45114-00001D0632E1AA4E.jpg",
-          "type": "荣誉",
-          "activity": "创业培训学员合格证书",
-          "award": "合格证书"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/95A0A467-F6A4-48A4-A0D3-A562CD1DCBB0-45114-00001D064AFEAA6E.jpg",
-          "type": "荣誉",
-          "activity": "学院2019-2020年度“五•四”评优",
-          "award": "优秀团员"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/587C6C4F-B46A-450D-A39D-5FAFF3F54991-45114-00001D06260FB642.jpg",
-          "type": "荣誉",
-          "activity": "2018-2019年度中，德行、智慧、体育五四评优",
-          "award": "优秀团员"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/880D0E87-D929-44AD-9336-FBCC492B4C8B-45114-00001D05E0F14BA0.jpg",
-          "type": "奖学金",
-          "activity": "西南科技大学2018-2019奖学金",
-          "award": "艺术特长奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/977D096F-FBFB-4C25-A711-35E23E82D4BF-45114-00001D0722FCF496.jpg",
-          "type": "知识",
-          "activity": "第二届全国大学生预防艾激病知识竞赛",
-          "award": "优秀奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/9642B465-4F83-4262-9BB5-688849F3B22C-45114-00001D067473899F.jpg",
-          "type": "科技",
-          "activity": "第十一届化学综合涉及大赛",
-          "award": "一等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/35768A3B-D574-481B-889E-C206E50EF4B5-45114-00001D06847F4823.jpg",
-          "type": "知识",
-          "activity": "第六届家教授课大赛",
-          "award": "一等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/63153EB6-F91B-4E8A-9A12-8CA143C04B66-45114-00001D06F3FE4DAB.jpg",
-          "type": "荣誉",
-          "activity": "第17届干部培训",
-          "award": "结业证"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/581135B0-BD2E-4017-947D-61F8766711DA-45114-00001D067C795B4E.jpg",
-          "type": "艺术",
-          "activity": "形象墙设计大赛",
-          "award": "二等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/4300261E-9EB4-4ED0-8528-909AED6A3069-45114-00001D069065EC56.jpg",
-          "type": "奖学金",
-          "activity": "西南科技大学2020奖学金",
-          "award": "科技文体先进个人"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/4721622D-2855-42E4-95C0-720DEC9DDB19-45114-00001D06C5F62431.jpg",
-          "type": "创业",
-          "activity": "巴黎欧莱雅2019头脑风暴商业赛",
-          "award": "结赛证"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/BF66EB74-B02D-420C-B25F-F09BAD48DF03-45114-00001D064F9C18F4.jpg",
-          "type": "荣誉",
-          "activity": "2019-2020年度“五•四”评优",
-          "award": "优秀学生干部"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/BF68AE98-2B4F-4CAE-A624-FFEC07958E95-45114-00001D06D3590E22.jpg",
-          "type": "艺术",
-          "activity": "第九届全国大学生电子商务“创新、创意及创业“赛",
-          "award": "一等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/CF6CDC2D-8151-4A4D-841A-8DA12621D949-45114-00001D06E916B7EC.jpg",
-          "type": "科技",
-          "activity": "第四届安全科学与工程类专业实践与创新作品大赛",
-          "award": "第二名"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/E1B6297D-A9D5-4DF1-8C09-B8B4E694FBFF-45114-00001D05CCA417D1.jpg",
-          "type": "公益",
-          "activity": "LGBT关爱志愿活动",
-          "award": "优秀志愿者"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/E32396B4-89BC-4744-A9D2-1CFF07E2A359-45114-00001D070EB105E5.jpg",
-          "type": "科技",
-          "activity": "第九届混凝土设计大赛",
-          "award": "三等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/EAFE88F5-E5DD-4FC6-BD8C-98AA6D9F80C4-45114-00001D069D3ABD72.jpg",
-          "type": "荣誉",
-          "activity": "2018-2019年度班级建设管理",
-          "award": "优秀班长"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/EE7B77BA-9FA2-4BFD-AC73-EBF1CED192CF-45114-00001D07048DBDB3.jpg",
-          "type": "科技",
-          "activity": "2018年首届“金能杯”光伏产品设计大赛",
-          "award": "二等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/EF1B4F2F-45BC-4722-B2F3-B9381001BF05-45114-00001D06E0A46BBE.jpg",
-          "type": "创业",
-          "activity": "第四届“中国创翼” 创业创新大赛",
-          "award": "优秀奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/2DB618D3-DE8D-4CB7-8010-6DC84C38F44D-45114-00001D05D53BA170.png",
-          "type": "荣誉",
-          "activity": "校学生会学习部成员",
-          "award": "任职证明"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/7B41B493-2C7F-4A91-91DD-2E41CB01144E-45114-00001D0694AB4A53.png",
-          "type": "荣誉",
-          "activity": "2017级新老生交流会",
-          "award": "优秀个人称号"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/7B93C3D8-4194-4D3E-BAF6-F643B53B5C93-45114-00001D0688447623.png",
-          "type": "荣誉",
-          "activity": "第十六届学生干部培训",
-          "award": "结业证"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/9A7C5A7C-7AAC-4E50-A3CB-1D23EC264182-45114-00001D06542385A0.png",
-          "type": "荣誉",
-          "activity": "2018-2019年度“榜样力量” 评选",
-          "award": "优秀班长"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/11A64271-B780-4679-849E-5E552DB05F6D-45114-00001D0698D217E8.png",
-          "type": "创业",
-          "activity": "大学生创新创业俱乐部",
-          "award": "最佳组织奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/31BFA708-E0D2-4A45-B576-DBA6DB0C5CA3-45114-00001D072733BE02.png",
-          "type": "知识",
-          "activity": "第三届全国大学生预防艾滋病知识竞赛",
-          "award": "优秀奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/47D78420-6151-4730-98BB-11AB1D8DCE43-45114-00001D066C580F56.png",
-          "type": "荣誉",
-          "activity": "2017至2018年科技创业指导站",
-          "award": "明星干事奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/99B7D052-D658-4B68-95A7-71BC3EFC7344-45114-00001D062052A691.png",
-          "type": "荣誉",
-          "activity": "2017-2018年度五四评优",
-          "award": "优秀团员"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/5867CC60-9359-4FD9-AA66-A43FB4DB45CE-45114-00001D063B8DE659.png",
-          "type": "Compulsory",
-          "activity": "“材子杯”新生辩论赛",
-          "award": "最佳辩手"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/7245C317-B439-40F4-B630-D9A971B9245F-45114-00001D0670712E97.png",
-          "type": "Compulsory",
-          "activity": "2017-2018年大学生创新创业实践训练班",
-          "award": "优秀会员奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/8158C929-45E2-41FC-B1DA-2E999384CD12-45114-00001D06CF024FB5.png",
-          "type": "Compulsory",
-          "activity": "第二届全国大学生环保知识竞赛",
-          "award": "优秀奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/93977CA8-0E2A-43E4-89D7-78D125DBF2EA-45114-00001D06DC75F4DB.png",
-          "type": "Compulsory",
-          "activity": "第十五届结构设计竞赛",
-          "award": "三等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/4673492C-C8BE-48EA-B655-78E01C6A7251-45114-00001D062EA478A2.png",
-          "type": "Compulsory",
-          "activity": "第十四届iCAN国际创新创业大赛",
-          "award": "二等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/17219480-B6C1-4313-8956-E38FA755708A-45114-00001D05D11ACF60.png",
-          "type": "Compulsory",
-          "activity": "大学生科技创业指导站成员",
-          "award": "任职证明"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/D8CC147E-2022-4DB0-A755-542F058BF9B3-45114-00001D0658BC820F.png",
-          "type": "Compulsory",
-          "activity": "2018年度“优秀课堂笔记评选活动”",
-          "award": "优秀个人称号"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/D29DF7E7-9314-4E87-B128-274770D7CBF5-45114-00001D06807F831E.png",
-          "type": "Compulsory",
-          "activity": "西南科技大学实验室安全知识考核",
-          "award": "合格证书"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/D38B3678-9676-4C6D-9673-CDD0A0D0DC37-45114-00001D0640A4D08C.png",
-          "type": "Compulsory",
-          "activity": "第 9 届第三只眼摄影大赛相机组",
-          "award": "优秀奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/DA813F49-B59A-4EC6-97D4-73169EDBB2AA-45114-00001D063729EFB9.png",
-          "type": "Compulsory",
-          "activity": "“材子杯”新生辩论赛活动",
-          "award": "冠军"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/317FCB5E-8252-4628-A671-89DEE0611691-45114-00001D067878950F.jpg",
-          "type": "Compulsory",
-          "activity": "2019年四川省大学生环保科普创意大赛",
-          "award": "一等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/1C6B1B18-A81F-4E54-9A0F-7EF8BB574659-45114-00001D065CF5ED3D.png",
-          "type": "Compulsory",
-          "activity": "兆式教育企业评优",
-          "award": "优秀员工"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/93031B6B-CC7A-4D9B-AA09-4C8973B5AABF-45114-00001D0714D32558.jpg",
-          "type": "Compulsory",
-          "activity": "中国跆拳道协会级位证书",
-          "award": "八级"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/274DA9EE-0C5F-496A-AF90-737CE53FBA85-45114-00001D06F83794C2.png",
-          "type": "Compulsory",
-          "activity": "育才杯”教师授课比赛",
-          "award": "一等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/AAF71A73-4186-476B-968C-A2754CED26B4-45114-00001D06036AD13F.jpg",
-          "type": "Compulsory",
-          "activity": "2018-2019 年度五 四评优提名",
-          "award": "十佳班长"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/C1D3054A-0AE2-48F8-8C20-67316F3B28D3-45114-00001D05F07E5120.jpg",
-          "type": "Compulsory",
-          "activity": "第四届大学生创业大赛",
-          "award": "一等奖"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/E60BE89D-B482-482F-8E52-24296D35E58D-45114-00001D05ECA25FEE.jpg",
-          "type": "Compulsory",
-          "activity": "壹基金温暖包项目",
-          "award": "志愿者证明"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/EB3D48DA-847E-442B-B63F-7ADEEB3C5842-45114-00001D061BCECD33.jpg",
-          "type": "Compulsory",
-          "activity": "项目认证",
-          "award": "项目认证"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/53241757-26D6-42AB-8CDF-ED5F1F85291A-45114-00001D06CA52034C.png",
-          "type": "Compulsory",
-          "activity": "汶川抗震救灾十周年纪念活动",
-          "award": "志愿者证明"
-        },
-        {
-          "src": "https://3o.hk/images/2024/04/29/A7FBAD97-1B4F-4D91-A93D-64BB7C8A49B5-45114-00001D05E842F244.png",
-          "type": "Compulsory",
-          "activity": "形象墙墙绘设计表彰（荣获2个二等奖，2个三等奖）",
-          "award": "表彰文件"
-        }
       ],
       "pictureNotify": ["Record beauty", "记录美好"]
     }
