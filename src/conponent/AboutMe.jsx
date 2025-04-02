@@ -151,7 +151,7 @@ function SelfDescribing() {
           src='https://www.youtube.com/embed/Cll-4cW1UdA?si=XEiP7HgYLe-GCPwy'
           title='YouTube video player'
           frameborder='0'
-          className='my-[20px] z-30 rounded-[14px] flex'
+          className='my-[20px] z-10 rounded-[14px] flex'
           // allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share'
           allowfullscreen
         ></iframe>

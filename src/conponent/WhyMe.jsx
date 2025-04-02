@@ -95,17 +95,17 @@ function WhyMe({ hideTittle, mt }) {
       <motion.div className='my-[10vw] flex flex-col items-center lg:hidden  w-full '>
         <motion.div className=' flex items-center justify-center w-full  gap-x-[20px] text-black z-10'>
           <motion.i
-            id='AboutMe'
+            id='WhyMe'
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className={`flex items-center text-5xl fi lg:text-6xl xl:text-8xl fi-rr-comment-heart`}
+            className={`flex items-center text-5xl fi lg:text-6xl xl:text-8xl  fi-rr-lightbulb-on`}
           ></motion.i>
 
           <TextAnimate
             transition={{ duration: 0.3 }}
             className='flex items-center font-mono text-5xl italic font-black tracking-widest uppercase text-nowrap lg:text-6xl xl:text-8xl'
-            text={lang === 0 || '0' ? 'About me' : '自述'}
+            text={lang === 0 || '0' ? 'Why me' : '我的优势'}
             type='fadeIn'
           />
         </motion.div>
