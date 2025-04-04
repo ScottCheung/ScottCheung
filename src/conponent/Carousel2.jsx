@@ -148,11 +148,58 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
             key={index}
             className={`object-cover h-[${viewportHeight * 0.4}px] lg:h-[${viewportHeight * 1.1}px] relative w-full `}
           >
-            {item.type !== 'image' && isPaused && isTop && (
-              <span
-                className={`absolute z-20 hidden w-full h-full md:flex  bg-black/50`}
-              ></span>
-            )}
+            <AnimatePresence>
+              {item.type !== 'image' && isPaused && (
+                <span
+                  onClick={() => setIsPaused(false)}
+                  className={`absolute z-20  w-full h-full md:flex justify-center items-center  bg-black/50`}
+                >
+                  <motion.button
+                    layoutId='pause button'
+                    className='bg-black/20 w-[100px] h-[100px]   flex rounded-full justify-center items-center transition-all ring-0 outline-none duration-1000'
+                  >
+                    <motion.svg
+                      whileTap={{ scale: 1.1 }}
+                      whileHover={{ scale: 1.2 }}
+                      transition={{
+                        duration: 0.7,
+                        ease: [0.22, 1, 0.36, 1],
+                      }}
+                      className={`w-[70px] lg:h-[70px]  fill-white `}
+                      viewBox='0 0 48 48'
+                    >
+                      <AnimatePresence>
+                        {item.type !== 'image' && isPaused && (
+                          <motion.path
+                            d={
+                              !isPaused ?
+                                iconVariants.playing
+                              : iconVariants.paused
+                            }
+                            animate={{
+                              d:
+                                isPaused ?
+                                  iconVariants.playing
+                                : iconVariants.paused,
+                            }}
+                            exit={{
+                              d:
+                                isPaused ?
+                                  iconVariants.playing
+                                : iconVariants.paused,
+                            }}
+                            transition={{
+                              duration: 0.7,
+                              ease: [0.22, 1, 0.36, 1],
+                            }}
+                          />
+                        )}
+                      </AnimatePresence>
+                    </motion.svg>
+                  </motion.button>
+                </span>
+              )}
+            </AnimatePresence>
             <span className='z-20 hidden md:flex h-[20vh] absolute w-full bg-gradient-to-b from-black/40 via-black/30 via-[10vh] to-transparent overflow-hidden'></span>
             <a className='w-full h-full overflow-hidden'>
               {item.type === 'image' ?
@@ -233,12 +280,15 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
                       disabled={!isTop}
                       onClick={() => goToSlide(index)}
                       style={{ animationDelay: `${(index + 3) * 0.11}s` }}
-                      className={`bg-gray-200/50 hover:bg-gray-50/50 animate_animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[10px] lg:h-[15px] ${index === activeIndex ? 'w-[30px] lg:w-[50px]' : 'w-[10px] lg:w-[15px]'}`}
+                      className={`bg-gray-200/50  hover:bg-gray-50/50 animate_animated animate__zoomIn cursor-pointer  overflow-hidden transition-all duration-500 rounded-full h-[10px] lg:h-[15px] ${index === activeIndex ? 'w-[30px] lg:w-[50px]' : 'w-[10px] lg:w-[15px]'}`}
                     >
-                      {index === activeIndex && isPaused === false && (
-                        <div
+                      {index === activeIndex && (
+                        <motion.div
+                          // layout
                           className='h-full bg-white rounded-full'
-                          style={{ width: `${progress}%` }}
+                          style={{
+                            width: `${progress}%`,
+                          }}
                         />
                       )}
                     </motion.button>
@@ -246,7 +296,7 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
                 </motion.div>
               </div>
               {/* Play/Pause button */}
-              <div
+              <motion.div
                 className='bg-white/200 hover:bg-black/30 transition-all  rounded-full backdrop-blur-[5px]  '
                 style={{ animationDelay: '0.45s' }}
               >
@@ -254,16 +304,16 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
                   layout
                   disabled={!isTop}
                   onClick={() => setIsPaused(!isPaused)}
-                  className='bg-black/20 w-[37.5px] h-[37.5px] lg:w-[45px] lg:h-[45px] animate_animated animate__fadeIn flex rounded-full justify-center items-center transition-all ring-0 outline-none duration-1000'
+                  className='bg-black/20 w-[37.5px] h-[37.5px] lg:w-[45px] lg:h-[45px] animate_animated animate__fadeIn flex rounded-full justify-center items-center  ring-0 outline-none '
                 >
                   <motion.svg
                     whileTap={{ scale: 1.1 }}
                     whileHover={{ scale: 1.2 }}
                     transition={{
-                      duration: 1.2,
+                      duration: 0.7,
                       ease: [0.22, 1, 0.36, 1],
                     }}
-                    className={`w-[22px] h-[22px] lg:w-[35px] lg:h-[35px]  fill-white ${isPaused ? 'animate__rotateIn' : 'animate__rotateIn'} animate_animated transition-all ring-0 outline-none`}
+                    className={`w-[22px] h-[22px] lg:w-[35px] lg:h-[35px]  fill-white ${isPaused ? 'animate__rotateIn' : 'animate__rotateIn'} animate_animated  ring-0 outline-none`}
                     viewBox='0 0 48 48'
                   >
                     <motion.path
@@ -272,14 +322,18 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
                         d:
                           isPaused ? iconVariants.playing : iconVariants.paused,
                       }}
+                      exit={{
+                        d:
+                          isPaused ? iconVariants.playing : iconVariants.paused,
+                      }}
                       transition={{
-                        duration: 1.2,
+                        duration: 0.7,
                         ease: [0.22, 1, 0.36, 1],
                       }}
                     />
                   </motion.svg>
                 </motion.button>
-              </div>
+              </motion.div>
             </motion.div>
             <motion.div
               transition={{
