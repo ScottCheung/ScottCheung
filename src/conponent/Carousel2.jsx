@@ -151,21 +151,24 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
             <AnimatePresence>
               {item.type !== 'image' && isPaused && (
                 <span
-                  onClick={() => setIsPaused(false)}
-                  className={`absolute z-20  w-full h-full md:flex justify-center items-center  bg-black/50`}
+                  onClick={() => isTop && setIsPaused(false)}
+                  className={`absolute z-20  w-full h-full md:flex justify-center ${isTop ? 'cursor-pointer' : 'cursor-not-allowed '}  items-center  bg-black/50`}
                 >
                   <motion.button
+                    disabled={!top}
                     layoutId='pause button'
-                    className='bg-black/20 w-[100px] h-[100px]   flex rounded-full justify-center items-center transition-all ring-0 outline-none duration-1000'
+                    className={`bg-black/20 w-[100px] h-[100px]   flex rounded-full justify-center items-center ring-0 outline-none  ${isTop ? 'cursor-pointer' : 'pointer-events-none cursor-not-allowed '} `}
                   >
                     <motion.svg
-                      whileTap={{ scale: 1.1 }}
-                      whileHover={{ scale: 1.2 }}
+                      whileTap={{ scale: top ? 1.1 : 1 }}
+                      whileHover={{
+                        scale: top ? 1.2 : 1,
+                      }}
                       transition={{
                         duration: 0.7,
                         ease: [0.22, 1, 0.36, 1],
                       }}
-                      className={`w-[70px] lg:h-[70px]  fill-white `}
+                      className={`w-[70px] lg:h-[70px]  fill-white ring-0  outline-none`}
                       viewBox='0 0 48 48'
                     >
                       <AnimatePresence>
@@ -201,7 +204,7 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
               )}
             </AnimatePresence>
             <span className='z-20 hidden md:flex h-[20vh] absolute w-full bg-gradient-to-b from-black/40 via-black/30 via-[10vh] to-transparent overflow-hidden'></span>
-            <a className='w-full h-full overflow-hidden'>
+            <a className='w-full h-full overflow-hidden cursor-move'>
               {item.type === 'image' ?
                 <img
                   src={item.src}
