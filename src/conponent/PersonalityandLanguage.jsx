@@ -2,14 +2,29 @@
 
 import React, { useState, useEffect } from 'react';
 import Database from '../data/Database.json';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 import { LazyMotion, domAnimation, m } from 'framer-motion';
 import { useLanguage } from '../help/helpFunction';
 import { Link } from 'react-router-dom';
 
 import N from './Num';
 import Toggle from './Toggle';
-
+const GlobalVariants = {
+  open: {
+    opacity: 1,
+    y: 0,
+    // scale: 1,
+    height: 'auto',
+    zIndex: 10,
+  },
+  collapsed: {
+    opacity: 0,
+    y: -70,
+    // scale: 0,
+    height: 0,
+    zIndex: -50,
+  },
+};
 // loaddata
 const language = Database.PersonalInfo.Capability.language;
 const personality = Database.PersonalInfo.Capability.personality;
@@ -87,16 +102,13 @@ function PersonalityandLanguage() {
       <motion.div className='flex flex-col h-full gap-[14px] lg:gap-[28px] relative'>
         {/* INFJ */}
         <motion.div
-          // initial={{ opacity: 0 }}
-          // whileInView={{ opacity: 1 }}
           layout
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          viewport={{ once: true }}
           style={{
             background:
-              'linear-gradient(to bottom right, rgba(0, 0, 0,  1), rgba(0, 100, 0, 1))',
+              'linear-gradient(to bottom right, rgba(0, 0, 0, 1), rgba(0, 100, 0, 1))',
           }}
-          className='flex-1 rounded-[28px] relative overflow-hidden lg:overflow-visible'
+          className='flex flex-col h-auto rounded-[28px] relative overflow-hidden lg:overflow-visible'
         >
           <div className='flex-grow mb-[230px]'>
             <motion.div
@@ -196,74 +208,77 @@ function PersonalityandLanguage() {
                     ></motion.div>
                   </motion.div>
 
-                  {current === per.name && (
+                  <motion.div
+                    key={`${per.name}`}
+                    initial='collapsed'
+                    animate={current === per.name ? 'open' : 'collapsed'}
+                    variants={GlobalVariants}
+                    transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+                    className=''
+                  >
                     <motion.div
-                      key={`${per.name}`}
-                      initial={{ height: '0%', opacity: 0 }}
-                      animate={{ height: '100%', opacity: 1 }}
-                      exit={{ height: '0%', opacity: 0 }}
-                      transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                      className='bg-white/5 transition-all text-white/70 over-hidden p-[20px]  my-[20px] rounded-[14px]'
+                      variants={Welcomevisblecontainer}
+                      initial='hidden'
+                      whileInView='visible'
+                      viewport={{ once: true, margin: '-30%' }}
+                      className={`${
+                        per.color1 + ' ' + per.color2
+                      }  flex-col flex p-[20px]  my-[20px] text-white/70 h-auto over-hidden rounded-[14px] bg-white/5  pb-[10px] gap-y-[20px]`}
                     >
                       <motion.div
-                        className={`${
-                          per.color1 + ' ' + per.color2
-                        }  flex-col flex  pb-[10px] gap-y-[20px]`}
+                        variants={WelcomeItem}
+                        transition={StagerFadeInUp}
+                        className='text-[20px] font-black flex stageX'
                       >
-                        <motion.div
-                          style={{ animationDelay: '0.15s' }}
-                          className='text-[20px] font-black flex stageX'
-                        >
-                          {per.name}
-                        </motion.div>
-                        <motion.div
-                          style={{ animationDelay: '0.3s' }}
-                          className='flex justify-start  text-[15px] gap-[10px] items-baseline stageX'
-                        >
-                          <motion.div className='flex  font-[600] '>
-                            {per.right}
-                            <N className='mx-[10px]' n={per.label} d={2} /> %
-                          </motion.div>
-                          <p className='flex font-[600] '>+</p>
-                          <motion.div
-                            layoutId='left'
-                            className='flex  font-[600]]'
-                          >
-                            {per.left}{' '}
-                            <N
-                              className='mx-[10px]'
-                              n={100 - per.label}
-                              d={2}
-                            />{' '}
-                            %
-                          </motion.div>
-                        </motion.div>
-                        <motion.div
-                          style={{ animationDelay: '0.45s' }}
-                          className='flex text-[15px]  font-[600] stageX'
-                        >
-                          {per.defi}
-                        </motion.div>
-                        <motion.div
-                          style={{ animationDelay: '0.6s' }}
-                          className='flex text-[15px]  font-[600] stageX'
-                        >
-                          {per.des}
-                        </motion.div>
-                        <img
-                          loading='lazy'
-                          style={{ animationDelay: '0.75s' }}
-                          src={per.despic}
-                          alt={per.name}
-                          className='p-[20px] stageY'
-                        />
-                        <Toggle
-                          isExpanded={current === per.name}
-                          size={'w-6 h-6 lg:w-8 lg:h-8  stroke-[2px]'}
-                        />
+                        {per.name}
                       </motion.div>
+                      <motion.div
+                        variants={WelcomeItem}
+                        transition={StagerFadeInUp}
+                        className='flex justify-start  text-[15px] gap-[10px] items-baseline stageX'
+                      >
+                        <motion.div className='flex  font-[600] '>
+                          {per.right}
+                          <N className='mx-[10px]' n={per.label} d={2} /> %
+                        </motion.div>
+                        <p className='flex font-[600] '>+</p>
+                        <motion.div
+                          layoutId='left'
+                          className='flex  font-[600]]'
+                        >
+                          {per.left}{' '}
+                          <N className='mx-[10px]' n={100 - per.label} d={2} />{' '}
+                          %
+                        </motion.div>
+                      </motion.div>
+                      <motion.div
+                        variants={WelcomeItem}
+                        transition={StagerFadeInUp}
+                        className='flex text-[15px]  font-[600] stageX'
+                      >
+                        {per.defi}
+                      </motion.div>
+                      <motion.div
+                        variants={WelcomeItem}
+                        transition={StagerFadeInUp}
+                        className='flex text-[15px]  font-[600] stageX'
+                      >
+                        {per.des}
+                      </motion.div>
+                      <motion.img
+                        variants={WelcomeItem}
+                        transition={StagerFadeInUp}
+                        loading='lazy'
+                        src={per.despic}
+                        alt={per.name}
+                        className='p-[20px] stageY'
+                      />
+                      <Toggle
+                        isExpanded={current === per.name}
+                        size={'w-6 h-6 lg:w-8 lg:h-8  stroke-[2px]'}
+                      />
                     </motion.div>
-                  )}
+                  </motion.div>
                 </motion.div>
               ))}
             </motion.div>
@@ -303,17 +318,6 @@ function PersonalityandLanguage() {
                 'linear-gradient(to top left, #9795f0 0%, #fbc8d4 100%)',
             }}
           >
-            {/* <motion.div
-              layout
-              className='absolute bottom-0   left-0 right-0 h-[40vh] md:h-[40vh]'
-              style={{
-                backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.infj})`,
-                backgroundSize: '80% auto',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: 'center bottom',
-                filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0.3))',
-              }}
-            ></motion.div> */}
             <div className='p-[20px] lg:p-[40px] flex-grow'>
               <div className='w-full h-full'>
                 <motion.div
