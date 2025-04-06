@@ -127,7 +127,7 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
   return (
     <div
       ref={view}
-      className={`relative h-[${viewportHeight * 0.4}px] lg:h-[${viewportHeight * 1.1}px] w-full  overflow-hidden bg-black`}
+      className={`relative h-[${viewportHeight * 0.4}px] lg:h-[${viewportHeight * 1.1}px] w-full  overflow-hidden bg-[#f5f5f7]`}
     >
       <svg
         data-v-226d292e=''
