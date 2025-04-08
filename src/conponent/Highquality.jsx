@@ -193,8 +193,9 @@ function Highquality() {
         className='rounded-[28px] p-[20px]  lg:p-[40px] flex-1 h-full flex flex-col'
       >
         <motion.div
-          initial={{ y: 30, scale: 0.9 }}
-          whileInView={{ y: 0, scale: 1 }}
+          initial={{ x: 30, scale: 0.9 }}
+          whileInView={{ x: 0, scale: 1 }}
+          viewport={{ once: true, margin: '-30%' }}
           transition={{
             ease: [0.455, 0.03, 0.515, 0.955],
             duration: 0.7,
@@ -211,8 +212,9 @@ function Highquality() {
         <motion.div className='gap-y-[60px] pb-[80px] flex flex-col h-full'>
           {content.map((item, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 30, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              initial={{ opacity: 0, x: 30, scale: 0.95 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
+              viewport={{ once: true, margin: '-30%' }}
               transition={{
                 ease: [0.455, 0.03, 0.515, 0.955],
                 duration: 1.3,

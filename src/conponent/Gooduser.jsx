@@ -105,6 +105,7 @@ function Gooduser() {
           <motion.div
             initial={{ opacity: 0, scale: 0.95, y: '10px' }}
             whileInView={{ opacity: 1, scale: 1, y: '0px' }}
+            viewport={{ once: true, margin: '-30%' }}
             // style={{ background: 'linear-gradient(45deg,#767676,#1d1d1f)' }}
 
             transition={{

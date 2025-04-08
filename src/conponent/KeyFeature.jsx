@@ -40,7 +40,7 @@ function KeyFeature() {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ['-1000px', '0px'],
+    offset: ['-1100px', '100px'],
   });
 
   useEffect(() => {

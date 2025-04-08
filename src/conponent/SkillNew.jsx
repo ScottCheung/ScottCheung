@@ -90,15 +90,16 @@ function Skill() {
           initial='hidden'
           animate='visible'
           variants={{
-            hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0 },
+            hidden: { opacity: 0, x: 30 },
+            visible: { opacity: 1, x: 0 },
           }}
+          viewport={{ once: true, margin: '-30%' }}
           transition={{ duration: 1 }}
         >
           {content.description}
         </motion.p>
         <motion.ul
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: '-30%' }}
           className={`text-transparent grid grid-cols-12 gap-[20px] md:gap-[40px] lg:gap-[70px] py-[50px] lg:py-[100px] from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text normal-text`}
         >
           {content.skills

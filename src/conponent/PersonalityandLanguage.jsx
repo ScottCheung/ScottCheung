@@ -144,9 +144,9 @@ function PersonalityandLanguage() {
 
             <motion.div
               variants={ProgressBarvisblecontainer}
+              viewport={{ once: true, margin: '-30%' }}
               initial='hidden'
               whileInView='visible'
-              layout='position'
               className='z-30 '
             >
               {personality.feature[lang].map((per, index) => (
@@ -220,7 +220,6 @@ function PersonalityandLanguage() {
                       variants={Welcomevisblecontainer}
                       initial='hidden'
                       whileInView='visible'
-                      viewport={{ once: true, margin: '-30%' }}
                       className={`${
                         per.color1 + ' ' + per.color2
                       }  flex-col flex p-[20px]  my-[20px] text-white/70 h-auto over-hidden rounded-[14px] bg-white/5  pb-[10px] gap-y-[20px]`}
@@ -310,6 +309,7 @@ function PersonalityandLanguage() {
           <motion.div
             layout
             variants={ProgressBarvisblecontainer}
+            viewport={{ once: true, margin: '-30%' }}
             initial='hidden'
             whileInView='visible'
             className='rounded-[28px] flex-1 h-full relative overflow-hidden'

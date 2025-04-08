@@ -113,6 +113,7 @@ function Otherability() {
               key={index + 'skill'}
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: '-30%' }}
               transition={{ delay: index * 0.1, duration: 0.9 }}
               className='flex flex-col text-gradient py-[15px] z-20 gap-[5px] md:pb-[45px]'
             >
