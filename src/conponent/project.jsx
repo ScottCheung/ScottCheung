@@ -165,6 +165,11 @@ function Education({ hideTittle, simpleVer }) {
                     >
                       <div className={`flex items-center `}>
                         {experience.name[lang]}
+                        <i
+                          className={`${experience.status} fi mx-[5px] from-[-20%] to-[120%] ${
+                            simpleVer ? 'text-[15px] ' : 'text-[12px]'
+                          } flex items-center pb-[10px]`}
+                        ></i>
                       </div>
                     </div>
                   </div>
