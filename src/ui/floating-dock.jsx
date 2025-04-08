@@ -116,19 +116,26 @@ function IconContainer({ mouseX, title, icon, href, blank, theme }) {
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className={`relative flex items-center justify-center rounded-[28px]  ${theme !== 'white' ? `group-hover:bg-white` : `group-hover:bg-${theme}/30`}     group-hover:backdrop-blur-[20px] aspect-square dark:bg-neutral-800`}
+        className={`relative flex items-center justify-center rounded-[28px] group-hover:border ${theme !== 'white' ? `group-hover:bg-white border-${theme}` : `group-hover:bg-${theme}/30 border-white/10`}  backdrop-blur-[20px] aspect-square dark:bg-neutral-800`}
       >
         <AnimatePresence>
           {hovered && (
             <motion.div
-              initial={{ opacity: 0, y: 10, x: '-50%' }}
-              animate={{ opacity: 1, y: 0, x: '-50%' }}
-              exit={{ opacity: 0, y: 2, x: '-50%' }}
-              className={`absolute flex text-${theme}-100 z-50  text-${theme} first-line:space-pre -translate-x-1/2 ${theme !== 'white' ? `bg-white` : `bg-${theme}/30`}  rounded-full left-1/2 -top-[60px] w-fit z-50justify-center backdrop-blur-md bg-${theme}/20 bg-${theme}-900 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800`}
+              initial={{ opacity: 0, y: 100, x: '-50%', scale: 0.8 }}
+              animate={{ opacity: 1, y: 0, x: '-50%', scale: 1 }}
+              exit={{ opacity: 0, y: 100, x: '-50%', scale: 0.8 }}
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+              className={`absolute  flex text-${theme}-100 z-50   first-line:space-pre -translate-x-1/2 border ${theme !== 'white' ? `bg-white/30 border-${theme}-900/30 text-${theme}-900` : `bg-${theme}-900/30 border-white/30 text-white`}  rounded-full left-1/2 backdrop-blur-[20px] -top-[60px] w-fit z-50justify-center  bg-${theme}/20 bg-${theme}-900 darrk:text-gray-400 darrk:border-gray-600 darrk:bg-gray-800`}
             >
               <p className='px-6 py-4    duration-100  text-center w-full text-nowrap  text-[10px] lg:text-[15px] '>
                 {title}
               </p>
+              {/* 三角形 */}
+              <div
+                className={`absolute left-1/2 -bottom-[9px] -translate-x-1/2 w-0 h-0 
+      border-l-[8px] border-r-[8px] border-t-[8px]
+      border-l-transparent border-r-transparent ${theme !== 'white' ? `border-${theme}-900` : `border-white/30`} backdrop-blur-[20px] z-30 `}
+              ></div>
             </motion.div>
           )}
         </AnimatePresence>
