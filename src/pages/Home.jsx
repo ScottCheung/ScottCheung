@@ -132,7 +132,7 @@ function Home() {
       className={`relative flex flex-col items-center w-[${viewwidth}px]  overflow-x-clip  bg-[#f5f5f7]`}
     >
       <Navbar topTextColor={true} setIsPaused={setIsPaused} />
-      <Log />
+      {/* <Log /> */}
       <Carousel
         HomeCarousel={HomeCarousel}
         interval={3000}

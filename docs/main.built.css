@@ -1,6 +1,8 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+/** @format */
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 .typography-hero-headline {
   margin-top: 0.25em;
@@ -338,7 +340,7 @@ html {
     Helvetica,
     Arial,
     sans-serif;
-  quotes: "“" "”";
+  quotes: '“' '”';
   --sk-link-disabled-opacity: 0.42;
 }
 
@@ -449,50 +451,50 @@ html {
 
 :lang(cs),
 :lang(de) {
-  quotes: "„" "“";
+  quotes: '„' '“';
 }
 
 :lang(de-CH),
 :lang(de-LI) {
-  quotes: "«" "»";
+  quotes: '«' '»';
 }
 
 :lang(fr) {
-  quotes: "« " " »";
+  quotes: '« ' ' »';
 }
 
 :lang(es-ES),
 :lang(fr-CH) {
-  quotes: "«" "»";
+  quotes: '«' '»';
 }
 
 :lang(hu) {
-  quotes: "„" "“";
+  quotes: '„' '“';
 }
 
 :lang(ja-JP) {
-  quotes: "「" "」";
+  quotes: '「' '」';
 }
 
 :lang(no-NO) {
-  quotes: "«" "»";
+  quotes: '«' '»';
 }
 
 :lang(lt),
 :lang(pl) {
-  quotes: "„" "“";
+  quotes: '„' '“';
 }
 
 :lang(ru) {
-  quotes: "« " " »";
+  quotes: '« ' ' »';
 }
 
 :lang(zh) {
-  quotes: "「" "」";
+  quotes: '「' '」';
 }
 
 :lang(zh-CN) {
-  quotes: "“" "”";
+  quotes: '“' '”';
 }
 
 body {
@@ -633,7 +635,7 @@ input,
 select,
 textarea {
   font-synthesis: none;
-  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: 'kern';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   direction: ltr;
@@ -887,7 +889,7 @@ sub.footnote-reduced {
 .footnote-diamond {
   position: relative;
   vertical-align: initial;
-  font-feature-settings: "numr";
+  font-feature-settings: 'numr';
   font-size: 1em;
 }
 
@@ -912,7 +914,7 @@ sub.footnote-diamond.footnote-reduced {
 .footnote-number {
   position: relative;
   vertical-align: initial;
-  font-feature-settings: "numr";
+  font-feature-settings: 'numr';
   font-size: 1em;
 }
 
@@ -1347,7 +1349,7 @@ abbr {
 
 .selfclear:after,
 .selfclear:before {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -3619,7 +3621,7 @@ abbr {
 
   position: relative;
   z-index: 1;
-  alt: "";
+  alt: '';
   text-decoration: none;
 }
 
@@ -3656,417 +3658,417 @@ abbr {
 
 .icon-apple:after,
 .icon-apple:before {
-  content: "";
+  content: '';
 }
 
 .icon-chevrondown:after,
 .icon-chevrondown:before {
-  content: "";
+  content: '';
 }
 
 .icon-chevrondowncircle:after,
 .icon-chevrondowncircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-chevronleft:after,
 .icon-chevronleft:before {
-  content: "";
+  content: '';
 }
 
 .icon-chevronleftcircle:after,
 .icon-chevronleftcircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-chevronright:after,
 .icon-chevronright:before {
-  content: "";
+  content: '';
 }
 
 .icon-chevronrightcircle:after,
 .icon-chevronrightcircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-chevronup:after,
 .icon-chevronup:before {
-  content: "";
+  content: '';
 }
 
 .icon-chevronupcircle:after,
 .icon-chevronupcircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-downloadcircle:after,
 .icon-downloadcircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-arrowupcircle:after,
 .icon-arrowupcircle:before {
-  content: "􀁶";
+  content: '􀁶';
 }
 
 .icon-external:after,
 .icon-external:before {
-  content: "";
+  content: '';
 }
 
 .icon-share:after,
 .icon-share:before {
-  content: "";
+  content: '';
 }
 
 .icon-search:after,
 .icon-search:before {
-  content: "";
+  content: '';
 }
 
 .icon-arkit:after,
 .icon-arkit:before {
-  content: "";
+  content: '';
 }
 
 .icon-pausecircle:after,
 .icon-pausecircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-pausesolid:after,
 .icon-pausesolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-playcircle:after,
 .icon-playcircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-playsolid:after,
 .icon-playsolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-replay:after,
 .icon-replay:before {
-  content: "";
+  content: '';
 }
 
 .icon-stopcircle:after,
 .icon-stopcircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-stopsolid:after,
 .icon-stopsolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-circle:after,
 .icon-circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-check:after,
 .icon-check:before {
-  content: "";
+  content: '';
 }
 
 .icon-checkcircle:after,
 .icon-checkcircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-checksolid:after,
 .icon-checksolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-reset:after,
 .icon-reset:before {
-  content: "";
+  content: '';
 }
 
 .icon-resetcircle:after,
 .icon-resetcircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-resetsolid:after,
 .icon-resetsolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-exclamation:after,
 .icon-exclamation:before {
-  content: "";
+  content: '';
 }
 
 .icon-exclamationcircle:after,
 .icon-exclamationcircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-exclamationsolid:after,
 .icon-exclamationsolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-exclamationtriangle:after,
 .icon-exclamationtriangle:before {
-  content: "";
+  content: '';
 }
 
 .icon-exclamationtrianglesolid:after,
 .icon-exclamationtrianglesolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-infocircle:after,
 .icon-infocircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-infosolid:after,
 .icon-infosolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-question:after,
 .icon-question:before {
-  content: "";
+  content: '';
 }
 
 .icon-questioncircle:after,
 .icon-questioncircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-questionsolid:after,
 .icon-questionsolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-plus:after,
 .icon-plus:before {
-  content: "";
+  content: '';
 }
 
 .icon-pluscircle:after,
 .icon-pluscircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-plussolid:after,
 .icon-plussolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-minus:after,
 .icon-minus:before {
-  content: "";
+  content: '';
 }
 
 .icon-minuscircle:after,
 .icon-minuscircle:before {
-  content: "";
+  content: '';
 }
 
 .icon-minussolid:after,
 .icon-minussolid:before {
-  content: "";
+  content: '';
 }
 
 .icon-1circle:after,
 .icon-1circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-2circle:after,
 .icon-2circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-3circle:after,
 .icon-3circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-4circle:after,
 .icon-4circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-5circle:after,
 .icon-5circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-6circle:after,
 .icon-6circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-7circle:after,
 .icon-7circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-8circle:after,
 .icon-8circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-9circle:after,
 .icon-9circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-10circle:after,
 .icon-10circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-11circle:after,
 .icon-11circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-12circle:after,
 .icon-12circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-13circle:after,
 .icon-13circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-14circle:after,
 .icon-14circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-15circle:after,
 .icon-15circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-16circle:after,
 .icon-16circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-17circle:after,
 .icon-17circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-18circle:after,
 .icon-18circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-19circle:after,
 .icon-19circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-20circle:after,
 .icon-20circle:before {
-  content: "";
+  content: '';
 }
 
 .icon-close:after,
 .icon-close:before {
-  content: "";
+  content: '';
 }
 
 .icon-closecompact:after,
 .icon-closecompact:before {
-  content: "";
+  content: '';
 }
 
 .icon-paddleleft:after,
 .icon-paddleleft:before {
-  content: "";
+  content: '';
 }
 
 .icon-paddleleftcompact:after,
 .icon-paddleleftcompact:before {
-  content: "";
+  content: '';
 }
 
 .icon-paddleright:after,
 .icon-paddleright:before {
-  content: "";
+  content: '';
 }
 
 .icon-paddlerightcompact:after,
 .icon-paddlerightcompact:before {
-  content: "";
+  content: '';
 }
 
 .icon-paddleup:after,
 .icon-paddleup:before {
-  content: "";
+  content: '';
 }
 
 .icon-paddleupcompact:after,
 .icon-paddleupcompact:before {
-  content: "";
+  content: '';
 }
 
 .icon-paddledown:after,
 .icon-paddledown:before {
-  content: "";
+  content: '';
 }
 
 .icon-paddledowncompact:after,
 .icon-paddledowncompact:before {
-  content: "";
+  content: '';
 }
 
 .icon-thumbnailreplay:after,
 .icon-thumbnailreplay:before {
-  content: "";
+  content: '';
 }
 
 .icon-thumbnailpause:after,
 .icon-thumbnailpause:before {
-  content: "";
+  content: '';
 }
 
 .icon-thumbnailplay:after,
 .icon-thumbnailplay:before {
-  content: "";
+  content: '';
 }
 
 .icon-externalrtl:after,
 .icon-externalrtl:before {
-  content: "";
+  content: '';
 }
 
 .icon-questionrtl:after,
 .icon-questionrtl:before {
-  content: "";
+  content: '';
 }
 
 .icon-questioncirclertl:after,
 .icon-questioncirclertl:before {
-  content: "";
+  content: '';
 }
 
 .icon-questionsolidrtl:after,
 .icon-questionsolidrtl:before {
-  content: "";
+  content: '';
 }
 
 .more:after,
 .more:before {
-  content: "";
+  content: '';
 }
 
 .more-block {
@@ -4091,17 +4093,17 @@ a.icon-wrapper:hover .icon-copy {
 
 :lang(ar) .icon-question:after,
 :lang(ar) .icon-question:before {
-  content: "";
+  content: '';
 }
 
 :lang(ar) .icon-questioncircle:after,
 :lang(ar) .icon-questioncircle:before {
-  content: "";
+  content: '';
 }
 
 :lang(ar) .icon-questionsolid:after,
 :lang(ar) .icon-questionsolid:before {
-  content: "";
+  content: '';
 }
 
 body {
@@ -4335,14 +4337,14 @@ br.small {
 }
 
 .tile-button-wrapper:focus
-  .tile-button[data-focus-method="mouse"]:not(input):not(textarea):not(select),
+  .tile-button[data-focus-method='mouse']:not(input):not(textarea):not(select),
 .tile-button-wrapper:focus
-  .tile-button[data-focus-method="touch"]:not(input):not(textarea):not(select),
-.tile-button-wrapper:focus[data-focus-method="mouse"]:not(input):not(
+  .tile-button[data-focus-method='touch']:not(input):not(textarea):not(select),
+.tile-button-wrapper:focus[data-focus-method='mouse']:not(input):not(
     textarea
   ):not(select)
   .tile-button,
-.tile-button-wrapper:focus[data-focus-method="touch"]:not(input):not(
+.tile-button-wrapper:focus[data-focus-method='touch']:not(input):not(
     textarea
   ):not(select)
   .tile-button {
@@ -4405,7 +4407,7 @@ br.small {
   height: 20px;
 }
 
-.tile-icon[viewBox="0 0 40 40"] {
+.tile-icon[viewBox='0 0 40 40'] {
   width: 100%;
   height: 100%;
   position: unset;
@@ -4886,17 +4888,17 @@ br.small {
 
 .theme-dark
   .tile-button-wrapper:focus
-  .tile-button[data-focus-method="mouse"]:not(input):not(textarea):not(select),
+  .tile-button[data-focus-method='mouse']:not(input):not(textarea):not(select),
 .theme-dark
   .tile-button-wrapper:focus
-  .tile-button[data-focus-method="touch"]:not(input):not(textarea):not(select),
+  .tile-button[data-focus-method='touch']:not(input):not(textarea):not(select),
 .theme-dark
-  .tile-button-wrapper:focus[data-focus-method="mouse"]:not(input):not(
+  .tile-button-wrapper:focus[data-focus-method='mouse']:not(input):not(
     textarea
   ):not(select)
   .tile-button,
 .theme-dark
-  .tile-button-wrapper:focus[data-focus-method="touch"]:not(input):not(
+  .tile-button-wrapper:focus[data-focus-method='touch']:not(input):not(
     textarea
   ):not(select)
   .tile-button {
@@ -9623,12 +9625,12 @@ body {
   }
 }
 
-[class*="typography-eyebrow"] {
+[class*='typography-eyebrow'] {
   display: block;
   margin-bottom: 0.4em;
 }
 
-[class*="typography-eyebrow"] + * {
+[class*='typography-eyebrow'] + * {
   margin-top: 0;
 }
 
