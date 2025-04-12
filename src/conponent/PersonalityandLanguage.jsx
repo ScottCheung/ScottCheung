@@ -231,11 +231,7 @@ function PersonalityandLanguage() {
                       >
                         {per.name}
                       </motion.div>
-                      <motion.div
-                        variants={WelcomeItem}
-                        transition={StagerFadeInUp}
-                        className='flex justify-start  text-[15px] gap-[10px] items-baseline stageX'
-                      >
+                      <motion.div className='flex justify-start  text-[15px] gap-[10px] items-baseline stageX'>
                         <motion.div className='flex  font-[600] '>
                           {per.right}
                           <N className='mx-[10px]' n={per.label} d={2} /> %
