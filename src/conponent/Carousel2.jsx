@@ -75,25 +75,17 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
   // Properly connected slide navigation
   const nextSlide = useCallback(() => {
     if (sliderRef.current) {
-      debounce(
-        () => {
-          sliderRef.current.slickNext();
-        },
-        0,
-        [],
-      );
+      debounce(() => {
+        sliderRef.current.slickNext();
+      }, 0);
     }
   });
 
   const prevSlide = useCallback(() => {
     if (sliderRef.current) {
-      debounce(
-        () => {
-          sliderRef.current.slickPrev();
-        },
-        0,
-        [],
-      );
+      debounce(() => {
+        sliderRef.current.slickPrev();
+      }, 0);
     }
   });
 
