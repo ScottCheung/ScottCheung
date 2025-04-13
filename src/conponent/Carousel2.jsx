@@ -75,17 +75,13 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
   // Properly connected slide navigation
   const nextSlide = useCallback(() => {
     if (sliderRef.current) {
-      debounce(() => {
-        sliderRef.current.slickNext();
-      }, 0);
+      sliderRef.current.slickNext();
     }
   });
 
   const prevSlide = useCallback(() => {
     if (sliderRef.current) {
-      debounce(() => {
-        sliderRef.current.slickPrev();
-      }, 0);
+      sliderRef.current.slickPrev();
     }
   });
 
@@ -250,8 +246,8 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
               <div className='bg-white/200 hover:bg-black/30 hidden lg:flex  transition-all rounded-full backdrop-blur-[5px] '>
                 <motion.button
                   disabled={!isTop}
-                  // onMouseEnter={() => setIsPaused(true)}
-                  // onMouseLeave={() => setIsPaused(false)}
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => setIsPaused(false)}
                   onClick={prevSlide}
                   className='bg-black/20 w-[45px] h-[45px] animate_animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-1000'
                 >
@@ -267,8 +263,8 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
               <div className='bg-white/200 hover:bg-black/30 hidden lg:flex   transition-all  rounded-full backdrop-blur-[5px]  '>
                 <motion.button
                   disabled={!isTop}
-                  // onMouseEnter={() => setIsPaused(true)}
-                  // onMouseLeave={() => setIsPaused(false)}
+                  onMouseEnter={() => setIsPaused(true)}
+                  onMouseLeave={() => setIsPaused(false)}
                   onClick={nextSlide}
                   className='bg-black/20  w-[45px] h-[45px] animate_animated animate__zoomIn flex rounded-full justify-center items-center transition-all duration-1000'
                 >
