@@ -69,7 +69,7 @@ export default function Example() {
 
           <main
             id='main'
-            className='main text-[15px] md:text-[17px] lg:text-[20px]'
+            className='main text-[15px] md:text-[17px] lg:text-[20px] pb-[5vw]'
             role='main'
           >
             <section className='section section-welcome no-pad-bottom welcomeanimation'>
@@ -275,7 +275,6 @@ export default function Example() {
               </div>
             </section>
             <Education hideTittle={true} simpleVer={true} />
-            <WhyMe />
           </main>
         </motion.div>
       </AnimatePresence>

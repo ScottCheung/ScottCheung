@@ -17,6 +17,7 @@ import { debounce } from 'lodash';
 
 const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [debounceTime, setDebounceTime] = useState(300);
 
   const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
   const [progress, setProgress] = useState(0);
@@ -123,10 +124,10 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
       autoplay: false, // 自定义 autoplay 行为
       beforeChange: debounce((_, next) => {
         setActiveIndex(next);
-      }, 1000),
+      }, debounceTime),
       pauseOnHover: false,
     }),
-    [setActiveIndex],
+    [setActiveIndex, debounceTime],
   );
 
   return (
@@ -246,8 +247,14 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
               <div className='bg-white/200 hover:bg-black/30 hidden lg:flex  transition-all rounded-full backdrop-blur-[5px] '>
                 <motion.button
                   disabled={!isTop}
-                  onMouseEnter={() => setIsPaused(true)}
-                  onMouseLeave={() => setIsPaused(false)}
+                  onMouseEnter={() => {
+                    setIsPaused(true);
+                    setDebounceTime(1000);
+                  }}
+                  onMouseLeave={() => {
+                    setIsPaused(false);
+                    setDebounceTime(300);
+                  }}
                   onClick={prevSlide}
                   className='bg-black/20 w-[45px] h-[45px] animate_animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-1000'
                 >
@@ -263,8 +270,14 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
               <div className='bg-white/200 hover:bg-black/30 hidden lg:flex   transition-all  rounded-full backdrop-blur-[5px]  '>
                 <motion.button
                   disabled={!isTop}
-                  onMouseEnter={() => setIsPaused(true)}
-                  onMouseLeave={() => setIsPaused(false)}
+                  onMouseEnter={() => {
+                    setIsPaused(true);
+                    setDebounceTime(1000);
+                  }}
+                  onMouseLeave={() => {
+                    setIsPaused(false);
+                    setDebounceTime(300);
+                  }}
                   onClick={nextSlide}
                   className='bg-black/20  w-[45px] h-[45px] animate_animated animate__zoomIn flex rounded-full justify-center items-center transition-all duration-1000'
                 >
