@@ -13,6 +13,7 @@ import Slider from 'react-slick';
 import SubNav from '../conponent/subNav';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import { debounce } from 'lodash';
 
 const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -74,13 +75,25 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
   // Properly connected slide navigation
   const nextSlide = useCallback(() => {
     if (sliderRef.current) {
-      sliderRef.current.slickNext();
+      debounce(
+        () => {
+          sliderRef.current.slickNext();
+        },
+        0,
+        [],
+      );
     }
   });
 
   const prevSlide = useCallback(() => {
     if (sliderRef.current) {
-      sliderRef.current.slickPrev();
+      debounce(
+        () => {
+          sliderRef.current.slickPrev();
+        },
+        0,
+        [],
+      );
     }
   });
 
@@ -112,17 +125,21 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
     return () => cancelAnimationFrame(frame);
   }, [activeIndex, duration, isPaused]);
 
-  // Slider settings
-  const sliderSettings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false, // Manage our own autoplay with custom duration
-    beforeChange: (_, next) => setActiveIndex(next),
-    pauseOnHover: false,
-  };
+  const sliderSettings = useMemo(
+    () => ({
+      dots: false,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      autoplay: false, // 自定义 autoplay 行为
+      beforeChange: debounce((_, next) => {
+        setActiveIndex(next);
+      }, 1000),
+      pauseOnHover: false,
+    }),
+    [setActiveIndex],
+  );
 
   return (
     <div
