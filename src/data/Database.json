@@ -1309,7 +1309,7 @@
           "link": "https://www.youtube.com/@sydneyscottcheung"
         },
         {
-          "type": ["Ticktok", "Tiktok"],
+          "type": ["Tiktok", "Tiktok"],
           "icon": "fi-brands-tik-tok",
           "blank": "true",
           "name": "scottcheung1110",
