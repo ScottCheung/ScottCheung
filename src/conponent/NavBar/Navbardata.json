@@ -274,6 +274,7 @@
         }
       ]
     },
+
     {
       "name": ["Language", "语言"],
       "button": "LangToggle",
