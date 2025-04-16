@@ -37,7 +37,7 @@
       {
         "title": "Summary",
         "icon": "flex items-center fi fi-rr-user",
-        "content": "A results-driven Full Stack Developer with <s>2 years<s> of experience and can-do attitude. Proficient in <s>React<s>, <s>TypeScript<s>, <s>Next.js<s>, <s>C#<s>, <s>.NET<s>, <s>Redux<s>, Extensive experience with <s>UI/UX Design<s>, <s>CI/C<s>, <s>AWS<s>, <s>Docker<s>. No matter the design complexity, I can transform any design into a top-quality web in <s>Agile<s> workflows."
+        "content": "A results-driven Full Stack Developer with <s>2 years<s> of experience and can-do attitude. Proficient in <s>React<s>, <s>TypeScript<s>, <s>Next.js<s>,  <s>Redux<s>, Extensive experience with <s>UI/UX Design<s>, <s>CI/C<s>, <s>AWS<s>, <s>Docker<s>. No matter the design complexity, I can transform any design into a top-quality web in <s>Agile<s> workflows."
       },
       {
         "title": "Highlights",
@@ -108,13 +108,13 @@
             ],
             "contribution": [
               "Developed and maintained Apps using <s>HTML<s>, <s>CSS<s>, <s>React.js<s>, <s>Next.js<s>, <s>Redux<s>, improving web performance by 20%.",
-              "Developed and maintained RESTful APIs using <s>Node.js<s>, <s>Express.js<s>, <s>C#<s> and <s>.NET<s> following best practices.",
+              "Developed and maintained RESTful APIs using <s>Node.js<s>, <s>Express.js<s> following best practices.",
               "Integrated third-party services such as <s>Twilio<s>, <s>Shopify<s>, <s>Mapbox<s>, <s>Strapi<s> and <s>Stripe<s>, enhancing functionality.",
               "Implemented unit and end-to-end tests using <s>Jest<s> and <s>Cypress<s>, reducing errors by 30%.",
               "Optimized GitHub Actions, Docker, and <s>AWS<s>, cutting deployment time by 50%.",
               "Implemented <s>OAuth<s>, <s>JWT authentication<s>, for secure access to internal APIs, ensuring security best practices.",
               "Implemented <s>i18n solutions<s> using <s>react-i18next<s>, enabling seamless multi-language support.",
-              "Experienced with <s>AWS<s> (<s>EC2<s>, <s>S3<s>, <s>Lambda<s>, <s>Terraform<s>), eager to upskill in Azure cloud technologies.",
+              "Experienced with <s>AWS<s> (<s>EC2<s>, <s>S3<s>), eager to upskill in Azure cloud technologies.",
               "Deployed <s>Nginx<s> for load balancing and traffic routing, and integrated <s>Google Apigee<s> and <s>AWS API Gateway<s> for API management, rate limiting, and security.",
               "Designed UI in <s>Figma<s> and implemented inner design system using <s>Tailwind<s>, <s>Framer Motion<s>, <s>GSAP<s>, and <s>3.js<s>.",
               "Optimized <s>SEO<s> like meta tags, headers, and content structure using <s>Google Analytics<s> and <s>Lighthouse<s>.",

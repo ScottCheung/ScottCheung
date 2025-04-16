@@ -61,7 +61,7 @@ export default function Resume({ printMode }) {
         return (
           <span
             key={index}
-            className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} transition-all  duration-300  group-hover:lg:opacity-70 group-hover:lg:tracking-[1px] opacity-60 font-bold mx-[3px] `}
+            className={`text-${EmphasizeColorLists[forceColor]}-${colorDepth} transition-all  duration-300  group-hoverr:lg:opacity-70 group-hoverr:lg:tracking-[1px] opacity-60 font-bold mx-[3px] `}
           >
             {part.replace(/<s>/g, '')}
           </span>
@@ -82,18 +82,18 @@ export default function Resume({ printMode }) {
   const normaltext = `text-[14px] lg:text-[${scale * 18}px] text-jusify transition-all duration-500`;
   const h2 = `flex tracking-wide items-center text-[18px] lg:text-[${scale * 30}px] font-[700] text-${
     EmphasizeColorLists[forceColor]
-  }-${colorDepth} group-hover:lg:text-${
+  }-${colorDepth} group-hoverr:lg:text-${
     EmphasizeColorLists[forceColor]
   }-${Math.max(colorDepth - 200 || 100)} gap-x-[${scale * 15}px] items-center transition-all duration-500`;
-  const divisionline = `flex-1 h-[${scale * 2}px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:lg:opacity-100  opacity-50 transition-all duration-500`;
-  const division = ` items-center md:flex md:flex-1 h-[${scale * 2}px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hover:lg:opacity-50  opacity-10 transition-all duration-500`;
+  const divisionline = `flex-1 h-[${scale * 2}px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hoverr:lg:opacity-100  opacity-50 transition-all duration-500`;
+  const division = ` items-center md:flex md:flex-1 h-[${scale * 2}px] m-0 rounded-full bg-${EmphasizeColorLists[forceColor]}-${colorDepth} group-hoverr:lg:opacity-50  opacity-10 transition-all duration-500`;
   const divisionCol = `flex w-[${1}px] h-2 bg-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
-  const h3 = `flex tracking-[1px] text-nowrap items-center text-[9px] md:text-[13px] lg:text-[${scale * 20}px] font-bold flex group-hover:lg:text-[${scale * 22}px] transition-all  duration-500`;
-  const workPartTitle = `flex tracking-[1px] items-center text-[12px] md:text-[23px] group-hover:lg:text-[${scale * 28}px] transition-all duration-500 font-bold flex-wrap`;
+  const h3 = `flex tracking-[1px] text-nowrap items-center text-[9px] md:text-[13px] lg:text-[${scale * 20}px] font-bold flex group-hoverr:lg:text-[${scale * 22}px] transition-all  duration-500`;
+  const workPartTitle = `flex tracking-[1px] items-center text-[12px] md:text-[23px] group-hoverr:lg:text-[${scale * 28}px] transition-all duration-500 font-bold flex-wrap`;
   const h4 = `flex items-center text-[10px] lg:text-[${scale * 15}px] text-gray-500 flex items-center`;
-  const timetext = `flex items-center text-[10px]  lg:text-[${scale * 15}px]  font-[500] text-gray-400  transition-all duration-500  group-hover:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
-  const whymeIcon = `text-[14px] lg:text-[20px] flex justify-center items-center text-gray-400 group-hover:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth} `;
-  const whymelable = `text-[8px] lg:text-[12px] text-gray-400  group-hover:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
+  const timetext = `flex items-center text-[10px]  lg:text-[${scale * 15}px]  font-[500] text-gray-400  transition-all duration-500  group-hoverr:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
+  const whymeIcon = `text-[14px] lg:text-[20px] flex justify-center items-center text-gray-400 group-hoverr:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth} `;
+  const whymelable = `text-[8px] lg:text-[12px] text-gray-400  group-hoverr:lg:text-${EmphasizeColorLists[forceColor]}-${colorDepth}`;
   const contentContainer = `flex-1 flex flex-col justify-between`;
   const strong = `flex mr-2 mt-2 tracking-wide font-bold  pr-1 -ml-1  text-${EmphasizeColorLists[forceColor]}-${colorDepth - 100} transition-all duration-500`;
 
@@ -204,7 +204,7 @@ export default function Resume({ printMode }) {
               {section.content && (
                 <div className={normaltext + ' '}>
                   <p
-                    className={`group-hover:lg:leading-[${scale * 40}px] text-left lg:text-justify leading-[${scale * 30}px] transition-all duration-500`}
+                    className={`group-hoverr:lg:leading-[${scale * 40}px] text-left lg:text-justify leading-[${scale * 30}px] transition-all duration-500`}
                   >
                     {parseText(section.content)}
                   </p>
@@ -291,7 +291,7 @@ export default function Resume({ printMode }) {
                     ([category, list], index) => (
                       <div
                         key={index}
-                        className={`flex relative group-hover:lg:my-[${scale * 20}px] my-[${scale * 15}px] transition-all duration-500 justify-between leading-${scale * 8} mb-[${scale * 10}px] items-start md:items-center gap-x-[${scale * 30}px] `}
+                        className={`flex relative group-hoverr:lg:my-[${scale * 20}px] my-[${scale * 15}px] transition-all duration-500 justify-between leading-${scale * 8} mb-[${scale * 10}px] items-start md:items-center gap-x-[${scale * 30}px] `}
                       >
                         <h2 className={h3}>{category}</h2>
 
@@ -312,7 +312,7 @@ export default function Resume({ printMode }) {
                                 target='_blank'
                                 rel='noopener noreferrer'
                                 href={`https://zh.wikipedia.org/wiki/${encodeURIComponent(tag)}`}
-                                className='text-gray-600 group-hover:lg::underline'
+                                className='text-gray-600 group-hoverr:lg::underline'
                               >
                                 {tag}
                               </a>
@@ -351,7 +351,7 @@ export default function Resume({ printMode }) {
                             className={`${printMode ? 'flex-wrap' : 'justify-between'} justify-between flex  flex-1 w-full `}
                           >
                             <p
-                              className={`${h3} cursor-pointer group-hover:lg:bold h-[${scale * 30}px] flex flex-1 justify-start`}
+                              className={`${h3} cursor-pointer group-hoverr:lg:bold h-[${scale * 30}px] flex flex-1 justify-start`}
                             >
                               {edu.school}
                             </p>
@@ -384,11 +384,11 @@ export default function Resume({ printMode }) {
                           </div>
 
                           <div
-                            className={`${normaltext} duration-300 group-hover:lg:text-${EmphasizeColorLists[forceColor]}-${
+                            className={`${normaltext} duration-300 group-hoverr:lg:text-${EmphasizeColorLists[forceColor]}-${
                               colorDepth - 100
                             }`}
                           >
-                            <p className='tracking-widest group-hover:lg:underline'>
+                            <p className='tracking-widest group-hoverr:lg:underline'>
                               {edu.major}
                             </p>
                           </div>
@@ -449,13 +449,13 @@ export default function Resume({ printMode }) {
                         <p
                           className={
                             normaltext +
-                            ' group-hover:lg:my-[20px] transition-all duration-500'
+                            ' group-hoverr:lg:my-[20px] transition-all duration-500'
                           }
                         >
                           {parseText(work.des)}
                         </p>
                         <p
-                          className={`${printMode ? 'flex' : ''}  md:flex group-hover:lg:my-[${scale * 30}px] text-[10px] lg:text-[${scale * 15}px] transition-all duration-500`}
+                          className={`${printMode ? 'flex' : ''}  md:flex group-hoverr:lg:my-[${scale * 30}px] text-[10px] lg:text-[${scale * 15}px] transition-all duration-500`}
                         >
                           <p className='flex flex-wrap items-center font-bold text-gray-600 '>
                             {work.skill.map((skill, index) => (
@@ -477,7 +477,7 @@ export default function Resume({ printMode }) {
                           {work.contribution.map((item, index) => (
                             <li
                               key={index}
-                              className='ml-[40px] mb-4 text-left lg:text-justify list-disc group-hover:lg:my-[20px] transition-all duration-500'
+                              className='ml-[40px] mb-4 text-left lg:text-justify list-disc group-hoverr:lg:my-[20px] transition-all duration-500'
                             >
                               {parseText(item)}
                             </li>
@@ -509,7 +509,7 @@ export default function Resume({ printMode }) {
                           {project.name}
                           {project.link && (
                             <div
-                              className={`flex items-center group-hover:lg:opacity-100  opacity-50 text-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
+                              className={`flex items-center group-hoverr:lg:opacity-100  opacity-50 text-${EmphasizeColorLists[forceColor]}-${colorDepth}`}
                             >
                               <p
                                 className={`ml-[5px] lg:ml-[${scale * 10}px] text-[10px] lg:text-[${scale * 15}px]  font-black`}
@@ -555,7 +555,7 @@ export default function Resume({ printMode }) {
                         className={`${normaltext} pl-[10px] lg:pl-[${scale * 20}px]`}
                       >
                         <p
-                          className={`${printMode ? 'flex' : ''} md:flex group-hover:lg:my-[${scale * 30}px] transition-all duration-500`}
+                          className={`${printMode ? 'flex' : ''} md:flex group-hoverr:lg:my-[${scale * 30}px] transition-all duration-500`}
                         >
                           <strong className={strong}>Desceription:</strong>
                           <p className='flex items-center font-bold text-gray-600'>
@@ -564,7 +564,7 @@ export default function Resume({ printMode }) {
                         </p>
                         <strong className={strong}>Skills:</strong>
                         <p
-                          className={`${printMode ? 'flex' : ''}  md:flex group-hover:lg:my-[${scale * 30}px] text-[10px] lg:text-[${scale * 15}px] transition-all duration-500`}
+                          className={`${printMode ? 'flex' : ''}  md:flex group-hoverr:lg:my-[${scale * 30}px] text-[10px] lg:text-[${scale * 15}px] transition-all duration-500`}
                         >
                           <p className='flex flex-wrap items-center font-bold text-gray-600 '>
                             {project.skill.map((skill, index) => (
@@ -588,7 +588,7 @@ export default function Resume({ printMode }) {
                           {project.contribution.map((item, index) => (
                             <li
                               key={index}
-                              className={`mb-${scale * 4} text-left lg:text-justify group-hover:lg:mb-[${scale * 30}px] transition-all duration-500`}
+                              className={`mb-${scale * 4} text-left lg:text-justify group-hoverr:lg:mb-[${scale * 30}px] transition-all duration-500`}
                             >
                               <strong className={strong + ' '}>
                                 <div className='flex'>▸ {item.title}</div>

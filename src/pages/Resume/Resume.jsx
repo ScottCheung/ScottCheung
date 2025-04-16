@@ -7,6 +7,7 @@ import { useLanguage } from '../../help/helpFunction';
 import Navbar from '../../conponent/NavBar/Navbar';
 import CV from './CV_HR';
 import CVs from './CV_ATS';
+import PDF from './pdf';
 import { div } from 'three/examples/jsm/nodes/Nodes.js';
 
 export default function Resume({ print }) {
@@ -47,9 +48,9 @@ export default function Resume({ print }) {
           />
         </div>
       )}
-      {!print && <DockerBar />}
-
-      <div className='flex justify-center w-full h-full '>
+      {/* {!print && <DockerBar />} */}
+      {/* <PDF /> */}
+      <div className='justify-center hidden w-full h-full '>
         <div
           ref={resumeRef}
           className={
