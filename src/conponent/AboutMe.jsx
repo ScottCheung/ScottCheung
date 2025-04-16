@@ -39,26 +39,45 @@ function SelfDescribing() {
   }, []);
 
   const parseText = (text) => {
-    const parts = text.split(/({bold}.*?{bold})/).map((part, index) => {
-      if (part.startsWith('{bold}') && part.endsWith('{bold}')) {
+    const parts = text
+      .split(/({bold}.*?{bold}|{a}.*?{a})/)
+      .map((part, index) => {
+        if (part.startsWith('{bold}') && part.endsWith('{bold}')) {
+          return (
+            <span
+              key={`bold-${index}`}
+              className='text-white mx-[3px] font-[600] text-[15px] md:text-[20px] lg:text-[22px]'
+            >
+              {part.replace(/{bold}/g, '')}
+            </span>
+          );
+        }
+
+        if (part.startsWith('{a}') && part.endsWith('{a}')) {
+          const link = part.replace(/{a}/g, '');
+          return (
+            <a
+              key={`link-${index}`}
+              href={link}
+              target='_blank' // To open in a new tab, if desired
+              rel='noopener noreferrer' // For security best practices
+              className='text-sky-300 mx-[3px] font-[600] border py-[5px] rounded-full text-[10px] px-[30px] md:text-[20px] lg:text-[22px]'
+            >
+              LINK
+            </a>
+          );
+        }
+
         return (
           <span
-            key={index}
-            className='text-white mx-[3px] font-[600] text-[15px] md:text-[20px] lg:text-[22px]'
+            key={`text-${index}`}
+            className='text-white/70 text-[13px] font-[500] md:text-[18px] lg:text-[20px]'
           >
-            {part.replace(/{bold}/g, '')}
+            {part}
           </span>
         );
-      }
-      return (
-        <span
-          className='text-white/70 text-[13px] font-[500]  md:text-[18px] lg:text-[20px]'
-          key={index}
-        >
-          {part}
-        </span>
-      );
-    });
+      });
+
     return parts;
   };
 

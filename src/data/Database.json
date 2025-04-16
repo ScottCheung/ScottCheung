@@ -1161,34 +1161,43 @@
       "pic": "https://cdn.pixabay.com/photo/2014/05/26/09/58/sydney-opera-house-354375_1280.jpg",
       "description": [
         [
-          "Hello, I am {bold}Scott{bold}, I have {bold}2 years{bold} of web development experience and {bold}3 years{bold} of UI/UX design experience and hold a Master’s degree in IT (AI) from {bold}UNSW{bold}. Additionally, I have {bold}dual Bachelor{bold}’s degrees in Management and Engineering. I am proficient in {bold}HTML, CSS, JavaScript, React, Redux, Node.js, Next.js, and Python (Django){bold}, with extensive skills in {bold}GitHub, Figma, UI/UX design, ZSH, CI/CD, AWS (EC2, S3, Lambda), Nginx, and Google Apigee{bold}. I believe I can bring significant value to your company.",
+          "Hello, I am {bold}Scott Cheung{bold}, I have {bold}1.5 years{bold} of web development experience and {bold}a Master’s degree in IT (AI){bold} from {bold}UNSW{bold}. Additionally, I hold a {bold}dual Bachelor’s degree in Management and Engineering{bold} from {bold}Southwest University of Science and Technology{bold}.",
 
-          "What value can I bring to your company?",
+          "I am proficient in {bold}React, Next.js, Tailwind, TypeScript, Node.js, and Python{bold}, with extensive skills in {bold}GitHub, Figma, UI/UX design, Jest, Cypress, Docker, AWS (EC2, S3), and REST APIs{bold}. I believe I can bring significant value to your company.",
 
-          "1. {bold}Technical Expertise{bold} – I can develop, optimize, and maintain your website. Whether it’s improving performance, fixing issues, or building a new website from scratch, I can handle it.",
+          "{bold}What value can I bring to your company?{bold}",
 
-          "2. {bold}Aesthetic Value{bold} – I have a background in UI/UX design and have independently delivered design projects before. This allows me to pay attention to aesthetic details that many developers might overlook.",
+          "1. {bold}Technical Expertise{bold} – I can develop, optimize, and maintain high-quality web applications, whether it’s improving performance, fixing issues, or building new features. I also focus on writing clean, reusable code to ensure scalability.",
 
-          "3. {bold}Business Impact{bold} – As a web developer, I don’t just focus on coding; I also care about your product and business goals. With my management background, I can analyze data to track user behavior and help you understand what content attracts users the most.",
+          "2. {bold}UI/UX Focus{bold} – With my background in UI/UX design and hands-on experience in translating Figma designs to functional components, I focus on creating user-centered and visually appealing interfaces.",
 
-          "What is the status of my visa?",
+          "3. {bold}Business Impact{bold} – As a developer with a management background, I can bridge the gap between technical development and business goals. I am capable of tracking and analyzing user behavior to provide insights that drive product and business success.",
 
-          "I hold {bold}sub-class 485{bold}. My visa will expire on {bold}11/10/2029{bold}, the same period as {bold}PR{bold}. I don’t need sponsorship."
+          "{bold}What is the status of my visa?{bold}",
+
+          "I hold {bold}sub-class 485{bold} ( expire on {bold}11/10/2029 , 5 years  {bold} ), the same period as {bold}Permanent Residency{bold}. I don’t need sponsorship. ",
+
+          "Feel free to call me on {bold}0434344292{bold} {a}tel:+61434344292{a}.",
+
+          "Or message me on LinkedIn {bold}scottcheung1110{bold} {a}http://www.linkedin.com/in/scottcheung1110{a}.",
+          "Or mail me on {bold}xianzhe.site@gmail.com{bold} {a}https://mailto:xianzhe.site@gmail.com{a}."
         ],
         [
-          "你好，我是{bold}Scott{bold}，我有{bold}2年{bold}的Web开发经验和{bold}3年{bold}的UI/UX设计经验，并拥有{bold}UNSW{bold}的IT（人工智能）硕士学位。此外，我还拥有{bold}管理和工程{bold}双学士学位。我熟悉{bold}HTML、CSS、JavaScript、React、Redux、Node.js、Next.js和Python（Django）{bold}，并具备{bold}GitHub、Figma、UI/UX设计、ZSH、CI/CD、AWS（EC2、S3、Lambda）、Nginx和Google Apigee{bold}等方面的丰富技能。我相信我能为贵公司带来重要价值。",
+          "你好，我是{bold}张贤哲{bold}，我有{bold}1.5年{bold}的Web开发经验，并拥有{bold}UNSW{bold}的IT（人工智能）硕士学位。此外，我还持有{bold}西南科技大学{bold}的{bold}管理学和工程学双学士学位{bold}。",
 
-          "我能为贵公司带来哪些价值？",
+          "我熟练使用{bold}React, Next.js, Tailwind, TypeScript, Node.js 和 Python{bold}，并具备丰富的技能，涵盖{bold}GitHub, Figma, UI/UX设计, Jest, Cypress, Docker, AWS（EC2, S3）以及REST API{bold}等技术。我相信我能为贵公司带来重要价值。",
 
-          "1. {bold}技术专长{bold} – 我可以开发、优化和维护您的网站。无论是提升性能、修复问题，还是从零开始构建新网站，我都能胜任。",
+          "{bold}我能为贵公司带来哪些价值？{bold}",
 
-          "2. {bold}美学价值{bold} – 我有UI/UX设计背景，并曾独立完成设计项目。这使我能关注许多开发者可能忽略的美学细节。",
+          "1. {bold}技术专长{bold} – 我能够开发、优化和维护高质量的Web应用程序，无论是提升性能、修复问题，还是构建新功能。我注重编写清晰、可复用的代码，确保应用程序具备可扩展性。",
 
-          "3. {bold}商业影响{bold} – 作为一名Web开发者，我不仅关注编码，还关心产品和业务目标。凭借我的管理背景，我可以分析数据，跟踪用户行为，并帮助您了解哪些内容最能吸引用户。",
+          "2. {bold}UI/UX关注{bold} – 拥有UI/UX设计背景，并有将Figma设计转换为功能性组件的实践经验，我专注于创建以用户为中心且视觉上吸引人的界面。",
 
-          "我的签证状态是什么？",
+          "3. {bold}商业影响{bold} – 作为拥有管理背景的开发者，我能够弥合技术开发和商业目标之间的差距。我能够追踪并分析用户行为，提供有助于推动产品和商业成功的见解。",
 
-          "我持有{bold}485子类签证{bold}。我的签证将于{bold}2029年10月11日{bold}到期，与{bold}PR{bold}的有效期相同。我不需要担保。"
+          "{bold}我的签证状态是什么？{bold}",
+
+          "我持有{bold}485子类签证{bold}，我的签证将于{bold}2029年10月11日 ( 5 年 ) {bold}到期，与{bold}Permanent Residency{bold}的有效期相同。我不需要担保。"
         ]
       ]
     },

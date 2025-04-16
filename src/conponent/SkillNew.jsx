@@ -203,7 +203,7 @@ function Skill() {
               <motion.div
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
-                transition={{ ease: [0.455, 0.03, 0.515, 0.955], duration: 2 }}
+                transition={{ duration: 3 }}
                 className={`inline-flex items-center justify-center transition-all text-6xl md:text-7xl lg:text-8xl z-30 from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-r text-transparent bg-clip-text text-center mt-[30px] mb-[80px]`}
               >
                 <i className='flex items-center fi fi-rr-circle-user mr-[20px] text-transparent bg-clip-text'></i>
