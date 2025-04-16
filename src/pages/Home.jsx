@@ -141,13 +141,15 @@ function Home() {
       ></Carousel>
 
       <GoldenNav />
-
-      <Education />
+      <WorkExperience />
+      <AboutMe />
+      <div className='lg:-mt-[25vh] flex w-full'>
+        <Education />
+      </div>
 
       <KeyFeature viewwidth={viewwidth} />
       <Capability />
-      <WorkExperience />
-      <AboutMe />
+
       <WhyMe mt={true} />
       <Contact />
     </div>

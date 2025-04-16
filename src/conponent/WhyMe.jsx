@@ -230,7 +230,7 @@ function WhyMe({ hideTittle, mt }) {
   const WhyMe = (
     <motion.div
       ref={ref1}
-      className={mt && 'lg:-mt-[25vh]' + ` mb-[100px] w-[${viewwidth}px]`}
+      className={mt && '' + ` mb-[100px] w-[${viewwidth}px]`}
     >
       <motion.div
         style={{

@@ -9,16 +9,6 @@
       "isTopShow": false,
       "scondMenu": [
         {
-          "link": "/#Education",
-          "name": ["Education", "教育"],
-          "icon": "fi-rr-book"
-        },
-        {
-          "link": "/#Capability",
-          "name": ["Capability", "能力"],
-          "icon": "fi-rr-user"
-        },
-        {
           "link": "/#WorkExperience",
           "name": ["Work", "工作"],
           "icon": "fi-rr-tool-box"
@@ -28,6 +18,17 @@
           "name": ["About me", "关于"],
           "icon": "fi-rr-comment-heart"
         },
+        {
+          "link": "/#Education",
+          "name": ["Education", "教育"],
+          "icon": "fi-rr-book"
+        },
+        {
+          "link": "/#Capability",
+          "name": ["Capability", "能力"],
+          "icon": "fi-rr-user"
+        },
+
         {
           "link": "/#WhyMe",
           "name": ["Why me", "优势"],

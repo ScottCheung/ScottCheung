@@ -2,20 +2,6 @@
   "Navbar": {
     "Location": [
       {
-        "id": "/#Education",
-        "label": ["Education", "教育"],
-        "logo": "fi-rr-book",
-        "color1": "from-red-500",
-        "color2": "to-red-700"
-      },
-      {
-        "id": "/#Capability",
-        "label": ["Capability", "能力"],
-        "logo": "fi-rr-user",
-        "color1": "from-orange-500",
-        "color2": "to-amber-500"
-      },
-      {
         "id": "/#WorkExperience",
         "label": ["Work", "工作"],
         "logo": "fi-rr-tool-box",
@@ -29,6 +15,21 @@
         "color1": "from-sky-500",
         "color2": "to-emerald-500"
       },
+      {
+        "id": "/#Education",
+        "label": ["Education", "教育"],
+        "logo": "fi-rr-book",
+        "color1": "from-red-500",
+        "color2": "to-red-700"
+      },
+      {
+        "id": "/#Capability",
+        "label": ["Capability", "能力"],
+        "logo": "fi-rr-user",
+        "color1": "from-orange-500",
+        "color2": "to-amber-500"
+      },
+
       {
         "id": "/#WhyMe",
         "label": ["Why me", "优势"],
@@ -1179,7 +1180,7 @@
 
           "Feel free to call me on {bold}0434344292{bold} {a}tel:+61434344292{a}.",
 
-          "Or message me on LinkedIn {bold}scottcheung1110{bold} {a}http://www.linkedin.com/in/scottcheung1110{a}.",
+          "Or message me on {bold}LinkedIn{bold} {a}http://www.linkedin.com/in/scottcheung1110{a}.",
           "Or mail me on {bold}xianzhe.site@gmail.com{bold} {a}https://mailto:xianzhe.site@gmail.com{a}."
         ],
         [
