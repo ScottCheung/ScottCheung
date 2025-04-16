@@ -37,7 +37,7 @@
       {
         "title": "Summary",
         "icon": "flex items-center fi fi-rr-user",
-        "content": "A results-driven Full Stack Developer with <s>2 years<s> of experience and can-do attitude. Proficient in <s>React<s>, <s>TypeScript<s>, <s>Next.js<s>,  <s>Redux<s>, Extensive experience with <s>UI/UX Design<s>, <s>CI/C<s>, <s>AWS<s>, <s>Docker<s>. No matter the design complexity, I can transform any design into a top-quality web in <s>Agile<s> workflows."
+        "content": "Junior web Developer with 1.5+ years of experience building UI-rich, responsive web applications. Proficient in React, Next.js, Tailwind, and Framer Motion; skilled at implementing Figma designs into functional UIs. Focused on clean code, reusable components, and contributing to user-centered products."
       },
       {
         "title": "Highlights",
@@ -87,7 +87,7 @@
             "title": "Web Developer",
             "location": "Sydney",
             "name": "Gobell Membership System",
-            "period": "Oct 2023 - Present",
+            "period": "Oct 2023 - Mar 2025",
             "des": "Participated in multiple projects, including <s>E-commerce platforms<s>, <s>Tool platforms<s>, and <s>Admin dashboards<s>.",
             "tag": "Web Development",
             "link": "http://m.gobell.au/",
@@ -95,10 +95,10 @@
               "HTML",
               "CSS",
               "TypeScript",
-              "Java",
+
               "React",
               "Next.js",
-              "Spring Boot",
+
               "Tailwind",
               "Framer Motion",
               "Redux",
@@ -106,20 +106,7 @@
               "Figma",
               "AWS Cloud"
             ],
-            "contribution": [
-              "Developed and maintained Apps using <s>HTML<s>, <s>CSS<s>, <s>React.js<s>, <s>Next.js<s>, <s>Redux<s>, improving web performance by 20%.",
-              "Developed and maintained RESTful APIs using <s>Node.js<s>, <s>Express.js<s> following best practices.",
-              "Integrated third-party services such as <s>Twilio<s>, <s>Shopify<s>, <s>Mapbox<s>, <s>Strapi<s> and <s>Stripe<s>, enhancing functionality.",
-              "Implemented unit and end-to-end tests using <s>Jest<s> and <s>Cypress<s>, reducing errors by 30%.",
-              "Optimized GitHub Actions, Docker, and <s>AWS<s>, cutting deployment time by 50%.",
-              "Implemented <s>OAuth<s>, <s>JWT authentication<s>, for secure access to internal APIs, ensuring security best practices.",
-              "Implemented <s>i18n solutions<s> using <s>react-i18next<s>, enabling seamless multi-language support.",
-              "Experienced with <s>AWS<s> (<s>EC2<s>, <s>S3<s>), eager to upskill in Azure cloud technologies.",
-              "Deployed <s>Nginx<s> for load balancing and traffic routing, and integrated <s>Google Apigee<s> and <s>AWS API Gateway<s> for API management, rate limiting, and security.",
-              "Designed UI in <s>Figma<s> and implemented inner design system using <s>Tailwind<s>, <s>Framer Motion<s>, <s>GSAP<s>, and <s>3.js<s>.",
-              "Optimized <s>SEO<s> like meta tags, headers, and content structure using <s>Google Analytics<s> and <s>Lighthouse<s>.",
-              "Worked in <s>Agile environments<s> using <s>Jira<s> or <s>Scrum<s>, collaborating cross-functionally for efficient development."
-            ]
+            "contribution": []
           }
         ]
       },
@@ -127,63 +114,25 @@
         "title": "Skills",
         "icon": "flex items-center fi fi-rr-tool-box",
         "skills": {
-          "Front-end": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "TypeScript",
+          "Core Skills": [
+            "React",
             "Next.js",
-            "Redux",
-            "UI/UX Design",
             "Tailwind",
-            "Framer Motion",
+            "Figma",
+            "UI/UX Design"
+          ],
+          "Testing & Tools": [
             "Jest",
             "Cypress",
-            "Figma",
-            "3.js"
+            "GitHub Actions",
+            "Lighthouse"
           ],
-          "Back-end": [
+          "Back-end & Infra": [
             "Node.js",
             "Python",
-            "C#",
-            ".NET",
-            "Java",
-            "RESTful API",
-            "GraphQL",
-            "FastAPI",
-            "OpenAPIs",
-            "Apollo Studio"
-          ],
-          "Database": [
-            "MySQL",
-            "PostgreSQL",
-            "MongoDB",
-            "Firebase",
-            "Neo4j",
-            "Navicat",
-            "Tableau",
-            "PowerBI",
-            "Python",
-            "Pandas"
-          ],
-          "AI Algorithms": [
-            "Machine Learning",
-            "Deep Learning",
-            "Natural Language Processing",
-            "Recommend System"
-          ],
-          "IT Tools": [
-            "GitHub",
-            "CI/CD",
-            "Docker",
-            "AWS (EC2, S3, Lambda, Terraform)",
-            "Shell",
-            "Jira",
-            "Postman",
-            "OpenAPI",
-            "Navicat",
-            "ZSH",
-            "Lighthouse"
+            "REST APIs",
+            "AWS (EC2, S3)",
+            "Docker"
           ]
         }
       },
@@ -288,9 +237,9 @@
         {
           "name": "检查更新",
           "update": "v 7.2",
-          "version": "U29TS3HJ",
+          "version": "HYLL51SA",
           "icon": "flex items-center fi fi-rr-clock",
-          "link": "https://xianzhe.site/resumecheck/U29TS3HJ"
+          "link": "https://xianzhe.site/resumecheck/HYLL51SA"
         }
       ]
     },
@@ -298,7 +247,7 @@
       {
         "title": "总结",
         "icon": "flex items-center fi fi-rr-user",
-        "content": "一位结果驱动的全栈开发人员，拥有<s>2年<s>的经验和积极的态度。精通<s>React<s>、<s>TypeScript<s>、<s>Next.js<s>、<s>C#<s>、<s>.NET<s>、<s>Redux<s>，在<s>UI/UX设计<s>、<s>CI/C<s>、<s>AWS<s>、<s>Docker<s>方面有丰富经验。不论设计复杂度如何，我都能将任何设计转化为高质量的网页，并能在<s>敏捷(Agile)<s>工作流程中完成开发。"
+        "content": "Junior web Developer with 1.5+ years of experience building UI-rich, responsive web applications. Proficient in React, Next.js, Tailwind, and Framer Motion; skilled at implementing Figma designs into functional UIs. Focused on clean code, reusable components, and contributing to user-centered products.（麻烦自己翻译一下吧，太忙了，中文没翻。）"
       },
       {
         "title": "亮点",
@@ -348,7 +297,7 @@
             "title": "Web Developer",
             "location": "悉尼",
             "name": "Gobell 会员系统",
-            "period": "2023年10月 - 至今",
+            "period": "2023年10月 - 2025年3月",
             "des": "从零开始开发了多个基于React/Next.js和Redux的管理系统web应用。",
             "tag": "Web 开发",
             "link": "http://m.gobell.au/",
@@ -356,10 +305,10 @@
               "HTML",
               "CSS",
               "TypeScript",
-              "Java",
+
               "React",
               "Next.js",
-              "Spring Boot",
+
               "Tailwind",
               "Framer Motion",
               "Redux",
@@ -367,20 +316,7 @@
               "Figma",
               "AWS Cloud"
             ],
-            "contribution": [
-              "使用<s>HTML<s>、<s>CSS<s>、<s>React.js<s>、<s>Next.js<s>、<s>Redux<s>开发和维护应用程序，提升了20%的网页性能。",
-              "使用<s>Node.js<s>、<s>Express.js<s>、<s>C#<s>和<s>.NET<s>开发和维护RESTful API，遵循最佳实践。",
-              "集成了<s>Twilio<s>、<s>Shopify<s>、<s>Mapbox<s>、<s>Strapi<s>和<s>Stripe<s>等第三方服务，增强了功能。",
-              "使用<s>Jest<s>和<s>Cypress<s>实施了单元测试和端到端测试，减少了30%的错误。",
-              "优化了<s>GitHub Actions<s>、<s>Docker<s>和<s>AWS<s>，将部署时间减少了50%。",
-              "实现了<s>OAuth<s>、<s>JWT认证<s>，确保内部API的安全访问，遵循安全最佳实践。",
-              "使用<s>react-i18next<s>实施了i18n解决方案，支持无缝的多语言支持。",
-              "拥有<s>AWS<s>（<s>EC2<s>、<s>S3<s>、<s>Lambda<s>、<s>Terraform<s>）经验，渴望提升在Azure云技术方面的技能。",
-              "部署了<s>Nginx<s>进行负载均衡和流量路由，集成了<s>Google Apigee<s>和<s>AWS API Gateway<s>进行API管理、速率限制和安全控制。",
-              "使用<s>Figma<s>设计UI，并使用<s>Tailwind<s>、<s>Framer Motion<s>、<s>GSAP<s>和<s>3.js<s>实现了内部设计系统。",
-              "使用<s>Google Analytics<s>和<s>Lighthouse<s>优化了SEO（如meta标签、头部和内容结构）。",
-              "在<s>敏捷环境(Agile)<s>中使用<s>Jira<s>或<s>Scrum<s>，跨职能合作，提升开发效率。"
-            ]
+            "contribution": []
           }
         ]
       },
@@ -388,58 +324,25 @@
         "title": "技能",
         "icon": "flex items-center fi fi-rr-tool-box",
         "skills": {
-          "Front-end": [
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "TypeScript",
+          "Core Skills": [
+            "React",
             "Next.js",
-            "Redux",
-            "UI/UX Design",
             "Tailwind",
-            "Framer Motion",
+            "Figma",
+            "UI/UX Design"
+          ],
+          "Testing & Tools": [
             "Jest",
             "Cypress",
-            "Figma",
-            "3.js"
+            "GitHub Actions",
+            "Lighthouse"
           ],
-          "Back-end": [
+          "Back-end & Infra": [
             "Node.js",
             "Python",
-            "C#",
-            ".NET",
-            "Java",
-            "RESTful API",
-            "GraphQL",
-            "FastAPI",
-            "OpenAPIs",
-            "Apollo Studio"
-          ],
-          "Database": [
-            "MySQL",
-            "PostgreSQL",
-            "MongoDB",
-            "Firebase",
-            "Neo4j",
-            "Navicat",
-            "Tableau",
-            "PowerBI",
-            "Python",
-            "Pandas"
-          ],
-          "AI Algorithms": ["机器学习", "深度学习", "自然语言处理", "推荐系统"],
-          "IT Tools": [
-            "GitHub",
-            "CI/CD",
-            "Docker",
-            "AWS (EC2, S3, Lambda, Terraform)",
-            "Shell",
-            "Jira",
-            "Postman",
-            "OpenAPI",
-            "Navicat",
-            "ZSH",
-            "Lighthouse"
+            "REST APIs",
+            "AWS (EC2, S3)",
+            "Docker"
           ]
         }
       },

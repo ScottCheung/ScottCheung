@@ -33,14 +33,7 @@ const tabs = [
     color2: '[#6DD400]',
     contentKey: 'database',
   },
-  {
-    label: ['Algorithm', '算法'],
-    color1: '[#CB2C14]',
-    ratio1: '[-50%]',
-    ratio2: '[150%]',
-    color2: '[#FFA221]',
-    contentKey: 'algorithm',
-  },
+
   {
     label: ['Other', '其他'],
     color1: '[#00f2fe]',
@@ -121,7 +114,6 @@ function Skill() {
               >
                 <motion.div
                   className={`flex flex-shrink-0 justify-center items-center w-[50px] h-[50px] p-[10px] from-[-200%] to-[200%] bg-gradient-to-br rounded-[9px]`}
-                  transition={{ duration: 1, delay: index * 0.15 }}
                 >
                   <img loading='lazy' src={skill.image} alt={skill.name} />
                 </motion.div>

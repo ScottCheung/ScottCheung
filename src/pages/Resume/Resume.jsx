@@ -7,7 +7,6 @@ import { useLanguage } from '../../help/helpFunction';
 import Navbar from '../../conponent/NavBar/Navbar';
 import CV from './CV_HR';
 import CVs from './CV_ATS';
-import PDF from './pdf';
 import { div } from 'three/examples/jsm/nodes/Nodes.js';
 
 export default function Resume({ print }) {
@@ -48,20 +47,34 @@ export default function Resume({ print }) {
           />
         </div>
       )}
-      {/* {!print && <DockerBar />} */}
+      {!print && <DockerBar />}
       {/* <PDF /> */}
-      <div className='justify-center hidden w-full h-full '>
+      <div className='flex justify-center w-full h-full '>
         <div
           ref={resumeRef}
           className={
             print ? 'w-full h-full ' : (
-              'mt-[220px] pb-[160px] max-w-[1200px] overflow-hidden flex justify-center items-center h-full flex-col'
+              'mt-[120px] pb-[160px] max-w-[1200px] overflow-hidden flex justify-center items-center h-full flex-col'
             )
           }
         >
           <div className='sticky md:relative -top-8 z-0   flex py-[10px] flex-col items-center justify-center lg:mt-12 group overflow-hidden'>
             <div className='flex items-center justify-center gap-8 mt-4 '>
-              <div
+              {/* Download */}
+              <motion.a
+                href='https://github.com/Xianzhezhang97/download/raw/main/CV%20%7C%20Scott%20Cheung.pdf'
+                blank
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+                className='flex text-white bg-sky-800 text-[2em] relative rounded-full px-6 py-3 cursor-pointer'
+              >
+                {['Download CV', '下载英文简历'][lang]}
+              </motion.a>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 2 }}
                 onClick={toggleResumeMode}
                 className='inline-flex items-center justify-between px-1 py-1 overflow-hidden text-sm text-gray-700 transition-all bg-gray-200 rounded-full cursor-pointer dark:bg-gray-800 dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700'
               >
@@ -102,7 +115,7 @@ export default function Resume({ print }) {
                     {['HR Mode', 'HR 模式'][lang]}
                   </span>
                 </span>
-              </div>
+              </motion.div>
               {/* 复制按钮 */}
               {isATSMode && (
                 <motion.button
@@ -111,7 +124,7 @@ export default function Resume({ print }) {
                   animate={{ opacity: 1 }}
                   className='flex text-white bg-sky-800 text-[2em] relative rounded-full px-6 py-3 cursor-pointer'
                 >
-                  Copy
+                  Copy Text
                 </motion.button>
               )}
             </div>
