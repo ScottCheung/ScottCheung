@@ -97,7 +97,7 @@ function SelfDescribing() {
   const y = useTransform(
     scrollYProgress,
     [0, 0.4, 0.5, 1.3, 1],
-    ['20vh', '10vh', '0vh', '-90vw', '-145vh'],
+    ['15vh', '10vh', '0vh', '-90vw', '-145vh'],
   );
   const width = useTransform(
     scrollYProgress,
@@ -210,7 +210,7 @@ function SelfDescribing() {
             borderBottomRightRadius: borderBottomRightRadius,
             y: y,
           }}
-          className='sticky top-0 z-20 flex flex-col h-[1520px]  lg:h-[120vh] items-center justify-center w-full'
+          className='sticky top-0 z-20 flex flex-col h-[1520px]  lg:h-[130vh] items-center justify-center w-full'
         >
           <motion.span
             style={{
@@ -221,7 +221,7 @@ function SelfDescribing() {
             className='absolute w-full h-full bg-black/75'
           ></motion.span>
 
-          <div className='visblecontainer py-[20vh] z-30'>
+          <div className='z-30 flex flex-col h-full visblecontainer py-auto'>
             <motion.div
               style={{
                 opacity: opacity,

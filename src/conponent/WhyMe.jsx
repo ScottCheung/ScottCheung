@@ -102,12 +102,9 @@ function WhyMe({ hideTittle, mt }) {
             className={`flex items-center text-5xl fi lg:text-6xl xl:text-8xl  fi-rr-lightbulb-on`}
           ></motion.i>
 
-          <TextAnimate
-            transition={{ duration: 0.3 }}
-            className='flex items-center font-mono text-5xl italic font-black tracking-widest uppercase text-nowrap lg:text-6xl xl:text-8xl'
-            text={lang === 0 || '0' ? 'Why me' : '我的优势'}
-            type='fadeIn'
-          />
+          <h3 className='flex items-center font-mono text-5xl italic font-black tracking-widest uppercase text-nowrap lg:text-6xl xl:text-8xl'>
+            {lang === 0 || '0' ? 'Why me' : '我的优势'}
+          </h3>
         </motion.div>
 
         {/* Item 容器 */}
