@@ -95,7 +95,7 @@ function Home() {
   const keyfeature = Database.PersonalInfo.WhyMe[lang];
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scrollbarWidth, setScrollbarWidth] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
+  const [isPaused, setIsPaused] = useState(true);
   useEffect(() => {
     const div = document.createElement('div');
     div.style.visibility = 'hidden';
