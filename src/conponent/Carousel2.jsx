@@ -177,14 +177,14 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
       if (!isTop) return;
 
       if (e.key === 'ArrowLeft') {
+        e.preventDefault();
         prevSlide();
-        e.preventDefault();
       } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
         nextSlide();
-        e.preventDefault();
       } else if (e.key === ' ' || e.key === 'Spacebar') {
-        setIsPaused(!isPaused);
         e.preventDefault();
+        setIsPaused(!isPaused);
       }
     };
 
