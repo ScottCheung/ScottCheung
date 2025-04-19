@@ -54,14 +54,13 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
 
   // 视口大小监听
   useEffect(() => {
-    const handleResize = debounce(() => {
+    const handleResize = () => {
       setViewportHeight(window.innerHeight);
-    }, 200);
+    };
 
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
-      handleResize.cancel();
     };
   }, []);
 
@@ -84,7 +83,7 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
         observer.unobserve(view.current);
       }
     };
-  }, [setIsPaused]);
+  }, []);
 
   // 帧率监控
   useEffect(() => {
@@ -115,6 +114,124 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
       }
     };
   }, [isTop]);
+
+  // 更智能的触摸事件处理
+  useEffect(() => {
+    const handleTouchStart = (e) => {
+      touchStartRef.current = {
+        x: e.touches[0].clientX,
+        y: e.touches[0].clientY,
+        time: performance.now(),
+      };
+      touchMoveCountRef.current = 0;
+      touchDistanceRef.current = 0;
+      touchTimeRef.current = 0;
+    };
+
+    const handleTouchMove = (e) => {
+      if (!touchStartRef.current) return;
+
+      touchMoveCountRef.current += 1;
+
+      const currentX = e.touches[0].clientX;
+      const deltaX = Math.abs(currentX - touchStartRef.current.x);
+      touchDistanceRef.current = Math.max(touchDistanceRef.current, deltaX);
+    };
+
+    const handleTouchEnd = (e) => {
+      if (!touchStartRef.current) return;
+
+      touchTimeRef.current = performance.now() - touchStartRef.current.time;
+
+      // 结合移动次数、距离和时间来更智能地判断交互类型
+      const isSwipe =
+        touchMoveCountRef.current > 3 &&
+        touchDistanceRef.current > 30 &&
+        touchTimeRef.current < 300;
+
+      const isTap =
+        touchMoveCountRef.current < 3 &&
+        touchDistanceRef.current < 10 &&
+        touchTimeRef.current < 200;
+
+      if (isSwipe) {
+        setInteractionType('swipe');
+        setDebounceTime(1000); // 滑动用长防抖
+      } else if (isTap) {
+        setInteractionType('click');
+        setDebounceTime(0); // 点击不用防抖
+
+        // 短暂延迟后恢复
+        setTimeout(() => {
+          setDebounceTime(1000);
+          setInteractionType('none');
+        }, 500);
+      }
+
+      // 重置触摸状态
+      touchStartRef.current = null;
+    };
+
+    // 添加键盘导航支持
+    const handleKeyDown = (e) => {
+      if (!isTop) return;
+
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevSlide();
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === ' ' || e.key === 'Spacebar') {
+        e.preventDefault();
+        setIsPaused(!isPaused);
+      }
+    };
+
+    const element = view.current;
+    if (element) {
+      element.addEventListener('touchstart', handleTouchStart, {
+        passive: true,
+      });
+      element.addEventListener('touchmove', handleTouchMove, { passive: true });
+      element.addEventListener('touchend', handleTouchEnd);
+      // 添加后监听键盘事件
+      element.setAttribute('tabindex', '0'); // 使元素可聚焦以接收键盘事件
+      element.addEventListener('keydown', handleKeyDown);
+    }
+
+    // 全局键盘事件支持
+    document.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      if (element) {
+        element.removeEventListener('touchstart', handleTouchStart);
+        element.removeEventListener('touchmove', handleTouchMove);
+        element.removeEventListener('touchend', handleTouchEnd);
+        element.removeEventListener('keydown', handleKeyDown);
+      }
+      document.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [isTop, isPaused]);
+
+  const delayTime = 0.17;
+
+  const iconVariants = {
+    paused:
+      'M27,33 L27,15 Q27,12 30,12 L30,12 Q33,12 33,15 L33,33 Q33,36 30,36 L30,36 Q27,36 27,33 M15,33 L15,15 Q15,12 18,12 L18,12 Q21,12 21,15 L21,33 Q21,36 18,36 L18,36 Q15,36 15,33',
+    playing:
+      'M15,33 L15,15 Q15,11 18,12 L24,16 Q24,16 24,16 L24,32 Q24,32 24,32 L18,36 Q15,37 15,33 M24,32 L24,16 Q24,16 24,16 L33,22 Q35,23.3 35,24 L35,24 Q35,24.7 33,26 L24,32 Q24,32 24,32',
+  };
+
+  const prevDurationRef = useRef(null);
+  const duration = useMemo(() => {
+    const newDuration =
+      (HomeCarousel[activeIndex]?.duration || interval) * 1000;
+    if (prevDurationRef.current !== newDuration) {
+      prevDurationRef.current = newDuration;
+    }
+    return prevDurationRef.current;
+  }, [activeIndex]);
 
   // 导航函数增强，添加ARIA支持
   const nextSlide = useCallback(() => {
@@ -182,144 +299,6 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
     },
     [HomeCarousel.length],
   );
-
-  // 在组件变为可见时自动获取焦点
-  useEffect(() => {
-    if (isTop && view.current) {
-      // 确保元素可以获得焦点
-      view.current.focus({ preventScroll: true });
-    }
-  }, [isTop]);
-
-  // 键盘事件处理 - 使用useCallback以避免不必要的重新创建
-  const handleKeyDown = useCallback(
-    (e) => {
-      // 只有当轮播在视口中时才处理键盘事件
-      if (!isTop) return;
-
-      // 调试日志，可以在生产环境删除
-      // console.log('Key pressed:', e.key);
-
-      if (e.key === 'ArrowLeft') {
-        e.preventDefault();
-        prevSlide();
-      } else if (e.key === 'ArrowRight') {
-        e.preventDefault();
-        nextSlide();
-      } else if (e.key === ' ' || e.key === 'Spacebar') {
-        e.preventDefault();
-        setIsPaused(!isPaused);
-        console.log('Spacebar pressed, isPaused now:', isPaused);
-      }
-    },
-    [prevSlide, nextSlide, setIsPaused],
-  );
-
-  // 更智能的触摸事件处理
-  useEffect(() => {
-    const handleTouchStart = (e) => {
-      touchStartRef.current = {
-        x: e.touches[0].clientX,
-        y: e.touches[0].clientY,
-        time: performance.now(),
-      };
-      touchMoveCountRef.current = 0;
-      touchDistanceRef.current = 0;
-      touchTimeRef.current = 0;
-    };
-
-    const handleTouchMove = (e) => {
-      if (!touchStartRef.current) return;
-
-      touchMoveCountRef.current += 1;
-
-      const currentX = e.touches[0].clientX;
-      const deltaX = Math.abs(currentX - touchStartRef.current.x);
-      touchDistanceRef.current = Math.max(touchDistanceRef.current, deltaX);
-    };
-
-    const handleTouchEnd = (e) => {
-      if (!touchStartRef.current) return;
-
-      touchTimeRef.current = performance.now() - touchStartRef.current.time;
-
-      // 结合移动次数、距离和时间来更智能地判断交互类型
-      const isSwipe =
-        touchMoveCountRef.current > 3 &&
-        touchDistanceRef.current > 30 &&
-        touchTimeRef.current < 300;
-
-      const isTap =
-        touchMoveCountRef.current < 3 &&
-        touchDistanceRef.current < 10 &&
-        touchTimeRef.current < 200;
-
-      if (isSwipe) {
-        setInteractionType('swipe');
-        setDebounceTime(1000); // 滑动用长防抖
-      } else if (isTap) {
-        setInteractionType('click');
-        setDebounceTime(0); // 点击不用防抖
-
-        // 短暂延迟后恢复
-        setTimeout(() => {
-          setDebounceTime(1000);
-          setInteractionType('none');
-        }, 500);
-      }
-
-      // 重置触摸状态
-      touchStartRef.current = null;
-    };
-
-    const element = view.current;
-    if (element) {
-      // 确保元素可以获得焦点和接收键盘事件
-      element.setAttribute('tabindex', '0');
-
-      // 触摸事件监听
-      element.addEventListener('touchstart', handleTouchStart, {
-        passive: true,
-      });
-      element.addEventListener('touchmove', handleTouchMove, { passive: true });
-      element.addEventListener('touchend', handleTouchEnd);
-
-      // 键盘事件监听
-      element.addEventListener('keydown', handleKeyDown);
-    }
-
-    // 全局键盘事件支持 - 确保即使焦点不在轮播上也能捕获空格键
-    document.addEventListener('keydown', handleKeyDown);
-
-    return () => {
-      if (element) {
-        element.removeEventListener('touchstart', handleTouchStart);
-        element.removeEventListener('touchmove', handleTouchMove);
-        element.removeEventListener('touchend', handleTouchEnd);
-        element.removeEventListener('keydown', handleKeyDown);
-      }
-      document.removeEventListener('keydown', handleKeyDown);
-    };
-  }, [isTop, handleKeyDown]);
-
-  const delayTime = 0.17;
-
-  const iconVariants = {
-    paused:
-      'M27,33 L27,15 Q27,12 30,12 L30,12 Q33,12 33,15 L33,33 Q33,36 30,36 L30,36 Q27,36 27,33 M15,33 L15,15 Q15,12 18,12 L18,12 Q21,12 21,15 L21,33 Q21,36 18,36 L18,36 Q15,36 15,33',
-    playing:
-      'M15,33 L15,15 Q15,11 18,12 L24,16 Q24,16 24,16 L24,32 Q24,32 24,32 L18,36 Q15,37 15,33 M24,32 L24,16 Q24,16 24,16 L33,22 Q35,23.3 35,24 L35,24 Q35,24.7 33,26 L24,32 Q24,32 24,32',
-  };
-
-  const prevDurationRef = useRef(null);
-  const duration = useMemo(() => {
-    const newDuration =
-      (HomeCarousel[activeIndex]?.duration || interval) * 1000;
-    if (prevDurationRef.current !== newDuration) {
-      prevDurationRef.current = newDuration;
-    }
-    return prevDurationRef.current;
-  }, [activeIndex, interval, HomeCarousel]);
 
   // 处理媒体错误
   const handleMediaError = useCallback((index) => {
