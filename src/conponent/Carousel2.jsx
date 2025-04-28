@@ -632,7 +632,7 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
                 </div>
               </motion.div>
               {/* 模糊背景 */}
-              <div className='absolute lg:hidden z-10 w-full lg:right-0 scale-[4] lg:w-[25%] bottom-0 blur-[5px] lg:blur-[40px] h-[25%] lg:h-full '>
+              <div className='absolute lg:hidden z-10 w-full lg:right-0 scale-[4] lg:w-[25%] bottom-0 blur-[7px] lg:blur-[40px] h-[25%] lg:h-full '>
                 <div className='absolute z-10 w-full h-full bg-black/20'></div>
                 <div className='absolute z-0 w-full h-full '>
                   {item.type === 'image' ?
