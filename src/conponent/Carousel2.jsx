@@ -618,7 +618,7 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
                 className={`absolute flex z-30 w-full  lg:w-[30%] bottom-0 lg:translate-x-[${item.x}] lg:translate-y-[${item.y}] items-center h-[60%] lg:h-auto`}
               >
                 <div className='relative rounded-[38px] p-[30px] lg:hover:scale-[1.01] transition-all  lg:bg-black/30 z-30 lg:backdrop-blur-[40px] flex flex-col items-start justify-center w-full antialiased'>
-                  <h1 className='flex relative z-10 font-sans text-[2rem] lg:text-[4rem] font-bold text-white text-left'>
+                  <h1 className='flex relative z-10 font-sans text-[2rem] mt-[30px] lg:mt-0 lg:text-[4rem] font-bold text-white text-left'>
                     {item.header[lang]}
                   </h1>
 
