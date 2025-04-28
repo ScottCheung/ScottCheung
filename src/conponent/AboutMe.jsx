@@ -13,7 +13,25 @@ import {
 } from 'framer-motion';
 import { useLanguage } from '../help/helpFunction';
 const data = Database.PersonalInfo.SelfDescribing;
-
+const copyToClipboard = async (text) => {
+  try {
+    await navigator.clipboard.writeText(text);
+    console.log('复制成功');
+  } catch (err) {
+    // fallback 方案
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      document.execCommand('copy');
+      console.log('复制成功 (fallback)');
+    } catch (error) {
+      console.error('复制失败', error);
+    }
+    document.body.removeChild(textarea);
+  }
+};
 function SelfDescribing() {
   const lang = useLanguage();
   const [isMobile, setIsMobile] = useState(false);
@@ -40,7 +58,7 @@ function SelfDescribing() {
 
   const parseText = (text) => {
     const parts = text
-      .split(/({bold}.*?{bold}|{a}.*?{a})/)
+      .split(/({bold}.*?{bold}|{a}.*?{a}|{copy}.*?{copy})/)
       .map((part, index) => {
         if (part.startsWith('{bold}') && part.endsWith('{bold}')) {
           return (
@@ -61,10 +79,22 @@ function SelfDescribing() {
               href={link}
               target='_blank' // To open in a new tab, if desired
               rel='noopener noreferrer' // For security best practices
-              className='text-sky-300 mx-[3px] font-[600] border py-[5px] rounded-full text-[10px] px-[30px] md:text-[20px] lg:text-[22px]'
+              className='text-sky-300 mx-[3px] my-[5px] font-[600] border py-[5px] rounded-full text-[10px] px-[30px] md:text-[20px] lg:text-[22px]'
             >
               LINK
             </a>
+          );
+        }
+        if (part.startsWith('{copy}') && part.endsWith('{copy}')) {
+          const context = part.replace(/{copy}/g, '');
+          return (
+            <button
+              key={`copy-${index}11`}
+              onClick={() => copyToClipboard(context)}
+              className='text-sky-300 mx-[3px] my-[5px] font-[600] border py-[5px] rounded-full text-[10px] px-[30px] md:text-[20px] lg:text-[22px]'
+            >
+              Copy
+            </button>
           );
         }
 

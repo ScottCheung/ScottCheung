@@ -43,7 +43,7 @@ const VideoPlayer = ({ src, isPlay }) => {
       muted
       autoPlay
       playsInline
-      className='object-cover w-full h-full'
+      className='object-cover w-full h-full '
     />
   );
 };

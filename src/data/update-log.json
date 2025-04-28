@@ -3386,5 +3386,32 @@
         "优化首页部分动画细节和逻辑。"
       ]
     ]
+  },
+  "2025-04-28T22:32:16.125Z": {
+    "version": "7.3.0",
+    "time": "2025-04-28T22:32:16.125Z",
+    "author": "Scott Cheung",
+    "address": {
+      "city": "Sydney",
+      "state": "New South Wales",
+      "zipcode": "1001",
+      "loc": "-33.8678,151.2073"
+    },
+    "header": [
+      "Carousel Component UI Update",
+      "Carousel 组件UI更新"
+    ],
+    "new": [
+      [
+        "New UI.",
+        "Support Book function."
+      ],
+      [
+        "全新UI。",
+        "支持预定功能"
+      ]
+    ],
+    "fix": [],
+    "impro": []
   }
 }

@@ -141,31 +141,13 @@ const getGeolocation = async () => {
     // ],
     // impro: [],
 
-    header: ['Carousel Component Update', 'Carousel 组件更新'],
-    new: [],
-    fix: [],
-    impro: [
-      [
-        'Optimize Carousel to use less memory.',
-        'Support dynamic durations for different slides.',
-        'Enable dynamic video loading and autoplay.',
-        'Improve Carousel performance on mobile devices.',
-        'Update video introduction.',
-        "Revise 'About Me' text content.",
-        'Replace awards section images.',
-        'Refine animations and logic on the homepage.',
-      ],
-      [
-        '优化 Carousel 内存占用，减少资源消耗。',
-        '支持不同幻灯片的动态时长调整。',
-        '支持视频动态加载与自动播放。',
-        '优化 Carousel 在移动端的播放流畅度。',
-        '更新视频介绍。',
-        "修改 '关于我' 的文字内容。",
-        '替换 awards 部分的图片。',
-        '优化首页部分动画细节和逻辑。',
-      ],
+    header: ['Carousel Component UI Update', 'Carousel 组件UI更新'],
+    new: [
+      ['New UI.', 'Support Book function.'],
+      ['全新UI。', '支持预定功能'],
     ],
+    fix: [],
+    impro: [],
   };
 
   // 将新日志条目添加到日志字典中，以时间戳作为键
