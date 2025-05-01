@@ -35,7 +35,8 @@ export default function Errorpage() {
       `View Latest ( ${latestContact.update} )`,
       `查看最新版 ( ${latestContact.update} )`,
     ],
-    btn1web: '/resume',
+    btn1web:
+      'https://github.com/Xianzhezhang97/download/blob/main/CV%20%7C%20Scott%20Cheung.pdf',
     btn1Icon: 'fi-rr-home-heart',
     btn2: ['Download Resume', '下载简历'],
     btn2web: '/life',
@@ -155,6 +156,7 @@ export default function Errorpage() {
               style={{ animationDelay: '0.2s' }}
               href={Message.btn1web}
               className={button}
+              target='_blank'
             >
               <i class='flex fi fi-sr-galaxy-star text-[20px]'></i>
 

@@ -91,7 +91,7 @@ export default function Profile() {
               <img
                 loading='lazy'
                 alt='...'
-                src='https://img.picgo.net/2024/12/06/profile26fe37ccfe6ad6d7.png'
+                src='https://img.picgo.net/2025/05/01/profile67e8aecd6a789289.png'
                 className=' rounded-full h-auto absolute -m-[75px] lg:-m-[150px] animate_animated animate__zoomIn'
                 style={{
                   maxWidth: windowWidth > 1080 ? '200px' : '100px',
