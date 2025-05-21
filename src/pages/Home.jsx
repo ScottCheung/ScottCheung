@@ -40,7 +40,7 @@ const HomeCarousel = [
     ],
     duration: 5,
 
-    minisrc: 'https://img.picgo.net/2024/12/09/3d2edd6b52c4ac6f0.jpg',
+    minisrc: 'czs',
     src: 'https://img.picgo.net/2024/12/09/3l8b1011477c0506cc.jpg',
   },
   {
@@ -58,7 +58,7 @@ const HomeCarousel = [
     src: `video/22.MOV`,
   },
   {
-    href: 'https://appt.link/swimming-H87sIi0z/outdoor-adventure',
+    href: 'https://appt.link/swimming-H87sIi0z/study-together',
     type: 'image',
     x: '56vw',
     y: '-520px',
@@ -105,7 +105,7 @@ const HomeCarousel = [
   },
 
   {
-    href: 'https://appt.link/swimming-H87sIi0z/outdoor-adventure',
+    href: 'https://appt.link/swimming-H87sIi0z/',
     type: 'image',
     x: '5vw',
     y: '-470px',
