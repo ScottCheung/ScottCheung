@@ -17,7 +17,7 @@ export default function material() {
   return (
     <div className='overflow-hidden bg-white'>
       <div
-        className='page-overview '
+        className='page-overview'
         data-component-list='PageXpController'
         data-anim-scroll-group='body'
       >
@@ -26,7 +26,7 @@ export default function material() {
         <main id='main' className='' role='main'>
           <section className='section section-welcome no-pad-bottom'>
             <div className='mt-24 section-content-responsive'>
-              <header className='flex flex-col items-center justify-between px-8 lg:flex-row section-header'>
+              <header className='flex flex-col justify-between items-center px-8 lg:flex-row section-header'>
                 <h1 className='flex items-center welcomeanimation font-[600] text-[40px] text-gray-900'>
                   {lang == 1 && '荣誉'}
                   {lang == 0 && 'Awards'}
@@ -41,11 +41,11 @@ export default function material() {
 
           <div className='h-auto md:mx-[10%] p-[10px] text-[13px] md:text-[17px] lg:text-[20px] z-0 welcomeanimation'>
             <div className=' text-gray-500  pb-4 sticky   top-0 z-0 bg-gradient-to-br from-white from-10% via-white via-90% to-white/10  '>
-              <img
+              {/* <img
                 src='https://img.picgo.net/2025/04/03/71F6840E-701F-4957-BAA4-904922B25CA4-45114-00001CFEFCBB9186593d9e13aa52b49a.png'
                 alt='all'
-                className=' contrast-more:'
-              />
+                className='contrast-more:'
+              /> */}
               <p className=' text-justify py-[30px]'>
                 {lang == 1 &&
                   '所有证书真实有效。请注意，所有证书均为真实有效，并已在 2024 年 5 月 13 日进行更新。未经授权，请不要复制或保存。'}
@@ -54,7 +54,7 @@ export default function material() {
               </p>
             </div>
 
-            <div className='relative overflow-x-auto lg:pb-48 scrollbar-hide'>
+            <div className='overflow-x-auto relative lg:pb-48 scrollbar-hide'>
               <motion.table
                 variants={visblecontainer}
                 initial='hidden'

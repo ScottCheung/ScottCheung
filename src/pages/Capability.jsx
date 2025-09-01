@@ -88,7 +88,7 @@ function Capability() {
   }, []);
 
   const Capability = (
-    <div className='relative flex flex-col items-center w-full'>
+    <div className='flex relative flex-col items-center w-full'>
       {/* <div className='absolute translate-y-[40px] flex w-full -mt-[40px] bg-gradient-to-t from-[#494944] to-transparent h-[0px]  -z-10'></div> */}
       {/* <div className='absolute top-0 flex bottom-0 items-center justify-center w-full h-full via-[#131313] bg-gradient-to-b from-[#494944] via-[90%] to-transparent to-[100%]  -z-10'></div> */}
       <div
@@ -98,7 +98,7 @@ function Capability() {
               'calc(50vw - min(1680px, var(--global-viewport-content-responsive)) / 2)'
             : '10px',
         }}
-        className='flex w-full '
+        className='flex w-full'
       >
         {' '}
         <motion.div

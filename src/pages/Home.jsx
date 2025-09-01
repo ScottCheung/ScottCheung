@@ -23,6 +23,7 @@ import Database from '../data/Database.json';
 import { useAppContext } from '../help/ContextManager';
 import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
 import { Header } from '../ui/hero-parallax';
+import CertificateGallery from '../conponent/CertificateGallery';
 
 const bg = Database.PersonalInfo.Welcomebg[0];
 // const path = '../';
@@ -206,17 +207,16 @@ function Home() {
         isPaused={isPaused}
         setIsPaused={setIsPaused}
       ></Carousel>
-
       <GoldenNav />
       <WorkExperience />
       <AboutMe />
-      <div className='lg:-mt-[25vh] flex w-full'>
+
+      <div className='lg:-mt-[25vh] flex flex-col w-full'>
         <Education />
       </div>
-
       <KeyFeature viewwidth={viewwidth} />
-      <Capability />
 
+      <Capability />
       <WhyMe mt={true} />
       <Contact />
     </div>
