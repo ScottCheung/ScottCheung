@@ -141,10 +141,13 @@ const getGeolocation = async () => {
     // ],
     // impro: [],
 
-    header: ['Carousel Component UI Update', 'Carousel 组件UI更新'],
+    header: [
+      'Award page Waterfall Component UI Update',
+      'Award 页面 Waterfall 组件UI更新',
+    ],
     new: [
-      ['New UI.', 'Support Book function.'],
-      ['全新UI。', '支持预定功能'],
+      ['New UI.', 'Support seamless layout function.'],
+      ['全新UI。', '支持无缝排版功能'],
     ],
     fix: [],
     impro: [],
