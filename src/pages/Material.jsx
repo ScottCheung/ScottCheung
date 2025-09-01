@@ -1,6 +1,6 @@
 /** @format */
 
-import Navbar from '../conponent/Navbar/Navbar';
+import Navbar from '../conponent/NavBar/Navbar';
 import Database from '../data/Database.json';
 import { motion, AnimatePresence } from 'framer-motion';
 import Education from '../conponent/Education';

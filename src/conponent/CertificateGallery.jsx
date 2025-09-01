@@ -96,7 +96,7 @@ function CertificateGallery() {
         {hasMore && (
           <motion.button
             onClick={loadMore}
-            className='px-[28px] py-3 mt-8 font-medium text-white text-[20px] bg-sky-500 rounded-full  transition-colors duration-200 hover:bg-sky-600 hover:shadow-xl'
+            className='px-[28px] py-3 mt-8 font-medium text-white text-[20px] bg-sky-900 rounded-full  transition-colors duration-200 hover:bg-sky-600 hover:shadow-xl'
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.99 }}
           >

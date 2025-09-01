@@ -36,8 +36,11 @@
     "three-globe": "^2.31.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "publish": "rm -rf docs && GENERATE_SOURCEMAP=false react-scripts build && mv build docs && echo 'xianzhe.site' > docs/CNAME && git add . && git commit -m 'deploy' && git push",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test",
+    "eject": "react-scripts eject",
+    "publish": "rm -rf docs && GENERATE_SOURCEMAP=false react-app-rewired build && mv build docs && echo 'xianzhe.site' > docs/CNAME && git add . && git commit -m 'deploy' && git push",
     "TW": "tailwindcss build public/style/style.css -o output.css"
   },
   "browserslist": {

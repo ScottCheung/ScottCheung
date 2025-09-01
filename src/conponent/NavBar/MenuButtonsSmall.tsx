@@ -34,18 +34,18 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
   const toggleAccordion = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
-  const BTN = (functionName: keyof typeof functions) => {
-    const functions = {
-      lang0: () => {
-        localStorage.setItem('lang', '0');
-        window.location.reload();
-      },
-      lang1: () => {
-        localStorage.setItem('lang', '1');
-        window.location.reload();
-      },
-    };
+  const functions = {
+    lang0: () => {
+      localStorage.setItem('lang', '0');
+      window.location.reload();
+    },
+    lang1: () => {
+      localStorage.setItem('lang', '1');
+      window.location.reload();
+    },
+  };
 
+  const BTN = (functionName: keyof typeof functions) => {
     return () => {
       if (typeof functions[functionName] === 'function') {
         functions[functionName]();
@@ -66,7 +66,7 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
     <motion.div
       layout
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className={`flex flex-col pl-[15px] w-full -mr-[30px] py-[30px] h-screen overflow-y-auto`}
+      className={`flex overflow-y-auto flex-col w-full h-screen pl-[15px] -mr-[30px] py-[30px]`}
     >
       {data.map((item, index) => (
         <div key={item.name[0]}>
@@ -80,12 +80,12 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
                 style={{ animationDelay: `${index * 0.07}s` }}
                 className={`flex py-5 animate_animated animate__zoomIn place-items-center items-center px-4 cursor-pointer ${
                   isTop ?
-                    'active:bg-gray-900/50 rounded-l-full'
-                  : 'active:bg-gray-300/50 rounded-l-full'
+                    'rounded-l-full active:bg-gray-900/50'
+                  : 'rounded-l-full active:bg-gray-300/50'
                 }`}
               >
                 <div className='flex-shrink-0'>
-                  <div className='flex items-center justify-center w-24 h-24 rounded-full'>
+                  <div className='flex justify-center items-center w-24 h-24 rounded-full'>
                     <i
                       className={`${
                         textColor && isTop ? 'text-white' : 'text-gray-900'
@@ -121,7 +121,7 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
               </div>
             </motion.div>
           </AnimatePresence>
-          <div className='h-auto overflow-hidden'>
+          <div className='overflow-hidden h-auto'>
             <AnimatePresence>
               {openIndex === index && item.scondMenu && (
                 <motion.div
@@ -147,13 +147,13 @@ const NavbarSmallScreen: React.FC<NavbarSmallScreenProps> = ({
                         }}
                         className={`pl-[33px] flex py-6 items-center justify-between  ${
                           isTop ?
-                            'active:bg-gray-900/50 rounded-l-full'
-                          : 'active:bg-gray-300/50 rounded-l-full'
+                            'rounded-l-full active:bg-gray-900/50'
+                          : 'rounded-l-full active:bg-gray-300/50'
                         }`}
                       >
                         <div className='flex items-center'>
                           {' '}
-                          <div className='flex items-center justify-center w-12 h-12 rounded-full'>
+                          <div className='flex justify-center items-center w-12 h-12 rounded-full'>
                             <i
                               className={`${
                                 textColor && isTop ? 'text-white' : (
