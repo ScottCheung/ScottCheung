@@ -15,10 +15,11 @@ export interface WaterfallLayoutProps {
 
 export const WaterfallLayout: React.FC<WaterfallLayoutProps> = ({
   children,
+
   gap = { sm: 16, md: 24, lg: 32, xl: 32 },
   className = '',
   itemClassName = '',
-  minColumnWidth = { sm: 300, md: 300, lg: 300, xl: 300 },
+  minColumnWidth = { sm: 200, md: 300, lg: 300, xl: 300 },
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [layout, setLayout] = useState<{
@@ -40,6 +41,8 @@ export const WaterfallLayout: React.FC<WaterfallLayoutProps> = ({
         : width >= 768 ? gap.md || 16
         : gap.sm || 8;
 
+      const padding = numericGap;
+
       const numericMinWidth =
         typeof minColumnWidth === 'number' ? minColumnWidth
         : width >= 1280 ? minColumnWidth.xl || 300
@@ -47,15 +50,20 @@ export const WaterfallLayout: React.FC<WaterfallLayoutProps> = ({
         : width >= 768 ? minColumnWidth.md || 300
         : minColumnWidth.sm || 300;
 
+      // 计算可用内部宽度（考虑左右 padding）
+      const innerWidth = Math.max(0, width - 2 * padding);
+
       const columnCount = Math.max(
         1,
-        Math.floor((width + numericGap) / (numericMinWidth + numericGap)),
+        Math.floor((innerWidth + numericGap) / (numericMinWidth + numericGap)),
       );
 
       const columnWidth =
-        (width - (columnCount - 1) * numericGap) / columnCount;
+        columnCount > 0 ?
+          (innerWidth - (columnCount - 1) * numericGap) / columnCount
+        : innerWidth;
 
-      return { columns: columnCount, gap: numericGap, columnWidth };
+      return { columns: columnCount, gap: numericGap, columnWidth, padding };
     };
   }, [gap, minColumnWidth]);
 
@@ -63,7 +71,7 @@ export const WaterfallLayout: React.FC<WaterfallLayoutProps> = ({
   const positionItems = () => {
     if (!containerRef.current) return;
 
-    const { columns, gap, columnWidth } = calculateLayout(
+    const { columns, gap, columnWidth, padding } = calculateLayout(
       containerRef.current.offsetWidth,
     );
 
@@ -79,12 +87,10 @@ export const WaterfallLayout: React.FC<WaterfallLayoutProps> = ({
       newItemStyles[index] = {
         position: 'absolute',
         width: `${columnWidth}px`,
-        transform: `translate3d(${
-          columnIndex * (columnWidth + gap)
-        }px, ${minHeight}px, 0)`,
+        transform: `translate3d(${columnIndex * (columnWidth + gap)}px, ${minHeight}px, 0)`,
         transition:
           animationEnabled.current ?
-            'transform 2s cubic-bezier(0.22, 1, 0.36, 1)'
+            'transform 0.9s cubic-bezier(0.22, 1, 0.36, 1)'
           : 'none',
       };
 
@@ -95,6 +101,7 @@ export const WaterfallLayout: React.FC<WaterfallLayoutProps> = ({
       columnWrapperStyle: {
         position: 'relative',
         height: `${Math.max(...columnHeights)}px`,
+        padding: `${padding}px`,
         transition:
           animationEnabled.current ?
             'height 0.9s cubic-bezier(0.22, 1, 0.36, 1)'

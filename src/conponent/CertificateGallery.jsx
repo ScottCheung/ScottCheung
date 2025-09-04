@@ -5,21 +5,34 @@ import { motion } from 'framer-motion';
 import Database from '../data/Database.json';
 import { useLanguage } from '../help/helpFunction';
 import { WaterfallLayout } from './WaterfallLayout/WaterfallLayout';
+import { ImagePreviewModal } from './ImagePreviewModel/ImagePreviewModal';
 
 function CertificateGallery() {
   const lang = useLanguage();
   const picturesDate = Database.PersonalInfo.Certificates[lang];
   const [rowHeights, setRowHeights] = useState([]);
-  const [displayCount, setDisplayCount] = useState(15);
+  const [displayCount, setDisplayCount] = useState(25);
+  // Modal state
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedIndex, setSelectedIndex] = useState(0);
 
   // 获取要显示的证书数据 - 使用 useMemo 优化
   const displayedCertificates = useMemo(() => {
     return picturesDate.slice(0, displayCount);
   }, [picturesDate, displayCount]);
 
+  // Map to modal images format
+  const modalImages = useMemo(() => {
+    return displayedCertificates.map((item, index) => ({
+      id: `${item.award}-${index}`,
+      url: item.src,
+      title: item.award,
+    }));
+  }, [displayedCertificates]);
+
   // 加载更多证书 - 使用 useCallback 优化
   const loadMore = useCallback(() => {
-    setDisplayCount((prev) => Math.min(prev + 15, picturesDate.length));
+    setDisplayCount((prev) => Math.min(prev + 20, picturesDate.length));
   }, [picturesDate.length]);
 
   // 检查是否还有更多证书可以加载
@@ -31,7 +44,7 @@ function CertificateGallery() {
   //   const rows = [];
   //   let currentRow = [];
   //   let currentTop = items[0]?.offsetTop || 0;
-
+  //
   //   items.forEach((item) => {
   //     if (item.offsetTop !== currentTop) {
   //       rows.push(currentRow);
@@ -41,7 +54,7 @@ function CertificateGallery() {
   //     currentRow.push(item);
   //   });
   //   rows.push(currentRow);
-
+  //
   //   const heights = rows.map((row) =>
   //     Math.max(...row.map((item) => item.clientHeight)),
   //   );
@@ -49,7 +62,7 @@ function CertificateGallery() {
   // }, [displayedCertificates]);
 
   return (
-    <div className='flex w-full py-[20vh] items-center justify-center p-2'>
+    <div className='flex w-full py-[20vh] items-center justify-center'>
       <div className='flex flex-col items-center w-full'>
         <WaterfallLayout debounceDelay={500}>
           {displayedCertificates.map((item, index) => (
@@ -61,6 +74,11 @@ function CertificateGallery() {
                 target='_blank'
                 rel='noopener noreferrer'
                 className={`justify-center items-start w-full h-full certificate-item`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  setSelectedIndex(index);
+                  setIsModalOpen(true);
+                }}
               >
                 <motion.div className='flex flex-col justify-start items-start'>
                   <div className='flex rounded-[10px] md:rounded-[28px] w-full backdrop-blur-sm h-auto overflow-hidden border md:p-[14px]  hover:bg-sky-100 justify-center items-center'>
@@ -75,16 +93,15 @@ function CertificateGallery() {
                     />
                   </div>
 
-                  <div className='flex flex-col pt-[20px] px-[20px] justify-start items-start gap-[10px]'>
-                    <div className='flex gap-[10px]'>
-                      <h4 className='flex-1 font-[600] text-gray-900 text-[20px] '>
+                  <div className='flex flex-col pt-[5px] px-[20px] justify-start items-start gap-[10px]'>
+                    <div className='flex flex-col gap-[5px]'>
+                      <h4 className='flex-1 font-[600] text-gray-900 text-[16px] md:text-[20px] lg:text-[23px] '>
                         {item.award}
                       </h4>{' '}
+                      <p className='flex text-gray-500 text-[13px]'>
+                        {item.activity}{' '}
+                      </p>
                     </div>
-
-                    <p className='flex text-gray-500 text-[13px]'>
-                      {item.activity}{' '}
-                    </p>
                   </div>
                 </motion.div>
               </motion.a>
@@ -104,6 +121,13 @@ function CertificateGallery() {
           </motion.button>
         )}
       </div>
+      {isModalOpen && (
+        <ImagePreviewModal
+          images={modalImages}
+          initialIndex={selectedIndex}
+          onClose={() => setIsModalOpen(false)}
+        />
+      )}
     </div>
   );
 }

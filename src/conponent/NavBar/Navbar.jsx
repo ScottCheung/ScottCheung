@@ -54,6 +54,12 @@ function Navbar({
   setIsPaused,
 }) {
   const { Components } = useAppContext();
+  // Safely handle optional setIsPaused prop
+  const setPaused = (value) => {
+    if (typeof setIsPaused === 'function') {
+      setIsPaused(value);
+    }
+  };
   const [hoverTab, setHoverTab] = useState(-1);
   const handleTabChange = (index) => {
     setHoverTab(index);
@@ -197,7 +203,7 @@ function Navbar({
             onMouseLeave={() => {
               setSelectedTab(null);
               handleTabChange(-1);
-              setIsPaused(false);
+              setPaused(false);
             }}
             initial={{ opacity: 0, y: 60 }}
             animate={{ opacity: 1, y: 0 }}
@@ -316,7 +322,7 @@ function Navbar({
                           {navbarItem.map((item, index) => (
                             <motion.div
                               layout='position'
-                              onMouseEnter={() => setIsPaused(true)}
+                              onMouseEnter={() => setPaused(true)}
                               key={item.name}
                               initial={{ opacity: 0, y: 30 }}
                               animate={{
