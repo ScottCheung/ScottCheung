@@ -171,7 +171,7 @@ export const ImagePreviewModal = forwardRef<
               key={image.id}
               style={{
                 // maxWidth: '100%',
-                maxHeight: '80vh',
+                maxHeight: '90vh',
                 objectFit: 'contain',
                 borderRadius: borderRadiusTransform,
               }}
@@ -293,7 +293,7 @@ export const ImagePreviewModal = forwardRef<
               </motion.div>
             </div>
             {/* Bottom Thumbnails */}
-            {images.length > 1 && (
+            {/* {images.length > 1 && (
               <AnimatePresence>
                 {isPreviewVisible && (
                   <motion.div
@@ -338,7 +338,7 @@ export const ImagePreviewModal = forwardRef<
                   </motion.div>
                 )}
               </AnimatePresence>
-            )}
+            )} */}
           </motion.div>
         )}
       </AnimatePresence>

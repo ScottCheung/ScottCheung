@@ -11,7 +11,7 @@ function CertificateGallery() {
   const lang = useLanguage();
   const picturesDate = Database.PersonalInfo.Certificates[lang];
   const [rowHeights, setRowHeights] = useState([]);
-  const [displayCount, setDisplayCount] = useState(15);
+  const [displayCount, setDisplayCount] = useState(58);
   // Modal state
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
