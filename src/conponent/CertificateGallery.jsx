@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Database from '../data/Database.json';
 import { useLanguage } from '../help/helpFunction';
 import { WaterfallLayout } from './WaterfallLayout/WaterfallLayout';
@@ -11,7 +11,7 @@ function CertificateGallery() {
   const lang = useLanguage();
   const picturesDate = Database.PersonalInfo.Certificates[lang];
   const [rowHeights, setRowHeights] = useState([]);
-  const [displayCount, setDisplayCount] = useState(25);
+  const [displayCount, setDisplayCount] = useState(15);
   // Modal state
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -81,19 +81,26 @@ function CertificateGallery() {
                 }}
               >
                 <motion.div className='flex flex-col justify-start items-start'>
-                  <div className='flex rounded-[10px] md:rounded-[28px] w-full backdrop-blur-sm h-auto overflow-hidden border md:p-[14px]  hover:bg-sky-100 justify-center items-center'>
-                    <img
-                      loading='lazy'
-                      className='flex rounded-[10px] md:rounded-[14px]'
-                      src={item.src.replace(
-                        /\.(png|jpg|jpeg|gif|bmp|svg|webp)$/,
-                        '.md.$1',
-                      )}
-                      alt={item.name}
-                    />
-                  </div>
+                  <motion.div
+                    layoutId={`${item.src}`}
+                    className='transform-gpu'
+                  >
+                    <motion.div className='flex rounded-[10px] md:rounded-[28px] w-full backdrop-blur-sm h-auto overflow-hidden border md:p-[14px]  hover:bg-sky-100 justify-center items-center'>
+                      <motion.img
+                        loading='lazy'
+                        decoding='async'
+                        fetchpriority='low'
+                        className='flex rounded-[10px] md:rounded-[14px]'
+                        src={item.src.replace(
+                          /\.(png|jpg|jpeg|gif|bmp|svg|webp)$/,
+                          '.md.$1',
+                        )}
+                        alt={item.name}
+                      />
+                    </motion.div>
+                  </motion.div>
 
-                  <div className='flex flex-col pt-[5px] px-[20px] justify-start items-start gap-[10px]'>
+                  <div className='flex flex-col pt-[5px] px-[10px] md:px-[20px] justify-start items-start gap-[10px]'>
                     <div className='flex flex-col gap-[5px]'>
                       <h4 className='flex-1 font-[600] text-gray-900 text-[16px] md:text-[20px] lg:text-[23px] '>
                         {item.award}

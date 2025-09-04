@@ -165,7 +165,7 @@ export const ImagePreviewModal = forwardRef<
       id: image.id || `image-preview-${index}`,
       type: image.title ? image.title : `image-${index + 1}`,
       component: (
-        <div className='w-full h-full flex items-center justify-center'>
+        <div className='flex justify-center items-center w-full h-full'>
           <AnimatePresence>
             <motion.img
               key={image.id}
@@ -183,9 +183,9 @@ export const ImagePreviewModal = forwardRef<
                 damping: 20,
                 duration: 0.5,
               }}
-              className=' w-auto h-auto object-contain'
+              className='object-contain w-auto h-auto'
               draggable={false}
-              layoutId={index === currentIndex ? `${image.title}` : undefined}
+              layoutId={index === currentIndex ? `${image.url}` : undefined}
               // layoutId={`${image.title}`}
               // layoutId={index === currentIndex ? `gallery` : undefined}
             />
@@ -198,7 +198,7 @@ export const ImagePreviewModal = forwardRef<
       <AnimatePresence>
         {!isClosing && (
           <motion.div
-            className='fixed inset-0  z-50 flex flex-col h-screen'
+            className='flex fixed inset-0 z-50 flex-col w-screen h-screen'
             onKeyDown={handleKeyDown}
             tabIndex={0}
             initial={{ opacity: 0 }}
@@ -211,7 +211,7 @@ export const ImagePreviewModal = forwardRef<
             <AnimatePresence>
               {
                 <motion.div
-                  className='flex items-center justify-between p-4 z-50 text-white flex-shrink-0'
+                  className='flex z-50 flex-shrink-0 justify-between items-center p-4 text-white'
                   style={{
                     opacity: opacityTransform,
                     y: topBarY,
@@ -228,7 +228,7 @@ export const ImagePreviewModal = forwardRef<
                   <div className='flex gap-2'>
                     <button
                       type='button'
-                      className='p-2 hover:bg-white/10 rounded-full'
+                      className='p-2 rounded-full hover:bg-white/10'
                       onClick={(e) => {
                         e.stopPropagation();
                         togglePreviewVisibility();
@@ -240,7 +240,7 @@ export const ImagePreviewModal = forwardRef<
                     </button>
                     <button
                       type='button'
-                      className='p-2 hover:bg-white/10 rounded-full'
+                      className='p-2 rounded-full hover:bg-white/10'
                       onClick={handleClose}
                     >
                       <X className='w-6 h-6' />
@@ -250,10 +250,10 @@ export const ImagePreviewModal = forwardRef<
               }
             </AnimatePresence>
             {!isPreviewVisible && (
-              <motion.div className='absolute inset-0  z-0 bg-black/50 backdrop-blur-sm'></motion.div>
+              <motion.div className='absolute inset-0 z-0 backdrop-blur-sm bg-black/50'></motion.div>
             )}
             <motion.div
-              className='absolute inset-0  z-0'
+              className='absolute inset-0 z-0'
               style={{
                 backgroundColor: useTransform(
                   opacityTransform,
@@ -266,9 +266,9 @@ export const ImagePreviewModal = forwardRef<
               }}
             ></motion.div>
             {/* Draggable Image Area */}
-            <div className='fixed inset-0 z-0 w-screen h-screen flex items-center justify-center pointer-events-none'>
+            <div className='flex z-0 justify-center items-center w-screen h-full pointer-events-none'>
               <motion.div
-                className='w-full h-full flex items-center justify-center pointer-events-auto'
+                className='flex justify-center items-center w-full h-full pointer-events-auto'
                 style={motionStyle}
                 drag='y'
                 dragConstraints={{ top: 0, bottom: 0 }}
@@ -297,7 +297,7 @@ export const ImagePreviewModal = forwardRef<
               <AnimatePresence>
                 {isPreviewVisible && (
                   <motion.div
-                    className=' absolute bottom-6 left-0 right-0 z-50'
+                    className='flex mt-2 w-full h-40'
                     style={{
                       opacity: opacityTransform,
                       y: bottomBarY,
@@ -310,7 +310,7 @@ export const ImagePreviewModal = forwardRef<
                   >
                     <div
                       ref={thumbnailsContainerRef}
-                      className='flex justify-center gap-2 overflow-x-auto pb-2 scrollbar-hide'
+                      className='flex overflow-x-auto gap-2 justify-center pb-2 scrollbar-hide'
                     >
                       {images.map((image, index) => (
                         <button
@@ -329,7 +329,7 @@ export const ImagePreviewModal = forwardRef<
                           <img
                             src={image.url}
                             alt={`Preview ${index + 1}`}
-                            className='w-full h-full object-cover'
+                            className='object-cover w-full h-full'
                             draggable={false}
                           />
                         </button>
