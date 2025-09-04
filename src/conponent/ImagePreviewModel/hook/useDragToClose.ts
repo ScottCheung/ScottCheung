@@ -1,3 +1,5 @@
+/** @format */
+
 import { useState, useCallback } from 'react';
 import { useMotionValue, useTransform, PanInfo } from 'framer-motion';
 
@@ -17,7 +19,7 @@ export const useDragToClose = ({ onClose }: UseDragToCloseProps) => {
   // Transformations for scale and opacity based on vertical drag
   const scaleTransform = useTransform(y, [-300, 0, 300], [0.2, 1, 0.2]);
   const opacityTransform = useTransform(y, [-100, 0, 100], [0, 1, 0]);
-  const borderRadiusTransform = useTransform(y, [-100, 0, 100], [30, 0, 30]);
+  const borderRadiusTransform = useTransform(y, [-100, 0, 100], [100, 0, 100]);
 
   const onDragStart = useCallback(() => {
     setDragDirection(null);
@@ -39,7 +41,7 @@ export const useDragToClose = ({ onClose }: UseDragToCloseProps) => {
         x.set(offset.x); // allow some horizontal movement for a natural feel
       }
     },
-    [y, x, dragDirection]
+    [y, x, dragDirection],
   );
 
   const onDragEnd = useCallback(
@@ -59,7 +61,7 @@ export const useDragToClose = ({ onClose }: UseDragToCloseProps) => {
         x.set(0);
       }
     },
-    [y, x, onClose, dragDirection]
+    [y, x, onClose, dragDirection],
   );
 
   // Combine styles and handlers for cleaner application in the component

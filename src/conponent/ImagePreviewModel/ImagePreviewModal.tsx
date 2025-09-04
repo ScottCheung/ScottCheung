@@ -171,7 +171,7 @@ export const ImagePreviewModal = forwardRef<
               key={image.id}
               style={{
                 // maxWidth: '100%',
-                maxHeight: '100vh',
+                maxHeight: '80vh',
                 objectFit: 'contain',
                 borderRadius: borderRadiusTransform,
               }}

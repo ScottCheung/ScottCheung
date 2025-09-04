@@ -102,7 +102,7 @@ function CertificateGallery() {
 
                   <div className='flex flex-col pt-[5px] px-[10px] md:px-[20px] justify-start items-start gap-[10px]'>
                     <div className='flex flex-col gap-[5px]'>
-                      <h4 className='flex-1 font-[600] text-gray-900 text-[16px] md:text-[20px] lg:text-[23px] '>
+                      <h4 className='flex-1 font-[600] text-gray-900 text-[16px] md:text-[20px]  '>
                         {item.award}
                       </h4>{' '}
                       <p className='flex text-gray-500 text-[13px]'>
