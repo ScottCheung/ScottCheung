@@ -28,7 +28,7 @@ const bg = Database.PersonalInfo.Welcomebg[0];
 // const path = '../';
 const HomeCarousel = [
   {
-    href: '../Graphs/home_carousel/1.jpg',
+    href: '/Graphs/home_carousel/1.JPG',
     type: 'image',
     x: '56vw',
     y: '-420px',
@@ -38,10 +38,10 @@ const HomeCarousel = [
       'Ever wondered why some components feel buttery smooth while others lag? What makes a component truly "good" — performance, beauty, stability, or reusability? Dive into my thoughts!',
       '有没有想过，为什么有些组件丝滑流畅，而有些卡顿迟钝？什么才是好组件？性能？美观？稳定？复用？来看看我的分享吧',
     ],
-    duration: 5,
+    duration: 7,
 
     minisrc: 'czs',
-    src: 'https://img.picgo.net/2024/12/09/3l8b1011477c0506cc.jpg',
+    src: '/Graphs/home_carousel/1.JPG',
   },
   {
     href: 'https://appt.link/swimming-H87sIi0z/web-conference',
@@ -70,7 +70,7 @@ const HomeCarousel = [
     ],
     duration: 5,
     minisrc: 'https://img.picgo.net/2024/12/09/5e39d2ea1a917a07b.jpg',
-    src: 'https://img.picgo.net/2025/03/18/5l163d3bf3a2f2c513.jpg',
+    src: '/Graphs/home_carousel/3.JPG',
   },
 
   {
@@ -101,7 +101,7 @@ const HomeCarousel = [
     ],
     duration: 5,
     minisrc: 'https://img.picgo.net/2024/12/09/4ad634cc94fd1b09f.jpg',
-    src: 'https://img.picgo.net/2025/03/18/home3793114672391e8ca.jpg',
+    src: '/Graphs/home_carousel/5.JPG',
   },
 
   {
@@ -118,7 +118,7 @@ const HomeCarousel = [
     duration: 5,
 
     minisrc: 'https://img.picgo.net/2024/12/06/15cb61b12c6e29e02.jpg',
-    src: 'https://img.picgo.net/2024/12/06/1lbc776b9e142932e9.jpg',
+    src: '/Graphs/home_carousel/6.JPG',
   },
 
   {
@@ -135,7 +135,7 @@ const HomeCarousel = [
     ],
     duration: 5,
     minisrc: 'https://img.picgo.net/2024/12/06/2560312f7ac7f2885.jpg',
-    src: 'https://img.picgo.net/2024/12/06/2l5853d37bc2e76060.jpg',
+    src: '/Graphs/home_carousel/7.JPG',
   },
   {
     href: 'https://appt.link/swimming-H87sIi0z/photograph',
@@ -150,7 +150,7 @@ const HomeCarousel = [
     ],
     duration: 5,
     minisrc: 'https://img.picgo.net/2024/12/09/4ad634cc94fd1b09f.jpg',
-    src: 'https://img.picgo.net/2024/12/09/4lf9c1d356de742391.jpg',
+    src: '/Graphs/home_carousel/8.JPG',
   },
 ];
 
