@@ -59,13 +59,12 @@ function Education({ hideTittle, simpleVer }) {
           className='col-span-12 group'
         >
           <div
-            className={`${simpleVer ? 'hidden' : ''} rounded-[14px] lg:rounded-[28px] w-full h-auto transition-all duration-300 relative  lg:w-[800px]  lg:h-full overflow-hidden ${
-              hideTittle ? 'bg-white hover:bg-sky-100/50' : 'bg-white'
-            }`}
+            className={`${simpleVer ? 'hidden' : ''} rounded-[14px] lg:rounded-[28px] w-full h-auto transition-all duration-300 relative  lg:w-[800px]  lg:h-full overflow-hidden ${hideTittle ? 'bg-white hover:bg-sky-100/50' : 'bg-white'
+              }`}
           >
             <img
               loading='lazy'
-              src='https://img.picgo.net/2024/12/06/4la21798afeaf25655.jpg'
+              src='Graphs/home/graduate.JPG'
               alt=''
               className='object-cover w-auto h-auto lg:h-full'
             />
@@ -111,16 +110,14 @@ function Education({ hideTittle, simpleVer }) {
             className='col-span-6 group'
           >
             <div
-              className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] transition-all duration-300 relative  w-auto h-auto ${simpleVer ? 'lg:w-[300px]' : 'lg:w-[500px]'}  md:h-auto ${
-                hideTittle ? 'bg-white hover:bg-sky-100/50' : 'bg-white'
-              }`}
+              className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] transition-all duration-300 relative  w-auto h-auto ${simpleVer ? 'lg:w-[300px]' : 'lg:w-[500px]'}  md:h-auto ${hideTittle ? 'bg-white hover:bg-sky-100/50' : 'bg-white'
+                }`}
             >
               <div
-                className={` max-w-[70px] lg:max-w-[120px] h-auto items-center flex justify-center overflow-hidden mb-[14px] md:mb-[14px] ${
-                  Experience.tag[0][0] == 'Bachelor' ?
-                    'rounded-full bg-white '
+                className={` max-w-[70px] lg:max-w-[120px] h-auto items-center flex justify-center overflow-hidden mb-[14px] md:mb-[14px] ${Experience.tag[0][0] == 'Bachelor' ?
+                  'rounded-full bg-white '
                   : ''
-                }  `}
+                  }  `}
               >
                 <img
                   loading='lazy'
@@ -138,7 +135,7 @@ function Education({ hideTittle, simpleVer }) {
                     className={
                       windowWidth > 1024 ?
                         `typography-card-headline font-[600]   duration-300  transition-all text-sky-950 gap-x-[10px]   ${simpleVer ? 'text-[20px] ' : 'text-[35px]  flex group-hover:text-[38px] '}`
-                      : 'text-[13px] md:text-[18px]  font-[600] transition-all flex flex-col md:flex-row  gap-x-[5px]'
+                        : 'text-[13px] md:text-[18px]  font-[600] transition-all flex flex-col md:flex-row  gap-x-[5px]'
                     }
                   >
                     <div
@@ -155,11 +152,10 @@ function Education({ hideTittle, simpleVer }) {
                 {/* Duration */}
                 <motion.div
                   layout
-                  className={`${
-                    windowWidth > 1024 ?
-                      'typography-family-paragraph '
+                  className={`${windowWidth > 1024 ?
+                    'typography-family-paragraph '
                     : ' text-[10px] inline-flex '
-                  } flex justify-center transition-all duration-500 items-center font-[600] w-full  my-2  text-center text-white rounded-[7px] md:rounded-full  lg:text-[15px]  text-justify-between py-2 category bg-sky-900  `}
+                    } flex justify-center transition-all duration-500 items-center font-[600] w-full  my-2  text-center text-white rounded-[7px] md:rounded-full  lg:text-[15px]  text-justify-between py-2 category bg-sky-900  `}
                 >
                   {Experience.time[lang]}
                 </motion.div>

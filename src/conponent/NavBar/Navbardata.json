@@ -1,110 +1,169 @@
 {
   "navbarItem": [
     {
-      "name": ["Home", "主页"],
+      "name": [
+        "Home",
+        "主页"
+      ],
       "href": "/",
       "icon": "fi-rr-home-heart",
-      "des": ["This is Home Page ~", "这个是主页 ~"],
+      "des": [
+        "This is Home Page ~",
+        "这个是主页 ~"
+      ],
       "expression": "❤٩ (◕‿◕｡)۶ 🏠",
       "isTopShow": false,
       "scondMenu": [
         {
           "link": "/#WorkExperience",
-          "name": ["Work", "工作"],
+          "name": [
+            "Work",
+            "工作"
+          ],
           "icon": "fi-rr-tool-box"
         },
         {
           "link": "/#AboutMe",
-          "name": ["About me", "关于"],
+          "name": [
+            "About me",
+            "关于"
+          ],
           "icon": "fi-rr-comment-heart"
         },
         {
           "link": "/#Education",
-          "name": ["Education", "教育"],
+          "name": [
+            "Education",
+            "教育"
+          ],
           "icon": "fi-rr-book"
         },
         {
           "link": "/#Capability",
-          "name": ["Capability", "能力"],
+          "name": [
+            "Capability",
+            "能力"
+          ],
           "icon": "fi-rr-user"
         },
-
         {
           "link": "/#WhyMe",
-          "name": ["Why me", "优势"],
+          "name": [
+            "Why me",
+            "优势"
+          ],
           "icon": "fi-rr-lightbulb-on"
         }
       ]
     },
     {
-      "name": ["Work", "工作"],
+      "name": [
+        "Work",
+        "工作"
+      ],
       "href": "/work",
       "icon": "fi-rr-tool-box",
-      "des": ["Here is my Career part~", "这里是我的工作部分~"],
+      "des": [
+        "Here is my Career part~",
+        "这里是我的工作部分~"
+      ],
       "expression": "(｡◕‿◕｡) 📧",
       "scondMenu": [
         {
           "link": "/resume",
-          "name": ["Career view", "职业速览"],
+          "name": [
+            "Career view",
+            "职业速览"
+          ],
           "icon": "fi-rr-memo-pad",
           "status": "fi-sr-eye"
         },
         {
           "link": "https://github.com/Xianzhezhang97/download/raw/main/CV%20%7C%20Scott%20Cheung.pdf",
           "blank": true,
-          "name": ["Download CV", "简历下载"],
+          "name": [
+            "Download CV",
+            "简历下载"
+          ],
           "icon": "fi-rr-memo-pad",
           "status": "fi-br-download"
         },
         {
           "link": "/coverletters",
-          "name": ["Coverletters", "求职信"],
+          "name": [
+            "Coverletters",
+            "求职信"
+          ],
           "icon": "fi-rr-book",
           "status": "fi-sr-lock"
         },
         {
           "link": "/workbench",
-          "name": ["Workbench", "工具"],
+          "name": [
+            "Workbench",
+            "工具"
+          ],
           "icon": "fi-rr-corporate-alt",
           "status": "fi-sr-lock"
         },
         {
           "link": "/networkingmsg",
-          "name": ["NetWorking", "社交"],
+          "name": [
+            "NetWorking",
+            "社交"
+          ],
           "icon": "fi-rr-network-analytic",
           "status": "fi-sr-eye-crossed"
         }
       ]
     },
     {
-      "name": ["Life", "生活"],
+      "name": [
+        "Life",
+        "生活"
+      ],
       "href": "/life",
       "icon": "fi-rr-mountains",
-      "des": ["My wonderful life ~", "我的精彩生活 ~"],
+      "des": [
+        "My wonderful life ~",
+        "我的精彩生活 ~"
+      ],
       "expression": "(＾◡＾) 🌄",
       "isTopShow": true,
       "scondMenu": [
         {
           "icon": "fi-sr-music-alt",
-          "name": ["Music", "音 乐"],
+          "name": [
+            "Music",
+            "音 乐"
+          ],
           "link": "/music",
           "status": "fi-sr-eye"
         },
         {
           "icon": "fi-sr-user-music",
-          "name": ["Perform", "表 演"],
+          "name": [
+            "Perform",
+            "表 演"
+          ],
           "link": "/perform",
           "status": "fi-sr-eye-crossed"
         },
         {
           "icon": "fi-sr-picture",
-          "name": ["Gallery", "图 库"],
+          "name": [
+            "Gallery",
+            "图 库"
+          ],
           "link": "/gallery",
           "status": "fi-sr-eye"
         },
         {
           "icon": "fi-sr-followcollection",
-          "name": ["Story", "故 事"],
+          "name": [
+            "Story",
+            "故 事"
+          ],
           "link": "/story",
           "status": "fi-sr-eye"
         }
@@ -112,18 +171,26 @@
     },
     {
       "href": "/project",
-      "name": ["Project", "项目"],
+      "name": [
+        "Project",
+        "项目"
+      ],
       "icon": "fi-rr-folder",
       "status": "fi-sr-eye",
-
-      "des": ["My Project demo ~ ", "参与的项目 demo ~ "],
+      "des": [
+        "My Project demo ~ ",
+        "参与的项目 demo ~ "
+      ],
       "expression": "(⌐■_■) 💻",
       "isTopShow": true,
       "scondMenu": [
         {
           "link": "https://igrapher.vercel.app",
           "blank": true,
-          "name": ["Igrapher", "数据可视化工具"],
+          "name": [
+            "Igrapher",
+            "数据可视化工具"
+          ],
           "icon": "fi-rr-network-analytic",
           "des": [
             "Interactive data visualization platform to easily explore data insights.",
@@ -134,7 +201,10 @@
         {
           "link": "https://gobell.vercel.app",
           "blank": true,
-          "name": ["E-Com", "电子商务平台"],
+          "name": [
+            "E-Com",
+            "电子商务平台"
+          ],
           "icon": "fi-rr-shopping-cart",
           "des": [
             "Modern online shopping experience, easy to browse and buy goods.",
@@ -145,7 +215,10 @@
         {
           "link": "https://perfume-pearl.vercel.app",
           "blank": true,
-          "name": ["Perfume", "香水首页"],
+          "name": [
+            "Perfume",
+            "香水首页"
+          ],
           "icon": "fi-rr-air-freshener",
           "des": [
             "Elegant perfume display page, presenting exquisite product details and brand story.",
@@ -156,7 +229,10 @@
         {
           "link": "https://toolslib-delta.vercel.app/",
           "blank": true,
-          "name": ["Tools panel", "工具仪表"],
+          "name": [
+            "Tools panel",
+            "工具仪表"
+          ],
           "icon": "fi-rr-tools",
           "des": [
             "A versatile collection of tools that provide easy daily productivity tools.",
@@ -167,7 +243,10 @@
         {
           "link": "/table2json",
           "blank": true,
-          "name": ["Data converter", "数据转换"],
+          "name": [
+            "Data converter",
+            "数据转换"
+          ],
           "icon": "fi-rr-database",
           "des": [
             "Easy to use data format conversion tool that supports multiple data types.",
@@ -175,11 +254,13 @@
           ],
           "status": "fi-sr-eye"
         },
-
         {
           "link": "https://gobell.vercel.app/test",
           "blank": true,
-          "name": ["Design Syetem", "设计系统"],
+          "name": [
+            "Design Syetem",
+            "设计系统"
+          ],
           "icon": "fi-sr-pencil-paintbrush",
           "des": [
             "A design system with Tailwind configuration based on UI drafts helps improve team communication.",
@@ -190,7 +271,10 @@
         {
           "link": "https://xianzhe.site",
           "blank": true,
-          "name": ["Personal Website", "个人网页"],
+          "name": [
+            "Personal Website",
+            "个人网页"
+          ],
           "icon": "fi-rr-browser",
           "des": [
             "Personal web page, the whole process is responsible for web page, design, development, deployment, maintenance.",
@@ -201,7 +285,10 @@
         {
           "link": "/rentmsg",
           "blank": true,
-          "name": ["House Rental", "租房系统"],
+          "name": [
+            "House Rental",
+            "租房系统"
+          ],
           "icon": "fi-rr-house-building",
           "des": [
             "An efficient rental management system that connects tenants and landlords.",
@@ -212,72 +299,107 @@
       ]
     },
     {
-      "name": ["Contact", "联络"],
+      "name": [
+        "Contact",
+        "联络"
+      ],
       "href": "/Contact",
       "icon": "fi-rr-following",
-      "des": ["Contact me ~", "网络一线牵，珍惜这段缘 ~"],
+      "des": [
+        "Contact me ~",
+        "网络一线牵，珍惜这段缘 ~"
+      ],
       "expression": "(｡♥‿♥｡) ☎️",
       "isTopShow": true,
       "scondMenu": [
         {
-          "name": ["Linkedin", "领英"],
+          "name": [
+            "Linkedin",
+            "领英"
+          ],
           "icon": "fi-brands-linkedin",
           "blank": true,
           "link": "https://www.linkedin.com/in/scottcheung1110/"
         },
         {
-          "name": ["Email", "邮件"],
+          "name": [
+            "Email",
+            "邮件"
+          ],
           "icon": "fi-rr-envelope",
           "blank": true,
           "link": "https://mailto:xianzhe.site@gmail.com"
         },
         {
-          "name": ["Facebook", " Facebook"],
+          "name": [
+            "Facebook",
+            " Facebook"
+          ],
           "icon": "fi-brands-facebook",
           "blank": true,
           "link": "https://www.facebook.com/profile.php?id=100085874466260"
         },
         {
-          "name": ["Phone", "电话"],
+          "name": [
+            "Phone",
+            "电话"
+          ],
           "icon": "fi-sr-circle-phone-flip",
           "blank": true,
           "link": "tel:+61434344292"
         },
         {
-          "name": ["Instagram", "Instagram"],
+          "name": [
+            "Instagram",
+            "Instagram"
+          ],
           "icon": "fi-brands-instagram",
           "blank": true,
           "link": "https://www.instagram.com/sydneyscottcheung"
         },
         {
-          "name": ["Red book", "小红书"],
+          "name": [
+            "Red book",
+            "小红书"
+          ],
           "icon": "fi-sr-book-alt",
           "blank": true,
           "link": "https://www.xiaohongshu.com/user/profile/5e36719a0000000001006210?xhsshare=CopyLink&appuid=5e36719a0000000001006210&apptime=1700945579"
         },
         {
-          "name": ["Youtube", "Youtube"],
+          "name": [
+            "Youtube",
+            "Youtube"
+          ],
           "icon": "fi-brands-youtube",
           "blank": true,
           "link": "https://www.youtube.com/@sydneyscottcheung"
         },
         {
-          "name": ["Tiktok", "Tiktok"],
+          "name": [
+            "Tiktok",
+            "Tiktok"
+          ],
           "icon": "fi-brands-tik-tok",
           "blank": true,
           "link": "https://www.tiktok.com/@scottcheung1110"
         },
         {
-          "name": ["Wechat", "微信"],
+          "name": [
+            "Wechat",
+            "微信"
+          ],
           "icon": "fi-sr-comments",
           "blank": true,
           "link": "https://www.wechat.com/"
         }
       ]
     },
-
     {
-      "name": ["Language", "语言"],
+      "name": [
+        "Language",
+        "语言"
+      ],
       "button": "LangToggle",
       "icon": "fi-rr-globe",
       "des": [
@@ -288,12 +410,18 @@
       "isTopShow": false,
       "scondMenu": [
         {
-          "name": ["English", "English"],
+          "name": [
+            "English",
+            "English"
+          ],
           "icon": "fi-rr-globe",
           "button": "lang0"
         },
         {
-          "name": ["中文", "中文"],
+          "name": [
+            "中文",
+            "中文"
+          ],
           "icon": "fi-ss-stars",
           "button": "lang1"
         }
@@ -303,35 +431,50 @@
   "Location": [
     {
       "id": "/#Education",
-      "label": ["Education", "教育"],
+      "label": [
+        "Education",
+        "教育"
+      ],
       "icon": "fi-rr-book",
       "color1": "from-red-500",
       "color2": "to-red-700"
     },
     {
       "id": "/#Capability",
-      "label": ["Capability", "能力"],
+      "label": [
+        "Capability",
+        "能力"
+      ],
       "icon": "fi-rr-user",
       "color1": "from-orange-500",
       "color2": "to-amber-500"
     },
     {
       "id": "/#WorkExperience",
-      "label": ["Work", "工作"],
+      "label": [
+        "Work",
+        "工作"
+      ],
       "icon": "fi-rr-tool-box",
       "color1": "from-cyan-500",
       "color2": "to-blue-500"
     },
     {
       "id": "/#SelfDescribing",
-      "label": ["Describe", "自述"],
+      "label": [
+        "Describe",
+        "自述"
+      ],
       "icon": "fi-rr-comment-heart",
       "color1": "from-sky-500",
       "color2": "to-emerald-500"
     },
     {
       "id": "/#WhyMe",
-      "label": ["Why me", "优势"],
+      "label": [
+        "Why me",
+        "优势"
+      ],
       "icon": "fi-rr-lightbulb-on",
       "color1": "from-indigo-500",
       "color2": "to-pink-500"
@@ -340,25 +483,37 @@
   "workbench": [
     {
       "id": "/networkingmsg",
-      "label": ["NetWorking", "互联社交"],
+      "label": [
+        "NetWorking",
+        "互联社交"
+      ],
       "icon": "fi-rr-tool-box",
       "status": "fi-sr-eye-crossed"
     },
     {
       "id": "/coverletters",
-      "label": ["Coverletters", "求职信"],
+      "label": [
+        "Coverletters",
+        "求职信"
+      ],
       "icon": "fi-rr-book",
       "status": "fi-sr-lock"
     },
     {
       "id": "/rentmsg",
-      "label": ["House Rental", "租房系统"],
+      "label": [
+        "House Rental",
+        "租房系统"
+      ],
       "icon": "fi-rr-house-building",
       "status": "fi-sr-lock"
     },
     {
       "id": "/table2json",
-      "label": ["Data converter", "数据转换"],
+      "label": [
+        "Data converter",
+        "数据转换"
+      ],
       "icon": "fi-rr-database",
       "status": "fi-sr-eye"
     }
@@ -366,7 +521,10 @@
   "Lifes": [
     {
       "icon": "fi-sr-music-alt",
-      "label": ["Music", "音 乐"],
+      "label": [
+        "Music",
+        "音 乐"
+      ],
       "link": "/music",
       "pic": "3o.hk/images/2024/01/19/EmotionalStable.md.png",
       "des": "It collect musics I recommend ~",
@@ -374,7 +532,10 @@
     },
     {
       "icon": "fi-sr-user-music",
-      "label": ["Perform", "表 演"],
+      "label": [
+        "Perform",
+        "表 演"
+      ],
       "link": "/perform",
       "pic": "3o.hk/images/2024/01/19/ProblemSolving.png",
       "des": "It collect musics I perform ~",
@@ -382,7 +543,10 @@
     },
     {
       "icon": "fi-sr-picture",
-      "label": ["Gallery", "图 库"],
+      "label": [
+        "Gallery",
+        "图 库"
+      ],
       "link": "/gallery",
       "pic": "3o.hk/images/2024/01/19/AestheticAttitude.md.png",
       "des": "It collect picture I take ~",
@@ -390,7 +554,10 @@
     },
     {
       "icon": "fi-sr-followcollection",
-      "label": ["Story", "故 事"],
+      "label": [
+        "Story",
+        "故 事"
+      ],
       "link": "/story",
       "pic": "3o.hk/images/2024/01/19/Leadership.md.png",
       "des": "It collect stories I undergo ~",
@@ -398,12 +565,24 @@
     }
   ],
   "Avatar": {
-    "Webname": ["Scott Cheung", "张贤哲Scott"],
-    "helloword": ["Keep Enthusiasm", "保持热爱"]
+    "Webname": [
+      "Scott Cheung",
+      "张贤哲Scott"
+    ],
+    "helloword": [
+      "Keep Enthusiasm",
+      "保持热爱"
+    ]
   },
   "Hero": {
-    "hello": ["Welcome! I'm Scott.", "好久不见，我是贤哲"],
-    "word": ["Sidere mens eadem mutato", "繁星纵变，智慧永存"]
+    "hello": [
+      "Welcome! I'm Scott.",
+      "好久不见，我是贤哲"
+    ],
+    "word": [
+      "Sidere mens eadem mutato",
+      "繁星纵变，智慧永存"
+    ]
   },
-  "dialog": "https://img.picgo.net/2024/12/06/infp488c51d979c4420e.png"
+  "dialog": "/Graphs/home/infp.png"
 }
