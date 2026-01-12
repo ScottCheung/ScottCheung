@@ -58,8 +58,7 @@ function Card({ card }) {
       className={`relative bg-white transform-gppu cursor-pointer w-auto h-auto flex flex-col lg:w-[350px] lg:p-[28px] shadow-[10px] rounded-[14px] lg:rounded-[28px] overflow-hidden lg:overflow-visible  lg:group-hover:${card.backgroundColor}/20`}
     >
       <motion.div
-        layout
-        layoutId={`card-img-${card.id}`}
+        layoutId={`card-img-${card.image}`}
         transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         className='lg:absolute  -left-[30px] -top-[30px] right-[60px] lg:rounded-[28px]  overflow-hidden aspect-[16/9] z-30'
       >
@@ -98,7 +97,7 @@ function Period({ period }) {
     >
       <div className='absolute  -mt-[100px] opacity-60 group-hover:opacity-100 flex w-[60%] justify-between items-center py-[20px] text-[20px] text-gray-400 font-serif'>
         <motion.div
-          layout
+          layoutId={`period-${period.startTime}`}
           className=' font-[500] group-hover:text-black group-hover:mb-7 mb-0 transition-all duration-500'
         >
           {period.startTime}
@@ -236,9 +235,8 @@ function WorkExperience() {
                 <motion.div
                   className='sticky top-0 flex '
                   layout
-                  layoutId={`card-container-${
-                    selectedCard.type + selectedCard.company + selectedCard.id
-                  }`}
+                  layoutId={`card-container-${selectedCard.type + selectedCard.company + selectedCard.id
+                    }`}
                   transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
                   onClick={(e) => e.stopPropagation()}
                 >

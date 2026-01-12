@@ -89,7 +89,7 @@ function Gooduser() {
         layout
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         style={{
-          backgroundImage: `url(https://img.picgo.net/2024/12/06/gooduserab13df0e7b6d38c8.jpg)`,
+          backgroundImage: `url(/graphs/home/gooduser.jpg)`,
           backgroundSize: open ? '100% 120%' : '100% 100%',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'bottom center ',

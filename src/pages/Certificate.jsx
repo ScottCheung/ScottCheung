@@ -42,7 +42,7 @@ export default function material() {
           <div className='h-auto md:mx-[10%] p-[10px] text-[13px] md:text-[17px] lg:text-[20px] z-0 welcomeanimation'>
             <div className=' text-gray-500  pb-4 sticky   top-0 z-0 bg-gradient-to-br from-white from-10% via-white via-90% to-white/10  '>
               <img
-                src='https://img.picgo.net/2025/04/03/71F6840E-701F-4957-BAA4-904922B25CA4-45114-00001CFEFCBB9186593d9e13aa52b49a.png'
+                src='/graphs/awards/overview.jpg'
                 alt='all'
                 className=' contrast-more:'
               />
@@ -150,7 +150,7 @@ export default function material() {
               </motion.table>
             </div>
           </div>
-          <CertificateGallery />
+          {/* <CertificateGallery /> */}
           <div className='flex justify-center w-full'>
             <KeyFeature />
           </div>

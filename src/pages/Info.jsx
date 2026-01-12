@@ -54,7 +54,7 @@ export default function Profile() {
             className='absolute top-0 bottom-0 left-0 w-full h-full bg-left bg-no-repeat bg-cover'
             style={{
               backgroundImage:
-                "url('https://img.picgo.net/2025/03/17/long-banner007133549fbba964.jpg')",
+                "url('/graphs/home/long banner.jpg')",
             }}
           >
             {/* <span
@@ -91,7 +91,7 @@ export default function Profile() {
               <img
                 loading='lazy'
                 alt='...'
-                src='https://img.picgo.net/2025/05/01/profile67e8aecd6a789289.png'
+                src='/graphs/home/profile2.png'
                 className=' rounded-full h-auto absolute -m-[75px] lg:-m-[150px] animate_animated animate__zoomIn'
                 style={{
                   maxWidth: windowWidth > 1080 ? '200px' : '100px',
@@ -140,7 +140,7 @@ export default function Profile() {
                     >
                       {isExpanded ?
                         ['Collapse', '收起'][lang]
-                      : [
+                        : [
                           'I agree, show me more information.',
                           '我同意，显示更多信息。',
                         ][lang]

@@ -271,12 +271,91 @@
     "location": "Sydney",
     "type": "Full Time",
     "startTime": "Sep 2023",
-    "endTime": "Present",
+    "endTime": "May 2025",
     "name": "Gobell Membership System",
     "des": "Developed a membership management system for Gobell from scratch, including features like member login, registration, orders, products, payment processing, deposits, and credential verification.",
     "tag": "Web Development",
     "link": "https://www.linkedin.com/company/wolli-software/posts/?feedView=all",
     "image": "https://media.istockphoto.com/id/1492719675/photo/multicultural-professionals-driving-innovation-in-sydneys-office-environment.jpg?s=612x612&w=0&k=20&c=jv1hAPk8cTe3ryKMtdlvBXR3YaWmMFG8DS2GRBu1-1E=",
+    "backgroundColor": "bg-sky-300",
+    "skill": [
+      "HTML",
+      "CSS",
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tailwind",
+      "Framer Motion",
+      "Redux",
+      "i18n",
+      "Figma",
+      "AWS Cloud",
+      "jsBarcode",
+      "QRcode"
+    ],
+    "points": [
+      {
+        "title": "Developed and maintained Apps",
+        "description": "Developed and maintained Apps using <s>HTML<s>, <s>CSS<s>, <s>React.js<s>, <s>Next.js<s>, <s>Redux<s>, improving web performance by 20%."
+      },
+      {
+        "title": "Developed and maintained RESTful APIs",
+        "description": "Developed and maintained <s>RESTful APIs<s> using <s>Node.js<s>, <s>Express.js<s>,<s>Python<s>, following best practices."
+      },
+      {
+        "title": "Integrated third-party services",
+        "description": "Integrated third-party services such as <s>Twilio<s>, <s>Shopify<s>, <s>Mapbox<s>, <s>Strapi<s> and <s>Stripe<s>, enhancing functionality."
+      },
+      {
+        "title": "Wrote and optimized SQL queries",
+        "description": "Wrote and optimized <s>SQL<s> queries to improve database performance."
+      },
+      {
+        "title": "Implemented unit and end-to-end tests",
+        "description": "Implemented unit and end-to-end tests using <s>Jest<s> and <s>Cypress<s>, reducing errors by 30%."
+      },
+      {
+        "title": "Optimized deployment pipeline",
+        "description": "Optimized <s>GitHub Actions<s>, <s>Docker<s> and <s>AWS<s>, cutting deployment time by 50%."
+      },
+      {
+        "title": "Authentication and security",
+        "description": "Experienced with <s>OAuth<s>, <s>JWT<s> authentication, and security best practices."
+      },
+      {
+        "title": "Implemented i18n solutions",
+        "description": "Implemented <s>i18n<s> solutions using <s>react-i18next<s>, enabling seamless multi-language support."
+      },
+      {
+        "title": "AWS and cloud technologies",
+        "description": "Experienced with <s>AWS<s> (<s>EC2<s>, <s>S3<s>, <s>Lambda<s>), eager to upskill in <s>Azure<s> cloud technologies."
+      },
+      {
+        "title": "Designed UI and implemented design system",
+        "description": "Designed UI in <s>Figma<s> and implemented inner design system using <s>Tailwind<s>, <s>Framer Motion<s>, <s>GSAP<s>, and <s>3.js<s>."
+      },
+      {
+        "title": "Optimized SEO",
+        "description": "Optimized <s>SEO<s> by improving web elements like <s>meta tags<s>, <s>headers<s> and <s>content structure<s> using <s>Google Analytics<s> and <s>Lighthouse<s>."
+      },
+      {
+        "title": "Worked in Agile environments",
+        "description": "Worked in <s>Agile<s> environments using <s>Jira<s> or <s>Scrum<s>, collaborating cross-functionally for efficient development."
+      }
+    ]
+  },
+  {
+    "company": "BlueSky Creations",
+    "title": "Full Stack Developer",
+    "location": "Sunshine Coast",
+    "type": "Full Time",
+    "startTime": "June 2025",
+    "endTime": "Present",
+    "name": "Rewowo Membership System",
+    "des": "Developed a membership management system for Rewowo from scratch, including features like member login, registration, orders, products, payment processing, deposits, and credential verification.",
+    "tag": "Web Development",
+    "link": "https://www.linkedin.com/company/bluesky-creations/posts/?feedView=all",
+    "image": "/graphs/work/bluesky.png",
     "backgroundColor": "bg-sky-300",
     "skill": [
       "HTML",
