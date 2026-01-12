@@ -89,7 +89,7 @@ function Gooduser() {
         layout
         transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
         style={{
-          backgroundImage: `url(/graphs/home/gooduser.jpg)`,
+          backgroundImage: `url(/Graphs/home/gooduser.jpg)`,
           backgroundSize: open ? '100% 120%' : '100% 100%',
           backgroundRepeat: 'no-repeat',
           backgroundPosition: 'bottom center ',

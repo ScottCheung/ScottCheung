@@ -101,7 +101,7 @@ const HomeCarousel = [
     ],
     duration: 5,
     minisrc: 'https://img.picgo.net/2024/12/09/4ad634cc94fd1b09f.jpg',
-    src: '/Graphs/home_carousel/5.JPG',
+    src: '/Graphs/home_carousel/5.jpg',
   },
 
   {
