@@ -67,7 +67,7 @@
       "https://3o.hk/images/2024/01/14/contactbg.jpg"
     ],
     "Avatar": [
-      "/Graphs/home/avatar.jpg"
+      "/Graphs/home/profile2.png"
     ],
     "Education": [
       {
@@ -1279,8 +1279,8 @@
       "pic": "https://cdn.pixabay.com/photo/2014/05/26/09/58/sydney-opera-house-354375_1280.jpg",
       "description": [
         [
-          "Hello, I am {bold}Scott Cheung{bold}, I have {bold}1.5 years{bold} of web development experience and {bold}a Master’s degree in IT (AI){bold} from {bold}UNSW{bold}. Additionally, I hold a {bold}dual Bachelor’s degree in Management and Engineering{bold} from {bold}Southwest University of Science and Technology{bold}.",
-          "I am proficient in {bold}React, Next.js, Tailwind, TypeScript, Node.js, and Python{bold}, with extensive skills in {bold}GitHub, Figma, UI/UX design, Jest, Cypress, Docker, AWS (EC2, S3), and REST APIs{bold}. I believe I can bring significant value to your company.",
+          "Hello, I am {bold}Scott Cheung{bold}, I have over {bold}2 years{bold} of web development experience and {bold}a Master’s degree in IT (AI){bold} from {bold}UNSW{bold}. Additionally, I hold a {bold}dual Bachelor’s degree in Management and Engineering{bold} from {bold}Southwest University of Science and Technology{bold}.",
+          "I am proficient in {bold}React, Next.js, Tailwind, TypeScript, Node.js, Java, .NET and Python{bold}, with extensive skills in {bold}GitHub, Figma, UI/UX design, Jest, AWS (EC2, S3, RDS, Amplify), Vercel and Docker{bold}. I believe I can bring significant value to your company.",
           "{bold}What value can I bring to your company?{bold}",
           "1. {bold}Technical Expertise{bold} – I can develop, optimize, and maintain high-quality web applications, whether it’s improving performance, fixing issues, or building new features. I also focus on writing clean, reusable code to ensure scalability.",
           "2. {bold}UI/UX Focus{bold} – With my background in UI/UX design and hands-on experience in translating Figma designs to functional components, I focus on creating user-centered and visually appealing interfaces.",
@@ -1292,7 +1292,7 @@
           "Or {bold}xianzhe.site@gmail.com{bold}. {copy}xianzhe.site@gmail.com{copy}"
         ],
         [
-          "你好，我是{bold}张贤哲{bold}，我有{bold}1.5年{bold}的Web开发经验，并拥有{bold}UNSW{bold}的IT（人工智能）硕士学位。此外，我还持有{bold}西南科技大学{bold}的{bold}管理学和工程学双学士学位{bold}。",
+          "你好，我是{bold}张贤哲{bold}，我有{bold}2年{bold}的Web开发经验，并拥有{bold}UNSW{bold}的IT（人工智能）硕士学位。此外，我还持有{bold}西南科技大学{bold}的{bold}管理学和工程学双学士学位{bold}。",
           "我熟练使用{bold}React, Next.js, Tailwind, TypeScript, Node.js 和 Python{bold}，并具备丰富的技能，涵盖{bold}GitHub, Figma, UI/UX设计, Jest, Cypress, Docker, AWS（EC2, S3）以及REST API{bold}等技术。我相信我能为贵公司带来重要价值。",
           "{bold}我能为贵公司带来哪些价值？{bold}",
           "1. {bold}技术专长{bold} – 我能够开发、优化和维护高质量的Web应用程序，无论是提升性能、修复问题，还是构建新功能。我注重编写清晰、可复用的代码，确保应用程序具备可扩展性。",

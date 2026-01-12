@@ -97,19 +97,19 @@ export default function Example() {
                   <a
                     href={data[0].web}
                     className={`welcome-video-wall-visblecontainer w-full flex justify-center  h-full rounded-[28px] lg:rounded-[40px] overflow-hidden py-[40px]   bg-sky-100 bg-cover bg-center sticky z-30 `}
-                    // style={{ top: `calc(${navbarHeight}px + 10px)` }}
+                  // style={{ top: `calc(${navbarHeight}px + 10px)` }}
                   >
                     <div className='flex items-center justify-center '>
                       <img
                         loading='lazy'
                         className='w-[130px] px-7'
-                        src='https://img.picgo.net/2024/12/10/swustlogo70d687130fbd9af2.png'
+                        src='/graphs/home/swustlogo.png'
                         alt='swustPng'
                       />
                       <img
                         loading='lazy'
                         className='max-w-[50vw] lg:max-w-[400px] h-auto py-12 px-7'
-                        src='https://img.picgo.net/2024/12/10/swustname843d2b9c22b1f8d9.png'
+                        src='/graphs/home/swustname.png'
                         alt='swustName'
                       />
                     </div>
@@ -222,9 +222,8 @@ export default function Example() {
                     )}
                     {lang == 1 && (
                       <thead
-                        className={`${
-                          windowWidth <= 786 ? '' : 'hidden'
-                        } text-gray-700 uppercase  darrk:bg-gray-700 darrk:text-gray-400 `}
+                        className={`${windowWidth <= 786 ? '' : 'hidden'
+                          } text-gray-700 uppercase  darrk:bg-gray-700 darrk:text-gray-400 `}
                       >
                         <th className='pl-[2%] py-3 text-center w-[10%]'>
                           序号
