@@ -103,13 +103,13 @@ export default function Example() {
                       <img
                         loading='lazy'
                         className='w-[130px] px-7'
-                        src='/graphs/home/swustlogo.png'
+                        src='/Graphs/home/swustlogo.png'
                         alt='swustPng'
                       />
                       <img
                         loading='lazy'
                         className='max-w-[50vw] lg:max-w-[400px] h-auto py-12 px-7'
-                        src='/graphs/home/swustname.png'
+                        src='/Graphs/home/swustname.png'
                         alt='swustName'
                       />
                     </div>

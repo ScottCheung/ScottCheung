@@ -54,7 +54,7 @@ export default function Profile() {
             className='absolute top-0 bottom-0 left-0 w-full h-full bg-left bg-no-repeat bg-cover'
             style={{
               backgroundImage:
-                "url('/graphs/home/long banner.jpg')",
+                "url('/Graphs/home/long banner.jpg')",
             }}
           >
             {/* <span
@@ -91,7 +91,7 @@ export default function Profile() {
               <img
                 loading='lazy'
                 alt='...'
-                src='/graphs/home/profile2.png'
+                src='/Graphs/home/profile2.png'
                 className=' rounded-full h-auto absolute -m-[75px] lg:-m-[150px] animate_animated animate__zoomIn'
                 style={{
                   maxWidth: windowWidth > 1080 ? '200px' : '100px',

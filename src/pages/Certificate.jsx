@@ -42,7 +42,7 @@ export default function material() {
           <div className='h-auto md:mx-[10%] p-[10px] text-[13px] md:text-[17px] lg:text-[20px] z-0 welcomeanimation'>
             <div className=' text-gray-500  pb-4 sticky   top-0 z-0 bg-gradient-to-br from-white from-10% via-white via-90% to-white/10  '>
               <img
-                src='/graphs/awards/overview.jpg'
+                src='/Graphs/awards/overview.jpg'
                 alt='all'
                 className=' contrast-more:'
               />
