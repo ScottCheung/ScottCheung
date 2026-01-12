@@ -167,7 +167,6 @@
       }
     ]
   },
-
   {
     "id": 1,
     "title": "Financial Assistant",
@@ -204,7 +203,6 @@
       }
     ]
   },
-
   {
     "id": 0,
     "title": "Uber Eats Delivery Driver",
@@ -212,7 +210,7 @@
     "company": "Uber Eats",
     "startTime": "Oct 2022",
     "endTime": "July 2023",
-    "image": "https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_1116,h_1116/v1670495515/assets/69/2878ac-8a8e-48fe-8e9a-cdcd73a3e263/original/Courier_With_Bags_v2.png",
+    "image": "https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=552/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy82M2JkMTc3YS05NTcyLTUzNWMtODAwZi01ZGE4YTMxMmRmN2QucG5n",
     "backgroundColor": "bg-green-300",
     "skill": [
       "Time Management",
