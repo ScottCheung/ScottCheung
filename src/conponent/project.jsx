@@ -133,7 +133,7 @@ function project({ hideTittle, simpleVer }) {
               className='col-span-6 lg:col-span-3 md:col-span-4 group'
             >
               <div
-                className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] h-full transition-all duration-300 relative  ${simpleVer ? 'w-full' : 'lg:w-[300px]'
+                className={`p-[14px] lg:p-[28px] !pb-[40px] rounded-[14px] lg:rounded-[28px] h-full transition-all duration-300 relative  ${simpleVer ? 'w-full' : 'lg:w-[400px]'
                   }  ${simpleVer ?
                     'bg-white hover:bg-sky-100'
                     : 'bg-gray-200 hover:invert'
@@ -145,14 +145,14 @@ function project({ hideTittle, simpleVer }) {
                   <div className='items-start justify-start mt-[10px] mb-[6px] flex flex-col gap-x-4 md:flex-col'>
                     {experience.icon && <i
                       className={`${experience.icon} fi from-[-20%] to-[120%] ${simpleVer ?
-                        'text-[15px] md:text-[17px] lg:text-[25px]'
-                        : 'text-[12px] md:text-[17px] lg:text-[25px]'
+                        'text-[15px] md:text-[17px] lg:text-[30px]'
+                        : 'text-[12px] md:text-[17px] lg:text-[30px]'
                         } flex items-center pb-[10px]`}
                     ></i>}
                     {experience.logo && <img
                       src={experience.logo}
                       alt={experience.name}
-                      className='w-auto mb-[10px] h-[30px] object-curtain'
+                      className='w-auto mb-[10px] h-[40px] object-curtain'
                     />}
                     <div
                       className={
@@ -179,8 +179,8 @@ function project({ hideTittle, simpleVer }) {
                       style={{
                         animationDelay: `${index * 0.3}s`,
                       }}
-                      className={`text-gray-400 ${simpleVer || windowWidth < 1024 ? '' : 'lg:h-[60px]'
-                        } group-hover:text-gray-700 text-[15px] darrk:text-gray-50`}
+                      className={`text-gray-400 ${simpleVer || windowWidth < 1024 ? '' : ''
+                        } group-hover:text-gray-700 line-clamp-3 text-[15px] dark:text-gray-50`}
                     >
                       {experience.des[lang]}
                     </p>
@@ -231,8 +231,8 @@ function project({ hideTittle, simpleVer }) {
           >
             <div
               className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] transition-all duration-300 relative min-w-[300px] h-full ${simpleVer ?
-                'bg-white hover:bg-sky-100'
-                : 'bg-gray-200 hover:invert'
+                'bg-white '
+                : 'bg-gray-200'
                 } w-full`}
             >
               <div className='pb-[40px]'>
