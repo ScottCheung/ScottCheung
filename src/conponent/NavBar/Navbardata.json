@@ -185,6 +185,104 @@
       "isTopShow": true,
       "scondMenu": [
         {
+          "link": "https://rewowo-merchant-gules.vercel.app",
+          "blank": true,
+          "name": [
+            "Rewowo for Merchant",
+            "Rewowo for Merchant"
+          ],
+          "logo": "https://vercel.com/api/v0/deployments/dpl_GKNZdQHR7xieHXgiVzQDA7skgyAa/favicon?project=rewowo&readyState=READY&teamId=team_O8099eAdi4fJXMxI5D1aDp5e&dpl=dpl_FaE7tsVUqQaY3xmUXRtdYjbn9Se8",
+          "des": [
+            "Responsible for the overall design, front-end and back-end development, and CI/CD of the APP, and was involved in the entire process of this project.",
+            "负责了 Rewowo 整体的设计、前后端开发和CI/CD, 负责和参与了该项目全流程。"
+          ],
+          "status": "fi-sr-eye"
+        },
+        {
+          "link": "https://rewowo.vercel.app",
+          "blank": true,
+          "name": [
+            "Rewowo",
+            "Rewowo"
+          ],
+          "logo": "https://vercel.com/api/v0/deployments/dpl_GKNZdQHR7xieHXgiVzQDA7skgyAa/favicon?project=rewowo&readyState=READY&teamId=team_O8099eAdi4fJXMxI5D1aDp5e&dpl=dpl_FaE7tsVUqQaY3xmUXRtdYjbn9Se8",
+          "des": [
+            "Responsible for the overall design, front-end and back-end development, and CI/CD of the APP, and was involved in the entire process of this project.",
+            "负责了 Rewowo 整体的设计、前后端开发和CI/CD, 负责和参与了该项目全流程。"
+          ],
+          "status": "fi-sr-eye"
+        },
+        {
+          "link": "https://recruter-page.vercel.app/",
+          "blank": true,
+          "name": [
+            "Recruter Page",
+            "Recruter Page"
+          ],
+          "logo": "https://recruter-page.vercel.app/brand/logo.svg",
+          "des": [
+            "Responsible for the entire design, development, and deployment of A Recruit Page, as well as the new serverless form collection service.",
+            "负责了一个新 Recruit Page 官网全新的设计、开发和部署，以及全新的无服务器表单收集服务。"
+          ],
+          "status": "fi-sr-eye"
+        },
+        {
+          "link": "https://recruit-complete.vercel.app",
+          "blank": true,
+          "name": [
+            "Recruit Complete",
+            "Recruit Complete"
+          ],
+          "logo": "https://vercel.com/api/v0/deployments/dpl_CkJgkdTg3UsUohGBHvfwkU5rGLrT/favicon?project=recruit-complete&readyState=READY&teamId=team_O8099eAdi4fJXMxI5D1aDp5e&dpl=dpl_FaE7tsVUqQaY3xmUXRtdYjbn9Se8",
+          "des": [
+            "Responsible for the migration of Recruit Complete official website and fixed some display issues, implemented lower operating costs.",
+            "负责了 Recruit Complete 官网的迁移，并修复了部分显示问题， 实现了更低的运营成本。"
+          ],
+          "status": "fi-sr-eye"
+        },
+        {
+          "link": "https://bluesky-silk.vercel.app",
+          "blank": true,
+          "name": [
+            "Bluesky Creations",
+            "Bluesky Creations"
+          ],
+          "logo": "https://bluesky-silk.vercel.app/logos/BlueSky%20Studio_logo_light.svg",
+          "des": [
+            "Responsible for the entire design, development, and deployment of the Bluesky Creations official website, as well as the new serverless form collection service.",
+            "负责了 Bluesky Creations 官网全新的设计、开发和部署，以及全新的无服务器表单收集服务。"
+          ],
+          "status": "fi-sr-eye"
+        },
+        {
+          "link": "https://ui-v2-silk.vercel.app/",
+          "blank": true,
+          "name": [
+            "UI Lib V2",
+            "UI库 第2版"
+          ],
+          "icon": "fi-sr-pencil-paintbrush",
+          "des": [
+            "A design system with Tailwind configuration based on UI drafts helps improve team communication.",
+            "设计系统结合 Tailwind 配置，根据 UI 设计稿，帮助团队更好沟通，提升效率。"
+          ],
+          "status": "fi-sr-eye"
+        },
+        {
+          "link": "https://leave-platform.vercel.app/login",
+          "blank": true,
+          "name": [
+            "Leave Platform",
+            "企业假期平台"
+          ],
+          "icon": "fi-sr-umbrella-beach",
+          "des": [
+            "This is a leave management platform for B-end, helping companies better manage employees' leave and payroll.",
+            "这是一个面相 B 端的假期管理平台，帮助企业更好的管理员工的假期和 payroll。"
+          ],
+          "status": "fi-sr-eye"
+        },
+        {
           "link": "https://igrapher.vercel.app",
           "blank": true,
           "name": [

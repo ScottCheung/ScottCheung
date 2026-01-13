@@ -7,9 +7,9 @@ import Data from '../conponent/NavBar/Navbardata.json';
 import { hideRow, useLanguage } from '../help/helpFunction';
 import { useInView } from 'react-intersection-observer';
 
-const educationData = Data.navbarItem[3].scondMenu;
+const projectData = Data.navbarItem[3].scondMenu;
 
-function Education({ hideTittle, simpleVer }) {
+function project({ hideTittle, simpleVer }) {
   const lang = useLanguage();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -112,7 +112,7 @@ function Education({ hideTittle, simpleVer }) {
           variants={
             windowWidth > 1024 ?
               Database.Animation.Variant.Welcomevisblecontainer
-            : undefined
+              : undefined
           }
           initial='hidden'
           whileInView='visible'
@@ -120,10 +120,10 @@ function Education({ hideTittle, simpleVer }) {
           className={
             simpleVer ?
               'grid grid-cols-12 w-full gap-[20px] px-[20px] '
-            : 'flex overflow-x-auto gap-[20px] py-[20px] scrollbar-hide w-full px-[20vw]  '
+              : 'flex overflow-x-auto gap-[20px] py-[20px] scrollbar-hide w-full px-[20vw]  '
           }
         >
-          {educationData.map((experience, index) => (
+          {projectData.map((experience, index) => (
             <motion.div
               layout
               key={index}
@@ -133,42 +133,42 @@ function Education({ hideTittle, simpleVer }) {
               className='col-span-6 lg:col-span-3 md:col-span-4 group'
             >
               <div
-                className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] h-full transition-all duration-300 relative  ${
-                  simpleVer ? 'w-full' : 'lg:w-[300px]'
-                }  ${
-                  simpleVer ?
+                className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] h-full transition-all duration-300 relative  ${simpleVer ? 'w-full' : 'lg:w-[300px]'
+                  }  ${simpleVer ?
                     'bg-white hover:bg-sky-100'
-                  : 'bg-gray-200 hover:invert'
-                }`}
+                    : 'bg-gray-200 hover:invert'
+                  }`}
               >
                 <div
                   className={simpleVer || windowWidth < 1024 ? '' : 'pb-[40px]'}
                 >
-                  <div className='items-start justify-start mt-[10px] mb-[6px] flex md:flex gap-x-4 md:flex-col'>
-                    <i
-                      className={`${experience.icon} fi from-[-20%] to-[120%] ${
-                        simpleVer ?
-                          'text-[15px] md:text-[17px] lg:text-[25px]'
+                  <div className='items-start justify-start mt-[10px] mb-[6px] flex flex-col gap-x-4 md:flex-col'>
+                    {experience.icon && <i
+                      className={`${experience.icon} fi from-[-20%] to-[120%] ${simpleVer ?
+                        'text-[15px] md:text-[17px] lg:text-[25px]'
                         : 'text-[12px] md:text-[17px] lg:text-[25px]'
-                      } flex items-center pb-[10px]`}
-                    ></i>
+                        } flex items-center pb-[10px]`}
+                    ></i>}
+                    {experience.logo && <img
+                      src={experience.logo}
+                      alt={experience.name}
+                      className='w-auto mb-[10px] h-[30px] object-curtain'
+                    />}
                     <div
                       className={
                         windowWidth > 1024 ?
-                          `typography-card-headline font-[600] duration-300 transition-all text-sky-950 gap-x-[10px] ${
-                            simpleVer ?
-                              'text-[15px] md:text-[17px] lg:text-[20px]'
+                          ` typography-card-headline font-[600] duration-300 transition-all text-sky-950 gap-x-[10px] ${simpleVer ?
+                            'text-[15px] md:text-[17px] lg:text-[20px]'
                             : 'text-[12px] md:text-[17px] lg:text-[25px]'
                           }`
-                        : 'text-[13px] md:text-[18px] font-[600] transition-all flex flex-col md:flex-row gap-x-[5px]'
+                          : 'text-[13px] md:text-[18px] font-[600] transition-all flex flex-col md:flex-row gap-x-[5px]'
                       }
                     >
                       <div className={`flex items-center `}>
                         {experience.name[lang]}
                         <i
-                          className={`${experience.status} fi mx-[5px] from-[-20%] to-[120%] ${
-                            simpleVer ? 'text-[15px] ' : 'text-[12px]'
-                          } flex items-center pb-[10px]`}
+                          className={`${experience.status} fi mx-[5px] from-[-20%] to-[120%] ${simpleVer ? 'text-[15px] ' : 'text-[12px]'
+                            } flex items-center pb-[10px]`}
                         ></i>
                       </div>
                     </div>
@@ -179,9 +179,8 @@ function Education({ hideTittle, simpleVer }) {
                       style={{
                         animationDelay: `${index * 0.3}s`,
                       }}
-                      className={`text-gray-400 ${
-                        simpleVer || windowWidth < 1024 ? '' : 'lg:h-[60px]'
-                      } group-hover:text-gray-700 text-[15px] darrk:text-gray-50`}
+                      className={`text-gray-400 ${simpleVer || windowWidth < 1024 ? '' : 'lg:h-[60px]'
+                        } group-hover:text-gray-700 text-[15px] darrk:text-gray-50`}
                     >
                       {experience.des[lang]}
                     </p>
@@ -195,11 +194,10 @@ function Education({ hideTittle, simpleVer }) {
                   className='absolute top-0 bottom-0 left-0 right-0 w-full h-full'
                 >
                   <button
-                    className={`absolute ${
-                      windowWidth < 1024 || simpleVer ?
-                        'top-[14px] right-[14px] lg:top-[28px] lg:right-[28px]'
+                    className={`absolute ${windowWidth < 1024 || simpleVer ?
+                      'top-[14px] right-[14px] lg:top-[28px] lg:right-[28px]'
                       : 'right-[28px] bottom-[28px]'
-                    } w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] bg-gray-900/30 group-hover:bg-gray-900 transition-all duration-300 rounded-full flex justify-center items-center`}
+                      } w-[30px] h-[30px] lg:w-[40px] lg:h-[40px] bg-gray-900/30 group-hover:bg-gray-900 transition-all duration-300 rounded-full flex justify-center items-center`}
                     type='link'
                   >
                     <span
@@ -232,11 +230,10 @@ function Education({ hideTittle, simpleVer }) {
             className='col-span-12 lg:col-span-3 md:col-span-12 group'
           >
             <div
-              className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] transition-all duration-300 relative min-w-[300px] h-full ${
-                simpleVer ?
-                  'bg-white hover:bg-sky-100'
+              className={`p-[14px] lg:p-[28px] rounded-[14px] lg:rounded-[28px] transition-all duration-300 relative min-w-[300px] h-full ${simpleVer ?
+                'bg-white hover:bg-sky-100'
                 : 'bg-gray-200 hover:invert'
-              } w-full`}
+                } w-full`}
             >
               <div className='pb-[40px]'>
                 <div className='items-start justify-start mt-[10px] mb-[6px] flex md:flex gap-x-4 md:flex-col'>
@@ -266,4 +263,4 @@ function Education({ hideTittle, simpleVer }) {
   );
 }
 
-export default Education;
+export default project;
