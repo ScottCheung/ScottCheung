@@ -350,76 +350,58 @@
     "location": "Sunshine Coast",
     "type": "Full Time",
     "startTime": "June 2025",
-    "endTime": "Present",
-    "name": "Rewowo Membership System",
-    "des": "Developed a membership management system for Rewowo from scratch, including features like member login, registration, orders, products, payment processing, deposits, and credential verification.",
+    "endTime": "Jan 2026",
+    "name": "Rewowo Loyalty & Membership Platform",
+    "des": "Spearheaded the architecture and end-to-end delivery of a loyalty and membership platform, covering authentication, rewards redemption, payments, and merchant management, from requirements gathering to production deployment.",
     "tag": "Web Development",
     "link": "https://www.linkedin.com/company/bluesky-creations/posts/?feedView=all",
     "image": "/Graphs/work/bluesky.png",
     "backgroundColor": "bg-sky-300",
     "skill": [
-      "HTML",
-      "CSS",
       "TypeScript",
       "React",
       "Next.js",
-      "Tailwind",
+      "FastAPI",
+      "Tailwind CSS",
       "Framer Motion",
-      "Redux",
-      "i18n",
-      "Figma",
-      "AWS Cloud",
-      "jsBarcode",
-      "QRcode"
+      "Storybook",
+      "TurboRepo",
+      "PostgreSQL",
+      "AWS EC2",
+      "AWS S3",
+      "AWS RDS",
+      "Vercel",
+      "GitHub Actions",
+      "QR Code"
     ],
     "points": [
       {
-        "title": "Developed and maintained Apps",
-        "description": "Developed and maintained Apps using <s>HTML<s>, <s>CSS<s>, <s>React.js<s>, <s>Next.js<s>, <s>Redux<s>, improving web performance by 20%."
+        "title": "Architected and delivered a full-stack platform",
+        "description": "Spearheaded the architecting and delivery of a loyalty platform using <s>TypeScript<s>, <s>Next.js<s>, <s>FastAPI<s>, and <s>AWS<s> (<s>EC2<s>, <s>S3<s>, <s>RDS<s>), managing the complete development lifecycle from requirements gathering to production deployment."
       },
       {
-        "title": "Developed and maintained RESTful APIs",
-        "description": "Developed and maintained <s>RESTful APIs<s> using <s>Node.js<s>, <s>Express.js<s>,<s>Python<s>, following best practices."
+        "title": "Performance optimization and cost reduction",
+        "description": "Reduced operational costs by <s>$15k/year<s> by migrating from <s>WordPress<s> hosting to <s>Next.js<s> on <s>Vercel<s>, improving page load speed by <s>65% (TBT < 70ms)<s> and achieving 90+ <s>Lighthouse<s> scores."
       },
       {
-        "title": "Integrated third-party services",
-        "description": "Integrated third-party services such as <s>Twilio<s>, <s>Shopify<s>, <s>Mapbox<s>, <s>Strapi<s> and <s>Stripe<s>, enhancing functionality."
+        "title": "Monorepo architecture and codebase consolidation",
+        "description": "Consolidated 3 separate frontend apps into a <s>TurboRepo<s> monorepo with shared components, hooks, and utilities, cutting code duplication by <s>40%<s> and reducing long-term maintenance effort."
       },
       {
-        "title": "Wrote and optimized SQL queries",
-        "description": "Wrote and optimized <s>SQL<s> queries to improve database performance."
+        "title": "Reusable UI component system",
+        "description": "Established a reusable UI component library using <s>Tailwind CSS<s>, <s>Framer Motion<s>, and <s>Storybook<s>, ensuring visual consistency and scalable UI development across products."
       },
       {
-        "title": "Implemented unit and end-to-end tests",
-        "description": "Implemented unit and end-to-end tests using <s>Jest<s> and <s>Cypress<s>, reducing errors by 30%."
+        "title": "Scalable backend and secure infrastructure",
+        "description": "Engineered and deployed scalable backend services on <s>AWS EC2<s> with <s>AWS RDS<s> (<s>PostgreSQL<s>), implementing <s>VPC<s> security groups and <s>SSH<s> tunneling for secure data access."
       },
       {
-        "title": "Optimized deployment pipeline",
-        "description": "Optimized <s>GitHub Actions<s>, <s>Docker<s> and <s>AWS<s>, cutting deployment time by 50%."
+        "title": "CI/CD and deployment automation",
+        "description": "Built <s>CI/CD pipelines<s> with <s>GitHub Actions<s> and <s>Vercel<s>, enabling automated testing, deployments, and safe rollback strategies."
       },
       {
-        "title": "Authentication and security",
-        "description": "Experienced with <s>OAuth<s>, <s>JWT<s> authentication, and security best practices."
-      },
-      {
-        "title": "Implemented i18n solutions",
-        "description": "Implemented <s>i18n<s> solutions using <s>react-i18next<s>, enabling seamless multi-language support."
-      },
-      {
-        "title": "AWS and cloud technologies",
-        "description": "Experienced with <s>AWS<s> (<s>EC2<s>, <s>S3<s>, <s>Lambda<s>), eager to upskill in <s>Azure<s> cloud technologies."
-      },
-      {
-        "title": "Designed UI and implemented design system",
-        "description": "Designed UI in <s>Figma<s> and implemented inner design system using <s>Tailwind<s>, <s>Framer Motion<s>, <s>GSAP<s>, and <s>3.js<s>."
-      },
-      {
-        "title": "Optimized SEO",
-        "description": "Optimized <s>SEO<s> by improving web elements like <s>meta tags<s>, <s>headers<s> and <s>content structure<s> using <s>Google Analytics<s> and <s>Lighthouse<s>."
-      },
-      {
-        "title": "Worked in Agile environments",
-        "description": "Worked in <s>Agile<s> environments using <s>Jira<s> or <s>Scrum<s>, collaborating cross-functionally for efficient development."
+        "title": "QR-based redemption and data integrity",
+        "description": "Implemented a <s>QR Code<s>-based redemption workflow with strict server-side validation and transaction logging, ensuring data integrity and preventing double-spending."
       }
     ]
   }
