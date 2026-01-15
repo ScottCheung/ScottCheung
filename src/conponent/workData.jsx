@@ -61,7 +61,7 @@ function Card({ card }) {
       <motion.div
         layoutId={`card-img-${card.image}`}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        className={`lg:absolute  -left-[30px] -top-[60px] right-[60px] shadow-xl shadow-${card.backgroundColor} lg:rounded-[28px]  overflow-hidden aspect-[16/9] z-30`}
+        className={`lg:absolute  -left-[30px] -top-[60px] right-[60px] lg:shadow-xl lg:shadow-${card.backgroundColor} lg:rounded-[28px]  overflow-hidden aspect-[16/9] z-30`}
       >
         <motion.img
           loading='lazy'
@@ -213,7 +213,7 @@ function WorkExperience() {
           <motion.div
             layout
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: 1, zIndex: 999999 }}
             exit={{ opacity: 0 }}
             onClick={handleClose}
             className='fixed  inset-0 top-0 bottom-0  w-full h-full z-30  bg-gray-900/75 backdrop-blur-[20px]'
@@ -311,7 +311,7 @@ function WorkExperience() {
                       </div>
 
                       <div className={contentContainer}>
-                        <div className={normaltext + ' pb-[10vh] md:pb-[0vh]'}>
+                        <div className={normaltext + ' pb-[20vh] md:pb-[20vh]'}>
                           <p>
                             <h3 className='text-[20px] font-black'>Skill:</h3>{' '}
                             {selectedCard.skill.join(',  ')}
