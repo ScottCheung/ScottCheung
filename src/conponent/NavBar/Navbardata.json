@@ -70,6 +70,24 @@
       "expression": "(｡◕‿◕｡) 📧",
       "scondMenu": [
         {
+          "link": "/scholarship",
+          "name": [
+            "Scholarship",
+            "奖学金"
+          ],
+          "icon": "fi-rr-trophy-star",
+          "status": "fi-sr-eye"
+        },
+        {
+          "link": "/award",
+          "name": [
+            "Award",
+            "奖项"
+          ],
+          "icon": "fi-rr-diploma",
+          "status": "fi-sr-eye"
+        },
+        {
           "link": "https://github.com/Xianzhezhang97/download/raw/main/CV%20%7C%20Scott%20Cheung.pdf",
           "blank": true,
           "name": [
@@ -96,15 +114,6 @@
           ],
           "icon": "fi-rr-corporate-alt",
           "status": "fi-sr-lock"
-        },
-        {
-          "link": "/networkingmsg",
-          "name": [
-            "NetWorking",
-            "社交"
-          ],
-          "icon": "fi-rr-network-analytic",
-          "status": "fi-sr-eye-crossed"
         }
       ]
     },

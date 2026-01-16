@@ -266,6 +266,7 @@
     ]
   },
   {
+    "id": 4,
     "company": "Wolli Software",
     "title": "Web Developer",
     "location": "Sydney",
@@ -345,6 +346,7 @@
     ]
   },
   {
+    "id": 5,
     "company": "BlueSky Creations",
     "title": "Full Stack Developer",
     "location": "Sunshine Coast",
