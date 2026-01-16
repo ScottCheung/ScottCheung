@@ -70,15 +70,6 @@
       "expression": "(｡◕‿◕｡) 📧",
       "scondMenu": [
         {
-          "link": "/resume",
-          "name": [
-            "Career view",
-            "职业速览"
-          ],
-          "icon": "fi-rr-memo-pad",
-          "status": "fi-sr-eye"
-        },
-        {
           "link": "https://github.com/Xianzhezhang97/download/raw/main/CV%20%7C%20Scott%20Cheung.pdf",
           "blank": true,
           "name": [

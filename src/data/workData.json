@@ -352,7 +352,7 @@
     "startTime": "June 2025",
     "endTime": "Jan 2026",
     "name": "Rewowo Loyalty & Membership Platform",
-    "des": "Spearheaded the architecture and end-to-end delivery of a loyalty and membership platform, covering authentication, rewards redemption, payments, and merchant management, from requirements gathering to production deployment.",
+    "des": "Led the architecture and end-to-end delivery of a loyalty and membership platform, including <s>authentication<s>, <s>rewards redemption<s>, <s>payments<s>, and <s>merchant management<s>, owning the full lifecycle from <s>requirements gathering<s> to <s>production deployment<s>.",
     "tag": "Web Development",
     "link": "https://www.linkedin.com/company/bluesky-creations/posts/?feedView=all",
     "image": "/Graphs/work/bluesky.png",
@@ -376,32 +376,32 @@
     ],
     "points": [
       {
-        "title": "Architected and delivered a full-stack platform",
-        "description": "Spearheaded the architecting and delivery of a loyalty platform using <s>TypeScript<s>, <s>Next.js<s>, <s>FastAPI<s>, and <s>AWS<s> (<s>EC2<s>, <s>S3<s>, <s>RDS<s>), managing the complete development lifecycle from requirements gathering to production deployment."
+        "title": "Full-stack architecture and end-to-end delivery",
+        "description": "Led the architecture and end-to-end delivery of a loyalty platform built with <s>TypeScript<s>, <s>Next.js<s>, <s>FastAPI<s>, and <s>AWS<s>, owning the full development lifecycle from <s>requirements gathering<s> to <s>production deployment<s>."
       },
       {
         "title": "Performance optimization and cost reduction",
-        "description": "Reduced operational costs by <s>$15k/year<s> by migrating from <s>WordPress<s> hosting to <s>Next.js<s> on <s>Vercel<s>, improving page load speed by <s>65% (TBT < 70ms)<s> and achieving 90+ <s>Lighthouse<s> scores."
+        "description": "Reduced operational costs by <s>$15k/year<s> by migrating from <s>WordPress<s> to <s>Next.js<s> on <s>Vercel<s>, improving page load speed by <s>65%<s> (<s>TBT < 70ms<s>) and achieving <s>90+<s> <s>Lighthouse<s> scores."
       },
       {
         "title": "Monorepo architecture and codebase consolidation",
-        "description": "Consolidated 3 separate frontend apps into a <s>TurboRepo<s> monorepo with shared components, hooks, and utilities, cutting code duplication by <s>40%<s> and reducing long-term maintenance effort."
+        "description": "Redesigned frontend architecture by consolidating <s>three<s> separate applications into a <s>TurboRepo<s> <s>monorepo<s>, enabling shared <s>components<s>, <s>hooks<s>, and <s>core utilities<s>, reducing code duplication by <s>40%<s> and improving long-term <s>maintainability<s>."
       },
       {
         "title": "Reusable UI component system",
-        "description": "Established a reusable UI component library using <s>Tailwind CSS<s>, <s>Framer Motion<s>, and <s>Storybook<s>, ensuring visual consistency and scalable UI development across products."
+        "description": "Built a reusable <s>UI component library<s> with <s>Tailwind CSS<s>, <s>Framer Motion<s>, and <s>Storybook<s>, ensuring <s>design consistency<s> and <s>faster UI development<s> across multiple products."
       },
       {
         "title": "Scalable backend and secure infrastructure",
-        "description": "Engineered and deployed scalable backend services on <s>AWS EC2<s> with <s>AWS RDS<s> (<s>PostgreSQL<s>), implementing <s>VPC<s> security groups and <s>SSH<s> tunneling for secure data access."
+        "description": "Engineered and deployed <s>scalable backend services<s> on <s>AWS<s> (<s>EC2<s>, <s>RDS<s>/<s>PostgreSQL<s>), configuring <s>VPC security groups<s> to ensure <s>secure<s> and <s>reliable<s> data access."
       },
       {
         "title": "CI/CD and deployment automation",
-        "description": "Built <s>CI/CD pipelines<s> with <s>GitHub Actions<s> and <s>Vercel<s>, enabling automated testing, deployments, and safe rollback strategies."
+        "description": "Built <s>CI/CD pipelines<s> using <s>GitHub Actions<s> and <s>Vercel<s>, enabling <s>automated testing<s>, <s>production deployments<s>, and <s>safe rollback<s> strategies."
       },
       {
         "title": "QR-based redemption and data integrity",
-        "description": "Implemented a <s>QR Code<s>-based redemption workflow with strict server-side validation and transaction logging, ensuring data integrity and preventing double-spending."
+        "description": "Implemented a <s>QR-based<s> redemption workflow with strict <s>server-side validation<s> and <s>transaction logging<s>, ensuring <s>data integrity<s> and preventing <s>double-spending<s> in <s>production<s>."
       }
     ]
   }
