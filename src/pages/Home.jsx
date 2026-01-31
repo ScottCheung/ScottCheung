@@ -28,7 +28,7 @@ const bg = Database.PersonalInfo.Welcomebg[0];
 // const path = '../';
 const HomeCarousel = [
   {
-    href: '/Graphs/home_carousel/1.JPG',
+    href: 'https://medium.com/@scott5443003/what-makes-a-good-component-in-react-8858a1ab7b5c',
     type: 'image',
     x: '56vw',
     y: '-420px',
