@@ -113,10 +113,10 @@ const getGeolocation = async () => {
      * 补丁更新
      *
      ******************/
-    // header: ['Patch Update', '补丁更新'],
-    // new: [],
-    // fix: [['Fix some bugs.'], ['修复部分异常']],
-    // impro: [],
+    header: ['Patch Update', '补丁更新'],
+    new: [],
+    fix: [['Fix some bugs.'], ['修复部分异常']],
+    impro: [],
 
     // 视觉优化
     // header: ['Project Navbar visual Patch Update', '项目顶端栏显示优化更新'],
@@ -141,13 +141,13 @@ const getGeolocation = async () => {
     // ],
     // impro: [],
 
-    header: ['Carousel Component UI Update', 'Carousel 组件UI更新'],
-    new: [
-      ['New UI.', 'Support Book function.'],
-      ['全新UI。', '支持预定功能'],
-    ],
-    fix: [],
-    impro: [],
+    // header: ['Carousel Component UI Update', 'Carousel 组件UI更新'],
+    // new: [
+    //   ['New UI.', 'Support Book function.'],
+    //   ['全新UI。', '支持预定功能'],
+    // ],
+    // fix: [],
+    // impro: [],
   };
 
   // 将新日志条目添加到日志字典中，以时间戳作为键
