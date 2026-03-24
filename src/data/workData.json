@@ -363,23 +363,24 @@
       "TypeScript",
       "React",
       "Next.js",
+      ".NET",
+      "EF Core",
       "FastAPI",
       "Tailwind CSS",
       "Framer Motion",
       "Storybook",
       "TurboRepo",
       "PostgreSQL",
-      "AWS EC2",
+      "AWS EC2/ECS/EKS",
       "AWS S3",
       "AWS RDS",
       "Vercel",
-      "GitHub Actions",
-      "QR Code"
+      "GitHub Actions"
     ],
     "points": [
       {
         "title": "Full-stack architecture and end-to-end delivery",
-        "description": "Led the architecture and end-to-end delivery of a loyalty platform built with <s>TypeScript<s>, <s>Next.js<s>, <s>FastAPI<s>, and <s>AWS<s>, owning the full development lifecycle from <s>requirements gathering<s> to <s>production deployment<s>."
+        "description": "Led the architecture and end-to-end delivery of a loyalty platform built with <s>TypeScript<s>, <s>Next.js<s>, <s>.NET<s>, <s>FastAPI<s>, and <s>AWS<s>, owning the full development lifecycle from <s>requirements gathering<s> to <s>production deployment<s>."
       },
       {
         "title": "Performance optimization and cost reduction",
