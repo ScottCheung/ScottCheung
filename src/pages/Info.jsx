@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState, useEffect } from 'react';
-import Navbar from '../conponent/NavBar/Navbar';
+import Navbar from '../conponent/Navbar/Navbar';
 import { motion, AnimatePresence, animate } from 'framer-motion';
 import database from '../data/Database.json';
 import Contact from '../conponent/Contact';
@@ -53,8 +53,7 @@ export default function Profile() {
             whileInView={{ opacity: 1, y: '0px', scale: 1 }}
             className='absolute top-0 bottom-0 left-0 w-full h-full bg-left bg-no-repeat bg-cover'
             style={{
-              backgroundImage:
-                "url('/Graphs/home/long banner.jpg')",
+              backgroundImage: "url('/Graphs/home/long banner.jpg')",
             }}
           >
             {/* <span
@@ -140,7 +139,7 @@ export default function Profile() {
                     >
                       {isExpanded ?
                         ['Collapse', '收起'][lang]
-                        : [
+                      : [
                           'I agree, show me more information.',
                           '我同意，显示更多信息。',
                         ][lang]

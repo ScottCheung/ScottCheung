@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import Navbar from '../../conponent/NavBar/Navbar';
+import Navbar from '../../conponent/Navbar/Navbar';
 import { useLanguage } from '../../help/helpFunction';
 import { motion } from 'framer-motion';
 import Toast from '../../conponent/toast';

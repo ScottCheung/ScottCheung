@@ -1,6 +1,6 @@
 /** @format */
 
-import Navbar from '../conponent/NavBar/Navbar.jsx';
+import Navbar from '../conponent/Navbar/Navbar.jsx';
 import Education from '../conponent/Education';
 import database from '../data/Database.json';
 import React, { useState, useEffect } from 'react';
@@ -97,7 +97,7 @@ export default function Example() {
                   <a
                     href={data[0].web}
                     className={`welcome-video-wall-visblecontainer w-full flex justify-center  h-full rounded-[28px] lg:rounded-[40px] overflow-hidden py-[40px]   bg-sky-100 bg-cover bg-center sticky z-30 `}
-                  // style={{ top: `calc(${navbarHeight}px + 10px)` }}
+                    // style={{ top: `calc(${navbarHeight}px + 10px)` }}
                   >
                     <div className='flex items-center justify-center '>
                       <img
@@ -222,8 +222,9 @@ export default function Example() {
                     )}
                     {lang == 1 && (
                       <thead
-                        className={`${windowWidth <= 786 ? '' : 'hidden'
-                          } text-gray-700 uppercase  darrk:bg-gray-700 darrk:text-gray-400 `}
+                        className={`${
+                          windowWidth <= 786 ? '' : 'hidden'
+                        } text-gray-700 uppercase  darrk:bg-gray-700 darrk:text-gray-400 `}
                       >
                         <th className='pl-[2%] py-3 text-center w-[10%]'>
                           序号

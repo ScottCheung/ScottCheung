@@ -1,7 +1,7 @@
 /** @format */
 
 import React from 'react';
-import Navbar from '../../conponent/NavBar/Navbar';
+import Navbar from '../../conponent/Navbar/Navbar';
 
 export default function igrapher() {
   return (

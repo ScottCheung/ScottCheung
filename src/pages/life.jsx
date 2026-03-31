@@ -1,7 +1,7 @@
 /** @format */
 
 import { useLayoutEffect, useState } from 'react';
-import Navbar from '../conponent/NavBar/Navbar';
+import Navbar from '../conponent/Navbar/Navbar';
 import Contact from '../conponent/Contact';
 import database from '../data/Database.json';
 import { motion, AnimatePresence } from 'framer-motion';

@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState, useEffect } from 'react';
-import Navbar from '../../conponent/NavBar/Navbar';
+import Navbar from '../../conponent/Navbar/Navbar';
 import InfiniteLoader from '../../conponent/InfiniteLoader.jsx';
 import { parsePath } from 'react-router-dom';
 

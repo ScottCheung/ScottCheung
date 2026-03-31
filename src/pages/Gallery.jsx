@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState, useRef, useEffect } from 'react';
-import Navbar from '../conponent/NavBar/Navbar';
+import Navbar from '../conponent/Navbar/Navbar';
 import Database from '../data/Database.json';
 import { useLanguage } from '../help/helpFunction';
 import { useParams, useNavigate } from 'react-router-dom';

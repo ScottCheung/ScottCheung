@@ -1,6 +1,6 @@
 /** @format */
 
-import Navbar from '../conponent/NavBar/Navbar';
+import Navbar from '../conponent/Navbar/Navbar';
 import database from '../data/Database.json';
 import KeyFeature from '../conponent/KeyFeature';
 import { motion, AnimatePresence } from 'framer-motion';

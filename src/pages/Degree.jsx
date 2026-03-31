@@ -1,7 +1,7 @@
 /** @format */
 
 import Contact from '../conponent/Contact';
-import Navbar from '../conponent/NavBar/Navbar';
+import Navbar from '../conponent/Navbar/Navbar';
 import Education from '../conponent/Education';
 import { hideRow, bgPic, useLanguage } from '../help/helpFunction';
 import { motion } from 'framer-motion';

@@ -1,10 +1,12 @@
-import React from "react";
-import Navbar from "../conponent/NavBar/Navbar";
-import Contact from "../conponent/Contact";
+/** @format */
+
+import React from 'react';
+import Navbar from '../conponent/Navbar/Navbar';
+import Contact from '../conponent/Contact';
 
 function ContactPage() {
   const ContactPage = (
-    <div className="overflow-hidden">
+    <div className='overflow-hidden'>
       <Navbar topTextColor={true} />
       <Contact />
     </div>

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Database from '../data/Database.json';
-import Navbar from '../conponent/NavBar/Navbar';
+import Navbar from '../conponent/Navbar/Navbar';
 import { motion } from 'framer-motion'; // 导入 framer-motion
 import { debounce } from 'lodash'; // 防抖函数
 

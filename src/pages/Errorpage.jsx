@@ -1,7 +1,7 @@
 /** @format */
 
 import React, { useState, useEffect } from 'react';
-import Navbar from '../conponent/NavBar/Navbar';
+import Navbar from '../conponent/Navbar/Navbar';
 import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';

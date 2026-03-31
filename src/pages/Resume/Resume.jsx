@@ -4,7 +4,7 @@ import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion'; // 导入 framer-motion
 import DockerBar from '../../conponent/DockerBar';
 import { useLanguage } from '../../help/helpFunction';
-import Navbar from '../../conponent/NavBar/Navbar';
+import Navbar from '../../conponent/Navbar/Navbar';
 import CV from './CV_HR';
 import CVs from './CV_ATS';
 import { div } from 'three/examples/jsm/nodes/Nodes.js';

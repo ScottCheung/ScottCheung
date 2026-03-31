@@ -16,7 +16,7 @@ import SingleWork from './pages/SingleWork.jsx';
 import Gallery from './pages/Gallery.jsx';
 import Resume from './pages/Resume/Resume.jsx';
 import AutoText from './pages/AutoText/AutoText.jsx';
-import Navbar from './conponent/NavBar/Navbar.jsx';
+import Navbar from './conponent/Navbar/Navbar.jsx';
 import Resumecheck from './pages/Resume/Resumecheck.jsx';
 import Project from './pages/project.jsx';
 import TikTok from './pages/Empty.jsx';
