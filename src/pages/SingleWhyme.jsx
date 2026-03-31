@@ -78,8 +78,7 @@ export default function WhyM() {
             whileInView={{ opacity: 1, y: '0px', scale: 1 }}
             className='absolute top-0 bottom-0 left-0 w-full h-full bg-left bg-no-repeat bg-cover'
             style={{
-              backgroundImage:
-                "url('https://img.picgo.net/2025/03/17/long-banner007133549fbba964.jpg')",
+              backgroundImage: "url('/Graphs/home/long banner.jpg')",
             }}
           >
             <span
