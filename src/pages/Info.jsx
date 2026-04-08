@@ -51,7 +51,7 @@ export default function Profile() {
             }}
             viewport={{ once: true }}
             whileInView={{ opacity: 1, y: '0px', scale: 1 }}
-            className='absolute top-0 bottom-0 left-0 w-full h-full bg-left bg-no-repeat bg-cover'
+            className='absolute top-0 bottom-0 left-0 z-0 w-full h-full bg-left bg-no-repeat bg-cover'
             style={{
               backgroundImage: "url('/Graphs/home/long banner.jpg')",
             }}
@@ -69,7 +69,7 @@ export default function Profile() {
               viewBox='0 0 1440 62'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
-              className={`absolute bottom-0 left-0 right-0 z-50 scale-105`}
+              className={`absolute bottom-0 left-0 right-0 z-20 scale-105`}
             >
               <path
                 data-v-226d292e=' '
@@ -84,7 +84,7 @@ export default function Profile() {
             initial={{ height: '0px', opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             transition={{ duration: 0.8, ease: [0.455, 0.03, 0.515, 0.955] }}
-            className='relative flex flex-col bg-white pt-[14px] md:pt-[28px] lg:pt-[40px] px-[14px] md:px-[28px] lg:px-[40px] pb-[80px] rounded-[28px]  -mt-[80px] animate_animated animate__fadeInUp '
+            className='z-40 relative flex flex-col bg-white pt-[14px] md:pt-[28px] lg:pt-[40px] px-[14px] md:px-[28px] lg:px-[40px] pb-[80px] rounded-[28px]  -mt-[80px] animate_animated animate__fadeInUp '
           >
             <div className='flex justify-center w-full'>
               <img
@@ -139,7 +139,7 @@ export default function Profile() {
                     >
                       {isExpanded ?
                         ['Collapse', '收起'][lang]
-                      : [
+                        : [
                           'I agree, show me more information.',
                           '我同意，显示更多信息。',
                         ][lang]
