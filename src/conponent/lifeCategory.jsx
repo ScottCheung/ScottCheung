@@ -30,15 +30,14 @@ export default function Life() {
               setIndex(index);
             }}
             onMouseLeave={() => setHoverColor(false)}
-            className='welcomeanimation lg:col-span-3 flex  md:col-span-6 col-span-6  relative w-full duration-500 h-[100px] lg:max-h-[150px]   rounded-[12px] '
+            className='welcomeanimation lg:col-span-3 flex  group md:col-span-6 col-span-6  relative w-full duration-500 h-[100px] lg:max-h-[150px]   rounded-[12px] '
           >
-            <div className='absolute bottom-0 left-0 z-50 w-[40%] lg:w-[70%] overflow-hidden rounded-bl-[14px] '>
+            <div className='absolute bottom-0 group-hover:scale-125 transition-all left-0 z-50 w-[40%] lg:w-[70%] overflow-hidden rounded-bl-[14px] '>
               <img src={life.pic} alt='' />
             </div>
             <div
-              className={`absolute bottom-0 left-0 right-0 transition-all duration-500 flex flex-col  w-full  h-[100px]  ${
-                HoverColor && Index == index ? 'bg-sky-900' : ' bg-white'
-              } rounded-[12px] `}
+              className={`absolute bottom-0 left-0 right-0 transition-all duration-500 flex flex-col  w-full  h-[100px]  ${HoverColor && Index == index ? 'bg-sky-900' : ' bg-white'
+                } rounded-[12px] `}
             >
               <div className='flex-auto px-6 py-6 text-gray-750 hover:text-white'>
                 <div className='flex justify-end'>
@@ -48,20 +47,18 @@ export default function Life() {
                         className={`flex justify-end w-18 h-18 rounded-full items-center `}
                       >
                         <i
-                          className={`fi text-[25px] ${
-                            HoverColor && Index == index ?
-                              'text-white'
+                          className={`fi text-[25px] ${HoverColor && Index == index ?
+                            'text-white'
                             : 'text-gray-750'
-                          } ${life.icon}`}
+                            } ${life.icon}`}
                         />
                       </div>
                     </div>
                     <h6
-                      className={`text-3xl ${
-                        HoverColor && Index == index ?
-                          'text-white'
+                      className={`text-3xl ${HoverColor && Index == index ?
+                        'text-white'
                         : 'text-gray-750'
-                      } font-semibold text-right`}
+                        } font-semibold text-right`}
                     >
                       {life.label[lang]}
                     </h6>

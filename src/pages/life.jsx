@@ -59,7 +59,7 @@ export default function Life() {
           className='absolute top-0 w-full h-full overflow-hidden'
           style={{
             backgroundImage:
-              "url('https://img.picgo.net/2025/03/19/IMG_48462ed652b541841a51.jpg')",
+              "url('/Graphs/home_carousel/5.jpg')",
             backgroundPosition: 'bottom',
             backgroundSize: 'cover',
           }}
@@ -73,7 +73,7 @@ export default function Life() {
             viewBox='0 0 1440 62'
             fill='none'
             xmlns='http://www.w3.org/2000/svg'
-            className={`absolute bottom-0 left-0 right-0 z-20 scale-105`}
+            className={`absolute bottom-0 left-0 right-0 z-0 scale-105`}
           >
             <path
               data-v-226d292e=' '

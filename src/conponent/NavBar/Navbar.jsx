@@ -65,8 +65,8 @@ function Navbar({
 
   const updateMessage =
     isToday ? ['Today', '今天'][lang]
-    : isWithinOneWeek ? `${Math.abs(daysBetween)} ${['days ago', '天前'][lang]}`
-    : updateTime[lang];
+      : isWithinOneWeek ? `${Math.abs(daysBetween)} ${['days ago', '天前'][lang]}`
+        : updateTime[lang];
 
   const isTopTextColorWhite = topTextColor;
   const scrollTo = scrollToHash();
@@ -182,11 +182,10 @@ function Navbar({
     <AnimatePresence>
       <motion.div
         transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-        className={` z-50 h-0 duration-700 fixed   overflow-x-clip ${
-          isScrolling || Components.NavBar === 'hide' ?
-            '  -top-[100px]'
+        className={` z-50 h-0 duration-700 fixed   overflow-x-clip ${isScrolling || Components.NavBar === 'hide' ?
+          '  -top-[100px]'
           : ' -top-[2px] lg:top-0 '
-        }  `}
+          }  `}
       >
         <motion.nav
           layout
@@ -203,21 +202,18 @@ function Navbar({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
             layout
-            className={`flex flex-col w-screen  ${BG} overflow-hidden
-        ${
-          windowWidth < 768 ?
-            ` pr-[5%]  ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`
-          : ` ${isTop && isHomeOrRoot ? ' lg:pt-[10px] ' : ''} 
+            className={`flex flex-col w-screen  ${BG} overflow-hidden 
+        ${windowWidth < 768 ?
+                ` pr-[5%]  ${isTop && isOpened ? `backdrop-blur-[20px] ${isTopTextColorWhite ? 'bg-black/50' : 'bg-white/50'} ` : ' '}`
+                : ` ${isTop && isHomeOrRoot ? ' lg:pt-[10px] ' : ''} 
               `
-        }
-        ${
-          isScrolling ?
-            ` backdrop-blur-[20px]  bg-white/90`
-          : `${
-              !isTop &&
-              `backdrop-blur-[20px]  border-b-[1px] border-gray-300 bg-white lg:bg-opacity-90 `
-            }`
-        }`}
+              }
+        ${isScrolling ?
+                `   bg-white transition-all duration-1000`
+                : `${!isTop &&
+                `  bg-white `
+                }`
+              }`}
           >
             <motion.div className='flex items-center justify-center w-full '>
               <motion.div
@@ -280,8 +276,8 @@ function Navbar({
                                 isWithinOneWeek ?
                                   isTop && isTopTextColorWhite ?
                                     'text-sky-200 font-[600]'
-                                  : 'text-sky-700'
-                                : ''
+                                    : 'text-sky-700'
+                                  : ''
                               }
                             >
                               {` ${updateMessage} ${['Updates', '更新'][lang]} ${version} `}
@@ -293,9 +289,8 @@ function Navbar({
                   </motion.button>
 
                   <motion.div
-                    className={`flex items-center  ${
-                      windowWidth < 876 ? 'w-[50%]' : 'w-[70%]'
-                    } gap-[30px] justify-end `}
+                    className={`flex items-center  ${windowWidth < 876 ? 'w-[50%]' : 'w-[70%]'
+                      } gap-[30px] justify-end `}
                   >
                     <AnimatePresence>
                       {windowWidth > 876 && (
@@ -309,9 +304,8 @@ function Navbar({
                             x: -100,
                             transition: { duration: 1 },
                           }}
-                          className={` ${
-                            isTop ? 'gap-x-4' : 'gap-x-1'
-                          } flex overflow-x-clip px-[10px] `}
+                          className={` ${isTop ? 'gap-x-4' : 'gap-x-1'
+                            } flex overflow-x-clip px-[10px] `}
                         >
                           {navbarItem.map((item, index) => (
                             <motion.div
@@ -343,27 +337,24 @@ function Navbar({
                                 }}
                                 whileTap={{ scale: 0.95 }}
                                 type='button'
-                                className={` rounded-[5px] items-center justify-center gap-[5px] font-medium text-center ${
-                                  isTopTextColorWhite & isTop ?
-                                    'text-white flex flex-col px-12 py-12 hover:bg-gray-900/20'
+                                className={` rounded-[5px] items-center justify-center gap-[5px] font-medium text-center ${isTopTextColorWhite & isTop ?
+                                  'text-white flex flex-col px-12 py-12 hover:bg-gray-900/20'
                                   : 'flex flex-col px-8 py-6'
-                                } rounded-full lg:mx-3  transition-all duration-1000`}
+                                  } rounded-full lg:mx-3  transition-all duration-1000`}
                               >
                                 <div className='flex items-center justify-center w-full '>
                                   <i
-                                    className={`flex transition-all duration-1000 items-center ${
-                                      isTopTextColorWhite & isTop ?
-                                        'text-white text-[25px]'
+                                    className={`flex transition-all duration-1000 items-center ${isTopTextColorWhite & isTop ?
+                                      'text-white text-[25px]'
                                       : 'text-gray-900 text-[23px]'
-                                    }  fi ${item.icon}`}
+                                      }  fi ${item.icon}`}
                                   ></i>
                                 </div>
                                 <div
-                                  className={` relative transition-all duration-1000 items-center ${
-                                    isTopTextColorWhite & isTop ?
-                                      'text-white text-[15px] flex'
+                                  className={` relative transition-all duration-1000 items-center ${isTopTextColorWhite & isTop ?
+                                    'text-white text-[15px] flex'
                                     : 'text-gray-900 text-[15px]'
-                                  } md:hidden lg:flex`}
+                                    } md:hidden lg:flex`}
                                 >
                                   {item.name[lang]}
                                   <AnimatePresence>
@@ -373,7 +364,7 @@ function Navbar({
                                         alwaysShow={true}
                                         color={
                                           isTopTextColorWhite && isTop ? 'white'
-                                          : 'sky'
+                                            : 'sky'
                                         }
                                         margintop={isTop ? 3 : 5}
                                       />
@@ -409,7 +400,7 @@ function Navbar({
                             color:
                               isTopTextColorWhite & isTop ?
                                 'fill-white text-bold'
-                              : 'fill-gray-700 ',
+                                : 'fill-gray-700 ',
                           }}
                         >
                           <motion.polyline
@@ -429,7 +420,7 @@ function Navbar({
                               points:
                                 !isOpened ?
                                   '2 12, 16 12; 2 9, 16 9; 3.5 15, 15 3.5'
-                                : '3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12',
+                                  : '3.5 15, 15 3.5; 2 9, 16 9; 2 12, 16 12',
                             }}
                           />
                           <motion.polyline
@@ -449,7 +440,7 @@ function Navbar({
                               points:
                                 !isOpened ?
                                   '2 5, 16 5; 2 9, 16 9; 3.5 3.5, 15 15'
-                                : '3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5',
+                                  : '3.5 3.5, 15 15; 2 9, 16 9; 2 5, 16 5',
                             }}
                           />
                         </motion.svg>
@@ -487,25 +478,21 @@ function Navbar({
                               ease: [0.22, 1, 0.36, 1],
                             }}
                             layoutId='isExp'
-                            className={`w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  ${
-                              !isExpanded && selectedTab !== navItem.name[1] ?
-                                ' items-center justify-center'
+                            className={`w-full flex my-[20px] mb-[50px] max-w-[1200px] px-[3%]  ${!isExpanded && selectedTab !== navItem.name[1] ?
+                              ' items-center justify-center'
                               : 'items-center justify-center'
-                            }`}
+                              }`}
                           >
                             <motion.div
-                              className={`w-full justify-between flex items-center ${
-                                isExpanded ? 'my-8' : ''
-                              }
-                           ${
-                             isTop ?
-                               `${
-                                 isTopTextColorWhite ? 'bg-white/70' : (
-                                   ' text-sky-950 bg-sky-200/30 border border-sky-950'
-                                 )
-                               }  backdrop-blur-md  mt-[50px] rounded-[28px]`
-                             : ' divide-x border bg-sky-200/30 mt-[50px] divide-gray-900/0 rounded-full border-gray-400'
-                           }`}
+                              className={`w-full justify-between flex items-center ${isExpanded ? 'my-8' : ''
+                                }
+                           ${isTop ?
+                                  `${isTopTextColorWhite ? 'bg-white/70' : (
+                                    ' text-sky-950 bg-sky-200/30 border border-sky-950'
+                                  )
+                                  }  backdrop-blur-md  mt-[50px] rounded-[28px]`
+                                  : ' divide-x border bg-sky-200/30 mt-[50px] divide-gray-900/0 rounded-full border-gray-400'
+                                }`}
                             >
                               {navItem.scondMenu.map((item, index) => (
                                 <motion.a
@@ -525,12 +512,11 @@ function Navbar({
                                     duration: 1,
                                     ease: [0.22, 1, 0.36, 1],
                                   }}
-                                  className={`flex w-full ${!isTop && `rounded-full`} justify-center welcomeanimation ${index === 0 && (isTop ? `rounded-l-[28px]` : `rounded-full`)} ${
-                                    index === navItem.scondMenu.length - 1 &&
+                                  className={`flex w-full ${!isTop && `rounded-full`} justify-center welcomeanimation ${index === 0 && (isTop ? `rounded-l-[28px]` : `rounded-full`)} ${index === navItem.scondMenu.length - 1 &&
                                     (isTop ? `rounded-r-[28px]` : (
                                       `rounded-full`
                                     ))
-                                  } opacity-80 hover:opacity-100 font-medium hover:shadow-2xl hover:bg-sky-900 hover:text-white focus:z-10 `}
+                                    } opacity-80 hover:opacity-100 font-medium hover:shadow-2xl hover:bg-sky-900 hover:text-white focus:z-10 `}
                                 >
                                   <motion.button
                                     layout
@@ -544,19 +530,17 @@ function Navbar({
                                     <div className='flex flex-col items-center justify-center px-2 py-[20px] my-3 text-center gap-y-2 '>
                                       {(isTop || item.detail) && (
                                         <i
-                                          className={`flex fi justify-center ${
-                                            isTop &&
+                                          className={`flex fi justify-center ${isTop &&
                                             ' text-[17px] md:text-[20px] lg:text-[23px]'
-                                          } ${item.icon}`}
+                                            } ${item.icon}`}
                                         ></i>
                                       )}
 
                                       {item.name && (
                                         <div
-                                          className={`gap-x-4 gap-y-2 flex h-full justify-center items-center w-full ${
-                                            isTop &&
+                                          className={`gap-x-4 gap-y-2 flex h-full justify-center items-center w-full ${isTop &&
                                             'text-[17px] md:text-[20px] lg:text-[23px] gap-x-0'
-                                          }`}
+                                            }`}
                                         >
                                           {!isTop &&
                                             window.innerWidth > 784 && (
@@ -571,9 +555,8 @@ function Navbar({
 
                                           {item.status && (
                                             <i
-                                              className={` flex ${
-                                                isTop && ' lg:mx-2'
-                                              } justify-center items-center text-[15px] pb-[10px] ${item.status}`}
+                                              className={` flex ${isTop && ' lg:mx-2'
+                                                } justify-center items-center text-[15px] pb-[10px] ${item.status}`}
                                             ></i>
                                           )}
                                         </div>
@@ -681,7 +664,7 @@ function Navbar({
                 backgroundSize:
                   selectedTab === 'Project' || selectedTab === 'Contact' ?
                     `15% auto`
-                  : `25% auto`,
+                    : `25% auto`,
                 backgroundRepeat: 'no-repeat',
                 backgroundPosition: 'left bottom',
                 filter: 'drop-shadow(0px 20px 26px rgba(0, 0, 0, 0))',

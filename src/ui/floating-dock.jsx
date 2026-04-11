@@ -46,7 +46,7 @@ const FloatingDockDesktop = ({ items, className, themeColor }) => {
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        `mx-auto group pb-[20px] hidden md:flex transition-all duration-1000 h-[100px] gap-[50px] hover:gap-[45px] items-end  ${theme !== 'white' ? `hover:bg-sky-200/50` : `hover:bg-${theme}/30 `} rounded-full  dark:bg-neutral-900 px-[20px]`,
+        `mx-auto group pb-[20px] hidden md:flex transition-all duration-1000 h-[100px] gap-[50px] hover:gap-[45px] items-end  ${theme !== 'white' ? `hover:bg-sky-200/50` : `hover:bg-${theme}/30 `} rounded-full   px-[20px]`,
         className,
       )}
     >
@@ -116,7 +116,7 @@ function IconContainer({ mouseX, title, icon, href, blank, theme }) {
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className={`relative flex items-center justify-center rounded-[28px] group-hover:border ${theme !== 'white' ? `group-hover:bg-white border-${theme}` : `group-hover:bg-${theme}/30 border-white/10`}  backdrop-blur-[20px] aspect-square dark:bg-neutral-800`}
+        className={`relative flex items-center justify-center rounded-[28px] group-hover:border ${theme !== 'white' ? `group-hover:bg-white border-${theme}` : `group-hover:bg-${theme}/30 border-white/10`}  backdrop-blur-[20px] aspect-square `}
       >
         <AnimatePresence>
           {hovered && (
