@@ -69,7 +69,7 @@ export default function Profile() {
               viewBox='0 0 1440 62'
               fill='none'
               xmlns='http://www.w3.org/2000/svg'
-              className={`absolute bottom-0 left-0 right-0 z-20 scale-105`}
+              className={`absolute bottom-0 left-0 right-0 z-0 scale-105`}
             >
               <path
                 data-v-226d292e=' '
