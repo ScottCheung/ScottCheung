@@ -32,16 +32,18 @@ export default function Life() {
             onMouseLeave={() => setHoverColor(false)}
             className='welcomeanimation lg:col-span-3 flex  group md:col-span-6 col-span-6  relative w-full duration-500 h-[100px] lg:max-h-[150px]   rounded-[12px] '
           >
-            <div className='absolute bottom-0 group-hover:scale-125 transition-all left-0 z-50 w-[40%] lg:w-[70%] overflow-hidden rounded-bl-[14px] '>
-              <img src={life.pic} alt='' />
+            <div
+              style={{ filter: 'drop-shadow(rgba(0, 0, 0, 0.4) 0px 10px 13px)' }}
+              className='absolute bottom-0 left-0 z-50 w-[40%]  lg:w-[70%] overflow-hidden group-hover:overflow-visible rounded-bl-[14px] '>
+              <img src={life.pic} alt='' className='group-hover:scale-150 duration-1000  transition-all origin-bottom-right' />
             </div>
             <div
-              className={`absolute bottom-0 left-0 right-0 transition-all duration-500 flex flex-col  w-full  h-[100px]  ${HoverColor && Index == index ? 'bg-sky-900' : ' bg-white'
+              className={`absolute bottom-0 right-0 transition-all    duration-500 flex flex-col  w-full  h-[100px]  ${HoverColor && Index == index ? 'bg-sky-900' : ' bg-white'
                 } rounded-[12px] `}
             >
-              <div className='flex-auto px-6 py-6 text-gray-750 hover:text-white'>
-                <div className='flex justify-end'>
-                  <div className='flex flex-col'>
+              <div className='flex-auto text-gray-750 group-hover:z-50  hover:text-white'>
+                <div className='flex justify-end '>
+                  <div className='flex flex-col  px-6 py-6 rounded-[14px] '>
                     <div className='flex-shrink-0 '>
                       <div
                         className={`flex justify-end w-18 h-18 rounded-full items-center `}
