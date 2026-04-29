@@ -178,6 +178,17 @@
           "status": "fi-sr-eye"
         },
         {
+          "link": "/design",
+          "blank": true,
+          "name": ["UI/UX design Showcase", "UI/UX 设计展示"],
+          "icon": "fi-rr-palette",
+          "des": [
+            "Showcase of UI/UX design projects, showcasing a collection of UI/UX design projects that I have worked on.",
+            "展示了我参与的 UI/UX 设计项目，展示了我在 UI/UX 设计方面的能力和经验。"
+          ],
+          "status": "fi-sr-eye"
+        },
+        {
           "link": "https://ui-v2-silk.vercel.app/",
           "blank": true,
           "name": ["UI Lib V2", "UI库 第2版"],
