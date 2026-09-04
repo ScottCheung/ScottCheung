@@ -29,13 +29,6 @@ Driven by curiosity and a desire to build secure, robust systems, I am always ex
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-### 🚀 What I Do
-
-- **Architecture & Monorepos:** Consolidating frontend ecosystems using Turbo monorepo to cut code duplication and enforce shared UI standards (Storybook, Tailwind).
-- **Performance Optimization:** Migrating legacy systems to modern frameworks (like Next.js on Vercel) to drastically improve page load speeds (TBT < 70ms) and reduce operational costs.
-- **End-to-End DevOps:** Engineering full-stack CI/CD pipelines, integrating Vercel for frontends and GitHub Actions + AWS ECR/ECS for Dockerized backend services, ensuring automated testing and zero-downtime deployments.
-- **Secure Infrastructure:** Configuring robust AWS backends with strict VPC security groups and SSH tunneling for reliable data access.
-
 ### 📫 Let's Connect
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/scottcheung1110/)
