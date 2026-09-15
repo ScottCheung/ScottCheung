@@ -58,7 +58,9 @@ skills: [
     ],
 
     'AI-Assisted Development': [
-      'ChatGPT',
+      'Codex',
+      'Antigravity',
+      'Claude Code',
       'GitHub Copilot',
       'AI-Assisted Debugging',
       'Prompt Engineering',
@@ -141,7 +143,9 @@ skills: [
     ],
 
     'AI 辅助开发': [
-      'ChatGPT',
+      'Codex',
+      'Antigravity',
+      'Claude Code',
       'GitHub Copilot',
       'AI 辅助 Debugging',
       'Prompt Engineering',
