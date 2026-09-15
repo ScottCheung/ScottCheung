@@ -196,7 +196,8 @@ function Home() {
   return (
     <div
       draggable={false}
-      className={`relative flex flex-col items-center w-[${viewwidth}px]  overflow-x-clip  bg-[#f5f5f7]`}
+      style={{ width: `${viewwidth}px` }}
+      className='relative flex flex-col items-center w-full overflow-x-clip bg-[#f5f5f7]'
     >
       <Navbar topTextColor={true} setIsPaused={setIsPaused} />
       {/* <Log /> */}

@@ -88,6 +88,19 @@ const ScrollableContainer = ({
 
   const buttonStyle = `group bg-black/70 group-hover:bg-black/30 backdrop-blur-[5px] w-[50px] h-[50px] animate_animated animate__zoomIn flex rounded-full justify-center items-center transition-all transform duration-300`;
   const svg = ` fill-gray-300 w-[25px] h-[25px]  ${isAtEnd || isAtStart ? '' : 'group-hover:fill-white'}`;
+  const desktopContainerStyle =
+    windowWidth > 1024 ?
+      {
+        ...(typeof gap === 'number' ? { gap: `${gap}px` } : {}),
+        ...(typeof containerPY === 'number' ?
+          { paddingBlock: `${containerPY}px` }
+        : {}),
+      }
+    : {};
+  const desktopContainerClass =
+    windowWidth > 1024 ?
+      `flex overflow-x-auto ${typeof containerPY === 'string' ? containerPY : ''} ${containerPY ? '' : 'py-[30px]'} z-30 `
+    : 'grid grid-cols-12 gap-4 w-full p-[20px] px-[10px]';
 
   return (
     <div className='flex flex-col items-start justify-start w-full p-4 lg:p-0'>
@@ -204,11 +217,10 @@ const ScrollableContainer = ({
             windowWidth > 1024 && noPaddingInline ?
               'calc(60vw - min(1680px, var(--global-viewport-content-responsive)) / 2)'
             : '0',
+          ...desktopContainerStyle,
         }}
         className={`${
-          windowWidth > 1024 ?
-            `flex overflow-x-auto gap-[${gap}px] ${containerPY ? `${containerPY} py-[${containerPY}px]` : 'py-[30px]'} z-30 `
-          : 'grid grid-cols-12 gap-4 w-full p-[20px] px-[10px]'
+          desktopContainerClass
         } w-full   scrollbar-hide flex-shrink-0`}
         onScroll={handleScroll}
         ref={containerRef}

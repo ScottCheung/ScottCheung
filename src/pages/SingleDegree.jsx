@@ -65,7 +65,6 @@ export default function Example() {
       <AnimatePresence>
         <motion.div layout layoutId={localStorage.getItem('currenStu')}>
           <Navbar className='z-50' onHeightChange={handleNavbarHeightChange} />
-          {/* <script src='https://cdn.tailwindcss.com'></script> */}
 
           <main
             id='main'

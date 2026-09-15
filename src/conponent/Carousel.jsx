@@ -115,7 +115,11 @@ const Carousel = ({ interval, HomeCarousel }) => {
   return (
     <motion.div
       {...handlers}
-      className={`h-[${viewportHeight * 0.4}px] flex lg:h-[${viewportHeight * 1.1}px] relative z-30 w-full ${!top && 'cursor-none'} overflow-hidden bg-white`}
+      style={{
+        '--carousel-height': `${viewportHeight * 0.4}px`,
+        '--carousel-desktop-height': `${viewportHeight * 1.1}px`,
+      }}
+      className='h-[var(--carousel-height)] flex lg:h-[var(--carousel-desktop-height)] relative z-30 w-full overflow-hidden bg-white'
       onKeyDown={(e) => {
         if (e.key === 'ArrowRight') nextSlide();
         if (e.key === 'ArrowLeft') prevSlide();
@@ -123,7 +127,7 @@ const Carousel = ({ interval, HomeCarousel }) => {
       tabIndex='0'
     >
       <span
-        className={`z-20 h-${viewportHeight}px hidden md:flex absolute w-full h-full bg-gradient-to-b from-black/30 via-black/10 via-[300px] to-transparent  overflow-hidden`}
+        className='z-20 hidden md:flex absolute w-full h-full bg-gradient-to-b from-black/30 via-black/10 via-[300px] to-transparent overflow-hidden'
       ></span>
       <svg
         data-v-226d292e=''

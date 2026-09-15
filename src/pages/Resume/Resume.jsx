@@ -7,7 +7,6 @@ import { useLanguage } from '../../help/helpFunction';
 import Navbar from '../../conponent/Navbar/Navbar';
 import CV from './CV_HR';
 import CVs from './CV_ATS';
-import { div } from 'three/examples/jsm/nodes/Nodes.js';
 
 export default function Resume({ print }) {
   const lang = useLanguage();

@@ -47,8 +47,6 @@ export default function WhyM() {
         href='../style/uicons/css/all/all.css'
         type='text/css'
       />
-      <script src='https://cdn.tailwindcss.com'></script>
-
       <main
         className=''
         style={

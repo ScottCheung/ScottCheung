@@ -16,7 +16,6 @@ import {
 } from 'framer-motion';
 
 import { useRef, useState } from 'react';
-import { div } from 'three/examples/jsm/nodes/Nodes';
 
 export const FloatingDock = ({
   items,

@@ -228,9 +228,10 @@ function WhyMe({ hideTittle, mt }) {
   const WhyMe = (
     <LayoutGroup id='why-me-cards'>
       <motion.div
-      ref={ref1}
-      className={mt && '' + ` mb-[100px] w-[${viewwidth}px]`}
-    >
+        ref={ref1}
+        style={{ width: mt ? `${viewwidth}px` : undefined }}
+        className={mt ? 'mb-[100px]' : ''}
+      >
       <motion.div
         style={{
           backgroundImage: `url(${data.pic})`,

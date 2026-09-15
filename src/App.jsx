@@ -3,32 +3,36 @@
 import React from 'react';
 import './App.css';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
-import Home from './pages/Home.jsx';
-import Certificate from './pages/Certificate.jsx';
-import Errorpage from './pages/Errorpage.jsx';
-import SingleDegree from './pages/SingleDegree.jsx';
-import Contact from './pages/ContactPage.jsx';
-import Degrees from './pages/Degree.jsx';
-import Info from './pages/Info.jsx';
-import Scholarship from './pages/Scholarship.jsx';
-import Life from './pages/life.jsx';
-import SingleWhyme from './pages/SingleWhyme.jsx';
-import SingleWork from './pages/SingleWork.jsx';
-import Gallery from './pages/Gallery.jsx';
 import { AppContextProvider } from './help/ContextManager';
-import Resume from './pages/Resume/Resume.jsx';
-import AutoText from './pages/AutoText/AutoText.jsx';
-import Navbar from './conponent/Navbar/Navbar.jsx';
-import Resumecheck from './pages/Resume/Resumecheck.jsx';
-import Project from './pages/project.jsx';
-import TikTok from './pages/Empty.jsx';
-import Gobelldesign from './pages/projects/gobelldesign.jsx';
-import Work from './pages/work.jsx';
-import Igrapher from './pages/projects/igrapher.jsx';
-import Design from './pages/projects/design.jsx';
-import Story from './pages/story/story.jsx';
-import PP from './pages/pp.jsx';
-import Music from './pages/Music';
+
+// Keep each route out of the initial bundle until it is requested.
+const Home = React.lazy(() => import('./pages/Home.jsx'));
+const Certificate = React.lazy(() => import('./pages/Certificate.jsx'));
+const Errorpage = React.lazy(() => import('./pages/Errorpage.jsx'));
+const SingleDegree = React.lazy(() => import('./pages/SingleDegree.jsx'));
+const Contact = React.lazy(() => import('./pages/ContactPage.jsx'));
+const Degrees = React.lazy(() => import('./pages/Degree.jsx'));
+const Info = React.lazy(() => import('./pages/Info.jsx'));
+const Scholarship = React.lazy(() => import('./pages/Scholarship.jsx'));
+const Life = React.lazy(() => import('./pages/life.jsx'));
+const SingleWhyme = React.lazy(() => import('./pages/SingleWhyme.jsx'));
+const SingleWork = React.lazy(() => import('./pages/SingleWork.jsx'));
+const Gallery = React.lazy(() => import('./pages/Gallery.jsx'));
+const Resume = React.lazy(() => import('./pages/Resume/Resume.jsx'));
+const AutoText = React.lazy(() => import('./pages/AutoText/AutoText.jsx'));
+const Navbar = React.lazy(() => import('./conponent/Navbar/Navbar.jsx'));
+const Resumecheck = React.lazy(() => import('./pages/Resume/Resumecheck.jsx'));
+const Project = React.lazy(() => import('./pages/project.jsx'));
+const TikTok = React.lazy(() => import('./pages/Empty.jsx'));
+const Gobelldesign = React.lazy(() =>
+  import('./pages/projects/gobelldesign.jsx'),
+);
+const Work = React.lazy(() => import('./pages/work.jsx'));
+const Igrapher = React.lazy(() => import('./pages/projects/igrapher.jsx'));
+const Design = React.lazy(() => import('./pages/projects/design.jsx'));
+const Story = React.lazy(() => import('./pages/story/story.jsx'));
+const PP = React.lazy(() => import('./pages/pp.jsx'));
+const Music = React.lazy(() => import('./pages/Music.jsx'));
 
 const router = createBrowserRouter([
   {
@@ -156,7 +160,9 @@ function Router() {
     <AppContextProvider>
       <div>
         {/* <Navbar /> */}
-        <RouterProvider router={router} />
+        <React.Suspense fallback={null}>
+          <RouterProvider router={router} />
+        </React.Suspense>
       </div>
     </AppContextProvider>
   );

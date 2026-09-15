@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { hideRow, useLanguage } from '../help/helpFunction';
 
 import { Link } from 'react-router-dom';
-import { Return } from 'three/examples/jsm/nodes/Nodes';
 const navLocation = [
   {
     href: '/#Education',

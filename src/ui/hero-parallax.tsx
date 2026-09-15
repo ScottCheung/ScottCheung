@@ -133,7 +133,6 @@ export const Header = () => {
   const lang: any = useLanguage();
   return (
     <div className='absolute top-[30vh] left-[1vw] lg:left-[15vw] w-full px-4  max-w-7xl '>
-      <script src='https://cdn.tailwindcss.com'></script>
       <div className='relative flex flex-col gap-0'>
         <TextAnimate
           duration={-3}

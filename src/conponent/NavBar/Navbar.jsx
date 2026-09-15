@@ -191,7 +191,8 @@ function Navbar({
         <motion.nav
           layout
           transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-          className={` w-[${windowWidth}px] overflow-hidden flex flex-col`}
+          style={{ width: `${windowWidth}px` }}
+          className='w-full overflow-hidden flex flex-col'
         >
           <motion.div
             onMouseLeave={() => {

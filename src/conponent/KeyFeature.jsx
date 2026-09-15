@@ -84,7 +84,8 @@ function KeyFeature() {
       className={` flex h-[1000px] md:h-[150vh] overflow-hidden justify-center transform-gppu`}
     >
       <motion.section
-        className={`relative flex items-center w-[${viewwidth}px] overflow-hidden bg-gradient-to-r from-lime-500 to-emerald-500`}
+        style={{ width: `${viewwidth}px` }}
+        className='relative flex items-center w-full overflow-hidden bg-gradient-to-r from-lime-500 to-emerald-500'
       >
         <img
           loading='lazy'
@@ -170,7 +171,7 @@ function KeyFeature() {
                     </p>
 
                     <span
-                      className={`absolute -bottom-${2} left-0 right-0 w-0  h-${2} transition-all duration-300 rounded-full  group-hover:w-full`}
+                      className='absolute -bottom-2 left-0 right-0 w-0 h-2 transition-all duration-300 rounded-full group-hover:w-full'
                     ></span>
                   </div>
                   <div data-popper-arrow></div>

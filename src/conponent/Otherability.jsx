@@ -1,170 +1,186 @@
 /** @format */
 
-import React, { useState, useEffect } from 'react';
-import Database from '../data/Database.json';
-import { motion, AnimatePresence } from 'framer-motion';
-import { LazyMotion, domAnimation, m } from 'framer-motion';
-import { hideRow, bgPic, useLanguage, SelectText } from '../help/helpFunction';
-import { Link } from 'react-router-dom';
-import N from './Num';
-import BG from './gfBG';
-
-const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-blue-500 opacity-10  transition-all duration-1000`;
-
-const laptopMode = window.innerWidth > 1024;
+import React, { lazy, Suspense, useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+import {  useLanguage } from '../help/helpFunction';
 const getSkillSearchUrl = (skill) =>
   `https://www.google.com/search?q=${encodeURIComponent(`what is ${skill}`)}`;
 
 const Skill = {
   icon: <i class='fi fi-rr-tool-box'></i>,
 
-  "skills": [
-    {
-      "Frontend Engineering": [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "JavaScript",
-        "Zustand",
-        "Redux",
-        "TanStack Query",
-        "React Hook Form",
-        "Tailwind CSS",
-        "Ant Design / Material UI",
-        "Storybook",
-        "Responsive UI",
-        "Frontend Performance Optimisation"
-      ],
+skills: [
+  {
+    'Product & Delivery': [
+      'Agile / Scrum',
+      'Jira',
+      'Sprint Planning',
+      'Requirement Analysis',
+      'Technical Estimation',
+      'Task Breakdown',
+      'Stakeholder Communication',
+      'Cross-functional Collaboration',
+    ],
 
-      "Backend Engineering": [
-        ".NET / ASP.NET Core",
-        ".NET Minimal API",
-        "FastAPI",
-        "Python",
-        "Node.js",
-        "REST API Design",
-        "Authentication & Authorization",
-        "Third-Party API Integration",
-        "Swagger / OpenAPI",
-        "API Performance Optimisation"
-      ],
+    'Documentation & Technical Writing': [
+      'Markdown',
+      'Technical Documentation',
+      'API Documentation',
+      'Architecture Documentation',
+      'README & Developer Guides',
+      'LaTeX',
+      'Microsoft Word',
+      'Apple Pages',
+    ],
 
-      "Database & Data": [
-        "PostgreSQL",
-        "Supabase",
-        "AWS RDS",
-        "MySQL",
-        "Relational Data Modelling",
-        "SQL",
-        "Query Optimisation",
-        "Batch Database Operations",
-        "Database Performance Tuning"
-      ],
+    'Presentation & Communication': [
+      'PowerPoint',
+      'Keynote',
+      'Google Slides',
+      'Technical Presentations',
+      'Solution Walkthroughs',
+      'Project Demonstrations',
+      'Public Speaking',
+      'Structured Communication',
+    ],
 
-      "Cloud & DevOps": [
-        "AWS ECS / Fargate",
-        "AWS RDS",
-        "AWS S3",
-        "AWS EC2",
-        "Docker",
-        "Terraform",
-        "GitHub Actions",
-        "CI/CD",
-        "Vercel",
-        "Infrastructure as Code"
-      ],
+    'UI/UX & Visual Design': [
+      'Figma',
+      'UI/UX Design',
+      'Design Systems',
+      'Responsive Design',
+      'Visual Hierarchy',
+      'Typography & Layout',
+      'Adobe Photoshop',
+      'Adobe Illustrator',
+      'Adobe Lightroom',
+      'Adobe InDesign',
+    ],
 
-      "Engineering Practices": [
-        "Production Debugging",
-        "Performance Profiling",
-        "Core Web Vitals",
-        "Lighthouse",
-        "Jest",
-        "React Testing Library",
-        "Cypress",
-        "Playwright",
-        "Git / GitHub",
-        "Agile / Scrum",
-        "Technical Documentation",
-        "Code Review"
-      ]
-    },
+    'AI-Assisted Development': [
+      'ChatGPT',
+      'GitHub Copilot',
+      'AI-Assisted Debugging',
+      'Prompt Engineering',
+      'Rapid Prototyping',
+      'Code Review Assistance',
+      'Technical Research',
+    ],
 
-    {
-      "前端工程": [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "JavaScript",
-        "Zustand",
-        "Redux",
-        "TanStack Query",
-        "React Hook Form",
-        "Tailwind CSS",
-        "Ant Design / Material UI",
-        "Storybook",
-        "响应式 UI",
-        "前端性能优化"
-      ],
+    'Creative Media': [
+      'Final Cut Pro',
+      'DaVinci Resolve',
+      'Adobe Premiere Pro',
+      'Adobe After Effects',
+      'Video Editing',
+      'Image Processing',
+      'Visual Content Creation',
+    ],
 
-      "后端工程": [
-        ".NET / ASP.NET Core",
-        ".NET Minimal API",
-        "FastAPI",
-        "Python",
-        "Node.js",
-        "REST API 设计",
-        "认证与授权",
-        "第三方 API 集成",
-        "Swagger / OpenAPI",
-        "API 性能优化"
-      ],
+    'Business & Product Thinking': [
+      'Business Requirement Analysis',
+      'User-Centred Thinking',
+      'Product Prioritisation',
+      'Process Improvement',
+      'Data-Informed Decision Making',
+      'SWOT Analysis',
+      'Gantt Charts',
+    ],
 
-      "数据库与数据": [
-        "PostgreSQL",
-        "Supabase",
-        "AWS RDS",
-        "MySQL",
-        "关系型数据建模",
-        "SQL",
-        "查询优化",
-        "批量数据库操作",
-        "数据库性能优化"
-      ],
+    Languages: [
+      'English — Professional Working Proficiency',
+      'Mandarin Chinese — Native',
+    ],
+  },
 
-      "云服务与 DevOps": [
-        "AWS ECS / Fargate",
-        "AWS RDS",
-        "AWS S3",
-        "AWS EC2",
-        "Docker",
-        "Terraform",
-        "GitHub Actions",
-        "CI/CD",
-        "Vercel",
-        "Infrastructure as Code"
-      ],
+  {
+    '产品与交付': [
+      'Agile / Scrum 敏捷开发',
+      'Jira',
+      'Sprint Planning 冲刺规划',
+      '需求分析',
+      '技术评估',
+      '任务拆解',
+      '利益相关者沟通',
+      '跨职能团队协作',
+    ],
 
-      "工程实践": [
-        "生产环境 Debugging",
-        "性能分析",
-        "Core Web Vitals",
-        "Lighthouse",
-        "Jest",
-        "React Testing Library",
-        "Cypress",
-        "Playwright",
-        "Git / GitHub",
-        "Agile / Scrum",
-        "技术文档",
-        "Code Review"
-      ]
-    }
-  ]
+    '技术文档与写作': [
+      'Markdown',
+      '技术文档',
+      'API 文档',
+      '架构文档',
+      'README 与开发者指南',
+      'LaTeX',
+      'Microsoft Word',
+      'Apple Pages',
+    ],
+
+    '演示与沟通': [
+      'PowerPoint',
+      'Keynote',
+      'Google Slides',
+      '技术方案演示',
+      'Solution Walkthrough',
+      '项目 Demo',
+      '公开演讲',
+      '结构化表达',
+    ],
+
+    'UI/UX 与视觉设计': [
+      'Figma',
+      'UI/UX 设计',
+      'Design System 设计系统',
+      '响应式设计',
+      '视觉层级',
+      '字体与版式设计',
+      'Adobe Photoshop',
+      'Adobe Illustrator',
+      'Adobe Lightroom',
+      'Adobe InDesign',
+    ],
+
+    'AI 辅助开发': [
+      'ChatGPT',
+      'GitHub Copilot',
+      'AI 辅助 Debugging',
+      'Prompt Engineering',
+      '快速原型开发',
+      '代码审查辅助',
+      '技术调研',
+    ],
+
+    '创意与媒体': [
+      'Final Cut Pro',
+      'DaVinci Resolve',
+      'Adobe Premiere Pro',
+      'Adobe After Effects',
+      '视频剪辑',
+      '图像处理',
+      '视觉内容制作',
+    ],
+
+    '商业与产品思维': [
+      '业务需求分析',
+      '用户导向思维',
+      '产品优先级判断',
+      '流程优化',
+      '数据辅助决策',
+      'SWOT 分析',
+      '甘特图',
+    ],
+
+    '语言': [
+      '英语 — 职业工作沟通',
+      '普通话 — 母语',
+    ],
+  },
+],
 
 };
 function Otherability() {
   const lang = useLanguage();
+  const [hoveredSkill, setHoveredSkill] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   useEffect(() => {
     const handleResize = () => {
@@ -205,18 +221,23 @@ function Otherability() {
               </h2>
 
               <div className='flex flex-wrap gap-[10px] pt-[6px] text-left'>
-                {list.map((skill) => (
-                  <a
-                    key={skill}
-                    href={getSkillSearchUrl(skill)}
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    title={`Google: what is ${skill}`}
-                    className='inline-flex max-w-full items-center rounded-full bg-white/10  backdrop-blur-xl border border border-cyan-300/0 hover:border-cyan-300/30 px-[14px] py-[7px] text-[13px] font-medium leading-tight tracking-wide text-white/75 transition duration-300 hover:-translate-y-[2px] hover:border-cyan-200/80 hover:bg-cyan-300/15 hover:text-cyan-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/80 lg:px-[16px] lg:py-[9px] lg:text-[16px]'
-                  >
-                    {skill}
-                  </a>
-                ))}
+                {list.map((skill, skillIndex) => {
+                  const skillKey = `${category}-${skill}-${skillIndex}`;
+
+                  return (
+         <a
+        key={skillKey}
+        href={getSkillSearchUrl(skill)}
+        target='_blank'
+        rel='noopener noreferrer'
+        aria-label={skill}
+        title={`Google: what is ${skill}`}
+        className='skill-liquid-glass backdrop-blur-[5px] overflow-hidden cursor-pointer'
+      >
+        <span>{skill}</span>
+      </a>
+                  );
+                })}
               </div>
             </motion.div>
           ))}

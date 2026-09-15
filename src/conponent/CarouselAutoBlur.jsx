@@ -26,6 +26,10 @@ const ICON_VARIANTS = {
     'M15,33 L15,15 Q15,11 18,12 L24,16 Q24,16 24,16 L24,32 Q24,32 24,32 L18,36 Q15,37 15,33 M24,32 L24,16 Q24,16 24,16 L33,22 Q35,23.3 35,24 L35,24 Q35,24.7 33,26 L24,32 Q24,32 24,32',
 };
 
+const getReducedMotionPreference = () =>
+  typeof window !== 'undefined' &&
+  window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+
 // Component-level memoization for static UI elements
 const NavigationButton = React.memo(({ onClick, isNext, isTop }) => (
   <div className='bg-white/200 hover:bg-black/30 hidden lg:flex transition-all rounded-full backdrop-blur-[5px]'>
@@ -135,34 +139,19 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
   const [progress, setProgress] = useState(0);
   const [isTop, setIsTop] = useState(true);
   const [mediaErrors, setMediaErrors] = useState({});
-  const [frameRate, setFrameRate] = useState(60);
+  const [reducedMotion, setReducedMotion] = useState(
+    getReducedMotionPreference,
+  );
 
   // Refs for performance critical values
   const sliderRef = useRef(null);
   const view = useRef(null);
-  const frameRateRef = useRef({ lastTime: performance.now(), frames: 0 });
   const touchStartRef = useRef(null);
   const touchMoveCountRef = useRef(0);
   const touchDistanceRef = useRef(0);
   const touchTimeRef = useRef(0);
   const prevDurationRef = useRef(null);
-  const animationFrameRef = useRef(null);
   const progressTimerRef = useRef(null);
-
-  // Calculate if reduced motion is needed based on frame rate
-  const reducedMotion = frameRate < 30;
-
-  // Optimized visible slides calculation
-  const visibleSlidesIndices = useMemo(() => {
-    if (HomeCarousel.length <= 3)
-      return Array.from({ length: HomeCarousel.length }, (_, i) => i);
-
-    const prevIndex =
-      (activeIndex - 1 + HomeCarousel.length) % HomeCarousel.length;
-    const nextIndex = (activeIndex + 1) % HomeCarousel.length;
-
-    return [prevIndex, activeIndex, nextIndex];
-  }, [activeIndex, HomeCarousel.length]);
 
   // Optimized duration calculation
   const duration = useMemo(() => {
@@ -206,31 +195,29 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
     };
   }, [setIsPaused]);
 
-  // Frame rate monitoring optimized
+  // Follow the user's motion preference without running a perpetual RAF loop.
   useEffect(() => {
-    if (!isTop) return;
+    const mediaQuery = window.matchMedia?.(
+      '(prefers-reduced-motion: reduce)',
+    );
+    if (!mediaQuery) return undefined;
 
-    const checkFrameRate = () => {
-      const now = performance.now();
-      frameRateRef.current.frames++;
-
-      if (now - frameRateRef.current.lastTime >= 1000) {
-        setFrameRate(frameRateRef.current.frames);
-        frameRateRef.current.frames = 0;
-        frameRateRef.current.lastTime = now;
-      }
-
-      animationFrameRef.current = requestAnimationFrame(checkFrameRate);
-    };
-
-    animationFrameRef.current = requestAnimationFrame(checkFrameRate);
+    const handleChange = (event) => setReducedMotion(event.matches);
+    setReducedMotion(mediaQuery.matches);
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener('change', handleChange);
+    } else {
+      mediaQuery.addListener(handleChange);
+    }
 
     return () => {
-      if (animationFrameRef.current) {
-        cancelAnimationFrame(animationFrameRef.current);
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener('change', handleChange);
+      } else {
+        mediaQuery.removeListener(handleChange);
       }
     };
-  }, [isTop]);
+  }, []);
 
   // Touch event handling optimized
   useEffect(() => {
@@ -462,12 +449,16 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
     [handleBeforeChange, debouncedBeforeChange, interactionType, reducedMotion],
   );
 
+  const carouselStyle = {
+    '--carousel-height': `${viewportHeight * 0.7}px`,
+    '--carousel-desktop-height': `${viewportHeight * 1.15}px`,
+  };
+
   return (
     <div
       ref={view}
-      className={`relative h-[${viewportHeight * 0.7}px] lg:h-[${
-        viewportHeight * 1.15
-      }px] w-full overflow-hidden bg-[#f5f5f7]`}
+      style={carouselStyle}
+      className='relative h-[var(--carousel-height)] lg:h-[var(--carousel-desktop-height)] w-full overflow-hidden bg-[#f5f5f7]'
       role='region'
       aria-label='图片轮播'
       aria-roledescription='carousel'
@@ -499,9 +490,8 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
         {HomeCarousel.map((item, index) => (
           <div
             key={index}
-            className={`object-cover h-[${viewportHeight * 0.7}px] lg:h-[${
-              viewportHeight * 1.15
-            }px] relative w-full`}
+            style={carouselStyle}
+            className='object-cover h-[var(--carousel-height)] lg:h-[var(--carousel-desktop-height)] relative w-full'
             role='group'
             aria-roledescription='slide'
             aria-label={`幻灯片 ${index + 1}，共 ${HomeCarousel.length} 张`}
@@ -615,7 +605,11 @@ const Carousel = ({ interval = 5000, HomeCarousel, isPaused, setIsPaused }) => {
               </div>
               <motion.div
                 // animate={{ x: item.x, y: item.y }}
-                className={`absolute flex z-30 w-full  lg:w-[30%] bottom-0 lg:translate-x-[${item.x}] lg:translate-y-[${item.y}] items-center h-[60%] lg:h-auto`}
+                style={{
+                  '--carousel-x': item.x,
+                  '--carousel-y': item.y,
+                }}
+                className='absolute flex z-30 w-full lg:w-[30%] bottom-0 lg:translate-x-[var(--carousel-x)] lg:translate-y-[var(--carousel-y)] items-center h-[60%] lg:h-auto'
               >
                 <div className='relative rounded-[38px] p-[30px] lg:hover:scale-[1.01] transition-all  lg:bg-black/30 z-30 lg:backdrop-blur-[40px] flex flex-col items-start justify-center w-full antialiased'>
                   <h1 className='flex relative z-10 font-sans text-[2rem] mt-[30px] lg:mt-0 lg:text-[4rem] font-bold text-white text-left'>

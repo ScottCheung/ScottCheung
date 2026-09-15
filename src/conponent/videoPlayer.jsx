@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState } from 'react';
 
-const VideoPlayer = ({ src, isPlay }) => {
+const VideoPlayer = ({ src, isPlay, onError }) => {
   const videoRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -26,23 +26,27 @@ const VideoPlayer = ({ src, isPlay }) => {
   }, []);
 
   useEffect(() => {
-    if (videoRef.current) {
-      if (isVisible && isPlay) {
-        videoRef.current.play(); // 播放视频
-      } else {
-        videoRef.current.pause(); // 暂停视频
-      }
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (isVisible && isPlay) {
+      // play() can reject when the browser blocks autoplay; the muted video
+      // remains available for the explicit play interaction in that case.
+      video.play().catch(() => {});
+    } else {
+      video.pause();
     }
   }, [isVisible, isPlay]);
 
   return (
     <video
       ref={videoRef}
-      src={src}
+      src={isVisible ? src : undefined}
+      preload='none'
       loop
       muted
-      autoPlay
       playsInline
+      onError={onError}
       className='object-cover w-full h-full '
     />
   );

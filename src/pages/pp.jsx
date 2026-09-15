@@ -1,7 +1,6 @@
 /** @format */
 
 import React from 'react';
-import { div } from 'three/examples/jsm/nodes/Nodes';
 
 export default function pp() {
   return;

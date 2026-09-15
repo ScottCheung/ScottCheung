@@ -54,6 +54,9 @@ const getSkillInitials = (name = '') =>
     .join('')
     .toUpperCase();
 
+const getSkillSearchUrl = (skill) =>
+  `https://www.google.com/search?q=${encodeURIComponent(`what is ${skill}`)}`;
+
 function SkillIcon({ skill }) {
   const [imageFailed, setImageFailed] = useState(!skill.image);
 
@@ -70,6 +73,27 @@ function SkillIcon({ skill }) {
         src={skill.image}
         alt={skill.name}
         className='flex h-full w-full items-center justify-center  p-[10px]'
+        onError={() => setImageFailed(true)}
+      />;
+}
+
+function SkillPillIcon({ skill }) {
+  const [imageFailed, setImageFailed] = useState(!skill.image);
+
+  return imageFailed ?
+      <span
+        role='img'
+        aria-label={skill.name}
+        className='flex h-4 w-4 items-center justify-center rounded-full bg-white/75 text-[7px] font-black tracking-tight text-black'
+      >
+        {getSkillInitials(skill.name)}
+      </span>
+    : <img
+        loading='lazy'
+        src={skill.image}
+        alt=''
+        aria-hidden='true'
+        className='h-4 w-4 object-contain'
         onError={() => setImageFailed(true)}
       />;
 }
@@ -100,6 +124,28 @@ function SkillContent({ content, selectedTab, expanded }) {
       >
         {content.description}
       </motion.p>
+      <div
+        className=' flex-wrap gap-[20px] pt-[30px]'
+      >
+        {skills.map((skill, index) => (
+          <motion.a
+            key={`skill-pill-${selectedTab.contentKey}-${skill.name}-${index}`}
+            href={getSkillSearchUrl(skill.name)}
+            target='_blank'
+            rel='noopener noreferrer'
+            aria-label={`Google: what is ${skill.name}`}
+            title={`Google: what is ${skill.name}`}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 + index * 0.05, duration: 0.5 }}
+            className={`skill-liquid-glass m-3 text-transparent! from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text  inline-flex cursor-pointer items-center gap-[7px] overflow-hidden backdrop-blur-[5px]`}
+          >
+            <span className='text-white '>
+              {skill.name}
+            </span>
+          </motion.a>
+        ))}
+      </div>
       <ul
         className={`grid auto-rows-fr grid-cols-12 gap-[20px] py-[50px] text-transparent md:gap-[40px] lg:gap-[70px] lg:py-[100px] from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text normal-text`}
       >
@@ -119,10 +165,10 @@ function SkillContent({ content, selectedTab, expanded }) {
             <div
               className={`flex min-w-0 flex-col text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2} bg-gradient-to-br bg-clip-text`}
             >
-              <strong className='flex min-h-[32px] items-start pb-4 text-[13px] font-[700] tracking-wider md:text-[15px] lg:min-h-[48px] lg:text-[20px]'>
+              <strong className='flex items-start pb-4 text-[13px] font-[700] tracking-wider md:text-[15px] lg:min-h-[48px] lg:text-[20px]'>
                 {skill.name}
               </strong>
-              <p className='flex w-[280px] flex-wrap text-[10px] md:w-auto md:text-[12px] lg:text-[13px]'>
+              <p className='flex -mt-[10px] w-[280px] flex-wrap text-[10px] md:w-auto md:text-[12px] lg:text-[13px]'>
                 {skill.description}
               </p>
             </div>
@@ -223,7 +269,7 @@ function Skill() {
               >
                 <i className='flex items-center fi fi-rr-circle-user mr-[20px] text-transparent bg-clip-text'></i>
                 <p className='flex items-center italic font-black tracking-widest text-transparent capitalize bg-clip-text '>
-                  {lang == 0 ? 'CORE CAPABILITY' : '核心能力'}
+                  {lang == 0 ? 'Capability' : '核心能力'}
                 </p>
               </motion.div>
             </div>
@@ -231,9 +277,9 @@ function Skill() {
             <motion.div>
               <motion.ul
                 layout
-                variants={Database.Animation.Variant.Welcomevisblecontainer}
-                initial='hidden'
-                whileInView='visible'
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, ease: [0.455, 0.03, 0.515, 0.955] }}
                 viewport={{ once: true }}
                 className='flex justify-between w-[100%] text-center gap-x-[3%] lg:gap-x-[10%] overflow-auto scrollbar-hide pb-[30px]'
               >
