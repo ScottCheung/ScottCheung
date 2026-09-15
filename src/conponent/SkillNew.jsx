@@ -223,7 +223,7 @@ function Skill() {
               >
                 <i className='flex items-center fi fi-rr-circle-user mr-[20px] text-transparent bg-clip-text'></i>
                 <p className='flex items-center italic font-black tracking-widest text-transparent capitalize bg-clip-text '>
-                  {lang == 0 ? 'CAPABILITY' : '能力'}
+                  {lang == 0 ? 'CORE CAPABILITY' : '核心能力'}
                 </p>
               </motion.div>
             </div>

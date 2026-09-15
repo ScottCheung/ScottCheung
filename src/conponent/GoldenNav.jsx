@@ -16,7 +16,7 @@ const navLocation = [
   },
   {
     href: '/#Capability',
-    label: ['Capability', '能力'],
+    label: ['Core Capability', '核心能力'],
     icon: 'fi-rr-user',
     color1: 'from-orange-500',
     color2: 'to-amber-500',

@@ -12,74 +12,156 @@ import BG from './gfBG';
 const division = `hidden items-center md:flex md:flex-1 h-[2px] m-0 rounded-full bg-blue-500 opacity-10  transition-all duration-1000`;
 
 const laptopMode = window.innerWidth > 1024;
+const getSkillSearchUrl = (skill) =>
+  `https://www.google.com/search?q=${encodeURIComponent(`what is ${skill}`)}`;
+
 const Skill = {
   icon: <i class='fi fi-rr-tool-box'></i>,
-  skills: [
+
+  "skills": [
     {
-      Management: [
-        '☆ Jira',
-        '☆ SWOT',
-        '☆ PEST',
-        '☆ Boston Matrix',
-        'Gantt Chart',
-        'Organizational Behavioral Analysis',
-        'strategic management',
+      "Frontend Engineering": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Zustand",
+        "Redux",
+        "TanStack Query",
+        "React Hook Form",
+        "Tailwind CSS",
+        "Ant Design / Material UI",
+        "Storybook",
+        "Responsive UI",
+        "Frontend Performance Optimisation"
       ],
-      Text: ['☆ Markdown', 'LaTeX', '☆ Word', '☆ Pages', 'HTML'],
-      Slides: ['☆ PowerPoint', '☆ Keynotes', 'Google Slides'],
-      Video: [
-        '☆ Final Cut Pro',
-        'Premiere',
-        'After Effects',
-        '☆ DaVinci',
-        'iMovie',
-        '☆ JianYing',
+
+      "Backend Engineering": [
+        ".NET / ASP.NET Core",
+        ".NET Minimal API",
+        "FastAPI",
+        "Python",
+        "Node.js",
+        "REST API Design",
+        "Authentication & Authorization",
+        "Third-Party API Integration",
+        "Swagger / OpenAPI",
+        "API Performance Optimisation"
       ],
-      Graph: [
-        '☆ Photoshop',
-        '☆ Lightroom',
-        'Illustrator',
-        '☆ InDesign',
-        'XD',
-        '3D Max',
-        '☆ Sharp 3D',
+
+      "Database & Data": [
+        "PostgreSQL",
+        "Supabase",
+        "AWS RDS",
+        "MySQL",
+        "Relational Data Modelling",
+        "SQL",
+        "Query Optimisation",
+        "Batch Database Operations",
+        "Database Performance Tuning"
       ],
-      Language: ['English', '☆ Chinese(mother tongue)', '☆ SiChuan Dialect'],
-      Music: ['Guitar', '☆ Piano'],
+
+      "Cloud & DevOps": [
+        "AWS ECS / Fargate",
+        "AWS RDS",
+        "AWS S3",
+        "AWS EC2",
+        "Docker",
+        "Terraform",
+        "GitHub Actions",
+        "CI/CD",
+        "Vercel",
+        "Infrastructure as Code"
+      ],
+
+      "Engineering Practices": [
+        "Production Debugging",
+        "Performance Profiling",
+        "Core Web Vitals",
+        "Lighthouse",
+        "Jest",
+        "React Testing Library",
+        "Cypress",
+        "Playwright",
+        "Git / GitHub",
+        "Agile / Scrum",
+        "Technical Documentation",
+        "Code Review"
+      ]
     },
+
     {
-      管理: [
-        '☆ Jira',
-        '☆ SWOT',
-        '☆ PEST',
-        '☆ 波士顿矩阵',
-        '甘特图',
-        '组织行为分析',
-        '战略管理',
+      "前端工程": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Zustand",
+        "Redux",
+        "TanStack Query",
+        "React Hook Form",
+        "Tailwind CSS",
+        "Ant Design / Material UI",
+        "Storybook",
+        "响应式 UI",
+        "前端性能优化"
       ],
-      文本: ['☆ Markdown', 'LaTeX', '☆ Word', '☆ Pages', 'HTML'],
-      幻灯片: ['☆ PowerPoint', '☆ Keynotes', 'Google Slides'],
-      视频: [
-        '☆ Final Cut Pro',
-        'Premiere',
-        'After Effects',
-        '☆ DaVinci',
-        'iMovie',
-        '☆ 剪映',
+
+      "后端工程": [
+        ".NET / ASP.NET Core",
+        ".NET Minimal API",
+        "FastAPI",
+        "Python",
+        "Node.js",
+        "REST API 设计",
+        "认证与授权",
+        "第三方 API 集成",
+        "Swagger / OpenAPI",
+        "API 性能优化"
       ],
-      图像: [
-        '☆ Photoshop',
-        '☆ Lightroom',
-        'Illustrator',
-        '☆ InDesign',
-        'XD',
-        '3D Max',
-        '☆ Sharp 3D',
+
+      "数据库与数据": [
+        "PostgreSQL",
+        "Supabase",
+        "AWS RDS",
+        "MySQL",
+        "关系型数据建模",
+        "SQL",
+        "查询优化",
+        "批量数据库操作",
+        "数据库性能优化"
       ],
-      语言: ['英语', '☆ 中文（母语）', '☆ 四川方言'],
-      音乐: ['吉他', '☆ 钢琴'],
-    },
-  ],
+
+      "云服务与 DevOps": [
+        "AWS ECS / Fargate",
+        "AWS RDS",
+        "AWS S3",
+        "AWS EC2",
+        "Docker",
+        "Terraform",
+        "GitHub Actions",
+        "CI/CD",
+        "Vercel",
+        "Infrastructure as Code"
+      ],
+
+      "工程实践": [
+        "生产环境 Debugging",
+        "性能分析",
+        "Core Web Vitals",
+        "Lighthouse",
+        "Jest",
+        "React Testing Library",
+        "Cypress",
+        "Playwright",
+        "Git / GitHub",
+        "Agile / Scrum",
+        "技术文档",
+        "Code Review"
+      ]
+    }
+  ]
+
 };
 function Otherability() {
   const lang = useLanguage();
@@ -105,7 +187,7 @@ function Otherability() {
           backgroundPosition: 'right bottom',
           filter: 'contrast(110%)',
         }}
-      >
+      >            
         {/* Skill */}
         <motion.div className=' z-20 p-[20px] lg:p-[36px]  '>
           {Object.entries(Skill.skills[lang]).map(([category, list], index) => (
@@ -115,16 +197,27 @@ function Otherability() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: '-30%' }}
               transition={{ delay: index * 0.1, duration: 0.9 }}
-              className='flex flex-col text-gradient py-[15px] z-20 gap-[5px] md:pb-[45px]'
+              className='flex flex-col   py-[15px] z-20 gap-[5px] md:pb-[45px]'
             >
-              <h2 className='font-[600] text-gray-200 text-[30px]  typography-subsection-headline'>
+              <h2 className='font-[600] text-gradient  text-[30px]  typography-subsection-headline'>
                 {' '}
                 {category}
               </h2>
 
-              <p className='text-left text-[15px] text-gray-400 lg:text-[20px] '>
-                {list.join('  ｜  ')}
-              </p>
+              <div className='flex flex-wrap gap-[10px] pt-[6px] text-left'>
+                {list.map((skill) => (
+                  <a
+                    key={skill}
+                    href={getSkillSearchUrl(skill)}
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    title={`Google: what is ${skill}`}
+                    className='inline-flex max-w-full items-center rounded-full bg-white/10  backdrop-blur-xl border border border-cyan-300/0 hover:border-cyan-300/30 px-[14px] py-[7px] text-[13px] font-medium leading-tight tracking-wide text-white/75 transition duration-300 hover:-translate-y-[2px] hover:border-cyan-200/80 hover:bg-cyan-300/15 hover:text-cyan-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-200/80 lg:px-[16px] lg:py-[9px] lg:text-[16px]'
+                  >
+                    {skill}
+                  </a>
+                ))}
+              </div>
             </motion.div>
           ))}
         </motion.div>
