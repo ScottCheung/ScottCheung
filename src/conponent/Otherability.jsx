@@ -199,7 +199,7 @@ function Otherability() {
   const Otherability = (
     <motion.div className='h-auto rounded-[28px] overflow-hidden col-span-12  md:col-span-6 lg:col-span-8'>
       <motion.div
-        className=' bg-[#121314]  rounded-[28px] relative pb-[33%] '
+        className=' bg-black  rounded-[28px] relative pb-[33%] '
         style={{
           backgroundImage: `url(https://cia.hyperos.mi.com/hyperos-homepage/footer_vela_bg_pc.png)`,
           backgroundSize: '100% auto',
