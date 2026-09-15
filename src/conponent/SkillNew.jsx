@@ -81,32 +81,33 @@ function SkillContent({ content, selectedTab, expanded }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{
-        type: 'spring',
-        stiffness: 260,
-        damping: 30,
-        mass: 0.8,
-        duration: 2,
-      }}
+
       style={{
         lineHeight: 1.23536,
         fontFamily: `"SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif`,
       }}
       className={`relative flex w-full flex-1 flex-col bg-clip-text bg-gradient-to-r from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2}`}
     >
-      <p
+      <motion.p
+            initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+
+        duration: 1,
+      }}
         className={`flex text-[13px] text-transparent md:text-[15px] lg:text-[20px] from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text`}
       >
         {content.description}
-      </p>
+      </motion.p>
       <ul
         className={`grid grid-cols-12 gap-[20px] py-[50px] text-transparent md:gap-[40px] lg:gap-[70px] lg:py-[100px] from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text normal-text`}
       >
         {skills.map((skill, index) => (
-          <li
+          <motion.li
             key={`${selectedTab.contentKey}-${skill.name}-${index}`}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{delay: index * 0.1, duration: 1}}
             className='col-span-12 flex items-start gap-x-[20px] pb-2 md:col-span-6 lg:col-span-4 xl:col-span-3'
           >
             <div
@@ -124,7 +125,7 @@ function SkillContent({ content, selectedTab, expanded }) {
                 {skill.description}
               </p>
             </div>
-          </li>
+          </motion.li>
         ))}
       </ul>
     </motion.div>

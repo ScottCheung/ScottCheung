@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.245164b0.css",
-    "main.js": "/static/js/main.c4eaa426.js",
+    "main.js": "/static/js/main.a42c84bd.js",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
@@ -10,6 +10,6 @@
   },
   "entrypoints": [
     "static/css/main.245164b0.css",
-    "static/js/main.c4eaa426.js"
+    "static/js/main.a42c84bd.js"
   ]
 }
