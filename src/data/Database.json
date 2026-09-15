@@ -1583,7 +1583,7 @@
               },
               {
                 "name": "React",
-                "image": "https://www.svgrepo.com/show/473768/react.svg",
+                "image": "https://cdn.simpleicons.org/react/000000",
                 "description": "Proficient in React for building dynamic single-page applications (SPAs), with strong knowledge of hooks, context API, and React Router for client-side routing."
               },
               {
@@ -1623,7 +1623,7 @@
               },
               {
                 "name": "Cypress",
-                "image": "https://www.svgrepo.com/show/330247/cypress.svg",
+                "image": "https://cdn.simpleicons.org/cypress/000000",
                 "description": "Currently learning Cypress for end-to-end testing, focusing on writing test suites to verify application stability and improving user experience through automated tests."
               },
               {
@@ -1643,7 +1643,7 @@
               },
               {
                 "name": "SEO Optimization",
-                "image": "https://www.svgrepo.com/show/478722/seo-1.svg",
+                "image": "https://cdn.simpleicons.org/googlesearchconsole/000000",
                 "description": "Knowledgeable in SEO optimization, using tools like Google Chrome to improve website visibility by optimizing metadata, structure, and content for better indexing."
               },
               {
@@ -1663,7 +1663,7 @@
               },
               {
                 "name": "Responsive Design",
-                "image": "https://www.svgrepo.com/show/153781/responsive-design-symbol.svg",
+                "image": "https://api.iconify.design/mdi:responsive.svg?color=%23000000",
                 "description": "Skilled in responsive design to ensure applications work across a wide range of devices, using techniques like media queries, flexible grids, and responsive images."
               },
               {
@@ -1703,7 +1703,7 @@
               },
               {
                 "name": "React",
-                "image": "https://www.svgrepo.com/show/473768/react.svg",
+                "image": "https://cdn.simpleicons.org/react/000000",
                 "description": "精通 React，用于构建高效和易于维护的单页应用（SPA），熟悉使用 hooks、context API 和 React Router 实现动态路由。"
               },
               {
@@ -1743,7 +1743,7 @@
               },
               {
                 "name": "Cypress (学习中)",
-                "image": "https://www.svgrepo.com/show/330247/cypress.svg",
+                "image": "https://cdn.simpleicons.org/cypress/000000",
                 "description": "正在学习 Cypress，熟悉编写全面的端到端测试用例，确保应用稳定性和良好的用户体验，使用插件扩展测试功能。"
               },
               {
@@ -1763,7 +1763,7 @@
               },
               {
                 "name": "SEO Optimization",
-                "image": "https://www.svgrepo.com/show/478722/seo-1.svg",
+                "image": "https://cdn.simpleicons.org/googlesearchconsole/000000",
                 "description": "熟练进行 SEO 优化，使用 Google Chrome 等工具评估和提升网站的可见性，优化标题、内容、元标签，并改善站点结构以提高索引效果。"
               },
               {
@@ -1783,7 +1783,7 @@
               },
               {
                 "name": "Responsive Design",
-                "image": "https://www.svgrepo.com/show/153781/responsive-design-symbol.svg",
+                "image": "https://api.iconify.design/mdi:responsive.svg?color=%23000000",
                 "description": "擅长创建响应式设计，确保网页应用在不同设备和屏幕尺寸下都能无缝运行，熟练使用媒体查询、灵活的网格布局和响应式图片等技术。"
               },
               {
@@ -1805,7 +1805,7 @@
             "skills": [
               {
                 "name": "NodeJS",
-                "image": "https://www.svgrepo.com/show/473736/nodejs.svg",
+                "image": "https://cdn.simpleicons.org/nodedotjs/000000",
                 "description": "Skilled in NodeJS for building efficient and scalable server-side applications, including asynchronous programming with Promises and async/await, and using frameworks like Express.js and Koa."
               },
               {
@@ -1820,7 +1820,7 @@
               },
               {
                 "name": "JSON",
-                "image": "https://www.svgrepo.com/show/74933/json-file.svg",
+                "image": "https://cdn.simpleicons.org/json/000000",
                 "description": "Adept at working with JSON for seamless data interchange between frontend and backend, including JSON schema validation and optimization for performance in API responses."
               },
               {
@@ -1830,7 +1830,7 @@
               },
               {
                 "name": "Microservices",
-                "image": "https://www.svgrepo.com/show/355235/services.svg",
+                "image": "https://api.iconify.design/carbon:microservices-1.svg?color=%23000000",
                 "description": "Skilled in designing and implementing microservices architectures, including API gateway setup, service discovery, and inter-service communication using tools like Docker and Kubernetes."
               },
               {
@@ -1845,7 +1845,7 @@
             "skills": [
               {
                 "name": "NodeJS",
-                "image": "https://www.svgrepo.com/show/473736/nodejs.svg",
+                "image": "https://cdn.simpleicons.org/nodedotjs/000000",
                 "description": "擅长使用 NodeJS 构建高效且可扩展的服务器端应用程序，包括使用 Promises 和 async/await 进行异步编程，以及使用 Express.js 和 Koa 等框架。"
               },
               {
@@ -1860,7 +1860,7 @@
               },
               {
                 "name": "JSON",
-                "image": "https://www.svgrepo.com/show/74933/json-file.svg",
+                "image": "https://cdn.simpleicons.org/json/000000",
                 "description": "熟练使用 JSON 实现前后端数据交换，包括 JSON 模式验证和优化 API 响应性能。"
               },
               {
@@ -1870,7 +1870,7 @@
               },
               {
                 "name": "微服务",
-                "image": "https://www.svgrepo.com/show/355235/services.svg",
+                "image": "https://api.iconify.design/carbon:microservices-1.svg?color=%23000000",
                 "description": "擅长设计和实现微服务架构，包括设置 API 网关、服务发现，以及使用 Docker 和 Kubernetes 进行服务间通信。"
               },
               {
@@ -1887,7 +1887,7 @@
             "skills": [
               {
                 "name": "MySQL",
-                "image": "https://www.svgrepo.com/show/394296/mysql.svg",
+                "image": "https://cdn.simpleicons.org/mysql/000000",
                 "description": "Proficient in MySQL, capable of handling complex queries, index management, transaction processing, creating stored procedures and functions, and optimizing database performance through normalization and tuning."
               },
               {
@@ -1917,7 +1917,7 @@
             "skills": [
               {
                 "name": "MySQL",
-                "image": "https://www.svgrepo.com/show/394296/mysql.svg",
+                "image": "https://cdn.simpleicons.org/mysql/000000",
                 "description": "熟悉 MySQL，能够进行复杂的查询、索引管理、事务处理，创建存储过程和函数，优化数据库性能，并熟悉数据库的规范化与调优。"
               },
               {
@@ -1969,7 +1969,7 @@
               },
               {
                 "name": "Agile/Scrum",
-                "image": "https://www.svgrepo.com/show/372946/scrum.svg",
+                "image": "https://cdn.simpleicons.org/scrumalliance/000000",
                 "description": "Proficient in Agile and Scrum methodologies, including sprint planning, daily stand-ups, sprint reviews, and retrospectives for iterative software development."
               },
               {
@@ -2014,7 +2014,7 @@
               },
               {
                 "name": "敏捷/Scrum",
-                "image": "https://www.svgrepo.com/show/372946/scrum.svg",
+                "image": "https://cdn.simpleicons.org/scrumalliance/000000",
                 "description": "精通敏捷和 Scrum 方法论，包括冲刺计划、每日站会、冲刺回顾和回顾会议，用于迭代的软件开发流程。"
               },
               {

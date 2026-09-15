@@ -1,8 +1,8 @@
 /** @format */
 
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import Database from '../data/Database.json';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useLanguage } from '../help/helpFunction';
 import BG from './gfBG';
 import Toggle from './Toggle';
@@ -44,12 +44,96 @@ const tabs = [
   },
 ];
 
+const getSkillInitials = (name = '') =>
+  name
+    .trim()
+    .split(/\s+/)
+    .map((word) => word[0])
+    .filter(Boolean)
+    .slice(0, 2)
+    .join('')
+    .toUpperCase();
+
+function SkillIcon({ skill }) {
+  const [imageFailed, setImageFailed] = useState(!skill.image);
+
+  return imageFailed ?
+      <span
+        role='img'
+        aria-label={skill.name}
+        className='flex h-full w-full items-center justify-center text-center text-[18px] font-black tracking-wide text-black'
+      >
+        {getSkillInitials(skill.name)}
+      </span>
+    : <img
+        loading='lazy'
+        src={skill.image}
+        alt={skill.name}
+        onError={() => setImageFailed(true)}
+      />;
+}
+
+function SkillContent({ content, selectedTab, expanded }) {
+  const skills = content.skills.slice(
+    0,
+    !expanded && content.skills.length > 12 ? 12 : content.skills.length,
+  );
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        type: 'spring',
+        stiffness: 260,
+        damping: 30,
+        mass: 0.8,
+        duration: 2,
+      }}
+      style={{
+        lineHeight: 1.23536,
+        fontFamily: `"SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif`,
+      }}
+      className={`relative flex w-full flex-1 flex-col bg-clip-text bg-gradient-to-r from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2}`}
+    >
+      <p
+        className={`flex text-[13px] text-transparent md:text-[15px] lg:text-[20px] from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text`}
+      >
+        {content.description}
+      </p>
+      <ul
+        className={`grid grid-cols-12 gap-[20px] py-[50px] text-transparent md:gap-[40px] lg:gap-[70px] lg:py-[100px] from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text normal-text`}
+      >
+        {skills.map((skill, index) => (
+          <li
+            key={`${selectedTab.contentKey}-${skill.name}-${index}`}
+            className='col-span-12 flex items-start gap-x-[20px] pb-2 md:col-span-6 lg:col-span-4 xl:col-span-3'
+          >
+            <div
+              className={`flex h-[50px] w-[50px] flex-shrink-0 items-center justify-center rounded-[9px] bg-gradient-to-br from-[-200%] to-[200%] p-[10px]`}
+            >
+              <SkillIcon skill={skill} />
+            </div>
+            <div
+              className={`flex flex-col text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2} bg-gradient-to-br bg-clip-text`}
+            >
+              <strong className='flex items-start pb-4 text-[13px] font-[700] tracking-wider md:text-[15px] lg:text-[20px]'>
+                {skill.name}
+              </strong>
+              <p className='flex w-[280px] flex-wrap text-[10px] md:w-auto md:text-[12px] lg:text-[13px]'>
+                {skill.description}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </motion.div>
+  );
+}
+
 function Skill() {
-  const StagerFadeInUp = Database.Animation.Transition.StagerFadeInUp;
-  const WelcomeItem = Database.Animation.Variant.fastWelcomevisblecontainer;
   const lang = useLanguage();
   const [selectedTab, setSelectedTab] = useState(tabs[0]);
-  const [prevTab, setPrevTab] = useState(null);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [expanded, setExpanded] = useState(false);
 
@@ -60,7 +144,6 @@ function Skill() {
   }, []);
 
   const handleTabChange = (tab) => {
-    setPrevTab(selectedTab);
     setSelectedTab(tab);
     setExpanded(false);
   };
@@ -68,77 +151,7 @@ function Skill() {
   const contentData =
     Database.PersonalInfo.Capability.des[selectedTab.label[0]];
   const content = contentData[lang];
-  const renderContent = () => {
-    return (
-      <motion.div
-        // layoutId="ability"
-        style={{
-          lineHeight: 1.23536,
-          fontFamily: `"SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif`,
-        }}
-        className={`flex-1 relative flex-col w-full bg-clip-text bg-gradient-to-r from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2}`}
-      >
-        <motion.p
-          className={`text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text flex text-[13px] md:text-[15px] lg:text-[20px]`}
-          initial='hidden'
-          animate='visible'
-          variants={{
-            hidden: { opacity: 0, x: 30 },
-            visible: { opacity: 1, x: 0 },
-          }}
-          viewport={{ once: true, margin: '-30%' }}
-          transition={{ duration: 1 }}
-        >
-          {content.description}
-        </motion.p>
-        <motion.ul
-          viewport={{ once: true, margin: '-30%' }}
-          className={`text-transparent grid grid-cols-12 gap-[20px] md:gap-[40px] lg:gap-[70px] py-[50px] lg:py-[100px] from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text normal-text`}
-        >
-          {content.skills
-            .slice(
-              0,
-              !expanded && content.skills.length > 12 ?
-                12
-              : content.skills.length,
-            )
-            .map((skill, index) => (
-              <motion.li
-                layout
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: 30 }}
-                transition={{ duration: 1, delay: (index % 12) * 0.12 }}
-                className='flex items-start  col-span-12 pb-2 md:col-span-6 lg:col-span-4 xl:col-span-3 gap-x-[20px]'
-              >
-                <motion.div
-                  className={`flex flex-shrink-0 justify-center items-center w-[50px] h-[50px] p-[10px] from-[-200%] to-[200%] bg-gradient-to-br rounded-[9px]`}
-                >
-                  <img loading='lazy' src={skill.image} alt={skill.name} />
-                </motion.div>
-
-                <div
-                  className={`flex flex-col  text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2} bg-gradient-to-br bg-clip-text`}
-                >
-                  <motion.strong className='flex font-[700] tracking-wider text-[13px] md:text-[15px] lg:text-[20px] items-start pb-4'>
-                    {skill.name}
-                  </motion.strong>
-                  <motion.p className='flex flex-wrap text-[10px] md:text-[12px] lg:text-[13px] w-[280px] md:w-auto'>
-                    {skill.description}
-                  </motion.p>
-                </div>
-              </motion.li>
-            ))}
-        </motion.ul>
-      </motion.div>
-    );
-  };
-
   const BigRadius = 'rounded-[28px] md:rounded-[28px] lg:rounded-[30px]';
-  const Radius = 'rounded-[12px] md:rounded-[14px] lg:rounded-[28px]';
-
-  const direction = tabs.indexOf(selectedTab) > tabs.indexOf(prevTab) ? 1 : -1;
 
   return (
     <motion.div
@@ -238,29 +251,21 @@ function Skill() {
                         className={`flex md:flex-row flex-col-reverse  bg-gradient-to-br gap-[10px] items-center text-transparent bg-clip-text from-${tab.ratio1} to-${tab.ratio2} from-${tab.color1} to-${tab.color2}`}
                       >
                         <h3 className=''>{tab.label[lang]}</h3>
-                        <AnimatePresence>
-                          {/* {tab === selectedTab && ( */}
-                          <motion.div
-                            initial={{ opacity: 0, scale: 0 }}
-                            animate={{
-                              opacity: tab === selectedTab ? 1 : 0,
-                              scale: tab === selectedTab ? 1 : 0,
-                            }}
-                            transition={{
-                              duration: 1,
-                              ease: [0.22, 1, 0.36, 1],
-                            }}
-                            layoutId='fdfd'
-                            className={`bg-gradient-to-r w-[50px] from-[-100%] to-[200%] from-${tab.color1} to-${tab.color2} rounded-full`}
-                          >
-                            <N
-                              className={`text-[15px] bg-black text-transparent bg-clip-text  px-[10px] font-[700] rounded-full  p-[1px] md:text-[13px] lg:text-[15px]`}
-                              n={content.skills.length}
-                              d={3}
-                            />
-                          </motion.div>
-                          {/* )} */}
-                        </AnimatePresence>
+                        <motion.div
+                          initial={false}
+                          animate={{
+                            opacity: tab === selectedTab ? 1 : 0,
+                            scale: tab === selectedTab ? 1 : 0,
+                          }}
+                          transition={{ duration: 0.2, ease: 'easeOut' }}
+                          className={`w-[50px] rounded-full bg-gradient-to-r from-[-100%] to-[200%] from-${tab.color1} to-${tab.color2}`}
+                        >
+                          <N
+                            className={`rounded-full bg-black px-[10px] p-[1px] text-[15px] font-[700] text-transparent bg-clip-text md:text-[13px] lg:text-[15px]`}
+                            n={content.skills.length}
+                            d={3}
+                          />
+                        </motion.div>
                       </div>
 
                       {tab === selectedTab ?
@@ -273,41 +278,33 @@ function Skill() {
                   </motion.button>
                 ))}
               </motion.ul>
-              <AnimatePresence mode='popLayout'>
-                <motion.div
-                  key={selectedTab.label}
-                  initial={{ x: -direction * 30, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  exit={{ x: direction * 30, opacity: 0 }}
-                  transition={{
-                    duration: 1,
-                    ease: [0.22, 1, 0.36, 1],
-                  }}
-                >
-                  {renderContent()}
-                </motion.div>
-                <button
-                  disabled={content.skills.length <= 12}
-                  className='max-w-3xl h-[30px] flex items-center gap-[20px] mx-auto my-4 text-white/50 text-[15px] lg:text-[20px]'
-                >
-                  {content.skills.length > 12 && (
-                    <Toggle
-                      isExpanded={expanded}
-                      text={
-                        expanded ?
-                          [`Collapse`, '折叠'][lang]
-                        : [
-                            `Expand remain ${content.skills.length - 12}`,
-                            `展开剩余 ${content.skills.length - 12}`,
-                          ][lang]
-                      }
-                      onToggle={() => {
-                        setExpanded(!expanded);
-                      }}
-                    />
-                  )}
-                </button>
-              </AnimatePresence>
+              <SkillContent
+                key={`${selectedTab.contentKey}-${lang}`}
+                content={content}
+                selectedTab={selectedTab}
+                expanded={expanded}
+              />
+              <button
+                disabled={content.skills.length <= 12}
+                className='max-w-3xl h-[30px] flex items-center gap-[20px] mx-auto my-4 text-white/50 text-[15px] lg:text-[20px]'
+              >
+                {content.skills.length > 12 && (
+                  <Toggle
+                    isExpanded={expanded}
+                    text={
+                      expanded ?
+                        [`Collapse`, '折叠'][lang]
+                      : [
+                          `Expand remain ${content.skills.length - 12}`,
+                          `展开剩余 ${content.skills.length - 12}`,
+                        ][lang]
+                    }
+                    onToggle={() => {
+                      setExpanded(!expanded);
+                    }}
+                  />
+                )}
+              </button>
             </motion.div>
           </div>
         </motion.div>

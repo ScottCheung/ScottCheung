@@ -4,8 +4,10 @@
       "name": ["Home", "主页"],
       "href": "/",
       "icon": "fi-rr-home-heart",
-      "des": ["This is Home Page ~", "这个是主页 ~"],
-      "expression": "❤٩ (◕‿◕｡)۶ 🏠",
+      "des": [
+        "An overview of my work, background, and the ideas behind this site.",
+        "集中介绍我的经历、作品，以及这个网站背后的想法。"
+      ],
       "isTopShow": false,
       "scondMenu": [
         {
@@ -39,8 +41,10 @@
       "name": ["Work", "工作"],
       "href": "/work",
       "icon": "fi-rr-tool-box",
-      "des": ["Here is my Career part~", "这里是我的工作部分~"],
-      "expression": "(｡◕‿◕｡) 📧",
+      "des": [
+        "Explore my professional experience, selected achievements, and practical work.",
+        "了解我的工作经历、代表成果和实际项目。"
+      ],
       "scondMenu": [
         {
           "link": "/scholarship",
@@ -72,8 +76,10 @@
       "name": ["Life", "生活"],
       "href": "/life",
       "icon": "fi-rr-mountains",
-      "des": ["My wonderful life ~", "我的精彩生活 ~"],
-      "expression": "(＾◡＾) 🌄",
+      "des": [
+        "A collection of music, performances, images, and stories beyond work.",
+        "记录工作之外的音乐、表演、影像与故事。"
+      ],
       "isTopShow": true,
       "scondMenu": [
         {
@@ -107,8 +113,10 @@
       "name": ["Project", "项目"],
       "icon": "fi-rr-folder",
       "status": "fi-sr-eye",
-      "des": ["My Projects ~ ", "参与的项目 ~ "],
-      "expression": "(⌐■_■) 💻",
+      "des": [
+        "Selected projects in product design, frontend development, and digital tools.",
+        "展示产品设计、前端开发和数字工具等方向的项目。"
+      ],
       "isTopShow": true,
       "scondMenu": [
         {
@@ -304,8 +312,10 @@
       "name": ["Contact", "联络"],
       "href": "/Contact",
       "icon": "fi-rr-following",
-      "des": ["Contact me ~", "网络一线牵，珍惜这段缘 ~"],
-      "expression": "(｡♥‿♥｡) ☎️",
+      "des": [
+        "Find the best way to connect with me for a conversation or collaboration.",
+        "欢迎通过合适的方式联系我，交流想法或探讨合作。"
+      ],
       "isTopShow": true,
       "scondMenu": [
         {
@@ -369,10 +379,9 @@
       "button": "LangToggle",
       "icon": "fi-rr-globe",
       "des": [
-        "Select your preferred language ~",
-        "请选择你喜欢的语言来显示网页 ~"
+        "Choose the language you would like to use across the site.",
+        "选择你希望在网站中使用的语言。"
       ],
-      "expression": "◕ ‿ ◕  🎈",
       "isTopShow": false,
       "scondMenu": [
         {

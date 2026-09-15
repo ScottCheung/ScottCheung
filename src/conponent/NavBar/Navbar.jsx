@@ -707,9 +707,6 @@ function Navbar({
                       <p className='text-[20px] lg:text-[25px]  darrk:text-gray-900 text-white  '>
                         {item.des[lang]}
                       </p>
-                      <span className='text-center text-[30px] darrk:text-gray-900 text-white '>
-                        {item.expression}{' '}
-                      </span>
                       <div className='group relative my-2.5 hidden'>
                         <div className='absolute flex items-center justify-center w-full transition-opacity duration-300 rounded-lg opacity-0 bg-gray-900/50 group-hover:opacity-100'>
                           <button
