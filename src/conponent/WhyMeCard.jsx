@@ -270,7 +270,7 @@ function WhymeCard() {
                       WebkitMaskImage:
                         'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 1) 50px, rgba(0, 0, 0, 0.8) 95%, rgba(0, 0, 0, 0) 100%)',
                     }}
-                    className=' max-h-[80vh] overflow-y-auto  scrollbar-hide   gradient-mask pt-[50px] pb-[30vh]'
+                    className=' max-h-[80vh] overflow-y-auto  scrollbar-hide  pr-[40px] gradient-mask pt-[50px] pb-[30vh]'
                   >
                     <div
                       className={`pb-[30px] relative flex flex-col  break-words`}
