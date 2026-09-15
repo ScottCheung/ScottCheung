@@ -7,6 +7,7 @@ import Database from '../data/Database.json';
 import {
   motion,
   AnimatePresence,
+  LayoutGroup,
   useScroll,
   useTransform,
   easeInOut,
@@ -225,7 +226,8 @@ function WhyMe({ hideTittle, mt }) {
     );
   }
   const WhyMe = (
-    <motion.div
+    <LayoutGroup id='why-me-cards'>
+      <motion.div
       ref={ref1}
       className={mt && '' + ` mb-[100px] w-[${viewwidth}px]`}
     >
@@ -377,7 +379,8 @@ function WhyMe({ hideTittle, mt }) {
       <AnimatePresence>
         {Components.whymeCard === 'visible' && <WhyMeCard />}
       </AnimatePresence>
-    </motion.div>
+      </motion.div>
+    </LayoutGroup>
   );
 
   if (!isMobile) return WhyMe;

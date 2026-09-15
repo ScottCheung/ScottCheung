@@ -69,6 +69,7 @@ function SkillIcon({ skill }) {
         loading='lazy'
         src={skill.image}
         alt={skill.name}
+        className='flex h-full w-full items-center justify-center  p-[10px]'
         onError={() => setImageFailed(true)}
       />;
 }
@@ -100,7 +101,7 @@ function SkillContent({ content, selectedTab, expanded }) {
         {content.description}
       </motion.p>
       <ul
-        className={`grid grid-cols-12 gap-[20px] py-[50px] text-transparent md:gap-[40px] lg:gap-[70px] lg:py-[100px] from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text normal-text`}
+        className={`grid auto-rows-fr grid-cols-12 gap-[20px] py-[50px] text-transparent md:gap-[40px] lg:gap-[70px] lg:py-[100px] from-${selectedTab.ratio1} to-${selectedTab.ratio2} from-${selectedTab.color1} to-${selectedTab.color2} bg-gradient-to-br bg-clip-text normal-text`}
       >
         {skills.map((skill, index) => (
           <motion.li
@@ -108,17 +109,17 @@ function SkillContent({ content, selectedTab, expanded }) {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{delay: index * 0.1, duration: 1}}
-            className='col-span-12 flex items-start gap-x-[20px] pb-2 md:col-span-6 lg:col-span-4 xl:col-span-3'
+            className='col-span-12 flex h-full min-h-[150px] items-start gap-x-[20px] pb-2 md:col-span-6 lg:col-span-4 lg:min-h-[170px] xl:col-span-3'
           >
             <div
-              className={`flex h-[50px] w-[50px] flex-shrink-0 items-center justify-center rounded-[9px] bg-gradient-to-br from-[-200%] to-[200%] p-[10px]`}
+              className={`flex h-[50px] w-[50px] flex-shrink-0 items-center justify-center rounded-[9px] bg-gradient-to-br from-[-200%] to-[200%] `}
             >
-              <SkillIcon skill={skill} />
+              <SkillIcon skill={skill}  />
             </div>
             <div
-              className={`flex flex-col text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2} bg-gradient-to-br bg-clip-text`}
+              className={`flex min-w-0 flex-col text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2} bg-gradient-to-br bg-clip-text`}
             >
-              <strong className='flex items-start pb-4 text-[13px] font-[700] tracking-wider md:text-[15px] lg:text-[20px]'>
+              <strong className='flex min-h-[32px] items-start pb-4 text-[13px] font-[700] tracking-wider md:text-[15px] lg:min-h-[48px] lg:text-[20px]'>
                 {skill.name}
               </strong>
               <p className='flex w-[280px] flex-wrap text-[10px] md:w-auto md:text-[12px] lg:text-[13px]'>

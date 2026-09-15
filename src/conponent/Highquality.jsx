@@ -124,64 +124,71 @@ function Highquality() {
   //   },
   // ];
 
-  const content = [
-    {
-      title: lang == 0 ? 'Detail-Oriented' : '注重细节',
-      text:
-        lang == 0 ?
-          SelectText(
-            'I focus on [Code quality], [Usability], and [Design clarity], ensuring every aspect of the project meets high standards.',
-            'yellow-500',
-            '\t ',
-          )
-        : SelectText(
-            '我专注于[代码质量]、[可用性]和[设计清晰度]，确保项目的每个方面都达到高标准。',
-            'yellow-500',
-          ),
-    },
-    {
-      title: lang == 0 ? 'Problem Solver' : '解决问题',
-      text:
-        lang == 0 ?
-          SelectText(
-            'I view every [challenge] as a chance to grow. I approach issues methodically and systematic to find [effective solutions].',
-            'yellow-500',
-            '\t ',
-          )
-        : SelectText(
-            '我将每个[挑战]视为成长的机会。我以有逻辑且系统性地方式解决问题，找到[高效方案]。',
-            'yellow-500',
-          ),
-    },
-    {
-      title: lang == 0 ? 'Goal-Driven' : '目标导向',
-      text:
-        lang == 0 ?
-          SelectText(
-            'I prioritize [results] and align my efforts with [business goals]. My aim is to deliver [impactful outcomes].',
-            'yellow-500',
-            '\t ',
-          )
-        : SelectText(
-            '我重视[成果]，将自己的努力与[业务目标]对齐。我的目标是交付[有影响力的成果]。',
-            'yellow-500',
-          ),
-    },
-    {
-      title: lang == 0 ? 'Team Player' : '团队协作',
-      text:
-        lang == 0 ?
-          SelectText(
-            'I believe in [collaboration] and value [team diversity]. Together, Respect, we achieve better [results].',
-            'yellow-500',
-            '\t ',
-          )
-        : SelectText(
-            '我相信[协作]，重视[团队多样性]。携手合作，尊重合作伙伴，能取得更好的[成果]。',
-            'yellow-500',
-          ),
-    },
-  ];
+const content = [
+  {
+    title: lang == 0 ? 'Take Ownership' : '主动负责',
+
+    text:
+      lang == 0 ?
+        SelectText(
+          'I take [ownership] beyond assigned tasks — from implementation and testing to deployment, debugging, and [production reliability].',
+          'yellow-500',
+          '\t ',
+        )
+      : SelectText(
+          '我不仅完成被分配的任务，也会主动关注[实现、测试、部署和生产问题]，对最终的[交付结果]负责。',
+          'yellow-500',
+        ),
+  },
+
+  {
+    title: lang == 0 ? 'Solve the Root Cause' : '解决根本问题',
+
+    text:
+      lang == 0 ?
+        SelectText(
+          'I break complex problems into measurable parts, identify the [root cause], and focus on solutions that improve [performance and reliability].',
+          'yellow-500',
+          '\t ',
+        )
+      : SelectText(
+          '我会将复杂问题拆解成可验证的部分，找到真正的[根本原因]，并通过工程方案改善[性能与可靠性]。',
+          'yellow-500',
+        ),
+  },
+
+  {
+    title: lang == 0 ? 'Product-Minded' : '产品思维',
+
+    text:
+      lang == 0 ?
+        SelectText(
+          'I think beyond whether a feature simply works. I care about [user experience], maintainability, performance, and the [business impact] behind technical decisions.',
+          'yellow-500',
+          '\t ',
+        )
+      : SelectText(
+          '我不会只关注功能是否能够运行，也会考虑[用户体验]、可维护性、性能，以及技术决策最终带来的[业务价值]。',
+          'yellow-500',
+        ),
+  },
+
+  {
+    title: lang == 0 ? 'Work Better Together' : '高效协作',
+
+    text:
+      lang == 0 ?
+        SelectText(
+          'I communicate with [clear context and evidence], align frontend and backend expectations, and collaborate to help the team make [better decisions faster].',
+          'yellow-500',
+          '\t ',
+        )
+      : SelectText(
+          '我重视有[上下文和事实依据]的沟通，主动对齐前后端预期，与团队协作，更快做出[更好的决策]。',
+          'yellow-500',
+        ),
+  },
+];
 
   const Highquality = (
     <motion.div className='flex h-full w-full min-h-[1000px] col-span-12 relative md:col-span-6 lg:col-span-4'>

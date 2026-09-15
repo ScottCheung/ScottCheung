@@ -53,7 +53,7 @@ const getGeolocation = async () => {
   const newLogEntry = {
     version: packageJson.version,
     time: currentTime,
-    author: 'Scott Cheung',
+    author: 'Scott Zhang',
     address,
 
     /****************

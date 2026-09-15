@@ -237,7 +237,7 @@ function Contact({ isTopOut }) {
           </div>
 
           <footer className='flex justify-center mb-24 text-[10px] lg:text-[15px] text-white/60 '>
-            <p>{`Copyright © 2023-${new Date().getFullYear()} - All rights reserved by Scott Cheung`}</p>
+            <p>{`Copyright © 2023-${new Date().getFullYear()} - All rights reserved by Scott Zhang`}</p>
           </footer>
         </AnimatePresence>
       </div>

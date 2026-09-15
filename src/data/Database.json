@@ -55,16 +55,16 @@
         "type": ["Master degree", "硕士学位"],
         "logo": "/Graphs/study/unsw.png",
         "banner": "https://3o.hk/images/2024/05/25/unsw-students-banner.png",
-        "unides": [
-          [
-            "UNSW Sydney is Australia’s best university for career outcomes and second overall according to a new ranking published by The Australian Financial Review (AFR) today. UNSW ranked first for ‘career outcomes’, second for ‘research’ and for ‘global reputation’ and second university overall in Australia.",
-            "UNSW Sydney has moved up 26 spots in the 2024 QS World University Rankings to equal 19th alongside its crosstown counterpart the University of Sydney. The two universities are now ranked equal second in Australia. The city of Sydney now boasts 10 per cent of the top 20 universities in the world, affirming the city’s reputation as a great global city for higher education. Of 38 Australian universities ranked, three (15 per cent) are in the global top 20, an extraordinary achievement for a nation of only 0.3 per cent of the world’s population."
-          ],
-          [
-            "新南威尔士大学（ UNSW Sydney ）被认为是澳大利亚就业前景最好的大学，根据今天《澳大利亚金融评论》（AFR）发布的新排名，它在整体排名中位居第二。UNSW在‘职业前景’方面排名第一，研究和‘全球声誉’方面排名第二，也是澳大利亚整体排名第二的大学。",
-            "新南威尔士大学（ UNSW Sydney ）在2024年QS世界大学排名中上升了26位，与悉尼大学并列第19位。这两所大学现在在澳大利亚排名第二。悉尼市现在拥有全球前20所大学中的10%，证实了该城市作为高等教育的卓越全球城市的声誉。在排名的38所澳大利亚大学中，有三所（15%）进入了全球前20名，对于一个仅占世界人口0.3%的国家来说，这是一项非凡的成就。"
-          ]
-        ],
+"unides": [
+  [
+    "UNSW Sydney ranks #1 in Australia and #19 globally in the 2027 QS World University Rankings, making it the only Australian university in the global top 20. UNSW also ranks #1 in Australia for employment outcomes, reinforcing its strong reputation for graduate career success.",
+    "UNSW Sydney ranked #1 in Australia for Career Impact for the third consecutive year in the Australian Financial Review's 2025 Best Universities Ranking. The university also ranked equal second overall in Australia and third for research."
+  ],
+  [
+    "新南威尔士大学（UNSW Sydney）在2027年QS世界大学排名中位列全球第19名、澳大利亚第1名，也是唯一进入全球前20名的澳大利亚大学。UNSW的就业成果同样位居澳大利亚第1，体现了其在毕业生就业与职业发展方面的突出表现。",
+    "在《澳大利亚金融评论》（AFR）2025年最佳大学排名中，UNSW连续第三年位列澳大利亚“职业影响力”第1名，同时综合排名并列澳大利亚第2名，研究排名第3名。"
+  ]
+],
         "majordes": [
           [
             "Artificial intelligence (AI) is the intelligence of machines or software, as opposed to the intelligence of humans or animals. It is a field of study in computer science that develops and studies intelligent machines. Such machines may be called AIs.",
@@ -253,16 +253,16 @@
         "type": ["Master degree", "硕士学位"],
         "logo": "/Graphs/study/unsw.png",
         "banner": "https://www.student.unsw.edu.au/sites/default/files/uploads/global/unsw-students-banner.png",
-        "unides": [
-          [
-            "UNSW Sydney is Australia’s best university for career outcomes and second overall according to a new ranking published by The Australian Financial Review (AFR) today. UNSW ranked first for ‘career outcomes’, second for ‘research’ and for ‘global reputation’ and second university overall in Australia.",
-            "UNSW Sydney has moved up 26 spots in the 2024 QS World University Rankings to equal 19th alongside its crosstown counterpart the University of Sydney. The two universities are now ranked equal second in Australia. The city of Sydney now boasts 10 per cent of the top 20 universities in the world, affirming the city’s reputation as a great global city for higher education. Of 38 Australian universities ranked, three (15 per cent) are in the global top 20, an extraordinary achievement for a nation of only 0.3 per cent of the world’s population."
-          ],
-          [
-            "新南威尔士大学（ UNSW Sydney ）被认为是澳大利亚就业前景最好的大学，根据今天《澳大利亚金融评论》（AFR）发布的新排名，它在整体排名中位居第二。UNSW在‘职业前景’方面排名第一，研究和‘全球声誉’方面排名第二，也是澳大利亚整体排名第二的大学。",
-            "新南威尔士大学（ UNSW Sydney ）在2024年QS世界大学排名中上升了26位，与悉尼大学并列第19位。这两所大学现在在澳大利亚排名第二。悉尼市现在拥有全球前20所大学中的10%，证实了该城市作为高等教育的卓越全球城市的声誉。在排名的38所澳大利亚大学中，有三所（15%）进入了全球前20名，对于一个仅占世界人口0.3%的国家来说，这是一项非凡的成就。"
-          ]
-        ],
+"unides": [
+  [
+    "UNSW Sydney ranks #1 in Australia and #19 globally in the 2027 QS World University Rankings, making it the only Australian university in the global top 20. UNSW also ranks #1 in Australia for employment outcomes, reinforcing its strong reputation for graduate career success.",
+    "UNSW Sydney ranked #1 in Australia for Career Impact for the third consecutive year in the Australian Financial Review's 2025 Best Universities Ranking. The university also ranked equal second overall in Australia and third for research."
+  ],
+  [
+    "新南威尔士大学（UNSW Sydney）在2027年QS世界大学排名中位列全球第19名、澳大利亚第1名，也是唯一进入全球前20名的澳大利亚大学。UNSW的就业成果同样位居澳大利亚第1，体现了其在毕业生就业与职业发展方面的突出表现。",
+    "在《澳大利亚金融评论》（AFR）2025年最佳大学排名中，UNSW连续第三年位列澳大利亚“职业影响力”第1名，同时综合排名并列澳大利亚第2名，研究排名第3名。"
+  ]
+],
         "majordes": [
           [
             "Data science is an interdisciplinary academic field that uses statistics, scientific computing, scientific methods, processes, algorithms and systems to extract or extrapolate knowledge and insights from potentially noisy, structured, or unstructured data.",
@@ -980,188 +980,192 @@
         ]
       }
     ],
-    "WhyMe": [
-      [
-        {
-          "id": "LearningAbility",
-          "advantage": ["Learning Ability"],
-          "href": "/whyme/LearningAbility",
-          "pic": ["/Graphs/whyme/1.png", "/Graphs/whyme/1.png"],
-          "pic2": "/Graphs/whyme/LearningAbility2.jpg",
-          "icon": "fi-rr-graduation-cap",
-          "description": "The candidate possesses outstanding learning ability.\n1. Excellent self-driven learning. The candidate maintains a mindset of constantly learning new things, self-learning piano and guitar out of passion, and systematically studying photography, Photoshop editing, Adobe Illustrator vector graphics design, Lightroom color correction, Premiere, and Final Cut Pro video editing software in spare time. The candidate always learns new technologies and methods with a results-oriented approach for achieving perfection.\n2. Exceptional learning speed. The candidate completed 90% of the coursework for a second degree within one year of their third year of undergraduate study, which should have taken four years. Additionally, the candidate studied four majors and holds three degrees, accomplishing the learning of four majors in the time usually taken for two.\n3. Excellent learning methods. Thanks to AI empowerment, the candidate adeptly uses ChatGPT and other AI tools to quickly grasp fresh technologies and efficiently solve problems. The candidate consistently embraces new technologies and methods rapidly.",
-          "color1": "from-red-500",
-          "color2": "to-red-700"
-        },
-        {
-          "id": "Leadership",
-          "advantage": ["Leadership"],
-          "href": "/whyme/Leadership",
-          "pic": ["/Graphs/whyme/2.png", "/Graphs/whyme/2.png"],
-          "pic2": "/Graphs/whyme/Leadership2.jpg",
-          "icon": "fi-rr-users-alt",
-          "description": "The candidate demonstrates outstanding leadership.\n1. Diverse leadership roles. The candidate held key positions in the university's study department, technology and entrepreneurship guidance station, and debate team. Additionally, they served as class president, study committee member, and life committee member, leading the class to stand out in various competitions, winning all awards and honors with top-ranking results.\n2. Rich experience as a competition leader. As a manager, the candidate led over 100 competitions, achieving numerous first prizes at the provincial and district levels, totaling over 58 awards.\n3. The candidate led a team in entrepreneurship, expanding business in a new area, involving crucial tasks such as leasing company space, purchasing corporate supplies, recruiting personnel, planning marketing activities, and managing finances.",
-          "color1": "from-orange-500",
-          "color2": "to-amber-500"
-        },
-        {
-          "id": "Communication",
-          "advantage": ["Communication Skills"],
-          "href": "/whyme/Communication",
-          "pic": ["/Graphs/whyme/3.png", "/Graphs/whyme/3.png"],
-          "pic2": "/Graphs/whyme/Communication2.jpg",
-          "icon": "fi-rr-comments",
-          "description": "The candidate possesses excellent communication skills.\n1. Proficient speaker and communicator. The candidate participated in over 100 competitions, delivering over 50 public speeches as a representative. They are a star presenter for NUSTP, explaining to over 400 visitors. Furthermore, the candidate served in the debate team, winning debate championships, and earning the title of the best debater. The candidate negotiated a 50% discount on materials during the procurement process for the company and secured advertising sponsorship for club activities.\n2. Strong empathy. The candidate, having studied organizational management and organizational psychology, easily perceives others' emotions and feelings, swiftly establishing emotional connections for efficient and logical communication.",
-          "color1": "from-amber-400",
-          "color2": "to-yellow-400"
-        },
-        {
-          "id": "ProblemSolving",
-          "advantage": ["Problem Solving"],
-          "href": "/whyme/ProblemSolving",
-          "pic": ["/Graphs/whyme/4.png", "/Graphs/whyme/4.png"],
-          "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
-          "icon": "fi-rr-lightbulb-question",
-          "description": "The candidate has strong problem-solving ability.\n1. Proficient use of management principles to analyze problems, such as SWOT analysis, Porter's Five Forces model, and the Boston Matrix. The candidate quickly analyzes problems using these tools, identifies key solutions, and proficiently visualizes them.\n2. Clear logic and divergent thinking. The candidate, having systematically studied strategic management, management principles, project management, and operations research, adeptly uses management tools and mathematical methods to solve problems, improving task flow and optimizing work efficiency.",
-          "color1": "from-sky-500",
-          "color2": "to-emerald-500"
-        },
-        {
-          "id": "AestheticAttitude",
-          "advantage": ["Aesthetic Attitude"],
-          "href": "/whyme/AestheticAttitude",
-          "pic": ["/Graphs/whyme/5.png", "/Graphs/whyme/5.png"],
-          "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
-          "icon": "fi-rr-sparkles",
-          "description": "The candidate possesses an outstanding aesthetic attitude.\n1. The candidate studied fine arts from an early age, having advanced aesthetic sense. They believe that excellent projects and products require exceptional packaging and marketing. The candidate independently designed brand logos for multiple companies and assisted in their registration.\n2. The candidate is committed to aesthetic pursuits, rejecting disorganized formats, irregular layouts, and failed color schemes in deliverables. They have high standards for all documents, projects, and works.\n3. The candidate has sufficient delivery capability for aesthetics. They can independently design and create vector and pixel graphics, proficient in software such as Photoshop, Illustrator, Pages, DI, LR, PPT, KeyNote. The candidate has a profound understanding of layout, color matching, and can independently deliver conference-level slides, high-quality posters, brochures, and company logos. They have won awards in multiple design competitions and were a designated poster design member for the university's science and technology entrepreneurship guidance station.",
-          "color1": "from-cyan-500",
-          "color2": "to-blue-500"
-        },
-        {
-          "id": "EmotionalStable",
-          "advantage": ["Emotional Stability"],
-          "href": "/whyme/EmotionalStable",
-          "pic": ["/Graphs/whyme/6.png", "/Graphs/whyme/6.png"],
-          "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
-          "icon": "fi-rr-smile",
-          "description": "The candidate possesses good emotional energy, stability, and firmness.\nThe candidate has a high level of emotional awareness, familiarity with micro-expressions and organizational psychology. They can effectively manage upwards and downwards, demonstrating excellent communication in resolving customer complaints and unexpected situations. The candidate remains optimistic, resilient, quickly handling negative emotions at work. They consistently maintain a positive and energetic attitude, bringing joy and positive feedback to those around them, always providing emotional support.",
-          "color1": "from-indigo-500",
-          "color2": "to-pink-500"
-        }
-      ],
-      [
-        {
-          "id": "LearningAbility",
-          "advantage": ["学习能力"],
-          "href": "/whyme/LearningAbility",
-          "pic": ["/Graphs/whyme/1.png", "/Graphs/whyme/1.png"],
-          "pic2": "/Graphs/whyme/LearningAbility2.jpg",
-          "icon": "fi-rr-graduation-cap",
-          "description": "候选人拥有出色的学习能力。\n1.优秀的学习自驱力。候选人时刻保持学习新事物的心态。仅凭爱好自学了钢琴和吉他，利用业余时间，还系统的学习了摄影、Ps修图、Adobe Ai矢量图形设计、Lr调色、Pr以及Final cut pro等视频剪辑软件。候选人总会以结果为导向学习新技术、新方法，以达到更完美的实现结果。\n2.优秀的学习速度。候选人在本科大三一年的时间内完成了第二学位本该4年完成的90%的课程。同时，候选人学习过四个专业，持有三个学位。候选人4个专业只消耗了2个专业的学习时间. \n3.优秀的学习方法。得益于AI赋能，候选人善于利用ChatGPT等AI快速掌握新鲜技术，更高效的解决方法。候选人总能快速拥抱新技术，快速拥抱新方法。",
-          "color1": "from-red-500",
-          "color2": "to-red-700"
-        },
-        {
-          "id": "Leadership",
-          "advantage": ["领导力"],
-          "href": "/whyme/Leadership",
-          "pic": ["/Graphs/whyme/2.png", "/Graphs/whyme/2.png"],
-          "pic2": "/Graphs/whyme/Leadership2.jpg",
-          "icon": "fi-rr-users-alt",
-          "description": "候选人具有卓越的领导力。\n1.多元的领导角色。候选人曾在大学学习部、科技和创业指导站、辩论队担任关键角色。并在班级担任过班长、学习委员和生活委员等职位。带领班级在各级评优中脱颖而出，不仅赢得所有的奖项和荣誉，且均是第一名的成绩。\n2.丰富的竞赛领导者经历。候选人作为管理者领导了超过100次比赛，获得多个省赛一等奖，市区一等奖等，总计58项奖项。\n3.候选人曾经带领团队创业，候选人带领一个团队到一个新地区扩展业务。涉及租赁公司场地，购置企业物资，招聘企业人员，策划营销活动，计划和管理财务等关键任务。",
-          "color1": "from-orange-500",
-          "color2": "to-amber-500"
-        },
-        {
-          "id": "Communication",
-          "advantage": ["沟通能力"],
-          "href": "/whyme/Communication",
-          "pic": ["/Graphs/whyme/3.png", "/Graphs/whyme/3.png"],
-          "pic2": "/Graphs/whyme/Communication2.jpg",
-          "icon": "fi-rr-comments",
-          "description": "候选人拥有良好的沟通能力。\n1.候选人一位熟练的演讲者及表达者，候选人曾参与了100多场比赛并作为代表人发表了50多次公开演讲。是NUSTP的明星讲解员，讲解过超过400人的参观。同时，候选人曾就职于辩论队，所在队伍获得辩论赛冠军，候选人并获得最佳辩手称号。候选人曾在采购过程为公司谈判获得50%的物资折扣，并为俱乐部活动谈判过广告赞助。\n2.候选人具有强大的共情能力。同时候选人学习过组织管理学，组织心理学。候选人能轻松感知他人情绪和感受，并快速建立情感连接，从而做到快速高效地科学沟通。沟通做到有情有理有逻辑。",
-          "color1": "from-amber-400",
-          "color2": "to-yellow-400"
-        },
-        {
-          "id": "ProblemSolving",
-          "advantage": ["解题能力"],
-          "href": "/whyme/ProblemSolving",
-          "pic": ["/Graphs/whyme/4.png", "/Graphs/whyme/4.png"],
-          "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
-          "icon": "fi-rr-lightbulb-question",
-          "description": "候选人具有强大的解题能力。\n1.候选人熟练使用管理学原理分析问题，例如SWOT分析，波特五力模型，波士顿矩阵等。候选人可以借助这些工具快速的分析问题，找到解决问题的关键。并熟练将其可视化分享。\n2.候选人具有清晰的逻辑和发散性思维，懂得合理地运用有效的多种框架来分析和解决复杂问题。候选人曾系统学习过战略管理，管理学原理，项目管理，运筹学等课程。能熟练使用管理学工具和数学方法来解决问题，改善任务流畅，优化工作效率。",
-          "color1": "from-sky-500",
-          "color2": "to-emerald-500"
-        },
-        {
-          "id": "AestheticAttitude",
-          "advantage": ["审美态度"],
-          "href": "/whyme/AestheticAttitude",
-          "pic": ["/Graphs/whyme/5.png", "/Graphs/whyme/5.png"],
-          "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
-          "icon": "fi-rr-sparkles",
-          "description": "候选人具有具有优秀的审美态度。\n1.候选人从小学习美术，拥有高级的审美。候选人相信任何良好的项目和产品都离不开优秀的包装和营销。候选人曾为多个企业独立设计品牌logo，并帮助完成注册。\n2.候选人对美学有执着追求。候选人不能接受格式混乱，排版不规范，配色失败的交付方式。对所有交付的文件、项目、作品都有较高的要求。\n3.候选人对美学有足够的交付能力。候选人可独立自主设计和制作矢量图、像素图。候选人熟悉PS、AI、Pages、DI、LR、PPT、KeyNote等软件。候选人对排版、配色、版面都有深刻的理解。可独立交付发布会级幻灯片、高级海报、宣传册、企业logo。候选人曾在多个设计竞赛中获得奖。曾经是大学生科技创业指导站的御用海报设计成员之一。设计作品获2个一等奖、2个二等奖和2个三等奖。",
-          "color1": "from-cyan-500",
-          "color2": "to-blue-500"
-        },
-        {
-          "id": "EmotionalStable",
-          "advantage": ["情绪稳定"],
-          "href": "/whyme/EmotionalStable",
-          "pic": ["/Graphs/whyme/6.png", "/Graphs/whyme/6.png"],
-          "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
-          "icon": "fi-rr-smile",
-          "description": "候选人具有良好的情绪能量，稳定而坚定。\n候选人具有高度情绪感知能力、熟悉微表情和组织心理学。能合理向上向下管理，在解决客户投诉和突发情况的沟通方面表现出色。候选人乐观且抗压，能够快速处理工作中的负面情绪。始终保持积极向上的态度和充满活力。能为身边的人带来快乐和正面反馈，时刻为身边人提供正向的情感支持。",
-          "color1": "from-indigo-500",
-          "color2": "to-pink-500"
-        }
-      ]
-    ],
+"WhyMe": [
+  [
+    {
+      "id": "LearningAbility",
+      "advantage": ["Learning Ability"],
+      "href": "/whyme/LearningAbility",
+      "pic": ["/Graphs/whyme/1.png", "/Graphs/whyme/1.png"],
+      "pic2": "/Graphs/whyme/LearningAbility2.jpg",
+      "icon": "fi-rr-graduation-cap",
+      "description": "I adapt quickly when a project requires me to move beyond what I already know.\n\n1. My strongest foundation was originally in React, TypeScript and frontend engineering, but real projects repeatedly pushed me into backend, cloud and infrastructure work. Instead of limiting myself to my existing stack, I learned .NET Minimal APIs, FastAPI, PostgreSQL, Docker, AWS ECS/RDS/S3, Terraform and CI/CD as the work required them. At KONGFU Dumpling, this allowed me to contribute across the full system rather than treating the frontend as an isolated layer, eventually working on APIs, database integration, deployment infrastructure and production operations. The backend achieved sub-200ms median API response times under typical workloads.\n\n2. I learn fastest when there is a concrete engineering problem to solve. On Rewowo, I worked across Next.js, FastAPI, PostgreSQL/RDS, S3 and Firebase. When a voucher redemption workflow became too slow under bulk processing, I did not simply search for a new library or rewrite the feature. I first traced where the time was being spent, identified repeated database operations as the main bottleneck, and changed the implementation toward batch validation and updates. The result was roughly a 10x improvement in response speed.\n\n3. My approach to learning is practical and delivery-oriented. I usually begin by understanding the system boundary, reading documentation, building a small working path, then validating it through logs, tests and real behaviour. I also use AI-assisted development tools to accelerate exploration, debugging and unfamiliar APIs, but I treat generated suggestions as hypotheses that still need to be understood and verified. For me, learning a technology is only complete when I can use it safely in a real product.",
+      "color1": "from-red-500",
+      "color2": "to-red-700"
+    },
+    {
+      "id": "Leadership",
+      "advantage": ["Ownership & Initiative"],
+      "href": "/whyme/Leadership",
+      "pic": ["/Graphs/whyme/2.png", "/Graphs/whyme/2.png"],
+      "pic2": "/Graphs/whyme/Leadership2.jpg",
+      "icon": "fi-rr-users-alt",
+      "description": "I value ownership more than simply completing assigned tickets. When I take responsibility for a feature or system, I try to understand what needs to happen from requirement to production and what could prevent the result from being reliable after release.\n\n1. At KONGFU Dumpling, I worked on a full-stack digital menu and advertising platform using Next.js, .NET Minimal APIs, PostgreSQL/Supabase, Docker, AWS and Terraform. The work was not limited to implementing individual UI components. I had to think about API behaviour, data flow, deployment, infrastructure and what happened when the system was running unattended in a real business environment. One practical example was the advertising playback system. Instead of assuming playback would always remain healthy after deployment, I introduced recovery behaviour around interrupted playback, which reduced advertising interruptions by around 70%.\n\n2. At Bluesky Creations, I worked across products including Rewowo and Leave Admin, where features regularly crossed frontend, backend and infrastructure boundaries. On Rewowo, I contributed to the migration and optimisation of a Next.js application, worked with FastAPI and AWS-backed services, and investigated performance problems rather than treating them as someone else's responsibility. The application reached Lighthouse scores above 90 with Total Blocking Time below 70ms after optimisation work.\n\n3. Ownership also means leaving a system easier to operate than I found it. I pay attention to deployment workflows, reusable components, failure handling and technical debt that repeatedly slows future work. I do not believe leadership requires a management title. In engineering, leadership often means noticing an important problem, making the problem clear, proposing a workable path, and staying responsible until the result is actually delivered.",
+      "color1": "from-orange-500",
+      "color2": "to-amber-500"
+    },
+    {
+      "id": "Communication",
+      "advantage": ["Collaboration"],
+      "href": "/whyme/Communication",
+      "pic": ["/Graphs/whyme/3.png", "/Graphs/whyme/3.png"],
+      "pic2": "/Graphs/whyme/Communication2.jpg",
+      "icon": "fi-rr-comments",
+      "description": "I see communication in software engineering as the ability to reduce ambiguity between people, systems and requirements. Good communication is not only about speaking clearly; it is about making sure that different people are solving the same problem with the same assumptions.\n\n1. Across my professional work, I have often worked between frontend and backend boundaries. At Wolli Software, I built React and Next.js interfaces while integrating with .NET, Node.js and GraphQL services as well as third-party platforms including Stripe, Shopify, Mapbox and Twilio. This required me to understand API contracts, loading and error states, data shapes and edge cases rather than simply waiting for a finished backend and connecting it mechanically.\n\n2. My full-stack work strengthened this further. When working on Rewowo and later KONGFU Dumpling, I increasingly had to translate a product requirement into both UI behaviour and backend behaviour. That means asking questions such as: What should happen when this request fails? Which layer should validate the data? What does the user see while the operation is processing? What needs to be logged when production behaviour is different from local development? Thinking in this way helps prevent frontend and backend implementations from drifting apart.\n\n3. I also try to make technical communication concrete. When discussing a problem, I prefer to show a reproduction case, measurable behaviour, logs, screenshots, API responses or a small implementation rather than relying on vague opinions. My earlier experience in public speaking, debate and presentations helped me become comfortable explaining ideas, but my professional experience taught me the more important lesson: effective engineering communication is about clarity, context and helping the team make the next decision faster.",
+      "color1": "from-amber-400",
+      "color2": "to-yellow-400"
+    },
+    {
+      "id": "ProblemSolving",
+      "advantage": ["Problem Solving"],
+      "href": "/whyme/ProblemSolving",
+      "pic": ["/Graphs/whyme/4.png", "/Graphs/whyme/4.png"],
+      "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
+      "icon": "fi-rr-lightbulb-question",
+      "description": "My preferred way to solve engineering problems is to reduce them from a vague symptom into something measurable, identify the actual bottleneck, and then make the smallest change that solves the underlying cause.\n\n1. A good example came from the Rewowo voucher redemption workflow. The system needed to validate voucher status, expiry and policy rules before completing redemption. During testing with around 100 vouchers in one operation, the response time exceeded 10 seconds. Rather than immediately rewriting the API, I narrowed the problem down to backend database access and found an N+1-style pattern where validation and updates were being performed repeatedly for individual records. I changed the workflow to use batch queries and updates, including WHERE IN-style operations, reducing unnecessary database round trips. The resulting workflow was around 10x faster.\n\n2. I have applied the same reasoning to frontend and delivery problems. At Wolli Software, optimisation work contributed to roughly a 20% improvement in Core Web Vitals, around a 30% reduction in frontend errors and approximately a 50% reduction in CI/CD execution time. These results came from treating performance and reliability as engineering problems that could be observed and decomposed, rather than as general goals such as 'make the website faster'.\n\n3. I also try to separate symptoms from causes during production debugging. If something fails after deployment, I first ask whether the problem comes from code, environment configuration, network behaviour, data, deployment state or an external service. I reproduce the smallest failing path, inspect the available evidence, change one important variable at a time and verify the result. This approach helps me stay systematic even when the original issue appears complicated.",
+      "color1": "from-sky-500",
+      "color2": "to-emerald-500"
+    },
+    {
+      "id": "AestheticAttitude",
+      "advantage": ["UI Craftsmanship"],
+      "href": "/whyme/AestheticAttitude",
+      "pic": ["/Graphs/whyme/5.png", "/Graphs/whyme/5.png"],
+      "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
+      "icon": "fi-rr-sparkles",
+      "description": "I care about the quality of what users actually experience. For me, frontend craftsmanship is not simply making an interface visually attractive; it includes hierarchy, responsiveness, interaction, consistency, accessibility, performance and how confidently a user can understand what to do next.\n\n1. React and Next.js remain my strongest area, and much of my professional work has involved building reusable interfaces for real products rather than isolated demonstration pages. I have worked with component-driven architectures, Redux and Zustand state management, Tailwind, Ant Design and reusable UI patterns across desktop, mobile and large-screen experiences. At Bluesky Creations, optimisation work on Rewowo helped achieve Lighthouse scores above 90 and Total Blocking Time below 70ms, because I believe a polished interface should also feel fast.\n\n2. At Wolli Software, I worked on frontend performance and maintainability across production applications. This included reusable component patterns, responsive interfaces, integrations and performance improvements that contributed to better Core Web Vitals. I learned that UI quality often comes from dozens of small engineering decisions: preventing unnecessary renders, handling loading states properly, designing predictable component APIs, keeping spacing and typography consistent, and ensuring edge cases do not destroy the layout.\n\n3. My visual-design background still influences how I work, but I now apply it through a product-engineering lens. I pay close attention to alignment, visual hierarchy, typography and interaction details, while also asking whether the design is maintainable and whether it helps the user complete their task. I want the final result to look intentional, but more importantly, I want it to behave intentionally.",
+      "color1": "from-cyan-500",
+      "color2": "to-blue-500"
+    },
+    {
+      "id": "EmotionalStable",
+      "advantage": ["Reliability"],
+      "href": "/whyme/EmotionalStable",
+      "pic": ["/Graphs/whyme/6.png", "/Graphs/whyme/6.png"],
+      "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
+      "icon": "fi-rr-smile",
+      "description": " Under Pressure, I try to remain systematic when software behaves differently from what was expected, especially when the problem appears in production and there is pressure to restore service quickly.\n\n1. Through Rewowo, Leave Admin and KONGFU Dumpling, I have dealt with deployment failures, production differences and features that behaved correctly locally but required further investigation after deployment. Working with Vercel, GitHub Actions, Docker and AWS taught me that production debugging is often less about writing new code and more about carefully locating which assumption has broken across application code, environment variables, build configuration, infrastructure, external services or runtime data.\n\n2. One example is the digital advertising system at KONGFU Dumpling. A TV-facing application has a different reliability requirement from a normal website because it may need to run for long periods without someone actively refreshing or supervising it. I worked on recovery behaviour so that playback could recover automatically from interruptions rather than depending on manual intervention. This reduced playback interruptions by around 70% and reinforced an important lesson for me: a production feature is not finished when the happy path works; it is finished when common failure paths have also been considered.\n\n3. When something goes wrong, I try not to jump between random fixes. I reproduce the issue, collect evidence, isolate the failing layer, communicate what is known and unknown, make the smallest safe change, and then verify both the fix and possible regressions. Reliability, to me, means being someone a team can trust to keep thinking clearly when the system is not behaving clearly.",
+      "color1": "from-indigo-500",
+      "color2": "to-pink-500"
+    }
+  ],
+  [
+    {
+      "id": "LearningAbility",
+      "advantage": ["适应与学习能力"],
+      "href": "/whyme/LearningAbility",
+      "pic": ["/Graphs/whyme/1.png", "/Graphs/whyme/1.png"],
+      "pic2": "/Graphs/whyme/LearningAbility2.jpg",
+      "icon": "fi-rr-graduation-cap",
+      "description": "当项目需要我走出已有技术边界时，我能够快速学习并把新技术真正用于交付，而不只是停留在“了解过”。\n\n1. 我的技术优势最初主要集中在 React、TypeScript 和前端开发，但真实项目不断要求我向后端、云服务和基础设施扩展。随着工作的需要，我逐渐学习并实际使用 .NET Minimal API、FastAPI、PostgreSQL、Docker、AWS ECS/RDS/S3、Terraform 和 CI/CD。在 KONGFU Dumpling 的项目中，我已经不再只关注前端页面，而是参与 API、数据库集成、部署基础设施以及生产环境运行，最终使主要 API 在典型生产负载下保持低于 200ms 的中位响应时间。\n\n2. 我学习效率最高的时候，通常不是单纯学习一个框架，而是面前存在一个明确的工程问题。例如在 Rewowo 的 Voucher Redeem 功能中，一次处理约 100 张 Voucher 时响应超过 10 秒。我先定位性能时间到底消耗在哪里，最终发现主要问题来自数据库重复查询和更新。我随后将逐条处理改为批量校验和批量更新，大幅减少数据库往返，最终使整个流程的响应速度提高约 10 倍。\n\n3. 我的学习方式始终以交付为导向。我通常会先理解系统边界和核心概念，再阅读官方文档，快速搭建一条最小可运行路径，并通过日志、测试和实际行为验证理解是否正确。我也会使用 AI 辅助工具提高探索陌生技术、排查问题和阅读 API 的效率，但我不会直接相信生成结果，而是把它作为待验证的假设。对我来说，真正学会一项技术意味着我已经可以在真实项目中安全地使用它。",
+      "color1": "from-red-500",
+      "color2": "to-red-700"
+    },
+    {
+      "id": "Leadership",
+      "advantage": ["主人翁意识与主动性"],
+      "href": "/whyme/Leadership",
+      "pic": ["/Graphs/whyme/2.png", "/Graphs/whyme/2.png"],
+      "pic2": "/Graphs/whyme/Leadership2.jpg",
+      "icon": "fi-rr-users-alt",
+      "description": "相比只完成被分配的开发任务，我更看重对最终结果负责。当我接手一个功能或系统时，我会尽量理解它从需求、实现、部署到生产运行的完整链路，以及上线之后什么问题可能真正影响业务。\n\n1. 在 KONGFU Dumpling，我参与并负责一个基于 Next.js、.NET Minimal API、PostgreSQL/Supabase、Docker、AWS 和 Terraform 的数字菜单及广告系统。工作内容并不只是完成某几个页面，而是需要同时考虑 API 行为、数据流、部署、基础设施以及系统在真实门店长期无人值守运行时会发生什么。广告播放就是一个典型例子。我没有假设部署成功之后视频就永远能够正常播放，而是针对播放中断设计自动恢复机制，使广告播放中断减少约 70%。\n\n2. 在 Bluesky Creations，我参与 Rewowo、Leave Admin 等不同产品，很多需求天然横跨前端、后端和部署环境。在 Rewowo 中，我不仅进行 Next.js 页面开发，还参与 FastAPI、AWS 服务集成和性能排查。经过优化，页面 Lighthouse 达到 90+，Total Blocking Time 控制在 70ms 以下。对我来说，看到性能问题之后主动继续追查，比简单地认为“后端慢”或“部署不是我的职责”更重要。\n\n3. 我认为工程上的领导力不一定意味着拥有 Manager 的职位。它更多体现为：发现一个重要问题、把问题描述清楚、提出现实可行的方案，并持续跟进直到结果真正交付。同时，我也会关注部署流程、可复用组件、异常处理和那些会不断拖慢未来开发的技术债，因为真正的 Ownership 不只是让今天的功能上线，也包括让明天维护它的人更轻松。",
+      "color1": "from-orange-500",
+      "color2": "to-amber-500"
+    },
+    {
+      "id": "Communication",
+      "advantage": ["协作与沟通能力"],
+      "href": "/whyme/Communication",
+      "pic": ["/Graphs/whyme/3.png", "/Graphs/whyme/3.png"],
+      "pic2": "/Graphs/whyme/Communication2.jpg",
+      "icon": "fi-rr-comments",
+      "description": "我理解的软件工程沟通，本质上是减少人与人之间、前后端之间以及需求与实现之间的歧义。好的沟通不只是“会表达”，而是让不同的人对正在解决的问题拥有一致的理解和假设。\n\n1. 我的职业经历中有大量工作处于前后端交界处。在 Wolli Software，我使用 React、Next.js 开发界面的同时，还需要对接 .NET、Node.js、GraphQL 服务，以及 Stripe、Shopify、Mapbox、Twilio 等第三方平台。这要求我理解的不只是页面怎么展示，还包括 API contract、数据结构、loading/error state、边界情况以及第三方服务出现异常时用户最终会看到什么。\n\n2. 随着我逐渐承担更多 Full-Stack 工作，这种能力变得更加重要。在 Rewowo 和 KONGFU Dumpling 等项目中，我经常需要把一个业务需求同时转化为前端行为和后端行为。我会主动思考：请求失败之后页面应该发生什么？哪些数据应该由后端验证？用户等待期间看到什么？生产环境出现异常时需要记录哪些信息？这些问题能够减少前端和后端分别按照不同假设实现之后再返工的情况。\n\n3. 我也尽量让技术沟通建立在事实而不是感觉上。讨论问题时，我更愿意提供复现步骤、日志、截图、API Response、性能数据或一个最小实现，而不是只说“这里好像有问题”。我过去参与演讲、辩论和展示的经历让我不害怕表达观点，而真正进入职场之后，我逐渐理解到更重要的事情是：提供足够的上下文，让团队能够更快地做出下一个正确决策。",
+      "color1": "from-amber-400",
+      "color2": "to-yellow-400"
+    },
+    {
+      "id": "ProblemSolving",
+      "advantage": ["工程问题解决能力"],
+      "href": "/whyme/ProblemSolving",
+      "pic": ["/Graphs/whyme/4.png", "/Graphs/whyme/4.png"],
+      "pic2": "/Graphs/whyme/ProblemSolving2.jpg",
+      "icon": "fi-rr-lightbulb-question",
+      "description": "我解决工程问题时，更习惯先把一个模糊的“现象”转化为可以观察和测量的问题，找到真正的瓶颈，再使用尽可能小但有效的改动解决根因，而不是直接开始重写代码。\n\n1. Rewowo 的 Voucher Redeem API 是一个很典型的例子。业务需要在兑换前检查 Voucher 的状态、有效期以及相关规则。在一次处理约 100 张 Voucher 的测试中，接口响应超过了 10 秒。我没有立即重构整个系统，而是逐步排查请求时间消耗，最终定位到数据库访问存在类似 N+1 的问题：系统需要重复对单条记录进行查询和更新。我把这一流程调整为批量查询和批量更新，例如使用 WHERE IN 一次性取得需要的数据，大幅减少数据库 IO 和 round trip。最终整个 Redemption 流程响应速度提高约 10 倍。\n\n2. 同样的方法也被我用于前端和工程流程优化。在 Wolli Software，我参与的性能与工程优化最终带来了约 20% 的 Core Web Vitals 改善、约 30% 的前端错误下降，以及约 50% 的 CI/CD 时间缩短。这些改进并不是从“让网站快一点”这种模糊目标出发，而是将问题拆分成渲染、网络请求、错误来源以及构建流程中的具体瓶颈，再逐项处理。\n\n3. 生产问题排查时，我也会尽量区分“症状”和“原因”。一个部署后的问题可能来自业务代码，也可能来自环境变量、构建配置、网络、数据库、部署状态或者第三方服务。我通常会先建立最小复现路径，检查已有证据，再一次改变一个关键变量，并验证修复后的行为。这种方式让我面对复杂问题时仍然能够保持一个相对稳定、可解释的推理过程。",
+      "color1": "from-sky-500",
+      "color2": "to-emerald-500"
+    },
+    {
+      "id": "AestheticAttitude",
+      "advantage": ["产品与 UI 品质"],
+      "href": "/whyme/AestheticAttitude",
+      "pic": ["/Graphs/whyme/5.png", "/Graphs/whyme/5.png"],
+      "pic2": "/Graphs/whyme/AestheticAttitude2.jpg",
+      "icon": "fi-rr-sparkles",
+      "description": "我很在意用户最终真正感受到的产品质量。对我来说，Frontend Craftsmanship 不只是把界面做得漂亮，它同时包括信息层级、响应式体验、交互反馈、一致性、性能以及用户能不能快速理解下一步应该做什么。\n\n1. React 和 Next.js 一直是我最擅长的方向之一，我的大部分职业经历也是在真实产品中构建可维护的 UI，而不是单独制作 Demo。我使用过 Redux、Zustand、Tailwind、Ant Design，并围绕不同项目构建过可复用的组件和状态管理方案，同时处理桌面端、移动端以及大屏/电视等不同使用场景。在 Bluesky Creations 的 Rewowo 项目中，我参与性能优化后使 Lighthouse 达到 90+，并将 Total Blocking Time 控制到 70ms 以下，因为我认为一个真正精致的页面不仅应该看起来好，也应该真正感觉快。\n\n2. 在 Wolli Software，我长期参与生产环境 React/Next.js 应用的开发、维护和性能优化。工作内容让我逐渐认识到 UI 的品质往往来自很多并不起眼的工程决策：减少不必要的渲染、正确处理 loading 和 error state、保持组件 API 一致、确保 spacing 和 typography 稳定，以及保证异常数据不会轻易破坏布局。这些细节共同决定了一个产品到底显得可靠还是粗糙。\n\n3. 我过去的美术、设计和视觉表达经验现在仍然影响着我的开发方式，但它已经从单纯追求“好看”变成了更加工程化的产品思维。我依然会关注对齐、层级、字体、留白和交互细节，但同时也会问：这个设计是否容易维护？是否能复用？是否真的让用户更容易完成任务？我希望最终产品看起来是经过认真设计的，同时它的行为也应该同样经过认真设计。",
+      "color1": "from-cyan-500",
+      "color2": "to-blue-500"
+    },
+    {
+      "id": "EmotionalStable",
+      "advantage": ["压力下的可靠性"],
+      "href": "/whyme/EmotionalStable",
+      "pic": ["/Graphs/whyme/6.png", "/Graphs/whyme/6.png"],
+      "pic2": "/Graphs/whyme/EmotionalStable2.jpg",
+      "icon": "fi-rr-smile",
+      "description": "当软件表现与预期不一致时，尤其问题已经发生在生产环境，我会尽量保持系统化的排查方式，而不是因为上线压力而不断尝试随机修改。\n\n1. 在 Rewowo、Leave Admin 和 KONGFU Dumpling 等项目中，我都遇到过部署失败、生产环境差异以及本地工作正常但部署之后需要进一步排查的问题。Vercel、GitHub Actions、Docker 和 AWS 的实际使用让我逐渐意识到，生产 Debugging 很多时候并不是马上写更多代码，而是首先找出到底是哪一个假设失效了：业务代码、环境变量、Build Configuration、基础设施、外部服务还是 Runtime Data。\n\n2. KONGFU Dumpling 的电视广告系统给了我一个很具体的 Reliability 场景。电视端应用和普通网页不同，它可能需要长时间运行，而且不会始终有人站在旁边刷新页面。一旦播放中断，单纯让功能在 Happy Path 下工作并不够。因此我为播放流程加入自动恢复逻辑，让系统在部分异常情况下能够自己恢复，而不是依赖人工重新操作。最终广告播放中断减少约 70%。这件事情让我更加明确：生产功能真正完成的标准，不是正常路径可以运行，而是常见异常也已经被认真考虑。\n\n3. 当出现问题时，我通常会按照一个比较稳定的顺序处理：复现问题、收集证据、定位失败层级、区分已经确定和仍然未知的信息、进行最小且安全的修改，然后重新验证修复和可能产生的回归。我理解的可靠性，是当系统本身变得不确定时，团队仍然可以相信我会保持清晰、有条理地继续推进问题。",
+      "color1": "from-indigo-500",
+      "color2": "to-pink-500"
+    }
+  ]
+],
     "SelfDescribing": {
       "pic": "https://cdn.pixabay.com/photo/2014/05/26/09/58/sydney-opera-house-354375_1280.jpg",
-      "description": [
-        [
-          "Hello, I’m {bold}Scott Zhang{bold}. I have over {bold}2 years of full-stack web development experience{bold} and hold a {bold}Master of IT (AI){bold} from {bold}UNSW{bold}. I also hold {bold}dual Bachelor's degrees in Engineering and Management{bold} from {bold}Southwest University of Science and Technology{bold}.",
+"description": [
+  [
+    "Hello, I’m {bold}Scott Zhang{bold}, a {bold}Full-Stack Engineer{bold}. I have over {bold}2 years 9 months of professional web development experience{bold} building and maintaining production applications with {bold}React, Next.js, TypeScript, .NET and FastAPI{bold}. I hold a {bold}Master of IT (AI){bold} from {bold}UNSW Sydney{bold}, as well as dual Bachelor's degrees in Engineering and Management.",
 
-          "I am experienced in {bold}React, Next.js, TypeScript, .NET and FastAPI{bold}. I also have hands-on experience with {bold}AWS, Terreform, Docker, GitHub, Vercel{bold}.",
+    "Across my professional experience, I have worked on {bold}frontend architecture, REST APIs, PostgreSQL-backed services, cloud deployment and CI/CD{bold}. My hands-on stack includes {bold}AWS ECS/RDS/S3, Terraform, Docker, GitHub Actions and Vercel{bold}.",
 
-          "{bold}What value can I bring to your company?{bold}",
+    "{bold}What I bring{bold}",
 
-          "1. {bold}Strong Technical Skills{bold} – I build scalable, high-quality web applications from frontend to backend. I enjoy improving performance, solving complex problems, and writing clean, maintainable code.",
+    "1. {bold}End-to-End Delivery{bold} – I am comfortable working across the full development lifecycle, from translating product requirements into responsive interfaces to building APIs, integrating databases, deploying services and troubleshooting production issues.",
 
-          "2. {bold}User-Focused Development{bold} – With experience in UI/UX design and translating {bold}Figma{bold} designs into production-ready interfaces, I create intuitive and responsive user experiences.",
+    "2. {bold}Performance & Problem Solving{bold} – I enjoy finding the real bottleneck behind a problem rather than applying superficial fixes. My work has included improving a voucher redemption workflow by around {bold}10x{bold}, achieving {bold}90+ Lighthouse scores{bold}, and helping production APIs maintain {bold}sub-200ms median response times{bold}.",
 
-          "3. {bold}Business Mindset{bold} – My engineering and management background allows me to understand both technical implementation and business objectives. I can analyze user behavior and contribute ideas that improve products and create business value.",
+    "3. {bold}Product-Focused Engineering{bold} – My frontend and UI/UX background helps me think beyond whether a feature simply works. I care about usability, responsiveness, performance, maintainability and how technical decisions ultimately affect the user and the business.",
 
-          "{bold}Visa Status{bold}",
+    "I work best in teams where engineers are encouraged to {bold}take ownership, communicate clearly and continuously improve the product{bold}. I am particularly interested in roles where I can contribute across {bold}React / Next.js frontend development and full-stack engineering{bold}.",
 
-          "I currently hold a {bold}Subclass 485 Post-Higher Education Work Visa{bold}, valid until {bold}11 October 2029{bold}. I have {bold}full work rights in Australia{bold} and {bold}do not require employer sponsorship{bold}.",
+    "{bold}Visa Status{bold}",
 
-          "Feel free to call me at {bold}0434344292{bold}. {copy}0434344292{copy}",
+    "I currently hold a {bold}Subclass 485 Post-Higher Education Work Visa{bold}, valid until {bold}11 October 2029{bold}. I have {bold}full work rights in Australia{bold} and {bold}do not require employer sponsorship{bold}.",
 
-          "Connect with me on {bold}LinkedIn{bold}. {a}https://www.linkedin.com/in/scottcheung1110{a}",
+    "Feel free to call me at {bold}0434344292{bold}. {copy}0434344292{copy}",
 
-          "Or email me at {bold}xianzhe.site@gmail.com{bold}. {copy}xianzhe.site@gmail.com{copy}"
-        ],
-        [
-          "你好，我是{bold}张贤哲{bold}。我拥有{bold}2年以上全栈 Web 开发经验{bold}，毕业于{bold}新南威尔士大学（UNSW）{bold}，获得{bold}信息技术（人工智能）硕士学位{bold}。此外，我还拥有{bold}西南科技大学工程学与管理学双学士学位{bold}。",
+    "Connect with me on {bold}LinkedIn{bold}. {a}https://www.linkedin.com/in/scottcheung1110{a}",
 
-          "我熟练使用{bold}React、Next.js、TypeScript、.NET 和 FastAPI{bold}，并具备{bold}AWS、Terreform、Docker、GitHub、Vercel、Figma、Jest 以及 UI/UX 设计{bold}等方面的实践经验。",
+    "Or email me at {bold}xianzhe.site@gmail.com{bold}. {copy}xianzhe.site@gmail.com{copy}"
+  ],
+  [
+    "你好，我是{bold}张贤哲（Scott Zhang）{bold}，一名{bold}以前端为优势的全栈工程师{bold}。我拥有{bold}2年以上专业 Web 开发经验{bold}，主要使用{bold}React、Next.js、TypeScript、.NET 和 FastAPI{bold}开发和维护生产环境中的 Web 应用。我毕业于{bold}新南威尔士大学（UNSW Sydney）{bold}，获得{bold}信息技术（人工智能）硕士学位{bold}，并拥有工程学与管理学双学士学位。",
 
-          "{bold}我能为贵公司带来什么价值？{bold}",
+    "在实际工作中，我参与过{bold}前端架构、REST API、PostgreSQL 数据服务、云端部署以及 CI/CD{bold}等完整开发环节，并具备{bold}AWS ECS/RDS/S3、Terraform、Docker、GitHub Actions 和 Vercel{bold}的实际项目经验。",
 
-          "1. {bold}扎实的技术能力{bold}——能够独立完成前后端开发，构建高质量、可扩展的 Web 应用，并持续优化性能、解决复杂问题，编写易于维护的代码。",
+    "{bold}我能够带来什么？{bold}",
 
-          "2. {bold}注重用户体验{bold}——具备 UI/UX 设计经验，能够将 {bold}Figma{bold} 设计高质量地还原为实际产品，打造响应式、易用且具有良好体验的界面。",
+    "1. {bold}端到端交付能力{bold}——我能够从产品需求出发，完成响应式前端、API、数据库集成、部署以及生产环境问题排查，而不仅局限于单一的前端或后端任务。",
 
-          "3. {bold}商业思维{bold}——兼具工程与管理背景，能够从业务目标出发理解产品需求，分析用户行为，为产品优化和业务增长提供有价值的建议。",
+    "2. {bold}性能优化与问题解决能力{bold}——我更倾向于寻找问题真正的瓶颈，而不是只处理表面现象。过往工作中，我曾将 Voucher Redeem 流程性能提升约{bold}10倍{bold}，将产品 Lighthouse 分数优化至{bold}90+{bold}，并使主要生产 API 保持{bold}低于200ms的中位响应时间{bold}。",
 
-          "{bold}我的签证状态{bold}",
+    "3. {bold}产品导向的工程思维{bold}——我的前端与 UI/UX 背景让我不会只关注“功能是否能运行”，我也会关注易用性、响应速度、可维护性以及技术决策最终如何影响用户体验和业务结果。",
 
-          "我目前持有{bold}澳大利亚 485 毕业生工作签证{bold}，有效期至{bold}2029 年 10 月 11 日{bold}。我拥有{bold}完整的澳洲工作权限{bold}，{bold}无需雇主提供签证担保{bold}。"
-        ]
-      ]
+    "我希望加入一个鼓励工程师{bold}主动承担责任、清晰沟通并持续改进产品{bold}的团队，也尤其希望继续发挥我在{bold}React / Next.js 前端以及全栈开发{bold}方面的经验。",
+
+    "{bold}我的签证状态{bold}",
+
+    "我目前持有{bold}澳大利亚 485 Post-Higher Education Work Visa{bold}，有效期至{bold}2029 年 10 月 11 日{bold}。我拥有{bold}完整的澳洲工作权限{bold}，{bold}无需雇主提供签证担保{bold}。"
+  ]
+]
     },
     "KeyFeature1": [
       {
@@ -1556,486 +1560,468 @@
           "src": "https://help.apple.com/assets/64FFB258AE78C91D760CB66A/64FFB25D3DC7043983057480/en_US/97f5f4dfe6df84d78caacff68ec63538.png"
         }
       ],
-      "des": {
-        "Frontend": [
+     
+  "des": {
+    "Frontend": [
+      {
+        "description": "I build production-ready frontend applications with React, Next.js and TypeScript, with a strong focus on component architecture, performance, maintainability and user experience. My professional work includes data-heavy interfaces, responsive web applications, reusable component systems and integrations with backend APIs and third-party services. I am comfortable owning frontend features from design implementation through testing, optimisation and production debugging.",
+        "skills": [
           {
-            "description": "As a Frontend Developer, I focus on creating functional, user-friendly, and visually appealing web applications. I combine a solid understanding of web technologies with a keen eye for design to build seamless user experiences. With experience in both frontend development and design collaboration, I aim to build scalable applications that perform efficiently while maintaining high standards of accessibility and SEO. I am committed to continuously improving my skills and keeping up with the latest trends in frontend development.",
-            "skills": [
-              {
-                "name": "HTML",
-                "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg",
-                "description": "Experienced in HTML to create semantic, accessible web pages while ensuring best practices for SEO, including the use of ARIA roles and semantic tags."
-              },
-              {
-                "name": "CSS",
-                "image": "https://www.svgrepo.com/show/521591/css.svg",
-                "description": "Skilled in CSS for creating visually appealing and responsive web designs, utilizing techniques such as CSS Grid, Flexbox, and SASS preprocessors."
-              },
-              {
-                "name": "JavaScript",
-                "image": "https://www.svgrepo.com/show/510028/javascript-file.svg",
-                "description": "Proficient in JavaScript to build interactive web applications, with expertise in ES6+ features and asynchronous programming techniques."
-              },
-              {
-                "name": "TypeScript",
-                "image": "https://www.svgrepo.com/show/521320/typescript-16.svg",
-                "description": "Experienced in TypeScript to enhance JavaScript with static typing, improving code quality and maintainability, including the use of advanced types and interfaces."
-              },
-              {
-                "name": "React",
-                "image": "https://cdn.simpleicons.org/react/000000",
-                "description": "Proficient in React for building dynamic single-page applications (SPAs), with strong knowledge of hooks, context API, and React Router for client-side routing."
-              },
-              {
-                "name": "Next.js",
-                "image": "https://www.svgrepo.com/show/521299/next-16.svg",
-                "description": "Experienced in Next.js for building server-side rendered React applications, including dynamic routing, API routes, and deployment to platforms like Vercel."
-              },
-              {
-                "name": "Redux",
-                "image": "https://www.svgrepo.com/show/378456/redux-fill.svg",
-                "description": "Experienced in Redux for managing application state, including middleware such as Redux Thunk and Redux Saga for handling asynchronous actions."
-              },
-              {
-                "name": "Tailwind CSS",
-                "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg",
-                "description": "Skilled in Tailwind CSS for fast UI development, utilizing its utility-first design principles to create responsive and scalable web layouts."
-              },
-              {
-                "name": "Framer Motion",
-                "image": "https://www.svgrepo.com/show/371686/animation.svg",
-                "description": "Experienced in using Framer Motion for building smooth, interactive animations in React applications, including transitions and gesture-based animations."
-              },
-              {
-                "name": "RESTful APIs",
-                "image": "https://www.svgrepo.com/show/447473/rest-api.svg",
-                "description": "Experienced in working with RESTful APIs to enable efficient client-server communication, with an understanding of HTTP methods, status codes, and API documentation using tools like Swagger."
-              },
-              {
-                "name": "GraphQL",
-                "image": "https://www.svgrepo.com/show/473649/graphql.svg",
-                "description": "Currently learning GraphQL to optimize data fetching and API management, including experimenting with queries, mutations, and working with GraphQL servers."
-              },
-              {
-                "name": "Jest",
-                "image": "https://www.svgrepo.com/show/525096/test-tube-minimalistic.svg",
-                "description": "Experienced in using Jest for unit and integration testing to ensure code quality, including working with mocking libraries and integrating tests into continuous integration workflows."
-              },
-              {
-                "name": "Cypress",
-                "image": "https://cdn.simpleicons.org/cypress/000000",
-                "description": "Currently learning Cypress for end-to-end testing, focusing on writing test suites to verify application stability and improving user experience through automated tests."
-              },
-              {
-                "name": "Webpack",
-                "image": "https://www.svgrepo.com/show/503138/webpack.svg",
-                "description": "Learning Webpack for bundling JavaScript and optimizing web performance, with experience in using loaders, plugins, and optimizing build processes."
-              },
-              {
-                "name": "Performance Optimization",
-                "image": "https://www.svgrepo.com/show/379226/performance.svg",
-                "description": "Proficient in web performance optimization, focusing on techniques to enhance loading times and user experience, using tools like Google Lighthouse and Chrome DevTools."
-              },
-              {
-                "name": "Accessibility",
-                "image": "https://www.svgrepo.com/show/491164/accessibility.svg",
-                "description": "Skilled in implementing accessibility best practices, including ARIA roles, keyboard navigation, and screen reader testing to ensure web applications are inclusive."
-              },
-              {
-                "name": "SEO Optimization",
-                "image": "https://cdn.simpleicons.org/googlesearchconsole/000000",
-                "description": "Knowledgeable in SEO optimization, using tools like Google Chrome to improve website visibility by optimizing metadata, structure, and content for better indexing."
-              },
-              {
-                "name": "Figma",
-                "image": "https://www.svgrepo.com/show/532271/figma.svg",
-                "description": "Proficient in Figma for creating UI/UX designs, collaborating with design teams, and translating design systems into responsive web components."
-              },
-              {
-                "name": "Adobe Photoshop (PS)",
-                "image": "https://www.svgrepo.com/show/508752/photoshop.svg",
-                "description": "Experienced in using Adobe Photoshop to design and edit graphics, web elements, and optimize visuals for the web."
-              },
-              {
-                "name": "Component Libraries",
-                "image": "https://www.svgrepo.com/show/430362/ux-line-circle.svg",
-                "description": "Experienced with using component libraries like Flowbite UI, Material-UI, Ant Design, and Bootstrap for building responsive and scalable UI elements."
-              },
-              {
-                "name": "Responsive Design",
-                "image": "https://api.iconify.design/mdi:responsive.svg?color=%23000000",
-                "description": "Skilled in responsive design to ensure applications work across a wide range of devices, using techniques like media queries, flexible grids, and responsive images."
-              },
-              {
-                "name": "Animation Libraries",
-                "image": "https://www.svgrepo.com/show/488047/animation.svg",
-                "description": "Experienced with animation libraries such as Framer Motion, Animation.css, and Spring for adding interactive animations while optimizing performance."
-              },
-              {
-                "name": "Testing Library",
-                "image": "https://www.svgrepo.com/show/525096/test-tube-minimalistic.svg",
-                "description": "Experienced in using Testing Library for writing unit and integration tests, ensuring code reliability and automating testing workflows."
-              }
-            ]
+            "name": "React",
+            "image": "https://api.iconify.design/simple-icons:react.svg?color=%23000000",
+            "description": "Production experience building complex React applications using hooks, Context, reusable component architectures and modern state management patterns. I have worked on responsive, data-heavy and multi-device interfaces across multiple commercial projects."
           },
           {
-            "description": "作为一名充满激情和创新精神的前端开发工程师，我专注于构建美观且富有互动性的用户界面，提供卓越的用户体验。凭借对设计和技术的深刻理解，我将复杂的想法转化为简洁、功能强大且视觉吸引人的应用程序。我的技术涵盖了广泛的领域，使我能够开发出既外观精美又性能流畅的现代化 web 应用。我致力于推动前端开发的边界，确保每个项目在视觉效果和功能性之间取得良好的平衡。",
-            "skills": [
-              {
-                "name": "HTML",
-                "image": "https://www.svgrepo.com/show/17134/html-file-with-code-symbol.svg",
-                "description": "熟练使用 HTML 创建结构清晰、语义化的网页内容，确保可访问性和 SEO 最佳实践，包括使用 ARIA 角色和语义标签。"
-              },
-              {
-                "name": "CSS",
-                "image": "https://www.svgrepo.com/show/521591/css.svg",
-                "description": "擅长使用 CSS 设计视觉吸引和响应式的网页，精通 CSS Grid、Flexbox、动画、过渡效果以及 SASS 等预处理器。"
-              },
-              {
-                "name": "JavaScript",
-                "image": "https://www.svgrepo.com/show/510028/javascript-file.svg",
-                "description": "具备使用 JavaScript 开发动态交互式 web 应用的经验，熟悉 ES6+ 特性、异步编程，并能够使用现代库和框架进行开发。"
-              },
-              {
-                "name": "TypeScript",
-                "image": "https://www.svgrepo.com/show/521320/typescript-16.svg",
-                "description": "熟练使用 TypeScript 为 JavaScript 添加静态类型，提升代码质量和可维护性，掌握高级类型、泛型和接口等概念。"
-              },
-              {
-                "name": "React",
-                "image": "https://cdn.simpleicons.org/react/000000",
-                "description": "精通 React，用于构建高效和易于维护的单页应用（SPA），熟悉使用 hooks、context API 和 React Router 实现动态路由。"
-              },
-              {
-                "name": "Next.js",
-                "image": "https://www.svgrepo.com/show/521299/next-16.svg",
-                "description": "具备使用 Next.js 进行服务器端渲染和静态网站生成的经验，了解动态路由、API 路由以及在 Vercel 等平台的部署。"
-              },
-              {
-                "name": "Redux",
-                "image": "https://www.svgrepo.com/show/378456/redux-fill.svg",
-                "description": "熟练使用 Redux 进行复杂应用的状态管理，了解 Redux Thunk 和 Redux Saga 等中间件，处理异步操作。"
-              },
-              {
-                "name": "Tailwind CSS",
-                "image": "https://www.svgrepo.com/show/333609/tailwind-css.svg",
-                "description": "精通 Tailwind CSS，通过功能优先的设计模式快速开发响应式用户界面，能够使用一致且可扩展的框架进行自定义设计。"
-              },
-              {
-                "name": "Framer Motion",
-                "image": "https://www.svgrepo.com/show/371686/animation.svg",
-                "description": "熟练使用 Framer Motion 创建平滑且富有吸引力的动画，掌握关键帧、过渡和基于手势的动画效果。"
-              },
-              {
-                "name": "RESTful APIs",
-                "image": "https://www.svgrepo.com/show/447473/rest-api.svg",
-                "description": "具备设计和使用 RESTful API 进行客户端与服务器通信的经验，理解 HTTP 方法、状态码，并熟悉使用 Swagger 等工具进行 API 文档编写。"
-              },
-              {
-                "name": "GraphQL (学习中...)",
-                "image": "https://www.svgrepo.com/show/473649/graphql.svg",
-                "description": "正在学习 GraphQL，熟悉其用于高效数据获取和 API 管理的应用，包括设置 Apollo 服务器，管理 schema，以及编写复杂的查询和变更。"
-              },
-              {
-                "name": "Jest",
-                "image": "https://www.svgrepo.com/show/525096/test-tube-minimalistic.svg",
-                "description": "熟练使用 Jest 编写单元和集成测试，确保代码的可靠性，包括使用模拟库和设置持续集成管道进行自动化测试。"
-              },
-              {
-                "name": "Cypress (学习中)",
-                "image": "https://cdn.simpleicons.org/cypress/000000",
-                "description": "正在学习 Cypress，熟悉编写全面的端到端测试用例，确保应用稳定性和良好的用户体验，使用插件扩展测试功能。"
-              },
-              {
-                "name": "Webpack (学习中)",
-                "image": "https://www.svgrepo.com/show/503138/webpack.svg",
-                "description": "正在学习 Webpack，掌握 JavaScript 模块打包和优化网页性能，了解使用 loader、插件，以及优化构建过程以提高加载速度。"
-              },
-              {
-                "name": "Performance Optimization",
-                "image": "https://www.svgrepo.com/show/379226/performance.svg",
-                "description": "熟练进行网页性能优化，确保快速加载和流畅的用户体验，掌握 FCP、SI、LCP、TBT 和 CLS 等关键指标，熟悉使用 Google Lighthouse、WebPageTest 和 Chrome DevTools 等工具。"
-              },
-              {
-                "name": "Accessibility",
-                "image": "https://www.svgrepo.com/show/491164/accessibility.svg",
-                "description": "有经验在开发过程中实现无障碍最佳实践，确保网页应用可供残障人士使用，熟悉屏幕阅读器测试、ARIA 角色和键盘导航等技术。"
-              },
-              {
-                "name": "SEO Optimization",
-                "image": "https://cdn.simpleicons.org/googlesearchconsole/000000",
-                "description": "熟练进行 SEO 优化，使用 Google Chrome 等工具评估和提升网站的可见性，优化标题、内容、元标签，并改善站点结构以提高索引效果。"
-              },
-              {
-                "name": "Figma",
-                "image": "https://www.svgrepo.com/show/532271/figma.svg",
-                "description": "熟练使用 Figma 进行 UI/UX 设计，能与设计团队协作并将设计规格转化为代码，包括创建交互原型和设计系统。"
-              },
-              {
-                "name": "Adobe Photoshop (PS)",
-                "image": "https://www.svgrepo.com/show/508752/photoshop.svg",
-                "description": "熟练使用 Adobe Photoshop 创建和编辑网页和 UI 项目所需的图形、图片和设计元素，具备照片编辑、合成和制作 Web 优化图形的经验。"
-              },
-              {
-                "name": "Component Libraries",
-                "image": "https://www.svgrepo.com/show/430362/ux-line-circle.svg",
-                "description": "有经验使用组件库构建响应式和移动优先的网页，熟悉常用组件库如 Flowbite UI、Material-UI、Ant Design 和 Bootstrap。"
-              },
-              {
-                "name": "Responsive Design",
-                "image": "https://api.iconify.design/mdi:responsive.svg?color=%23000000",
-                "description": "擅长创建响应式设计，确保网页应用在不同设备和屏幕尺寸下都能无缝运行，熟练使用媒体查询、灵活的网格布局和响应式图片等技术。"
-              },
-              {
-                "name": "Animation Libraries",
-                "image": "https://www.svgrepo.com/show/488047/animation.svg",
-                "description": "精通多种动画库，如 Framer Motion、Animation.css 和 Spring，增强用户交互体验，创建复杂动画并确保性能优化。"
-              },
-              {
-                "name": "Testing Library",
-                "image": "https://www.svgrepo.com/show/525096/test-tube-minimalistic.svg",
-                "description": "熟练使用 Testing Library 编写单元和集成测试，确保代码可靠性，能够使用模拟库和设置持续集成管道进行自动化测试。"
-              }
-            ]
-          }
-        ],
-        "Backend": [
-          {
-            "description": "As a continious web developer, I have been actively expanding my backend skills, especially in designing and implementing scalable and efficient server-side features. I’ve worked with modern backend technologies to support web applications, focusing on clean architecture, API integration, and database management. My hands-on experience in real-world projects—from frontend to backend—makes me a versatile developer who understands how different parts of a system work together. I’m committed to building high-quality, maintainable solutions that support business goals and user needs.",
-            "skills": [
-              {
-                "name": "NodeJS",
-                "image": "https://cdn.simpleicons.org/nodedotjs/000000",
-                "description": "Skilled in NodeJS for building efficient and scalable server-side applications, including asynchronous programming with Promises and async/await, and using frameworks like Express.js and Koa."
-              },
-              {
-                "name": "Python",
-                "image": "https://www.svgrepo.com/show/510150/python-file.svg",
-                "description": "Proficient in Python for building RESTful APIs using frameworks like Flask and Django, with experience in designing API , handling authentication, performing data validation, and efficient database queries."
-              },
-              {
-                "name": ".NET",
-                "image": "https://www.svgrepo.com/show/473592/dotnet.svg",
-                "description": "Currently learning .NET to build cross-platform backend services, with a focus on C#, ASP.NET Core, and Entity Framework."
-              },
-              {
-                "name": "JSON",
-                "image": "https://cdn.simpleicons.org/json/000000",
-                "description": "Adept at working with JSON for seamless data interchange between frontend and backend, including JSON schema validation and optimization for performance in API responses."
-              },
-              {
-                "name": "Postman",
-                "image": "https://www.svgrepo.com/show/342128/postman.svg",
-                "description": "Skilled in using Postman for API testing and development, ensuring efficient and reliable API integrations, including creating and automating test collections and environments."
-              },
-              {
-                "name": "Microservices",
-                "image": "https://api.iconify.design/carbon:microservices-1.svg?color=%23000000",
-                "description": "Skilled in designing and implementing microservices architectures, including API gateway setup, service discovery, and inter-service communication using tools like Docker and Kubernetes."
-              },
-              {
-                "name": "Serverless",
-                "image": "https://www.svgrepo.com/show/448597/serverless.svg",
-                "description": "Currently learning serverless architecture using AWS Lambda, API Gateway, and related cloud services to create scalable and cost-efficient applications."
-              }
-            ]
+            "name": "Next.js",
+            "image": "https://api.iconify.design/simple-icons:nextdotjs.svg?color=%23000000",
+            "description": "Production experience building Next.js applications with dynamic routing, SSR/SSG, App Router concepts, server/client component boundaries, API integrations and Vercel deployment. I have also optimised Next.js applications to achieve Lighthouse scores above 90 and Total Blocking Time below 70ms."
           },
           {
-            "description": "作为一名持续的web开发人员，我一直在积极地扩展我的后端技能，特别是在设计和实现可扩展和高效的服务器端功能方面。我曾使用现代后端技术来支持web应用程序，专注于干净的架构、API集成和数据库管理。我在实际项目中的实践经验——从前端到后端——使我成为一名全能的开发人员，了解系统的不同部分如何协同工作。我致力于构建支持业务目标和用户需求的高质量、可维护的解决方案。",
-            "skills": [
-              {
-                "name": "NodeJS",
-                "image": "https://cdn.simpleicons.org/nodedotjs/000000",
-                "description": "擅长使用 NodeJS 构建高效且可扩展的服务器端应用程序，包括使用 Promises 和 async/await 进行异步编程，以及使用 Express.js 和 Koa 等框架。"
-              },
-              {
-                "name": "Python",
-                "image": "https://www.svgrepo.com/show/510150/python-file.svg",
-                "description": "擅长使用 Python 构建 RESTful API 接口。"
-              },
-              {
-                "name": ".NET（学习中）",
-                "image": "https://www.svgrepo.com/show/473592/dotnet.svg",
-                "description": "目前正在学习 .NET，用于构建跨平台的后端服务，重点关注 C#、ASP.NET Core 和 Entity Framework。"
-              },
-              {
-                "name": "JSON",
-                "image": "https://cdn.simpleicons.org/json/000000",
-                "description": "熟练使用 JSON 实现前后端数据交换，包括 JSON 模式验证和优化 API 响应性能。"
-              },
-              {
-                "name": "Postman",
-                "image": "https://www.svgrepo.com/show/342128/postman.svg",
-                "description": "擅长使用 Postman 进行 API 测试和开发，包括创建和自动化测试集合与环境，确保 API 集成的高效与可靠。"
-              },
-              {
-                "name": "微服务",
-                "image": "https://api.iconify.design/carbon:microservices-1.svg?color=%23000000",
-                "description": "擅长设计和实现微服务架构，包括设置 API 网关、服务发现，以及使用 Docker 和 Kubernetes 进行服务间通信。"
-              },
-              {
-                "name": "无服务器（学习中）",
-                "image": "https://www.svgrepo.com/show/448597/serverless.svg",
-                "description": "目前正在学习无服务器架构，使用 AWS Lambda、API Gateway 和相关云服务，构建可扩展且具成本效益的应用程序。"
-              }
-            ]
-          }
-        ],
-        "DataBase": [
-          {
-            "description": "In the field of database management, I have accumulated valuable experience and have a solid understanding of various database technologies. I focus on ensuring efficient, reliable, and scalable database operations. Below are some of my capabilities in the database domain:",
-            "skills": [
-              {
-                "name": "MySQL",
-                "image": "https://cdn.simpleicons.org/mysql/000000",
-                "description": "Proficient in MySQL, capable of handling complex queries, index management, transaction processing, creating stored procedures and functions, and optimizing database performance through normalization and tuning."
-              },
-              {
-                "name": "PostgreSQL",
-                "image": "https://www.svgrepo.com/show/473760/postgresql.svg",
-                "description": "Familiar with PostgreSQL, able to design robust and scalable database solutions, with knowledge of advanced features such as JSONB data types, full-text search, partitioning, and custom PL/pgSQL functions."
-              },
-              {
-                "name": "Neo4j",
-                "image": "https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg",
-                "description": "Experienced with Neo4j for graph database design, capable of structuring databases based on specific application needs, and performing data queries using Cypher."
-              },
-              {
-                "name": "MongoDB",
-                "image": "https://www.svgrepo.com/show/473729/mongodb.svg",
-                "description": "Skilled in MongoDB for designing flexible NoSQL database solutions, creating indexes, and optimizing queries for better performance and scalability."
-              },
-              {
-                "name": "Redis",
-                "image": "https://www.svgrepo.com/show/394393/redis.svg",
-                "description": "Currently learning Redis, with an understanding of its use as an in-memory data structure store, used for caching, messaging, and database functions, including data persistence, replication, and high availability setup."
-              }
-            ]
+            "name": "TypeScript",
+            "image": "https://api.iconify.design/simple-icons:typescript.svg?color=%23000000",
+            "description": "Use TypeScript extensively across React and Next.js applications to create safer component APIs, model application data, reduce runtime errors and improve maintainability in growing codebases."
           },
           {
-            "description": "在数据库管理领域，我积累了丰富的经验，掌握了多种数据库技术，能够有效地进行数据库操作，确保数据库系统的可靠性和可扩展性。以下是我在数据库领域的一些能力：",
-            "skills": [
-              {
-                "name": "MySQL",
-                "image": "https://cdn.simpleicons.org/mysql/000000",
-                "description": "熟悉 MySQL，能够进行复杂的查询、索引管理、事务处理，创建存储过程和函数，优化数据库性能，并熟悉数据库的规范化与调优。"
-              },
-              {
-                "name": "PostgreSQL",
-                "image": "https://www.svgrepo.com/show/473760/postgresql.svg",
-                "description": "了解 PostgreSQL，能够构建稳健且可扩展的数据库解决方案，熟悉 JSONB 数据类型、全文搜索、分区和自定义 PL/pgSQL 函数等功能。"
-              },
-              {
-                "name": "Neo4j",
-                "image": "https://dist.neo4j.com/wp-content/uploads/20230926084108/Logo_FullColor_RGB_TransBG.svg",
-                "description": "有一定经验使用 Neo4j 进行图数据库设计，能够根据应用需求进行结构化设计，使用 Cypher 查询语言进行数据操作。"
-              },
-              {
-                "name": "MongoDB",
-                "image": "https://www.svgrepo.com/show/473729/mongodb.svg",
-                "description": "熟悉 MongoDB，能够设计灵活的 NoSQL 数据库架构，创建索引并优化查询，确保数据库的扩展性和性能。"
-              },
-              {
-                "name": "Redis (学习中)",
-                "image": "https://www.svgrepo.com/show/394393/redis.svg",
-                "description": "正在学习 Redis，了解它作为内存数据结构存储的应用，主要用于缓存、消息队列和数据库，熟悉数据持久化、复制和高可用性配置。"
-              }
-            ]
-          }
-        ],
-        "Other": [
-          {
-            "description": "The following are my abilities in other IT directions, such as version control, cloud, etc., which I will continue to learn:",
-            "skills": [
-              {
-                "name": "GitHub",
-                "image": "https://www.svgrepo.com/show/512317/github-142.svg",
-                "description": "Proficient in version control with GitHub, using Git workflows for collaborative development, code reviews, and managing repositories. Experienced in continuous integration with GitHub Actions."
-              },
-              {
-                "name": "AWS",
-                "image": "https://www.svgrepo.com/show/394021/aws.svg",
-                "description": "Experienced in deploying and managing scalable applications on AWS, using services like EC2, S3."
-              },
-              {
-                "name": "Docker",
-                "image": "https://www.svgrepo.com/show/521276/docker-16.svg",
-                "description": "Currently learning Docker for containerization, enabling streamlined deployment and scalability. Proficient in writing Dockerfiles and managing multi-container applications with Docker Compose."
-              },
-              {
-                "name": "Jira",
-                "image": "https://www.svgrepo.com/show/473672/jira.svg",
-                "description": "Experienced with Jira for project management and issue tracking, facilitating Agile workflows, sprint planning, and team collaboration."
-              },
-              {
-                "name": "Agile/Scrum",
-                "image": "https://cdn.simpleicons.org/scrumalliance/000000",
-                "description": "Proficient in Agile and Scrum methodologies, including sprint planning, daily stand-ups, sprint reviews, and retrospectives for iterative software development."
-              },
-              {
-                "name": "Jenkins",
-                "image": "https://www.svgrepo.com/show/445828/jenkins.svg",
-                "description": "Learning Jenkins for continuous integration and delivery (CI/CD), automating software development workflows, including testing and deployment processes."
-              },
-              {
-                "name": "Kubernetes",
-                "image": "https://www.svgrepo.com/show/521293/kubernetes-16.svg",
-                "description": "Currently learning Kubernetes for container orchestration, including managing and scaling applications in a clustered environment."
-              },
-              {
-                "name": "Postman",
-                "image": "https://www.svgrepo.com/show/342128/postman.svg",
-                "description": "Proficient in Postman for API testing and development, automating test collections, and ensuring reliable API integrations."
-              }
-            ]
+            "name": "JavaScript",
+            "image": "https://api.iconify.design/simple-icons:javascript.svg?color=%23000000",
+            "description": "Strong practical knowledge of modern JavaScript and ES6+ features, including asynchronous programming, promises, async/await, array transformations, modules and browser APIs."
           },
           {
-            "description": "以下是我其他 IT 方向的能力，如版本控制，云等，我会持续学习:",
-            "skills": [
-              {
-                "name": "GitHub",
-                "image": "https://www.svgrepo.com/show/512317/github-142.svg",
-                "description": "精通使用 GitHub 进行版本控制，熟悉 Git 工作流，用于协作开发、代码审查和管理代码库。具有使用 GitHub Actions 进行持续集成的经验。"
-              },
-              {
-                "name": "AWS",
-                "image": "https://www.svgrepo.com/show/394021/aws.svg",
-                "description": "具有在 AWS 上部署和管理可扩展应用程序的经验，熟悉 EC2、S3 等服务的使用。"
-              },
-              {
-                "name": "Docker (学习中)",
-                "image": "https://www.svgrepo.com/show/521276/docker-16.svg",
-                "description": "目前正在学习 Docker，用于容器化部署和可扩展性。精通编写 Dockerfile 和使用 Docker Compose 管理多容器应用程序。"
-              },
-              {
-                "name": "Jira",
-                "image": "https://www.svgrepo.com/show/473672/jira.svg",
-                "description": "具有使用 Jira 进行项目管理和问题追踪的经验，能够促进敏捷工作流、冲刺计划和团队协作。"
-              },
-              {
-                "name": "敏捷/Scrum",
-                "image": "https://cdn.simpleicons.org/scrumalliance/000000",
-                "description": "精通敏捷和 Scrum 方法论，包括冲刺计划、每日站会、冲刺回顾和回顾会议，用于迭代的软件开发流程。"
-              },
-              {
-                "name": "Jenkins (学习中)",
-                "image": "https://www.svgrepo.com/show/445828/jenkins.svg",
-                "description": "正在学习 Jenkins 用于持续集成和交付（CI/CD），自动化软件开发工作流，包括测试和部署流程。"
-              },
-              {
-                "name": "Kubernetes (学习中)",
-                "image": "https://www.svgrepo.com/show/521293/kubernetes-16.svg",
-                "description": "目前正在学习 Kubernetes 用于容器编排，包括在集群环境中管理和扩展应用程序。"
-              },
-              {
-                "name": "Postman",
-                "image": "https://www.svgrepo.com/show/342128/postman.svg",
-                "description": "精通使用 Postman 进行 API 测试和开发，能够自动化测试集合，确保 API 集成的可靠性。"
-              }
-            ]
+            "name": "Zustand",
+            "image": "https://api.iconify.design/simple-icons:zustand.svg?color=%23000000",
+            "description": "Used Zustand for lightweight and maintainable client-side state management in modern React and Next.js applications, including shared UI and business state."
+          },
+          {
+            "name": "Redux",
+            "image": "https://api.iconify.design/simple-icons:redux.svg?color=%23000000",
+            "description": "Professional experience using Redux for application state management in React applications, including asynchronous state flows and complex shared application state."
+          },
+          {
+            "name": "TanStack Query",
+            "image": "https://api.iconify.design/simple-icons:reactquery.svg?color=%23000000",
+            "description": "Used TanStack Query to manage server state, request lifecycles, caching, loading and error states in frontend applications while keeping remote data separate from local UI state."
+          },
+          {
+            "name": "React Hook Form",
+            "image": "https://api.iconify.design/simple-icons:reacthookform.svg?color=%23000000",
+            "description": "Used React Hook Form to build maintainable form workflows with validation, controlled inputs and reusable form components in production applications."
+          },
+          {
+            "name": "Tailwind CSS",
+            "image": "https://api.iconify.design/simple-icons:tailwindcss.svg?color=%23000000",
+            "description": "Extensive experience using Tailwind CSS to create responsive and reusable interfaces with consistent spacing, typography and component styling."
+          },
+          {
+            "name": "Ant Design / MUI",
+            "image": "https://api.iconify.design/material-symbols:widgets-outline.svg?color=%23000000",
+            "description": "Professional experience building business interfaces with Ant Design and Material UI, including tables, forms, navigation, modals and reusable application components."
+          },
+          {
+            "name": "Framer Motion",
+            "image": "https://api.iconify.design/simple-icons:framer.svg?color=%23000000",
+            "description": "Use Framer Motion to create polished transitions and interactive UI effects while balancing visual quality with rendering and performance considerations."
+          },
+          {
+            "name": "Responsive UI",
+            "image": "https://api.iconify.design/material-symbols:responsive-layout.svg?color=%23000000",
+            "description": "Build responsive interfaces for desktop, mobile and large-screen environments using flexible layouts, responsive typography, media queries and device-aware interaction patterns."
+          },
+          {
+            "name": "UI/UX & Figma",
+            "image": "https://api.iconify.design/simple-icons:figma.svg?color=%23000000",
+            "description": "Comfortable translating Figma designs and product requirements into production-ready interfaces. My design background helps me pay close attention to hierarchy, spacing, typography, usability and interaction details."
+          },
+          {
+            "name": "Performance Optimization",
+            "image": "https://api.iconify.design/material-symbols:speed.svg?color=%23000000",
+            "description": "Hands-on experience improving frontend performance using Lighthouse, Chrome DevTools and Core Web Vitals. My work has contributed to Lighthouse scores above 90, lower Total Blocking Time and approximately 20% improvement in Core Web Vitals."
+          },
+          {
+            "name": "Accessibility & SEO",
+            "image": "https://api.iconify.design/material-symbols:accessibility-new.svg?color=%23000000",
+            "description": "Apply semantic HTML, accessible interaction patterns, metadata and SEO fundamentals when building frontend applications, with attention to usability, discoverability and maintainable page structure."
           }
         ]
       },
+      {
+        "description": "我主要使用 React、Next.js 和 TypeScript 构建生产级前端应用，并重点关注组件架构、性能、可维护性和用户体验。我的职业项目包含数据密集型界面、响应式 Web 应用、可复用组件体系，以及与后端 API 和第三方服务的集成。我能够从设计实现、状态管理和 API 对接，一直到测试、性能优化和生产环境问题排查完整负责前端功能。",
+        "skills": [
+          {
+            "name": "React",
+            "image": "https://api.iconify.design/simple-icons:react.svg?color=%23000000",
+            "description": "拥有使用 React 开发复杂生产应用的经验，熟悉 Hooks、Context、可复用组件架构以及现代状态管理模式，并参与过数据密集型、响应式和多设备界面的开发。"
+          },
+          {
+            "name": "Next.js",
+            "image": "https://api.iconify.design/simple-icons:nextdotjs.svg?color=%23000000",
+            "description": "拥有 Next.js 生产项目经验，熟悉动态路由、SSR/SSG、App Router、Server/Client Component 边界、API 集成及 Vercel 部署，并曾将应用 Lighthouse 优化至 90+、Total Blocking Time 控制在 70ms 以下。"
+          },
+          {
+            "name": "TypeScript",
+            "image": "https://api.iconify.design/simple-icons:typescript.svg?color=%23000000",
+            "description": "在 React 和 Next.js 项目中广泛使用 TypeScript，通过类型建模、组件 Props、接口和泛型提高代码安全性、可读性和长期可维护性。"
+          },
+          {
+            "name": "JavaScript",
+            "image": "https://api.iconify.design/simple-icons:javascript.svg?color=%23000000",
+            "description": "熟悉现代 JavaScript 与 ES6+，包括异步编程、Promise、async/await、数组处理、模块系统和常用 Browser API。"
+          },
+          {
+            "name": "Zustand",
+            "image": "https://api.iconify.design/simple-icons:zustand.svg?color=%23000000",
+            "description": "在现代 React 和 Next.js 项目中使用 Zustand 管理共享 UI 状态和业务状态，以保持状态逻辑轻量、清晰和易于维护。"
+          },
+          {
+            "name": "Redux",
+            "image": "https://api.iconify.design/simple-icons:redux.svg?color=%23000000",
+            "description": "拥有在生产 React 应用中使用 Redux 管理复杂共享状态和异步数据流程的经验。"
+          },
+          {
+            "name": "TanStack Query",
+            "image": "https://api.iconify.design/simple-icons:reactquery.svg?color=%23000000",
+            "description": "使用 TanStack Query 管理 Server State、请求生命周期、缓存以及 Loading/Error 状态，使远程数据和本地 UI 状态保持清晰边界。"
+          },
+          {
+            "name": "React Hook Form",
+            "image": "https://api.iconify.design/simple-icons:reacthookform.svg?color=%23000000",
+            "description": "使用 React Hook Form 构建可维护的表单流程，包括验证、受控输入以及可复用表单组件。"
+          },
+          {
+            "name": "Tailwind CSS",
+            "image": "https://api.iconify.design/simple-icons:tailwindcss.svg?color=%23000000",
+            "description": "拥有丰富 Tailwind CSS 实践经验，能够快速构建响应式界面，并保持 spacing、typography 和组件样式的一致性。"
+          },
+          {
+            "name": "Ant Design / MUI",
+            "image": "https://api.iconify.design/material-symbols:widgets-outline.svg?color=%23000000",
+            "description": "具有使用 Ant Design 和 Material UI 构建企业级界面的经验，包括表格、表单、导航、弹窗和可复用业务组件。"
+          },
+          {
+            "name": "Framer Motion",
+            "image": "https://api.iconify.design/simple-icons:framer.svg?color=%23000000",
+            "description": "使用 Framer Motion 构建交互动画和页面过渡，同时兼顾视觉表现、渲染性能与用户体验。"
+          },
+          {
+            "name": "响应式 UI",
+            "image": "https://api.iconify.design/material-symbols:responsive-layout.svg?color=%23000000",
+            "description": "能够针对桌面端、移动端和大屏设备构建响应式界面，熟悉 Flexible Layout、媒体查询、响应式字体及不同设备交互模式。"
+          },
+          {
+            "name": "UI/UX & Figma",
+            "image": "https://api.iconify.design/simple-icons:figma.svg?color=%23000000",
+            "description": "能够将 Figma 设计和产品需求转化为生产级页面。设计背景让我特别关注信息层级、留白、字体、可用性和交互细节。"
+          },
+          {
+            "name": "性能优化",
+            "image": "https://api.iconify.design/material-symbols:speed.svg?color=%23000000",
+            "description": "具有使用 Lighthouse、Chrome DevTools 和 Core Web Vitals 进行前端性能优化的实践经验，曾实现 Lighthouse 90+、降低 Total Blocking Time，并推动 Core Web Vitals 约 20% 的改善。"
+          },
+          {
+            "name": "Accessibility & SEO",
+            "image": "https://api.iconify.design/material-symbols:accessibility-new.svg?color=%23000000",
+            "description": "在开发中关注语义化 HTML、可访问性交互、页面 Metadata 与 SEO 基础实践，提高产品的易用性、可发现性和页面结构质量。"
+          }
+        ]
+      }
+    ],
+    "Backend": [
+      {
+        "description": "My backend experience comes from building and operating real full-stack products rather than isolated practice projects. I have designed REST APIs, integrated PostgreSQL-backed services, implemented validation and business logic, connected frontend applications with backend systems and deployed containerised services to cloud infrastructure. My strongest backend experience is currently with .NET Minimal APIs and FastAPI.",
+        "skills": [
+          {
+            "name": ".NET / ASP.NET Core",
+            "image": "https://api.iconify.design/simple-icons:dotnet.svg?color=%23000000",
+            "description": "Production experience building REST services with .NET Minimal APIs and ASP.NET Core concepts, including dependency injection, middleware, DTO modelling, validation, database integration and cloud deployment."
+          },
+          {
+            "name": "FastAPI",
+            "image": "https://api.iconify.design/simple-icons:fastapi.svg?color=%23000000",
+            "description": "Professional experience working with FastAPI for production backend services, including REST endpoints, validation, database operations, authentication-related flows and integration with Next.js applications."
+          },
+          {
+            "name": "Python",
+            "image": "https://api.iconify.design/simple-icons:python.svg?color=%23000000",
+            "description": "Use Python primarily for backend development with FastAPI, scripting and data-processing tasks, with practical experience debugging and maintaining Python-based services."
+          },
+          {
+            "name": "Node.js",
+            "image": "https://api.iconify.design/simple-icons:nodedotjs.svg?color=%23000000",
+            "description": "Experience integrating with and developing Node.js backend services, including asynchronous programming, REST APIs and third-party integrations."
+          },
+          {
+            "name": "REST API Design",
+            "image": "https://api.iconify.design/material-symbols:api.svg?color=%23000000",
+            "description": "Design and integrate REST APIs with clear resource modelling, HTTP semantics, validation, error handling and Swagger/OpenAPI documentation. Comfortable working across both API implementation and frontend consumption."
+          },
+          {
+            "name": "Authentication & Authorization",
+            "image": "https://api.iconify.design/material-symbols:shield-lock-outline.svg?color=%23000000",
+            "description": "Experience implementing and integrating authentication flows using JWT and third-party identity services, with an understanding of protected routes, authorization boundaries and secure client-server communication."
+          },
+          {
+            "name": "Third-Party Integrations",
+            "image": "https://api.iconify.design/material-symbols:integration-instructions-outline.svg?color=%23000000",
+            "description": "Integrated external services including Stripe, Shopify, Mapbox, Twilio and Firebase, handling API contracts, authentication, error states and frontend/backend data flows."
+          },
+          {
+            "name": "API Performance",
+            "image": "https://api.iconify.design/material-symbols:speed.svg?color=%23000000",
+            "description": "Hands-on experience profiling and improving API performance. I optimised a voucher redemption workflow by replacing repeated database operations with batch processing, improving response performance by approximately 10x."
+          }
+        ]
+      },
+      {
+        "description": "我的后端能力主要来自真实全栈项目，而不仅是练习项目。我参与过 REST API 设计、PostgreSQL 数据服务、业务逻辑与验证、前后端系统集成，并将容器化服务部署至云环境。目前我最主要的后端技术方向是 .NET Minimal API 和 FastAPI。",
+        "skills": [
+          {
+            "name": ".NET / ASP.NET Core",
+            "image": "https://api.iconify.design/simple-icons:dotnet.svg?color=%23000000",
+            "description": "拥有使用 .NET Minimal API 开发生产 REST 服务的实践经验，熟悉依赖注入、Middleware、DTO、数据验证、数据库集成以及云端部署等 ASP.NET Core 核心概念。"
+          },
+          {
+            "name": "FastAPI",
+            "image": "https://api.iconify.design/simple-icons:fastapi.svg?color=%23000000",
+            "description": "拥有 FastAPI 商业项目经验，包括 REST Endpoint、数据验证、数据库操作、认证相关流程以及与 Next.js 前端应用的集成。"
+          },
+          {
+            "name": "Python",
+            "image": "https://api.iconify.design/simple-icons:python.svg?color=%23000000",
+            "description": "主要使用 Python 进行 FastAPI 后端开发、脚本和数据处理，并具备维护和排查 Python 服务问题的实践经验。"
+          },
+          {
+            "name": "Node.js",
+            "image": "https://api.iconify.design/simple-icons:nodedotjs.svg?color=%23000000",
+            "description": "拥有 Node.js 服务开发和集成经验，熟悉异步编程、REST API 以及第三方服务对接。"
+          },
+          {
+            "name": "REST API Design",
+            "image": "https://api.iconify.design/material-symbols:api.svg?color=%23000000",
+            "description": "能够设计与集成 REST API，熟悉资源建模、HTTP 语义、验证、异常处理以及 Swagger/OpenAPI，并能够同时从后端实现和前端消费两个角度理解 API。"
+          },
+          {
+            "name": "认证与授权",
+            "image": "https://api.iconify.design/material-symbols:shield-lock-outline.svg?color=%23000000",
+            "description": "具有 JWT 和第三方身份服务集成经验，理解受保护路由、权限边界以及安全的前后端通信方式。"
+          },
+          {
+            "name": "第三方服务集成",
+            "image": "https://api.iconify.design/material-symbols:integration-instructions-outline.svg?color=%23000000",
+            "description": "参与过 Stripe、Shopify、Mapbox、Twilio 和 Firebase 等第三方平台集成，处理 API Contract、认证、异常状态和前后端数据流。"
+          },
+          {
+            "name": "API 性能优化",
+            "image": "https://api.iconify.design/material-symbols:speed.svg?color=%23000000",
+            "description": "具备 API 性能分析和优化经验。曾通过将重复数据库操作改为批量处理，将 Voucher Redeem 流程的响应性能提升约 10 倍。"
+          }
+        ]
+      }
+    ],
+    "DataBase": [
+      {
+        "description": "My database experience is centred on relational databases used by production web applications. PostgreSQL is currently my strongest database technology, with hands-on experience in API-backed systems, Supabase, AWS RDS, query optimisation and batch operations. I focus on practical schema design, reliable data access and reducing unnecessary database work.",
+        "skills": [
+          {
+            "name": "PostgreSQL",
+            "image": "https://api.iconify.design/simple-icons:postgresql.svg?color=%23000000",
+            "description": "Production experience using PostgreSQL with .NET and FastAPI services, including relational data modelling, joins, filtering, batch queries and performance optimisation. I have used PostgreSQL through both AWS RDS and Supabase."
+          },
+          {
+            "name": "Supabase",
+            "image": "https://api.iconify.design/simple-icons:supabase.svg?color=%23000000",
+            "description": "Hands-on experience using Supabase as a managed PostgreSQL platform for application data, backend integration and full-stack product development."
+          },
+          {
+            "name": "AWS RDS",
+            "image": "https://api.iconify.design/simple-icons:amazonrds.svg?color=%23000000",
+            "description": "Experience working with PostgreSQL-backed applications hosted on AWS RDS, including backend integration, production configuration and performance-sensitive API workflows."
+          },
+          {
+            "name": "Query Optimization",
+            "image": "https://api.iconify.design/material-symbols:database-search-outline.svg?color=%23000000",
+            "description": "Experience identifying inefficient database access patterns such as repeated N+1-style operations and replacing them with batch queries and updates to significantly reduce database round trips."
+          },
+          {
+            "name": "MySQL",
+            "image": "https://api.iconify.design/simple-icons:mysql.svg?color=%23000000",
+            "description": "Experience working with relational data and SQL using MySQL, including joins, filtering, indexing fundamentals and database-backed application development."
+          }
+        ]
+      },
+      {
+        "description": "我的数据库经验主要集中在生产 Web 应用所使用的关系型数据库。目前 PostgreSQL 是我最主要的数据库技术，我在 API 服务、Supabase、AWS RDS、查询优化以及批量数据库操作中都有实践经验。我更加关注实用的数据建模、可靠的数据访问方式，以及减少没有必要的数据库 IO。",
+        "skills": [
+          {
+            "name": "PostgreSQL",
+            "image": "https://api.iconify.design/simple-icons:postgresql.svg?color=%23000000",
+            "description": "拥有 PostgreSQL 生产实践经验，并将其用于 .NET 和 FastAPI 服务，涉及关系型数据建模、Join、筛选、批量查询和性能优化，同时使用过 AWS RDS 和 Supabase 托管 PostgreSQL。"
+          },
+          {
+            "name": "Supabase",
+            "image": "https://api.iconify.design/simple-icons:supabase.svg?color=%23000000",
+            "description": "具有使用 Supabase 作为托管 PostgreSQL 平台进行应用数据管理、后端集成和全栈产品开发的实践经验。"
+          },
+          {
+            "name": "AWS RDS",
+            "image": "https://api.iconify.design/simple-icons:amazonrds.svg?color=%23000000",
+            "description": "具有在 AWS RDS 上运行 PostgreSQL 应用的实践经验，包括后端集成、生产配置以及对性能敏感的 API 数据流程。"
+          },
+          {
+            "name": "查询优化",
+            "image": "https://api.iconify.design/material-symbols:database-search-outline.svg?color=%23000000",
+            "description": "能够识别重复查询、类似 N+1 的低效数据库访问方式，并通过批量查询和更新减少数据库 Round Trip、改善 API 性能。"
+          },
+          {
+            "name": "MySQL",
+            "image": "https://api.iconify.design/simple-icons:mysql.svg?color=%23000000",
+            "description": "具备 MySQL 与 SQL 实践经验，熟悉 Join、筛选、索引基础以及关系型数据库驱动的应用开发。"
+          }
+        ]
+      }
+    ],
+    "Other": [
+      {
+        "description": "Beyond application development, I have hands-on experience deploying and operating production systems. I work with AWS, Docker, Terraform, GitHub Actions and Vercel to move applications from source code to reliable production environments. I also use automated testing, monitoring and production debugging practices to improve delivery confidence and system reliability.",
+        "skills": [
+          {
+            "name": "AWS",
+            "image": "https://api.iconify.design/simple-icons:amazonwebservices.svg?color=%23000000",
+            "description": "Hands-on experience deploying and operating applications with AWS services including ECS/Fargate, RDS, S3 and EC2. I have worked with containerised backend services, database infrastructure and production troubleshooting."
+          },
+          {
+            "name": "Docker",
+            "image": "https://api.iconify.design/simple-icons:docker.svg?color=%23000000",
+            "description": "Production experience containerising frontend and backend services, writing Dockerfiles and supporting repeatable local, CI/CD and AWS deployment workflows."
+          },
+          {
+            "name": "Terraform",
+            "image": "https://api.iconify.design/simple-icons:terraform.svg?color=%23000000",
+            "description": "Hands-on experience using Terraform to define and maintain AWS infrastructure as code, improving repeatability and consistency across cloud deployments."
+          },
+          {
+            "name": "GitHub Actions",
+            "image": "https://api.iconify.design/simple-icons:githubactions.svg?color=%23000000",
+            "description": "Built and maintained CI/CD workflows for automated builds, tests and deployments. Previous optimisation work reduced CI/CD execution time by approximately 50%."
+          },
+          {
+            "name": "Vercel",
+            "image": "https://api.iconify.design/simple-icons:vercel.svg?color=%23000000",
+            "description": "Professional experience deploying and operating Next.js applications on Vercel, including environment configuration, build troubleshooting and production optimisation."
+          },
+          {
+            "name": "Jest",
+            "image": "https://api.iconify.design/simple-icons:jest.svg?color=%23000000",
+            "description": "Experience writing unit and integration tests for React and TypeScript applications using Jest, including mocking and CI integration."
+          },
+          {
+            "name": "React Testing Library",
+            "image": "https://api.iconify.design/simple-icons:testinglibrary.svg?color=%23000000",
+            "description": "Use React Testing Library to verify component behaviour from the user's perspective and build maintainable frontend tests around real interactions."
+          },
+          {
+            "name": "Cypress / Playwright",
+            "image": "https://api.iconify.design/material-symbols:screen-search-desktop-outline.svg?color=%23000000",
+            "description": "Experience with browser-based end-to-end testing using Cypress and Playwright to validate critical workflows and reduce regression risk."
+          },
+          {
+            "name": "Production Debugging",
+            "image": "https://api.iconify.design/material-symbols:bug-report-outline.svg?color=%23000000",
+            "description": "Experience diagnosing production issues across application code, API behaviour, environment configuration, deployments, infrastructure and third-party services using logs, reproduction steps and systematic isolation."
+          },
+          {
+            "name": "CI/CD",
+            "image": "https://api.iconify.design/material-symbols:deployed-code-outline.svg?color=%23000000",
+            "description": "Understand the complete delivery lifecycle from source control and automated testing through container builds, cloud deployment and production verification."
+          },
+          {
+            "name": "Git & GitHub",
+            "image": "https://api.iconify.design/simple-icons:github.svg?color=%23000000",
+            "description": "Daily experience with Git and GitHub workflows including branching, pull requests, code review, repository management and collaborative development."
+          },
+          {
+            "name": "Agile / Jira",
+            "image": "https://api.iconify.design/simple-icons:jira.svg?color=%23000000",
+            "description": "Worked in Agile development environments using Jira for sprint planning, issue tracking, collaboration and iterative software delivery."
+          },
+          {
+            "name": "Additional Exposure",
+            "image": "https://api.iconify.design/material-symbols:more-horiz.svg?color=%23000000",
+            "description": "Additional exposure to GraphQL, MongoDB, Redis, Neo4j and Kubernetes. These technologies are part of my broader technical knowledge but are not currently the core of my production experience."
+          }
+        ]
+      },
+      {
+        "description": "除了应用开发之外，我也具备将系统真正部署和运行在生产环境中的实践经验。我使用 AWS、Docker、Terraform、GitHub Actions 和 Vercel，将应用从代码推进到可靠的生产环境，并通过自动化测试、CI/CD 和生产问题排查提高交付质量与系统可靠性。",
+        "skills": [
+          {
+            "name": "AWS",
+            "image": "https://api.iconify.design/simple-icons:amazonwebservices.svg?color=%23000000",
+            "description": "具有 AWS ECS/Fargate、RDS、S3 和 EC2 的实际使用经验，参与过容器化后端服务部署、数据库基础设施和生产环境问题排查。"
+          },
+          {
+            "name": "Docker",
+            "image": "https://api.iconify.design/simple-icons:docker.svg?color=%23000000",
+            "description": "具有 Docker 生产实践经验，包括前后端服务容器化、Dockerfile 编写，以及支持本地、CI/CD 和 AWS 部署流程。"
+          },
+          {
+            "name": "Terraform",
+            "image": "https://api.iconify.design/simple-icons:terraform.svg?color=%23000000",
+            "description": "具有使用 Terraform 定义和维护 AWS Infrastructure as Code 的实践经验，提高云基础设施部署的一致性和可重复性。"
+          },
+          {
+            "name": "GitHub Actions",
+            "image": "https://api.iconify.design/simple-icons:githubactions.svg?color=%23000000",
+            "description": "参与构建和维护自动化 Build、Test 和 Deployment 工作流，并曾通过优化使 CI/CD 执行时间缩短约 50%。"
+          },
+          {
+            "name": "Vercel",
+            "image": "https://api.iconify.design/simple-icons:vercel.svg?color=%23000000",
+            "description": "具有 Next.js 应用 Vercel 生产部署经验，包括环境变量配置、Build 问题排查以及生产性能优化。"
+          },
+          {
+            "name": "Jest",
+            "image": "https://api.iconify.design/simple-icons:jest.svg?color=%23000000",
+            "description": "具有使用 Jest 为 React 和 TypeScript 应用编写单元测试和集成测试的经验，包括 Mock 和 CI 集成。"
+          },
+          {
+            "name": "React Testing Library",
+            "image": "https://api.iconify.design/simple-icons:testinglibrary.svg?color=%23000000",
+            "description": "使用 React Testing Library 从用户行为角度验证组件逻辑，构建围绕真实交互的可维护前端测试。"
+          },
+          {
+            "name": "Cypress / Playwright",
+            "image": "https://api.iconify.design/material-symbols:screen-search-desktop-outline.svg?color=%23000000",
+            "description": "具有 Cypress 和 Playwright 浏览器端 E2E 测试经验，用于验证关键业务流程并降低回归风险。"
+          },
+          {
+            "name": "生产环境 Debugging",
+            "image": "https://api.iconify.design/material-symbols:bug-report-outline.svg?color=%23000000",
+            "description": "具有跨应用代码、API、环境变量、部署状态、基础设施和第三方服务排查生产问题的经验，并习惯结合日志、复现步骤和系统化隔离方法定位问题。"
+          },
+          {
+            "name": "CI/CD",
+            "image": "https://api.iconify.design/material-symbols:deployed-code-outline.svg?color=%23000000",
+            "description": "理解从 Source Control、自动化测试、Container Build 到云部署和生产验证的完整软件交付流程。"
+          },
+          {
+            "name": "Git & GitHub",
+            "image": "https://api.iconify.design/simple-icons:github.svg?color=%23000000",
+            "description": "日常使用 Git 和 GitHub 进行分支管理、Pull Request、Code Review、Repository 管理和团队协作开发。"
+          },
+          {
+            "name": "Agile / Jira",
+            "image": "https://api.iconify.design/simple-icons:jira.svg?color=%23000000",
+            "description": "具有 Agile 团队开发经验，使用 Jira 进行 Sprint Planning、任务跟踪、团队协作和迭代式软件交付。"
+          },
+          {
+            "name": "其他技术接触",
+            "image": "https://api.iconify.design/material-symbols:more-horiz.svg?color=%23000000",
+            "description": "此外接触过 GraphQL、MongoDB、Redis、Neo4j 和 Kubernetes。这些技术属于我的扩展技术知识，但目前并不是我最主要的生产项目技术栈。"
+          }
+        ]
+      }
+    ]
+  }
+,
       "graphs": {
         "bg": "./Graphs/capability/gallerybg.jpg",
         "code": "/Graphs/home/code.png",
@@ -2850,7 +2836,7 @@
         {
           "label": "fi-sr-id-card-clip-alt",
           "cont": "Preferred Name",
-          "icon": "Scott Cheung"
+          "icon": "Scott Zhang"
         },
         {
           "label": "fi-sr-cake-birthday",
@@ -2936,7 +2922,7 @@
         },
         {
           "label": "fi-sr-id-card-clip-alt",
-          "icon": "Scott Cheung",
+          "icon": "Scott Zhang",
           "cont": " 英文常用名"
         },
         {
@@ -3754,14 +3740,5 @@
         "duration": 0.5
       }
     }
-  },
-  "preloadImages": [
-    "https://3o.hk/images/2024/01/14/welcomebg.jpg",
-    "https://3o.hk/images/2024/01/14/keyfeaturebg.jpg",
-    "https://3o.hk/images/2024/01/14/selfdesbg.jpg",
-    "https://3o.hk/images/2024/01/14/welcomebg.jpg",
-    "https://3o.hk/images/2024/01/14/contactbg.jpg",
-    "https://3o.hk/images/2024/01/20/IMG_0742.png",
-    "https://cdn.pixabay.com/photo/2023/12/16/00/06/mountain-8451604_1280.jpg"
-  ]
+  }
 }

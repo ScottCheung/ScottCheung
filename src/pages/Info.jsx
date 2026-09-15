@@ -103,7 +103,7 @@ export default function Profile() {
                 style={{ fontFamily: 'Hey August, sans-serif' }}
                 className='mt-32 mb-12 text-[40px] lg:text-[60px] font-[600] leading-normal text-gray-800 animate_animated animate__zoomIn'
               >
-                {['Scott Cheung', '张贤哲'][lang]}
+                {['Scott Zhang', '张贤哲'][lang]}
               </h3>
               <a
                 href='https://maps.app.goo.gl/Eg2DYKQuALM3ioqg7'
