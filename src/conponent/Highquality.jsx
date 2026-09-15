@@ -207,7 +207,7 @@ const content = [
             ease: [0.455, 0.03, 0.515, 0.955],
             duration: 0.7,
           }}
-          className=' flex w-full  md:-ml-[130px] lg:-ml-[180px]  xl:-ml-[180px] -ml-[100px]  h-full items-center '
+          className=' flex w-full  md:-ml-[130px] lg:-ml-[180px]  xl:-ml-[180px] -ml-[100px] min-h-[300px]  h-full items-center '
           style={{
             backgroundImage: `url(${Database.PersonalInfo.Capability.graphs.code})`,
             backgroundSize: '100% auto',

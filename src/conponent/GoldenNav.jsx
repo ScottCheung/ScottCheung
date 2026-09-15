@@ -15,7 +15,7 @@ const navLocation = [
   },
   {
     href: '/#Capability',
-    label: ['Core Capability', '核心能力'],
+    label: ['Capability', '核心能力'],
     icon: 'fi-rr-user',
     color1: 'from-orange-500',
     color2: 'to-amber-500',
@@ -94,7 +94,7 @@ export function more() {
               className={`col-span-2 flex group w-full h-full  justify-center animate__zoomIn animate_animated  text-black `}
             >
               <motion.div layout whileTap={{ scale: 0.95 }} className=''>
-                <div className='rounded-full bg-sky-100 w-[50px] h-[50px] flex justify-center items-center active:text-white active:bg-sky-900  '>
+                <div className='rounded-full mx-auto bg-sky-100 w-[50px] h-[50px] flex justify-center items-center active:text-white active:bg-sky-900  '>
                   {' '}
                   <i
                     className={` flex fi justify-center  py-2 text-[20px]  ${item.icon}`}

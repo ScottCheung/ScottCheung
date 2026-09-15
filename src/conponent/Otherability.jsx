@@ -195,7 +195,7 @@ function Otherability() {
   const Otherability = (
     <motion.div className='h-auto rounded-[28px] overflow-hidden col-span-12  md:col-span-6 lg:col-span-8'>
       <motion.div
-        className=' bg-gradient-to-t bg-black rounded-[28px] relative pb-[33%] '
+        className=' bg-[#121314]  rounded-[28px] relative pb-[33%] '
         style={{
           backgroundImage: `url(https://cia.hyperos.mi.com/hyperos-homepage/footer_vela_bg_pc.png)`,
           backgroundSize: '100% auto',
@@ -247,7 +247,7 @@ function Otherability() {
         <svg
           aria-hidden='true'
           viewBox='0 0 1896 526'
-          class='absolute bottom-0 left-0 -z-20 h-full w-full object-cover object-bottom'
+          class='absolute bottom-0 opacity-0 md:opacity-100 left-0 -z-20 h-full w-full object-cover object-bottom'
           fill='none'
           xmlns='http://www.w3.org/2000/svg'
         >

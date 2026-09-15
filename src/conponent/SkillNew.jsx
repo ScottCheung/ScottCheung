@@ -155,7 +155,7 @@ function SkillContent({ content, selectedTab, expanded }) {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{delay: index * 0.1, duration: 1}}
-            className='col-span-12 flex h-full min-h-[150px] items-start gap-x-[20px] pb-2 md:col-span-6 lg:col-span-4 lg:min-h-[170px] xl:col-span-3'
+            className='col-span-12 flex h-full md:min-h-[150px] items-start gap-x-[20px] pb-2 md:col-span-6 lg:col-span-4 lg:min-h-[170px] xl:col-span-3'
           >
             <div
               className={`flex h-[50px] w-[50px] flex-shrink-0 items-center justify-center rounded-[9px] bg-gradient-to-br from-[-200%] to-[200%] `}
@@ -165,10 +165,10 @@ function SkillContent({ content, selectedTab, expanded }) {
             <div
               className={`flex min-w-0 flex-col text-transparent from-${selectedTab.ratio1} to-${selectedTab.ratio2} bg-gradient-to-br bg-clip-text`}
             >
-              <strong className='flex items-start pb-4 text-[13px] font-[700] tracking-wider md:text-[15px] lg:min-h-[48px] lg:text-[20px]'>
+              <strong className='flex items-start pb-4 text-[13px] font-[700] tracking-wider md:text-[15px]  lg:text-[20px]'>
                 {skill.name}
               </strong>
-              <p className='flex -mt-[10px] w-[280px] flex-wrap text-[10px] md:w-auto md:text-[12px] lg:text-[13px]'>
+              <p className='flex w-[280px] flex-wrap text-[10px] md:w-auto md:text-[12px] lg:text-[13px]'>
                 {skill.description}
               </p>
             </div>
