@@ -375,8 +375,6 @@
 }
 
 .skill-liquid-glass:hover {
-  transform: translateY(-2px);
-
   border-color: rgba(255, 255, 255, 0.24);
 
   background-color: rgba(255, 255, 255, 0.025);

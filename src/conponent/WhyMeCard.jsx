@@ -162,7 +162,7 @@ function WhymeCard() {
               transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
               className='flex relative  h-full lg:ml-[10vw] bg-[#fefdf3] rounded-[40px] ml-[50px] mr-[200px] lg:mr-[35vw] -mb-[20vh]   z-50 '
             >
-              <div className='flex gap-x-[20px]  py-[40px] px-[28px]'>
+              <div className='flex gap-x-[20px]  py-[40px] pl-[28px] pr-[40px]  '>
                 <motion.div
                   layout
                   className='flex flex-col h-full gap-y-[35px] z-50'
